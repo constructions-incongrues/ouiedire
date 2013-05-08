@@ -1,0 +1,488 @@
+body
+{
+font-family:arial,helvetica,clean,sans-serif;
+font-size: 0.75em;
+color: #FF0099;
+background-color: #FFF9FF;
+}
+
+html>body #left, html>body #right
+{
+height: auto;
+min-height: 485px;
+} 
+
+img {border: none;}
+
+acronym,abbr { cursor: help; }
+
+#footer_left acronym, .rssno  acronym  {border-bottom: 0px;}
+
+
+/* Mise en page */ 
+
+#container
+{	
+width:90%;
+max-width:970px;
+margin:0 auto;
+margin-top:2em;
+}
+   
+#left 
+{
+float:left;
+width:57%;
+height:43em;
+text-align:left;
+color: #FF0099;
+background-color: #CFFFCF;
+border:1px dashed #77fb77;
+padding-left:5px;
+padding-right:5px;
+padding-top:10px;
+}
+
+#right
+{
+float:right;
+width:39%;
+height:43em;
+text-align:center;
+color:#FF0099;
+background-color: #e6faff;
+border: 1px dashed #8ce8ff;
+padding-left:5px;
+padding-right:5px;
+padding-top:10px;
+}
+
+#full {
+float:left;
+width:100%;
+height:auto;
+text-align:left;
+color: #FF0099;
+background-color: #e3ffe3;
+border:1px dashed #77fb77;
+padding-left:5px;
+padding-right:5px;
+padding-bottom:15px;
+}
+
+#left:hover,#full:hover{background-color: #CFFFCF;background-image: none;color: #FF0099;}
+#right:hover{background-color: #CFF6FF;background-image: none;color: #FF0099;}
+
+/* Bloc */ 
+
+.bloc1 {
+height: auto;
+width: 48%;
+float: left;
+padding-left:10px;
+}
+.bloc2 {
+height: auto;
+width: 48%;
+float: left;
+margin-left: 20px;
+}
+
+/* Icones news,show, etc*/
+
+.smalllogo{float:left;padding:0px;margin-top:4px;margin-left:20px;margin-right:30px;}
+
+.numbershow{float:left;padding:0px;margin-top:4px;margin-left:25%;margin-right:30px;text-align:center;}
+.showmonth {text-transform:uppercase; font-weight:bold;color:#0099ff;}
+
+/* Navbar  */
+
+#navbar
+{
+float:left;
+width:79%;
+color: #FF0099;
+font-weight:700;
+font-size: 110%;
+letter-spacing:1px;
+}
+
+#navbar ul
+{
+list-style-type: none ;
+margin:0 0 0 -1em;
+padding:0;
+float:left;
+}
+
+#navbar li
+{
+margin:0 0 0 1em;
+float:left;
+}
+
+#navbar li:first-letter
+{
+color: #FE00FF;
+font-weight: bold;
+}
+
+#navbar_more
+{
+color: #FF8FFF;
+margin-bottom:0px;
+width:21%;
+font-size: 1em;
+float:right;
+}
+
+#navbar_more ul
+{
+list-style-type: none ;
+margin:0 0 0 0em;
+padding:0;
+float:right;
+}
+
+#navbar_more li
+{
+list-style-type: none ;
+margin:0 0 0 0em;
+padding : 0 1em 0 0;
+float:right;
+}
+
+#map dl {margin-left:35%;}
+
+/* Pied de page */
+
+#footer_left 
+{
+float:left;
+color: #FF8FFF;
+width:60%;
+font-family: "Trebushet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+font-size: 1em;
+}
+
+#footer_left ul
+{
+list-style-type: square ;
+margin:0 0 0 0em;
+padding:0;
+float:left;
+}
+
+#footer_left li 
+{
+margin:0 0 0 1em;
+padding : 0 1em 0 0;
+list-style-type: square ;
+float:left;
+}
+
+#footer_show /* gfx sur la page show */
+{
+text-align:center;
+margin-top:30px;
+padding-bottom:0px;
+margin-bottom:0px;	
+}
+
+/* Liens */
+
+a:link, a:visited {color: #0099FF;text-decoration: none;outline:none; } 
+a:hover, a:active {color: #FE00FF;outline:none; }
+
+
+#navbar .link a:link {color: #0099FF; }
+#navbar .hover a:link {color: #FF0099;}
+#navbar a:hover {color: #FE00FF;letter-spacing:0px;  text-transform: uppercase;}
+#navbar a:focus {background-color:  #CFFFCF;border-top: 1px dashed #77fb77;border-left: 1px dashed #77fb77;border-right: 1px dashed #77fb77;}
+
+#footer_left a,#navbar_more a{color:#FF6FFF;}
+#footer_left a:hover,#navbar_more a:hover{color:#FF0099;}
+
+#left > #linker .bg_blue:link {color:#FFF;}
+#left > #linker .bg_blue:active {color:#FFF;}
+#left > #linker .bg_blue:visited {color:#FFF;}
+#left > #linker .bg_blue:hover{color:#000;}
+
+#left > #linker .bg_pink:link {color:#FCFE04;}
+#left > #linker .bg_pink:active {color:#FCFE04;}
+#left > #linker .bg_pink:visited {color:#FCFE04;}
+#left > #linker .bg_pink:hover{color:#000;}
+
+#left > #linker .bg_withe:link {color:#04CEFC;}
+#left > #linker .bg_withe:active {color:#04CEFC;}
+#left > #linker .bg_withe:visited {color:#04CEFC;}
+#left > #linker .bg_withe:hover {color:#000;}
+
+#left > #linker .bg_yellow:link {color:#fc029c;}
+#left > #linker .bg_yellow:active {color:#fc029c;}
+#left > #linker .bg_yellow:visited {color:#fc029c;}
+#left > #linker .bg_yellow:hover {color:#000;}
+
+
+#left a {color: #FF00FF;}
+#left a:hover, #left a:active {color: #0099FF;}
+
+#left a:focus {background-color: #E3FFE3;border-top:1px solid #41cc41;border-bottom:1px solid #41cc41;color:#32b432;}
+#left .image a:focus {background-color:transparent;border-top:none;border-bottom:none;}
+
+#right a{color: #FF00FF;text-decoration: none;}
+#right a:hover, #left a:active {color: #0099FF;}
+#right a:focus {background-color: #e6faff;border-top:1px solid #0099FF;border-bottom:1px solid #0099FF;color:#0099FF;}
+
+#footer_left a:focus,#navbar_more a:focus {color:#0099FF;background-color: transparent;}
+
+/* Info dl show */ 
+
+#dlshow {color:#FF0FC2;text-transform:uppercase;font-size:130%; font-weight:bold;text-align:center;}
+#dlshow  a:link, #dlshow  a:visited{ color: #0099FF;text-decoration: none;outline:none; font-weight:bold;} 
+#dlshow a:hover, #dlshow a:active {color: #FF0099;outline:none;}
+
+/* Design Liste */
+
+em.number 
+{ color:#ffacff;}
+
+OL.number 
+{ 
+color:#0099FF;
+list-style-type: decimal;
+margin-left:20%;
+margin-bottom:6%;
+margin-top:6%;
+}
+
+OL.numbernotice  
+{ 
+color:#0099FF;
+list-style-type: decimal;
+font-size: 80%;
+}
+
+Ul.square {list-style-type:square;margin-left:20%;}
+UL.alpha {list-style-type:lower-alpha;}
+UL.none  {list-style-type:none;}
+Ul.square {list-style-type:square;margin-left:20%;}
+Ul.links {list-style-type:none;font-size:2.6em;font-weight:bold;text-align:center;}
+
+/* Ouiedire v1 
+
+Ul.img  {list-style-image: url(../img/icones/files.png);margin-left:10%;}
+Ul.song  {list-style-image: url(../img/icones/files_blue.png);margin-left:10%;}
+#right Ul.song  {list-style-image: url(../img/icones/files.png);margin-left:15%;}
+Ul.unknown  {list-style-image: url(../img/icones/files_blue.png);margin-left:10%;}
+Ul.movie {list-style-image: url(../img/icones/files_black.png);margin-left:10%;}
+
+*/
+
+a[hreflang|=fr]:after	{content:"\a0[" attr(hreflang)"]"}
+a[hreflang|=en]:after	{content:"\a0[" attr(hreflang)"]"}
+
+/* Titre */
+
+.bg_pink {background-color:#fc029c; }
+.bg_blue {background-color:#04cefc;}
+.bg_yellow {background-color:#FCFE04;}
+.bg_withe {background-color:#FFF;}
+
+h3 {color:#0099FF;font-size:1.2em}
+h2 {color:#0099FF; font-size:1.7em;}
+h1 {font-size:1.5em;}
+
+h1,h2,h3,h4,h5
+{
+text-align:center;
+margin-bottom:1em;
+margin-top:1em;
+text-transform:uppercase;
+}
+
+HR  { 
+text-align:center;
+color:#ff0099;
+background-color: transparent;
+height: 2px;
+width: 50%;
+border: 0;
+margin-bottom:18px;
+margin-top:18px;
+}
+
+/* Couleurs et texte*/
+
+.center {text-align:center;}
+.left {text-align:left;}
+.bold {font-weight: bold;}
+.justify {text-align: justify;}
+.blink {text-decoration: blink ;}
+.right {text-align:right;}
+.underline {text-decoration:underline;}
+.text-blue {color: #0099FF;}
+.text-green {color: #00CC00;}
+.text-pink_more{color: #FF0099;}
+.text-pink {color:#FF00FF;}
+.text-green {color: #00CC00;}
+.text-pink2{color: #ffacff;}
+.text-purple {color:#FF0FC2}
+.text-withe {color:#FFF}
+.text-yellow {color:#FCFE04}
+.show {color:#FE00FF;}
+
+/* etc etc etc */
+
+#else_10 {margin-left:3%;} /* ailleurs 10 */
+
+.spacenewz {margin-top:30px;} /* espace entre les newz */
+.marginten {margin-top:15px;margin-bottom:15px;} /* a identifier */
+
+
+/* Mailing List */
+
+#footer p
+{
+padding:0;
+margin:0;
+
+}	
+
+#footer 
+{
+
+float:right;
+font-family:"Trebushet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+font-size: 90%;
+margin-top:-10px;
+}
+	 
+#footer label
+{
+color: #FF0099;
+
+font-size: 1em;
+font-weight:bold;
+}
+
+#footer input.champs
+{
+color: #FF0099;
+background-color:#feffb9;
+border:1px solid #FF0099;
+border-style:dotted;
+text-align:center;
+}
+
+#footer input.champs, #footer input.valid {background-color: #e3ffe3;}
+
+#footer input.champs:hover
+{
+color: #FF0099;
+background-color:#feffb9;
+border:1px solid #FF0099;
+border-style:dotted;
+text-align:center;
+}
+
+#footer input.champs:focus,#footer input.valid:hover 
+{
+background-image: none ;background-color: #FFF9FF;
+}
+
+#footer input.valid 
+{
+background-color:#FFF9FF;
+border:1px solid #FF0099;
+border-style:dotted;
+color:#FF0099;
+text-align:center;
+}
+
+#footer input.valid:hover
+{
+background-color:#FFF9FF;
+border:1px solid #FF0099;
+border-style:dotted;
+color:#CB2521;
+cursor:pointer;
+}
+
+/* Contact*/
+
+#mail-contact, #mail
+{
+color:#FF0099;
+margin-top:7%;
+text-align:center;
+}
+
+#mail label,#mail-contact label
+{
+text-align:center;
+color:#FF0099;
+font-weight:bold;
+}
+
+#mail-contact input.champs
+{
+color:#000;
+background-color:#e3ffe3;
+border:1px solid #77fb77;
+border-style:dotted;
+text-align:center;
+width:32%;
+}
+
+#mail-contact input.champs_username
+{
+color:#000;
+background-color:#e3ffe3;
+border:1px solid #77fb77;
+border-style:dotted;
+text-align:center;
+width:30%;
+}
+
+#mail-contact textarea.champs
+{
+color:#000;
+background-color:#e3ffe3;
+border:1px solid #77fb77;
+border-style:dotted;
+width:90%;
+}
+
+#mail-contact input.valid
+{
+background-color:#e3ffe3;
+border:1px solid #77fb77;
+border-style:dotted;
+color:#FF0099;
+text-align:center;
+}
+
+#mail-contact input.valid:hover
+{
+border: 1px dashed #8ce8ff;
+background-color: #FFF9FF;
+border-style:dotted;
+color:#FF0099;
+cursor:pointer;
+}
+
+/* test de design pr script du forum 
+#lasted_forum 
+{
+width:80%;
+height:150px;
+color:#FF0099;
+background-color: #FFCCCC;
+background-image: url(../img/fond/fond_jaune.gif);
+margin:auto;
+bottom:0;
+position:absolute;
+text-align:center;
+}
+*/

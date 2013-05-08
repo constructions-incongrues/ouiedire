@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+	<head>
+		<title>{% block title %}{% endblock %} | Ou&iuml;edire</title>
+
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
+		<meta name="description" content="Ouïedire, j'en ai déjà entendu parler quelque part"/>
+		
+		<link rel="stylesheet" media="screen" type="text/css" href="assets/css/original.css" title="original"/>
+		<link rel="alternate stylesheet" type="text/css" href="assets/css/simple.css" title="simple"/>	
+		<link rel="icon" href="../../img/favicon.png" type="image/x-icon"/>
+		
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouiedire_fr"/>
+
+		<script type="text/javascript" src="assets/css/styleswitcher.js"></script>
+		
+		<!-- Nice Title -->
+		
+		<script type="text/javascript" src="assets/css/nicetitle.js"></script>	
+		<link rel="stylesheet" type="text/css" href="assets/css/nicetitle.css"/>
+ 
+
+		</head>
+	
+	<body>
+
+		<div id="container">
+
+<div id="navbar"> 
+<ul>
+		<li>	NOUVELLES</li>
+		<li>	<a href="../emissions/" title="&Eacute;missions - T&eacute;l&eacute;charger les &eacute;missions Ou&iuml;edire ">Emissions</a> </li>
+		<li>	<a href="../informations/" title="Informations - En savoir plus sur Ou&iuml;edire" accesskey="8"> Informations </a></li>
+		<li>	<a href="http://www.musiques-incongrues.net/forum/" title="Forums - Un petit mot &agrave; dire c'est par ici"> Forums </a> </li>
+		<li>	<a href="../liens/" title="Liens - Quelques sites sympathiques &agrave; visiter">Liens</a></li>
+</ul> 
+</div> <!-- #navbar -->
+	
+<div id="navbar_more">
+<ul>
+	<li><a href="#" title="Apparence all&eacute;g&eacute;e du site" onclick="setActiveStyleSheet('simple');return false;">Simple</a> </li> 
+	<li><a href="#" onclick="setActiveStyleSheet('original');return false;" title="Apparence original du site"> Original</a> </li> 
+	<li> <a href="#">Design</a></li>
+</ul>
+</div> <!-- #navbar_more -->
+
+{% block content %}
+<div id="left">
+LEFT
+</div>
+<div id="right">	
+RIGHT
+</div>
+{% endblock %}
+
+<div id="footer_left">
+<ul>
+<li><a href="../contact/" title="Informations pour nous contacter" accesskey="7">Contact</a> </li> 
+<li><a href="../../en/news/" title="Read the site in english">English</a> </li> 
+<li><a href="../informations/plan-du-site/" title="Avoir une vue globale des donn&eacute;es du site ! " accesskey="3">Plan du site</a> </li> 
+<li><a href="http://www.ouiedire.net" accesskey="1" title="Adresse officielle  du site ! ">Ou&iuml;edire.net</a> </li> 
+<li><acronym lang="en" title="Really Simple Syndication"><a href="http://feeds.feedburner.com/ouiedire_fr">RSS</a></acronym></li>
+</ul>
+</div> <!--#footer_left -->
+
+	<div id="footer">
+	<form action="../contact/mailing-list/add_mail.php" method="post">
+	<p>
+	<label for="mail">Newsletter</label> 
+	<input type="text" name="mail" class="champs" id="mail"/>
+	<input name="Submit" value="Ok" class="valid" type="submit"/>
+	</p>
+	</form>
+	</div> <!-- #footer -->
+	
+</div> <!-- #contenair -->
+
+		<!-- Google Analytics -->
+		<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+		<script type="text/javascript">_uacct="UA-673133-4";urchinTracker();</script>  
+		</body>
+</html>

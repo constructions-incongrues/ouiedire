@@ -1,0 +1,7 @@
+# ides
+*.bak
+*~
+*.sw*
+
+# composer
+/vendor

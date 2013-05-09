@@ -8,3 +8,7 @@
 
 # composer
 /vendor
+
+# bower
+/src/public/vendor/*/*
+!/src/public/vendor/unsemantic/bower.json

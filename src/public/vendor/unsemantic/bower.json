@@ -1,0 +1,9 @@
+{
+  "name": "unsemantic",
+  "main": "",
+  "version": "0.9.2",
+  "repository": {
+    "type": "asset",
+    "url": "https://github.com/bower/bower/archive/v0.9.2.zip"
+  }
+}

@@ -20,16 +20,17 @@ $app->register(new Provider\UrlGeneratorServiceProvider());
 // Controller classes (required by Web Profiler - @see http://silex.sensiolabs.org/doc/providers/service_controller.html)
 $app->register(new Provider\ServiceControllerServiceProvider());
 
-// Debugging features. TODO : make does switchable
+// Debugging features
+if (isset($debug) && $debug = true) {
+	// Global debug flag
+	$app['debug'] = true;
 
-// Global debug flag
-$app['debug'] = true;
-
-// Web Profiler (@see https://github.com/sensiolabs/Silex-WebProfiler)
-$app->register(new Provider\WebProfilerServiceProvider(), array(
-    'profiler.cache_dir' => __DIR__.'/../cache/profiler',
-    'profiler.mount_prefix' => '/_profiler', // this is the default
-));
+	// Web Profiler (@see https://github.com/sensiolabs/Silex-WebProfiler)
+	$app->register(new Provider\WebProfilerServiceProvider(), array(
+	    'profiler.cache_dir' => __DIR__.'/../cache/profiler',
+	    'profiler.mount_prefix' => '/_profiler', // this is the default
+	));
+}
 
 // Homepage
 $app->get('/', function(Silex\Application $app) {
@@ -106,7 +107,7 @@ $app->get('/emission/{id}', function(Silex\Application $app, $id) {
 	);
 
 	// Absolute URL to show assets
-	$urlAssets = sprintf('%s/assets/emission/%d', $app['request']->getBaseUrl(), $id);
+	$urlAssets = sprintf('%s/assets/emission/%d', $app['request']->getBasePath(), $id);
 
 	// Load show data. 404 if some data file cannot be loaded.
 	try {

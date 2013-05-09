@@ -3,5 +3,8 @@
 *~
 *.sw*
 
+# silex
+/src/cache
+
 # composer
 /vendor

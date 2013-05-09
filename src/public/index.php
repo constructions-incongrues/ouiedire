@@ -56,17 +56,58 @@ $app->get('/emissions', function(Silex\Application $app) {
 
 // Show page
 $app->get('/emission/{id}', function(Silex\Application $app, $id) {
+	// Path to data directories
+	$pathData = __DIR__.'/../data';
+	$pathDataEmission = sprintf('%s/emission/%d', $pathData, $id);
+
 	// This variable describes the show will be passed to view
 	$show = array(
 		'authors' => null,
 		'description' => null, 
-		'images' => array('hd' => array(), 'sd' => array()),
 		'number' => $id,
 		'playlist' => null,
 		'releasedAt' => null,
 		'title' => null,
+		'urlDownload' => null,
+		'urlCover' => null,
+		'urlCoverHd' => null
 	);
 
+	// Absolute URL to show assets
+	$urlAssets = sprintf('%s/assets/emission/%d', $app['request']->getBaseUrl(), $id);
+
+	// Load show data. 404 if some data file cannot be loaded.
+	try {
+		$fileManifest = new SplFileObject(sprintf('%s/manifest.json', $pathDataEmission, $id));
+		$filePlaylist = new SplFileObject(sprintf('%s/playlist.html', $pathDataEmission));
+		$fileDescription = new SplFileObject(sprintf('%s/description.html', $pathDataEmission));
+	} catch (\Exception $e) {
+		$app->abort(404, sprintf("L'émission #%d n'est pas disponible.", $id));
+	}
+
+	// Parse manifest data and infer show attributes
+	$manifest = json_decode(file_get_contents($fileManifest->getRealPath()));
+	$show['authors'] = $manifest->authors;
+	$show['releasedAt'] = $manifest->releasedAt;
+	$show['title'] = $manifest->title;
+
+	// Guess show MP3 download URL
+	$show['urlDownload'] = sprintf('%s/ouiedire_%d_%s.mp3', $urlAssets, $id, $manifest->slug);
+	if ($manifest->urlDownload) {
+		$show['urlDownload'] = $manifest->urlDownload;
+	}
+
+	// Guess covers URL
+	$show['urlCover'] = sprintf('%s/ouiedire_%d_cover.png', $urlAssets, $id);
+	$show['urlCoverHd'] = sprintf('%s/ouiedire_%d_cover_hd.png', $urlAssets, $id);
+
+	// Playlist
+	$show['playlist'] = file_get_contents($filePlaylist->getRealPath());
+
+	// Description
+	$show['description'] = file_get_contents($fileDescription->getRealPath());
+
+	// Render view
     return $app['twig']->render('emission.twig.html', array('show' => $show));
 })
 ->bind('emission');

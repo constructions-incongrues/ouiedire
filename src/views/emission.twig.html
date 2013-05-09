@@ -1,0 +1,30 @@
+{% extends "layout.default.twig.html" %}
+
+{% block title %}Émission #{{ show.number }} : {{ show.title }}, par {{ show.authors }}{% endblock %}
+
+{% block content %}
+<div id="left">
+	<h1>
+		<span class="bg_pink text-yellow">{{ show.title }}</span>
+	</h1>
+	
+	{{ show.playlist|raw }}
+
+	<p id="dlshow">
+		<span class="blink">♥</span>
+		<a href="{{ show.urlDownload }}">Télécharger</a>
+		<span class="blink">♥</span>
+	</p>
+</div>
+
+<div id="right">
+	<p class="center">
+		<a href="{{ show.urlCoverHd }}" nicetitle="Original Size 1392x1392">
+		<img src="{{ show.urlCover }}" alt="Artwork" /></a>
+		<br />
+		<strong><a href="{{ show.urlCoverHd }}">Imprimer la pochette</a></strong>
+	</p>
+
+	<p class="justify">{{ show.description|raw }}</p>
+</div>
+{% endblock %}

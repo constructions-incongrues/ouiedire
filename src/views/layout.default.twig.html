@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 	<head>
-		<title>{% block title %}{% endblock %} | Ou&iuml;edire</title>
+		<title>{% block title %}{% endblock %} | Ouïedire</title>
 
 		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"/>
 		<meta name="description" content="Ouïedire, j'en ai déjà entendu parler quelque part"/>
 		
-		<link rel="stylesheet" media="screen" type="text/css" href="assets/css/original.css" title="original"/>
-		<link rel="alternate stylesheet" type="text/css" href="assets/css/simple.css" title="simple"/>	
+		<link rel="stylesheet" media="screen" type="text/css" href="{{ app.request.getBaseUrl() }}/assets/css/original.css" title="original"/>
+		<link rel="alternate stylesheet" type="text/css" href="{{ app.request.getBaseUrl() }}/assets/css/simple.css" title="simple"/>	
 		<link rel="icon" href="../../img/favicon.png" type="image/x-icon"/>
 		
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouiedire_fr"/>
 
-		<script type="text/javascript" src="assets/css/styleswitcher.js"></script>
+		<script type="text/javascript" src="{{ app.request.getBaseUrl() }}/assets/css/styleswitcher.js"></script>
 		
 		<!-- Nice Title -->
 		
-		<script type="text/javascript" src="assets/css/nicetitle.js"></script>	
-		<link rel="stylesheet" type="text/css" href="assets/css/nicetitle.css"/>
+		<script type="text/javascript" src="{{ app.request.getBaseUrl() }}/assets/css/nicetitle.js"></script>	
+		<link rel="stylesheet" type="text/css" href="{{ app.request.getBaseUrl() }}/assets/css/nicetitle.css"/>
  
 
 		</head>

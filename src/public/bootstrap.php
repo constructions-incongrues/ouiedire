@@ -5,6 +5,43 @@ require_once __DIR__.'/../../vendor/autoload.php';
 // Uses
 use Silex\Provider;
 use Symfony\Component\Finder\Finder;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Generator\UrlGenerator;
+use Zend\Feed\Writer\Feed;
+
+function getShows() {
+	// Path to data directories
+	$pathData = __DIR__.'/../data';
+
+	// Search for shows manifests
+	$finder = new Finder();
+	$manifests = $finder
+		->files()
+		->name('manifest.json')
+		->sortByName()
+		->filter(function(\SplFileInfo $file) {
+			return is_numeric(basename(dirname($file->getRealPath())));
+		})
+		->in(sprintf('%s/emission/', $pathData));
+
+	// Parse manifests
+	$shows = array();
+	foreach ($manifests as $manifest) {
+		$show = json_decode($manifest->getContents(), true);
+		$show['id'] = basename(dirname($manifest->getRealPath()));
+		if ($show['id'] < 10) {
+			$show['number'] = '0'.$show['id'];
+		} else {
+			$show['number'] = $show['id'];
+		}
+		$shows[] = $show;
+	}
+
+	// Show last show first
+	$shows = array_reverse($shows);
+
+	return $shows;
+}
 
 // Configure application
 $app = new Silex\Application();
@@ -52,40 +89,56 @@ $app->get('/liens', function(Silex\Application $app) {
 
 // Shows list
 $app->get('/emissions', function(Silex\Application $app) {
-	// Path to data directories
-	$pathData = __DIR__.'/../data';
-
-	// Search for shows manifests
-	$finder = new Finder();
-	$manifests = $finder
-		->files()
-		->name('manifest.json')
-		->sortByName()
-		->filter(function(\SplFileInfo $file) {
-			return is_numeric(basename(dirname($file->getRealPath())));
-		})
-		->in(sprintf('%s/emission/', $pathData));
-
-	// Parse manifests
-	$shows = array();
-	foreach ($manifests as $manifest) {
-		$show = json_decode($manifest->getContents(), true);
-		$show['id'] = basename(dirname($manifest->getRealPath()));
-		if ($show['id'] < 10) {
-			$show['number'] = '0'.$show['id'];
-		} else {
-			$show['number'] = $show['id'];
-		}
-		$shows[] = $show;
-	}
-
-	// Show last show first
-	$shows = array_reverse($shows);
-
 	// Render view
-    return $app['twig']->render('emissions.twig.html', array('shows' => $shows));
+    return $app['twig']->render('emissions.twig.html', array('shows' => getShows()));
 })
 ->bind('emissions');
+
+// Shows RSS feed (@see http://framework.zend.com/manual/2.1/en/modules/zend.feed.writer.html)
+$app->get('/feed', function(Silex\Application $app) {
+	// Get all shows
+	$shows = getShows();
+
+	// Configure feed
+	$feed = new Feed();
+	$feed->setTitle("Ouïedire, j'en ai déjà entendu parler quelque part");
+	$feed->setDescription("Ouïedire est une web-radio à but non lucratif née en 2005. Elle a pour but de diffuser des émissions de musique en tout genre.");
+	$feed->setLink($app['url_generator']->generate('homepage', array(), UrlGenerator::ABSOLUTE_URL));
+	$feed->setFeedLink($app['url_generator']->generate('feed', array(), UrlGenerator::ABSOLUTE_URL), 'rss');
+	$feed->addAuthor(array('name' => 'Ouïedire', 'email' => 'contact@ouiedire.net', 'uri', 'http://www.ouiedire.net'));
+	$feed->setDateModified(DateTime::createFromFormat('Y-m-d H:i:s', $shows[0]['releasedAt']));
+
+	// TODO
+	// $feed->setImage();
+
+	// Add feed items
+	$i = 0;
+	$maxEntries = 25;
+	foreach ($shows as $show) {
+		// Limit number of feed entries
+		if (++$i > $maxEntries) {
+			break;
+		}
+
+		// Build entry using show data
+		$entry = $feed->createEntry();
+		$entry->setTitle(sprintf('Ouïedire #%s : %s par %s', $show['number'], $show['title'], $show['authors']));
+		// TODO : getShows() import playlist and description
+		$entry->setDescription('TODO');
+		$entry->setContent('TODO'); // content = image + description + playlist + link to show
+		$entry->addAuthor(array('name' => $show['authors']));
+		$entry->setDateModified(DateTime::createFromFormat('Y-m-d H:i:s', $show['releasedAt']));
+		$entry->setDateCreated(DateTime::createFromFormat('Y-m-d H:i:s', $show['releasedAt']));
+		// TODO
+		// $entry->setEnclosure(array('type' => 'audio/mpeg', 'uri' => '', 'length' => ''));
+
+		// Add entry to feed
+		$feed->addEntry($entry);
+	}
+
+	return new Response($feed->export('rss'), 200, array('content-type' => 'application/rss+xml'));
+})
+->bind('feed');
 
 // Show page
 $app->get('/emission/{id}', function(Silex\Application $app, $id) {

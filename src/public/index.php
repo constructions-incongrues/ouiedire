@@ -4,6 +4,7 @@ require_once __DIR__.'/../../vendor/autoload.php';
 
 // Uses
 use Silex\Provider;
+use Symfony\Component\Finder\Finder;
 
 // Configure application
 $app = new Silex\Application();
@@ -50,7 +51,38 @@ $app->get('/liens', function(Silex\Application $app) {
 
 // Shows list
 $app->get('/emissions', function(Silex\Application $app) {
-    return $app['twig']->render('emissions.twig.html');
+	// Path to data directories
+	$pathData = __DIR__.'/../data';
+
+	// Search for shows manifests
+	$finder = new Finder();
+	$manifests = $finder
+		->files()
+		->name('manifest.json')
+		->sortByName()
+		->filter(function(\SplFileInfo $file) {
+			return is_numeric(basename(dirname($file->getRealPath())));
+		})
+		->in(sprintf('%s/emission/', $pathData));
+
+	// Parse manifests
+	$shows = array();
+	foreach ($manifests as $manifest) {
+		$show = json_decode($manifest->getContents(), true);
+		$show['id'] = basename(dirname($manifest->getRealPath()));
+		if ($show['id'] < 10) {
+			$show['number'] = '0'.$show['id'];
+		} else {
+			$show['number'] = $show['id'];
+		}
+		$shows[] = $show;
+	}
+
+	// Show last show first
+	$shows = array_reverse($shows);
+
+	// Render view
+    return $app['twig']->render('emissions.twig.html', array('shows' => $shows));
 })
 ->bind('emissions');
 
@@ -93,9 +125,6 @@ $app->get('/emission/{id}', function(Silex\Application $app, $id) {
 
 	// Guess show MP3 download URL
 	$show['urlDownload'] = sprintf('%s/ouiedire_%d_%s.mp3', $urlAssets, $id, $manifest->slug);
-	if ($manifest->urlDownload) {
-		$show['urlDownload'] = $manifest->urlDownload;
-	}
 
 	// Guess covers URL
 	$show['urlCover'] = sprintf('%s/ouiedire_%d_cover.png', $urlAssets, $id);

@@ -1,13 +1,33 @@
 {% extends "layout.default.twig.html" %}
 
-{% block title %}Émissions{% endblock %}
+{% block title %}Les émissions{% endblock %}
 
 {% block content %}
-<div id="left">
-LEFT EMISSIONS
-<p><a href="{{ path('emission', {id:3}) }}">Les Français chantent mal, vol. 2</a></p>
-</div>
-<div id="right">	
-RIGHT EMISSIONS
+<div id="full">
+
+	<h2><span class="bg_yellow">PRENDS EN PLEIN LES TYMPANS !</span></h2>
+
+	<div class="bloc1">
+
+{% for show in shows %}
+	{% if loop.index0 == (loop.length / 2)|number_format %}
+	</div> <!-- #bloc1 -->
+	<div class="bloc2">
+	{% endif %}
+
+		<p>
+			<a href="{{ path('emission', {id:show.id}) }}">
+				<span class="numbershow text-{{ cycle(['pink', 'yellow', 'blue', 'withe'], loop.index) }} bg_{{ cycle(['blue', 'withe', 'yellow', 'pink'], loop.index) }}">
+					{{ show.number }}
+				</span>
+				<strong class="text-pink_more">{{ show.authors }}</strong>
+				<br /> 
+				<strong>{{ show.title }}</strong>
+			</a>
+		</p>
+{% endfor %}
+
+	</div> <!-- .bloc2 -->
+
 </div>
 {% endblock %}

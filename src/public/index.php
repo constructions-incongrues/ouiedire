@@ -2,14 +2,31 @@
 // Setup autoloading
 require_once __DIR__.'/../../vendor/autoload.php';
 
-// Configurre application
+// Uses
+use Silex\Provider;
+
+// Configure application
 $app = new Silex\Application();
-$app['debug'] = true;
 
 // Twig setup
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../views',
 ));
+
+
+// Debugging features. TODO : make does switchable
+
+// Global debug flag
+$app['debug'] = true;
+
+// Web Profiler (@see https://github.com/sensiolabs/Silex-WebProfiler)
+$app->register(new Provider\ServiceControllerServiceProvider());
+$app->register(new Provider\UrlGeneratorServiceProvider());
+$app->register(new Provider\WebProfilerServiceProvider(), array(
+    'profiler.cache_dir' => __DIR__.'/../cache/profiler',
+    'profiler.mount_prefix' => '/_profiler', // this is the default
+));
+
 
 // Homepage
 $app->get('/', function(Silex\Application $app) {
@@ -33,7 +50,18 @@ $app->get('/emissions', function(Silex\Application $app) {
 
 // Show page
 $app->get('/emission/{id}', function(Silex\Application $app, $id) {
-    return $app['twig']->render(sprintf('emission/%d.twig.html', $id));
+	// This variable describes the show will be passed to view
+	$show = array(
+		'authors' => null,
+		'description' => null, 
+		'images' => array('hd' => array(), 'sd' => array()),
+		'number' => $id,
+		'playlist' => null,
+		'releasedAt' => null,
+		'title' => null,
+	);
+
+    return $app['twig']->render('emission.twig.html', array('show' => $show));
 });
 
 // Run application

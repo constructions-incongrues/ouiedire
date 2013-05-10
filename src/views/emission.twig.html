@@ -10,11 +10,14 @@
 	
 	{{ show.playlist|raw }}
 
+	{% if show.urlDownload %}
 	<p id="dlshow">
 		<span class="blink">♥</span>
 		<a href="{{ show.urlDownload }}">Télécharger</a>
 		<span class="blink">♥</span>
 	</p>
+	{% endif %}
+
 </div>
 
 <div id="right">

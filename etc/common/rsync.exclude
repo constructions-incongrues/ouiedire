@@ -1,0 +1,7 @@
+/vendor/constructions-incongrues
+*-dist
+/src/cache/*
+*.mp3
+/composer.*
+/etc
+.git

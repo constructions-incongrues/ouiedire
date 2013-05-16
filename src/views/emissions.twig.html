@@ -3,31 +3,21 @@
 {% block title %}Les émissions{% endblock %}
 
 {% block content %}
-<div id="full">
-
-	<h2><span class="bg_yellow">PRENDS EN PLEIN LES TYMPANS !</span></h2>
-
-	<div class="bloc1">
-
+	<div class="grid-50 mobile-grid-100">
+		<ul>
 {% for show in shows %}
 	{% if loop.index0 == (loop.length / 2)|number_format %}
-	</div> <!-- #bloc1 -->
-	<div class="bloc2">
+		</ul>
+	</div><!-- grid-50 -->
+	<div class="grid-50 mobile-grid-100">
+		<ul>
 	{% endif %}
-
-		<p>
-			<a href="{{ path('emission', {id:show.id}) }}">
-				<span class="numbershow text-{{ cycle(['pink', 'yellow', 'blue', 'withe'], loop.index) }} bg_{{ cycle(['blue', 'withe', 'yellow', 'pink'], loop.index) }}">
-					{{ show.number }}
-				</span>
-				<strong class="text-pink_more">{{ show.authors }}</strong>
-				<br /> 
-				<strong>{{ show.title }}</strong>
-			</a>
-		</p>
+  		<li>
+  			<a href="{{ path('emission', {id:show.id}) }}">
+  				{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }}
+  			</a>
+  		</li>
 {% endfor %}
-
-	</div> <!-- .bloc2 -->
-
-</div>
+		</ul>
+	</div><!-- grid-50 -->
 {% endblock %}

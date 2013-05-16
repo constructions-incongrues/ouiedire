@@ -28,15 +28,16 @@ function getShow($id, Silex\Application $app) {
 
 	// This variable describes the show will be passed to view
 	$show = array(
-		'authors' => null,
+		'authors'     => null,
 		'description' => null, 
-		'number' => $id,
-		'playlist' => null,
-		'releasedAt' => null,
-		'title' => null,
+		'number'      => $id,
+		'type'        => null,
+		'playlist'    => null,
+		'releasedAt'  => null,
+		'title'       => null,
 		'urlDownload' => null,
-		'urlCover' => null,
-		'urlCoverHd' => null
+		'urlCover'    => null,
+		'urlCoverHd'  => null
 	);
 
 	// Absolute URL to show assets
@@ -58,6 +59,7 @@ function getShow($id, Silex\Application $app) {
 	$show['authors'] = $manifest->authors;
 	$show['releasedAt'] = $manifest->releasedAt;
 	$show['title'] = $manifest->title;
+	$show['type'] = $manifest->type;
 
 	// Guess show MP3 properties
 	try {
@@ -154,12 +156,6 @@ if (isset($debug) && $debug == true) {
 	));
 }
 
-// Homepage
-$app->get('/', function(Silex\Application $app) {
-    return $app['twig']->render('home.twig.html');
-})
-->bind('homepage');
-
 // About page
 $app->get('/apropos', function(Silex\Application $app) {
     return $app['twig']->render('apropos.twig.html');
@@ -173,7 +169,7 @@ $app->get('/liens', function(Silex\Application $app) {
 ->bind('liens');
 
 // Shows list
-$app->get('/emissions', function(Silex\Application $app) {
+$app->get('/', function(Silex\Application $app) {
 	// Render view
     return $app['twig']->render('emissions.twig.html', array('shows' => getShows($app)));
 })

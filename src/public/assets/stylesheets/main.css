@@ -13,13 +13,13 @@ body {background-color: #FFF9FF;background-image: url(../img/pattern.gif); backg
 
 /* ====== Text treatments ====== */
 
-span.slogan {background-color:#000;color:#FFF;padding:4px;display:inline-block;position: relative;left:45px;font-size: 12px;font-size: 1.2rem;font-weight: bold;text-transform: uppercase;}
+header span {background-color:#000;color:#FFF;padding:4px;display:inline-block;position: relative;left:45px;font-size: 12px;font-size: 1.2rem;font-weight: bold;text-transform: uppercase;}
 
 /* links */
 
 
 li a {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;border-bottom: 1px dotted #00CCFF;}
-ol a, .text {font-weight: bold;}
+ol a, ol li span {font-weight: bold;}
 ol li a {background-color: transparent;border-bottom: none;top:0;}
 footer a {text-decoration: none;color: #000;border-bottom: 1px dotted #000;}
 footer a:hover {border-bottom: 1px solid #000;}

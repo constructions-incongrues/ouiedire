@@ -15,7 +15,7 @@ body {background-color: #FFF9FF;background-image: url(../img/pattern.gif); backg
 
 header span {background-color:#000;color:#FFF;padding:4px;display:inline-block;position: relative;left:45px;font-size: 12px;font-size: 1.2rem;font-weight: bold;text-transform: uppercase;}
 .description {font-size: 1.3rem;}
-.description p {width: 90%;margin-left: 10%;text-align: justify;}
+.description p {text-align: justify;}
 /* links */
 
 

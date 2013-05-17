@@ -21,8 +21,7 @@ header span {background-color:#000;color:#FFF;padding:4px;display:inline-block;p
 
 
 li a {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;border-bottom: 1px dotted #00CCFF;}
-ol a, ol li span,.description a {font-weight: bold;}
-ol li a {background-color: transparent;border-bottom: none;top:0;}
+ol a, ol li span,.description a {font-weight: bold;background-color: transparent;border-bottom: none;top:0;}
 footer a {text-decoration: none;color: #000;border-bottom: 1px dotted #000;}
 footer a:hover {border-bottom: 1px solid #000;}
 li a:hover {border-bottom: 1px solid #00CCFF;}
@@ -39,7 +38,7 @@ h3 {color:#000;margin: 0 0 20px 16px;font-size: 1.2rem; }
 
 /* ----- list ----- */
 
-li {margin:5px 0 5px 0;font-size: 15px; font-size: 1.5rem;}
+li {margin:5px 0 5px 0;font-size: 15px; font-size: 1.5rem;text-transform: capitalize;}
 ul{ list-style-image:url('../img/files_black.png');margin:30px 0 20px 0; } 
 
 /* **************** TEMPLATE ***************** */
@@ -49,5 +48,5 @@ footer {position:relative;left:15px;font-size: 14px;font-size: 1.4rem;}
 
 header img {max-width: 100%; max-height: 100%;margin: 0 0 -13px 0;}
 audio {margin: 20px 0 20px 15px;}
-.donwload {margin:0px 0 20px 14px;font-size: 14px;font-size: 1.4rem;}
+.donwload {margin:-10px 0 25px 14px;font-size: 14px;font-size: 1.4rem;}
 

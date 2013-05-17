@@ -13,19 +13,25 @@
 </div>
 <div class="grid-50 mobile-grid-100">
 
-	{{ show.playlist|raw }}
-
-	{% if show.urlDownload %}
-	<audio controls="controls">
+		<audio controls="controls">
 	  <source src="{{ show.urlDownload }}" type="audio/mp3" />
 	</audio>
- 	<p class="donwload"><a href="">Télécharger l'émission</a></p>
+	 	<p class="donwload"><a href="">télécharger l'émission</a></p>
+
+
+	
+{{ show.playlist|raw }}
+
+	{% if show.urlDownload %}
+
 
 	{% endif %}
 </div><!-- grid-50 -->
 
 <div class="grid-50 mobile-grid-100 description">
+
 	<p><img src="{{ show.urlCover }}" alt="Artwork"></p>
 	{{ show.description|raw }}
+
 </div><!-- grid-50 -->
 {% endblock %}

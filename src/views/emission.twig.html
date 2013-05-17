@@ -19,7 +19,8 @@
 	{% endif %}
 </div><!-- grid-50 -->
 
-<div class="grid-50 mobile-grid-100">
+<div class="grid-50 mobile-grid-100 description">
 	<p><img src="{{ show.urlCover }}" alt="Artwork"></p>
+	{{ show.description|raw }}
 </div><!-- grid-50 -->
 {% endblock %}

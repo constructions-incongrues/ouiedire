@@ -19,13 +19,13 @@ span.slogan {background-color:#000;color:#FFF;padding:4px;display:inline-block;p
 
 
 li a {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;border-bottom: 1px dotted #00CCFF;}
-.number a, .text {font-weight: bold;}
-.number li a {background-color: transparent;border-bottom: none;top:0;}
+ol a, .text {font-weight: bold;}
+ol li a {background-color: transparent;border-bottom: none;top:0;}
 footer a {text-decoration: none;color: #000;border-bottom: 1px dotted #000;}
 footer a:hover {border-bottom: 1px solid #000;}
 li a:hover {border-bottom: 1px solid #00CCFF;}
 .donwload a {background-color:#000;padding:4px;text-decoration: none;color: #FFF;}
-.number li a:hover {border-bottom:1px solid #000;}
+ol li a:hover {border-bottom:1px solid #000;}
 h1 a {color: #000;text-decoration: none;}
 
 /* ====== Heading ====== */

@@ -21,17 +21,18 @@ use Zend\Feed\Writer\Feed;
  */
 function getShow($id, Silex\Application $app) {
 	// Path to data directories
+	$id = explode('-', $id);
 	$pathData = __DIR__.'/../data';
 	$pathPublic = __DIR__.'/../public';
-	$pathDataEmission = sprintf('%s/emission/%d', $pathData, $id);
-	$pathPublicEmission = sprintf('%s/assets/emission/%d', $pathPublic, $id);
+	$pathDataEmission = sprintf('%s/emission/%s-%d', $pathData, $id[0], $id[1]);
+	$pathPublicEmission = sprintf('%s/assets/emission/%s-%d', $pathPublic, $id[0], $id[1]);
 
 	// This variable describes the show will be passed to view
 	$show = array(
 		'authors'     => null,
 		'description' => null, 
-		'number'      => $id,
-		'type'        => null,
+		'number'      => $id[1],
+		'type'        => $id[0],
 		'playlist'    => null,
 		'releasedAt'  => null,
 		'title'       => null,
@@ -46,11 +47,11 @@ function getShow($id, Silex\Application $app) {
 		$app['request']->getScheme(), 
 		$app['request']->getHttpHost(), 
 		$app['request']->getBasePath(), 
-		$id
+		$show['number']
 	);
 
 	// Load show data. 404 if some data file cannot be loaded.
-	$fileManifest = new SplFileObject(sprintf('%s/manifest.json', $pathDataEmission, $id));
+	$fileManifest = new SplFileObject(sprintf('%s/manifest.json', $pathDataEmission));
 	$filePlaylist = new SplFileObject(sprintf('%s/playlist.html', $pathDataEmission));
 	$fileDescription = new SplFileObject(sprintf('%s/description.html', $pathDataEmission));
 
@@ -63,16 +64,16 @@ function getShow($id, Silex\Application $app) {
 
 	// Guess show MP3 properties
 	try {
-		$fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%d_%s.mp3', $pathPublicEmission, $id, $manifest->slug));
+		$fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%d_%s.mp3', $pathPublicEmission, $show['type'], $show['number'], $manifest->slug));
 		$show['sizeDownload'] = $fileMp3->getSize();
-		$show['urlDownload'] = sprintf('%s/ouiedire_%d_%s.mp3', $urlAssets, $id, $manifest->slug);
+		$show['urlDownload'] = sprintf('%s/ouiedire_%s-%d_%s.mp3', $urlAssets, $show['type'], $show['number'], $manifest->slug);
 	} catch (\RuntimeException $e) {
 		$show['urlDownload'] = null;
 	}
 
 	// Guess covers URL
-	$show['urlCover'] = sprintf('%s/ouiedire_%d_cover.png', $urlAssets, $id);
-	$show['urlCoverHd'] = sprintf('%s/ouiedire_%d_cover_hd.png', $urlAssets, $id);
+	$show['urlCover'] = sprintf('%s/ouiedire_%s-%d_cover.png', $urlAssets, $show['type'], $show['number']);
+	$show['urlCoverHd'] = sprintf('%s/ouiedire_%s-%d_cover_hd.png', $urlAssets, $show['type'], $show['number']);
 
 	// Playlist
 	$show['playlist'] = file_get_contents($filePlaylist->getRealPath());
@@ -81,11 +82,18 @@ function getShow($id, Silex\Application $app) {
 	$show['description'] = file_get_contents($fileDescription->getRealPath());
 
 	// Pretty show number
-	$show['id'] = $id;
+	$show['id'] = $show['number'];
 	if ($show['id'] < 10) {
 		$show['number'] = '0'.$show['id'];
 	} else {
 		$show['number'] = $show['id'];
+	}
+
+	// Pretty show type
+	if ($show['type'] == 'ailleurs') {
+		$show['type'] = 'Ailleurs';
+	} else {
+		$show['type'] = 'Ouïedire';
 	}
 
 	return $show;
@@ -109,7 +117,9 @@ function getShows(Silex\Application $app) {
 		->name('manifest.json')
 		->sortByName()
 		->filter(function(\SplFileInfo $file) {
-			return is_numeric(basename(dirname($file->getRealPath())));
+			return 
+				strpos(basename(dirname($file->getRealPath())), 'ailleurs') !== false
+				|| strpos(basename(dirname($file->getRealPath())), 'ouiedire') !== false;
 		})
 		->in(sprintf('%s/emission/', $pathData));
 

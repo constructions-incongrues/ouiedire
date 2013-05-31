@@ -60,7 +60,6 @@ function getShow($id, Silex\Application $app) {
 	$show['authors'] = $manifest->authors;
 	$show['releasedAt'] = $manifest->releasedAt;
 	$show['title'] = $manifest->title;
-	$show['type'] = $manifest->type;
 
 	// Guess show MP3 properties
 	try {
@@ -90,6 +89,7 @@ function getShow($id, Silex\Application $app) {
 	}
 
 	// Pretty show type
+	$show['typeSlug'] = $show['type'];
 	if ($show['type'] == 'ailleurs') {
 		$show['type'] = 'Ailleurs';
 	} else {
@@ -223,7 +223,7 @@ EOT;
 		// Build entry using show data
 		$entry = $feed->createEntry();
 		$entry->setTitle(sprintf('Ouïedire #%s : %s par %s', $show['number'], $show['title'], $show['authors']));
-		$entry->setLink($app['url_generator']->generate('emission', array('id' => $show['id']), UrlGenerator::ABSOLUTE_URL));
+		$entry->setLink($app['url_generator']->generate('emission', array('id' => $show['id'], 'type' => $show['typeSlug']), UrlGenerator::ABSOLUTE_URL));
 		$entry->setDescription($show['description']);
 		$entry->setContent($htmlContent);
 		$entry->addAuthor(array('name' => $show['authors']));
@@ -242,10 +242,10 @@ EOT;
 ->bind('feed');
 
 // Show page
-$app->get('/emission/{id}', function(Silex\Application $app, $id) {
+$app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) {
 	// Fetch show
 	try {
-		$show = getShow($id, $app);
+		$show = getShow("$type-$id", $app);
 	} catch (\RuntimeException $e) {
 		if ($app['debug']) {
 			throw $e;

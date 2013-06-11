@@ -41,15 +41,6 @@ function getShow($id, Silex\Application $app) {
 		'urlCoverHd'  => null
 	);
 
-	// Absolute URL to show assets
-	$urlAssets = sprintf(
-		'%s://%s%s/assets/emission/%d', 
-		$app['request']->getScheme(), 
-		$app['request']->getHttpHost(), 
-		$app['request']->getBasePath(), 
-		$show['number']
-	);
-
 	// Load show data. 404 if some data file cannot be loaded.
 	$fileManifest = new SplFileObject(sprintf('%s/manifest.json', $pathDataEmission));
 	$filePlaylist = new SplFileObject(sprintf('%s/playlist.html', $pathDataEmission));
@@ -61,6 +52,24 @@ function getShow($id, Silex\Application $app) {
 	$show['releasedAt'] = $manifest->releasedAt;
 	$show['title'] = $manifest->title;
 
+	// Pretty show type
+	$show['typeSlug'] = $show['type'];
+	if ($show['type'] == 'ailleurs') {
+		$show['type'] = 'Ailleurs';
+	} else {
+		$show['type'] = 'Ouïedire';
+	}
+
+	// Absolute URL to show assets
+	$urlAssets = sprintf(
+		'%s://%s%s/assets/emission/%s-%d', 
+		$app['request']->getScheme(), 
+		$app['request']->getHttpHost(), 
+		$app['request']->getBasePath(),
+		$show['typeSlug'], 
+		$show['number']
+	);
+
 	// Guess show MP3 properties
 	try {
 		$fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%d_%s.mp3', $pathPublicEmission, $show['type'], $show['number'], $manifest->slug));
@@ -71,8 +80,19 @@ function getShow($id, Silex\Application $app) {
 	}
 
 	// Guess covers URL
-	$show['urlCover'] = sprintf('%s/ouiedire_%s-%d_cover.png', $urlAssets, $show['type'], $show['number']);
-	$show['urlCoverHd'] = sprintf('%s/ouiedire_%s-%d_cover_hd.png', $urlAssets, $show['type'], $show['number']);
+	$show['covers'] = array();
+	$finder = new Finder();
+	try {
+		$covers = $finder
+			->files()
+			->name('*_cover-*.png')
+			->in($pathPublicEmission);
+		foreach ($covers as $cover) {
+			$show['covers'][] = sprintf('%s/%s', $urlAssets, basename($cover->getRealPath()));
+		}
+	} catch (\InvalidArgumentException $e) {
+		// whatever
+	}
 
 	// Playlist
 	$show['playlist'] = file_get_contents($filePlaylist->getRealPath());
@@ -86,14 +106,6 @@ function getShow($id, Silex\Application $app) {
 		$show['number'] = '0'.$show['id'];
 	} else {
 		$show['number'] = $show['id'];
-	}
-
-	// Pretty show type
-	$show['typeSlug'] = $show['type'];
-	if ($show['type'] == 'ailleurs') {
-		$show['type'] = 'Ailleurs';
-	} else {
-		$show['type'] = 'Ouïedire';
 	}
 
 	return $show;

@@ -1,4 +1,4 @@
-{% extends "layout.default.twig.html" %}
+	{% extends "layout.default.twig.html" %}
 
 {% block title %}Émission #{{ show.number }} : {{ show.title }}, par {{ show.authors }}{% endblock %}
 
@@ -7,9 +7,9 @@
 <div class="grid-100 mobile-grid-100">
 	<section class="nav">
 <p>{% if (previous) %}
-<a href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}">previous</a>{% endif %}
+<a href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}">previous</a>{% endif %}
 {% if (next) %}
-<a href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}">next</a>
+<a href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}" title="#{{ next.number }} : {{ next.title }}, par {{ next.authors }}">next</a>
 {% endif %}
 </p>
 </section>

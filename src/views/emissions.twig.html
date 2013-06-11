@@ -2,7 +2,20 @@
 
 {% block title %}Les émissions{% endblock %}
 
+{% block latest %}
+<section class="news">
+		<h3>Les dernières émissions : </h3>
+		<ul>
+		<li><a href="">Emo Mix #1</li>
+		<li><a href="">Emo Mix #2</li>
+		<li><a href="">Emo Mix #3</li>
+		</ul>
+		</section>
+{% endblock %}
+
 {% block content %}
+		<h3>Toutes les émissions : </h3>
+
 	<div class="grid-50 mobile-grid-100">
 		<ul>
 {% for show in shows %}

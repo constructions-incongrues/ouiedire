@@ -17,6 +17,7 @@ header span {background-color:#000;color:#FFF;padding:4px;display:inline-block;p
 .description {font-size: 1.3rem;}
 .description img {margin:30px 0 20px 0;}
 .description p {text-align: center}
+
 /* links */
 
 
@@ -32,10 +33,10 @@ h1 a,.description a {color: #000;text-decoration: none;}
 /* ====== Heading ====== */
 
 h1 {font-size:15px;font-size: 1.5rem; text-transform: uppercase;position:relative;top:0px;left:16px;margin:20px 0 20px 0;background-color: #e6faff;padding: 4px;border-bottom: 1px dotted #00CCFF;}
-h2, h3 {padding:4px;border-bottom:1px dotted #000;text-transform: uppercase;}
+h2 {padding:4px;border-bottom:1px dotted #000;text-transform: uppercase;}
 h2 {margin:0 0 30px 16px;font-size: 1.3rem; }
-h3 {color:#000;margin: 0 0 20px 16px;font-size: 1.2rem; }
-
+h3 {margin: 0 0 0 20px;font-size: 1.2rem;padding: 4px;font-size: 1.2rem;text-transform: uppercase;}
+h3 {display: block;position: relative;top: 20px;background-color: #e6faff;border-bottom: 1px dotted #00CCFF;}
 /* ----- list ----- */
 
 li {margin:5px 0 5px 0;font-size: 15px; font-size: 1.5rem;text-transform: capitalize;}

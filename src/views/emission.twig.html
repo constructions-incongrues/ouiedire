@@ -12,12 +12,13 @@
 	</h1>
 </div>
 <div class="grid-50 mobile-grid-100">
-
-{{ show.playlist|raw }}
-		<audio controls="controls">
+	<audio controls="controls">
 	  <source src="{{ show.urlDownload }}" type="audio/mp3" />
 	</audio>
-	 	<p class="download"><a href="">télécharger l'émission</a></p>
+		 	<p class="download"><a href="">télécharger l'émission</a></p>
+
+{{ show.playlist|raw }}
+	
 </div><!-- grid-50 -->
 
 <div class="grid-50 mobile-grid-100 description">

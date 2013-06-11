@@ -13,19 +13,11 @@
 </div>
 <div class="grid-50 mobile-grid-100">
 
-	
 {{ show.playlist|raw }}
-
-	{% if show.urlDownload %}
-
 		<audio controls="controls">
 	  <source src="{{ show.urlDownload }}" type="audio/mp3" />
 	</audio>
 	 	<p class="download"><a href="">télécharger l'émission</a></p>
-
-
-
-	{% endif %}
 </div><!-- grid-50 -->
 
 <div class="grid-50 mobile-grid-100 description">

@@ -150,12 +150,32 @@ function getShows(Silex\Application $app) {
 	return $shows;
 }
 
+function getShowSiblings($showCurrent, Silex\Application $app)
+{
+	$shows = getShows($app);
+	$showPrevious = null;
+	$showNext = null;
+	for ($i = 0; $i < count($shows); $i++) {
+		$show = $shows[$i];
+		if (sprintf('%s-%s', $show['typeSlug'], $show['id']) == sprintf('%s-%s', $showCurrent['typeSlug'], $showCurrent['id'])) {
+			if (isset($shows[$i + 1])) {
+				$showPrevious = $shows[$i + 1];
+			}
+			if (isset($shows[$i - 1])) {
+				$showNext = $shows[$i - 1];
+			}
+			break;
+		}
+	}
+	return array($showPrevious, $showNext);	
+}
+
 // Configure application
 $app = new Silex\Application();
 
 // Twig setup
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path' => __DIR__.'/../views',
+  'twig.path' => __DIR__.'/../views',
 ));
 
 // Named routes (@see http://silex.sensiolabs.org/doc/providers/url_generator.html)
@@ -256,6 +276,7 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
 	// Fetch show
 	try {
 		$show = getShow("$type-$id", $app);
+		$siblings = getShowSiblings($show, $app);
 	} catch (\RuntimeException $e) {
 		if ($app['debug']) {
 			throw $e;
@@ -265,7 +286,7 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
 	}
 
 	// Render view
-    return $app['twig']->render('emission.twig.html', array('show' => $show));
+  return $app['twig']->render('emission.twig.html', array('show' => $show, 'previous' => $siblings[0], 'next' => $siblings[1]));
 })
 ->bind('emission');
 

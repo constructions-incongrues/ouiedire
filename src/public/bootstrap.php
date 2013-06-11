@@ -115,11 +115,21 @@ function getShows(Silex\Application $app) {
 	$manifests = $finder
 		->files()
 		->name('manifest.json')
-		->sortByName()
 		->filter(function(\SplFileInfo $file) {
 			return 
 				strpos(basename(dirname($file->getRealPath())), 'ailleurs') !== false
 				|| strpos(basename(dirname($file->getRealPath())), 'ouiedire') !== false;
+		})
+		->sort(function(\SplFileInfo $a, \SplFileInfo $b) {
+			$partsA = explode('-', basename(dirname($a->getRealPath())));
+			$partsB = explode('-', basename(dirname($b->getRealPath())));
+			if ($partsA[0] == 'ailleurs') {
+				$partsA[1] += 1000;
+			}
+			if ($partsB[0] == 'ailleurs') {
+				$partsB[1] += 1000;
+			}
+			return $partsA[1] > $partsB[1];
 		})
 		->in(sprintf('%s/emission/', $pathData));
 

@@ -236,7 +236,7 @@ $app->get('/feed', function(Silex\Application $app) {
 	$feed = new Feed();
 	$feed->setTitle("Ouïedire, j'en ai déjà entendu parler quelque part");
 	$feed->setDescription("Ouïedire est une web-radio à but non lucratif née en 2005. Elle a pour but de diffuser des émissions de musique en tout genre.");
-	$feed->setLink($app['url_generator']->generate('homepage', array(), UrlGenerator::ABSOLUTE_URL));
+	$feed->setLink($app['url_generator']->generate('emissions', array(), UrlGenerator::ABSOLUTE_URL));
 	$feed->setFeedLink($app['url_generator']->generate('feed', array(), UrlGenerator::ABSOLUTE_URL), 'rss');
 	$feed->addAuthor(array('name' => 'Ouïedire', 'email' => 'contact@ouiedire.net', 'uri', 'http://www.ouiedire.net'));
 	$feed->setDateModified(DateTime::createFromFormat('Y-m-d H:i:s', $shows[0]['releasedAt']));

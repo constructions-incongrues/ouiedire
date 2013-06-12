@@ -11,36 +11,39 @@ Version: 1.0
 html { font-size:62.5%;}
 body {background-color: #FFF9FF;background-image: url(../img/pattern.gif); background-repeat: repeat; background-attachment: fixed; font-family: 'Metrophobic', sans-serif; }
 header {margin-bottom:20px;}
+
 /* ====== Text treatments ====== */
 
 header span {background-color:#000;color:#FFF;padding:4px;display:inline-block;position: relative;left:45px;font-size: 12px;font-size: 1.2rem;font-weight: bold;text-transform: uppercase;}
 .description {font-size: 1.3rem;}
 .description img {margin:30px 0 20px 0;}
 .description p {text-align: center}
-.grid-60 p {position: relative;top:0px;left:18px;font-weight: bold;font-size: 4rem;	}
-.nav p {}
+.grid-60 p {position: relative;top:20px;left:18px;font-weight: bold;background-color: #e6faff;border-bottom:1px dotted #00CCFF;padding:4px;font-size: 3rem;	}
+.nav p {text-align: right;position: relative;right: -15px;}
 /* links */
 
 
 li a {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;border-bottom: 1px dotted #00CCFF;}
 ol a, ol li span,.description a {font-weight: bold;background-color: transparent;border-bottom: none;top:0;}
-footer a {text-decoration: none;color: #000;border-bottom: 1px dotted #000;}
-footer a:hover {border-bottom: 1px solid #000;font-weight: bold;}
+footer a {text-decoration: none;fw;color: #000;border-bottom: 1px dotted #000;}
+footer p:first-child a {background-color: #000;color:#FFF;padding:4px;text-transform: uppercase;font-size:12px;font-size: 1.2rem; }
+footer a:hover {border-bottom: 1px solid #000;}
 li a:hover {border-bottom: 1px solid #00CCFF;}
 .download a{padding:5px;text-decoration: none;color: #000;font-weight: bold;}
 ol li a:hover {border-bottom:1px solid #000;}
 .description a {color: #000;text-decoration: none;}
 h1 a {color: #FFF;text-decoration: none;}
-.nav p a {color:#000;text-decoration: none;font-size: 1.4rem;text-transform: uppercase;padding: 0px;margin:0 0 0 15px;}
+.nav p a {;color:#000;font-weight: bold;;text-decoration: none;font-size: 1.4rem;text-transform: uppercase;padding: 0px;margin:0 0 0 15px;}
 
 /* ====== Heading ====== */
 
-h1 {font-size:15px;font-size: 1.5rem; text-transform: uppercase;position:relative;top:0px;left:16px;margin:10px 0 30px 0;background-color: #000;padding: 4px;}
+h1 {font-size:15px;font-size: 1.5rem; text-transform: uppercase;position:relative;top:0px;left:16px;margin:-5px 0 30px 0;background-color: #000;padding: 4px;}
 h2 {padding:4px;border-bottom:1px dotted #000;text-transform: uppercase;}
 h2 {margin:0 0 30px 16px;font-size: 1.3rem; }
 h3 {margin: 0 0 0 20px;font-size: 1.2rem;padding: 4px;font-size: 1.2rem;text-transform: uppercase;}
 h3 {display: block;position: relative;top: 20px;background-color: #000;color: #FFF;margin-bottom: 20px;}
 .grid-60 h3 {display: inline;background-color: none;color: #FFF;position: relative;top:25px;}
+
 /* ----- list ----- */
 
 li {margin:5px 0 5px 0;font-size: 15px; font-size: 1.5rem;text-transform: capitalize;}
@@ -48,12 +51,12 @@ ul{ list-style-image:url('../img/files_black.png');margin:30px 0 20px 0; }
 .nav ul, .nav li {display: inline;color:#000;padding: 2px;}
 .nav li a {color:#000;border-bottom: 0px;}
 
-	/* **************** TEMPLATE ***************** */
+/* **************** TEMPLATE ***************** */
 /* ====== Page Head, Body, and Foot ====== */
 
 footer {position:relative;left:15px;font-size: 14px;font-size: 1.4rem;}
 
-header img {max-width: 100%; max-height: 100%;margin: 0 0 -9px 0;}
+header img {max-width: 100%; max-height: 100%;margin: 0 0 -10px -9px;}
 audio {position:relative;left:18px;}
 .download {display: inline-block;position:relative;top:-8px;left:20px;font-size: 14px;font-size: 1.4rem;}
 

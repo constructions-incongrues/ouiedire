@@ -242,7 +242,13 @@ $app->get('/feed', function(Silex\Application $app) {
 	$feed->setDateModified(DateTime::createFromFormat('Y-m-d H:i:s', $shows[0]['releasedAt']));
 
 	// TODO
-	// $feed->setImage();
+	$feed->setImage(
+		array(
+			'uri'   => sprintf('%s://%s/%s/assets/img/logo_rss.png', $app['request']->getScheme(), $app['request']->getHttpHost(), $app['request']->getBasePath()),
+			'title' => "Ouïedire, j'en ai déjà entendu parler quelque part.",
+			'link'  => 'http://www.ouiedire.net'
+		)
+	);
 
 	// Add feed items
 	$i = 0;

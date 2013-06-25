@@ -15,3 +15,6 @@
 
 # assets
 *.mp3
+
+# dist
+/src/public/.htaccess

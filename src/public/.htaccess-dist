@@ -1,0 +1,28 @@
+# Legacy redirections
+# -- fr
+RedirectMatch permanent @ouiedire.uri.root@/fr/emissions/(\w+)/0?(\d+)/ @ouiedire.url.root@/emission/$1-$2
+RedirectPermanent @ouiedire.uri.root@/fr/nouvelles/ @ouiedire.url.root@/
+RedirectPermanent @ouiedire.uri.root@/fr/emissions/ @ouiedire.url.root@/
+RedirectPermanent @ouiedire.uri.root@/fr/informations/ @ouiedire.url.root@/
+RedirectPermanent @ouiedire.uri.root@/fr/liens/ @ouiedire.url.root@/
+RedirectPermanent @ouiedire.uri.root@/fr/contact/ @ouiedire.url.root@/
+RedirectPermanent @ouiedire.uri.root@/fr/informations/plan-du-site/ @ouiedire.url.root@/
+# -- en
+RedirectMatch permanent @ouiedire.uri.root@/fr/show/ouiedire/0?(\d+)/ @ouiedire.url.root@/emission/ouiedire-$1
+RedirectMatch permanent @ouiedire.uri.root@/fr/show/elsewhere/0?(\d+)/ @ouiedire.url.root@/emission/ailleurs-$1
+RedirectPermanent @ouiedire.uri.root@/en/news/ @ouiedire.url.root@/
+RedirectPermanent @ouiedire.uri.root@/en/show/ @ouiedire.url.root@/
+RedirectPermanent @ouiedire.uri.root@/en/informations/ @ouiedire.url.root@/
+RedirectPermanent @ouiedire.uri.root@/en/links/ @ouiedire.url.root@/
+RedirectPermanent @ouiedire.uri.root@/en/contact/ @ouiedire.url.root@/
+RedirectPermanent @ouiedire.uri.root@/en/informations/map/ @ouiedire.url.root@/
+
+# Misc
+Options +FollowSymlinks -MultiViews
+
+# Rewriting rules
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ app_prod.php [QSA,L]
+</IfModule>

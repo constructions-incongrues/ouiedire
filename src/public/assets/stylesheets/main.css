@@ -27,14 +27,15 @@ header span {background-color:#000;color:#FFF;padding:4px;display:inline-block;p
 li a {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;border-bottom: 1px dotted #00CCFF;}
 ol a, ol li span,.description a {font-weight: bold;background-color: transparent;border-bottom: none;top:0;}
 footer p:first-child a {background-color: #000;color:#FFF;padding:4px;text-transform: uppercase;font-size:12px;font-size: 1.2rem; }
-footer p:first-child a:hover {font-weight: normal;}
+footer p:first-child a:hover {font-weight: normal;border-bottom: 2px solid #00CCFF}
 footer a {text-decoration: none;color: #000;border-bottom: 1px solid #000;}
-footer a:hover {text-transform: uppercase;}
+footer a:hover {text-transform: uppercase; }
 li a:hover {border-bottom: 1px solid #e6faff;background-color: #00CCFF}
 .download a{padding:5px;text-decoration: none;color: #000;background-color:#00CCFF;font-weight: bold;}
 .download a:hover {background-color: #000; color: #FFF;}
 ol li a:hover {border-bottom:1px solid #000;background-color: transparent;}
 .description a {color: #000;text-decoration: none;}
+.description a:hover {border-bottom: 1px solid #000;}
 h1 a {color: #FFF;text-decoration: none;}
 .nav p a {text-decoration: none;color:#000;font-weight: bold;;text-decoration: none;font-size: 14px;font-size: 1.4rem;text-transform: uppercase;margin:0 0 0 15px;}
 .nav p a:hover {background-color: #000;color: #FFF;padding: 5px;}

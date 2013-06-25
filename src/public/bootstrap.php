@@ -9,6 +9,34 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Generator\UrlGenerator;
 use Zend\Feed\Writer\Feed;
 
+function slugify($text)
+{
+    // replace non letter or digits by -
+    $text = preg_replace('#[^\\pL\d]+#u', '-', $text);
+
+    // trim
+    $text = trim($text, '-');
+
+    // transliterate
+    if (function_exists('iconv'))
+    {
+        $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+    }
+
+    // lowercase
+    $text = strtolower($text);
+
+    // remove unwanted characters
+    $text = preg_replace('#[^-\w]+#', '', $text);
+
+    if (empty($text))
+    {
+        return 'n-a';
+    }
+
+    return $text;
+}
+
 /**
  * Returns data about a show.
  *
@@ -71,9 +99,9 @@ function getShow($id, Silex\Application $app) {
 	);
 
 	// Guess show MP3 properties
-	$show['urlDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s.mp3', $urlAssets, $show['type'], $show['number'], $manifest->slug));
+	$show['urlDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, $show['type'], $show['number'], slugify($show['authors']), $manifest->slug));
 	try {
-		$fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s.mp3', $pathPublicEmission, $show['type'], $show['number'], $manifest->slug));
+		$fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $pathPublicEmission, $show['type'], $show['number'], slugify($show['authors']), $manifest->slug));
 		$show['sizeDownload'] = $fileMp3->getSize();		
 	} catch (\RuntimeException $e) {
 		$show['sizeDownload'] = 0;

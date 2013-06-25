@@ -104,7 +104,7 @@ function getShow($id, Silex\Application $app) {
 		$fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $pathPublicEmission, slugify($show['type']), $show['number'], slugify($show['authors']), $manifest->slug));
 		$show['sizeDownload'] = $fileMp3->getSize();		
 	} catch (\RuntimeException $e) {
-		$show['sizeDownload'] = 0;
+		$show['sizeDownload'] = 1;
 	}
 
 	// Guess covers URL
@@ -306,9 +306,7 @@ EOT;
 		$entry->addAuthor(array('name' => $show['authors']));
 		$entry->setDateModified(DateTime::createFromFormat('Y-m-d H:i:s', $show['releasedAt']));
 		$entry->setDateCreated(DateTime::createFromFormat('Y-m-d H:i:s', $show['releasedAt']));
-		if ($show['urlDownload']) {
-			$entry->setEnclosure(array('type' => 'audio/mpeg', 'uri' => $show['urlDownload'], 'length' => $show['sizeDownload']));
-		}
+		$entry->setEnclosure(array('type' => 'audio/mpeg', 'uri' => $show['urlDownload'], 'length' => (int)$show['sizeDownload']));
 
 		// Add entry to feed
 		$feed->addEntry($entry);

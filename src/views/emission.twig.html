@@ -14,7 +14,7 @@
 <meta property="og:description" content="{{ show.description|striptags }}" />
 <meta property="og:audio:url" content="{{ show.urlDownload }}" />
 <meta property="og:url" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getRequestUri() }}" />
-<meta property="og:image" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getBasePath() }}/assets/img/logo.png" />
+<meta property="og:image" content="{{ show.covers.0 }}" />
 {% endblock %}
 
 {% block content %}

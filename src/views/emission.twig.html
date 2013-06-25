@@ -1,6 +1,12 @@
-	{% extends "layout.default.twig.html" %}
+{% extends "layout.default.twig.html" %}
 
 {% block title %}Émission #{{ show.number }} : {{ show.title }}, par {{ show.authors }}{% endblock %}
+
+{% block latest %}
+<a href="{{ path('emission', {id:latest.id, type:latest.typeSlug}) }}">
+  {{ latest.type }} {{ latest.number }} : {{ latest.authors }} - {{ latest.title }} 
+</a>
+{% endblock %}
 
 {% block content %}
 

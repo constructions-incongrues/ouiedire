@@ -223,7 +223,7 @@ $app->get('/liens', function(Silex\Application $app) {
 // Shows list
 $app->get('/', function(Silex\Application $app) {
 	// Render view
-    return $app['twig']->render('emissions.twig.html', array('shows' => getShows($app)));
+  return $app['twig']->render('emissions.twig.html', array('shows' => getShows($app)));
 })
 ->bind('emissions');
 
@@ -289,6 +289,8 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
 	try {
 		$show = getShow("$type-$id", $app);
 		$siblings = getShowSiblings($show, $app);
+		$latest = getShows($app);
+		$latest = $latest[0];
 	} catch (\RuntimeException $e) {
 		if ($app['debug']) {
 			throw $e;
@@ -298,7 +300,7 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
 	}
 
 	// Render view
-  return $app['twig']->render('emission.twig.html', array('show' => $show, 'previous' => $siblings[0], 'next' => $siblings[1]));
+  return $app['twig']->render('emission.twig.html', array('show' => $show, 'previous' => $siblings[0], 'next' => $siblings[1], 'latest' => $latest));
 })
 ->bind('emission');
 

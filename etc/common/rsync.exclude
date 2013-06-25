@@ -5,3 +5,4 @@
 /composer.*
 /etc
 .git
+/src/public/app_dev.php

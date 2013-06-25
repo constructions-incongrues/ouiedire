@@ -24,8 +24,8 @@ function getShow($id, Silex\Application $app) {
 	$id = explode('-', $id);
 	$pathData = __DIR__.'/../data';
 	$pathPublic = __DIR__.'/../public';
-	$pathDataEmission = sprintf('%s/emission/%s-%d', $pathData, $id[0], $id[1]);
-	$pathPublicEmission = sprintf('%s/assets/emission/%s-%d', $pathPublic, $id[0], $id[1]);
+	$pathDataEmission = sprintf('%s/emission/%s-%s', $pathData, $id[0], $id[1]);
+	$pathPublicEmission = sprintf('%s/assets/emission/%s-%s', $pathPublic, $id[0], $id[1]);
 
 	// This variable describes the show will be passed to view
 	$show = array(
@@ -62,7 +62,7 @@ function getShow($id, Silex\Application $app) {
 
 	// Absolute URL to show assets
 	$urlAssets = sprintf(
-		'%s://%s%s/assets/emission/%s-%d', 
+		'%s://%s%s/assets/emission/%s-%s', 
 		$app['request']->getScheme(), 
 		$app['request']->getHttpHost(), 
 		$app['request']->getBasePath(),
@@ -72,9 +72,9 @@ function getShow($id, Silex\Application $app) {
 
 	// Guess show MP3 properties
 	try {
-		$fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%d_%s.mp3', $pathPublicEmission, $show['type'], $show['number'], $manifest->slug));
+		$fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s.mp3', $pathPublicEmission, $show['type'], $show['number'], $manifest->slug));
 		$show['sizeDownload'] = $fileMp3->getSize();
-		$show['urlDownload'] = sprintf('%s/ouiedire_%s-%d_%s.mp3', $urlAssets, $show['type'], $show['number'], $manifest->slug);
+		$show['urlDownload'] = sprintf('%s/ouiedire_%s-%s_%s.mp3', $urlAssets, $show['type'], $show['number'], $manifest->slug);
 	} catch (\RuntimeException $e) {
 		$show['urlDownload'] = null;
 	}

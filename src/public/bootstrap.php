@@ -99,9 +99,9 @@ function getShow($id, Silex\Application $app) {
 	);
 
 	// Guess show MP3 properties
-	$show['urlDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, $show['type'], $show['number'], slugify($show['authors']), $manifest->slug));
+	$show['urlDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), $manifest->slug));
 	try {
-		$fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $pathPublicEmission, $show['type'], $show['number'], slugify($show['authors']), $manifest->slug));
+		$fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $pathPublicEmission, slugify($show['type']), $show['number'], slugify($show['authors']), $manifest->slug));
 		$show['sizeDownload'] = $fileMp3->getSize();		
 	} catch (\RuntimeException $e) {
 		$show['sizeDownload'] = 0;

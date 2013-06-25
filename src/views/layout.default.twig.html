@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" prefix="og: http://ogp.me/ns#">
 <head>
 	<!-- Description -->
 	<title>{% block title %}{% endblock %} | Ouïedire</title>
@@ -29,6 +29,15 @@
 
 	<!-- Feeds -->
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouiedire_fr"/>
+
+	<!-- Opengraph -->
+	{% block opengraph %}
+	<meta property="og:title" content="Ouïedire" />
+	<meta property="og:description" content="J'en ai déjà entendu parler quelque part" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getRequestUri() }}" />
+	<meta property="og:image" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getBasePath() }}/assets/img/logo.png" />
+	{% endblock %}
 </head>
 
 <body>

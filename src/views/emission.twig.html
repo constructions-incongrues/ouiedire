@@ -8,6 +8,15 @@
 </a>
 {% endblock %}
 
+{% block opengraph %}
+<meta property="og:title" content="Ouïedire - Émission #{{ show.number }} : {{ show.title }}, par {{ show.authors }}" />
+<meta property="og:type" content="music.playlist" />
+<meta property="og:description" content="{{ show.description|striptags }}" />
+<meta property="og:audio:url" content="{{ show.urlDownload }}" />
+<meta property="og:url" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getRequestUri() }}" />
+<meta property="og:image" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getBasePath() }}/assets/img/logo.png" />
+{% endblock %}
+
 {% block content %}
 
 <div class="grid-100 mobile-grid-100">
@@ -31,7 +40,7 @@
 	<audio controls="controls">
 	  <source src="{{ show.urlDownload }}" type="audio/mp3" />
 	</audio>
-		 	<p class="download"><a href="">MP3</a></p>
+	<p class="download"><a href="{{ show.urlDownload }}">MP3</a></p>
 
 {{ show.playlist|raw }}
 	

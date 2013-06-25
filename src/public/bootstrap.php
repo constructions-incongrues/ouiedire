@@ -71,12 +71,12 @@ function getShow($id, Silex\Application $app) {
 	);
 
 	// Guess show MP3 properties
+	$show['urlDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s.mp3', $urlAssets, $show['type'], $show['number'], $manifest->slug));
 	try {
 		$fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s.mp3', $pathPublicEmission, $show['type'], $show['number'], $manifest->slug));
-		$show['sizeDownload'] = $fileMp3->getSize();
-		$show['urlDownload'] = sprintf('%s/ouiedire_%s-%s_%s.mp3', $urlAssets, $show['type'], $show['number'], $manifest->slug);
+		$show['sizeDownload'] = $fileMp3->getSize();		
 	} catch (\RuntimeException $e) {
-		$show['urlDownload'] = null;
+		$show['sizeDownload'] = 0;
 	}
 
 	// Guess covers URL

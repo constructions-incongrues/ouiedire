@@ -294,7 +294,7 @@ $app->get('/feed', function(Silex\Application $app) {
 %s
 <a href="%s">Télécharger l'émission</a>
 EOT;
-		$htmlContent = sprintf($htmlContent, $show['urlCover'], $show['description'], $show['playlist'], $show['urlDownload']);
+		$htmlContent = sprintf($htmlContent, $show['covers'][0], $show['description'], $show['playlist'], $show['urlDownload']);
 		// Build entry using show data
 		$entry = $feed->createEntry();
 		$entry->setTitle(sprintf('Ouïedire #%s : %s par %s', $show['number'], $show['title'], $show['authors']));

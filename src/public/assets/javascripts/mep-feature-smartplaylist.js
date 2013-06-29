@@ -49,7 +49,7 @@
         $(this).addClass($this.options.smartplaylistCurrentClass);
         var player = mejs.players.mep_0;
         if (player.media.paused) {
-          window.position = $(this).data('mejs-smartplaylist-seconds');
+          window.MejsSmartplaylistPosition = $(this).data('mejs-smartplaylist-seconds');
           mejs.players.mep_0.play();      
         } else {
           player.setCurrentTime($(this).data('mejs-smartplaylist-seconds'));

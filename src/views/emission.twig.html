@@ -75,15 +75,16 @@
 
 <!-- Player state -->
 <script>
-window.play = false;
 {%- if player.play -%}
 window.play = true;
+{% else %}
+window.play = false;
 {%- endif -%}
 {%- if player.position -%}
-window.position = {{ player.position }};
+window.MejsSmartplaylistPosition = {{ player.position }};
 window.play = true;
 {% else %}
-window.position = false;
+window.MejsSmartplaylistPosition = false;
 {% endif %}
 </script>
 

@@ -7,12 +7,17 @@
 
   // Defaults
   $.extend(mejs.MepDefaults, {
+    // This CSS class is applied to the currently playing track timestamp element
     smartplaylistCurrentClass:       'mejs-smartplaylist-current',
-    smartplaylistLinkTitle:          'Listen to this track',
+    // Timestamp element selector
     smartplaylistSelectorTimestamp:  'a.mejs-smartplaylist-time',
+    // Playlist container selector
     smartplaylistSelectorPlaylist:   '.mejs-smartplaylist-playlist',
+    // Regex used to parse timestamp
     smartplaylistTimestampRegex:     '(\\d{2}):(\\d{2}):(\\d{2})',
+    // Query variable used for sharing position
     smartplaylistPositionQueryVar:   'mejs-smartplaylist-position',
+    // Factors used to convert timestamp elements matched by smartplaylistTimestampRegex to seconds
     smartplaylistTimeFactors: { 
       1: 60 * 60, // Hours
       2: 60,      // Minutes
@@ -36,9 +41,6 @@
         seconds += parseInt(parts[3]) * factors['3'];
         $(this).attr('href', '?' + $this.options.smartplaylistPositionQueryVar + '=' + seconds);
         $(this).data('mejs-smartplaylist-seconds', seconds);
-        if ($(this).attr('title') == undefined) {
-          $(this).attr('title', $this.options.smartplaylistLinkTitle);
-        }
       });
 
       // Clicking on a timestamps seeks to the appropriate time in mix
@@ -75,6 +77,13 @@
           }
         });
       }, false);
+
+      // Used when seeking asked and player has not started yet
+      media.addEventListener('playing', function() {
+        if (window.MejsSmartplaylistPosition) {
+          media.setCurrentTime(window.MejsSmartplaylistPosition);
+        }
+      });
     }
   });
 

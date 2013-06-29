@@ -838,12 +838,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendFeed.git",
-                "reference": "71c031f79e183a9b365a85cfc5df8f9bb7b30675"
+                "reference": "ad7b8e6bb5a51fe57cd5f77c7083ee6bc0df55e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendFeed/zipball/71c031f79e183a9b365a85cfc5df8f9bb7b30675",
-                "reference": "71c031f79e183a9b365a85cfc5df8f9bb7b30675",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendFeed/zipball/ad7b8e6bb5a51fe57cd5f77c7083ee6bc0df55e6",
+                "reference": "ad7b8e6bb5a51fe57cd5f77c7083ee6bc0df55e6",
                 "shasum": ""
             },
             "require": {
@@ -877,7 +877,7 @@
                 "feed",
                 "zf2"
             ],
-            "time": "2013-06-20 18:03:21"
+            "time": "2013-06-28 17:00:59"
         },
         {
             "name": "zendframework/zend-servicemanager",

@@ -3,7 +3,7 @@ $(document).ready(function() {
   $('audio').mediaelementplayer(
     {
       // Enabled features
-      features: ['playpause','progress','current','duration','tracks','volume','smartplaylist', 'googleanalytics'],
+      features: ['playpause','progress','current','duration','tracks','volume','smartplaylist', 'googleanalytics', 'autochange'],
 
       // Smart playlists configuration
       smartplaylistLinkTitle: 'Écouter ce morceau',
@@ -13,18 +13,15 @@ $(document).ready(function() {
       googleAnalyticsTitle: 'Ouïedire.net',
       googleAnalyticsCategory: 'Émissions',
       
+      // Autochange configuration
+      autochangeSelectorNextLink: 'a.previous',
+      autochangeQueryString: 'play',
+
       success: function(mediaElement) {
         // Autoplay
         if (window.play) {
           mediaElement.play();
         }
-
-        // Autoplay previous mix
-        mediaElement.addEventListener('ended', function() {
-          if ($('a.previous').length) {
-            window.location = $('a.previous').attr('href') + '?play';
-          }
-        });
       }
     }
   );

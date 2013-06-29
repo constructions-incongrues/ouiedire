@@ -6,7 +6,7 @@ Version: 1.0
 */
 
 
-/*@import url(http://fonts.googleapis.com/css?family=Metrophobic);*/
+@import url(http://fonts.googleapis.com/css?family=Metrophobic);
 
 html { font-size:62.5%;}
 body {background-color: #FFF9FF;background-image: url(../img/pattern.gif); background-repeat: repeat; background-attachment: fixed; font-family: 'Metrophobic', sans-serif; }
@@ -73,5 +73,5 @@ audio {position:relative;left:18px;}
 
 /* **************** MEDIA PLAYER (http://mediaelementjs.com) ***************** */
 .mejs-container { left: 20px; }
-a.time { font-size: 1rem; }
-a.time.me-smartplaylist-current { background-color: #0cf; }
+a.mejs-smartplaylist-time { font-size: 1rem; }
+a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #0cf; }

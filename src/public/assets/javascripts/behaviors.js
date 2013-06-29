@@ -1,9 +1,17 @@
 $(document).ready(function() {
   $('audio').mediaelementplayer(
     {
-      features: ['playpause','progress','current','duration','tracks','volume','smartplaylist'],
+      // Enabled features
+      features: ['playpause','progress','current','duration','tracks','volume','smartplaylist', 'googleanalytics'],
+
+      // Smart playlists configuration
       smartplaylistLinkTitle: 'Écouter ce morceau',
       smartplaylistPositionQueryVar: 'position',
+
+      // Google Analytics integration
+      googleAnalyticsTitle: 'Ouïedire.net',
+      googleAnalyticsCategory: 'Émissions'
+      
       success: function(mediaElement) {
         // Autoplay
         if (window.play) {

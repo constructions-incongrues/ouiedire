@@ -51,7 +51,7 @@ $(document).ready(function() {
     seconds += parseInt(parts[1]) * 60 * 60;
     seconds += parseInt(parts[2]) * 60;
     seconds += parseInt(parts[3]);
-    $this.attr('href', '?seek=' + seconds);
+    $this.attr('href', '?position=' + seconds);
     $this.data('seconds', seconds);
     if ($this.attr('title') == undefined) {
       $this.attr('title', 'Écouter ce morceau')

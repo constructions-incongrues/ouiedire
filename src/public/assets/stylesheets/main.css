@@ -73,3 +73,5 @@ audio {position:relative;left:18px;}
 
 /* **************** MEDIA PLAYER (http://mediaelementjs.com) ***************** */
 .mejs-container { left: 20px; }
+a.time { font-size: 1rem; }
+a.time.current { background-color: #0cf; }

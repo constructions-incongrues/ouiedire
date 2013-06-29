@@ -78,7 +78,7 @@
 $('audio').mediaelementplayer(
 	{
 		success: function(mediaElement) {
-{%- if player.play -%}
+{%- if player.play or player.seek -%}
 			mediaElement.play();
 {%- endif -%}
 			// Autoplay previous mix
@@ -87,6 +87,11 @@ $('audio').mediaelementplayer(
 					window.location = $('a.previous').attr('href') + '?play';
 				}
 			});
+{% if player.seek %}
+			mediaElement.addEventListener('playing', function() {
+				mediaElement.setCurrentTime({{ player.seek }});
+			});
+{% endif %}
 		}
 	}
 );

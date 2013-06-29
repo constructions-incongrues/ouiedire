@@ -79,11 +79,11 @@ window.play = false;
 {%- if player.play -%}
 window.play = true;
 {%- endif -%}
-{%- if player.seek -%}
-window.seek = {{ player.seek }};
+{%- if player.position -%}
+window.position = {{ player.position }};
 window.play = true;
 {% else %}
-window.seek = false;
+window.position = false;
 {% endif %}
 </script>
 

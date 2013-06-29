@@ -17,8 +17,8 @@ $(document).ready(function() {
 
         // Used when seeking asked and player has not started yet
         mediaElement.addEventListener('playing', function() {
-          if (window.seek) {
-            mediaElement.setCurrentTime(window.seek);
+          if (window.position) {
+            mediaElement.setCurrentTime(window.position);
           }
         });
 
@@ -64,7 +64,7 @@ $(document).ready(function() {
     $(this).addClass('current');
     var player = mejs.players.mep_0;
     if (player.media.paused) {
-      window.seek = $(this).data('seconds');
+      window.position = $(this).data('seconds');
       mejs.players.mep_0.play();      
     } else {
       player.setCurrentTime($(this).data('seconds'));

@@ -333,15 +333,15 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
   }
 
   // Player state defaults
-  $player = array('play' => false, 'seek' => false);
+  $player = array('play' => false, 'position' => false);
 
   // Start playing ?
   if (array_key_exists('play', $_GET)) {
     $player['play'] = true;
   }
   // Seek to position
-  if (filter_input(INPUT_GET, 'seek', FILTER_VALIDATE_INT)) {
-    $player['seek'] = filter_input(INPUT_GET, 'seek');
+  if (filter_input(INPUT_GET, 'position', FILTER_VALIDATE_INT)) {
+    $player['position'] = filter_input(INPUT_GET, 'position');
   }
 
   // Render view

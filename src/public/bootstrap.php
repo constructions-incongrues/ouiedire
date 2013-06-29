@@ -332,8 +332,23 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
 		}
 	}
 
+	// Player state
+	$player = array('play' => false);
+	if (array_key_exists('play', $_GET)) {
+		$player['play'] = true;
+	}
+
 	// Render view
-  return $app['twig']->render('emission.twig.html', array('show' => $show, 'previous' => $siblings[0], 'next' => $siblings[1], 'latest' => $latest));
+  return $app['twig']->render(
+  	'emission.twig.html', 
+  	array(
+  		'latest'   => $latest,
+  		'next'     => $siblings[1], 
+  		'player'   => $player,
+  		'previous' => $siblings[0], 
+  		'show'     => $show
+  	)
+  );
 })
 ->bind('emission');
 

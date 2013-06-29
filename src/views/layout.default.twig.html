@@ -39,6 +39,11 @@
 	<meta property="og:url" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getRequestUri() }}" />
 	<meta property="og:image" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getBasePath() }}/assets/img/logo.png" />
 	{% endblock %}
+
+	<!-- mediaelement.js : http://mediaelementjs.com -->
+	<script src="{{ app.request.getBasePath() }}/vendor/jquery/jquery.js"></script>
+	<script src="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelement-and-player.min.js"></script>
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelementplayer.css" /></code>
 </head>
 
 <body>

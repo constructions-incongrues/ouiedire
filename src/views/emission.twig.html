@@ -21,11 +21,11 @@
 
 <div class="grid-100 mobile-grid-100">
 	<section class="nav">
-<p>{% if (previous) %}
-
-<a href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}">previous</a>{% endif %}
+<p>
+{% if (previous) %}
+<a class="previous" href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}">previous</a>{% endif %}
 {% if (next) %}
-<a href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}" title="#{{ next.number }} : {{ next.title }}, par {{ next.authors }}">next</a>
+<a class="next" href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}" title="#{{ next.number }} : {{ next.title }}, par {{ next.authors }}">next</a>
 {% endif %}
 </p>
 </section>
@@ -67,4 +67,24 @@
 	{{ show.description|raw }}
 
 </div><!-- grid-50 -->
+
+<script>
+
+$('audio').mediaelementplayer(
+	{
+		success: function(mediaElement) {
+{%- if player.play -%}
+			mediaElement.play();
+{%- endif -%}
+			// Autoplay previous mix
+			mediaElement.addEventListener('ended', function(a) {
+				if ($('a.previous').length) {
+					window.location = $('a.previous').attr('href') + '?play';
+				}
+			})
+		}
+	}
+);
+</script>
+
 {% endblock %}

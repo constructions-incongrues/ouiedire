@@ -9,6 +9,14 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Generator\UrlGenerator;
 use Zend\Feed\Writer\Feed;
 
+function truncateText($text, $maxLength) {
+  if (strlen($text) > $maxLength) {
+    $text = substr($text, 0, $maxLength);
+  }
+
+  return $text;
+}
+
 function slugify($text)
 {
     // replace non letter or digits by -
@@ -235,6 +243,9 @@ if (isset($debug) && $debug == true) {
       'profiler.mount_prefix' => '/_profiler', // this is the default
   ));
 }
+
+// Assets invalidator
+$app['assetsVersion'] = 2;
 
 // About page
 $app->get('/apropos', function(Silex\Application $app) {

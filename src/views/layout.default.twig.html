@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/main.css?1" />
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/main.css?{{ app.assetsVersion }}" />
 	<!--[if (gt IE 8) | (IEMobile)]><!-->
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/unsemantic-grid-responsive.css" />
 	<!--<![endif]-->
@@ -43,10 +43,10 @@
 	<!-- mediaelement.js : http://mediaelementjs.com -->
 	<script src="{{ app.request.getBasePath() }}/vendor/jquery/jquery.js"></script>
 	<script src="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelement-and-player.min.js"></script>
-	<script src="{{ app.request.getBasePath() }}/assets/javascripts/mep-feature-smartplaylist.js"></script>
-	<script src="{{ app.request.getBasePath() }}/assets/javascripts/mep-feature-autochange.js"></script>
+	<script src="{{ app.request.getBasePath() }}/assets/javascripts/mep-feature-smartplaylist.js?{{ app.assetsVersion }}"></script>
+	<script src="{{ app.request.getBasePath() }}/assets/javascripts/mep-feature-autochange.js?{{ app.assetsVersion }}"></script>
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelementplayer.css" /></link>
-	<script src="{{ app.request.getBasePath() }}/assets/javascripts/behaviors.js"></script>
+	<script src="{{ app.request.getBasePath() }}/assets/javascripts/behaviors.js?{{ app.assetsVersion }}"></script>
 </head>
 
 <body>

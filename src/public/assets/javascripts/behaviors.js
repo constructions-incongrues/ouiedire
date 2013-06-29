@@ -19,7 +19,7 @@ $(document).ready(function() {
 
       success: function(mediaElement) {
         // Autoplay
-        if (window.play) {
+        if (window.MejsAutoplay) {
           mediaElement.play();
         }
       }

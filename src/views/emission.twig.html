@@ -77,13 +77,13 @@
 <!-- Player state -->
 <script>
 {%- if player.play -%}
-window.play = true;
+window.MejsAutoplay = true;
 {% else %}
 window.play = false;
 {%- endif -%}
 {%- if player.position -%}
 window.MejsSmartplaylistPosition = {{ player.position }};
-window.play = true;
+window.MejsAutoplay = true;
 {% else %}
 window.MejsSmartplaylistPosition = false;
 {% endif %}

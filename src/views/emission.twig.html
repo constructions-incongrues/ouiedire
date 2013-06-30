@@ -15,12 +15,14 @@
 <meta property="og:description" content="{{ show.description|striptags }}" />
 <meta property="og:url" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getRequestUri() }}" />
 <meta property="og:image" content="{{ show.covers.0 }}" />
+<!-- TODO : enable once ouiedire gets an SSL domain
 <meta property="og:video" content="http://{{ urlSwfPlayer|raw }}" />
 <meta property="og:video:secure_url" content="https://{{ urlSwfPlayer|raw }}" />
 <meta property="og:video:height" content="100" />
 <meta property="og:video:width" content="500" />
 <meta property="og:video:type" content="application/x-shockwave-flash" />
-{% endblock %}
+-->
+ {% endblock %}
 
 {% block oembed %}
 <link rel="alternate" type="application/json+oembed" href="{{ url('oembed') }}" />

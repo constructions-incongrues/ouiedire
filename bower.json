@@ -1,7 +1,7 @@
 {
   "name": "net.ouiedire.www",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "dependencies": {
-    "unsemantic": "https://github.com/bower/bower/archive/v0.9.2.zip"
+    "net.constructions-incongrues.mejs": "~0.1.0"
   }
 }

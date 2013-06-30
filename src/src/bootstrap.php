@@ -248,7 +248,7 @@ if (isset($debug) && $debug == true) {
 if ($app['debug'] == true) {
   $app['assetsVersion'] = time();
 } else {
-  $app['assetsVersion'] = 5;
+  $app['assetsVersion'] = 6;
 }
  
 // About page

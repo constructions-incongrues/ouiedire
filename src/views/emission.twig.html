@@ -12,7 +12,7 @@
 {% block opengraph %}
 <meta property="og:title" content="Ouïedire - Émission #{{ show.number }} : {{ show.title }}, par {{ show.authors }}" />
 <meta property="og:type" content="video" />
-<meta property="og:description" content="{{ show.description|striptags }}" />
+<meta property="og:description" content="{{ show.description|striptags|trim }}" />
 <meta property="og:url" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getRequestUri() }}" />
 <meta property="og:image" content="{{ show.covers.0 }}" />
 <!-- TODO : enable once ouiedire gets an SSL domain
@@ -25,7 +25,7 @@
  {% endblock %}
 
 {% block oembed %}
-<link rel="alternate" type="application/json+oembed" href="{{ url('oembed') }}" />
+<link rel="alternate" type="application/json+oembed" title="oEmbed endpoint" href="{{ url('oembed') }}" />
 {% endblock %}
 
 {% block footer %}

@@ -1,7 +1,8 @@
 *-dist
 *.bak
 *.mp3
-*.sw*
+*.swp
+*.swo
 *~
 .git
 /composer.*

@@ -50,18 +50,44 @@
       });
 
       // Clicking on a timestamps seeks to the appropriate time in mix
-      $playlist.find($this.options.smartplaylistSelectorTimestamp).on('click', function() {
+      $playlist.find($this.options.smartplaylistSelectorTimestamp).on('click', function(event) {
+        // Position player
         $playlist.find($this.options.smartplaylistSelectorTimestamp).removeClass($this.options.smartplaylistCurrentClass);
         $(this).addClass($this.options.smartplaylistCurrentClass);
         var player = mejs.players.mep_0;
         if (player.media.paused) {
           window.MejsSmartplaylistPosition = $(this).data('mejs-smartplaylist-seconds');
-          mejs.players.mep_0.play();      
+          mejs.players.mep_0.play(); 
         } else {
           player.setCurrentTime($(this).data('mejs-smartplaylist-seconds'));
         }
 
+        // Update URL
+        // Middle click, cmd click, and ctrl click should open
+        // links in a new tab as normal.
+        if (event.which > 1 || event.metaKey) {
+          return;
+        } else {
+          window.location.href.replace($(this).attr('href'), '');
+          window.history.pushState(null, '', $(this).attr('href'));
+        }
+
         return false;
+      });
+
+      // Navigation history management
+      $(window).bind('popstate', function(event) {
+        var matches = location.href.match(/^.*position=(\d+)$/);
+        if (matches != null) {
+          var position = matches[1];
+          var player = mejs.players.mep_0;
+          if (player.media.paused) {
+            window.MejsSmartplaylistPosition = position;
+            mejs.players.mep_0.play();
+          } else {
+            player.setCurrentTime(position);
+          }
+        }
       });
 
       // Live updates
@@ -70,7 +96,7 @@
           // Update page title
           var currentTrack = $playlist.find('.' + $this.options.smartplaylistCurrentClass);
           var trackTitle = $this.options.smartplaylistPageTitleCallback(currentTrack); 
-          if (trackTitle != false) {
+          if (trackTitle != false && trackTitle != undefined) {
             var title = $this.options.smartplaylistPageTitleFormat.replace(/(%timecode%)/, mejs.Utility.secondsToTimeCode(media.currentTime));
             title = title.replace(/(%title%)/, trackTitle);
             document.title = title;

@@ -312,7 +312,7 @@ EOT;
     $htmlContent = sprintf($htmlContent, $show['covers'][0], $show['description'], $show['playlist'], $show['urlDownload']);
     // Build entry using show data
     $entry = $feed->createEntry();
-    $entry->setTitle(sprintf('Ouïedire #%s : %s par %s', $show['number'], $show['title'], $show['authors']));
+    $entry->setTitle(sprintf('%s #%s : %s par %s', $show['type'], $show['number'], $show['title'], $show['authors']));
     $entry->setLink($app['url_generator']->generate('emission', array('id' => $show['id'], 'type' => $show['typeSlug']), UrlGenerator::ABSOLUTE_URL));
     if ($show['description']) {
       $entry->setDescription($show['description']);

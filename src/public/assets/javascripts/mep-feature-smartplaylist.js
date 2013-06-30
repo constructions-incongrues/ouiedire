@@ -25,13 +25,10 @@
     },
     // Callback for updating page title during play
     smartplaylistPageTitleCallback:  function(currentTrack) {
-      if (currentTrack.attr('title') == undefined) {
-        trackTitle = currentTrack.parent().text();
-      } else {
-        trackTitle = currentTrack.attr('title');
-      }
-      return trackTitle;
-    }
+      return currentTrack.attr('title');
+    },
+    // Page title format (available tags: timecode, title)
+    smartplaylistPageTitleFormat:    '%timecode% | %title%'
   });
 
   $.extend(MediaElementPlayer.prototype, {
@@ -73,7 +70,9 @@
           // Update page title
           var currentTrack = $playlist.find('.' + $this.options.smartplaylistCurrentClass);
           var trackTitle = $this.options.smartplaylistPageTitleCallback(currentTrack); 
-          document.title = mejs.Utility.secondsToTimeCode(media.currentTime) + ' | ' + trackTitle;
+          var title = $this.options.smartplaylistPageTitleFormat.replace(/(%timecode%)/, mejs.Utility.secondsToTimeCode(media.currentTime));
+          title = title.replace(/(%title%)/, trackTitle);
+          document.title = title;
         }
 
         // Update current track on playlist

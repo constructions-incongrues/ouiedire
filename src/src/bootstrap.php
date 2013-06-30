@@ -245,7 +245,11 @@ if (isset($debug) && $debug == true) {
 }
 
 // Assets invalidator
-$app['assetsVersion'] = 2;
+if ($app['debug'] == true) {
+  $app['assetsVersion'] = time();
+} else {
+  $app['assetsVersion'] = 2;
+}
 
 // About page
 $app->get('/apropos', function(Silex\Application $app) {

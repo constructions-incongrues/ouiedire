@@ -6,7 +6,10 @@ $(document).ready(function() {
   $('audio').mediaelementplayer(
     {
       // Enabled features
-      features: ['playpause','progress','current','duration','tracks','volume','smartplaylist', 'googleanalytics', 'autochange'],
+      features: ['playpause','progress','current','duration','tracks','volume','smartplaylist', 'googleanalytics', 'autochange', 'ouiedire'],
+
+      // Player size
+      audioWidth: '100%',
 
       // Smart playlists configuration
       smartplaylistLinkTitle: 'Écouter ce morceau',
@@ -28,6 +31,9 @@ $(document).ready(function() {
         }
       },
 
+      // Download link
+      ouiedireDownloadUrl: window.MejsOuiedireDownloadUrl,
+
       // Google Analytics integration
       googleAnalyticsTitle: 'Ouïedire.net',
       googleAnalyticsCategory: 'Émissions',
@@ -41,8 +47,6 @@ $(document).ready(function() {
         if (window.MejsAutoplay) {
           mediaElement.play();
         }
-
-        $(mediaElement).trigger('click');
       }
     }
   );

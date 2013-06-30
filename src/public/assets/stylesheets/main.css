@@ -34,8 +34,9 @@ footer p:first-child a:hover {font-weight: normal;border-bottom: 2px solid #00CC
 footer a {text-decoration: none;color: #000;border-bottom: 1px solid #000;}
 footer a:hover {text-transform: uppercase; }
 li a:hover {border-bottom: 1px solid #e6faff;background-color: #00CCFF}
-.download a{padding:5px;text-decoration: none;color: #000;background-color:#00CCFF;font-weight: bold;}
-.download a:hover {background-color: #000; color: #FFF;}
+.download {display: inline-block;position:relative;top:-2px;}
+.download a {text-decoration: none;color: #fff;font-weight: bold; margin-left: 1em; margin-right: 1em; text-transform: uppercase; }
+.download a:hover {background-color: #0cf; color: #000;}
 ol li a:hover {border-bottom:1px solid #000;background-color: transparent;}
 .description a {color: #000;text-decoration: none;}
 .description a:hover {border-bottom: 1px solid #000;}
@@ -67,7 +68,6 @@ footer {position:relative;left:15px;font-size: 14px;font-size: 1.4rem;}
 
 header img {max-width: 100%; max-height: 100%;margin: 0 0 -10px -9px;}
 audio {position:relative;left:18px;}
-.download {display: inline-block;position:relative;top:-8px;left:20px;font-size: 14px;font-size: 1.4rem;}
 
 .description img {max-width:100%;max-height: 100%;}
 

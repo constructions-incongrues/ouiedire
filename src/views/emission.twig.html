@@ -45,19 +45,6 @@
         <param name="flashvars" value="controls=true&file={{ show.urlDownload }}" />
     </object>
 	</audio>
-	<p class="download">
-		<a href="{{ show.urlDownload }}" title="Télécharger cette émission au format MP3">TÉLÉCHARGER</a>
-		<a href="#" 
-			title="Partager cette émission sur Facebook"
-		  onclick="
-		    window.open(
-		      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
-		      'facebook-share-dialog', 
-		      'width=626,height=436'); 
-		    return false;">
-		  PARTAGER
-		</a>
-	</p>
 
 {{ show.playlist|raw }}
 	
@@ -87,6 +74,7 @@ window.MejsAutoplay = true;
 {% else %}
 window.MejsSmartplaylistPosition = false;
 {% endif %}
+window.MejsOuiedireDownloadUrl = '{{ show.urlDownload }}';
 </script>
 
 {% endblock %}

@@ -22,6 +22,15 @@
       1: 60 * 60, // Hours
       2: 60,      // Minutes
       3: 1        // Seconds
+    },
+    // Callback for updating page title during play
+    smartplaylistPageTitleCallback:  function(currentTrack) {
+      if (currentTrack.attr('title') == undefined) {
+        trackTitle = currentTrack.parent().text();
+      } else {
+        trackTitle = currentTrack.attr('title');
+      }
+      return trackTitle;
     }
   });
 
@@ -58,8 +67,16 @@
         return false;
       });
 
-      // Update current track
+      // Live updates
       media.addEventListener('timeupdate', function() {
+        if (!media.paused) {
+          // Update page title
+          var currentTrack = $playlist.find('.' + $this.options.smartplaylistCurrentClass);
+          var trackTitle = $this.options.smartplaylistPageTitleCallback(currentTrack); 
+          document.title = mejs.Utility.secondsToTimeCode(media.currentTime) + ' | ' + trackTitle;
+        }
+
+        // Update current track on playlist
         var times = $($this.options.smartplaylistSelectorTimestamp);
         times.each(function(i) {
           // Boundaries

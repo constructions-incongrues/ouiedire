@@ -8,6 +8,17 @@ $(document).ready(function() {
       // Smart playlists configuration
       smartplaylistLinkTitle: 'Écouter ce morceau',
       smartplaylistPositionQueryVar: 'position',
+      smartplaylistPageTitleCallback:  function(currentTrack) {
+        if (currentTrack.attr('title') == undefined) {
+          var match = currentTrack.parent().text().match(/\d{2}:\d{2}:\d{2} (.*)/);
+          if (match != null) {
+            var trackTitle = match[1];
+          }
+        } else {
+          var trackTitle = currentTrack.attr('title');
+        }
+        return trackTitle;
+      },
 
       // Google Analytics integration
       googleAnalyticsTitle: 'Ouïedire.net',

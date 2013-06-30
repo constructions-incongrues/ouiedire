@@ -26,3 +26,35 @@ Options +FollowSymlinks -MultiViews
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ app_prod.php [QSA,L]
 </IfModule>
+
+# Performance tweaks
+ExpiresActive On
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/pdf "access plus 1 month"
+ExpiresByType text/x-javascript "access plus 1 month"
+ExpiresByType application/x-shockwave-flash "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresDefault "access plus 2 days"
+
+<IfModule mod_deflate.c>
+    #The following line is enough for .js and .css
+    AddOutputFilter DEFLATE js css
+
+    #The following line also enables compression by file content type, for the following list of Content-Type:s
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml
+
+    #The following lines are to avoid bugs with some browsers
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|xml|gz)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>

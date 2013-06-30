@@ -250,7 +250,7 @@ if ($app['debug'] == true) {
 } else {
   $app['assetsVersion'] = 2;
 }
-
+ 
 // About page
 $app->get('/apropos', function(Silex\Application $app) {
     return $app['twig']->render('apropos.twig.html');
@@ -331,6 +331,51 @@ EOT;
 })
 ->bind('feed');
 
+// oEmbed
+$app->get('/oembed', function(Silex\Application $app) {
+  // Fetch show
+  try {
+    $url = $app['request']->get('url');
+    $matches = array();
+    preg_match('/^.*(ouiedire|ailleurs)-(\d+)$/', $url, $matches);
+    $show = getShow("$matches[1]-$matches[2]", $app);
+  } catch (\RuntimeException $e) {
+    if ($app['debug']) {
+      throw $e;
+    } else {
+      $app->abort(404, sprintf("L'émission #%d n'est pas disponible.", $id));
+    }
+  }
+
+  // Website FQDN
+  $urlRoot = $app['request']->getScheme() . '://' . $app['request']->getHost() . $app['request']->getBasePath();
+
+  // HTML for embedding
+  $html = <<<EOT
+<iframe width="500" height="600" scrolling="no" frameborder="no" src="%s?embed">
+</iframe>
+EOT;
+  $html = sprintf($html, $app['url_generator']->generate('emission', array('id' => $show['id'], 'type' => $show['typeSlug']), UrlGenerator::ABSOLUTE_URL));
+
+  $data = array(
+    'version'       => 1,
+    'type'          => 'rich',
+    'provider_name' => 'ouiedire',
+    'provider_url'  => $urlRoot,
+    'height'        => 600,
+    'width'         => 250,
+    'title'         => sprintf('%s #%s - %s, par %s', $show['type'], $show['number'], $show['title'], $show['authors']),
+    'description'   => $show['description'],
+    'html'          => $html
+  );
+
+  $responseBody = sprintf('%s(%s);', $app['request']->get('callback'), json_encode($data));
+
+  // Prepare response
+  return new Response($responseBody, 200, array('content-type' => 'application/json; charset=utf8'));
+})
+->bind('oembed');
+
 // Show page
 $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) {
   // Fetch show
@@ -359,9 +404,16 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
     $player['position'] = filter_input(INPUT_GET, 'position');
   }
 
+  // Choose view
+  if (array_key_exists('embed', $_GET)) {
+    $view = 'embed.twig.html';
+  } else {
+    $view = 'emission.twig.html';
+  }
+
   // Render view
   return $app['twig']->render(
-    'emission.twig.html', 
+    $view, 
     array(
       'latest'   => $latest,
       'next'     => $siblings[1], 

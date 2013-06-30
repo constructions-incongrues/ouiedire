@@ -2,6 +2,7 @@
 
 {% block title %}Émission #{{ show.number }} : {{ show.title }}, par {{ show.authors }}{% endblock %}
 
+
 {% block latest %}
 <a href="{{ path('emission', {id:latest.id, type:latest.typeSlug}) }}">
   {{ latest.type }} {{ latest.number }} : {{ latest.authors }} - {{ latest.title }} 
@@ -15,6 +16,10 @@
 <meta property="og:audio:url" content="{{ show.urlDownload }}" />
 <meta property="og:url" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getRequestUri() }}" />
 <meta property="og:image" content="{{ show.covers.0 }}" />
+{% endblock %}
+
+{% block oembed %}
+<link rel="alternate" type="application/json+oembed" href="{{ url('oembed') }}" />
 {% endblock %}
 
 {% block content %}

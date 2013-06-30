@@ -1,0 +1,16 @@
+<style>
+.ouiedire ol { list-style-type: none; padding-left: 0; margin-left: 0; }
+</style>
+<div class="ouiedire">
+  <h1><a href="{{ url('emission', {type: show.typeSlug, id: show.id}) }}" target="_blank">{{ show.type }} #{{ show.number }}</a></h1>
+  <h2>{{ show.title }}, par {{ show.authors }}</h2>
+  <audio controls="controls">
+    <source src="{{ show.urlDownload }}" type="audio/mp3" />
+    <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
+    <object width="320" height="240" type="application/x-shockwave-flash" data="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf">
+        <param name="movie" value="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf" />
+        <param name="flashvars" value="controls=true&file={{ show.urlDownload }}" />
+    </object>
+  </audio>
+  {{ show.playlist|raw }}
+</div>

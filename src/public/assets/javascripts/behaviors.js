@@ -1,5 +1,8 @@
 $(document).ready(function() {
+  // Titre des liens sur les timestamp des playlists
   $('a.a.mejs-smartplaylist-time').attr('title', 'Écouter ce morceau');
+
+  // Configuration du player audio
   $('audio').mediaelementplayer(
     {
       // Enabled features
@@ -18,7 +21,11 @@ $(document).ready(function() {
         } else {
           var trackTitle = currentTrack.attr('title');
         }
-        return trackTitle;
+        if (trackTitle == undefined) {
+          return false;
+        } else {
+          return trackTitle;
+        }
       },
 
       // Google Analytics integration
@@ -34,6 +41,8 @@ $(document).ready(function() {
         if (window.MejsAutoplay) {
           mediaElement.play();
         }
+
+        $(mediaElement).trigger('click');
       }
     }
   );

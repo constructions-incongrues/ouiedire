@@ -23,7 +23,7 @@
       2: 60,      // Minutes
       3: 1        // Seconds
     },
-    // Callback for updating page title during play
+    // Callback for updating page title during play. Return false deactivates page title updating
     smartplaylistPageTitleCallback:  function(currentTrack) {
       return currentTrack.attr('title');
     },
@@ -70,9 +70,11 @@
           // Update page title
           var currentTrack = $playlist.find('.' + $this.options.smartplaylistCurrentClass);
           var trackTitle = $this.options.smartplaylistPageTitleCallback(currentTrack); 
-          var title = $this.options.smartplaylistPageTitleFormat.replace(/(%timecode%)/, mejs.Utility.secondsToTimeCode(media.currentTime));
-          title = title.replace(/(%title%)/, trackTitle);
-          document.title = title;
+          if (trackTitle != false) {
+            var title = $this.options.smartplaylistPageTitleFormat.replace(/(%timecode%)/, mejs.Utility.secondsToTimeCode(media.currentTime));
+            title = title.replace(/(%title%)/, trackTitle);
+            document.title = title;
+          }
         }
 
         // Update current track on playlist

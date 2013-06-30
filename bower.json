@@ -2,6 +2,6 @@
   "name": "net.ouiedire.www",
   "version": "0.1.0",
   "dependencies": {
-    "net.constructions-incongrues.mejs": "~0.1.0"
+    "net.constructions-incongrues.mejs": ">=0.*"
   }
 }

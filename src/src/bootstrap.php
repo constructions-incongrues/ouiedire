@@ -369,7 +369,11 @@ EOT;
     'html'          => $html
   );
 
-  $responseBody = sprintf('%s(%s);', $app['request']->get('callback'), json_encode($data));
+  if ($app['request']->get('callback')) {
+    $responseBody = sprintf('%s(%s);', $app['request']->get('callback'), json_encode($data));
+  } else {
+    $responseBody = json_encode($data);
+  }
 
   // Prepare response
   return new Response($responseBody, 200, array('content-type' => 'application/json; charset=utf8'));

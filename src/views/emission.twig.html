@@ -26,6 +26,17 @@
 <link rel="alternate" type="application/json+oembed" href="{{ url('oembed') }}" />
 {% endblock %}
 
+{% block footer %}
+{% if app.debug %}
+<p>
+  <strong>Debug :</strong> 
+  <a href="{{ url('oembed') }}?format=json&url={{ url('emission', {type: show.typeSlug, id: show.id})|url_encode }}">oEmbed endpoint</a>
+  <a href="{{ url('emission', {type: show.typeSlug, id: show.id}) }}?embed">Embedded view</a>
+  <a href="http://{{ urlSwfPlayer }}">Facebook player</a>
+</p>
+{% endif %}
+{% endblock %}
+
 {% block content %}
 
 <div class="grid-100 mobile-grid-100">

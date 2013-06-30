@@ -16,7 +16,7 @@ $(document).ready(function() {
       // Smart playlists configuration
       smartplaylistLinkTitle: 'Écouter ce morceau',
       smartplaylistPositionQueryVar: 'position',
-      smartplaylistPageTitleFormat:    '%timecode% - %title% | ' + originalTitle,
+      smartplaylistPageTitleFormat:    '%timecode% | %title% | ' + originalTitle,
       smartplaylistPageTitleCallback:  function(currentTrack) {
         var match = currentTrack.parent().text().match(/\d{2}:\d{2}:\d{2} (.*)/);
         if (match != null) {

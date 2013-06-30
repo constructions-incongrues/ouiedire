@@ -411,15 +411,25 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
     $view = 'emission.twig.html';
   }
 
+  // Facebook player
+  $urlSwfPlayer = sprintf(
+    '%s%s/vendor/mediaplayer-5.9/player.swf?autostart=true&file=%s&image=%s', 
+    $app['request']->getHost(),
+    $app['request']->getBasePath(),
+    urlencode($show['urlDownload']),
+    urlencode($show['covers'][0])
+  );
+
   // Render view
   return $app['twig']->render(
     $view, 
     array(
-      'latest'   => $latest,
-      'next'     => $siblings[1], 
-      'player'   => $player,
-      'previous' => $siblings[0], 
-      'show'     => $show
+      'latest'        => $latest,
+      'next'          => $siblings[1], 
+      'player'        => $player,
+      'previous'      => $siblings[0], 
+      'show'          => $show,
+      'urlSwfPlayer'  => $urlSwfPlayer
     )
   );
 })

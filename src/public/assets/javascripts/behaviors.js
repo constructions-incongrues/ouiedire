@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  var originalTitle = document.title;
+
   // Titre des liens sur les timestamp des playlists
   $('a.mejs-smartplaylist-time').attr('title', 'Écouter ce morceau');
 
@@ -14,11 +16,12 @@ $(document).ready(function() {
       // Smart playlists configuration
       smartplaylistLinkTitle: 'Écouter ce morceau',
       smartplaylistPositionQueryVar: 'position',
-      smartplaylistPageTitleFormat:    '%timecode% - %title% | Ouïedire',
+      smartplaylistPageTitleFormat:    '%timecode% - %title% | ' + originalTitle,
       smartplaylistPageTitleCallback:  function(currentTrack) {
         var match = currentTrack.parent().text().match(/\d{2}:\d{2}:\d{2} (.*)/);
         if (match != null) {
           var trackTitle = match[1];
+          trackTitle = trackTitle.replace(/\| /, '');
         }
         if (trackTitle == undefined) {
           return false;

@@ -1,7 +1,8 @@
 # ides
 *.bak
 *~
-*.sw*
+*.swp
+*.swo
 
 # silex
 /src/cache

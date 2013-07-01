@@ -118,12 +118,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Silex.git",
-                "reference": "d877687625a51b1a1ed311b95e158148aa2d68ca"
+                "reference": "2ba7d326eef5a40c7b6ef557f8adf152775c90df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Silex/zipball/d877687625a51b1a1ed311b95e158148aa2d68ca",
-                "reference": "d877687625a51b1a1ed311b95e158148aa2d68ca",
+                "url": "https://api.github.com/repos/fabpot/Silex/zipball/2ba7d326eef5a40c7b6ef557f8adf152775c90df",
+                "reference": "2ba7d326eef5a40c7b6ef557f8adf152775c90df",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
             "keywords": [
                 "microframework"
             ],
-            "time": "2013-06-19 14:39:26"
+            "time": "2013-06-30 18:39:52"
         },
         {
             "name": "silex/web-profiler",
@@ -356,12 +356,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "efe739e6599b3f43610a4005818a364fbdd67ce8"
+                "reference": "71ced0f8fa27461da26c245ddf6b0e49a6a6c2c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/efe739e6599b3f43610a4005818a364fbdd67ce8",
-                "reference": "efe739e6599b3f43610a4005818a364fbdd67ce8",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/71ced0f8fa27461da26c245ddf6b0e49a6a6c2c4",
+                "reference": "71ced0f8fa27461da26c245ddf6b0e49a6a6c2c4",
                 "shasum": ""
             },
             "require": {
@@ -394,7 +394,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2013-06-13 07:51:49"
+            "time": "2013-07-01 12:17:23"
         },
         {
             "name": "symfony/http-foundation",
@@ -929,19 +929,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendStdlib.git",
-                "reference": "9c350c13ed2e7b8b30aafce1d148db4709377195"
+                "reference": "63c099c2d14410816264563c1e324a7d7dcf3482"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/9c350c13ed2e7b8b30aafce1d148db4709377195",
-                "reference": "9c350c13ed2e7b8b30aafce1d148db4709377195",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/63c099c2d14410816264563c1e324a7d7dcf3482",
+                "reference": "63c099c2d14410816264563c1e324a7d7dcf3482",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
+            "require-dev": {
+                "zendframework/zend-eventmanager": "self.version",
+                "zendframework/zend-serializer": "self.version",
+                "zendframework/zend-servicemanager": "self.version"
+            },
             "suggest": {
                 "zendframework/zend-eventmanager": "To support aggregate hydrator usage",
+                "zendframework/zend-serializer": "Zend\\Serializer component",
                 "zendframework/zend-servicemanager": "To support hydrator plugin manager usage"
             },
             "type": "library",
@@ -964,7 +970,7 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2013-06-20 18:03:39"
+            "time": "2013-07-01 15:00:23"
         }
     ],
     "packages-dev": [

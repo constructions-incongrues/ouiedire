@@ -1,0 +1,20 @@
+{
+  "name": "net.constructions-incongrues.mejs",
+  "description": "A collection of MediaElement.js plugins",
+  "main": "src",
+  "authors": "Constructions Incongrues",
+  "version": "0.1.6",
+  "homepage": "https://github.com/constructions-incongrues/net.constructions-incongrues.mejs",
+  "dependencies": {
+    "jquery": ">=2.*",
+    "mediaelement": ">=2.*"
+  },
+  "gitHead": "be827d6f96b15f8159451ea8464395f4bc25622c",
+  "readme": "A collection of [MediaElement.js](mediaelementjs.com) plugins :\n\n* Smart Playlists : Link a timestamped playlist to the player\n* Autochange : Automatically change page URL when a media ends\n\n## Installation\n\nThe plugins are convenientely available through [Bower](http://bower.io). Just add the following dependency to your project's ```bower.json``` file and run ```bower install```. ",
+  "readmeFilename": "README.md",
+  "_id": "net.constructions-incongrues.mejs@0.1.6",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/constructions-incongrues/net.constructions-incongrues.mejs.git"
+  }
+}

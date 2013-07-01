@@ -10,7 +10,7 @@
 /vendor
 
 # bower
-/src/public/vendor/*/*
+# /src/public/vendor/*/* # en attendant que l'installation de Bower soit plus facile
 !/src/public/vendor/unsemantic/bower.json
 
 # assets

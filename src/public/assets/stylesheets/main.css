@@ -73,6 +73,9 @@ audio {position:relative;left:18px;}
 
 /* **************** MEDIA PLAYER (http://mediaelementjs.com) ***************** */
 .mejs-container { left: 20px; }
-a.mejs-smartplaylist-time { font-size: 1rem; font-family: Helvetica; color: #333; }
+a.mejs-smartplaylist-time { font-size: 15px;font-weight: lighter;; font-size: 1.5rem;  color: #333; }
+a.mejs-smartplaylist-time:after { content:"]"; }
+a.mejs-smartplaylist-time:before { content:"["; }
+
 a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #0cf; }
 ol.mejs-smartplaylist-playlist { list-style-type: none; padding-left: 2em; }

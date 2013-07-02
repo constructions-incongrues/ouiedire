@@ -43,15 +43,6 @@
 	<meta property="og:url" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getRequestUri() }}" />
 	<meta property="og:image" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getBasePath() }}/assets/img/logo.png" />
 	{% endblock %}
-
-	<!-- mediaelement.js : http://mediaelementjs.com -->
-	<script src="{{ app.request.getBasePath() }}/vendor/jquery/jquery.min.js"></script>
-	<script src="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelement-and-player.min.js"></script>
-	<script src="{{ app.request.getBasePath() }}/vendor/net.constructions-incongrues.mejs/src/mep-feature-smartplaylist.js?{{ app.assetsVersion }}"></script>
-	<script src="{{ app.request.getBasePath() }}/vendor/net.constructions-incongrues.mejs/src/mep-feature-autochange.js?{{ app.assetsVersion }}"></script>
-	<script src="{{ app.request.getBasePath() }}/assets/javascripts/mep-feature-ouiedire.js?{{ app.assetsVersion }}"></script>
-	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelementplayer.css" /></link>
-	<script src="{{ app.request.getBasePath() }}/assets/javascripts/behaviors.js?{{ app.assetsVersion }}"></script>
 </head>
 
 <body>
@@ -113,6 +104,14 @@
 			</p>
 		</footer>
 	</div> <!-- grid-container -->
-
+	
+	<!-- mediaelement.js : http://mediaelementjs.com -->
+	<script src="{{ app.request.getBasePath() }}/vendor/jquery/jquery.min.js"></script>
+	<script src="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelement-and-player.min.js"></script>
+	<script src="{{ app.request.getBasePath() }}/vendor/net.constructions-incongrues.mejs/src/mep-feature-smartplaylist.js?{{ app.assetsVersion }}"></script>
+	<script src="{{ app.request.getBasePath() }}/vendor/net.constructions-incongrues.mejs/src/mep-feature-autochange.js?{{ app.assetsVersion }}"></script>
+	<script src="{{ app.request.getBasePath() }}/assets/javascripts/mep-feature-ouiedire.js?{{ app.assetsVersion }}"></script>
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelementplayer.css" /></link>
+	<script src="{{ app.request.getBasePath() }}/assets/javascripts/behaviors.js?{{ app.assetsVersion }}"></script>
 </body>
 </html>

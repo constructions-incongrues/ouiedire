@@ -118,12 +118,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Silex.git",
-                "reference": "2ba7d326eef5a40c7b6ef557f8adf152775c90df"
+                "reference": "9717cc0c58b8d6ee750f0a9daa99ca33acb5fd0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Silex/zipball/2ba7d326eef5a40c7b6ef557f8adf152775c90df",
-                "reference": "2ba7d326eef5a40c7b6ef557f8adf152775c90df",
+                "url": "https://api.github.com/repos/fabpot/Silex/zipball/9717cc0c58b8d6ee750f0a9daa99ca33acb5fd0e",
+                "reference": "9717cc0c58b8d6ee750f0a9daa99ca33acb5fd0e",
                 "shasum": ""
             },
             "require": {
@@ -136,7 +136,7 @@
             },
             "require-dev": {
                 "doctrine/dbal": ">=2.2.0,<2.4.0-dev",
-                "monolog/monolog": ">=1.4,<2.0,>=1.4.1",
+                "monolog/monolog": "~1.4,>=1.4.1",
                 "swiftmailer/swiftmailer": "5.*",
                 "symfony/browser-kit": ">=2.1,<2.4-dev",
                 "symfony/config": ">=2.1,<2.4-dev",
@@ -192,7 +192,7 @@
             "keywords": [
                 "microframework"
             ],
-            "time": "2013-06-30 18:39:52"
+            "time": "2013-07-04 06:45:19"
         },
         {
             "name": "silex/web-profiler",
@@ -638,7 +638,7 @@
             },
             "require": {
                 "php": ">=5.3.3",
-                "twig/twig": ">=1.11.0,<2.0"
+                "twig/twig": "~1.11"
             },
             "require-dev": {
                 "symfony/form": "2.2.*",
@@ -929,12 +929,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/Component_ZendStdlib.git",
-                "reference": "63c099c2d14410816264563c1e324a7d7dcf3482"
+                "reference": "d23ca1ad7fc6438f7038443dcfb1a3213953c5b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/63c099c2d14410816264563c1e324a7d7dcf3482",
-                "reference": "63c099c2d14410816264563c1e324a7d7dcf3482",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/d23ca1ad7fc6438f7038443dcfb1a3213953c5b9",
+                "reference": "d23ca1ad7fc6438f7038443dcfb1a3213953c5b9",
                 "shasum": ""
             },
             "require": {
@@ -970,7 +970,7 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2013-07-01 15:00:23"
+            "time": "2013-07-03 18:00:11"
         }
     ],
     "packages-dev": [

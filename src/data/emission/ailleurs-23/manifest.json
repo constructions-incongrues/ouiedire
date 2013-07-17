@@ -3,5 +3,6 @@
   "slug": "maladresse-ris-de-veau",
   "authors": "Glafouk",
   "releasedAt": "2013-07-16 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

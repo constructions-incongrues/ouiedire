@@ -3,5 +3,6 @@
   "slug": "pas-de-theme",
   "authors": "Dj Damie Boy",
   "releasedAt": "2006-07-00 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

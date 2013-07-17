@@ -3,5 +3,6 @@
   "slug": "la-pompa-chalor-vol-1",
   "authors": "Marc De Blanchard",
   "releasedAt": "2010-12-01 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

@@ -3,5 +3,6 @@
   "slug": "le-heavy-metal-de-l-amour",
   "authors": "Dj Ta Gueule",
   "releasedAt": "2009-10-01 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

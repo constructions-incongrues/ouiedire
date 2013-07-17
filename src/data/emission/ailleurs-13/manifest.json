@@ -3,5 +3,6 @@
   "slug": "que-dalle-pour-noel",
   "authors": "Monsieur Tympan",
   "releasedAt": "2008-12-01 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

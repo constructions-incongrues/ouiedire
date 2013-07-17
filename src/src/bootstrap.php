@@ -74,7 +74,8 @@ function getShow($id, Silex\Application $app) {
     'title'       => null,
     'urlDownload' => null,
     'urlCover'    => null,
-    'urlCoverHd'  => null
+    'urlCoverHd'  => null,
+    'isPublic'    => false
   );
 
   // Load show data. 404 if some data file cannot be loaded.
@@ -87,6 +88,7 @@ function getShow($id, Silex\Application $app) {
   $show['authors'] = $manifest->authors;
   $show['releasedAt'] = $manifest->releasedAt;
   $show['title'] = $manifest->title;
+  $show['isPublic'] = $manifest->isPublic;
 
   // Pretty show type
   $show['typeSlug'] = $show['type'];
@@ -154,7 +156,7 @@ function getShow($id, Silex\Application $app) {
  * 
  * @return array Shows (as returned by getShow())
  */
-function getShows(Silex\Application $app) {
+function getShows(Silex\Application $app, $preview = false) {
   // Path to data directories
   $pathData = __DIR__.'/../data';
 
@@ -185,7 +187,11 @@ function getShows(Silex\Application $app) {
   $shows = array();
   foreach ($manifests as $manifest) {
     try {
-      $shows[] = getShow(basename(dirname($manifest->getRealPath())), $app);
+      // In not in preview mode, only return public shows
+      $show = getShow(basename(dirname($manifest->getRealPath())), $app);
+      if ($show['isPublic'] === true || $preview === true) {
+        $shows[] = $show;
+      }
     } catch (\RuntimeException $e) {
       // Skip faulty shows
       continue;
@@ -266,7 +272,7 @@ $app->get('/liens', function(Silex\Application $app) {
 // Shows list
 $app->get('/', function(Silex\Application $app) {
   // Render view
-  return $app['twig']->render('emissions.twig.html', array('shows' => getShows($app)));
+  return $app['twig']->render('emissions.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
 })
 ->bind('emissions');
 

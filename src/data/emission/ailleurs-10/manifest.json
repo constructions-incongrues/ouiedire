@@ -3,5 +3,6 @@
   "slug": "et-encore-il-est-gentil",
   "authors": "Dee How You",
   "releasedAt": "2008-02-01 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

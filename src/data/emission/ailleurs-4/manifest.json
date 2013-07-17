@@ -3,5 +3,6 @@
   "slug": "salles-gosses",
   "authors": "Monsieur Tympan",
   "releasedAt": "2007-01-01 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

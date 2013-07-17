@@ -3,5 +3,6 @@
   "slug": "sans-theme",
   "authors": "Dj Edmund Leprince",
   "releasedAt": "2007-12-01 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

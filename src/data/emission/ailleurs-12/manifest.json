@@ -3,5 +3,6 @@
   "slug": "les-sales-gosses-reviennent",
   "authors": "Monsieur Tympan",
   "releasedAt": "2008-12-01 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

@@ -3,5 +3,6 @@
   "slug": "est-ce-que-tu-sens-le-vent",
   "authors": "Dj Ta Gueule",
   "releasedAt": "2007-11-01 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

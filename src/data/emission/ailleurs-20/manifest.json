@@ -3,5 +3,6 @@
   "slug": "emo-mix",
   "authors": "Dee How You",
   "releasedAt": "2013-06-25 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

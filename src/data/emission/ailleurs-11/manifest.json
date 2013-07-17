@@ -3,5 +3,6 @@
   "slug": "sans-titre",
   "authors": "Valkiri & Machapla & Ubunoir ",
   "releasedAt": "2008-11-01 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

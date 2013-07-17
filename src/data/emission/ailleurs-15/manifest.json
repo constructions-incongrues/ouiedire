@@ -3,5 +3,6 @@
   "slug": "music-for-jenkem-blimps",
   "authors": "Ubunoir",
   "releasedAt": "2009-05-01 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

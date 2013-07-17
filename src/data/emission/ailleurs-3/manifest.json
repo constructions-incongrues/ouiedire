@@ -3,5 +3,6 @@
   "slug": "les-francais-chantent-mal-2",
   "authors": "Chaton Pute",
   "releasedAt": "2006-12-01 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

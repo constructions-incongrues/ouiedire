@@ -3,5 +3,6 @@
   "slug": "8bit-chiptune",
   "authors": "Bozoo & Valkiri",
   "releasedAt": "2006-12-01 00:00:00",
-  "type": "Ouïedire"
+  "type": "Ouïedire",
+  "isPublic": true
 }

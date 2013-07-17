@@ -3,5 +3,6 @@
   "slug": "la-4eme-dimension",
   "authors": "Marc Blanchard",
   "releasedAt": "2010-03-01 00:00:00",
-  "type": "Ailleurs"
+  "type": "Ailleurs",
+  "isPublic": true
 }

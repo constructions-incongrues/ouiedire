@@ -1,9 +1,23 @@
 <style>
+@import url(http://fonts.googleapis.com/css?family=Metrophobic);
+.ouiedire {background-color:#E6FAFF!important; border: 1px solid #AAA; padding: 5px;background-image: url(http://www.ouiedire.net/assets/img/pattern.gif);background-repeat: repeat; background-attachment: fixed; font-family: 'Metrophobic', sans-serif;
+ max-width: 400px;}
 .ouiedire ol { list-style-type: none; padding-left: 0; margin-left: 0; }
+a.mejs-smartplaylist-time { font-family:"Helvetica"; font-size: 1.1em;font-weight: lighter; color: #333; }
+a.mejs-smartplaylist-time:after { content:"] "; }
+a.mejs-smartplaylist-time:before { content:"["; }
+
+a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #0cf; }
+ol.mejs-smartplaylist-playlist { list-style-type: none;font-size:0.8em; }
+ol.mejs-smartplaylist-playlist li span{ font-weight: bold;}
+h1 {font-size:13px;  text-transform: uppercase;background-color: #000;color:#FFF;padding: 4px;}
+h1 a {color: #FFF;text-decoration: none;}
+.ouiedire img {height: 8%;text-align: right;}
+audio {width: 400px;top: -10px;position: relative;}
 </style>
 <div class="ouiedire">
-  <h1><a href="{{ url('emission', {type: show.typeSlug, id: show.id}) }}" target="_blank">{{ show.type }} #{{ show.number }}</a></h1>
-  <h2>{{ show.title }}, par {{ show.authors }}</h2>
+
+  <h1><a href="{{ url('emission', {type: show.typeSlug, id: show.id}) }}" target="_blank">{{ show.type }} #{{ show.number }} {{ show.title }}, par {{ show.authors }}</a></h1>
   <audio controls="controls">
     <source src="{{ show.urlDownload }}" type="audio/mp3" />
     <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
@@ -13,4 +27,6 @@
     </object>
   </audio>
   {{ show.playlist|raw }}
+      <img src="http://www.ouiedire.net/assets/img/logo.png" alt="Ouïedire">
+
 </div>

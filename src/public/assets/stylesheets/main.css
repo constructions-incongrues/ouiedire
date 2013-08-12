@@ -18,7 +18,7 @@ header span {background-color:#000;color:#FFF;padding:4px;display:inline-block;p
 .description {font-size: 13px;font-size: 1.3rem;}
 .description img {margin:30px 0 20px 0;}
 .description p {text-align: center}
-.grid-60 p {position: relative;top:20px;left:18px;font-weight: bold;text-transform: uppercase;;background-color: #00CCFF;padding:4px;font-size: 25px;font-size: 2.5rem;	}
+.grid-60 p {position: relative;top:20px;left:18px;font-weight: bold;text-transform: uppercase;;background-color: #00CCFF;padding:4px;font-size: 20px;font-size: 2rem;	}
 .nav p {text-align: right;position: relative;right: -15px;}
 ::selection {
 	background: #000; /* Safari */

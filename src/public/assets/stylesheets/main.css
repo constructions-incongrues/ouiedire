@@ -19,7 +19,7 @@ header {margin-bottom:20px;}
 .description img {margin:30px 0 20px 0;}
 .description p {text-align: center}
 .grid-60 p:nth-child(2) {position: relative;top:20px;left:18px;font-weight: bold;text-transform: uppercase;;background-color: #00CCFF;padding:4px;font-size: 16px;font-size: 1.6rem;	}
-.grid-60 p:nth-child(4){display:inline;position: relative;top:25px;left:0px;font-weight: bold;text-transform: uppercase;;background-color: #e6faff;padding:4px;font-size: 13px;font-size: 1.3rem;	}
+.grid-60 p:nth-child(4){display:inline;position: relative;top:25px;left:0px;font-weight: bold;text-transform: uppercase;;background-color: #73E3FF;padding:4px;font-size: 13px;font-size: 1.3rem;	}
 
 .nav p {text-align: right;position: relative;right: -15px;}
 ::selection {

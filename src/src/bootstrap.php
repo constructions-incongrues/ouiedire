@@ -276,6 +276,13 @@ $app->get('/', function(Silex\Application $app) {
 })
 ->bind('emissions');
 
+// Jingle 
+$app->get('/jingle', function(Silex\Application $app) {
+  // Render view
+  return $app['twig']->render('jingle.twig.html');
+})
+->bind('jingle');
+
 // Shows RSS feed (@see http://framework.zend.com/manual/2.1/en/modules/zend.feed.writer.html)
 $app->get('/feed', function(Silex\Application $app) {
   // Get all shows

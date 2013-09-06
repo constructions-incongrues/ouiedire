@@ -279,7 +279,7 @@ $app->get('/', function(Silex\Application $app) {
 // Jingle 
 $app->get('/jingle', function(Silex\Application $app) {
   // Render view
-  return $app['twig']->render('jingle.twig.html');
+  return $app['twig']->render('jingle.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
 })
 ->bind('jingle');
 

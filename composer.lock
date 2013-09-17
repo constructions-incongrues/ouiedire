@@ -118,12 +118,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Silex.git",
-                "reference": "f44db3ed16474e7e11b5c1ce96cba3fd4c07c812"
+                "reference": "4787bf21e416b9abd5cbf41daf136dae20d56f5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Silex/zipball/f44db3ed16474e7e11b5c1ce96cba3fd4c07c812",
-                "reference": "f44db3ed16474e7e11b5c1ce96cba3fd4c07c812",
+                "url": "https://api.github.com/repos/fabpot/Silex/zipball/4787bf21e416b9abd5cbf41daf136dae20d56f5c",
+                "reference": "4787bf21e416b9abd5cbf41daf136dae20d56f5c",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
             "keywords": [
                 "microframework"
             ],
-            "time": "2013-09-04 08:27:59"
+            "time": "2013-09-08 05:31:36"
         },
         {
             "name": "silex/web-profiler",
@@ -200,12 +200,12 @@
             "target-dir": "Silex/Provider",
             "source": {
                 "type": "git",
-                "url": "https://github.com/sensiolabs/Silex-WebProfiler.git",
+                "url": "https://github.com/silexphp/Silex-WebProfiler.git",
                 "reference": "3d875ac4f583e893a076ec51478e38eeaf0cb562"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/Silex-WebProfiler/zipball/3d875ac4f583e893a076ec51478e38eeaf0cb562",
+                "url": "https://api.github.com/repos/silexphp/Silex-WebProfiler/zipball/3d875ac4f583e893a076ec51478e38eeaf0cb562",
                 "reference": "3d875ac4f583e893a076ec51478e38eeaf0cb562",
                 "shasum": ""
             },
@@ -629,12 +629,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/TwigBridge.git",
-                "reference": "396419de236fadacd6674ec470b2339e3f21d733"
+                "reference": "51d0d51207a8e62967c5c633002f8cb11ece6888"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/TwigBridge/zipball/396419de236fadacd6674ec470b2339e3f21d733",
-                "reference": "396419de236fadacd6674ec470b2339e3f21d733",
+                "url": "https://api.github.com/repos/symfony/TwigBridge/zipball/51d0d51207a8e62967c5c633002f8cb11ece6888",
+                "reference": "51d0d51207a8e62967c5c633002f8cb11ece6888",
                 "shasum": ""
             },
             "require": {
@@ -686,7 +686,7 @@
             ],
             "description": "Symfony Twig Bridge",
             "homepage": "http://symfony.com",
-            "time": "2013-08-12 08:19:38"
+            "time": "2013-09-12 15:53:10"
         },
         {
             "name": "symfony/web-profiler-bundle",
@@ -749,12 +749,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "6d6a1009427d1f398c9d40904147bf9f723d5755"
+                "reference": "v1.13.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/6d6a1009427d1f398c9d40904147bf9f723d5755",
-                "reference": "6d6a1009427d1f398c9d40904147bf9f723d5755",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/v1.13.2",
+                "reference": "v1.13.2",
                 "shasum": ""
             },
             "require": {

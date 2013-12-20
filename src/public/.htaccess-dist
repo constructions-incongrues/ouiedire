@@ -18,7 +18,7 @@ RedirectPermanent @ouiedire.uri.root@/en/contact/ @ouiedire.url.root@/
 RedirectPermanent @ouiedire.uri.root@/en/informations/map/ @ouiedire.url.root@/
 
 # Misc
-Options +FollowSymlinks -MultiViews
+Options FollowSymlinks
 
 # Rewriting rules
 <IfModule mod_rewrite.c>

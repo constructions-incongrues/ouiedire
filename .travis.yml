@@ -13,11 +13,12 @@ install:
   - opam install travis-senv
   - eval `opam config env`
   - travis-senv decrypt > ~/.ssh/id_rsa
+  - chmod go-rwx ~/.ssh ~/.ssh/id_rsa
 
 before_script:
   - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
-script: ant configure build -Dprofile=jeroboam -Dphp.executable=php
+script: exit 0
 
 after_success: ant deploy -Dprofile=jeroboam -Dphp.executable=php
 

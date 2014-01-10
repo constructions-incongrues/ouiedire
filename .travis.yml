@@ -1,0 +1,11 @@
+language: php
+php:
+  - 5.5
+  - 5.4
+
+install:
+  - ./composer.phar install --prefer-dist
+
+script: ant configure build -Dprofile=jeroboam
+
+after_success: ant deploy -Dprofile=jeroboam

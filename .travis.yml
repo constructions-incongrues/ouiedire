@@ -12,7 +12,7 @@ install:
   - opam init
   - opam install travis-senv
   - eval `opam config env`
-  travis-senv decrypt > ~/.ssh/id_rsa
+  - travis-senv decrypt > ~/.ssh/id_rsa
 
 before_script:
   - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config

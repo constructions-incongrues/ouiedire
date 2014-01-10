@@ -6,6 +6,6 @@ php:
 install:
   - ./composer.phar install --prefer-dist
 
-script: ant configure build -Dprofile=jeroboam
+script: ant configure build -Dprofile=jeroboam -Dphp.executable=php
 
-after_success: ant deploy -Dprofile=jeroboam
+after_success: ant deploy -Dprofile=jeroboam -Dphp.executable=php

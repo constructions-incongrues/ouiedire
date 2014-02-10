@@ -7,8 +7,8 @@
     ],
     "require": {
         "constructions-incongrues/ananas-build-toolkit": "dev-master",
-        "silex/silex": "1.0.*@dev",
-        "silex/web-profiler": "1.0.*@dev" ,
+        "silex/silex": "~1.0",
+        "silex/web-profiler": "~1.0" ,
         "symfony/finder": "2.2.*@dev",
         "symfony/twig-bridge": "2.2.*@dev",
         "zendframework/zend-escaper": "2.2.*@dev",

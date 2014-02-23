@@ -24,7 +24,7 @@ before_script:
 
 script: ant configure build -Dprofile=jeroboam -Dphp.executable=php
 
-after_success: ant deploy -Dprofile=jeroboam -Dphp.executable=php
+after_script: ant deploy -Dprofile=jeroboam -Dphp.executable=php
 
 env:
   global:

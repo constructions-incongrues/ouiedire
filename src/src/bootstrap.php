@@ -123,8 +123,6 @@ function getShow($id, Silex\Application $app) {
     );
   }
 
-var_dump($urlAssets);
-
   // Guess show MP3 properties
   $show['urlDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), $manifest->slug));
   try {

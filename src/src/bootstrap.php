@@ -66,7 +66,7 @@ function getShow($id, Silex\Application $app) {
   // This variable describes the show will be passed to view
   $show = array(
     'authors'     => null,
-    'description' => null, 
+    'description' => null,
     'number'      => $id[1],
     'type'        => $id[0],
     'playlist'    => null,
@@ -98,21 +98,38 @@ function getShow($id, Silex\Application $app) {
     $show['type'] = 'Ouïedire';
   }
 
+  // Load config
+  $config = json_decode(file_get_contents(__DIR__.'/../config.json'), true);
+  if (false === $config) {
+    throw new \RuntimeException('Impossible de charger la configuration - pathConfig='.__DIR__.'/../config.json');
+  }
+
   // Absolute URL to show assets
-  $urlAssets = sprintf(
-    '%s://%s%s/assets/emission/%s-%s', 
-    $app['request']->getScheme(), 
-    $app['request']->getHttpHost(), 
-    $app['request']->getBasePath(),
-    $show['typeSlug'], 
-    $show['number']
-  );
+  if (empty($config['cdn_url'])) {
+    $urlAssets = sprintf(
+      '%s://%s%s/assets/emission/%s-%s',
+      $app['request']->getScheme(),
+      $app['request']->getHttpHost(),
+      $app['request']->getBasePath(),
+      $show['typeSlug'],
+      $show['number']
+    );
+  } else {
+    $urlAssets = sprintf(
+      '%s/assets/emission/%s-%s',
+      $config['cdn_url'],
+      $show['typeSlug'],
+      $show['number']
+    );
+  }
+
+var_dump($urlAssets);
 
   // Guess show MP3 properties
   $show['urlDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), $manifest->slug));
   try {
     $fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $pathPublicEmission, slugify($show['type']), $show['number'], slugify($show['authors']), $manifest->slug));
-    $show['sizeDownload'] = $fileMp3->getSize();    
+    $show['sizeDownload'] = $fileMp3->getSize();
   } catch (\RuntimeException $e) {
     $show['sizeDownload'] = 1;
   }
@@ -153,7 +170,7 @@ function getShow($id, Silex\Application $app) {
  * Returns all available shows.
  *
  * @param Silex\Application $app
- * 
+ *
  * @return array Shows (as returned by getShow())
  */
 function getShows(Silex\Application $app, $preview = false) {
@@ -166,7 +183,7 @@ function getShows(Silex\Application $app, $preview = false) {
     ->files()
     ->name('manifest.json')
     ->filter(function(\SplFileInfo $file) {
-      return 
+      return
         strpos(basename(dirname($file->getRealPath())), 'ailleurs') !== false
         || strpos(basename(dirname($file->getRealPath())), 'ouiedire') !== false;
     })
@@ -221,7 +238,7 @@ function getShowSiblings($showCurrent, Silex\Application $app)
       break;
     }
   }
-  return array($showPrevious, $showNext); 
+  return array($showPrevious, $showNext);
 }
 
 // Configure application
@@ -256,7 +273,7 @@ if ($app['debug'] == true) {
 } else {
   $app['assetsVersion'] = 9;
 }
- 
+
 // About page
 $app->get('/apropos', function(Silex\Application $app) {
     return $app['twig']->render('apropos.twig.html');
@@ -276,7 +293,7 @@ $app->get('/', function(Silex\Application $app) {
 })
 ->bind('emissions');
 
-// Jingle 
+// Jingle
 $app->get('/jingle', function(Silex\Application $app) {
   // Render view
   return $app['twig']->render('jingle.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
@@ -429,9 +446,9 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
   }
 
   // Facebook player
-  // NOTE : it's not possible to use MediaElement.js Flash player because it forbids passing file as a query string parameter 
+  // NOTE : it's not possible to use MediaElement.js Flash player because it forbids passing file as a query string parameter
   $urlSwfPlayer = sprintf(
-    '%s%s/vendor/mediaplayer-5.9/player.swf?autostart=true&file=%s&image=%s', 
+    '%s%s/vendor/mediaplayer-5.9/player.swf?autostart=true&file=%s&image=%s',
     $app['request']->getHost(),
     $app['request']->getBasePath(),
     urlencode($show['urlDownload']),
@@ -440,12 +457,12 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
 
   // Render view
   return $app['twig']->render(
-    $view, 
+    $view,
     array(
       'latest'        => $latest,
-      'next'          => $siblings[1], 
+      'next'          => $siblings[1],
       'player'        => $player,
-      'previous'      => $siblings[0], 
+      'previous'      => $siblings[0],
       'show'          => $show,
       'urlSwfPlayer'  => $urlSwfPlayer
     )

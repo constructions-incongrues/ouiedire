@@ -19,3 +19,4 @@
 
 # dist
 /src/public/.htaccess
+/src/config.json

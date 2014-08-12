@@ -94,6 +94,8 @@ function getShow($id, Silex\Application $app) {
   $show['typeSlug'] = $show['type'];
   if ($show['type'] == 'ailleurs') {
     $show['type'] = 'Ailleurs';
+  } elseif ($show['type'] == 'bagage') {
+    $show['type'] = 'Bagage';
   } else {
     $show['type'] = 'Ouïedire';
   }
@@ -183,18 +185,14 @@ function getShows(Silex\Application $app, $preview = false) {
     ->filter(function(\SplFileInfo $file) {
       return
         strpos(basename(dirname($file->getRealPath())), 'ailleurs') !== false
+        || strpos(basename(dirname($file->getRealPath())), 'bagage') !== false
         || strpos(basename(dirname($file->getRealPath())), 'ouiedire') !== false;
     })
     ->sort(function(\SplFileInfo $a, \SplFileInfo $b) {
-      $partsA = explode('-', basename(dirname($a->getRealPath())));
-      $partsB = explode('-', basename(dirname($b->getRealPath())));
-      if ($partsA[0] == 'ailleurs') {
-        $partsA[1] += 1000;
-      }
-      if ($partsB[0] == 'ailleurs') {
-        $partsB[1] += 1000;
-      }
-      return $partsA[1] > $partsB[1];
+      $dateA = strtotime(json_decode($a->getContents(), true)['releasedAt']);
+      $dateB = strtotime(json_decode($b->getContents(), true)['releasedAt']);
+
+      return $dateA > $dateB;
     })
     ->in(sprintf('%s/emission/', $pathData));
 

@@ -4,7 +4,7 @@
 
 {% block latest %}
 <a href="{{ path('emission', {id:shows.0.id, type:shows.0.typeSlug}) }}">
-  {{ shows.0.type }} {{ shows.0.number }} : {{ shows.0.authors }} - {{ shows.0.title }} 
+  {{ shows.0.type }} {{ shows.0.number }} : {{ shows.0.authors }} - {{ shows.0.title }}
 </a>
 {% endblock %}
 
@@ -20,9 +20,9 @@
 	<div class="grid-50 mobile-grid-100">
 		<ul>
 	{% endif %}
-  		<li>
+  		<li class="{{ show.typeSlug }}">
   			<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}">
-  				{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }} 
+  				{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }}
   			</a>
   		</li>
 {% endfor %}

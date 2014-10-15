@@ -140,7 +140,7 @@ function getShow($id, Silex\Application $app) {
   try {
     $covers = $finder
       ->files()
-      ->name('*_cover-*.png')
+      ->name('*_cover-*.*')
       ->in($pathPublicEmission);
     foreach ($covers as $cover) {
       $show['covers'][] = sprintf('%s/%s', $urlAssets, basename($cover->getRealPath()));

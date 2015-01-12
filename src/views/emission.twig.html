@@ -15,14 +15,12 @@
 <meta property="og:description" content="{{ show.description|striptags|trim }}" />
 <meta property="og:url" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getRequestUri() }}" />
 <meta property="og:image" content="{{ show.covers.0 }}" />
-<!-- TODO : enable once ouiedire gets an SSL domain
 <meta property="og:video" content="http://{{ urlSwfPlayer|raw }}" />
 <meta property="og:video:secure_url" content="https://{{ urlSwfPlayer|raw }}" />
 <meta property="og:video:height" content="100" />
 <meta property="og:video:width" content="500" />
 <meta property="og:video:type" content="application/x-shockwave-flash" />
--->
- {% endblock %}
+{% endblock %}
 
 {% block oembed %}
 <link rel="alternate" type="application/json+oembed" title="oEmbed endpoint" href="{{ url('oembed') }}?format=json&url={{ url('emission', {type: show.typeSlug, id: show.id})|url_encode }}" />
@@ -60,12 +58,12 @@
 </div>
 <div class="grid-50 mobile-grid-100">
 	<audio controls="controls">
-	  <source src="{{ show.urlDownload }}" type="audio/mp3" />
-    <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
-    <object width="320" height="240" type="application/x-shockwave-flash" data="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf">
+	  	<source src="{{ show.urlDownload }}" type="audio/mp3" />
+    	<!-- Flash fallback for non-HTML5 browsers without JavaScript -->
+    	<object width="320" height="240" type="application/x-shockwave-flash" data="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf">
         <param name="movie" value="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf" />
         <param name="flashvars" value="controls=true&file={{ show.urlDownload }}" />
-    </object>
+    	</object>
 	</audio>
 
 {{ show.playlist|raw }}

@@ -58,14 +58,18 @@
 </div>
 <div class="grid-50 mobile-grid-100">
 	<audio controls="controls">
-	  	<source src="{{ show.urlDownload }}" type="audio/mp3" />
+  	<source src="{{ show.urlDownload }}" type="audio/mp3" />
     	<!-- Flash fallback for non-HTML5 browsers without JavaScript -->
     	<object width="320" height="240" type="application/x-shockwave-flash" data="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf">
         <param name="movie" value="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf" />
         <param name="flashvars" value="controls=true&file={{ show.urlDownload }}" />
     	</object>
+   
 	</audio>
 
+ 	<span class="button-dl"><a  href="http://cdn.ouiedire.net/assets/emission/ailleurs-73/ouiedire_ailleurs-73_guido-mbius_psychotic-soup-perls-mix-2014.mp3" type="audio/mp3"
+   download="Ouiedire">Télécharger</a>
+   </span>
 {{ show.playlist|raw }}
 	
 </div><!-- grid-50 -->

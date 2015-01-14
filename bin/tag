@@ -1,0 +1,94 @@
+#!/usr/bin/env php
+<?php
+use Symfony\Component\Process\Process;
+
+// Helpers
+function writeln($message)
+{
+    echo $message, "\n";
+}
+
+// Sanity checks
+if (!isset($_SERVER['argv'][1])) {
+    throw new \InvalidArgumentException("L'identifiant de l'émission doit etre passé en premier argument du script");
+}
+$id = $_SERVER['argv'][1];
+
+// Récupération des données de l'émission
+require_once(__DIR__.'/../src/src/bootstrap.php');
+$show = getShow($id);
+$mp3 = sprintf('%s/../src/public/%s', __DIR__, $show['urlDownload']);
+if (!is_readable($mp3)) {
+    throw new \RuntimeException(sprintf("Le fichier %s ne peut pas etre lu", $mp3));   
+}
+
+// Suppression des tags existants
+$process = new Process(sprintf('eyeD3 --remove-all %s', $mp3));
+$process->run();
+if (!$process->isSuccessful()) {
+    throw new RuntimeException($process->getErrorOutput());
+}
+echo $process->getOutput();
+
+// Création des tags
+$fields = array(
+    'artist'    => $show['authors'],
+    'album'     => sprintf('Ouïedire %s', $show['type']),
+    'title'     => $show['title'],
+    'track'     => $show['number'],
+    'year'      => substr($show['releasedAt'], 0, 4),
+    'publisher' => 'Ouïedire',
+    'comment'   => sprintf('fre:À propos:%s', strip_tags($show['description']))
+);
+
+$command = 'eyeD3 ';
+foreach ($fields as $key => $value) {
+    $command .= sprintf(' --%s="%s"', $key, $value);
+}
+$command .= ' ' . $mp3;
+
+// Ajout des tags
+$process = new Process($command);
+$process->run();
+if (!$process->isSuccessful()) {
+    throw new RuntimeException($process->getErrorOutput());
+}
+echo $process->getOutput();
+
+// Ajout de la pochette
+$command = sprintf('eyeD3 --add-image="%s/../src/public/%s:FRONT_COVER" %s', __DIR__, $show['covers'][0], $mp3);
+$process = new Process($command);
+$process->run();
+if (!$process->isSuccessful()) {
+    throw new RuntimeException($process->getErrorOutput());
+}
+echo $process->getOutput();
+
+// Ajout de l'URL
+$command = sprintf('eyeD3 --set-user-url-frame="Canonical:http://www.ouiedire.net/%s-%d" %s', strtolower($show['type']), $show['number'], $mp3);
+$process = new Process($command);
+$process->run();
+if (!$process->isSuccessful()) {
+    throw new RuntimeException($process->getErrorOutput());
+}
+echo $process->getOutput();
+
+// Année (le flag eyeD3 --year ne fonctionne pas)
+$command = sprintf('eyeD3 --set-text-frame="TYER:%d" %s', substr($show['releasedAt'], 0, 4), $mp3);
+$process = new Process($command);
+$process->run();
+if (!$process->isSuccessful()) {
+    throw new RuntimeException($process->getErrorOutput());
+}
+echo $process->getOutput();
+
+// Artiste de l'album
+$command = sprintf('eyeD3 --set-text-frame="TPE2:Various Artists" %s', $mp3);
+$process = new Process($command);
+$process->run();
+if (!$process->isSuccessful()) {
+    throw new RuntimeException($process->getErrorOutput());
+}
+echo $process->getOutput();
+
+exit(0);

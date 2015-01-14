@@ -55,7 +55,7 @@ function slugify($text)
  *
  * @throws \RuntimeException When a show data file could not be loaded
  */
-function getShow($id, Silex\Application $app) {
+function getShow($id, Silex\Application $app = null) {
   // Path to data directories
   $id = explode('-', $id);
   $pathData = __DIR__.'/../data';
@@ -107,7 +107,7 @@ function getShow($id, Silex\Application $app) {
   }
 
   // Absolute URL to show assets
-  if (empty($config['cdn_url'])) {
+  if ($app && empty($config['cdn_url'])) {
     $urlAssets = sprintf(
       '%s://%s%s/assets/emission/%s-%s',
       $app['request']->getScheme(),
@@ -465,6 +465,3 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
   );
 })
 ->bind('emission');
-
-// Run application
-$app->run();

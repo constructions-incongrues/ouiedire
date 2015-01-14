@@ -9,11 +9,12 @@
         "constructions-incongrues/ananas-build-toolkit": "dev-master",
         "silex/silex": "~1.0",
         "silex/web-profiler": "~1.0" ,
-        "symfony/finder": "2.2.*@dev",
-        "symfony/twig-bridge": "2.2.*@dev",
-        "zendframework/zend-escaper": "2.2.*@dev",
-        "zendframework/zend-feed": "2.2.*@dev",
-        "zendframework/zend-servicemanager": "2.2.*@dev",
-        "zendframework/zend-stdlib": "2.2.*@dev"
+        "symfony/finder": "~2.2",
+        "symfony/process": "~2.6",
+        "symfony/twig-bridge": "~2.2",
+        "zendframework/zend-escaper": "~2.2",
+        "zendframework/zend-feed": "~2.2",
+        "zendframework/zend-servicemanager": "~2.2",
+        "zendframework/zend-stdlib": "~2.2"
     }
 }

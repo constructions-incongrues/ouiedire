@@ -444,7 +444,7 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
   // Facebook player
   // NOTE : it's not possible to use MediaElement.js Flash player because it forbids passing file as a query string parameter
   $urlSwfPlayer = sprintf(
-    '%s%s/vendor/mediaplayer-5.9/player.swf?autostart=true&file=%s&image=%s',
+    '%s%s/vendor/mediaplayer-5.9/player.swf?autostart=true&file=%s&image=%s&width=450&height=450',
     $app['request']->getHost(),
     $app['request']->getBasePath(),
     urlencode($show['urlDownload']),

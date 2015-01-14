@@ -25,9 +25,6 @@ if (!is_readable($mp3)) {
 // Suppression des tags existants
 $process = new Process(sprintf('eyeD3 --remove-all %s', $mp3));
 $process->run();
-if (!$process->isSuccessful()) {
-    throw new RuntimeException($process->getErrorOutput());
-}
 echo $process->getOutput();
 
 // Création des tags
@@ -36,9 +33,7 @@ $fields = array(
     'album'     => sprintf('Ouïedire %s', $show['type']),
     'title'     => $show['title'],
     'track'     => $show['number'],
-    'year'      => substr($show['releasedAt'], 0, 4),
-    'publisher' => 'Ouïedire',
-    'comment'   => sprintf('fre:À propos:%s', strip_tags($show['description']))
+    'publisher' => 'Ouïedire'
 );
 
 $command = 'eyeD3 ';
@@ -48,6 +43,19 @@ foreach ($fields as $key => $value) {
 $command .= ' ' . $mp3;
 
 // Ajout des tags
+$process = new Process($command);
+$process->run();
+if (!$process->isSuccessful()) {
+    throw new RuntimeException($process->getErrorOutput());
+}
+echo $process->getOutput();
+
+// Définition du commentaire
+$command = sprintf(
+    'eyeD3 --set-encoding=utf8 --comment="fre:Description:%s" %s', 
+    str_replace('"', '\"', strip_tags($show['description'])), 
+    $mp3
+);
 $process = new Process($command);
 $process->run();
 if (!$process->isSuccessful()) {

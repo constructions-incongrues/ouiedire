@@ -20,7 +20,7 @@ service apache2 reload
 # Configuration du projet
 apt-get install -y ant 
 cd /vagrant
-./composer.phar install --prefer-dist
+./composer.phar install --prefer-dist --no-progress
 ant configure build -Dprofile=vagrant
 
 # Mise à disposition du projet dans Apache

@@ -19,6 +19,9 @@ function truncateText($text, $maxLength) {
 
 function slugify($text)
 {
+    // Seigneur Jésus !
+    $text = str_replace('ü', 'u', $text);
+
     // replace non letter or digits by -
     $text = preg_replace('#[^\\pL\d]+#u', '-', $text);
 

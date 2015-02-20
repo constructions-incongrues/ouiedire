@@ -1,8 +1,4 @@
 $(document).ready(function() {
-
-  // On désactive le player le temps de le réparer
-  return true;
-
   var originalTitle = document.title;
 
   // Titre des liens sur les timestamp des playlists

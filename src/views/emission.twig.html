@@ -5,7 +5,7 @@
 
 {% block latest %}
 <a href="{{ path('emission', {id:latest.id, type:latest.typeSlug}) }}">
-  {{ latest.type }} {{ latest.number }} : {{ latest.authors }} - {{ latest.title }} 
+  {{ latest.type }} {{ latest.number }} : {{ latest.authors }} - {{ latest.title }}
 </a>
 {% endblock %}
 
@@ -29,7 +29,7 @@
 {% block footer %}
 {% if app.debug %}
 <p>
-  <strong>Debug :</strong> 
+  <strong>Debug :</strong>
   <a href="{{ url('oembed') }}?format=json&url={{ url('emission', {type: show.typeSlug, id: show.id})|url_encode }}">oEmbed endpoint</a>
   <a href="{{ url('emission', {type: show.typeSlug, id: show.id}) }}?embed">Embedded view</a>
   <a href="http://{{ urlSwfPlayer }}">Facebook player</a>
@@ -40,7 +40,7 @@
 {% block content %}
 
 <div class="grid-100 mobile-grid-100">
-	<section class="nav">
+    <section class="nav">
 <p>
 {% if (previous) %}
 <a class="previous" href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}">&lt; précédent</a>{% endif %}
@@ -49,38 +49,35 @@
 {% endif %}
 </p>
 </section>
-	<h1>
-		<a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
-			{{ show.typeSlug }}  {{ show.number }} / {{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})
-		</a>
-	</h1>
+    <h1>
+        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
+            {{ show.typeSlug }}  {{ show.number }} / {{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})
+        </a>
+    </h1>
 
 </div>
 <div class="grid-50 mobile-grid-100">
-	<audio controls="controls">
-  	<source src="{{ show.urlDownload }}" type="audio/mp3" />
-    	<!-- Flash fallback for non-HTML5 browsers without JavaScript -->
-    	<object width="320" height="240" type="application/x-shockwave-flash" data="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf">
+    <audio controls="controls">
+        <source src="{{ show.urlDownload }}" type="audio/mp3" />
+        <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
+        <object width="320" height="240" type="application/x-shockwave-flash" data="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf">
         <param name="movie" value="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf" />
         <param name="flashvars" value="controls=true&file={{ show.urlDownload }}" />
-    	</object>
-   
-	</audio>
+        </object>
+    </audio>
 
- 	<span class="button-dl"><a href="{{ show.urlDownload }}" type="audio/mp3">Télécharger</a></span>
- 	
 {{ show.playlist|raw }}
-	
+
 </div><!-- grid-50 -->
 
 <div class="grid-50 mobile-grid-100 description">
 
-	<p>
+    <p>
 {% for urlCover in show.covers %}
-		<img src="{{ urlCover }}" alt="Artwork" /><br />
+        <img src="{{ urlCover }}" alt="Artwork" /><br />
 {% endfor %}
-	</p>
-	{{ show.description|raw }}
+    </p>
+    {{ show.description|raw }}
 
 </div><!-- grid-50 -->
 

@@ -288,7 +288,10 @@ $app->get('/liens', function(Silex\Application $app) {
 // Shows list
 $app->get('/', function(Silex\Application $app) use ($config) {
   // Render view
-  return $app['twig']->render('emissions.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET), $config)));
+  return $app['twig']->render(
+    'emissions.twig.html',
+    array('shows' => getShows($app, array_key_exists('preview', $_GET), $config))
+  );
 })
 ->bind('emissions');
 

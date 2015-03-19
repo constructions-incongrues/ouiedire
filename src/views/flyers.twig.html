@@ -2,7 +2,7 @@
 
 {% block latest %}
 <a href="{{ path('emission', {id:shows.0.id, type:shows.0.typeSlug}) }}">
-  {{ shows.0.type }} {{ shows.0.number }} : {{ shows.0.authors }} - {{ shows.0.title }} 
+  {{ shows.0.type }} {{ shows.0.number }} : {{ shows.0.authors }} - {{ shows.0.title }}
 </a>
 {% endblock %}
 
@@ -25,15 +25,22 @@
 
 <div class="centerdiv">
 	<div class="grid-33 mobile-grid-33 flyer">
-	<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mars.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
+	<a href="{{ url('emissions')}}" >
+		<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mars.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
+	</a>
 	</div>
 
 	<div class="grid-33 mobile-grid-33 flyer">
-	<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_fevrier.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
+	<a href="{{ url('emissions')}}" >
+		<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_fevrier.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
+	</a>
 	</div>
 
 	<div class="grid-33 mobile-grid-33 flyer">
-	<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
+	<a href="{{ url('emissions')}}" >
+		<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier.jpg" alt="Ouïedire"
+		title="Consulter la liste des émissions disponibles" class="flyer"/>
+	</a>
 	</div>
 </div>
 {% endblock %}

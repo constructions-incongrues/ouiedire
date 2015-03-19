@@ -19,7 +19,7 @@ require_once(__DIR__.'/../src/src/bootstrap.php');
 $show = getShow($id);
 $mp3 = sprintf('%s/../src/public/%s', __DIR__, $show['urlDownload']);
 if (!is_readable($mp3)) {
-    throw new \RuntimeException(sprintf("Le fichier %s ne peut pas etre lu", $mp3));   
+    throw new \RuntimeException(sprintf("Le fichier %s ne peut pas etre lu", $mp3));
 }
 
 // Suppression des tags existants
@@ -32,7 +32,7 @@ $fields = array(
     'artist'    => $show['authors'],
     'album'     => sprintf('Ouïedire %s', $show['type']),
     'title'     => $show['title'],
-    'track'     => $show['number'],
+    'track'     => (int)$show['number'],
     'publisher' => 'Ouïedire'
 );
 
@@ -52,8 +52,8 @@ echo $process->getOutput();
 
 // Définition du commentaire
 $command = sprintf(
-    'eyeD3 --set-encoding=utf8 --comment="fre:Description:%s" %s', 
-    str_replace('"', '\"', strip_tags($show['description'])), 
+    'eyeD3 --set-encoding=utf8 --comment="fre:Description:%s" %s',
+    str_replace('"', '\"', strip_tags($show['description'])),
     $mp3
 );
 $process = new Process($command);

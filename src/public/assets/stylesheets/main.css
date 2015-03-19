@@ -14,12 +14,12 @@ header {margin-bottom:20px;}
 
 /* ====== Text treatments ====== */
 
-.grid-40 span {background-color:#000;color:#FFF;padding:4px;display:inline-block;position: relative;left:45px;font-size: 12px;font-size: 1.2rem;font-weight: bold;text-transform: uppercase;}
+.grid-30 span {background-color:#000;color:#FFF;padding:4px;display:inline-block;position: relative;left:45px;font-size: 12px;font-size: 1.2rem;font-weight: bold;text-transform: uppercase;}
 .description {font-size: 13px;font-size: 1.3rem;}
 .description img {margin:30px 0 20px 0;}
 .description p {text-align: center}
-.grid-60 p:nth-child(2) {position: relative;top:20px;left:18px;font-weight: bold;text-transform: uppercase;;background-color: #00CCFF;padding:4px;font-size: 16px;font-size: 1.6rem;	}
-.grid-60 p:nth-child(4){display:inline;position: relative;top:25px;left:0px;font-weight: bold;text-transform: uppercase;;background-color: #73E3FF;padding:4px;font-size: 13px;font-size: 1.3rem;	}
+.grid-70 p:nth-child(2) {position: relative;top:20px;left:18px;font-weight: bold;text-transform: uppercase;;background-color: #00CCFF;padding:4px;font-size: 16px;font-size: 1.6rem;	}
+.grid-70 p:nth-child(4){display:inline;position: relative;top:25px;left:0px;font-weight: bold;text-transform: uppercase;;background-color: #73E3FF;padding:4px;font-size: 13px;font-size: 1.3rem;	}
 
 .nav p {text-align: right;position: relative;right: -15px;top:-15px;}
 ::selection {
@@ -49,8 +49,8 @@ ol li a:hover {border-bottom:1px solid #000;background-color: transparent;}
 h1 a {color: #FFF;text-decoration: none;}
 .nav p a {text-decoration: none;color:#000;font-weight: bold;;text-decoration: none;font-size: 14px;font-size: 1.4rem;text-transform: uppercase;margin:0 0 0 15px;}
 .nav p a:hover {background-color: #000;color: #FFF;padding: 5px;}
-.grid-60 p a {color: #000;text-decoration: none;}
-h4 a {color:#000;text-decoration:none;text-transform: uppercase;font-weight: bold;background-color: #FCFE04;padding: 5px;}
+.grid-70 p a {color: #000;text-decoration: none;}
+h4 a {color:#000;text-decoration:none;text-transform: uppercase;font-weight: bold;background-color: #FCFE04;padding: 4px;}
 h4 a:hover {color:#FFF;background-color: #000;}
 .jingle-about a {color:#000;text-decoration: underline;}
 .social a {background-color:transparent;font-weight: bold;text-transform: uppercase;border: none;top:0;}
@@ -63,8 +63,8 @@ h2 {padding:4px;border-bottom:1px dotted #000;text-transform: uppercase;}
 h2 {margin:0 0 30px 16px;font-size: 13px;font-size: 1.3rem; }
 h3 {margin: 0 0 0 18px;font-size: 13px;font-size: 1.3rem;padding: 4px;text-transform: uppercase;}
 h3 {display: block;position: relative;top: 20px;background-color: #000;color: #FFF;margin-bottom: 20px;}
-.grid-60 h3 {display: inline;color: #FFF;position: relative;top:25px;}
-h4 {font-size:15px;font-size: 1.5rem;display: inline;position: relative;top: 30px;left:-2px;color: #FFF;}
+.grid-70 h3 {display: inline;color: #FFF;position: relative;top:25px;}
+h4 {font-size:13px;font-size: 1.3rem;display: inline;position: relative;top: 25px;left:15px;color: #FFF;}
 
 /* ----- list ----- */
 
@@ -91,4 +91,5 @@ a.mejs-smartplaylist-time:before { content:"["; }
 
 a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #0cf; }
 ol.mejs-smartplaylist-playlist { list-style-type: none; padding-left: 2em; }
+
 

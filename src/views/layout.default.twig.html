@@ -63,21 +63,26 @@
 	<div class="grid-container">
 
 		<header class="grid-100">
-			<div class="grid-40 mobile-grid-100">
+			<div class="grid-30 mobile-grid-100">
 			<p>
 				<a href="{{ url('emissions') }}">
 					<img src="{{ app.request.getBasePath() }}/assets/img/logo.png" alt="Ouïedire" title="Consulter la liste des émissions disponibles" />
 				</a>
 				<br />
 				<span>j'en ai déjà entendu parler quelque part</span>
+			
+
 			</p>
+
 
 			{# % block jingle %}
 			 <h4><a href="{{ url('jingle') }}">Proposer un jingle !</a></h4>{% endblock % #}
 
 
+
+
 		</div>
-		<div class="grid-60 mobile-grid-100">
+		<div class="grid-70 mobile-grid-100">
 
 
 			<h3>La dernière émission : </h3>
@@ -88,6 +93,11 @@
 			</p>
 			<h3>Prochaine émission :  Extra-Radio par Extra-Tourist
 			 </h3>
+
+			 {% block flyer %}
+			 <h4><a href="{{ url('flyer') }}">Flyer des programmations</a></h4>
+			 {% endblock %}
+			 
 			
 		</div>
 		</header>

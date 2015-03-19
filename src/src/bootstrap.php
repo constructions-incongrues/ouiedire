@@ -299,6 +299,14 @@ $app->get('/jingle', function(Silex\Application $app) {
 })
 ->bind('jingle');
 
+// Flyer
+$app->get('/flyer', function(Silex\Application $app) {
+  // Render view
+  return $app['twig']->render('flyer.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+})
+->bind('flyer');
+
+
 // Shows RSS feed (@see http://framework.zend.com/manual/2.1/en/modules/zend.feed.writer.html)
 $app->get('/feed', function(Silex\Application $app) {
   // Get all shows

@@ -64,13 +64,15 @@ if (!$process->isSuccessful()) {
 echo $process->getOutput();
 
 // Ajout de la pochette
-$command = sprintf('eyeD3 --add-image="%s/../src/public/%s:FRONT_COVER" %s', __DIR__, $show['covers'][0], $mp3);
-$process = new Process($command);
-$process->run();
-if (!$process->isSuccessful()) {
-    throw new RuntimeException($process->getErrorOutput());
+if (isset($show['covers'][0])) {
+    $command = sprintf('eyeD3 --add-image="%s/../src/public/%s:FRONT_COVER" %s', __DIR__, $show['covers'][0], $mp3);
+    $process = new Process($command);
+    $process->run();
+    if (!$process->isSuccessful()) {
+        throw new RuntimeException($process->getErrorOutput());
+    }
+    echo $process->getOutput();
 }
-echo $process->getOutput();
 
 // Ajout de l'URL
 $command = sprintf('eyeD3 --set-user-url-frame="Canonical:http://www.ouiedire.net/%s-%d" %s', strtolower($show['type']), $show['number'], $mp3);

@@ -92,5 +92,5 @@ a.mejs-smartplaylist-time:before { content:"["; }
 a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #0cf; }
 ol.mejs-smartplaylist-playlist { list-style-type: none; padding-left: 2em; }
 
-.flyer img {      max-width:100%; padding: 0px;margin: 0  20px 0;}
+.flyer img {      max-width:96%; padding: 0px;margin: 0  20px 0;}
 

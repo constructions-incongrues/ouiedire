@@ -10,7 +10,11 @@
 {% endblock %}
 
 {% block opengraph %}
+  {% if show.type == "Ouïedire" %}
 <meta property="og:title" content="Ouïedire - Émission #{{ show.number }} : {{ show.title }}, par {{ show.authors }}" />
+  {% else %}
+<meta property="og:title" content="Ouïedire {{ show.type }} - Émission #{{ show.number }} : {{ show.title }}, par {{ show.authors }}" />
+  {% endif %}
 <meta property="og:type" content="video" />
 <meta property="og:description" content="{{ show.description|striptags|trim }}" />
 <meta property="og:url" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getRequestUri() }}" />

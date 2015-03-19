@@ -273,12 +273,6 @@ if ($app['debug'] == true) {
   $app['assetsVersion'] = $config['assets_version'];
 }
 
-// About page
-$app->get('/apropos', function(Silex\Application $app) {
-    return $app['twig']->render('apropos.twig.html');
-})
-->bind('apropos');
-
 // Links
 $app->get('/liens', function(Silex\Application $app) {
     return $app['twig']->render('liens.twig.html');

@@ -6,7 +6,7 @@
         }
     ],
     "require": {
-        "constructions-incongrues/ananas-build-toolkit": "0.21.*",
+        "constructions-incongrues/ananas-build-toolkit": "0.23.*",
         "silex/silex": "~1.0",
         "silex/web-profiler": "~1.0" ,
         "symfony/finder": "~2.2",

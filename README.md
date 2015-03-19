@@ -21,3 +21,9 @@ vagrant plugin install vagrant-share
 vagrant plugin install landrush
 vagrant up
 ```
+
+Déploiement
+===========
+```bash
+ant configure -Dprofile=jeroboam -Dassets.version=`date +%s`
+```

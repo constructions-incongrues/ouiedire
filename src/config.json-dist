@@ -1,3 +1,4 @@
 {
-    "cdn_url": "@cdn.url@"
+    "cdn_url": "@cdn.url@",
+    "assets_version": "@assets.version@"
 }

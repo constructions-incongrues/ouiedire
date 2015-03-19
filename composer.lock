@@ -4,15 +4,15 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d11b1929be8093aa5654a3a41c6252fb",
+    "hash": "5c69970d83e490125a2813d50097d428",
     "packages": [
         {
             "name": "constructions-incongrues/ananas-build-toolkit",
-            "version": "0.21.4",
+            "version": "0.23.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:constructions-incongrues/ananas-build-toolkit.git",
-                "reference": "fc2b009be46695d9df0e743ecc9290ff316f9519"
+                "reference": "af05d4288abb5bca0669c76ea1f5005d13f81e83"
             },
             "type": "library",
             "authors": [
@@ -27,7 +27,7 @@
                 "issues": "https://github.com/constructions-incongrues/ananas-build-toolkit/issues",
                 "source": "https://github.com/constructions-incongrues/ananas-build-toolkit"
             },
-            "time": "2015-03-02 14:03:24"
+            "time": "2015-03-16 16:28:45"
         },
         {
             "name": "pimple/pimple",

@@ -58,7 +58,7 @@ function slugify($text)
  *
  * @throws \RuntimeException When a show data file could not be loaded
  */
-function getShow($id, Silex\Application $app = null) {
+function getShow($id, Silex\Application $app = null, $config = array()) {
   // Path to data directories
   $id = explode('-', $id);
   $pathData = __DIR__.'/../data';
@@ -101,12 +101,6 @@ function getShow($id, Silex\Application $app = null) {
     $show['type'] = 'Bagage';
   } else {
     $show['type'] = 'Ouïedire';
-  }
-
-  // Load config
-  $config = json_decode(file_get_contents(__DIR__.'/../config.json'), true);
-  if (false === $config) {
-    throw new \RuntimeException('Impossible de charger la configuration - pathConfig='.__DIR__.'/../config.json');
   }
 
   // Absolute URL to show assets
@@ -240,6 +234,12 @@ function getShowSiblings($showCurrent, Silex\Application $app)
   return array($showPrevious, $showNext);
 }
 
+// Load config
+$config = json_decode(file_get_contents(__DIR__.'/../config.json'), true);
+if (false === $config) {
+  throw new \RuntimeException('Impossible de charger la configuration - pathConfig='.__DIR__.'/../config.json');
+}
+
 // Configure application
 $app = new Silex\Application();
 
@@ -270,7 +270,7 @@ if (isset($debug) && $debug == true) {
 if ($app['debug'] == true) {
   $app['assetsVersion'] = time();
 } else {
-  $app['assetsVersion'] = 9;
+  $app['assetsVersion'] = $config['assets_version'];
 }
 
 // About page
@@ -286,9 +286,9 @@ $app->get('/liens', function(Silex\Application $app) {
 ->bind('liens');
 
 // Shows list
-$app->get('/', function(Silex\Application $app) {
+$app->get('/', function(Silex\Application $app) use ($config) {
   // Render view
-  return $app['twig']->render('emissions.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+  return $app['twig']->render('emissions.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET), $config)));
 })
 ->bind('emissions');
 

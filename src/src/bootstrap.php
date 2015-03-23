@@ -501,16 +501,34 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
 $app->get('/artists', function(Silex\Application $app) use ($config) {
   $shows = getShows($app, array_key_exists('preview', $_GET), $config);
   $artists = array();
+  $showsGroupedByArtist = array();
   foreach ($shows as $show) {
-    $artists = array_merge($artists, getArtists($show));
+    $showArtists = getArtists($show);
+    $artists = array_merge($artists, $showArtists);
     $artists = array_unique($artists);
     sort($artists);
+
+    // Group by shows by artist
+    foreach ($showArtists as $artist) {
+      $showsGroupedByArtist[$artist][] = $show;
+    }
+  }
+
+  // Group alphabeticaly
+  $artistsGroupedByAlpha = array();
+  foreach ($artists as $artist) {
+    $artistsGroupedByAlpha[strtolower(substr($artist, 0, 1))][] = $artist;
   }
 
   // Render view
   return $app['twig']->render(
     'artists.twig.html',
-    array('artists' => $artists, 'shows' => $shows)
+    array(
+      'artists' => $artists,
+      'artistsGroupedByAlpha' => $artistsGroupedByAlpha,
+      'showsGroupedByArtist' => $showsGroupedByArtist,
+      'shows' => $shows
+    )
   );
 })
 ->bind('artists');

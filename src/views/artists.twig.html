@@ -9,9 +9,20 @@
 {% block title %}Artists ({{ artists|length }}){% endblock %}
 
 {% block content %}
-<ul>
-{% for artist in artists %}
-    <li>{{ artist }}</li>
-{% endfor %}
-</ul>
+<div class="grid-100 mobile-grid-100">
+    <p>{{ artists|length }} artistes</p>
+    <dl>
+    {% for letter, artists in artistsGroupedByAlpha %}
+        <dt><strong>{{ letter }}</strong></dt>
+        {% for artist in artists %}
+            {{ artist }}
+            ({% for show in showsGroupedByArtist[artist] %}
+                <a href="{{ url('emission', {'type':show.typeSlug, 'id':show.id}) }}" title="{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }}">{{ show.id }}</a>
+            {% endfor %})
+            -
+        {% endfor %}
+    {% endfor %}
+    </dl>
+    <hr />
+</div>
 {% endblock %}

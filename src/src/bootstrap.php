@@ -10,6 +10,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Generator\UrlGenerator;
 use Zend\Feed\Writer\Feed;
 
+// @see http://stackoverflow.com/questions/23105925/calling-iconv-via-php-produces-different-results-in-apache-and-command-line
+setlocale(LC_CTYPE, "en_US.utf8");
+
 function truncateText($text, $maxLength) {
   if (strlen($text) > $maxLength) {
     $text = substr($text, 0, $maxLength);
@@ -500,6 +503,7 @@ $app->get('/artists', function(Silex\Application $app) use ($config) {
   $artists = array();
   foreach ($shows as $show) {
     $artists = array_merge($artists, getArtists($show));
+    sort($artists);
   }
 
   // Render view

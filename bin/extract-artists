@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+// Sanity checks
+if (!isset($_SERVER['argv'][1])) {
+    throw new \InvalidArgumentException("L'identifiant de l'émission doit etre passé en premier argument du script");
+}
+$id = $_SERVER['argv'][1];
+
+// Récupération des données de l'émission
+require_once(__DIR__.'/../src/src/bootstrap.php');
+$show = getShow($id);
+$artists = getArtists($show);
+
+print_r($artists);

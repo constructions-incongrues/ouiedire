@@ -8,7 +8,9 @@
     "require": {
         "constructions-incongrues/ananas-build-toolkit": "0.23.*",
         "silex/silex": "~1.0",
-        "silex/web-profiler": "~1.0" ,
+        "silex/web-profiler": "~1.0",
+        "symfony/css-selector": "2.6.*",
+        "symfony/dom-crawler": "2.6.*",
         "symfony/finder": "~2.2",
         "symfony/process": "~2.6",
         "symfony/twig-bridge": "~2.2",

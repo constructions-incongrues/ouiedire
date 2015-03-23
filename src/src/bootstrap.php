@@ -4,6 +4,7 @@ require_once __DIR__.'/../../vendor/autoload.php';
 
 // Uses
 use Silex\Provider;
+use Symfony\Component\DomCrawler\Crawler;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Generator\UrlGenerator;
@@ -29,8 +30,7 @@ function slugify($text)
     $text = trim($text, '-');
 
     // transliterate
-    if (function_exists('iconv'))
-    {
+    if (function_exists('iconv')) {
         $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
     }
 
@@ -48,6 +48,24 @@ function slugify($text)
     return $text;
 }
 
+function getArtists(array $show)
+{
+    $artists = array();
+
+    // Parse show playlist
+    $crawler = new Crawler();
+    $crawler->addContent($show['playlist']);
+    $domArtists = $crawler->filter('.mejs-smartplaylist-time + span');
+    foreach ($domArtists as $domArtist) {
+        $artists[] = trim($domArtist->textContent);
+    }
+
+    $artists = array_unique($artists);
+    sort($artists);
+
+    return $artists;
+}
+
 /**
  * Returns data about a show.
  *
@@ -59,6 +77,9 @@ function slugify($text)
  * @throws \RuntimeException When a show data file could not be loaded
  */
 function getShow($id, Silex\Application $app = null, $config = array()) {
+  // Defaults
+  $config = array_merge(array('assets_version' => time(), 'cdn_url' => ''));
+
   // Path to data directories
   $id = explode('-', $id);
   $pathData = __DIR__.'/../data';
@@ -473,3 +494,18 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
   );
 })
 ->bind('emission');
+
+$app->get('/artists', function(Silex\Application $app) use ($config) {
+  $shows = getShows($app, array_key_exists('preview', $_GET), $config);
+  $artists = array();
+  foreach ($shows as $show) {
+    $artists = array_merge($artists, getArtists($show));
+  }
+
+  // Render view
+  return $app['twig']->render(
+    'artists.twig.html',
+    array('artists' => $artists, 'shows' => $shows)
+  );
+})
+->bind('artists');

@@ -60,7 +60,7 @@ function getArtists(array $show)
     $crawler->addContent($show['playlist']);
     $domArtists = $crawler->filter('.mejs-smartplaylist-time + span');
     foreach ($domArtists as $domArtist) {
-        $artists[] = trim($domArtist->textContent);
+        $artists[] = strtolower(trim($domArtist->textContent));
     }
 
     $artists = array_unique($artists);
@@ -510,7 +510,7 @@ $app->get('/artists', function(Silex\Application $app) use ($config) {
 
     // Group by shows by artist
     foreach ($showArtists as $artist) {
-      $showsGroupedByArtist[$artist][] = $show;
+      $showsGroupedByArtist[strtolower($artist)][] = $show;
     }
   }
 

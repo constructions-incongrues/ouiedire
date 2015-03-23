@@ -85,7 +85,7 @@ audio {position:relative;left:18px;}
 
 /* **************** MEDIA PLAYER (http://mediaelementjs.com) ***************** */
 .mejs-container { left: 20px; }
-a.mejs-smartplaylist-time { font-family:"Helvetica"; font-size: 15px;font-weight: lighter;; font-size: 1.5rem;  color: #333; }
+a.mejs-smartplaylist-time { font-family:"Helvetica"; font-size: 15px;font-weight: lighter; font-size: 1.5rem;  color: #333; }
 a.mejs-smartplaylist-time:after { content:"]"; }
 a.mejs-smartplaylist-time:before { content:"["; }
 
@@ -94,3 +94,9 @@ ol.mejs-smartplaylist-playlist { list-style-type: none; padding-left: 2em; }
 
 .flyer img {      max-width:96%; padding: 0px;margin: 0  20px 0;}
 
+/* **************** Listing artists ***************** */
+
+dt {font-size: 20px;font-size: 2rem;padding: 20px 0px 4px 0px;}
+dl {font-size:16px;font-size:1.6rem;text-transform: capitalize;margin: 0px 0px 0px 20px}
+dl a {color: #000;text-decoration: none;}
+dl a span {border-bottom:1px dotted #000;}

@@ -10,14 +10,14 @@
 
 {% block content %}
 <div class="grid-100 mobile-grid-100">
-    <p>{{ artists|length }} artistes</p>
+    <h3>On peut entendre {{ artists|length }} artistes différents dans les émissions Ouïedire.</h3>
     <dl>
     {% for letter, artists in artistsGroupedByAlpha %}
         <dt><strong>{{ letter }}</strong></dt>
         {% for artist in artists %}
             {{ artist }}
             ({% for show in showsGroupedByArtist[artist] %}
-                <a href="{{ url('emission', {'type':show.typeSlug, 'id':show.id}) }}" title="{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }}">{{ show.id }}</a>
+                <a href="{{ url('emission', {'type':show.typeSlug, 'id':show.id}) }}" title="{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }}"><span>{{ show.id }}</span></a>
             {% endfor %})
             -
         {% endfor %}

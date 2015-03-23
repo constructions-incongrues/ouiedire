@@ -100,3 +100,4 @@ dt {font-size: 20px;font-size: 2rem;padding: 20px 0px 4px 0px;}
 dl {font-size:16px;font-size:1.6rem;text-transform: capitalize;margin: 0px 0px 0px 20px}
 dl a {color: #000;text-decoration: none;}
 dl a span {border-bottom:1px dotted #000;}
+dl a span:hover {font-weight: bold;border-bottom: 1px solid #000;}

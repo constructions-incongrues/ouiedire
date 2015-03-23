@@ -503,6 +503,7 @@ $app->get('/artists', function(Silex\Application $app) use ($config) {
   $artists = array();
   foreach ($shows as $show) {
     $artists = array_merge($artists, getArtists($show));
+    $artists = array_unique($artists);
     sort($artists);
   }
 

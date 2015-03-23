@@ -6,10 +6,12 @@
 </a>
 {% endblock %}
 
-{% block title %}Artists{% endblock %}
+{% block title %}Artists ({{ artists|length }}){% endblock %}
 
 {% block content %}
+<ul>
 {% for artist in artists %}
-    {{ artist }}
+    <li>{{ artist }}</li>
 {% endfor %}
+</ul>
 {% endblock %}

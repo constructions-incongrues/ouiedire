@@ -10,7 +10,7 @@
 
 {% block content %}
 <div class="grid-100 mobile-grid-100">
-    <h3>On peut entendre {{ artists|length }} artistes différents dans les émissions Ouïedire.</h3>
+    <h3>On peut entendre {{ artists|length }} artistes différents dans les {{ shows|length }} émissions Ouïedire.</h3>
     <dl>
     {% for letter, artists in artistsGroupedByAlpha %}
         <dt><strong>{{ letter }}</strong></dt>

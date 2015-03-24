@@ -20,9 +20,9 @@
                 <a href="#{{ artist|url_encode }}" name="{{ artist|url_encode }}"> {{ artist }}</a>
             {% for show in showsGroupedByArtist[artist] -%}
                     <a href="{{ url('emission', {'type':show.typeSlug, 'id':show.id}) }}" title="{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }}"><span> .{{ show.id }}</span></a>
-                {%- if not loop.last -%}, {% endif -%}
+                {%- if not loop.last -%}{% endif -%}
             {%- endfor %}
-            </dd> 
+            </dd>
         {% endfor %}
     {% endfor %}
     </dl>

@@ -43,8 +43,7 @@ function slugify($text)
     // remove unwanted characters
     $text = preg_replace('#[^-\w]+#', '', $text);
 
-    if (empty($text))
-    {
+    if (empty($text)) {
         return 'n-a';
     }
 

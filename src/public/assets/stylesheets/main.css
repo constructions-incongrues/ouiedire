@@ -104,6 +104,6 @@ dl a {color: #000;text-decoration: none;padding:3px;font-weight: 500;}
 dl a:hover {font-weight: bold;}
 dl a span {border-bottom:1px dotted #000;}
 dl a span:hover {font-weight: bold;border-bottom: 1px solid #000;}
-dd:first-letter {font-weight: bold;};
+dd:first-letter {font-weight: bold;}
 
 hr {border: 0; border-bottom: 1px dashed #000;}

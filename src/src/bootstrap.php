@@ -495,6 +495,7 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
   return $app['twig']->render(
     $view,
     array(
+      'artists'       => getArtists($show, $config),
       'latest'        => $latest,
       'next'          => $siblings[1],
       'player'        => $player,

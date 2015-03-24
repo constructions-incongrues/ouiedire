@@ -14,6 +14,7 @@
     <dl>
     {% for letter, artists in artistsGroupedByAlpha %}
         <dt><a href="#{{ letter }}" name="{{ letter }}"><strong>{{ letter }}</strong></a></dt>
+        <hr />
         {% for artist in artists %}
             <dd>
                 <a href="#{{ artist|url_encode }}" name="{{ artist|url_encode }}">{{ artist }}</a>

@@ -98,11 +98,11 @@ ol.mejs-smartplaylist-playlist { list-style-type: none; padding-left: 2em; }
 .flyer p {font-size: 15px;font-size: 1.5rem;margin: 40px 0px 30px 30px;}
 /* **************** Listing artists ***************** */
 dd {display: inline-block;padding: 0px;margin: 0px;}
-dt {font-size: 20px;font-size: 2rem;padding: 20px 0px 4px 0px;}
+dt {font-size: 20px;font-size: 2rem;padding: 10px 0px 0px 0px;margin: 10px 0px 0px -2px;}
 dt a {background-color: none;}
 dl {font-size:16px;font-size:1.6rem;text-transform: capitalize;margin: 0px 0px 0px 20px;line-height: 33px;}
 dl a {color: #000;text-decoration: none;padding:3px;font-weight: 500;}
 dl a span {font-size: 13px;font-size:1.3rem;background-color:#fff;padding: 1px;position:relative;top:-9px;left:-7px;}
 dl a span:hover {background-color:#00CCFF;}
 
-hr {border: 0; border-bottom: 1px dotted #000;}
+hr {border: 0; border-bottom: 1px solid #000;margin:0px 0px 7px 0px;}

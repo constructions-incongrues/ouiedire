@@ -101,7 +101,7 @@ dt {font-size: 20px;font-size: 2rem;padding: 20px 0px 4px 0px;}
 dt a {background-color: none;}
 dl {font-size:16px;font-size:1.6rem;text-transform: capitalize;margin: 0px 0px 0px 20px;line-height: 27px;}
 dl a {color: #000;text-decoration: none;padding:3px;font-weight: 500;}
-dl a:hover {font-weight: bold;}
+dl a:hover {text-transform:uppercase;}
 dl a span {border-bottom:1px dotted #000;}
 dl a span:hover {font-weight: 600;border-bottom: 1px solid #000;}
 dd:first-letter {font-weight: bold;}

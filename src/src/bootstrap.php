@@ -50,7 +50,13 @@ function slugify($text)
 
     return $text;
 }
-
+/**
+ * Returns artists list for a show
+ *
+ * @param array $show Show as returned by getShow function
+ *
+ * @return array $artists Show artists
+ */
 function getArtists(array $show)
 {
     $artists = array();

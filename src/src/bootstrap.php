@@ -57,7 +57,7 @@ function getArtists(array $show)
 
     // Parse show playlist
     $crawler = new Crawler();
-    $crawler->addContent($show['playlist']);
+    $crawler->addContent('<html><meta charset="utf-8" />'.$show['playlist']);
     $domArtists = $crawler->filter('.mejs-smartplaylist-time + span');
     foreach ($domArtists as $domArtist) {
         $artist = strtolower(trim($domArtist->textContent));

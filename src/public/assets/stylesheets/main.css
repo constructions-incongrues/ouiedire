@@ -34,7 +34,7 @@ header {margin-bottom:20px;}
 /* links */
 
 
-li a, dd a {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;border-bottom: 1px solid #00CCFF;}
+li a {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;border-bottom: 1px solid #00CCFF;}
 ol a, ol li span,.description a {font-weight: bold;background-color: transparent;border-bottom: none;top:0;}
 footer p:first-child a {background-color: #000;color:#FFF;padding:4px;text-transform: uppercase;font-size:12px;font-size: 1.2rem; }
 footer p:first-child a:hover {font-weight: normal;border-bottom: 2px solid #00CCFF}
@@ -102,8 +102,8 @@ dt {font-size: 20px;font-size: 2rem;padding: 20px 0px 4px 0px;}
 dt a {background-color: none;}
 dl {font-size:16px;font-size:1.6rem;text-transform: capitalize;margin: 0px 0px 0px 20px;line-height: 27px;}
 dl a {color: #000;text-decoration: none;padding:3px;font-weight: 500;}
-dl a span {border-bottom:1px dotted #000;}
-dl a span:hover {font-weight: 600;border-bottom: 1px solid #000;}
+dl a span {}
+dl a span:hover {font-weight: bold;}
 dd:first-letter {font-weight: bold;}
 
 hr {border: 0; border-bottom: 1px dotted #000;}

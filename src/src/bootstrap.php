@@ -77,6 +77,18 @@ function getArtists(array $show)
     return $artists;
 }
 
+function getDjs(array $shows)
+{
+    $djs = array();
+    foreach ($shows as $show) {
+        $djs[] = $show['authors'];
+    }
+
+    $djs = array_unique($djs);
+
+    return $djs;
+}
+
 /**
  * Returns data about a show.
  *
@@ -327,7 +339,8 @@ $app->get('/', function(Silex\Application $app) use ($config) {
     'emissions.twig.html',
     array(
       'artists'=> $artists,
-      'shows'  => $shows
+      'shows'  => $shows,
+      'djs'    => getDjs($shows)
     )
   );
 })
@@ -547,7 +560,8 @@ $app->get('/artists', function(Silex\Application $app) use ($config) {
       'artists' => $artists,
       'artistsGroupedByAlpha' => $artistsGroupedByAlpha,
       'showsGroupedByArtist' => $showsGroupedByArtist,
-      'shows' => $shows
+      'shows' => $shows,
+      'djs' => getDjs($shows)
     )
   );
 })

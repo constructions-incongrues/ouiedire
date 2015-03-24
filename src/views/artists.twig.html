@@ -10,7 +10,7 @@
 
 {% block content %}
 <div class="grid-100 mobile-grid-100">
-    <h3> {{ artists|length }} artistes / <a href="{{ url('emissions') }}">{{ shows|length }} émissions</a> </h3>
+    <h3> {{ artists|length }} artistes / <a href="{{ url('emissions') }}">{{ shows|length }} émissions / {{ djs|length }} djs</a> </h3>
     <dl>
     {% for letter, artists in artistsGroupedByAlpha %}
         <dt><a href="#{{ letter }}" name="{{ letter }}"><strong>{{ letter }}</strong></a></dt>

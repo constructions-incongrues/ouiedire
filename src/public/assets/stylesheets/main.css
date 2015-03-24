@@ -34,13 +34,13 @@ header {margin-bottom:20px;}
 /* links */
 
 
-li a {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;border-bottom: 1px solid #00CCFF;}
+li a, dd a {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;border-bottom: 1px solid #00CCFF;}
 ol a, ol li span,.description a {font-weight: bold;background-color: transparent;border-bottom: none;top:0;}
 footer p:first-child a {background-color: #000;color:#FFF;padding:4px;text-transform: uppercase;font-size:12px;font-size: 1.2rem; }
 footer p:first-child a:hover {font-weight: normal;border-bottom: 2px solid #00CCFF}
 footer a, .flyer p a {text-decoration: none;color: #000;border-bottom: 1px solid #000;}
 footer a:hover, .flyer p a:hover {text-transform: uppercase; }
-li a:hover, dd a:hover {border-bottom: 1px solid #e6faff;background-color: #00CCFF}
+li a:hover, dd a:hover, :position  {border-bottom: 1px solid #e6faff;background-color: #00CCFF}
 .download {display: inline-block;position:relative;top:-2px;}
 .download a {text-decoration: none;color: #fff;font-weight: bold; margin-left: 1em; margin-right: 1em; text-transform: uppercase; }
 .download a:hover {background-color: transparent; color: #00CCFF;}
@@ -100,10 +100,11 @@ ol.mejs-smartplaylist-playlist { list-style-type: none; padding-left: 2em; }
 dd {display: inline-block;padding: 0px;margin: 0px;}
 dt {font-size: 20px;font-size: 2rem;padding: 20px 0px 4px 0px;}
 dt a {background-color: none;}
-dl {font-size:16px;font-size:1.6rem;text-transform: capitalize;margin: 0px 0px 0px 20px;line-height: 27px;}
+dl {font-size:16px;font-size:1.6rem;text-transform: capitalize;margin: 0px 0px 0px 20px;line-height: 33px;}
 dl a {color: #000;text-decoration: none;padding:3px;font-weight: 500;}
-dl a span {}
+dl span {margin-left: -40px;}
+dl a span {margin-left:-5px;}
 dl a span:hover {font-weight: bold;}
-dd:first-letter {font-weight: bold;}
-
+/*dd:first-letter {font-weight: bold;}
+*/
 hr {border: 0; border-bottom: 1px dotted #000;}

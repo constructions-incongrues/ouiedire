@@ -96,7 +96,7 @@ ol.mejs-smartplaylist-playlist { list-style-type: none; padding-left: 2em; }
 .flyer img {      max-width:96%; padding: 0px;margin: 0  20px 0;}
 
 /* **************** Listing artists ***************** */
-
+dd {display: inline-block;padding: 0px;margin: 0px;}
 dt {font-size: 20px;font-size: 2rem;padding: 20px 0px 4px 0px;}
 dl {font-size:16px;font-size:1.6rem;text-transform: capitalize;margin: 0px 0px 0px 20px}
 dl a {color: #000;text-decoration: none;}

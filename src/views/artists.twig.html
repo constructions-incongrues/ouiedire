@@ -15,7 +15,7 @@
     {% for letter, artists in artistsGroupedByAlpha %}
         <dt><a href="#{{ letter }}" name="{{ letter }}"><strong>{{ letter }}</strong></a></dt>
         {% for artist in artists %}
-            {{ artist }}
+            <a href="#{{ artist|url_encode }}" name="{{ artist|url_encode }}">{{ artist }}</a>
             ({% for show in showsGroupedByArtist[artist] %}
                 <a href="{{ url('emission', {'type':show.typeSlug, 'id':show.id}) }}" title="{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }}"><span>{{ show.id }}</span></a>
             {% endfor %})

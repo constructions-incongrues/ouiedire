@@ -11,36 +11,28 @@
 
 {% block content %}
 
-<!-- <div class="grid-20 mobile-grid-100 flyer">
-<ul>
-	<li><a href="">Janvier 2015</a></li>
-	<li><a href="">Février 2015</a></li>
-	<li><a href="">Mars 2015</a></li>
-</ul>
-
-<p>Flyer par <a href="">Goupil Acnëique</a> <br />
- Illustration de : Liberatore, Stuntkid, </div>
-
- -->
-
-<div class="centerdiv">
-	<div class="grid-33 mobile-grid-33 flyer">
+<div class="flyer">
+	<div class="grid-33 mobile-grid-33">
 	<a href="{{ url('emissions')}}" >
 		<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mars.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
 	</a>
+
 	</div>
 
-	<div class="grid-33 mobile-grid-33 flyer">
+	<div class="grid-33 mobile-grid-33">
 	<a href="{{ url('emissions')}}" >
 		<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_fevrier.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
 	</a>
 	</div>
 
-	<div class="grid-33 mobile-grid-33 flyer">
+	<div class="grid-33 mobile-grid-33">
 	<a href="{{ url('emissions')}}" >
 		<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier.jpg" alt="Ouïedire"
 		title="Consulter la liste des émissions disponibles" class="flyer"/>
 	</a>
+
 	</div>
+			
+	<p>Illustration de : <a href="http://iam.stuntkid.com/">Stuntkid</a> (mars), <a href="http://fr.wikipedia.org/wiki/Tanino_Liberatore">Liberatore</a> (janvier et février) <br /> Flyer réalisé par <a href="http://goupilacneique.tumblr.com/">Goupil Acneique</a></p>
 </div>
 {% endblock %}

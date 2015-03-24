@@ -313,10 +313,22 @@ $app->get('/liens', function(Silex\Application $app) {
 
 // Shows list
 $app->get('/', function(Silex\Application $app) use ($config) {
+  $artists = array();
+  $shows = getShows($app, array_key_exists('preview', $_GET), $config);
+  foreach ($shows as $show) {
+    $showArtists = getArtists($show);
+    $artists = array_merge($artists, $showArtists);
+    $artists = array_unique($artists);
+    sort($artists);
+  }
+
   // Render view
   return $app['twig']->render(
     'emissions.twig.html',
-    array('shows' => getShows($app, array_key_exists('preview', $_GET), $config))
+    array(
+      'artists'=> $artists,
+      'shows'  => $shows
+    )
   );
 })
 ->bind('emissions');
@@ -495,7 +507,6 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
   return $app['twig']->render(
     $view,
     array(
-      'artists'       => getArtists($show, $config),
       'latest'        => $latest,
       'next'          => $siblings[1],
       'player'        => $player,

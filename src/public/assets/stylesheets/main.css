@@ -29,7 +29,7 @@ header {margin-bottom:20px;}
 .jingle-about {font-size: 14px;font-size: 1.4rem;position: relative;left: 18px;top: 20px;padding-bottom: 10px;}
 
 .social {text-align: left;border: none;margin: 0 0 -15px 18px;padding:10px 0 0 0}
-.social li {list-style-image: none;display: inline;font-size: 12px;font-size: 1.2rem;font-weight: bold;text-transform: uppercase;}
+.social li {list-style-image: none;display: inline;font-size: 12.5px;font-size: 1.25rem;font-weight: bold;text-transform: uppercase;}
 
 /* links */
 
@@ -63,9 +63,10 @@ h3 a:hover{color:#FFF;}
 h1 {font-size:15px;font-size: 1.5rem; text-transform: uppercase;position:relative;top:-10px;left:10px;margin:-5px 0 30px 0;background-color: #000;padding: 4px;}
 h2 {padding:4px;border-bottom:1px dotted #000;text-transform: uppercase;}
 h2 {margin:0 0 30px 16px;font-size: 13px;font-size: 1.3rem; }
-h3 {margin: 0 0 0 18px;font-size: 13px;font-size: 1.3rem;padding: 4px;text-transform: uppercase;}
+h3 {margin: 0 0 0 18px;font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;}
 h3 {display: block;position: relative;top: 20px;background-color: #000;color: #FFF;margin-bottom: 20px;}
-.grid-70 h3 {display: inline;color: #FFF;position: relative;top:25px;}
+.grid-70 h3 {display: inline;color: #FFF;position: relative;top:25px;font-size: 13px;font-weight: bold;font-size: 1.3rem;padding: 4px;text-transform: uppercase;}
+
 h4 {font-size:13px;font-size: 1.3rem;display: inline;position: relative;top: 25px;left:15px;color: #FFF;}
 
 /* ----- list ----- */
@@ -105,4 +106,4 @@ dl a {color: #000;text-decoration: none;padding:3px;font-weight: 500;}
 dl a span {font-size: 13px;font-size:1.3rem;background-color:#fff;padding: 1px;position:relative;top:-9px;left:-7px;}
 dl a span:hover {background-color:#00CCFF;}
 
-hr {border: 0; border-bottom: 1px solid #000;margin:0px 0px 7px 0px;}
+hr {border: 0; border-bottom: 1px dotted #000;margin:0px 0px 7px 0px;}

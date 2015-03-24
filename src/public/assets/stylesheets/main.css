@@ -88,7 +88,7 @@ audio {position:relative;left:18px;}
 
 /* **************** MEDIA PLAYER (http://mediaelementjs.com) ***************** */
 .mejs-container { left: 20px; }
-a.mejs-smartplaylist-time { font-family:"Helvetica"; font-size: 15px;font-weight: lighter; font-size: 1.5rem;  color: #333; }
+a.mejs-smartplaylist-time { font-family:"Helvetica"; font-size: 16px;font-style: 1.6rem;font-weight: lighter; font-size: 1.5rem;  color: #333; }
 a.mejs-smartplaylist-time:after { content:"]"; }
 a.mejs-smartplaylist-time:before { content:"["; }
 
@@ -105,5 +105,6 @@ dl {font-size:16px;font-size:1.6rem;text-transform: capitalize;margin: 0px 0px 0
 dl a {color: #000;text-decoration: none;padding:3px;font-weight: 500;}
 dl a span {font-size: 13px;font-size:1.3rem;background-color:#fff;padding: 1px;position:relative;top:-9px;left:-7px;}
 dl a span:hover {background-color:#00CCFF;}
-
+dd:target{background-color:#000;}
 hr {border: 0; border-bottom: 1px dotted #000;margin:0px 0px 7px 0px;}
+.artist:target{background-color: #00CCFF;border:0px;}

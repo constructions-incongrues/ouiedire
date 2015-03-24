@@ -13,7 +13,7 @@
     <h3>On peut entendre {{ artists|length }} artistes différents dans les {{ shows|length }} émissions Ouïedire.</h3>
     <dl>
     {% for letter, artists in artistsGroupedByAlpha %}
-        <dt><strong>{{ letter }}</strong></dt>
+        <dt><a href="#{{ letter }}" name="{{ letter }}"><strong>{{ letter }}</strong></a></dt>
         {% for artist in artists %}
             {{ artist }}
             ({% for show in showsGroupedByArtist[artist] %}

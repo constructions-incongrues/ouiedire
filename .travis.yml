@@ -23,7 +23,7 @@ before_script:
   - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 script:
-  - ant deploy -Dprofile=jeroboam -Dphp.executable=php
+  - ant deploy -Dprofile=jeroboam
   - ant slack.post -Dprofile=jeroboam -Dslack.text="Une nouvelle version de Ouiedire a été déployée sur pastis :)"
 
 notifications:

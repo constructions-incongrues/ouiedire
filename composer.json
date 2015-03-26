@@ -21,6 +21,6 @@
     },
     "scripts": {
         "post-install-cmd": "ant -f vendor/constructions-incongrues/ananas-build-toolkit/modules/toolkit/module.xml init -Dbasedir=$PWD",
-        "post-update-cmd": "ant init -Dprofile=common"
+        "post-update-cmd": "ant init"
     }
 }

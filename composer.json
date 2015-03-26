@@ -6,7 +6,7 @@
         }
     ],
     "require": {
-        "constructions-incongrues/ananas-build-toolkit": "0.23.*",
+        "constructions-incongrues/ananas-build-toolkit": "dev-master",
         "silex/silex": "~1.0",
         "silex/web-profiler": "~1.0",
         "symfony/css-selector": "2.6.*",
@@ -18,5 +18,9 @@
         "zendframework/zend-feed": "~2.2",
         "zendframework/zend-servicemanager": "~2.2",
         "zendframework/zend-stdlib": "~2.2"
+    },
+    "scripts": {
+        "post-install-cmd": "ant -f vendor/constructions-incongrues/ananas-build-toolkit/modules/toolkit/module.xml init -Dbasedir=$PWD",
+        "post-update-cmd": "ant init"
     }
 }

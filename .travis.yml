@@ -24,6 +24,7 @@ before_script:
 
 script:
   - ant deploy -Dprofile=jeroboam -Dphp.executable=php
+  - ant slack.post -Dslack.text="Une nouvelle version de Ouiedire a été déployée sur pastis :)"
 
 notifications:
   email:

@@ -4,15 +4,15 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bcc042c5342eedd197c358d4a784fc2e",
+    "hash": "4accdb87b87728d94aa12d06e3334fb8",
     "packages": [
         {
             "name": "constructions-incongrues/ananas-build-toolkit",
-            "version": "0.23.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:constructions-incongrues/ananas-build-toolkit.git",
-                "reference": "af05d4288abb5bca0669c76ea1f5005d13f81e83"
+                "reference": "50a27a92bb0b2e59d32811c9430a931157b84109"
             },
             "type": "library",
             "authors": [
@@ -22,12 +22,12 @@
                 }
             ],
             "description": "L'Ananas Build Toolkit est un framework de configuration et de déploiement de projet logiciel.",
-            "homepage": "http://constructions-incongrues.github.com/ananas-build-toolkit/",
+            "homepage": "https://github.com/constructions-incongrues/ananas-build-toolkit",
             "support": {
                 "issues": "https://github.com/constructions-incongrues/ananas-build-toolkit/issues",
                 "source": "https://github.com/constructions-incongrues/ananas-build-toolkit"
             },
-            "time": "2015-03-16 16:28:45"
+            "time": "2015-03-26 02:47:28"
         },
         {
             "name": "pimple/pimple",
@@ -1216,7 +1216,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "constructions-incongrues/ananas-build-toolkit": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

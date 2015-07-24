@@ -278,6 +278,12 @@ function getShowSiblings($showCurrent, Silex\Application $app)
   return array($showPrevious, $showNext);
 }
 
+function getRandomShow(Silex\Application $app)
+{
+    $shows = getShows($app);
+    return $shows[array_rand($shows)];
+}
+
 // Load config
 $config = json_decode(file_get_contents(__DIR__.'/../config.json'), true);
 if (false === $config) {
@@ -338,9 +344,10 @@ $app->get('/', function(Silex\Application $app) use ($config) {
   return $app['twig']->render(
     'emissions.twig.html',
     array(
-      'artists'=> $artists,
-      'shows'  => $shows,
-      'djs'    => getDjs($shows)
+      'artists'    => $artists,
+      'shows'      => $shows,
+      'djs'        => getDjs($shows),
+      'randomShow' => $shows[array_rand($shows)]
     )
   );
 })

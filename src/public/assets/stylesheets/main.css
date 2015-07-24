@@ -64,7 +64,7 @@ h1 {font-size:15px;font-size: 1.5rem; text-transform: uppercase;position:relativ
 h2 {padding:4px;border-bottom:1px dotted #000;text-transform: uppercase;}
 h2 {margin:0 0 30px 16px;font-size: 13px;font-size: 1.3rem; }
 h3 {margin: 0 0 0 18px;font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;}
-h3 {display: block;position: relative;top: 20px;background-color: #000;color: #FFF;margin-bottom: 20px;}
+h3 {display: block;position: relative;top: 20px;background-color: #000;color: #FFF;margin-bottom: 40px;}
 .grid-70 h3 {display: inline;color: #FFF;position: relative;top:25px;font-size: 13px;font-weight: bold;font-size: 1.3rem;padding: 4px;text-transform: uppercase;}
 
 h4 {font-size:13px;font-size: 1.3rem;display: inline;position: relative;top: 25px;left:15px;color: #FFF;}
@@ -113,11 +113,11 @@ hr {border: 0; border-bottom: 1px dotted #000;margin:0px 0px 7px 0px;}
 /******************* RANDOM BUTON ************/
 
 h5 {
-	font-size: 15px;
-	font-size: 1.5rem;
+	font-size: 13px;
+	font-size: 1.3rem;
 	text-transform: uppercase;
 	margin-left: 0px;
-	margin-top: 30px!important;
+	margin-top: 0px!important;
 	margin-bottom: 0px;
 	background-color: yellow;
 	padding: 5px;
@@ -125,8 +125,15 @@ h5 {
 	border:none;
 	margin-left: 17px;
 	width: 8.5%;
+	display: inline;
+
+
 
 }
 
 h5 a {color:#000;text-decoration: none;}
 h5 a:hover {text-decoration: underline; color:#000;}
+
+hr {margin: 0.5em 0;
+ border-style: inset;
+ border-width: 0px;}

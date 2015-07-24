@@ -17,7 +17,10 @@
 </ul>
 	<h3><a href="{{ url('artists') }}"> {{ artists|length }} artistes</a> / {{ shows|length }} émissions / {{ djs|length }} djs / </h3>
 
+
 <h5><a href="{{ path('emission', {id:randomShow.id, type:randomShow.typeSlug}) }}">Écouter de manière aléatoire</a></h5>
+<hr>
+>>>>>>> v3
 <div class="grid-50 mobile-grid-100">
 		<ul>
 {% for show in shows %}

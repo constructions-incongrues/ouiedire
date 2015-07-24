@@ -17,7 +17,8 @@
 </ul>
 	<h3><a href="{{ url('artists') }}"> {{ artists|length }} artistes</a> / {{ shows|length }} émissions / {{ djs|length }} djs / </h3>
 
-	<div class="grid-50 mobile-grid-100">
+<h5><a href="#">Écouter de manière aléatoire</a></h5>
+<div class="grid-50 mobile-grid-100">
 		<ul>
 {% for show in shows %}
 	{% if loop.index0 == (loop.length / 2)|number_format %}

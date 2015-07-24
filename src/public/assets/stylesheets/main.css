@@ -109,3 +109,19 @@ dd:target{background-color:#000;}
 hr {border: 0; border-bottom: 1px dotted #000;margin:0px 0px 7px 0px;}
 .artist:target{background-color: #00CCFF;}
 
+
+/******************* RANDOM BUTON ************/
+
+h5 {
+	font-size: 15px;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	margin-left: 20px;
+	margin-top: 30px!important;
+	background-color: yellow;
+	padding: 10px;
+	font-weight: bold;
+
+}
+
+h5 a {color:#000;text-decoration: none;}

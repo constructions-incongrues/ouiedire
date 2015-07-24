@@ -116,12 +116,17 @@ h5 {
 	font-size: 15px;
 	font-size: 1.5rem;
 	text-transform: uppercase;
-	margin-left: 20px;
+	margin-left: 0px;
 	margin-top: 30px!important;
+	margin-bottom: 0px;
 	background-color: yellow;
-	padding: 10px;
+	padding: 5px;
 	font-weight: bold;
+	border:none;
+	margin-left: 17px;
+	width: 8.5%;
 
 }
 
 h5 a {color:#000;text-decoration: none;}
+h5 a:hover {text-decoration: underline; color:#000;}

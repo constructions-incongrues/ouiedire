@@ -1,10 +1,12 @@
+.git
 *-dist
 *.bak
 *.mp3
 *.orig
 *.sw*
+*.zip
 *~
-.git
+/.vagrant
 /composer.*
 /etc
 /src/cache/*

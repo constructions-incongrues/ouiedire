@@ -7,7 +7,7 @@ Installation
 ============
 
 ```bash
-sudo apt-get install virtualbox resolvconf dnsmasq
+sudo apt-get install virtualbox resolvconf dnsmasq zlib1g-dev
 sudo sh -c 'echo "server=/vagrant.dev/127.0.0.1#10053" > /etc/dnsmasq.d/vagrant-landrush'
 sudo service dnsmasq restart
 

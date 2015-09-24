@@ -25,5 +25,5 @@ vagrant up
 Déploiement
 ===========
 ```bash
-ant configure -Dprofile=jeroboam -Dassets.version=`date +%s`
+ant deploy -Dprofile=jeroboam -Dassets.version=`date +%s`
 ```

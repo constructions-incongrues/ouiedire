@@ -1,10 +1,8 @@
-net.ouiedire.www
-================
+# net.ouiedire.www
 
 Ouïedire : j'en ai déjà entendu parler quelque part.
 
-Installation
-============
+## Installation
 
 ```bash
 sudo apt-get update
@@ -22,8 +20,16 @@ vagrant plugin install landrush
 vagrant up
 ```
 
-Déploiement
-===========
+## Déploiement
+
+### Simulation
+
 ```bash
 ant deploy -Dprofile=jeroboam -Dassets.version=`date +%s`
+```
+
+### Pour de vrai
+
+```bash
+ant deploy -Dprofile=jeroboam -Dassets.version=`date +%s` -Drsync.options=--delete-after
 ```

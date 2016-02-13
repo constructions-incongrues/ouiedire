@@ -573,3 +573,12 @@ $app->get('/artists', function(Silex\Application $app) use ($config) {
   );
 })
 ->bind('artists');
+
+// Dons
+$app->get('/dons', function(Silex\Application $app) {
+
+  // Render view
+  return $app['twig']->render('dons.twig.html');
+
+})
+->bind('dons');

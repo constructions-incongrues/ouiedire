@@ -36,10 +36,11 @@ header {margin-bottom:20px;}
 
 li a, dd a:first-child {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;border-bottom: 1px solid #00CCFF;}
 ol a, ol li span,.description a {font-weight: bold;background-color: transparent;border-bottom: none;top:0;}
-footer p:first-child a {background-color: #000;color:#FFF;padding:4px;text-transform: uppercase;font-size:12px;font-size: 1.2rem; }
-footer p:first-child a:hover {font-weight: normal;border-bottom: 2px solid #00CCFF}
+footer p:first-child a, nav a {background-color: #000;color:#FFF;padding:4px;text-transform: uppercase;font-size:12px;font-size: 1.2rem; }
+footer p:first-child a:hover, nav a:hover {font-weight: normal;border-bottom: 2px solid #00CCFF}
 footer a, .flyer p a {text-decoration: none;color: #000;border-bottom: 1px solid #000;}
-footer a:hover, .flyer p a:hover {text-transform: uppercase; }
+footer a:hover, .flyer p a:hover, nav a:hover {text-transform: uppercase; }
+nav a {text-decoration: none;font-weight: bold;}
 li a:hover, dd a:hover:first-child  {border-bottom: 1px solid #e6faff;background-color: #00CCFF}
 .download {float:right;}
 .download a {text-decoration: none;color: #fff;font-weight: bold; margin-left: 1em; margin-right: 1em; text-transform: uppercase; }
@@ -79,7 +80,8 @@ ul{ list-style-image:url('../img/files_black.png');margin:30px 0 20px 0; }
 /* **************** TEMPLATE ***************** */
 /* ====== Page Head, Body, and Foot ====== */
 
-footer {position:relative;left:8px;font-size: 14px;font-size: 1.4rem;}
+footer, nav {position:relative;left:8px;font-size: 14px;font-size: 1.4rem;}
+nav {top:20px;}
 
 header img {max-width: 100%; max-height: 100%;margin: 0 0 -10px -9px;}
 audio {position:relative;left:18px;}

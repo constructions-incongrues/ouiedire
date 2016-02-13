@@ -582,3 +582,12 @@ $app->get('/dons', function(Silex\Application $app) {
 
 })
 ->bind('dons');
+
+// Merci <3
+$app->get('/merci', function(Silex\Application $app) {
+
+  // Render view
+  return $app['twig']->render('merci.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+
+})
+->bind('merci');

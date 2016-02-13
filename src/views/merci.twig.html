@@ -1,0 +1,19 @@
+{% extends "layout.default.twig.html" %}
+
+{% block latest %}
+<a href="{{ path('emission', {id:shows.0.id, type:shows.0.typeSlug}) }}">
+  {{ shows.0.type }} {{ shows.0.number }} : {{ shows.0.authors }} - {{ shows.0.title }} 
+</a>
+{% endblock %}
+
+{% block title %}Merci{% endblock %}
+{% block dons %} {% endblock %}
+
+{% block content %}
+<img src="{{ app.request.getBasePath() }}/assets/img/merci.gif"/>
+<img src="{{ app.request.getBasePath() }}/assets/img/merci1.gif"/>
+<img src="{{ app.request.getBasePath() }}/assets/img/merci2.gif"/>
+<img src="{{ app.request.getBasePath() }}/assets/img/merci3.gif"/>
+<img src="{{ app.request.getBasePath() }}/assets/img/merci4.gif"/>
+<img src="{{ app.request.getBasePath() }}/assets/img/merci5.gif"/>
+<img src="{{ app.request.getBasePath() }}/assets/img/merci6.gif"/>{% endblock %}

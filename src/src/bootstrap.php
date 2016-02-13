@@ -578,7 +578,7 @@ $app->get('/artists', function(Silex\Application $app) use ($config) {
 $app->get('/dons', function(Silex\Application $app) {
 
   // Render view
-  return $app['twig']->render('dons.twig.html');
+  return $app['twig']->render('dons.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
 
 })
 ->bind('dons');

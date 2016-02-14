@@ -40,7 +40,7 @@ footer p:first-child a, nav a {background-color: #000;color:#FFF;padding:4px;tex
 footer p:first-child a:hover, nav a:hover {font-weight: normal;border-bottom: 2px solid #00CCFF}
 footer a, .flyer p a {text-decoration: none;color: #000;border-bottom: 1px solid #000;}
 footer a:hover, .flyer p a:hover, nav a:hover {text-transform: uppercase; }
-nav a {text-decoration: none;font-weight: bold;}
+nav a {text-decoration: none;font-weight: bold;background-color:yellow;color:#000;}
 li a:hover, dd a:hover:first-child  {border-bottom: 1px solid #e6faff;background-color: #00CCFF}
 .download {float:right;}
 .download a {text-decoration: none;color: #fff;font-weight: bold; margin-left: 1em; margin-right: 1em; text-transform: uppercase; }

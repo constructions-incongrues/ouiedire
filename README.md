@@ -5,8 +5,9 @@ Ouïedire : j'en ai déjà entendu parler quelque part.
 ## Installation
 
 ```bash
+sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update
-sudo apt-get install gdebi-core resolvconf dnsmasq virtualbox zlib1g-dev
+sudo apt-get install gdebi-core resolvconf dnsmasq virtualbox zlib1g-dev openjdk-7-jre-headless
 wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb
 sudo gdebi -n vagrant_1.7.4_x86_64.deb
 sudo sh -c 'echo "server=/vagrant.dev/127.0.0.1#10053" > /etc/dnsmasq.d/vagrant-landrush'
@@ -25,11 +26,11 @@ vagrant up
 ### Simulation
 
 ```bash
-ant deploy -Dprofile=jeroboam -Dassets.version=`date +%s`
+JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ ant deploy -Dprofile=jeroboam -Dassets.version=`date +%s`
 ```
 
 ### Pour de vrai
 
 ```bash
-ant deploy -Dprofile=jeroboam -Dassets.version=`date +%s` -Drsync.options=--delete-after
+JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ ant deploy -Dprofile=jeroboam -Dassets.version=`date +%s` -Drsync.options=--delete-after
 ```

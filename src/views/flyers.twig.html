@@ -10,8 +10,18 @@
 {% block flyer %} {% endblock %}
 
 {% block content %}
-
 <div class="flyer">
+
+	<div class="grid-100 mobile-grid-100">
+		
+	<p>Illustration de : <a href="http://goupilacneique.tumblr.com/">Goupil Acneique (juin 2016)</a>, <a href="http://blog.crcr.fr">http://blog.crcr.fr</a> (avril 2016), <a href="https://fr.wikipedia.org/wiki/Makoto_Aida">Makoto Aida (janvier 2016)</a>, <a href="https://fr.wikipedia.org/wiki/Charles_Burns">Charle Burns</a> (décembre 2015)<a href="http://www.yueminjun.com.cn/en/">, Yue Minjun</a> (octobre &amp; novembre 2015) , Inconnu (juillet 2015),<a href="http://mestrefungo.com">Mestre Funfo</a> (juin 2015), <a href="http://jonnynegron.tumblr.com/">Jonny Negron</a> (mai 2015), <a href="http://www.corbenstudios.com/">Richard Corben</a> (avril 2015, <a href="http://iam.stuntkid.com/">Stuntkid</a> (mars 2015), <a href="http://fr.wikipedia.org/wiki/Tanino_Liberatore">Liberatore</a> (janvier et février 2015) <br /> Flyer réalisé par <a href="http://goupilacneique.tumblr.com/">Goupil Acneique</a></p>
+	</div>
+
+<div class="grid-33 mobile-grid-33">
+		<a href="{{ url('emissions')}}" >
+			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_vacances2016.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
+		</a>
+	</div>
 <div class="grid-33 mobile-grid-33">
 		<a href="{{ url('emissions')}}" >
 			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_juin2016_1.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
@@ -108,9 +118,6 @@ _
 
 	</div>
 	
-	<div class="grid-100 mobile-grid-100">
-		
-	<p>Illustration de : <a href="http://blog.crcr.fr">http://blog.crcr.fr</a> (avril 2016), <a href="https://fr.wikipedia.org/wiki/Makoto_Aida">Makoto Aida (janvier 2016)</a>, <a href="https://fr.wikipedia.org/wiki/Charles_Burns">Charle Burns</a> (décembre)<a href="http://www.yueminjun.com.cn/en/">Yue Minjun</a> (octobre &amp; novembre), Inconnu (juillet),<a href="http://mestrefungo.com">Mestre Funfo</a> (juin), <a href="http://jonnynegron.tumblr.com/">Jonny Negron</a> (mai), <a href="http://www.corbenstudios.com/">Richard Corben</a> (avril), <a href="http://iam.stuntkid.com/">Stuntkid</a> (mars), <a href="http://fr.wikipedia.org/wiki/Tanino_Liberatore">Liberatore</a> (janvier et février) <br /> Flyer réalisé par <a href="http://goupilacneique.tumblr.com/">Goupil Acneique</a></p>
-	</div>
+
 </div>
 {% endblock %}

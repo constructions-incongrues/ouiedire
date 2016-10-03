@@ -26,11 +26,11 @@ vagrant up
 ### Simulation
 
 ```bash
-JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ ant deploy -Dprofile=jeroboam -Dassets.version=`date +%s`
+ant deploy -Dprofile=pastis-hosting -Dassets.version=`date +%s`
 ```
 
 ### Pour de vrai
 
 ```bash
-JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/ ant deploy -Dprofile=jeroboam -Dassets.version=`date +%s` -Drsync.options=--delete-after
+ant deploy -Dprofile=pastis-hosting -Dassets.version=`date +%s` -Drsync.options=--delete-after
 ```

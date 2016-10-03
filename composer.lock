@@ -4,15 +4,19 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6ae1d99dfde3e7ae8d84a0d9b6f40fd4",
+    "hash": "7686f6035a1bd49d044778a57d552c5a",
+    "content-hash": "6807a07ed63a917eb3e75f608fe6aad9",
     "packages": [
         {
             "name": "constructions-incongrues/ananas-build-toolkit",
-            "version": "0.25.1",
+            "version": "0.34.3",
             "source": {
                 "type": "git",
                 "url": "git@github.com:constructions-incongrues/ananas-build-toolkit.git",
-                "reference": "3fbba850fbd51980ad1eeaae8bc1020f0f7cf891"
+                "reference": "51df83178aab0046a4fc34b379ff85646e435996"
+            },
+            "require": {
+                "php": ">=5.5.0"
             },
             "type": "library",
             "authors": [
@@ -27,7 +31,7 @@
                 "issues": "https://github.com/constructions-incongrues/ananas-build-toolkit/issues",
                 "source": "https://github.com/constructions-incongrues/ananas-build-toolkit"
             },
-            "time": "2015-05-15 10:04:11"
+            "time": "2016-09-08 09:34:30"
         },
         {
             "name": "pimple/pimple",
@@ -248,12 +252,12 @@
             "target-dir": "Symfony/Component/CssSelector",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/CssSelector.git",
+                "url": "https://github.com/symfony/css-selector.git",
                 "reference": "189cf0f7f56d7c4be3b778df15a7f16a29f3680d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/CssSelector/zipball/189cf0f7f56d7c4be3b778df15a7f16a29f3680d",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/189cf0f7f56d7c4be3b778df15a7f16a29f3680d",
                 "reference": "189cf0f7f56d7c4be3b778df15a7f16a29f3680d",
                 "shasum": ""
             },
@@ -302,12 +306,12 @@
             "target-dir": "Symfony/Component/Debug",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Debug.git",
+                "url": "https://github.com/symfony/debug.git",
                 "reference": "ad4511a8fddce7ec163b513ba39a30ea4f32c9e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/ad4511a8fddce7ec163b513ba39a30ea4f32c9e7",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/ad4511a8fddce7ec163b513ba39a30ea4f32c9e7",
                 "reference": "ad4511a8fddce7ec163b513ba39a30ea4f32c9e7",
                 "shasum": ""
             },
@@ -363,12 +367,12 @@
             "target-dir": "Symfony/Component/DomCrawler",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/DomCrawler.git",
+                "url": "https://github.com/symfony/dom-crawler.git",
                 "reference": "adef13fb8d305d95e1fb8324d6b5895c8e79d332"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/DomCrawler/zipball/adef13fb8d305d95e1fb8324d6b5895c8e79d332",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/adef13fb8d305d95e1fb8324d6b5895c8e79d332",
                 "reference": "adef13fb8d305d95e1fb8324d6b5895c8e79d332",
                 "shasum": ""
             },
@@ -417,12 +421,12 @@
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/EventDispatcher.git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
                 "reference": "672593bc4b0043a0acf91903bb75a1c82d8f2e02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/672593bc4b0043a0acf91903bb75a1c82d8f2e02",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/672593bc4b0043a0acf91903bb75a1c82d8f2e02",
                 "reference": "672593bc4b0043a0acf91903bb75a1c82d8f2e02",
                 "shasum": ""
             },
@@ -526,12 +530,12 @@
             "target-dir": "Symfony/Component/HttpFoundation",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/HttpFoundation.git",
+                "url": "https://github.com/symfony/http-foundation.git",
                 "reference": "8a0d00980ef9f6b47ddbf24bdfbf70fead760816"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/8a0d00980ef9f6b47ddbf24bdfbf70fead760816",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/8a0d00980ef9f6b47ddbf24bdfbf70fead760816",
                 "reference": "8a0d00980ef9f6b47ddbf24bdfbf70fead760816",
                 "shasum": ""
             },
@@ -580,12 +584,12 @@
             "target-dir": "Symfony/Component/HttpKernel",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/HttpKernel.git",
+                "url": "https://github.com/symfony/http-kernel.git",
                 "reference": "2010194de0a57731af9404c7f97fd300db98b7a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/2010194de0a57731af9404c7f97fd300db98b7a3",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/2010194de0a57731af9404c7f97fd300db98b7a3",
                 "reference": "2010194de0a57731af9404c7f97fd300db98b7a3",
                 "shasum": ""
             },
@@ -708,12 +712,12 @@
             "target-dir": "Symfony/Component/Routing",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Routing.git",
+                "url": "https://github.com/symfony/routing.git",
                 "reference": "1455ec537940f7428ea6aa9411f3c4bca69413a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/1455ec537940f7428ea6aa9411f3c4bca69413a0",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/1455ec537940f7428ea6aa9411f3c4bca69413a0",
                 "reference": "1455ec537940f7428ea6aa9411f3c4bca69413a0",
                 "shasum": ""
             },
@@ -827,12 +831,12 @@
             "target-dir": "Symfony/Bridge/Twig",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/TwigBridge.git",
+                "url": "https://github.com/symfony/twig-bridge.git",
                 "reference": "3f126a6c19879137375ad01f73eb455ab4ca2cd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/TwigBridge/zipball/3f126a6c19879137375ad01f73eb455ab4ca2cd6",
+                "url": "https://api.github.com/repos/symfony/twig-bridge/zipball/3f126a6c19879137375ad01f73eb455ab4ca2cd6",
                 "reference": "3f126a6c19879137375ad01f73eb455ab4ca2cd6",
                 "shasum": ""
             },
@@ -904,12 +908,12 @@
             "target-dir": "Symfony/Bundle/WebProfilerBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/WebProfilerBundle.git",
+                "url": "https://github.com/symfony/web-profiler-bundle.git",
                 "reference": "0a507eaeac1c65b51cf295c9913f686b214d8f38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/WebProfilerBundle/zipball/0a507eaeac1c65b51cf295c9913f686b214d8f38",
+                "url": "https://api.github.com/repos/symfony/web-profiler-bundle/zipball/0a507eaeac1c65b51cf295c9913f686b214d8f38",
                 "reference": "0a507eaeac1c65b51cf295c9913f686b214d8f38",
                 "shasum": ""
             },

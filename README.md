@@ -26,11 +26,17 @@ vagrant up
 ### Simulation
 
 ```bash
-ant deploy -Dprofile=pastis-hosting -Dassets.version=`date +%s` -Drsync.option="--dry-run --delete-after"
+ant deploy -Dprofile=pastishosting -Dassets.version=`date +%s` -Drsync.option="--dry-run --delete-after"
 ```
 
 ### Pour de vrai
 
 ```bash
-ant deploy -Dprofile=pastis-hosting -Dassets.version=`date +%s` -Drsync.options="--progress --delete-after"
+ant deploy cloudflare.purgeAll -Dprofile=pastishosting -Dassets.version=`date +%s` -Drsync.options="--progress --delete-after"
+```
+
+### Invalidation du cache après la mise à jour d'un fichier MP3 sur le serveur
+
+```bash
+ant cloudflare.purgeAll -Dprofile=pastishosting
 ```

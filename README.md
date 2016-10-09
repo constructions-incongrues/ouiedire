@@ -26,11 +26,11 @@ vagrant up
 ### Simulation
 
 ```bash
-ant deploy -Dprofile=pastis-hosting -Dassets.version=`date +%s`
+ant deploy -Dprofile=pastis-hosting -Dassets.version=`date +%s` -Drsync.option="--dry-run --delete-after"
 ```
 
 ### Pour de vrai
 
 ```bash
-ant deploy -Dprofile=pastis-hosting -Dassets.version=`date +%s` -Drsync.options=--delete-after
+ant deploy -Dprofile=pastis-hosting -Dassets.version=`date +%s` -Drsync.options="--progress --delete-after"
 ```

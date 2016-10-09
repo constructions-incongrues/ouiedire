@@ -23,6 +23,12 @@ vagrant up
 
 ## Déploiement
 
+### Tagger un morceau
+
+```bash
+ssh -p 2222 ouiedire_net@docker01.pastis-hosting.net /var/www/vhosts/ouiedire.net/httpdocs/bin/tag <IDENTIFIANT EMISSION (eg. ailleurs-xxx / ouiedire-xxx>
+```
+
 ### Simulation
 
 ```bash
@@ -34,6 +40,7 @@ ant deploy -Dprofile=pastishosting -Dassets.version=`date +%s` -Drsync.option="-
 ```bash
 ant deploy cloudflare.purgeAll -Dprofile=pastishosting -Dassets.version=`date +%s` -Drsync.options="--progress --delete-after"
 ```
+
 
 ### Invalidation du cache après la mise à jour d'un fichier MP3 sur le serveur
 

@@ -12,12 +12,12 @@ wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.9.2_x86_64.deb
 sudo gdebi -n vagrant_1.9.2_x86_64.deb
 sudo sh -c 'echo "server=/vagrant.dev/127.0.0.1#10053" > /etc/dnsmasq.d/vagrant-landrush'
 sudo service dnsmasq restart
-
-git clone https://github.com/constructions-incongrues/net.ouiedire.www.git
-cd net.ouiedire.www
 vagrant plugin install vagrant-vbguest
 vagrant plugin install vagrant-share
 vagrant plugin install landrush
+
+git clone https://github.com/constructions-incongrues/net.ouiedire.www.git
+cd net.ouiedire.www
 vagrant up
 ```
 

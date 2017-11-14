@@ -79,6 +79,19 @@
 
 {{ show.playlist|raw }}
 
+<hr />
+
+{% if otherShows %}
+<ul>
+    <p>Mais aussi</p>
+{% for show in otherShows %}
+    <li>
+        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} : {{ show.title }}</a>
+    </li>
+{% endfor %}
+</ul>
+{% endif %}
+
 </div><!-- grid-50 -->
 
 <div class="grid-50 mobile-grid-100 description">

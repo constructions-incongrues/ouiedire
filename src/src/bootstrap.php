@@ -6,6 +6,7 @@ require_once __DIR__.'/../../vendor/autoload.php';
 use Silex\Provider;
 use Symfony\Component\DomCrawler\Crawler;
 use Symfony\Component\Finder\Finder;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Generator\UrlGenerator;
 use Zend\Feed\Writer\Feed;
@@ -214,13 +215,13 @@ function getShow($id, Silex\Application $app = null, $config = array()) {
  *
  * @return array Shows (as returned by getShow())
  */
-function getShows(Silex\Application $app, $preview = false) {
+function getShows(Silex\Application $app, $preview = false, $artist = null) {
   // Path to data directories
   $pathData = __DIR__.'/../data';
 
   // Search for shows manifests
   $finder = new Finder();
-  $manifests = $finder
+  $finder = $finder
     ->files()
     ->name('manifest.json')
     ->filter(function(\SplFileInfo $file) {
@@ -234,8 +235,15 @@ function getShows(Silex\Application $app, $preview = false) {
       $dateB = strtotime(json_decode($b->getContents(), true)['releasedAt']);
 
       return $dateA > $dateB;
-    })
-    ->in(sprintf('%s/emission/', $pathData));
+    });
+
+    if ($artist !== null) {
+      $finder->filter(function(\SplFileInfo $file) use ($artist) {
+        return json_decode($file->getContents(), true)['authors'] === $artist;
+      });
+    }
+
+    $manifests = $finder->in(sprintf('%s/emission/', $pathData));
 
   // Parse manifests
   $shows = array();
@@ -294,9 +302,9 @@ if (false === $config) {
 $app = new Silex\Application();
 
 // Twig setup
-$app->register(new Silex\Provider\TwigServiceProvider(), array(
-  'twig.path' => __DIR__.'/../views',
-));
+$app->register(new Silex\Provider\TwigServiceProvider(), [
+  'twig.path' => __DIR__.'/../views'
+]);
 
 // Named routes (@see http://silex.sensiolabs.org/doc/providers/url_generator.html)
 $app->register(new Provider\UrlGeneratorServiceProvider());
@@ -330,9 +338,9 @@ $app->get('/liens', function(Silex\Application $app) {
 ->bind('liens');
 
 // Shows list
-$app->get('/', function(Silex\Application $app) use ($config) {
+$app->get('/', function(Silex\Application $app, Request $request) use ($config) {
   $artists = array();
-  $shows = getShows($app, array_key_exists('preview', $_GET), $config);
+  $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
   foreach ($shows as $show) {
     $showArtists = getArtists($show);
     $artists = array_merge($artists, $showArtists);
@@ -347,7 +355,8 @@ $app->get('/', function(Silex\Application $app) use ($config) {
       'artists'    => $artists,
       'shows'      => $shows,
       'djs'        => getDjs($shows),
-      'randomShow' => $shows[array_rand($shows)]
+      'randomShow' => $shows[array_rand($shows)],
+      'artist'     => $request->query->get('artist')
     )
   );
 })
@@ -479,7 +488,7 @@ EOT;
 ->bind('oembed');
 
 // Show page
-$app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) {
+$app->get('/emission/{type}-{id}', function(Silex\Application $app, Request $request, $type, $id) {
   // Fetch show
   try {
     $show = getShow("$type-$id", $app);
@@ -523,6 +532,12 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
     urlencode($show['covers'][0])
   );
 
+  // Other shows by the same DJ
+  $otherShows = getShows($app, array_key_exists('preview', $_GET), $show['authors']);
+  $otherShows = array_filter($otherShows, function ($otherShow) use ($show) {
+    return $show['title'] != $otherShow['title'];
+  });
+
   // Render view
   return $app['twig']->render(
     $view,
@@ -532,14 +547,15 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, $type, $id) 
       'player'        => $player,
       'previous'      => $siblings[0],
       'show'          => $show,
-      'urlSwfPlayer'  => $urlSwfPlayer
+      'urlSwfPlayer'  => $urlSwfPlayer,
+      'otherShows'    => $otherShows
     )
   );
 })
 ->bind('emission');
 
-$app->get('/artists', function(Silex\Application $app) use ($config) {
-  $shows = getShows($app, array_key_exists('preview', $_GET), $config);
+$app->get('/artists', function(Silex\Application $app, Request $request) use ($config) {
+  $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
   $artists = array();
   $showsGroupedByArtist = array();
   foreach ($shows as $show) {

@@ -48,6 +48,9 @@
         <a href="http://feeds.feedburner.com/ouiedire">rss</a>
         <a href="https://www.facebook.com/pages/Ou%C3%AFedire/35795699060">facebook</a>
         <a href="https://twitter.com/OuiedireShow">twitter</a>
+        <a href="{{ url('flyers') }}">Flyers des programmations (Janvier 2015 à Juin 2016)</a>
+
+
 </nav>
 
 <div class="grid-100 mobile-grid-100">
@@ -78,6 +81,19 @@
     </audio>
 
 {{ show.playlist|raw }}
+
+<hr />
+
+{% if otherShows %}
+<ul>
+    <h6>Autres émissions par {{ show.authors }} </h6>
+{% for show in otherShows %}
+    <li>
+        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} : {{ show.title }}</a>
+    </li>
+{% endfor %}
+</ul>
+{% endif %}
 
 </div><!-- grid-50 -->
 

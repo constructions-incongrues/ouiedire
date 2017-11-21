@@ -28,7 +28,7 @@ header {margin-bottom:20px;}
 	color:#FFF;}
 .jingle-about {font-size: 14px;font-size: 1.4rem;position: relative;left: 18px;top: 20px;padding-bottom: 10px;}
 
-.social {text-align: left;border: none;margin: 0 0 -15px 18px;padding:10px 0 0 0}
+.social {text-align: left;border: none;margin: 0 0 -15px 15px;padding:10px 0 0 0}
 .social li {list-style-image: none;display: inline;font-size: 12.5px;font-size: 1.25rem;font-weight: bold;text-transform: uppercase;}
 
 /* links */
@@ -42,8 +42,8 @@ footer a, .flyer p a {text-decoration: none;color: #000;border-bottom: 1px solid
 footer a:hover, .flyer p a:hover, nav a:hover {text-transform: uppercase; }
 nav a {text-decoration: none;}
 li a:hover, dd a:hover:first-child  {border-bottom: 1px solid #e6faff;background-color: #00CCFF}
-.download {float:right;}
-.download a {text-decoration: none;color: #fff;font-weight: bold; margin-left: 1em; margin-right: 1em; text-transform: uppercase; }
+.download {float:right;position:relative; margin-top: -1px;}
+.download a {text-decoration: none;color: #FFF;font-weight: bold;margin-left: 1em; margin-right: 1em; text-transform: uppercase; }
 .download a:hover {background-color: transparent; color: #00CCFF;}
 ol li a:hover {border-bottom:1px solid #000;background-color: transparent;}
 .description a {color: #000;text-decoration: none;}
@@ -57,8 +57,9 @@ h4 a:hover {color:#FFF;background-color: #000;}
 .jingle-about a {color:#000;text-decoration: underline;}
 .social a {background-color:transparent;font-weight: bold;text-transform: uppercase;border: none;top:0;}
 .social a:hover {background-color:transparent;border-bottom:1px solid #000;}
-h3 a {color:#FFF;text-decoration: none;color:#FCFE04;}
-h3 a:hover{color:#FFF;}
+h3 a, h6 a {color:#FFF;text-decoration: none;color:#FCFE04;}
+h3 a:hover h6 a:hover{color:#FFF;}
+h6 a {font-weight:bold;}
 /* ====== Heading ====== */
 
 h1 {font-size:15px;font-size: 1.5rem; text-transform: uppercase;position:relative;top:-10px;left:10px;margin:-5px 0 30px 0;background-color: #000;padding: 4px;}
@@ -66,6 +67,8 @@ h2 {padding:4px;border-bottom:1px dotted #000;text-transform: uppercase;}
 h2 {margin:0 0 30px 16px;font-size: 13px;font-size: 1.3rem; }
 h3 {margin: 0 0 0 18px;font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;}
 h3 {display: block;position: relative;top: 20px;background-color: #000;color: #FFF;margin-bottom: 40px;}
+h6 {margin: -10px 0 20px -20px;font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;}
+h6 {background-color: #000;color: #FFF;}
 .grid-70 h3 {display: inline;color: #FFF;position: relative;top:25px;font-size: 13px;font-weight: bold;font-size: 1.3rem;padding: 4px;text-transform: uppercase;}
 
 h4, h5 {font-size:13px;font-size: 1.3rem;display: inline;position: relative;top: 25px;left:15px;color: #FFF;}

@@ -10,13 +10,15 @@
 
 {% block content %}
 <nav class="grid-100">
-				<a href="mailto:contact@ouiedire.net">contact@ouiedire.net</a>
-			    <a href="{{ url('dons') }}">Dons</a>
-				<a href="http://feeds.feedburner.com/ouiedire">rss</a>
-				<a href="https://www.facebook.com/pages/Ou%C3%AFedire/35795699060">facebook</a>
-				<a href="https://twitter.com/OuiedireShow">twitter</a>
+	<a href="mailto:contact@ouiedire.net">contact@ouiedire.net</a>
+	<a href="{{ url('dons') }}">Dons</a>
+	<a href="http://feeds.feedburner.com/ouiedire">rss</a>
+	<a href="https://www.facebook.com/pages/Ou%C3%AFedire/35795699060">facebook</a>
+	<a href="https://twitter.com/OuiedireShow">twitter</a>
+	<a href="{{ url('flyers') }}">Flyers des programmations (Janvier 2015 à Juin 2016)</a>
+
 </nav>
-	<h3><a href="{{ url('artists') }}"> {{ artists|length }} artistes</a> / {{ shows|length }} émissions / {{ djs|length }} djs / </h3>
+<h3><a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes</a> / {{ shows|length }} émissions / {{ djs|length }} djs / </h3>
 
 
 <!-- <h5><a href="{{ path('emission', {id:randomShow.id, type:randomShow.typeSlug}) }}">Écouter de manière aléatoire</a></h5>

@@ -42,7 +42,7 @@ footer a, .flyer p a {text-decoration: none;color: #000;border-bottom: 1px solid
 footer a:hover, .flyer p a:hover, nav a:hover {text-transform: uppercase; }
 nav a {text-decoration: none;}
 li a:hover, dd a:hover:first-child  {border-bottom: 1px solid #e6faff;background-color: #00CCFF}
-.download {float:right;position:relative; margin-top: -17px;}
+.download {float:right;position:relative; margin-top: -1px;}
 .download a {text-decoration: none;color: #FFF;font-weight: bold;margin-left: 1em; margin-right: 1em; text-transform: uppercase; }
 .download a:hover {background-color: transparent; color: #00CCFF;}
 ol li a:hover {border-bottom:1px solid #000;background-color: transparent;}

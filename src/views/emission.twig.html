@@ -83,7 +83,7 @@
 
 {% if otherShows %}
 <ul>
-    <p>Mais aussi</p>
+    <h6>Autres émissions par {{ show.authors }} </h6>
 {% for show in otherShows %}
     <li>
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} : {{ show.title }}</a>

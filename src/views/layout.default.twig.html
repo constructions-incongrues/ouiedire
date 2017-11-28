@@ -81,26 +81,42 @@
 
 
 		</div>
-		<div class="grid-70 mobile-grid-100">
+ <div class="grid-70 mobile-grid-100">
 
+                    <p class="about">
+                        Des copains, des artistes, des fêtards, des autistes, des labels c'est Ouïedire!
+                        <br/>
+                        Des collages à en perdre les oreilles, des mixes en pagaille, absurdes ou panachés, différents univers se croisent dans Ouïedire.
+                        <br/>Ouïedire, ce sont des gens, tout simplement, qui nous font goûter leur substance sonore le temps d'une émission.
+                    </p>
 
-		<!--
-			<h3>La dernière émission : </h3>
-			<p>
-				{% block latest %}
-				LATEST SHOW
-				{% endblock %}
-			</p>
-			-->
-			 <h3>Ouïedire est en vacances, à bientôt !	</h3> <br /> <br />
+                    <h3 class="diffusion">Diffusé sur :
+                    </h3>
+                    <h4>
+                        <a href="http://www.choq.ca/emissions-details/ouiedire/">Choq Fm</a>
+                        <a href="http://www.canalb.fr/the-brain/4870">Canal B</a>
+                        <a href="http://www.radioeponyme.com/emissions/ouie-dire/">Eponyme</a>
+                        <a href="http://www.vosgueules-lesmouettes.com/ouiumledire.html">Vos Geules Les Mouettes</a>
+                    </h4>
 
-			 {% block flyer %}
-			 <h4><a href="{{ url('flyers') }}">Flyers des programmations (Janvier 2015 à Juin 2016)</a></h4>
-			 {% endblock %}
+                    <h3 class="internet">Sur l'internet :
+                    </h3>
 
+                    <h4>
+                        <a href="{{ url('flyers') }}">Flyers</a>
+                        <a href="mailto:contact@ouiedire.net">contact@ouiedire.net</a>
+                        <a href="{{ url('dons') }}">Dons</a>
+                        <a href="http://feeds.feedburner.com/ouiedire">rss</a>
+                        <a href="http://www.musiques-incongrues.net/forum/shows/ouiedire/">forum</a>
+                        <a href="https://www.facebook.com/pages/Ou%C3%AFedire/35795699060">facebook</a>
+                        <a href="https://twitter.com/OuiedireShow">twitter</a>
+                    </h4>
+                    <!-- <h3>La dernière émission : </h3> <h4> {% block latest %} LATEST SHOW {% endblock %} </h4> -->
 
+                    <!-- <h3 class="flyerinfos"> <a href="{{ url('flyers') }}">Flyers des programmations (Janvier 2015 à Juin 2016)</a></h3> -->
+                    {% block flyer %}{% endblock %}
 
-		</div>
+                </div>
 		</header>
 
 		{% block content %}

@@ -12,7 +12,10 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "pixative/debian-wheezy-64"
+  config.vm.box = "bento/ubuntu-14.04"
+
+  # If true, agent forwarding over SSH connections is enabled.
+  config.ssh.forward_agent = true
 
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
@@ -21,5 +24,5 @@ Vagrant.configure(2) do |config|
 
   # @see https://github.com/phinze/landrush
   config.landrush.enabled = true
-  config.vm.hostname = "ouiedire.vagrant.dev"
+  config.vm.hostname = "ouiedire.vagrant.test"
 end

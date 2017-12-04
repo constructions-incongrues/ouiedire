@@ -14,6 +14,9 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "bento/ubuntu-14.04"
 
+  # If true, agent forwarding over SSH connections is enabled.
+  config.ssh.forward_agent = true
+
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.

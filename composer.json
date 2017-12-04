@@ -1,10 +1,4 @@
 {
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:constructions-incongrues/ananas-build-toolkit.git"
-        }
-    ],
     "require": {
         "constructions-incongrues/ananas-build-toolkit": "0.34.*",
         "silex/silex": "~1.0",
@@ -15,12 +9,17 @@
         "symfony/process": "~2.6",
         "symfony/twig-bridge": "~2.2",
         "zendframework/zend-escaper": "~2.2",
-        "zendframework/zend-feed": "~2.2",
+        "zendframework/zend-feed": "<2.8",
         "zendframework/zend-servicemanager": "~2.2",
         "zendframework/zend-stdlib": "~2.2"
     },
     "scripts": {
         "post-install-cmd": "ant -f vendor/constructions-incongrues/ananas-build-toolkit/modules/toolkit/module.xml init -Dbasedir=$PWD",
         "post-update-cmd": "ant init"
+    },
+    "config": {
+        "platform": {
+            "php": "5.5.9"
+        }
     }
 }

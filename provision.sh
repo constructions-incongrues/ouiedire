@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Mise à jour des dépots
 apt-get -qq update
 
@@ -9,7 +11,7 @@ apt-get install -y tzdata
 dpkg-reconfigure -f noninteractive tzdata
 
 # Installation de Java
-apt-get -y install openjdk-7-jre-headless
+apt-get -y install openjdk-7-jre-headless git
 
 # Installation de Apache et PHP
 apt-get -y install libapache2-mod-php5 php5-cli

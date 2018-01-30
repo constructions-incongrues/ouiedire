@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Introspect / Fail early
+set -ex
+
+# Get show metadata
+SHOW_NUMBER=$(echo $1 |grep -Eo '[0-9]{1,4}')
+SHOW_TYPE=$(jq .type ./src/data/emission/$1/manifest.json)
+SHOW_TITLE="$SHOW_TYPE $SHOW_NUMBER: $(jq .authors ./src/data/emission/$1/manifest.json) - $(jq .title ./src/data/emission/$1/manifest.json)"
+SHOW_TITLE=$(echo $SHOW_TITLE | tr -d '"')
+SHOW_TAGS=$(echo "ouiedire,musiques-incongrues,$SHOW_TYPE" | tr '[:upper:]' '[:lower:]' | tr -d '"')
+SHOW_DESCRIPTION="Écoute et téléchargement sur http://www.ouiedire.net/emission/$1 -  $(cat ./src/data/emission/$1/description.html | sed -e 's/<[^>]*>//g'  | tr -d "\n")"
+SHOW_FILE=$(find $PWD/src/public/assets/emission/$1/ -name '*.mp3' | xargs)
+SHOW_PLAYLIST=$(find $PWD/src/data/emission/$1/ -name 'playlist.html' | xargs)
+
+# Create Virtual DJ tracklist
+./bin/generate-virtualdj-tracklist ./src/data/emission/$1/playlist.html ./src/data/emission/$1/tracklist.txt
+
+if [ -f ./src/data/emission/$1/tracklist.txt ]; then
+    # Upload show
+    printf "$SHOW_TITLE\n$SHOW_DESCRIPTION\nouiedire,\n$SHOW_TAGS\n" | ./bin/mixcloud --file=$SHOW_FILE --cover=$(find $PWD/src/public/assets/emission/$1/ -name '*.png' | xargs) --tracklist="$PWD/src/data/emission/$1/tracklist.txt"
+else
+    # Upload show
+    printf "$SHOW_TITLE\n$SHOW_DESCRIPTION\nouiedire,\n$SHOW_TAGS\n" | ./bin/mixcloud --file=$SHOW_FILE --cover=$(find $PWD/src/public/assets/emission/$1/ -name '*.png' | xargs)
+fi

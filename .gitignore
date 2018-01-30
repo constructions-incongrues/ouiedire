@@ -23,3 +23,5 @@
 
 # vagrant
 /.vagrant
+/src/data/emission/*/tracklist.txt
+/etc/trivoallan/build.properties

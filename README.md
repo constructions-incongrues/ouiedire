@@ -51,3 +51,9 @@ ant deploy cloudflare.purgeAll -Dprofile=pastishosting -Dassets.version=`date +%
 ```bash
 ant cloudflare.purgeAll -Dprofile=pastishosting
 ```
+
+### Uploader une émission sur Mixcloud
+
+```sh
+./bin/mixcloud-upload ailleurs-139
+```

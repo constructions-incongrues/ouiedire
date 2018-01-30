@@ -1,0 +1,43 @@
+#!/usr/bin/env php
+<?php
+use Symfony\Component\DomCrawler\Crawler;
+
+require_once(__DIR__.'/../vendor/autoload.php');
+
+
+// Sanity checks
+if (!isset($_SERVER['argv'][1])) {
+    throw new \Exception('Please provide path to HTML playlist');
+}
+if (!isset($_SERVER['argv'][2])) {
+    throw new \Exception('Please provide path to Virtual DJ tracklist output file');
+}
+
+// Read show manifest
+$manifest = json_decode(file_get_contents(dirname($_SERVER['argv'][1]).'/manifest.json'));
+
+// Convert HTML playlist to Virtual DJ tracklist format
+$tracklist = [];
+try {
+    $crawler =  new Crawler(file_get_contents($_SERVER['argv'][1]));
+    $tracklist = $crawler->filter('li')->each(function (Crawler $node, $i) use ($manifest) {
+        // Timestamp
+        $timestamp = $node->filter('a.mejs-smartplaylist-time')->text();
+        $parts = explode(':', $timestamp);
+        $dateParts = explode('-', explode(' ', $manifest->releasedAt)[0]);
+        $timestamp = sprintf('%s-%s-%sT%s:%s:%sZ', $dateParts[0], $dateParts[2], $dateParts[1], $parts[0], $parts[1], $parts[2]);
+
+        // Artist
+        $artist = trim($node->filter('span')->text());
+
+        // Title
+        $title = trim(explode(' - ', $node->text())[1]);
+
+        return sprintf("%s : %s - %s", $timestamp, $artist, $title);
+    });
+
+    // Write tracklist to disk
+    file_put_contents($_SERVER['argv'][2], implode("\n", $tracklist));
+} catch (\InvalidArgumentException $e) {
+    echo $e->getMessage(), "\n";
+}

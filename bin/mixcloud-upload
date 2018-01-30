@@ -6,20 +6,30 @@ set -ex
 # Get show metadata
 SHOW_NUMBER=$(echo $1 |grep -Eo '[0-9]{1,4}')
 SHOW_TYPE=$(jq .type ./src/data/emission/$1/manifest.json)
-SHOW_TITLE="$SHOW_TYPE $SHOW_NUMBER: $(jq .authors ./src/data/emission/$1/manifest.json) - $(jq .title ./src/data/emission/$1/manifest.json)"
+SHOW_TYPE_SLUG=$(echo $SHOW_TYPE | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
+SHOW_AUTHORS=$(jq .authors ./src/data/emission/$1/manifest.json)
+SHOW_AUTHORS_SLUG=$(echo $SHOW_AUTHORS | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
+SHOW_TITLE_SLUG=$(echo $(jq .title ./src/data/emission/$1/manifest.json) | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
+SHOW_TITLE="$SHOW_TYPE $SHOW_NUMBER: $SHOW_AUTHORS - $(jq .title ./src/data/emission/$1/manifest.json)"
 SHOW_TITLE=$(echo $SHOW_TITLE | tr -d '"')
 SHOW_TAGS=$(echo "ouiedire,musiques-incongrues,$SHOW_TYPE" | tr '[:upper:]' '[:lower:]' | tr -d '"')
 SHOW_DESCRIPTION="Écoute et téléchargement sur http://www.ouiedire.net/emission/$1 -  $(cat ./src/data/emission/$1/description.html | sed -e 's/<[^>]*>//g'  | tr -d "\n")"
 SHOW_FILE=$(find $PWD/src/public/assets/emission/$1/ -name '*.mp3' | xargs)
 SHOW_PLAYLIST=$(find $PWD/src/data/emission/$1/ -name 'playlist.html' | xargs)
+SHOW_URL="http://www.ouiedire.net/assets/emission/${SHOW_TYPE_SLUG}-${SHOW_NUMBER}/ouiedire_${SHOW_TYPE_SLUG}-${SHOW_NUMBER}_${SHOW_AUTHORS_SLUG}_${SHOW_TITLE_SLUG}.mp3"
+
+# Download show if needed
+if [ ! -f "$SHOW_FILE" ]; then
+    wget $SHOW_URL -O "$PWD/src/public/assets/emission/$1/$(basename $SHOW_URL)"
+fi
 
 # Create Virtual DJ tracklist
 ./bin/generate-virtualdj-tracklist ./src/data/emission/$1/playlist.html ./src/data/emission/$1/tracklist.txt
 
 if [ -f ./src/data/emission/$1/tracklist.txt ]; then
     # Upload show
-    printf "$SHOW_TITLE\n$SHOW_DESCRIPTION\nouiedire,\n$SHOW_TAGS\n" | ./bin/mixcloud --file=$SHOW_FILE --cover=$(find $PWD/src/public/assets/emission/$1/ -name '*.png' | xargs) --tracklist="$PWD/src/data/emission/$1/tracklist.txt"
+    printf "$SHOW_TITLE\n$SHOW_DESCRIPTION\nouiedire,$SHOW_TAGS\n" | ./bin/mixcloud --file=$SHOW_FILE --cover=$(find $PWD/src/public/assets/emission/$1/ -name '*.png' | xargs) --tracklist="$PWD/src/data/emission/$1/tracklist.txt"
 else
     # Upload show
-    printf "$SHOW_TITLE\n$SHOW_DESCRIPTION\nouiedire,\n$SHOW_TAGS\n" | ./bin/mixcloud --file=$SHOW_FILE --cover=$(find $PWD/src/public/assets/emission/$1/ -name '*.png' | xargs)
+    printf "$SHOW_TITLE\n$SHOW_DESCRIPTION\nouiedire,$SHOW_TAGS\n" | ./bin/mixcloud --file=$SHOW_FILE --cover=$(find $PWD/src/public/assets/emission/$1/ -name '*.png' | xargs)
 fi

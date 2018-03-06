@@ -1,0 +1,42 @@
+# Any *-apache image listed on this page : https://store.docker.com/images/php
+FROM php:5.6.33-apache-jessie
+
+# Space separated list of dev packages names
+ARG PACKAGES_DEV
+
+# Default PHP configuration
+RUN echo "date.timezone = Europe/Paris" > /usr/local/etc/php/php.ini
+
+# Install additional packages and PHP extensions
+RUN apt-get -y update \
+    && apt-get -y install ant curl git make zip \
+    && docker-php-ext-install -j$(nproc) opcache \
+    && pecl install xdebug-2.5.5 \
+    && apt-get -y clean \
+    && apt-get -y autoremove
+
+# Enable additional Apache modules
+RUN a2enmod rewrite
+
+# Install gosu
+# https://github.com/tianon/gosu
+RUN curl -L "https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64" > /usr/local/bin/gosu \
+    && chmod +x /usr/local/bin/gosu \
+    && gosu nobody true
+
+# Install development packages
+RUN apt-get -y install ${PACKAGES_DEV}
+
+# Create dedicated user and group
+RUN adduser --shell /bin/sh --gecos "" --disabled-password --disabled-login app && usermod --append --groups www-data app
+
+# Copy application sources to container
+COPY --chown=app:app ./ /usr/local/src/app
+
+# Define default working directory
+WORKDIR /usr/local/src/app
+
+# Build application
+RUN gosu app mkdir /home/app/.composer \
+    && gosu app echo '{"github-oauth": {"github.com": "bb737534d3a58af229a84bcea09a11c70b4f4520"}}' > /home/app/.composer/auth.json \
+    && gosu app make configure

@@ -13,8 +13,8 @@ install:
 start:
 	# Start service
 	# Dependencies are declared by adding a DEPENDENCIES= string at the end of the command
-	# eg. $(MAKE) -C ../../../../../.. net.ouiedire.www-start-service DEPENDENCIES="rabbitmq ws"
-	$(MAKE) -C ../../../.. net.ouiedire.www-start-service DEPENDENCIES="dbgp-proxy"
+	# eg. $(MAKE) -C ../../../../../.. ouiedire-start-service DEPENDENCIES="rabbitmq ws"
+	$(MAKE) -C ../../../.. ouiedire-start-service DEPENDENCIES="dbgp-proxy"
 
 # Règles propres au projet
 

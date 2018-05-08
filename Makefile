@@ -1,17 +1,20 @@
 .PHONY: configure install start
 
-install:
-	./composer.phar install
+# Règles obligatoires
 
 configure: install
-	# configure app
+	# Configure app
 	ant configure build -Dprofile=developer-portal
+
+install:
+	# Install app dependencies (composer, npm, etc)
+	./composer.phar install
 
 start:
 	# Start service
 	# Dependencies are declared by adding a DEPENDENCIES= string at the end of the command
-	# eg. $(MAKE) -C ../.. net.ouiedire.www-start-service DEPENDENCIES="rabbitmq ws"
-	$(MAKE) -C ../.. net.ouiedire.www-start-service DEPENDENCIES="dbgp-proxy"
+	# eg. $(MAKE) -C ../../../../../.. net.ouiedire.www-start-service DEPENDENCIES="rabbitmq ws"
+	$(MAKE) -C ../../../.. net.ouiedire.www-start-service DEPENDENCIES="dbgp-proxy"
 
 # Règles propres au projet
 

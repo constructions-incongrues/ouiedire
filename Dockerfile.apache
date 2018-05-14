@@ -1,8 +1,16 @@
 # Any *-apache image listed on this page : https://store.docker.com/images/php
-FROM php:5.6.33-apache-jessie
+FROM php:5.6.36-apache-jessie
 
 # Space separated list of dev packages names
 ARG PACKAGES_DEV
+
+# Github oauth token
+ARG GITHUB_OAUTH_TOKEN
+
+# ONVAULT parameters
+ENV VAULT_HOST=172.17.0.1
+
+ENV ABT_USER=developer-portal
 
 # Default PHP configuration
 RUN echo "date.timezone = Europe/Paris" > /usr/local/etc/php/php.ini
@@ -10,7 +18,7 @@ RUN echo "date.timezone = Europe/Paris" > /usr/local/etc/php/php.ini
 # Install additional packages and PHP extensions
 RUN apt-get -y update \
     && apt-get -y install ant curl git make zip \
-    && docker-php-ext-install -j$(nproc) opcache \
+    && docker-php-ext-install -j$(nproc) opcache  \
     && pecl install xdebug-2.5.5 \
     && apt-get -y clean \
     && apt-get -y autoremove
@@ -24,11 +32,20 @@ RUN curl -L "https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64" >
     && chmod +x /usr/local/bin/gosu \
     && gosu nobody true
 
+# Installs Dockito Vault ONVAULT utility
+# https://github.com/dockito/vault
+RUN curl -L https://raw.githubusercontent.com/dockito/vault/master/ONVAULT > /usr/local/bin/ONVAULT && \
+    chmod +x /usr/local/bin/ONVAULT
+
 # Install development packages
 RUN apt-get -y install ${PACKAGES_DEV}
 
 # Create dedicated user and group
 RUN adduser --shell /bin/sh --gecos "" --disabled-password --disabled-login app && usermod --append --groups www-data app
+
+# Setup Github authentication
+RUN gosu app mkdir /home/app/.composer \
+    && gosu app echo "{\"github-oauth\": {\"github.com\": \"${GITHUB_OAUTH_TOKEN}\"}}" > /home/app/.composer/auth.json
 
 # Copy application sources to container
 COPY --chown=app:app ./ /usr/local/src/app
@@ -37,6 +54,4 @@ COPY --chown=app:app ./ /usr/local/src/app
 WORKDIR /usr/local/src/app
 
 # Build application
-RUN gosu app mkdir /home/app/.composer \
-    && gosu app echo '{"github-oauth": {"github.com": "bb737534d3a58af229a84bcea09a11c70b4f4520"}}' > /home/app/.composer/auth.json \
-    && gosu app make configure
+RUN gosu app ONVAULT make install

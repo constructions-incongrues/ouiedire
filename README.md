@@ -29,8 +29,8 @@ vagrant up
 ### Tagger un morceau
 
 ```bash
-ssh -p 2222 ouiedire_net@ftp.pastis-hosting.net /var/www/vhosts/ouiedire.net/httpdocs/bin/tag <IDENTIFIANT EMISSION (eg. ailleurs-xxx / ouiedire-xxx>
-ssh -p 2222 ouiedire_net@ftp.pastis-hosting.net /var/www/vhosts/ouiedire.net/httpdocs/bin/tag ailleurs-139
+ssh ouiedire_net@ftp.pastis-hosting.net /var/www/vhosts/ouiedire.net/httpdocs/bin/tag <IDENTIFIANT EMISSION (eg. ailleurs-xxx / ouiedire-xxx>
+ssh ouiedire_net@ftp.pastis-hosting.net /var/www/vhosts/ouiedire.net/httpdocs/bin/tag ailleurs-139
 ```
 
 ### Simulation

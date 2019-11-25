@@ -17,8 +17,8 @@ header {margin-bottom:20px;}
 
 .grid-30 span {background-color:#000;color:#FFF;padding:4px;display:inline-block;position: relative;left:45px;font-size: 12px;font-size: 1.2rem;font-weight: bold;text-transform: uppercase;}
 .description {font-size: 13px;font-size: 1.3rem;}
-.description img {margin:30px 0 20px 0;}
-.description p {text-align: center;font-weight: bold;font-size: 15px;font-size: 1.5rem;}
+.description img {margin:-15px 0 20px 0;}
+.descriptiontext p {text-align: left;font-weight: bold;font-size: 15px;font-size: 1.5rem;margin-left: 20px;}
 .grid-70 p:nth-child(2) {position: relative;top:20px;left:18px;font-weight: bold;text-transform: uppercase;;background-color: #00CCFF;padding:4px;font-size: 16px;font-size: 1.6rem;	}
 .grid-70 p:nth-child(4){display:inline;position: relative;top:25px;left:0px;font-weight: bold;text-transform: uppercase;;background-color: #73E3FF;padding:4px;font-size: 13px;font-size: 1.3rem;	}
 
@@ -42,7 +42,7 @@ footer a, .flyer p a {text-decoration: none;color: #000;border-bottom: 1px solid
 footer a:hover, .flyer p a:hover, nav a:hover {text-transform: uppercase; }
 nav a {text-decoration: none;}
 li a:hover, dd a:hover:first-child  {border-bottom: 1px solid #e6faff;background-color: #00CCFF}
-.download {float:right;position:relative; margin-top: -1px;}
+.download {float:right;position:relative; margin-top: -15px;}
 .download a {text-decoration: none;color: #FFF;font-weight: bold;margin-left: 1em; margin-right: 1em; text-transform: uppercase; }
 .download a:hover {background-color: transparent; color: #00CCFF;}
 ol li a:hover {border-bottom:1px solid #000;background-color: transparent;}

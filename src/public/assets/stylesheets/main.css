@@ -74,7 +74,7 @@ h6 {background-color: #000;color: #FFF;}
 h4, h5 {font-size:13px;font-size: 1.3rem;display: inline;position: relative;top: 25px;left:15px;color: #FFF;}
 /* ----- list ----- */
 
-li {margin:5px 0 5px 0;font-size: 15px; font-size: 1.5rem;text-transform: capitalize;}
+li {margin:5px 0 5px 0;font-size: 15px; font-size: 1.5rem;text-transform: capitalize!important;}
 ul{ list-style-image:url('../img/files_black.png');margin:30px 0 20px 0; }
 .nav ul, .nav li {display: inline;color:#000;padding: 2px;}
 .nav li a {color:#000;border-bottom: 0px;}

@@ -145,4 +145,3 @@ hr {margin: 0.5em 0;
 .about {font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;background-color: #000;color: #FFF;font-weight: bold;margin-left: -14px;margin-bottom: -10px; }
 .diffusion {margin-left:-14px; }
 
-ol a, ol li span, .description a {text-transform: capitalize;}

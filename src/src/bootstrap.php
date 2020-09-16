@@ -145,6 +145,8 @@ function getShow($id, Silex\Application $app = null, $config = array()) {
         $show['type'] = 'Ailleurs';
     } elseif ($show['type'] == 'bagage') {
         $show['type'] = 'Bagage';
+    } elseif ($show['type'] == 'bureau') {
+        $show['type'] = 'Bureau';
     } else {
         $show['type'] = 'Ouïedire';
     }
@@ -229,6 +231,7 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
             return
                 strpos(basename(dirname($file->getRealPath())), 'ailleurs') !== false
                 || strpos(basename(dirname($file->getRealPath())), 'bagage') !== false
+                || strpos(basename(dirname($file->getRealPath())), 'bureau') !== false
                 || strpos(basename(dirname($file->getRealPath())), 'ouiedire') !== false;
         })
         ->sort(function(\SplFileInfo $a, \SplFileInfo $b) {

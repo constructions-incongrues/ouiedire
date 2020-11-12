@@ -101,14 +101,14 @@ audio {position:relative;left:18px;}
 /* **************** MEDIA PLAYER (http://mediaelementjs.com) ***************** */
 .mejs-container { margin:0px 0px 0px 0px;width: 98%}
 a.mejs-smartplaylist-time { background-color:#FFF; color:#000; padding: 3px; font-family:"Helvetica"; font-size: 16px;font-style: 1.6rem;font-weight: lighter; font-size: 1.5rem; text-decoration: none;	}
-.mejs-smartplaylist-time:hover, a:hover.mejs-smartplaylist-time { background-color:#000; color:#FFF;}
+.mejs-smartplaylist-time a:hover.mejs-smartplaylist-time { color:#000;font-weight: bold;}
 a.mejs-smartplaylist-time:after { content:""; }
 a.mejs-smartplaylist-time:before { content:""; }
 .mejs-container {
     height: 100%;
     width: 98%;
 }
-a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #fff;color:#FF0099; }
+a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #fff;color:#000;font-weight: bold; }
 ol.mejs-smartplaylist-playlist { list-style-type: none; margin-left: -60px; margin-top:- 20px;}
 .mejs-smartplaylist-playlist li {text-decoration: none;color:#000;background-color: #fff;padding: 3px;position:relative;top:-5px;width: 95%; font-size:1.5rem;}
  ul.otherShows li {padding:3px;display: inline;color:#000;font-weight: bold; background-color: #FFF;font-size: 1.5rem; text-transform: capitalize;}

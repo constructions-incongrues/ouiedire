@@ -40,13 +40,11 @@
 </p>
 
 </div> -->
- <div class="grid-50 mobile-grid-100">
+ <div class="grid-100 mobile-grid-100">
 		<ul>
 {% for show in shows %}
 	{% if loop.index0 == (loop.length / 2)|number_format %}
-		</ul>
-				<ul>
-	{% endif %}
+			{% endif %}
   		<li class="{{ show.typeSlug }}">
   			<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}">
   				{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }}

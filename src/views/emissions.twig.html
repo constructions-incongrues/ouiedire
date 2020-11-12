@@ -18,16 +18,22 @@
 	<a href="{{ url('flyers') }}">Flyers des programmations </a>
 
 </nav> -->
-<h3><a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes</a> / {{ shows|length }} émissions / {{ djs|length }} curateurs / </h3>
+ --><div class="grid-50 mobile-grid-100">
+
+<h3><a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes</a> / {{ shows|length }} émissions / {{ djs|length }} curateurs depuis 2005 </h3>
 
 <div class="legend"> 
 <p> 
-<span class="ailleurs_legend">Ailleurs est dédié à la selecta d'un curateur </span> <br /> 
-<span class="bagage_legend">Bagage< est dédié à la selecta d'un label </span> <br />
-<span class="bureau_legend">Bureau est dédié a la captation d'un live lors des réunions Constructions Incongrues </span> <br />
-<span class="ouiedire_legend">Ouïedire est dédié aux premières émissions par Bozoo & Valkiri</span> 
+<span class="ailleurs_legend">Ailleurs est dédié à la sélection d'un curateur </span> <br /> 
+<span class="bagage_legend">Bagage est dédié à la découverte d'un label </span> <br />
+<span class="bureau_legend">Bureau est dédié a la captation des lives lors des réunions Constructions Incongrues </span> <br />
+<span class="ouiedire_legend">Ouïedire est dédié aux projet initial</span> 
 </p>
 </div>
+	</div><!-- grid-50 -->
+ --><div class="grid-50 mobile-grid-100">
+test
+	</div><!-- grid-50 -->
 
 <!-- <h5><a href="{{ path('emission', {id:randomShow.id, type:randomShow.typeSlug}) }}">Écouter de manière aléatoire</a></h5>
 <hr>

@@ -18,7 +18,11 @@
 	<a href="{{ url('flyers') }}">Flyers des programmations </a>
 
 </nav> -->
-<h3><a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes</a> / {{ shows|length }} émissions / {{ djs|length }} djs / </h3>
+<h3><a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes</a> / {{ shows|length }} émissions / {{ djs|length }} curateurs / </h3>
+
+<ul> 
+<li class="ailleurs">Ailleurs - émissions agencé par un curateur</li>
+</ul>
 
 
 <!-- <h5><a href="{{ path('emission', {id:randomShow.id, type:randomShow.typeSlug}) }}">Écouter de manière aléatoire</a></h5>

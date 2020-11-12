@@ -66,6 +66,18 @@
    
 
 </div> 
+
+{% if otherShows %}
+<ul class="otherShows">
+    <h6>Découvrir d'autres émissions de {{ show.authors }} : </h6>
+{% for show in otherShows %}
+    <li>
+        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} : {{ show.title }}</a>
+    </li>
+{% endfor %}
+</ul>
+{% endif %} 
+
     <h1>
 
 
@@ -92,17 +104,7 @@
 
 <div class="grid-50 mobile-grid-100 description">
 
-{% if otherShows %}
-<ul class="otherShows">
-    <h6>émissions par {{ show.authors }} : </h6>
-{% for show in otherShows %}
-    <li>
-        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} : {{ show.title }}</a>
-    </li>
-{% endfor %}
-</ul>
-{% endif %} 
-<hr />
+
 
 {% for urlCover in show.covers %}
         <img src="{{ urlCover }}" alt="Artwork" /><br />

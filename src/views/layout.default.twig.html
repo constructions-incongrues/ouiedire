@@ -64,15 +64,7 @@
 
 		<header class="grid-100">
 			<div class="grid-30 mobile-grid-100">
-				
-			{# % block jingle %}
-			 <h4><a href="{{ url('jingle') }}">Proposer un jingle !</a></h4>{% endblock % #}
-
-
-
-		</div>
- <div class="grid-70 mobile-grid-100">
-	<p>
+					<p>
 				<a href="{{ url('emissions') }}">
 					<img src="{{ app.request.getBasePath() }}/assets/img/logo.png" alt="Ouïedire" title="Consulter la liste des émissions disponibles" />
 				</a>
@@ -81,6 +73,14 @@
 				<br> s
 			</p>
 
+
+			{# % block jingle %}
+			 <h4><a href="{{ url('jingle') }}">Proposer un jingle !</a></h4>{% endblock % #}
+
+
+
+		</div>
+ <div class="grid-70 mobile-grid-100">
 
 
                     <!-- <h3>La dernière émission : </h3> <h4> {% block latest %} LATEST SHOW {% endblock %} </h4> -->

@@ -100,13 +100,13 @@ audio {position:relative;left:18px;}
 
 /* **************** MEDIA PLAYER (http://mediaelementjs.com) ***************** */
 .mejs-container { margin:-35px 0px 35px -5px;}
-a.mejs-smartplaylist-time { background-color:#000; color:#FFF; padding: 5px; font-family:"Helvetica"; font-size: 16px;font-style: 1.6rem;font-weight: lighter; font-size: 1.5rem; 	}
+a.mejs-smartplaylist-time { background-color:#000; color:#FFF; padding: 5px; font-family:"Helvetica"; font-size: 16px;font-style: 1.6rem;font-weight: lighter; font-size: 1.5rem; text-decoration: none;	}
 a.mejs-smartplaylist-time:after { content:""; }
 a.mejs-smartplaylist-time:before { content:""; }
 
 a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #0cf; }
 ol.mejs-smartplaylist-playlist { list-style-type: none; padding-left: 2em; margin-left: -27px}
-li.mejs-smartplaylist-playlist li {text-decoration: none;color:#000;background-color: #fff;padding: 5px;position:relative;top:-5px;}
+.mejs-smartplaylist-playlist li {text-decoration: none;color:#000;background-color: #fff;padding: 5px;position:relative;top:-5px;}
 .flyer img {      max-width:96%; padding: 0px;margin:0px 0px  20px 20px;}
 .flyer p {font-size: 15px;font-size: 1.5rem;margin: 40px 0px 30px 30px;}
 /* **************** Listing artists ***************** */

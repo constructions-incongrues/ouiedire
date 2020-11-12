@@ -69,10 +69,11 @@
     <h1>
 
 
+       
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
-            {{ show.typeSlug }}  {{ show.number }} : <strong>{{ show.authors }}</strong>  - {{ show.title }}  <em>({{ show.releasedAt|date('d/m/Y') }})</em>
+            {{ show.typeSlug }}  {{ show.number }} : <strong>{{ show.authors }}</strong>  - {{ show.title }}  <em>({{ show.releasedAt|date('d/m/Y') }})</em> - <a href="{{ show.urlDownload }}"> MP3 </a>
         </a>
-                <strong> - MP3</strong></span>
+               
 
                 {% if otherShows %}
 <ul class="otherShows">

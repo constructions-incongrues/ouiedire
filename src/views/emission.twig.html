@@ -80,7 +80,7 @@
     <audio controls="controls">
         <source src="{{ show.urlDownload }}" type="audio/mp3" />
         <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
-        <object width="320" height="240" type="application/x-shockwave-flash" data="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf">
+        <object width="318" height="240" type="application/x-shockwave-flash" data="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf">
         <param name="movie" value="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf" />
         <param name="flashvars" value="controls=true&file={{ show.urlDownload }}" />
         </object>

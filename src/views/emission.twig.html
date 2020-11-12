@@ -86,15 +86,9 @@
         </object>
     </audio>
 
-{{ show.playlist|raw }}
-
-</div><!-- grid-50 -->
-
-<div class="grid-50 mobile-grid-100 description">
-
 {% if otherShows %}
 <ul class="otherShows">
-    <h6>Collections de {{ show.authors }} : </h6>
+    <h6>Émissions de {{ show.authors }} : </h6>
 {% for show in otherShows %}
     <li>
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} : {{ show.title }}</a>
@@ -103,6 +97,14 @@
 </ul>
 {% endif %} 
 <hr />
+
+{{ show.playlist|raw }}
+
+</div><!-- grid-50 -->
+
+<div class="grid-50 mobile-grid-100 description">
+
+
 
 {% for urlCover in show.covers %}
         <img src="{{ urlCover }}" alt="Artwork" /><br />

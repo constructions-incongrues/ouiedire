@@ -57,9 +57,9 @@
     <section class="nav">
 <p>
 {% if (previous) %}
-<a class="previous" href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}"> précédent</a> {% endif %}
-{% if (next) %}
-<a class="next" href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}" title="#{{ next.number }} : {{ next.title }}, par {{ next.authors }}">suivant </a>
+<a class="previous" href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}"> anciennes émissions  </a> {% endif %}
+{% if (next) %} / 
+<a class="next" href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}" title="#{{ next.number }} : {{ next.title }}, par {{ next.authors }}"> nouvelles émissions </a>
 {% endif %}
 </p>
 </section>
@@ -71,7 +71,7 @@
 
        
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
-            {{ show.typeSlug }}  {{ show.number }} : <strong>{{ show.authors }}</strong>  - {{ show.title }}  <em>({{ show.releasedAt|date('d/m/Y') }})</em> - <a href="{{ show.urlDownload }}"> MP3 </a>
+            {{ show.typeSlug }}  {{ show.number }} : <strong>{{ show.authors }}</strong>  - {{ show.title }}  <em>({{ show.releasedAt|date('d/m/Y') }})</em> - <a href="{{ show.urlDownload }}"> <strong style="text-transform: lowercase;color:#FF0099!important"> mp3</strong> </a>
         </a>
                
 

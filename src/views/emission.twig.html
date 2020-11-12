@@ -84,20 +84,20 @@
         <param name="flashvars" value="controls=true&file={{ show.urlDownload }}" />
         </object>
     </audio>
-</div>
+
 {{ show.playlist|raw }}
 
-</div><!-- maxiayer -->
+
 </div><!-- grid-50 -->
 
 <div class="grid-50 mobile-grid-100 description">
-       <div class="descriptiontext"> {{ show.description|raw }}</div>
 
 {% for urlCover in show.covers %}
         <img src="{{ urlCover }}" alt="Artwork" /><br />
 {% endfor %}
     <p>
 
+       <div class="descriptiontext"> {{ show.description|raw }}</div>
 
 <hr />
 

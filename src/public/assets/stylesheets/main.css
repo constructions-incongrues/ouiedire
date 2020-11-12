@@ -55,7 +55,7 @@ ol li a:hover {border-bottom:1px solid #000;background-color: transparent;}
 .descriptiontext a {color: #000;background-color:#FFF;text-decoration: none;text-align: right;}
 
 .description a:hover {border-bottom: 1px solid #000;}
-h1 a {color: #000 ;text-decoration: none;text-transform: capitalize;}
+h1 a {color: #000 ;text-decoration: none;text-transform: capitalize;background-color: #FFF}
 .nav p a {text-decoration: none;background-color:#FFF;color:#000;padding:5px;font-weight: bold;;text-decoration: none;font-size: 14px;font-size: 1.4rem;text-transform: uppercase;margin:0 0 0 15px;}
 .nav p a:hover {background-color: #000;color: #FFF;padding: 5px;}
 .grid-70 p a {color: #000;text-decoration: none;}
@@ -109,7 +109,7 @@ a.mejs-smartplaylist-time:before { content:""; }
     height: 100%;
     width: 98%;
 }
-a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #0cf; }
+a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #fff;color:#FF0099; }
 ol.mejs-smartplaylist-playlist { list-style-type: none; margin-left: -60px; margin-top:- 20px;}
 .mejs-smartplaylist-playlist li {text-decoration: none;color:#000;background-color: #fff;padding: 3px;position:relative;top:-5px;width: 95%; font-size:1.5rem;}
 .otherShows li a:hover {background-color: #000;color: #FFF;padding: 3px;position:relative;text-align: left;}

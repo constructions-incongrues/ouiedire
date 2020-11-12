@@ -83,12 +83,23 @@
 		</div>
  <div class="grid-70 mobile-grid-100">
 
-                    <p class="about">
+              <!--       <p class="about">
                         Des copains, des artistes, des fêtards, des autistes, des labels c'est Ouïedire!
                         <br/>
                         Des collages à en perdre les oreilles, des mixes en pagaille, absurdes ou panachés, différents univers se croisent dans Ouïedire.
                         <br/>Ouïedire, ce sont des gens, tout simplement, qui nous font goûter leur substance sonore le temps d'une émission.
-                    </p>
+                    </p> -->
+
+                    <h3><a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes</a> / {{ shows|length }} émissions / {{ djs|length }} curateurs depuis 2005 </h3>
+
+<div class="legend"> 
+<p> 
+<span class="ailleurs_legend">Ailleurs est dédié à la sélection d'un curateur </span> <br /> 
+<span class="bagage_legend">Bagage est dédié à la découverte d'un label </span> <br />
+<span class="bureau_legend">Bureau est dédié a la captation des lives lors des réunions Constructions Incongrues </span> <br />
+<span class="ouiedire_legend">Ouïedire est dédié aux projet initial</span> 
+</p>
+</div>
 
                     <h3 class="diffusion">Diffusé sur :
                     </h3>

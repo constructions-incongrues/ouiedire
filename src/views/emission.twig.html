@@ -76,7 +76,7 @@
 
                 {% if otherShows %}
 <ul class="otherShows">
-    <li>{{ show.authors }} : </li>
+    <li>La collection, {{ show.authors }} : </li>
 {% for show in otherShows %}
     <li>
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} </a>

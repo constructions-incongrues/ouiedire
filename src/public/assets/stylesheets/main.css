@@ -33,8 +33,11 @@ header {margin-bottom:20px;}
 
 /* links */
 
-
-li.ailleurs a,li.ailleurs,  dd a:first-child {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;border-bottom: 1px solid #00CCFF;}
+.ailleurs_legend {background-color: #e6faff;}
+.bagage_legend {background-color: #fcfed6;}
+.bureau_legend {background-color: #fff9ff;}
+.ouiedire_legend {background-color: #dfffdf;}
+li.ailleurs a,  dd a:first-child {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;border-bottom: 1px solid #00CCFF;}
 li.bagage a, dd a:first-child {text-decoration: none;color:#000;background-color: #fcfed6;padding: 1px;position:relative;top:-5px;border-bottom: 1px solid #FCFE04;}
 li.ouiedire a, dd a:first-child {text-decoration: none;color:#000;background-color: #fff9ff;padding: 1px;position:relative;top:-5px;border-bottom: 1px solid #ffc6ff;}
 li.bureau a, dd a:first-child {text-decoration: none;color:#000;background-color: #dfffdf;padding: 1px;position:relative;top:-5px;border-bottom: 1px solid #50f150;}

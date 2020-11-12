@@ -72,7 +72,8 @@
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
             {{ show.typeSlug }}  {{ show.number }} / {{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})
         </a>
-                <a href="{{ show.urlDownload }}"> / <strong>MP3</strong> </a>
+                <a href="{{ show.urlDownload }}"> / <strong>MP3</strong> </a> <br /> 
+                  Écouter plus d'émissions par {{ show.authors }} : <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} </a>
     </h1>
 
 
@@ -94,7 +95,7 @@
 
 {% if otherShows %}
 <ul class="otherShows">
-    <h6>Découvrir d'autres émissions de {{ show.authors }} : </h6>
+    <h6>Encore plus de {{ show.authors }} : </h6>
 {% for show in otherShows %}
     <li>
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} : {{ show.title }}</a>

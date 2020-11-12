@@ -38,7 +38,7 @@ header {margin-bottom:20px;}
 .ouiedire_legend {background-color: #e6faff;color:#000;padding: 1px;margin-right: 5px;padding: 5px;}
 li.ailleurs a,  dd a:first-child {text-decoration: none;color:#000;background-color: #fff;padding: 1px;position:relative;top:-5px;}
 li.bagage a, dd a:first-child {text-decoration: none;color:#000;background-color: #fcfed6;padding: 1px;position:relative;top:-5px;}
-li.ouiedire a, dd a:first-child {text-decoration: none;color:#000;background-color: #fff9ff;padding: 1px;position:relative;top:-5px;}
+li.ouiedire a, dd a:first-child {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;}
 li.bureau a, dd a:first-child {text-decoration: none;color:#000;background-color: #dfffdf;padding: 1px;position:relative;top:-5px;}
 ol a, ol li span,.description a {font-weight: bold;background-color: transparent;border-bottom: none;top:0;}
 footer p:first-child a, nav a {background-color: #000;color:#FFF;padding:4px;text-transform: uppercase;font-size:12px;font-size: 1.2rem; }
@@ -55,7 +55,7 @@ ol li a:hover {border-bottom:1px solid #000;background-color: transparent;}
 .descriptiontext a {color: #000;background-color:#FFF;text-decoration: none;text-align: right;}
 
 .description a:hover {border-bottom: 1px solid #000;}
-h1 a {color: #FFF;text-decoration: none;}
+h1 a {color: #ffff00 ;text-decoration: none;text-transform: capitalize;}
 .nav p a {text-decoration: none;color:#000;font-weight: bold;;text-decoration: none;font-size: 14px;font-size: 1.4rem;text-transform: uppercase;margin:0 0 0 15px;}
 .nav p a:hover {background-color: #000;color: #FFF;padding: 5px;}
 .grid-70 p a {color: #000;text-decoration: none;}
@@ -76,7 +76,7 @@ h2 {margin:0 0 30px 16px;font-size: 13px;font-size: 1.3rem; }
 .bloc {margin: -20px 0 0 18px;font-size: 14px;font-size: 1.8rem;padding: 4px;text-transform: uppercase;font-weight: lighter;line-height: 20px;}
 .bloc {display: block;position: relative;top: 20px;background-color: transparent;color: #000;margin-bottom: 20px;}
 h6 {margin: -10px 0 20px -20px;font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;}
-h6 {background-color:transparent;color: 000;text-align: right;}
+h6 {background-color:transparent;color: 000;text-align: left;}
 .grid-70 .bloc {display: inline;color: #FFF;position: relative;top:25px;font-size: 13px;font-weight: bold;font-size: 1.3rem;padding: 4px;text-transform: uppercase;}
 
 h4, h5 {font-size:13px;font-size: 1.3rem;display: inline;position: relative;top: 25px;left:15px;color: #FFF;}
@@ -100,13 +100,15 @@ audio {position:relative;left:18px;}
 
 /* **************** MEDIA PLAYER (http://mediaelementjs.com) ***************** */
 .mejs-container { margin:-35px 0px 35px 0px;}
-a.mejs-smartplaylist-time { background-color:#000; color:#FFF; padding: 5px; font-family:"Helvetica"; font-size: 16px;font-style: 1.6rem;font-weight: lighter; font-size: 1.5rem; text-decoration: none;	}
+a.mejs-smartplaylist-time { background-color:#000; color:#FFF; padding: 3px; font-family:"Helvetica"; font-size: 16px;font-style: 1.6rem;font-weight: lighter; font-size: 1.5rem; text-decoration: none;	}
+.mejs-smartplaylist-time:hover, a:hover.mejs-smartplaylist-time { background-color:#000; color:#FFF;}
 a.mejs-smartplaylist-time:after { content:""; }
 a.mejs-smartplaylist-time:before { content:""; }
 
 a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #0cf; }
-ol.mejs-smartplaylist-playlist { list-style-type: none; padding-left: 2em; margin-left: -55px; margin-top:- 25px;}
-.mejs-smartplaylist-playlist li {text-decoration: none;color:#000;background-color: #fff;padding: 5px;position:relative;top:-5px;}
+ol.mejs-smartplaylist-playlist { list-style-type: none; padding-left: 2em; margin-left: -40px; margin-top:- 25px;}
+.mejs-smartplaylist-playlist li, .otherShows li {text-decoration: none;color:#000;background-color: #fff;padding: 3px;position:relative;top:-5px;}
+.otherShows li a:hover {background-color: #000;color: #FFF}
 .flyer img {      max-width:96%; padding: 0px;margin:0px 0px  20px 20px;}
 .flyer p {font-size: 15px;font-size: 1.5rem;margin: 40px 0px 30px 30px;}
 /* **************** Listing artists ***************** */

@@ -67,10 +67,11 @@
 
 </div> 
     <h1>
+        <a href="{{ show.urlDownload }}">MP3 / </a>
+
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
             {{ show.typeSlug }}  {{ show.number }} / {{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})
         </a>
-        <a href="{{ show.urlDownload }}">Télécharger</a>
     </h1>
 
 
@@ -86,10 +87,11 @@
 
 {{ show.playlist|raw }}
 
-
 </div><!-- grid-50 -->
+
+<div class="grid-50 mobile-grid-100 description">
 {% if otherShows %}
-<ul>
+<ul class="otherShows">
     <h6>Autres émissions par {{ show.authors }} </h6>
 {% for show in otherShows %}
     <li>
@@ -97,10 +99,7 @@
     </li>
 {% endfor %}
 </ul>
-{% endif %}
-
-<div class="grid-50 mobile-grid-100 description">
-
+{% endif %} 
 {% for urlCover in show.covers %}
         <img src="{{ urlCover }}" alt="Artwork" /><br />
 {% endfor %}

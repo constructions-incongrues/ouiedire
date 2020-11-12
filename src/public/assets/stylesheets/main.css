@@ -81,7 +81,7 @@ h4, h5 {font-size:13px;font-size: 1.3rem;display: inline;position: relative;top:
 /* ----- list ----- */
 
 li {margin:5px 10px 8px 20px;font-size: 15px; font-size: 1.5rem;text-transform: capitalize;}
-ul{ /*list-style-image:url('../img/files_black.png')*/;list-style-type: none;margin:30px 0px 20px -55px; }
+ul{ /*list-style-image:url('../img/files_black.png')*/;list-style-type: none;margin:30px 0px 20px -48px; }
 .nav ul, .nav li {display: inline;color:#000;padding: 2px;}
 .nav li a {color:#000;border-bottom: 0px;}
 

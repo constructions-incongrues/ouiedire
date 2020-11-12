@@ -72,8 +72,8 @@ h1 {font-size:15px;font-size: 1.5rem; text-transform: uppercase;position:relativ
 h2 {padding:4px;border-bottom:1px dotted #000;text-transform: uppercase;}
 h2 {margin:0 0 30px 16px;font-size: 13px;font-size: 1.3rem; }
 .bloc {margin: 0 0 0 18px;font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;}
-.bloc {display: flex;position: relative;top: 20px;background-color: #000;color: #FFF;margin-bottom: 20px;}
-   .col { flex-basis:auto; }h6 {margin: -10px 0 20px -20px;font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;}
+.bloc {display: block;position: relative;top: 20px;background-color: #000;color: #FFF;margin-bottom: 20px;}
+h6 {margin: -10px 0 20px -20px;font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;}
 h6 {background-color: #000;color: #FFF;}
 .grid-70 .bloc {display: inline;color: #FFF;position: relative;top:25px;font-size: 13px;font-weight: bold;font-size: 1.3rem;padding: 4px;text-transform: uppercase;}
 

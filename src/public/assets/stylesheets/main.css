@@ -112,10 +112,10 @@ a.mejs-smartplaylist-time:before { content:""; }
 a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #fff;color:#FF0099; }
 ol.mejs-smartplaylist-playlist { list-style-type: none; margin-left: -60px; margin-top:- 20px;}
 .mejs-smartplaylist-playlist li {text-decoration: none;color:#000;background-color: #fff;padding: 3px;position:relative;top:-5px;width: 95%; font-size:1.5rem;}
- ul.otherShows li {display: inline;}
- .otherShow li a {color:#FF0099;}
+ ul.otherShows li {display: inline;color:#000;}
+ .otherShow li a {background-color: #000;color: #FFF;padding: 3px;}
 
-.otherShows li a:hover {background-color: #000;color: #FFF;padding: 3px;position:relative;text-align: left;}
+.otherShows li a:hover {background-color: #FFF;color: #000;padding: 3px;position:relative;text-align: left;}
 .flyer img {      max-width:96%; padding: 0px;margin:0px 0px  20px 20px;}
 .flyer p {font-size: 15px;font-size: 1.5rem;margin: 40px 0px 30px 30px;}
 /* **************** Listing artists ***************** */

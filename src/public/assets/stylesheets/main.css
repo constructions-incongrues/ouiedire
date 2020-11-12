@@ -63,7 +63,7 @@ h4 a:hover {color:#FFF;background-color: #000;}
 .jingle-about a {color:#000;text-decoration: underline;}
 .social a {background-color:transparent;font-weight: bold;text-transform: uppercase;border: none;top:0;}
 .social a:hover {background-color:transparent;border-bottom:1px solid #000;}
-.bloc a, h6 a {color:#FFF;text-decoration: none;color:#000;border:1px dotted #000;}
+.bloc a, h6 a {color:#FFF;text-decoration: none;color:#000;border-bottom:1px dotted #000;}
 .bloc a:hover h6 a:hover{color:#FFF;}
 h6 a {font-weight:bold;}
 /* ====== Heading ====== */

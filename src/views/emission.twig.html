@@ -68,13 +68,7 @@
     <h1>
 
 
-       
-        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
-            {{ show.typeSlug }}  {{ show.number }} : <strong>{{ show.authors }}</strong>  - {{ show.title }}  <em>({{ show.releasedAt|date('d/m/Y') }})</em> <a href="{{ show.urlDownload }}"> <span style="text-transform: lowercase;color:#FF0099!important;font-size: 80%;"> mp3</span> </a>
-        </a>
-               
-
-                {% if otherShows %}
+         {% if otherShows %}
 <ul class="otherShows">
     <li>La collection, {{ show.authors }} : </li>
 {% for show in otherShows %}
@@ -84,6 +78,12 @@
 {% endfor %}
 </ul>
 {% endif %} 
+        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
+            {{ show.typeSlug }}  {{ show.number }} : <strong>{{ show.authors }}</strong>  - {{ show.title }}  <em>({{ show.releasedAt|date('d/m/Y') }})</em> <a href="{{ show.urlDownload }}"> <span style="text-transform: lowercase;color:#FF0099!important;font-size: 80%;"> mp3</span> </a>
+        </a>
+               
+
+              
 
     </h1>
 

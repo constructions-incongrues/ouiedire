@@ -22,7 +22,7 @@ header {margin-bottom:20px;}
 .grid-70 p:nth-child(2) {position: relative;top:20px;left:18px;font-weight: bold;text-transform: uppercase;;background-color: #00CCFF;padding:4px;font-size: 16px;font-size: 1.6rem;	}
 .grid-70 p:nth-child(4){display:inline;position: relative;top:25px;left:0px;font-weight: bold;text-transform: uppercase;;background-color: #73E3FF;padding:4px;font-size: 13px;font-size: 1.3rem;	}
 
-.nav p {text-align: left;position: relative;right: 0px;top:20px;}
+.nav p {text-align: left;position: relative;right: -35px;top:-10px;}
 ::selection {
 	background: #000; /* Safari */
 	color:#FFF;}

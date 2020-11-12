@@ -88,18 +88,6 @@
 
 
 </div><!-- grid-50 -->
-
-<div class="grid-50 mobile-grid-100 description">
-
-{% for urlCover in show.covers %}
-        <img src="{{ urlCover }}" alt="Artwork" /><br />
-{% endfor %}
-    <p>
-
-       <div class="descriptiontext"> {{ show.description|raw }}</div>
-
-<hr />
-
 {% if otherShows %}
 <ul>
     <h6>Autres émissions par {{ show.authors }} </h6>
@@ -110,6 +98,19 @@
 {% endfor %}
 </ul>
 {% endif %}
+
+<div class="grid-50 mobile-grid-100 description">
+
+{% for urlCover in show.covers %}
+        <img src="{{ urlCover }}" alt="Artwork" /><br />
+{% endfor %}
+    <p>
+       <div class="descriptiontext"> {{ show.description|raw }}</div>
+
+
+<hr />
+
+
 
 
     </p>

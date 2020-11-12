@@ -9,31 +9,23 @@
 {% endblock %}
 
 {% block content %}
-<!-- <nav class="grid-100">
-	<a href="mailto:contact@ouiedire.net">contact@ouiedire.net</a>
-	<a href="{{ url('dons') }}">Dons</a>
-	<a href="http://feeds.feedburner.com/ouiedire">rss</a>
-	<a href="https://www.facebook.com/pages/Ou%C3%AFedire/35795699060">facebook</a>
-	<a href="https://twitter.com/OuiedireShow">twitter</a>
-	<a href="{{ url('flyers') }}">Flyers des programmations </a>
-
-</nav> -->
-
-<!-- <h3><a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes</a> / {{ shows|length }} émissions / {{ djs|length }} curateurs depuis 2005 </h3>
-
-<div class="legend"> 
-<p> 
-<span class="ailleurs_legend">Ailleurs est dédié à la sélection d'un curateur </span> <br /> 
-<span class="bagage_legend">Bagage est dédié à la découverte d'un label </span> <br />
-<span class="bureau_legend">Bureau est dédié a la captation des lives lors des réunions Constructions Incongrues </span> <br />
-<span class="ouiedire_legend">Ouïedire est dédié aux projet initial</span> 
-</p>
-</div> -->
 
 
 <!-- <h5><a href="{{ path('emission', {id:randomShow.id, type:randomShow.typeSlug}) }}">Écouter de manière aléatoire</a></h5>
 <hr>
  -->
+	<div class="grid-30 mobile-grid-100">
+			<p>
+				<a href="{{ url('emissions') }}">
+					<img src="{{ app.request.getBasePath() }}/assets/img/logo.png" alt="Ouïedire" title="Consulter la liste des émissions disponibles" />
+				</a>
+				<br />
+				<span>j'en ai déjà entendu parler quelque part</span>
+
+
+			</p>
+</div>
+ <div class="grid-70 mobile-grid-100">
 
 <h3><a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes</a> / {{ shows|length }} émissions / {{ djs|length }} curateurs <br /> Radio : <a href="http://www.canalb.fr/gabuzomix/podcasts">Canal B</a> - 
 				<a href="http://www.choq.ca/emissions-details/ouiedire/">Choq CA</a> - 
@@ -45,14 +37,7 @@
 <!-- 				<a href="http://www.vosgueules-lesmouettes.com/ouiumledire.html">Vos Geules Les Mouettes</a>
  --><br /> <br />
 <span class="ailleurs_legend">Ailleurs : selecta par un curateur </span> -  <span class="bagage_legend">Bagage : selecta par un label </span>  - <span class="bureau_legend">Bureau : capatation d'un live lors des réunions incongrus </span> - <span class="ouiedire_legend">selecta par johan &amp; valkiri </span></h3>
-
-      <!--              
-<div class="legend"> 
-<p> <span class="ailleurs_legend">Ailleurs est dédié à la sélection d'un curateur </span> <br /> <span class="bagage_legend">Bagage est dédié à la découverte d'un label </span> 
-<p> <span class="bureau_legend">Bureau est dédié a la captation des lives lors des réunions Constructions Incongrues </span> <span class="ouiedire_legend">Ouïedire est dédié aux projet initial</span> </p>
-</p>
-
-</div> -->
+</div>
  <div class="grid-50 mobile-grid-100">
 		<ul>
 {% for show in shows %}

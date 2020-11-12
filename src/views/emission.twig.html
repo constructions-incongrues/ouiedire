@@ -73,6 +73,18 @@
             {{ show.typeSlug }}  {{ show.number }} / {{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})
         </a>
                 <a href="{{ show.urlDownload }}"> / <strong>MP3</strong> </a>
+
+                {% if otherShows %}
+<ul class="otherShows">
+    <h6>{{ show.authors }} : </h6>
+{% for show in otherShows %}
+    <li>
+        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} </a>
+    </li>
+{% endfor %}
+</ul>
+{% endif %} 
+
     </h1>
 
 
@@ -92,16 +104,6 @@
 
 <div class="grid-50 mobile-grid-100 description">
 
-{% if otherShows %}
-<ul class="otherShows">
-    <h6>Émissions de {{ show.authors }} : </h6>
-{% for show in otherShows %}
-    <li>
-        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} : {{ show.title }}</a>
-    </li>
-{% endfor %}
-</ul>
-{% endif %} 
 <hr />
 
 {% for urlCover in show.covers %}

@@ -57,9 +57,9 @@
     <section class="nav">
 <p>
 {% if (previous) %}
-<a class="previous" href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}">&lt; précédent</a>{% endif %}
+<a class="previous" href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}"> précédent</a> / {% endif %}
 {% if (next) %}
-<a class="next" href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}" title="#{{ next.number }} : {{ next.title }}, par {{ next.authors }}">suivant &gt;</a>
+<a class="next" href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}" title="#{{ next.number }} : {{ next.title }}, par {{ next.authors }}">suivant </a>
 {% endif %}
 </p>
 </section>
@@ -67,11 +67,12 @@
 
 </div> 
     <h1>
-        <a href="{{ show.urlDownload }}"><strong>Mp3</strong> </a>
+
 
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
             {{ show.typeSlug }}  {{ show.number }} / {{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})
         </a>
+                <a href="{{ show.urlDownload }}"><strong>Mp3</strong> </a>
     </h1>
 
 

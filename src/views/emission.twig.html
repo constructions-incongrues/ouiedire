@@ -70,9 +70,9 @@
 
 
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
-            {{ show.typeSlug }}  {{ show.number }} / {{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})
+            {{ show.typeSlug }}  {{ show.number }} : <strong>{{ show.authors }}</strong>  {{ show.title }} <em>{{ show.releasedAt|date('d/m/Y') }}</em>
         </a>
-                <a href="{{ show.urlDownload }}"> / <strong>MP3</strong> </a>
+                <a href="{{ show.urlDownload }}"> / mp3 </a>
 
                 {% if otherShows %}
 <ul class="otherShows">

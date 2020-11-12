@@ -46,7 +46,7 @@ footer p:first-child a:hover, nav a:hover {font-weight: normal;border-bottom: 2p
 footer a, .flyer p a {text-decoration: none;color: #000;border-bottom: 1px solid #000;}
 footer a:hover, .flyer p a:hover, nav a:hover {text-transform: uppercase; }
 nav a {text-decoration: none;}
-li a:hover, dd a:hover:first-child  {background-color: #000;color:#FFFfont-size: 2rem}
+li a:hover, dd a:hover:first-child  {background-color: #000;color:#FFF;font-size: 2rem}
 .download {float:right;position:relative; margin-top: 0px;}
 .download a {text-decoration: none;color: #FFF;font-weight: bold;margin-left: 1em; margin-right: 1em; text-transform: uppercase; }
 .download a:hover {background-color: transparent; color: #00CCFF;}

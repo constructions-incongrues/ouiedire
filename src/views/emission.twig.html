@@ -75,7 +75,9 @@
                 <a href="{{ show.urlDownload }}"> / <strong>MP3</strong> </a>
     </h1>
 
-        <audio controls="controls">
+
+<div class="grid-40 mobile-grid-100">
+    <audio controls="controls">
         <source src="{{ show.urlDownload }}" type="audio/mp3" />
         <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
         <object width="318" height="240" type="application/x-shockwave-flash" data="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf">
@@ -83,10 +85,6 @@
         <param name="flashvars" value="controls=true&file={{ show.urlDownload }}" />
         </object>
     </audio>
-
-
-<div class="grid-40 mobile-grid-100">
-
 
 {{ show.playlist|raw }}
 

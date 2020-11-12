@@ -32,11 +32,11 @@ header {margin-bottom:20px;}
 .social li {list-style-image: none;display: inline;font-size: 12.5px;font-size: 1.25rem;font-weight: bold;text-transform: uppercase;}
 
 /* links */
-.ailleurs_legend {background-color: #fff9ff;color:#000;padding: 1px;margin-right: 5px;}
+.ailleurs_legend {background-color: #fff;color:#000;padding: 1px;margin-right: 5px;}
 .bagage_legend {background-color: #fcfed6;color:#000;padding: 1px;margin-right: 5px;}
 .bureau_legend {background-color: #dfffdf;color:#000;padding: 1px;margin-right: 5px;}
 .ouiedire_legend {background-color: #e6faff;color:#000;padding: 1px;margin-right: 5px;}
-li.ailleurs a,  dd a:first-child {text-decoration: none;color:#000;background-color: #fff9ff;padding: 1px;position:relative;top:-5px;}
+li.ailleurs a,  dd a:first-child {text-decoration: none;color:#000;background-color: #fff;padding: 1px;position:relative;top:-5px;}
 li.bagage a, dd a:first-child {text-decoration: none;color:#000;background-color: #fcfed6;padding: 1px;position:relative;top:-5px;}
 li.ouiedire a, dd a:first-child {text-decoration: none;color:#000;background-color: #fff9ff;padding: 1px;position:relative;top:-5px;}
 li.bureau a, dd a:first-child {text-decoration: none;color:#000;background-color: #dfffdf;padding: 1px;position:relative;top:-5px;}
@@ -46,7 +46,7 @@ footer p:first-child a:hover, nav a:hover {font-weight: normal;border-bottom: 2p
 footer a, .flyer p a {text-decoration: none;color: #000;border-bottom: 1px solid #000;}
 footer a:hover, .flyer p a:hover, nav a:hover {text-transform: uppercase; }
 nav a {text-decoration: none;}
-li a:hover, dd a:hover:first-child  {border-bottom: 1px solid #e6faff;background-color: #00CCFF}
+li a:hover, dd a:hover:first-child  {background-color: transparent;font-size: 2rem}
 .download {float:right;position:relative; margin-top: 0px;}
 .download a {text-decoration: none;color: #FFF;font-weight: bold;margin-left: 1em; margin-right: 1em; text-transform: uppercase; }
 .download a:hover {background-color: transparent; color: #00CCFF;}
@@ -79,8 +79,8 @@ h6 {background-color: #000;color: #FFF;}
 h4, h5 {font-size:13px;font-size: 1.3rem;display: inline;position: relative;top: 25px;left:15px;color: #FFF;}
 /* ----- list ----- */
 
-li {margin:5px 15px 8px 28px;font-size: 15px; font-size: 1.5rem;text-transform: capitalize;}
-ul{ /*list-style-image:url('../img/files_black.png')*/;list-style-type: none;margin:30px 0px 20px -30px; }
+li {margin:5px 10px 8px 20px;font-size: 15px; font-size: 1.5rem;text-transform: capitalize;}
+ul{ /*list-style-image:url('../img/files_black.png')*/;list-style-type: none;margin:30px 0px 20px -55px; }
 .nav ul, .nav li {display: inline;color:#000;padding: 2px;}
 .nav li a {color:#000;border-bottom: 0px;}
 

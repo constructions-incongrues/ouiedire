@@ -112,7 +112,7 @@ a.mejs-smartplaylist-time:before { content:""; }
 a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #fff;color:#FF0099; }
 ol.mejs-smartplaylist-playlist { list-style-type: none; margin-left: -60px; margin-top:- 20px;}
 .mejs-smartplaylist-playlist li {text-decoration: none;color:#000;background-color: #fff;padding: 3px;position:relative;top:-5px;width: 95%; font-size:1.5rem;}
- ul.otherShow li {display: inline;}
+ ul.otherShows li {display: inline;}
  .otherShow li a {color:#FF0099;}
 
 .otherShows li a:hover {background-color: #000;color: #FFF;padding: 3px;position:relative;text-align: left;}

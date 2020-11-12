@@ -56,8 +56,8 @@ ol li a:hover {border-bottom:1px solid #000;background-color: transparent;}
 
 .description a:hover {border-bottom: 1px solid #000;}
 h1 a {color: #000 ;text-decoration: none;text-transform: capitalize;}
-.nav p a {text-decoration: none;background-color:#000color:#FFF;font-weight: bold;;text-decoration: none;font-size: 14px;font-size: 1.4rem;text-transform: uppercase;margin:0 0 0 15px;}
-.nav p a:hover {background-color: #FFF;color: #000;padding: 15px;}
+.nav p a {text-decoration: none;background-color:#000;color:#FFF;font-weight: bold;;text-decoration: none;font-size: 14px;font-size: 1.4rem;text-transform: uppercase;margin:0 0 0 15px;}
+.nav p a:hover {background-color: #FFF;color: #000;padding: 5px;}
 .grid-70 p a {color: #000;text-decoration: none;}
 h4 a,h5 a, .legend  a {color:#000;text-decoration:none;text-transform: uppercase;font-weight: bold;background-color: #FFF;padding: 4px;}
 h4 a:hover {color:#FFF;background-color: #000;}
@@ -70,12 +70,12 @@ h4 a:hover {color:#FFF;background-color: #000;}
 h6 a {font-weight:bold;}
 /* ====== Heading ====== */
 
-h1 {font-size:30px;font-size: 2.5rem; text-transform: uppercase;position:relative;top:10px;left:10px;margin:-5px 0 10px 0;background-color: transparent;padding: 0px;font-weight: lighter;}
+h1 {font-size:30px;font-size: 2.5rem; text-transform: uppercase;position:relative;;left:10px;margin:-5px 0 10px 0;background-color: transparent;padding: 0px;font-weight: lighter;}
 h2 {padding:4px;border-bottom:1px dotted #000;text-transform: uppercase;}
 h2 {margin:0 0 30px 16px;font-size: 13px;font-size: 1.3rem; }
 .bloc {margin: -20px 0 0 18px;font-size: 14px;font-size: 1.8rem;padding: 4px;text-transform: uppercase;font-weight: lighter;line-height: 20px;}
 .bloc {display: block;position: relative;top: 20px;background-color: transparent;color: #000;margin-bottom: 20px;}
-h6 {margin: -48px 0px 0px -15px;font-size: 15px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;}
+h6 {margin: -48px 0px 0px 0px;font-size: 15px;font-size: 2.3rem;padding: 4px;text-transform: uppercase;font-weight: lighter;}
 h6 {background-color:transparent;color:#000;text-transform: capitalize;}
 .grid-70 .bloc {display: inline;color: #FFF;position: relative;top:25px;font-size: 13px;font-weight: bold;font-size: 1.3rem;padding: 4px;text-transform: uppercase;}
 
@@ -108,7 +108,6 @@ a.mejs-smartplaylist-time:before { content:""; }
 a.mejs-smartplaylist-time.mejs-smartplaylist-current { background-color: #0cf; }
 ol.mejs-smartplaylist-playlist { list-style-type: none; margin-left: -60px; margin-top:- 20px;}
 .mejs-smartplaylist-playlist li {text-decoration: none;color:#000;background-color: #fff;padding: 3px;position:relative;top:-5px;width: 95%; font-size:1.5rem;}
-ul.otherShows li {display:inline;}
 .otherShows li a:hover {background-color: #000;color: #FFF;padding: 3px;position:relative;text-align: left;}
 .flyer img {      max-width:96%; padding: 0px;margin:0px 0px  20px 20px;}
 .flyer p {font-size: 15px;font-size: 1.5rem;margin: 40px 0px 30px 30px;}

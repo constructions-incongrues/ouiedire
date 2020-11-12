@@ -56,7 +56,7 @@ ol li a:hover {border-bottom:1px solid #000;background-color: transparent;}
 
 .description a:hover {border-bottom: 1px solid #000;}
 h1 a {color: #000 ;text-decoration: none;text-transform: capitalize;background-color: #FFF}
-.nav p a {text-decoration: none;font-weight:lighter; background-color:transparent;text-transform:lowercase; color:#000;padding:5px;font-weight: bold;;text-decoration: none;font-size: 14px;font-size: 1.4rem;margin:0 0 0 0px;}
+.nav p a {text-decoration: none;font-weight:lighter; background-color:transparent;text-transform:lowercase; color:#000;padding:5px;text-decoration: none;font-size: 14px;font-size: 1.4rem;margin:0 0 0 0px;}
 .nav p a:hover {background-color: transparent; color: #FF0099;}
 .grid-70 p a {color: #000;text-decoration: none;}
 h4 a,h5 a, .legend  a {color:#000;text-decoration:none;text-transform: uppercase;font-weight: bold;background-color: #FFF;padding: 4px;}

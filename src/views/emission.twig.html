@@ -70,7 +70,7 @@
 
        
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
-            {{ show.typeSlug }}  {{ show.number }} : <strong>{{ show.authors }}</strong>  - {{ show.title }}  <em>({{ show.releasedAt|date('d/m/Y') }})</em> - <a href="{{ show.urlDownload }}"> <strong style="text-transform: lowercase;color:#FF0099!important"> mp3</strong> </a>
+            {{ show.typeSlug }}  {{ show.number }} : <strong>{{ show.authors }}</strong>  - {{ show.title }}  <em>({{ show.releasedAt|date('d/m/Y') }})</em> <a href="{{ show.urlDownload }}"> <span style="text-transform: lowercase;color:#FF0099!important;font-size: 80%;"> mp3</span> </a>
         </a>
                
 

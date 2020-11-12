@@ -36,10 +36,10 @@ header {margin-bottom:20px;}
 .bagage_legend {background-color: #fcfed6;color:#000;padding: 1px;margin-right: 5px;}
 .bureau_legend {background-color: #dfffdf;color:#000;padding: 1px;margin-right: 5px;}
 .ouiedire_legend {background-color: #e6faff;color:#000;padding: 1px;margin-right: 5px;}
-li.ailleurs a,  dd a:first-child {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;border-bottom: 0px solid #00CCFF;}
-li.bagage a, dd a:first-child {text-decoration: none;color:#000;background-color: #fcfed6;padding: 1px;position:relative;top:-5px;border-bottom: 0px solid #FCFE04;}
-li.ouiedire a, dd a:first-child {text-decoration: none;color:#000;background-color: #fff9ff;padding: 1px;position:relative;top:-5px;border-bottom: 0px solid #ffc6ff;}
-li.bureau a, dd a:first-child {text-decoration: none;color:#000;background-color: #dfffdf;padding: 1px;position:relative;top:-5px;border-bottom: 0px solid #50f150;}
+li.ailleurs a,  dd a:first-child {text-decoration: none;color:#000;background-color: #fff9ff;padding: 1px;position:relative;top:-5px;}
+li.bagage a, dd a:first-child {text-decoration: none;color:#000;background-color: #fcfed6;padding: 1px;position:relative;top:-5px;}
+li.ouiedire a, dd a:first-child {text-decoration: none;color:#000;background-color: #fff9ff;padding: 1px;position:relative;top:-5px;}
+li.bureau a, dd a:first-child {text-decoration: none;color:#000;background-color: #dfffdf;padding: 1px;position:relative;top:-5px;}
 ol a, ol li span,.description a {font-weight: bold;background-color: transparent;border-bottom: none;top:0;}
 footer p:first-child a, nav a {background-color: #000;color:#FFF;padding:4px;text-transform: uppercase;font-size:12px;font-size: 1.2rem; }
 footer p:first-child a:hover, nav a:hover {font-weight: normal;border-bottom: 2px solid #00CCFF}
@@ -80,7 +80,7 @@ h4, h5 {font-size:13px;font-size: 1.3rem;display: inline;position: relative;top:
 /* ----- list ----- */
 
 li {margin:5px 15px 8px 28px;font-size: 15px; font-size: 1.5rem;text-transform: capitalize;}
-ul{ /*list-style-image:url('../img/files_black.png')*/;list-style-type: none;margin:-30px 0 20px 0; }
+ul{ /*list-style-image:url('../img/files_black.png')*/;list-style-type: none;margin:30px 0px 20px -30px; }
 .nav ul, .nav li {display: inline;color:#000;padding: 2px;}
 .nav li a {color:#000;border-bottom: 0px;}
 

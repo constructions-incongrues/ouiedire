@@ -86,6 +86,12 @@
         </object>
     </audio>
 
+{{ show.playlist|raw }}
+
+</div><!-- grid-50 -->
+
+<div class="grid-50 mobile-grid-100 description">
+
 {% if otherShows %}
 <ul class="otherShows">
     <h6>Émissions de {{ show.authors }} : </h6>
@@ -97,14 +103,6 @@
 </ul>
 {% endif %} 
 <hr />
-
-{{ show.playlist|raw }}
-
-</div><!-- grid-50 -->
-
-<div class="grid-50 mobile-grid-100 description">
-
-
 
 {% for urlCover in show.covers %}
         <img src="{{ urlCover }}" alt="Artwork" /><br />

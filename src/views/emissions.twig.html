@@ -45,9 +45,7 @@
 {% for show in shows %}
 	{% if loop.index0 == (loop.length / 2)|number_format %}
 		</ul>
-	</div><!-- grid-50 -->
-	<div class="grid-50 mobile-grid-100">
-		<ul>
+				<ul>
 	{% endif %}
   		<li class="{{ show.typeSlug }}">
   			<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}">
@@ -56,6 +54,9 @@
   		</li>
 {% endfor %}
 		</ul>
+	</div><!-- grid-50 -->
+	<div class="grid-50 mobile-grid-100">
+
 		
 	</div><!-- grid-50 -->
 {% endblock %}

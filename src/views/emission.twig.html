@@ -92,15 +92,6 @@
 
 <div class="grid-50 mobile-grid-100 description">
 
-{% for urlCover in show.covers %}
-        <img src="{{ urlCover }}" alt="Artwork" /><br />
-{% endfor %}
-<p>
-       <div class="descriptiontext"> {{ show.description|raw }}
-       
-
-       </p>
-
 {% if otherShows %}
 <ul class="otherShows">
     <h6>Collections de {{ show.authors }} : </h6>
@@ -113,6 +104,14 @@
 {% endif %} 
 <hr />
 
+{% for urlCover in show.covers %}
+        <img src="{{ urlCover }}" alt="Artwork" /><br />
+{% endfor %}
+<p>
+       <div class="descriptiontext"> {{ show.description|raw }}
+       <hr />
+
+       </p>
 
 
     </div>

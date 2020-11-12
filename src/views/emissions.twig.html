@@ -22,7 +22,7 @@
                 <a href="http://feeds.feedburner.com/ouiedire">rss</a>
                 <a href="{{ url('dons') }}"><3</a>
 <br /> -->
-                <a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes</a> / {{ shows|length }} émissions / {{ djs|length }} curateurs / 8 radios <a href="http://www.canalb.fr/gabuzomix/podcasts">Canal B</a> - 
+                <a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes</a> / {{ shows|length }} émissions / {{ djs|length }} curateurs <br /> 8 radios <a href="http://www.canalb.fr/gabuzomix/podcasts">Canal B</a> 
 				<a href="http://www.choq.ca/emissions-details/ouiedire/">Choq CA</a> -  
 				<a href="https://www.facebook.com/cjucfm/?ref=br_rs">Cjuc 92.5 FM</a> - 
 				<a href="http://www.radioeponyme.com/emissions/ouie-dire/">Eponyme</a> -  
@@ -40,22 +40,10 @@
 </p>
 
 </div> -->
- <div class="grid-50 mobile-grid-100">
 		<ul>
 {% for show in shows %}
 	{% if loop.index0 == (loop.length / 2)|number_format %}
 		</ul>
-	</div><!-- grid-50 -->
-	<div class="grid-50 mobile-grid-100">
-		<ul>
-	{% endif %}
-  		<li class="{{ show.typeSlug }}">
-  			<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}">
-  				{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }}
-  			</a>
-  		</li>
-{% endfor %}
-		</ul>
-		
-	</div><!-- grid-50 -->
+s
+
 {% endblock %}

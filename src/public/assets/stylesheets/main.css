@@ -58,7 +58,7 @@ h1 a {color: #FFF;text-decoration: none;}
 .nav p a {text-decoration: none;color:#000;font-weight: bold;;text-decoration: none;font-size: 14px;font-size: 1.4rem;text-transform: uppercase;margin:0 0 0 15px;}
 .nav p a:hover {background-color: #000;color: #FFF;padding: 5px;}
 .grid-70 p a {color: #000;text-decoration: none;}
-h4 a,h5 a, .legend li a {color:#000;text-decoration:none;text-transform: uppercase;font-weight: bold;background-color: #FFF;padding: 4px;}
+h4 a,h5 a, .legend  a {color:#000;text-decoration:none;text-transform: uppercase;font-weight: bold;background-color: #FFF;padding: 4px;}
 h4 a:hover {color:#FFF;background-color: #000;}
 .jingle-about a {color:#000;text-decoration: underline;}
 .social a {background-color:transparent;font-weight: bold;text-transform: uppercase;border: none;top:0;}
@@ -149,6 +149,6 @@ hr {margin: 0.5em 0;
 
 
 .about {font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;background-color: #000;color: #FFF;font-weight: bold;margin-left: -14px;margin-bottom: -10px; }
-.legend {font-size: 14px;font-size: 1.5rem;padding: 4px;font-weight: none;text-transform:uppercase; background-color: #FFF;color: #FFF;font-weight: bold; margin-left:18px;}
+.legend {font-size: 14px;font-size: 1.5rem;padding: 4px;font-weight: none;text-transform:uppercase; background-color: transparent;color: #FFF;font-weight: bold; margin-left:18px;}
 .diffusion {margin-left:-14px; }
 

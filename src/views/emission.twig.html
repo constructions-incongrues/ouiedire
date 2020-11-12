@@ -67,6 +67,7 @@
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
             {{ show.typeSlug }}  {{ show.number }} / {{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})
         </a>
+        <a href="{{ show.urlDownload }}">Télécharger</a>
     </h1>
 
 </div>
@@ -86,7 +87,10 @@
 </div><!-- grid-50 -->
 
 <div class="grid-50 mobile-grid-100 description">
-{{ show.urlDownload }}
+
+{% for urlCover in show.covers %}
+        <img src="{{ urlCover }}" alt="Artwork" /><br />
+{% endfor %}
     <p>
 
        <div class="descriptiontext"> {{ show.description|raw }}</div>
@@ -104,9 +108,7 @@
 </ul>
 {% endif %}
 
-{% for urlCover in show.covers %}
-        <img src="{{ urlCover }}" alt="Artwork" /><br />
-{% endfor %}
+
     </p>
 
 </div><!-- grid-50 -->

@@ -149,6 +149,6 @@ hr {margin: 0.5em 0;
 
 
 .about {font-size: 14px;font-size: 1.5rem;padding: 4px;text-transform: uppercase;font-weight: lighter;background-color: #000;color: #FFF;font-weight: bold;margin-left: -14px;margin-bottom: -10px; }
-.legend {font-size: 14px;font-size: 1.5rem;padding: 4px;font-weight: none;text-transform:uppercase; background-color: transparent;color: #FFF;font-weight: bold; margin-left:18px;}
+.legend {font-size: 14px;font-size: 1.5rem;padding: 4px;font-weight: none;text-transform:uppercase; background-color: transparent;color: #000;font-weight: bold; margin-left:18px;}
 .diffusion {margin-left:-14px; }
 

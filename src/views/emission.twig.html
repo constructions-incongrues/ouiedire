@@ -79,20 +79,17 @@
         <param name="flashvars" value="controls=true&file={{ show.urlDownload }}" />
         </object>
     </audio>
-    <p>
-{% for urlCover in show.covers %}
-        <img src="{{ urlCover }}" alt="Artwork" /><br />
-{% endfor %}
-    </p>
+
+{{ show.playlist|raw }}
 
 
 </div><!-- grid-50 -->
 
 <div class="grid-50 mobile-grid-100 description">
+{{ show.urlDownload }}
+    <p>
 
-
-{{ show.playlist|raw }}
-   <div class="descriptiontext"> {{ show.description|raw }}</div>
+       <div class="descriptiontext"> {{ show.description|raw }}</div>
 
 <hr />
 
@@ -106,6 +103,12 @@
 {% endfor %}
 </ul>
 {% endif %}
+
+{% for urlCover in show.covers %}
+        <img src="{{ urlCover }}" alt="Artwork" /><br />
+{% endfor %}
+    </p>
+
 </div><!-- grid-50 -->
 
 <!-- Player state -->

@@ -56,10 +56,10 @@ header {margin-bottom:20px;}
 .social li {list-style-image: none;display: inline;font-size: 12.5px;font-size: 1.25rem;font-weight: bold;text-transform: uppercase;}
 
 /* links */
-.ailleurs_legend {background-color: #fff;color:#000;padding: 1px;margin-right: 5px;padding: 5px;}
-.bagage_legend {background-color: #fcfed6;color:#000;padding: 1px;margin-right: 5px;padding: 5px;}
-.bureau_legend {background-color: #dfffdf;color:#000;padding: 1px;margin-right: 5px;padding: 5px;}
-.ouiedire_legend {background-color: #e6faff;color:#000;padding: 1px;margin-right: 5px;padding: 5px;}
+.ailleurs_legend {background-color: #fff;color:#00bbf9;padding: 1px;margin-right: 5px;padding: 5px;}
+.bagage_legend {background-color: #fff;color:#f15bb5;padding: 1px;margin-right: 5px;padding: 5px;}
+.bureau_legend {background-color: #fff;color:#9b5de5;padding: 1px;margin-right: 5px;padding: 5px;}
+.ouiedire_legend {background-color: #fff;color:#000;padding: 1px;margin-right: 5px;padding: 5px;}
 li.ailleurs a,  dd a:first-child {text-decoration: none;color:#000;background-color: #fff;padding: 1px;position:relative;top:-5px;}
 li.bagage a, dd a:first-child {text-decoration: none;color:#000;background-color: #fcfed6;padding: 1px;position:relative;top:-5px;}
 li.ouiedire a, dd a:first-child {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;}

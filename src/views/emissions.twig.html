@@ -51,7 +51,7 @@
 	{% endif %}
   		<li class="{{ show.typeSlug }}">
   			<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}">
-  				<strong>{{ show.type }}</strong> {{ show.number }} {{ show.authors }} - {{ show.title }}
+  				<strong>{{ show.type }} {{ show.number }} </strong>{{ show.authors }} - {{ show.title }}
   			</a>
   		</li>
 {% endfor %}

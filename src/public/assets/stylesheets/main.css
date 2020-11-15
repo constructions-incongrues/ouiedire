@@ -22,7 +22,7 @@ Version: 1.0
     font-style: normal;
 }
 html { font-size:62.5%;}
-body {background-color: #FFF9FF;background-image: url(../img/pattern.gif); background-repeat: repeat; background-attachment: fixed; font-family: 'Sporting Grotesque_Regular', sans-serif; }
+body {background-color: #FFF9FF;background-image: url(../img/pattern.gif); background-repeat: repeat; background-attachment: fixed; font-family: 'VG5000'; }
 header {margin-bottom:20px;}
 
 /* ====== Text treatments ====== */

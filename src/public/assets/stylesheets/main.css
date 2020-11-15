@@ -11,25 +11,13 @@ Version: 1.0
 */
 
 @font-face {
-    font-family: 'Sporting Grotesque_Regular';
-    src:    url('../fonts/Regular/Sporting_Grotesque-Regular_web.eot');
-    src:    url('../fonts/Regular/Sporting_Grotesque-Regular_web.eot?#iefix') format('embedded-opentype'),
-            url('../fonts/Regular/Sporting_Grotesque-Regular_web.woff') format('woff'),
-            url('../fonts/Regular/Sporting_Grotesque-Regular_web.woff2') format('woff2'),
-            url('../fonts/Regular/Sporting_Grotesque-Regular_web.ttf') format('truetype'),
-            url('../fonts/Regular/Sporting_Grotesque-Regular_web.svg#svgFontName') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Sporting Grotesque_Bold';
-    src:    url('../fonts/Bold/Sporting_Grotesque-Bold_web.eot');
-    src:    url('../fonts/Bold/Sporting_Grotesque-Bold_web.eot?#iefix') format('embedded-opentype'),
-            url('../fonts/Bold/Sporting_Grotesque-Bold_web.woff') format('woff'),
-            url('../fonts/Bold/Sporting_Grotesque-Bold_web.woff2') format('woff2'),
-            url('../fonts/Bold/Sporting_Grotesque-Bold_web.ttf') format('truetype'),
-            url('../fonts/Bold/Sporting_Grotesque-Bold_web.svg#svgFontName') format('svg');
+    font-family: 'VG5000';
+    src:    url('../fonts/VG5000-Regular_web.eot');
+    src:    url('../fonts/VG5000-Regular_web.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/VG5000-Regular_web.woff') format('woff'),
+            url('../fonts/VG5000-Regular_web.woff2') format('woff2'),
+            url('../fonts/VG5000-Regular_web.ttf') format('truetype'),
+            url('../fonts/VG5000-Regular_web.svg#svgFontName') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -56,14 +44,14 @@ header {margin-bottom:20px;}
 .social li {list-style-image: none;display: inline;font-size: 12.5px;font-size: 1.25rem;font-weight: bold;text-transform: uppercase;}
 
 /* links */
-.ailleurs_legend {background-color: #fff;color:#00bbf9;padding: 1px;margin-right: 5px;padding: 5px;}
-.bagage_legend {background-color: #fff;color:#f15bb5;padding: 1px;margin-right: 5px;padding: 5px;}
-.bureau_legend {background-color: #fff;color:#9b5de5;padding: 1px;margin-right: 5px;padding: 5px;}
-.ouiedire_legend {background-color: #fff;color:#000;padding: 1px;margin-right: 5px;padding: 5px;}
-li.ailleurs a,  dd a:first-child {text-decoration: none;color:#000;background-color: #fff;padding: 1px;position:relative;top:-5px;}
-li.bagage a, dd a:first-child {text-decoration: none;color:#000;background-color: #fcfed6;padding: 1px;position:relative;top:-5px;}
-li.ouiedire a, dd a:first-child {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;}
-li.bureau a, dd a:first-child {text-decoration: none;color:#000;background-color: #dfffdf;padding: 1px;position:relative;top:-5px;}
+.ailleurs_legend {background-color: #fff;color:#00bbf9;margin-right: 5px;padding: 5px;}
+.bagage_legend {background-color: #fff;color:#f15bb5;margin-right: 5px;padding: 5px;}
+.bureau_legend {background-color: #fff;color:#9b5de5;margin-right: 5px;padding: 5px;}
+.ouiedire_legend {background-color: #fff;color:#000;margin-right: 5px;padding: 5px;}
+li.ailleurs a,  dd a:first-child {text-decoration: none;color:#00bbf9;background-color: #fff;padding: 1px;position:relative;top:-5px;}
+li.bagage a, dd a:first-child {text-decoration: none;color:#f15bb5;;background-color: #fff;padding: 1px;position:relative;top:-5px;}
+li.ouiedire a, dd a:first-child {text-decoration: none;color:#9b5de5;background-color: #fff;padding: 1px;position:relative;top:-5px;}
+li.bureau a, dd a:first-child {text-decoration: none;color:#000;background-color: #fff;padding: 1px;position:relative;top:-5px;}
 ol a, ol li span,.description a {font-weight: bold;background-color: transparent;border-bottom: none;top:0;}
 footer p:first-child a, nav a {background-color: #000;color:#FFF;padding:4px;text-transform: uppercase;font-size:12px;font-size: 1.2rem; }
 footer p:first-child a:hover, nav a:hover {font-weight: normal;border-bottom: 2px solid #00CCFF}

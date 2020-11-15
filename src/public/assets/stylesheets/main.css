@@ -33,13 +33,13 @@ header {margin-bottom:20px;}
 
 /* links */
 .ailleurs_legend {background-color: #fff;color:#000;padding: 1px;margin-right: 5px;padding: 5px;}
-.bagage_legend {background-color: #fff;color:#FF0099;padding: 1px;margin-right: 5px;padding: 5px;}
-.bureau_legend {background-color: #fff;color:#0099FF;padding: 1px;margin-right: 5px;padding: 5px;}
-.ouiedire_legend {background-color: #fff;color:#000;padding: 1px;margin-right: 5px;padding: 5px;}
+.bagage_legend {background-color: #fcfed6;color:#000;padding: 1px;margin-right: 5px;padding: 5px;}
+.bureau_legend {background-color: #dfffdf;color:#000;padding: 1px;margin-right: 5px;padding: 5px;}
+.ouiedire_legend {background-color: #e6faff;color:#000;padding: 1px;margin-right: 5px;padding: 5px;}
 li.ailleurs a,  dd a:first-child {text-decoration: none;color:#000;background-color: #fff;padding: 1px;position:relative;top:-5px;}
-li.bagage a, dd a:first-child {text-decoration: none;color:#FF0099;background-color: #fff;padding: 1px;position:relative;top:-5px;}
-li.ouiedire a, dd a:first-child {text-decoration: none;color:#0099FF;background-color: #fff;padding: 1px;position:relative;top:-5px;}
-li.bureau a, dd a:first-child {text-decoration: none;color:#000;background-color: #fff;padding: 1px;position:relative;top:-5px;}
+li.bagage a, dd a:first-child {text-decoration: none;color:#000;background-color: #fcfed6;padding: 1px;position:relative;top:-5px;}
+li.ouiedire a, dd a:first-child {text-decoration: none;color:#000;background-color: #e6faff;padding: 1px;position:relative;top:-5px;}
+li.bureau a, dd a:first-child {text-decoration: none;color:#000;background-color: #dfffdf;padding: 1px;position:relative;top:-5px;}
 ol a, ol li span,.description a {font-weight: bold;background-color: transparent;border-bottom: none;top:0;}
 footer p:first-child a, nav a {background-color: #000;color:#FFF;padding:4px;text-transform: uppercase;font-size:12px;font-size: 1.2rem; }
 footer p:first-child a:hover, nav a:hover {font-weight: normal;border-bottom: 2px solid #00CCFF}
@@ -73,7 +73,8 @@ h6 a {font-weight:bold;}
 h1 {font-size:25px;font-size: 2.5rem; text-transform: uppercase;position:relative;left:10px;top:0px;margin:10px 0px 5px 0px; padding: 5px; background-color: transparent;padding: 0px;font-weight: lighter;}
 h2 {padding:4px;border-bottom:1px dotted #000;text-transform: uppercase;}
 h2 {margin:0 0 30px 16px;font-size: 13px;font-size: 1.3rem; }
-.bloc {margin: -20px 0 0 18px;font-size: 18px;font-size: 1.8rem;padding: 4px;text-transform: uppercase;font-weight: bold;line-height: 20px;display: block;position: relative;top: 20px;background-color: transparent;color: #000;margin-bottom: 20px;}
+.bloc {margin: -20px 0 0 18px;font-size: 14px;font-size: 1.8rem;padding: 4px;text-transform: uppercase;font-weight: lighter;line-height: 20px;}
+.bloc {display: block;position: relative;top: 20px;background-color: transparent;color: #000;margin-bottom: 20px;}
 h6 {margin: 50px 0px 0px 15px;font-size: 23px;font-size: 2.3rem;padding: 4px;color:#FF0099;background-color:transparent;text-transform: none;font-weight: lighter;}
 
 .grid-70 .bloc {display: inline;color: #FFF;position: relative;top:25px;font-size: 13px;font-weight: bold;font-size: 1.3rem;padding: 4px;text-transform: uppercase;}

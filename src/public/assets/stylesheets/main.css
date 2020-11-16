@@ -120,33 +120,29 @@ li.ailleurs a, dd a:first-child {
 
 	text-decoration: none;
 	color:#000;
-	padding: 4px;
+	padding: 2px;
 	position:relative;
-	top:-5px;
 }
 li.bagage a, dd a:first-child {
 	text-decoration: none;
 	color:#fc029c;
 	background-color: #FFF;
-	padding: 4px;
+	padding: 2px;
 	position:relative;
-	top:-5px;
 }
 li.ouiedire a, dd a:first-child {
 	text-decoration: none;
 	color:#8A2BE2;
 	background-color: #FFF;
-	padding: 4px;
+	padding: 2px;
 	position:relative;
-	top:-5px;
 }
 li.bureau a, dd a:first-child {
 	text-decoration: none;
 	color:#0099FF;
 	background-color: #FFF;
-	padding: 4px;
+	padding: 2px;
 	position:relative;
-	top:-5px;
 }
 ol a, ol li span,.description a {
 	font-weight: bold;
@@ -275,7 +271,8 @@ h4 a:hover {
 	font-weight: bold
 	padding: 4px;
 	text-decoration: underline;
-	color: #000}
+	color: #000: 
+	text-transform:lowercase;}
 .bloc .infos {
 	text-decoration: none;
 	font-weight: lighter;

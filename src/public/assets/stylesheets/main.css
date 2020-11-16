@@ -609,6 +609,7 @@ hr {
 }
 li.bagage, li.ailleurs, li.bureau, li.ouiedire{
 	font-size: 1.8rem;
+	padding: 5px;
 }
 .maxi-player{
 	background-color: #000

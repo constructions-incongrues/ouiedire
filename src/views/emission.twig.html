@@ -80,14 +80,13 @@
 
     </h1>
 
-<ul class="otherShows">
-    <li>Dans la collection {{ show.authors }} : </li>
+h<h1>Dans la collection {{ show.authors }} : 
 {% for show in otherShows %}
-    <li>
+    
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} </a>
-    </li>
+    
 {% endfor %}
-</ul>
+</h1>
 <div class="grid-40 mobile-grid-100">
     <audio controls="controls">
         <source src="{{ show.urlDownload }}" type="audio/mp3" />

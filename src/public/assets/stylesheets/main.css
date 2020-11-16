@@ -102,18 +102,25 @@ header {
 .ailleurs_legend {
 	color:#000;
 	margin-right: 5px;
+	text-transform: lowercase;
 }
 .bagage_legend {
 	color:#fc029c;
 	margin-right: 5px;
+		text-transform: lowercase;
+
 }
 .bureau_legend {
 	color:#0099FF;
 	margin-right: 5px;
+		text-transform: lowercase;
+
 }
 .ouiedire_legend {
 	color:#8A2BE2;
 	margin-right: 5px;
+		text-transform: lowercase;
+
 }
 li.ailleurs a, dd a:first-child {
 		background-color: #FFF;
@@ -331,8 +338,8 @@ h2 {
 	line-height: 20px;
 	display: block;
 	position: relative;
-	top:-108px;
-	left: 410px;
+	top:-90px;
+	left: 380px;
 	background-color: transparent;
 	color: #000;
 	margin-bottom: 20px;
@@ -379,7 +386,7 @@ ul{
 	/*list-style-image:url('../img/files_black.png')*/
 	;
 	list-style-type: none;
-	margin:0px 0px 20px -48px;
+	margin:-110px 0px 20px -48px;
 }
 .nav ul, .nav li {
 	display: inline;

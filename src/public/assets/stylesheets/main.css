@@ -100,29 +100,24 @@ header {
 }
 /* links */
 .ailleurs_legend {
-	background-color: #fff;
 	color:#000;
 	margin-right: 5px;
 }
 .bagage_legend {
-	background-color: #FFF;
 	color:#fc029c;
 	margin-right: 5px;
 }
 .bureau_legend {
-	background-color: #FFF;
 	color:#0099FF;
 	margin-right: 5px;
 }
 .ouiedire_legend {
-	background-color: #FFF;
 	color:#8A2BE2;
 	margin-right: 5px;
 }
 li.ailleurs a, dd a:first-child {
 	text-decoration: none;
 	color:#000;
-	background-color: #fff;
 	padding: 1px;
 	position:relative;
 	top:-5px;
@@ -277,16 +272,16 @@ h4 a:hover {
 	text-decoration: none;
 	font-weight: bold
 	padding: 4px;
-	color: #000;
-}
+text-decoration: underline;}
 .bloc .infos {
 	text-decoration: none;
 	font-weight: lighter;
 	color:#000;
 	padding: 4px
+	line-height:25px;
 }
 .bloc p {
-	background-color:#FFF;
+	background-color:#E6FAFE;
 	text-decoration: none;
 	font-weight: none;
 	color:#000;

@@ -102,30 +102,22 @@ header {
 .ailleurs_legend {
 	background-color: #fff;
 	color:#000;
-	padding: 1px;
 	margin-right: 5px;
-	padding: 5px;
 }
 .bagage_legend {
 	background-color: #FFF;
 	color:#fc029c;
-	padding: 1px;
 	margin-right: 5px;
-	padding: 5px;
 }
 .bureau_legend {
 	background-color: #FFF;
 	color:#0099FF;
-	padding: 1px;
 	margin-right: 5px;
-	padding: 5px;
 }
 .ouiedire_legend {
 	background-color: #FFF;
 	color:#8A2BE2;
-	padding: 1px;
 	margin-right: 5px;
-	padding: 5px;
 }
 li.ailleurs a, dd a:first-child {
 	text-decoration: none;
@@ -284,13 +276,13 @@ h4 a:hover {
 .bloc a {
 	text-decoration: none;
 	font-weight: bold
-	padding: 4px
+	padding: 4px;
+	color: #000;
 }
 .bloc .infos {
-	background-color:#000;
 	text-decoration: none;
 	font-weight: lighter;
-	color:#FFF;
+	color:#000;
 	padding: 4px
 }
 .bloc p {
@@ -338,7 +330,7 @@ h2 {
 	font-size: 18px;
 	font-size: 1.8rem;
 	padding: 4px;
-	text-transform: lowercase;
+	text-transform: none;
 	font-weight: bold;
 	line-height: 20px;
 	display: block;

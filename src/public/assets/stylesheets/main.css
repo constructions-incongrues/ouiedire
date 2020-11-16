@@ -305,17 +305,18 @@ h6 a {
 }
 /* ====== Heading ====== */
 h1 {
-	font-size:25px;
-	font-size: 2.5rem;
-	text-transform: uppercase;
-	position:relative;
-	left:10px;
-	top:0px;
-	margin:10px 0px 5px 0px;
-	padding: 5px;
-	background-color: transparent;
-	padding: 0px;
-	font-weight: lighter;
+	top: -90px;
+    font-size: 25px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    position: relative;
+    left: -300px;
+    top: -120px;
+    padding: 20px;
+    background-color: #fff;
+    padding: 0;
+    font-weight: lighter;
+    display: inline-block;
 }
 h2 {
 	padding:4px;
@@ -338,7 +339,7 @@ h2 {
 	display: block;
 	position: relative;
 	top:-90px;
-	left: 42px;
+	left: 420px;
 	background-color: transparent;
 	color: #000;
 	margin-bottom: 40px;
@@ -471,6 +472,8 @@ ol.mejs-smartplaylist-playlist {
 	top:-5px;
 	width: 95%;
 	font-size:1.5rem;
+	margin:5px 10px 5px 20px;
+
 }
 ul.otherShows li {
 	padding:3px;
@@ -478,15 +481,16 @@ ul.otherShows li {
 	color:#000;
 	font-weight: bold;
 	background-color: #FFF;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	text-transform: capitalize;
 }
 .otherShows li a {
 	background-color: #FFF;
-	color: #FF0099;
+	color: #000;
 	font-weight:lighter;
 	padding: 3px;
 	margin-left:-30px;
+	text-decoration: underline;
 }
 ul.otherShows {
 	margin-top: -25px;

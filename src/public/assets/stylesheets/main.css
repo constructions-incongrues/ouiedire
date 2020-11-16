@@ -340,7 +340,7 @@ h2 {
 	font-size: 18px;
 	font-size: 1.8rem;
 	padding: 4px;
-	text-transform: capitalize;
+	text-transform: lowercase;
 	font-weight: bold;
 	line-height: 20px;
 	display: block;

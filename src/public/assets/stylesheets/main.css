@@ -284,13 +284,15 @@ h4 a:hover {
 .bloc a, h6 a, .bloc span {
 	background-color:#000;
 	text-decoration: none;
+	font-weight: none;
 	color:#FCFE04;
 	padding: 4px
 }
 }
-.bloc span {
+.bloc p {
 	background-color:#000;
 	text-decoration: none;
+	font-weight: none;
 	color:#FFF;
 	padding: 4px
 }

@@ -282,7 +282,7 @@ h4 a:hover {
 	display: inline-block;
 }
 .bloc p {
-	background-color:#E6FAFE;
+	background-color:#FFF;
 	text-decoration: none;
 	font-weight: none;
 	color:#000;
@@ -331,7 +331,8 @@ h2 {
 	line-height: 20px;
 	display: block;
 	position: relative;
-	top: 20px;
+	top:108px;
+	left: 410px
 	background-color: transparent;
 	color: #000;
 	margin-bottom: 20px;

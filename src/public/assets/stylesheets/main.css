@@ -101,24 +101,24 @@ header {
 /* links */
 .ailleurs_legend {
 	color:#000;
-	margin-right: 5px;
+	margin-right: 10px;
 	text-transform: lowercase;
 }
 .bagage_legend {
 	color:#fc029c;
-	margin-right: 5px;
+	margin-right: 10px;
 		text-transform: lowercase;
 
 }
 .bureau_legend {
 	color:#0099FF;
-	margin-right: 5px;
+	margin-right: 10px;
 		text-transform: lowercase;
 
 }
 .ouiedire_legend {
 	color:#8A2BE2;
-	margin-right: 5px;
+	margin-right: 10px;
 		text-transform: lowercase;
 
 }
@@ -288,7 +288,7 @@ h4 a:hover {
 	display: inline-block;
 }
 .bloc p {
-	background-color:#E6FAFE;
+	background-color:#FFF;
 	text-decoration: none;
 	font-weight: none;
 	color:#000;
@@ -338,10 +338,10 @@ h2 {
 	display: block;
 	position: relative;
 	top:-90px;
-	left: 380px;
+	left: 42px;
 	background-color: transparent;
 	color: #000;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	font-weight: lighter;
 }
 h6 {
@@ -380,6 +380,7 @@ li {
 	font-size: 15px;
 	font-size: 1.5rem;
 	text-transform: capitalize;
+	display: inline-block;
 }
 ul{
 	/*list-style-image:url('../img/files_black.png')*/

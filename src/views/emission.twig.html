@@ -65,26 +65,11 @@
    
 
 </div> 
- <h1>
+ <h1>         
 
-
-         {% if otherShows %}
-<ul class="otherShows">
-    <li>Dans la collection {{ show.authors }} : 
-{% for show in otherShows %}
-
-        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} </a>
-    </li>
-{% endfor %}
-<li>
-{% endif %} 
-        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
+             <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
             {{ show.typeSlug }}  {{ show.number }} <strong>{{ show.authors }}</strong>  - {{ show.title }}  <em>({{ show.releasedAt|date('d/m/Y') }})</em> <a href="{{ show.urlDownload }}"> <span style="font-size: 80%;"> mp3</span> </a>
-        </a>
-               </li>
-               </ul>
-
-              
+        </a>      
 
     </h1>
 

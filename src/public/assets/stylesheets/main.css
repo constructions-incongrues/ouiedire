@@ -279,6 +279,7 @@ h4 a:hover {
 	color:#000;
 	padding: 4px;
 	line-height:25px;
+	background-color: #FFF
 }
 .bloc p {
 	background-color:#E6FAFE;
@@ -293,6 +294,7 @@ h4 a:hover {
 .bloc a:hover {
 	font-weight: bold;
 }
+.logo {background-color: transparent;padding: 0px;}
 h6 a {
 	font-weight:bold;
 }

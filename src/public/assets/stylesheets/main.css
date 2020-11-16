@@ -180,6 +180,7 @@ footer a:hover, .flyer p a:hover, nav a:hover {
 }
 nav a {
 	text-decoration: none;
+	font-weight: bold;
 }
 li a:hover, dd a:hover:first-child {
 	background-color: #000;
@@ -308,7 +309,7 @@ h6 a {
 h1 {
 	top: -90px;
     font-size: 25px;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     position: relative;
     left: -300px;
@@ -484,6 +485,7 @@ ul.otherShows li {
 	background-color: #FFF;
 	font-size: 2rem;
 	text-transform: capitalize;
+	margin-left: -40px;
 }
 .otherShows li a {
 	background-color: #FFF;

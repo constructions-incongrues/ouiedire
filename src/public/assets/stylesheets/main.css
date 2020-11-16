@@ -116,6 +116,8 @@ header {
 	margin-right: 5px;
 }
 li.ailleurs a, dd a:first-child {
+		background-color: #FFF;
+
 	text-decoration: none;
 	color:#000;
 	padding: 1px;
@@ -272,12 +274,13 @@ h4 a:hover {
 	text-decoration: none;
 	font-weight: bold
 	padding: 4px;
-text-decoration: underline;}
+	text-decoration: underline;
+	color: #000}
 .bloc .infos {
 	text-decoration: none;
 	font-weight: lighter;
 	color:#000;
-	padding: 4px
+	padding: 4px;
 	line-height:25px;
 }
 .bloc p {

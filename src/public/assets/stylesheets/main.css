@@ -107,22 +107,22 @@ header {
 	padding: 5px;
 }
 .bagage_legend {
-	background-color: #fcfed6;
-	color:#000;
+	background-color: #FFF;
+	color:#fc029c;
 	padding: 1px;
 	margin-right: 5px;
 	padding: 5px;
 }
 .bureau_legend {
-	background-color: #dfffdf;
-	color:#000;
+	background-color: #FFF;
+	color:#0099FF;
 	padding: 1px;
 	margin-right: 5px;
 	padding: 5px;
 }
 .ouiedire_legend {
-	background-color: #e6faff;
-	color:#000;
+	background-color: #FFF;
+	color:#8A2BE2;
 	padding: 1px;
 	margin-right: 5px;
 	padding: 5px;
@@ -137,24 +137,24 @@ li.ailleurs a, dd a:first-child {
 }
 li.bagage a, dd a:first-child {
 	text-decoration: none;
-	color:#000;
-	background-color: #fcfed6;
+	color:#fc029c;
+	background-color: #FFF;
 	padding: 1px;
 	position:relative;
 	top:-5px;
 }
 li.ouiedire a, dd a:first-child {
 	text-decoration: none;
-	color:#000;
-	background-color: #e6faff;
+	color:#8A2BE2;
+	background-color: #FFF;
 	padding: 1px;
 	position:relative;
 	top:-5px;
 }
 li.bureau a, dd a:first-child {
 	text-decoration: none;
-	color:#000;
-	background-color: #dfffdf;
+	color:#0099FF;
+	background-color: #FFF;
 	padding: 1px;
 	position:relative;
 	top:-5px;
@@ -340,7 +340,7 @@ h2 {
 	font-size: 18px;
 	font-size: 1.8rem;
 	padding: 4px;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font-weight: bold;
 	line-height: 20px;
 	display: block;

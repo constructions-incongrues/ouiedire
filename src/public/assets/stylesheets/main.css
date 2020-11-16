@@ -281,7 +281,7 @@ h4 a:hover {
 	background-color:transparent;
 	border-bottom:1px solid #000;
 }
-.bloc a, h6 a, .bloc span {
+.bloc a, h6 a {
 	background-color:#000;
 	text-decoration: none;
 	font-weight: none;

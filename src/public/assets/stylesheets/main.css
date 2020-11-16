@@ -294,7 +294,7 @@ h4 a:hover {
 .bloc a:hover {
 	font-weight: bold;
 }
-.logo {background-color: transparent;padding: 0px;}
+.logo {background-color: transparent;padding: 0px;float:left;}
 h6 a {
 	font-weight:bold;
 }

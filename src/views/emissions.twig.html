@@ -45,14 +45,11 @@
 </p>
 
 </div> -->
- <div class="grid-50 mobile-grid-100">
+ <div class="grid-100 mobile-grid-100">
 		<ul>
 {% for show in shows %}
 	{% if loop.index0 == (loop.length / 1)|number_format %}
-		</ul>
-	</div><!-- grid-50 -->
-	<div class="grid-50 mobile-grid-100">
-		<ul>
+	
 	{% endif %}
   		<li class="{{ show.typeSlug }}">
   			<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}">

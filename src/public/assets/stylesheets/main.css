@@ -331,8 +331,8 @@ h2 {
 	line-height: 20px;
 	display: block;
 	position: relative;
-	top:108px;
-	left: 410px
+	top:-108px;
+	left: 410px;
 	background-color: transparent;
 	color: #000;
 	margin-bottom: 20px;

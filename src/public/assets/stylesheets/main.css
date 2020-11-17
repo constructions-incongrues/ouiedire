@@ -329,9 +329,9 @@ h4 a:hover {
 .legendinfo {
     font-size: 1.8rem;
     background-color: transparent;
-    margin-top: 10px;
+    margin-top: -140px;
     margin-left: 12px;
-    text-align: left;
+    text-align: right;
     margin-right: -10px;
     margin-bottom: 30px;
     padding: 3;
@@ -426,7 +426,7 @@ ul{
 	/*list-style-image:url('../img/files_black.png')*/
 	;
 	list-style-type: none;
-	margin:-0px 0px 20px -48px;
+	margin:110px 0px 20px -48px;
 }
 .nav ul, .nav li {
 	display: inline;

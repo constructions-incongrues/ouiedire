@@ -1,38 +1,3 @@
-Skip to content
-Why GitHub? 
-Team
-Enterprise
-Explore 
-Marketplace
-Pricing 
-Search
-
-Sign in
-Sign up
-constructions-incongrues
-/
-net.ouiedire.www
-811
-Code
-Issues
-Pull requests
-1
-Actions
-Projects
-Security
-Insights
-Join GitHub today
-GitHub is home to over 50 million developers working together to host and review code, manage projects, and build software together.
-
-net.ouiedire.www/src/views/emission.twig.html
-@johan-ci
-johan-ci hop
-Latest commit 3895c5e 15 minutes ago
- History
- 2 contributors
-@johan-ci@trivoallan
-146 lines (108 sloc)  5 KB
- 
 {% extends "layout.default.twig.html" %}
 
 {% block title %}Émission #{{ show.number }} : {{ show.title }}, par {{ show.authors }}{% endblock %}
@@ -84,6 +49,8 @@ Latest commit 3895c5e 15 minutes ago
         <a href="https://www.facebook.com/pages/Ou%C3%AFedire/35795699060">facebook</a>
         <a href="https://twitter.com/OuiedireShow">twitter</a>
         <a href="{{ url('flyers') }}">Flyers des programmations</a>
+
+
 </nav> -->
 
 <div class="grid-100 mobile-grid-100">
@@ -116,13 +83,7 @@ Latest commit 3895c5e 15 minutes ago
         </a>
                
 
-              
-
-    </h1>
-
-
-<div class="grid-40 mobile-grid-100">
-    <audio controls="controls">
+                  <audio controls="controls">
         <source src="{{ show.urlDownload }}" type="audio/mp3" />
         <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
         <object width="318" height="240" type="application/x-shockwave-flash" data="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf">
@@ -130,6 +91,12 @@ Latest commit 3895c5e 15 minutes ago
         <param name="flashvars" value="controls=true&file={{ show.urlDownload }}" />
         </object>
     </audio>
+
+    </h1>
+
+
+<div class="grid-40 mobile-grid-100">
+
 
 {{ show.playlist|raw }}
 
@@ -175,3 +142,5 @@ window.MejsSmartplaylistPosition = false;
 {% endif %}
 window.MejsOuiedireDownloadUrl = '{{ show.urlDownload }}';
 </script>
+
+{% endblock %}

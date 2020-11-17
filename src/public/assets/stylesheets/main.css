@@ -37,8 +37,8 @@ header {
 }
 .descriptiontext p {
     font-weight: 700;
-    font-size: 18px;
-    font-size: 1.1rem;
+	font-size: 13px;
+	font-size: 1.3rem;
     margin: 0px 0 0 10px;
     background-color: #e6faff;
     display: inline-block;
@@ -517,9 +517,9 @@ ol.mejs-smartplaylist-playlist {
 }
 ul.otherShows li {
 	padding:0px;
-	color:#000;
+	color:#FFF;
 	font-weight: lighter;
-	background-color: #FFF;
+	background-color: #000;
 	font-size: 1.3rem;
 	text-transform: lowercase;
 	padding: 10px

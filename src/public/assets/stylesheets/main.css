@@ -331,11 +331,13 @@ h4 a:hover {
 
 .legendinfo {
     font-size: 1.8rem;
-    background-color: #FF;
-    margin-top: -34px;
-    margin-left: 5px;
-    text-align: right;
+    background-color: #FFF;
+    margin-top: 0px;
+    margin-left: 10px;
+    text-align: lefet;
     margin-right: -10px;
+    margin-bottom: 60pxx;
+    padding: 3;
 }
 .legendinfo span {padding: 10px; 
 margin-top: -50px;

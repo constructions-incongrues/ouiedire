@@ -314,7 +314,7 @@ h1 {
     text-transform: uppercase;
     position: relative;
     left: -300px;
-    top: -120px;
+    top: -94px;
     padding: 20px;
     background-color: #fff;
     padding: 0;
@@ -481,7 +481,6 @@ ol.mejs-smartplaylist-playlist {
 }
 ul.otherShows li {
 	padding:3px;
-	display: inline;
 	color:#000;
 	font-weight: bold;
 	background-color: #FFF;
@@ -498,7 +497,7 @@ ul.otherShows li {
 }
 ul.otherShows {
 	margin-top: -50px;
-	margin-left: -300px;
+	margin-left: -0px;
 	margin-bottom: 5px;
 	background-color: #FFF;
 

@@ -74,7 +74,7 @@
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
             {{ show.typeSlug }}  {{ show.number }} <strong>{{ show.authors }}</strong>  - {{ show.title }}  <em>({{ show.releasedAt|date('d/m/Y') }})</em> <a href="{{ show.urlDownload }}"> <span style="font-size: 80%;"> mp3</span> </a>
         </a>
-               
+           <br />     
 Dans la collection {{ show.authors }} : 
 {% for show in otherShows %}
     

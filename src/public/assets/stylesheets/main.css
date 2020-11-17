@@ -112,7 +112,7 @@ font-size: 18px;
 	color:#000;
 	margin-right: 10px;
 	text-transform: lowercase;
-		font-weight: bold;
+			font-weight: lighter;
 
 			background-color: #FFF;
 
@@ -121,7 +121,7 @@ font-size: 18px;
 	color:#fc029c;
 	margin-right: 10px;
 		text-transform: lowercase;
-			font-weight: bold;
+			font-weight: lighter;
 			background-color: #FFF;
 
 
@@ -130,7 +130,7 @@ font-size: 18px;
 	color:#0099FF;
 	margin-right: 10px;
 		text-transform: lowercase;
-			font-weight: bold;
+			font-weight: lighter;
 						background-color: #FFF;
 
 
@@ -140,7 +140,7 @@ font-size: 18px;
 	color:#8A2BE2;
 	margin-right: 10px;
 		text-transform: lowercase;
-			font-weight: bold;
+			font-weight: lighter;
 						background-color: #FFF;
 
 
@@ -333,7 +333,7 @@ h4 a:hover {
     margin-left: 12px;
     text-align: left;
     margin-right: -10px;
-    margin-bottom: 10p;
+    margin-bottom: 30px;
     padding: 3;
 }
 .legendinfo span {padding: 10px; 
@@ -467,7 +467,7 @@ audio {
 	width: 98%
 }
 a.mejs-smartplaylist-time {
-	background-color:#e6faff;
+	background-color:#fff;
 	color:#000;
 	padding: 3px;
 
@@ -522,7 +522,7 @@ ul.otherShows li {
 	background-color: #000;
 	font-size: 1.3rem;
 	text-transform: lowercase;
-	padding: 10px
+	padding: 11px
 }
 .otherShows li a {
 	background-color: #000;

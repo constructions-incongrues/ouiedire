@@ -287,8 +287,7 @@ h4 a:hover {
 	text-decoration: none;
 	font-weight: bold
 	padding: 4px;
-	text-decoration: underline;
-	color: #000;
+	font-weight: bold	color: #000;
 	text-transform:lowercase;}
 .bloc .infos {
 	text-decoration: none;
@@ -299,7 +298,7 @@ h4 a:hover {
 	display: inline-block;
 }
 .bloc p {
-	background-color:#e6faff;
+	background-color:#fff;
 	text-decoration: none;
 	font-weight: none;
 	color:#000;

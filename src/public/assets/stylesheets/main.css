@@ -33,17 +33,17 @@ header {
 	font-size: 1.3rem;
 }
 .description img {
-	margin:-50px 0px 0px 10px;
+	margin:-67px 0px 0px 10px;
 }
 .descriptiontext p {
     font-weight: 700;
-    font-size: 15px;
-    font-size: 1.5rem;
+    font-size: 18px;
+    font-size: 1.1rem;
     margin: 0px 0 0 10px;
-    background-color: ##e6faff;
+    background-color: #e6faff;
     display: inline-block;
-    padding: 5px;
-    font-weight: normal;
+    padding: 10px;
+    font-weight: bold;
 }
 }
 .grid-70 p:nth-child(2) {
@@ -236,7 +236,7 @@ h1 a {
 }
 .nav p a {
 	text-decoration: none;
-	font-weight:lighter;
+	font-weight:bold;
 	background-color:transparent;
 	text-transform:lowercase;
 	color:#000;
@@ -319,8 +319,8 @@ h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
     position: relative;
-    left: -300px;
-    top: -94px;
+    left: -380px;
+    top: -110px;
     padding: 20px;
     background-color: #fff;
     padding: 0;
@@ -498,10 +498,11 @@ ul.otherShows li {
 	background-color: #FFF;
 	color: #000;
 	font-weight:lighter;
-	margin-left:-50px;
+	margin-left:-60px;
 	margin-top: 6px;
 	text-decoration: underline;
 	text-transform: lighter;
+	text-transform: lowercase;
 }
 ul.otherShows {
 	margin-top: -50px;

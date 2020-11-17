@@ -72,14 +72,14 @@ header {
 	font-size: 1.3rem;
 }
 
-.nav p {
+nav p {
     text-align: left;
     position: relative;
-    left: 405px;
-    top: -118px;
+    top: -150px;
+    right: -15px;
     font-weight: lighter;
+    text-align: right;
 }
-
 ::selection {
 	background: #000;
 	/* Safari */

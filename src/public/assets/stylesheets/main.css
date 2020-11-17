@@ -327,6 +327,14 @@ h4 a:hover {
 .bloc a:hover {
 	font-weight: bold;
 }
+
+.legendinfo {
+	font-size: 1.5rem;
+    background-color: #FF;
+    margin-top: -100px;
+    margin-right: 50px;
+}
+
 h6 a {
 	font-weight:bold;
 }

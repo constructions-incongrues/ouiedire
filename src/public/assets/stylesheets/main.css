@@ -438,7 +438,7 @@ audio {
 	width: 98%
 }
 a.mejs-smartplaylist-time {
-	background-color:#FFF;
+	background-color:#e6faff;
 	color:#000;
 	padding: 3px;
 
@@ -465,7 +465,7 @@ a.mejs-smartplaylist-time:before {
 	width: 98%;
 }
 a.mejs-smartplaylist-time.mejs-smartplaylist-current {
-	background-color: #fff;
+	background-color: #e6faff;
 	color:#000;
 	font-weight: bold;
 }

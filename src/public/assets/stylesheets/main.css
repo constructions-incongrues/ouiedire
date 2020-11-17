@@ -114,7 +114,7 @@ header {
 	text-transform: lowercase;
 		font-weight: bold;
 
-			background-color: #000;
+			background-color: #ffff;
 
 }
 .bagage_legend {
@@ -326,13 +326,13 @@ h4 a:hover {
 	font-weight: lighter;
 }
 .bloc a:hover {
-	font-weight: bold;
+	text-decoration: line-through;
 }
 
 .legendinfo {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     background-color: #FF;
-    margin-top: -40px;
+    margin-top: -37px;
     margin-left: 5px;
     text-align: right;
     margin-right: -10px;

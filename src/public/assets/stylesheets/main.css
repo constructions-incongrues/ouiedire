@@ -109,11 +109,12 @@ header {
 }
 /* links */
 .ailleurs_legend {
-	color:#000;
+	color:#FFF;
 	margin-right: 10px;
 	text-transform: lowercase;
 		font-weight: bold;
-		background-color: #FFF;
+
+			background-color: #FFF;
 
 }
 .bagage_legend {
@@ -121,7 +122,7 @@ header {
 	margin-right: 10px;
 		text-transform: lowercase;
 			font-weight: bold;
-		background-color: #FFF;
+			background-color: #FFF;
 
 
 }
@@ -130,7 +131,8 @@ header {
 	margin-right: 10px;
 		text-transform: lowercase;
 			font-weight: bold;
-		background-color: #FFF;
+						background-color: #FFF;
+
 
 
 }
@@ -139,7 +141,8 @@ header {
 	margin-right: 10px;
 		text-transform: lowercase;
 			font-weight: bold;
-		background-color: #FFF;
+						background-color: #FFF;
+
 
 
 }
@@ -367,8 +370,6 @@ h2 {
 	color: #FFF;
 	font-weight: lighter;
 }
-
-
 h6 {
 	margin: 50px 0px 0px 15px;
 	font-size: 23px;

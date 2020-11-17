@@ -307,7 +307,7 @@ h4 a:hover {
 	display: inline-block;
 }
 .bloc p {
-	background-color:#fff;
+	background-color:#000;
 	text-decoration: none;
 	font-weight: none;
 	color:#FFF;
@@ -405,7 +405,7 @@ ul{
 	/*list-style-image:url('../img/files_black.png')*/
 	;
 	list-style-type: none;
-	margin:-130px 0px 20px -48px;
+	margin:-0px 0px 20px -48px;
 }
 .nav ul, .nav li {
 	display: inline;

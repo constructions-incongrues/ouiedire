@@ -109,12 +109,12 @@ header {
 }
 /* links */
 .ailleurs_legend {
-	color:#FFF;
+	color:#000;
 	margin-right: 10px;
 	text-transform: lowercase;
 		font-weight: bold;
 
-			background-color: #FFF;
+			background-color: #000;
 
 }
 .bagage_legend {
@@ -306,14 +306,15 @@ h4 a:hover {
 	color: #FFF;
 	text-transform:lowercase;}
 .bloc .infos {
-	text-decoration: none;
-	font-weight: lighter;
-	color:#FFF;
-	padding: 10px;
-	line-height:25px;
-	display: inline-block;
+    text-decoration: none;
+    font-weight: lighter;
+    color: #FFF;
+    line-height: 25px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 20px;
 }
-.bloc p {
+.bloc p.infos {
 	background-color:#000;
 	text-decoration: none;
 	font-weight: none;
@@ -329,10 +330,12 @@ h4 a:hover {
 }
 
 .legendinfo {
-	font-size: 1.5rem;
+    font-size: 1.5rem;
     background-color: #FF;
-    margin-top: -100px;
-    margin-right: 50px;
+    margin-top: -40px;
+    margin-left: 5px;
+    text-align: right;
+    margin-right: -10px;
 }
 .legendinfo span {padding: 10px; 
 margin-top: -50px;

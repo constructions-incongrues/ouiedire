@@ -340,7 +340,7 @@ h2 {
 	font-size: 1.3rem;
 }
 .bloc {
-	margin: -20px 0 0 18px;
+	margin: -20px 0 0 -418px;
 	font-size: 18px;
 	font-size: 1.8rem;
 	padding: 4px;
@@ -350,7 +350,6 @@ h2 {
 	display: block;
 	position: relative;
 	top:-90px;
-	left: 400px;
 	background-color: transparent;
 	color: #000;
 	margin-bottom: 40px;

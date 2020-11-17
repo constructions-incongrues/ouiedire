@@ -75,18 +75,17 @@
             {{ show.typeSlug }}  {{ show.number }} <strong>{{ show.authors }}</strong>  - {{ show.title }}  <em>({{ show.releasedAt|date('d/m/Y') }})</em> <a href="{{ show.urlDownload }}"> <span style="font-size: 80%;"> mp3</span> </a>
         </a>
                
-
-              
-
-    </h1>
-
-<span class="otherShows">Dans la collection {{ show.authors }} : 
+Dans la collection {{ show.authors }} : 
 {% for show in otherShows %}
     
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} </a>
     
 {% endfor %}
-</span>
+              
+
+    </h1>
+
+
 <div class="grid-40 mobile-grid-100">
     <audio controls="controls">
         <source src="{{ show.urlDownload }}" type="audio/mp3" />

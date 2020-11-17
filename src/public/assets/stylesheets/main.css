@@ -245,10 +245,10 @@ ol li a:hover {
 	border-bottom: 1px solid #000;
 }
 h1 a {
-	color: #000 ;
+	color: #FFF;
 	text-decoration: none;
 	text-transform: capitalize;
-	background-color: #FFF; 
+	background-color: #000; 
 	padding: 11px;
 }
 .nav p a {
@@ -301,10 +301,8 @@ h4 a:hover {
 .bloc a {
 	text-decoration: none;
 	font-weight: bold;
-	padding: 4px;
-	font-weight: bold; 
 	color: #FFF;
-	text-transform:lowercase;}
+	text-transform:capitalize;}
 .bloc .infos {
     text-decoration: none;
     font-weight: lighter;
@@ -319,7 +317,7 @@ h4 a:hover {
 	text-decoration: none;
 	font-weight: none;
 	color:#FFF;
-	padding: 4px
+	text-transform: capitalize;
 }
 .bloc a:hover h6 a:hover{
 	color:#FFF;
@@ -527,8 +525,8 @@ ul.otherShows li {
 	padding: 10px
 }
 .otherShows li a {
-	background-color: #FFF;
-	color: #000;
+	background-color: #000;
+	color: #FFF;
 	font-weight:lighter;
 	margin-left:-60px;
 	margin-top: 6px;

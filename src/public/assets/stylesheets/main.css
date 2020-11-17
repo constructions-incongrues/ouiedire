@@ -33,13 +33,18 @@ header {
 	font-size: 1.3rem;
 }
 .description img {
-	margin:-63px 0px 20px 10px;
+	margin:-50px 0px 0px 10px;
 }
 .descriptiontext p {
-	font-weight: bold;
-	font-size: 15px;
-	font-size: 1.5rem;
-	margin:-20px 0px 0px 10px;
+    font-weight: 700;
+    font-size: 15px;
+    font-size: 1.5rem;
+    margin: 0px 0 0 10px;
+    background-color: ##e6faff;
+    display: inline-block;
+    padding: 5px;
+    font-weight: normal;
+}
 }
 .grid-70 p:nth-child(2) {
 	position: relative;
@@ -69,8 +74,9 @@ header {
 .nav p {
 	text-align: left;
 	position: relative;
-	right: 9px;
-	top:20px;
+	right: 5px;
+	top:30px;
+	font-weight: bold;
 }
 ::selection {
 	background: #000;
@@ -226,7 +232,7 @@ h1 a {
 	text-decoration: none;
 	text-transform: capitalize;
 	background-color: #FFF; 
-	padding: 10px;
+	padding: 11px;
 }
 .nav p a {
 	text-decoration: none;
@@ -474,37 +480,39 @@ ol.mejs-smartplaylist-playlist {
 	padding: 3px;
 	position:relative;
 	top:-5px;
-	width: 95%;
-	font-size:1.5rem;
-	margin:5px 10px 5px 20px;
+	width: 96.4%;
+	font-size:1.8rem;
+	margin:3px 10px 3px 20px;
 
 }
 ul.otherShows li {
-	padding:3px;
+	padding:0px;
 	color:#000;
-	font-weight: bold;
+	font-weight: lighter;
 	background-color: #FFF;
-	font-size: 2rem;
-	text-transform: capitalize;
+	font-size: 1.5rem;
+	text-transform: lowercase;
+	padding: 10px
 }
 .otherShows li a {
 	background-color: #FFF;
 	color: #000;
 	font-weight:lighter;
-	padding: 3px;
-	margin-left:-30px;
+	margin-left:-50px;
+	margin-top: 6px;
 	text-decoration: underline;
+	text-transform: lighter;
 }
 ul.otherShows {
 	margin-top: -50px;
-	margin-left: -0px;
-	margin-bottom: 5px;
-	background-color: #FFF;
+	margin-left: -60px;
+	margin-bottom: -5px;
 
 }
 .otherShows li a:hover {
 	background-color: #FFF;
 	color: #000;
+	font-weight: bold;
 }
 .flyer img {
 	max-width:96%;

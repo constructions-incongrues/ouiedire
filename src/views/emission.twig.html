@@ -52,38 +52,40 @@
 
 
 </nav> -->
-   <div class="grid-100 mobile-grid-100">
+
+<div class="grid-100 mobile-grid-100">
     <section class="nav">
 <p>
 {% if (previous) %}
-<a class="previous" href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}">  précédente émission </a> {% endif %} - 
-{% if (next) %} / <a class="next" href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}" title="#{{ next.number }} : {{ next.title }}, par {{ next.authors }}"> prochaine émission  </a>
-
+<a class="previous" href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}"> anciennes émissions  </a> {% endif %}
+{% if (next) %} / <a class="next" href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}" title="#{{ next.number }} : {{ next.title }}, par {{ next.authors }}"> nouvelles émissions </a>
 {% endif %}
 </p>
 </section>
    
 
 </div> 
- <h1>
+    <h1>
 
 
          {% if otherShows %}
-
+<ul class="otherShows">
+    <li>Collection, {{ show.authors }} : </li>
+{% for show in otherShows %}
+    <li>
+        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} </a>
+    </li>
+{% endfor %}
+</ul>
 {% endif %} 
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
-            {{ show.typeSlug }}  {{ show.number }} <strong>{{ show.authors }}</strong>  - {{ show.title }}  <em>({{ show.releasedAt|date('d/m/Y') }})</em> <a href="{{ show.urlDownload }}"> <span style="font-size: 80%;"> mp3</span> </a>
+            {{ show.typeSlug }}  {{ show.number }} : <strong>{{ show.authors }}</strong>  - {{ show.title }}  <em>({{ show.releasedAt|date('d/m/Y') }})</em> <a href="{{ show.urlDownload }}"> <span style="text-transform: lowercase;color:#FF0099!important;font-size: 80%;"> mp3</span> </a>
         </a>
-                           
+               
+
+              
 
     </h1>
-
-    Dans la collection {{ show.authors }} : 
-{% for show in otherShows %}
-    
-        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} </a>
-    
-{% endfor %}
 
 
 <div class="grid-40 mobile-grid-100">

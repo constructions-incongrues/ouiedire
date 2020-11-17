@@ -33,7 +33,7 @@ header {
 	font-size: 1.3rem;
 }
 .description img {
-	margin:-67px 0px 0px 10px;
+	margin:-107px 0px 0px 10px;
 }
 .descriptiontext p {
     font-weight: 700;
@@ -433,7 +433,7 @@ audio {
 }
 /* **************** MEDIA PLAYER (http://mediaelementjs.com) ***************** */
 .mejs-container {
-	margin:20px 0px 0px 0px;
+	margin:-20px 0px 0px 0px;
 	width: 98%
 }
 a.mejs-smartplaylist-time {

@@ -520,10 +520,10 @@ ol.mejs-smartplaylist-playlist {
 ul.otherShows li {
 	padding:0px;
 	color:#FFF;
-	font-weight: lighter;
+	font-weight: bold;
 	background-color: #000;
 	font-size: 1.3rem;
-	text-transform: lowercase;
+	text-transform: uppercase;
 	padding: 11px
 }
 .otherShows li a {
@@ -533,8 +533,8 @@ ul.otherShows li {
 	margin-left:-60px;
 	margin-top: 6px;
 	text-decoration: underline;
-	text-transform: lighter;
-	text-transform: lowercase;
+	text-transform: bold;
+	text-transform: uppercase;
 }
 ul.otherShows {
 	margin-top: -50px;
@@ -543,9 +543,9 @@ ul.otherShows {
 
 }
 .otherShows li a:hover {
-	background-color: #FFF;
 	color: #000;
 	font-weight: bold;
+	text-decoration: line-through;
 }
 .flyer img {
 	max-width:96%;

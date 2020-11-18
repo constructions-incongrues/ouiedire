@@ -494,8 +494,8 @@ a.mejs-smartplaylist-time:before {
 	width: 98%;
 }
 a.mejs-smartplaylist-time.mejs-smartplaylist-current {
-	background-color: #e6faff;
-	color:#000;
+	background-color: #000;
+	color:#FFF;
 	font-weight: bold;
 }
 ol.mejs-smartplaylist-playlist {

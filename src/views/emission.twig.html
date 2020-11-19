@@ -66,7 +66,7 @@
 
     <h1 class="otherShows">
 
-<span>
+
          {% if otherShows %}
     {{ show.authors }} : 
 {% for show in otherShows %}
@@ -74,7 +74,6 @@
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} </a>
     
 {% endfor %}
-</span>
 <br /><br />
 {% endif %} 
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">

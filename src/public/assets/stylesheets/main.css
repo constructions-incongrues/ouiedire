@@ -521,7 +521,7 @@ ol.mejs-smartplaylist-playlist {
 	margin:3px 10px 3px 20px;
 
 }
-.otherShows,span.othershows a
+.otherShows
   {
 	padding:0px;
 	color:#FFF;
@@ -538,7 +538,7 @@ ol.mejs-smartplaylist-playlist {
 	background-color: #000;
 	color: #FFF;
 	font-weight:bold;
-	text-transform: bold;
+	text-transform: lighter;
 	text-transform: uppercase;
 	font-size: 2rem;
 }

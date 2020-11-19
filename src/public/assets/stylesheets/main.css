@@ -355,7 +355,7 @@ h1 {
     font-size: 2rem;
     text-transform: uppercase;
     position: relative;
-    left: -400px;
+    left: 400px;
     top: -105px;
     padding: 20px;
     background-color: #fff;

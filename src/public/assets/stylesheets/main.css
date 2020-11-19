@@ -539,7 +539,7 @@ span.otherShows  a {
 	text-transform: bold;
 	text-transform: uppercase;
 }
-ul.otherShows {
+span.otherShows {
 	margin-top: -50px;
 	margin-left: -60px;
 	margin-bottom: -5px;

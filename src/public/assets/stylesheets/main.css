@@ -540,9 +540,9 @@ ol.mejs-smartplaylist-playlist {
 	text-transform: uppercase;
 }
 .otherShows {
-	margin-top: -50px;
-	margin-left: -60px;
-	margin-bottom: -5px;
+	margin-top: -20px;
+	margin-left: 0px;
+	margin-bottom: 0px;
 
 }
 .otherShows a:hover {

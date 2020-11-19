@@ -64,11 +64,10 @@
 </section>
    
 
-    <h1>
+    <h1 class="otherShows">
 
 
          {% if otherShows %}
-<span class="otherShows">
     {{ show.authors }} : 
 {% for show in otherShows %}
     
@@ -76,7 +75,6 @@
     
 {% endfor %}
 <br />
-</span>
 {% endif %} 
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
            <strong> {{ show.typeSlug }}  {{ show.number }}</strong>  {{ show.authors }} - {{ show.title }}  ({{ show.releasedAt|date('d/m/Y') }}) / <a href="{{ show.urlDownload }}"> télécharger</a>

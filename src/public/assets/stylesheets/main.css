@@ -521,7 +521,7 @@ ol.mejs-smartplaylist-playlist {
 	margin:3px 10px 3px 20px;
 
 }
-span.otherShows  {
+.otherShows  {
 	padding:0px;
 	color:#FFF;
 	font-weight: bold;
@@ -530,7 +530,7 @@ span.otherShows  {
 	text-transform: uppercase;
 	padding: 11px
 }
-span.otherShows  a {
+.otherShows  a {
 	background-color: #000;
 	color: #FFF;
 	font-weight:bold;
@@ -539,13 +539,13 @@ span.otherShows  a {
 	text-transform: bold;
 	text-transform: uppercase;
 }
-span.otherShows {
+.otherShows {
 	margin-top: -50px;
 	margin-left: -60px;
 	margin-bottom: -5px;
 
 }
-span.otherShows a:hover {
+.otherShows a:hover {
 	color: #FFF;
 	font-weight: bold;
 	text-decoration: line-through;

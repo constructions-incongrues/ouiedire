@@ -534,15 +534,16 @@ ol.mejs-smartplaylist-playlist {
 	background-color: #000;
 	color: #FFF;
 	font-weight:bold;
-	margin-left:-60px;
-	margin-top: 6px;
 	text-transform: bold;
 	text-transform: uppercase;
+	font-size: 2rem;
 }
 .otherShows {
 	margin-top: -20px;
 	margin-left: 0px;
 	margin-bottom: 0px;
+	font-size: 2rem;
+
 
 }
 .otherShows a:hover {

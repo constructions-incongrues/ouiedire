@@ -74,7 +74,7 @@
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} </a>
     
 {% endfor %}
-<br />
+<br /><br />
 {% endif %} 
         <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
            <strong> {{ show.typeSlug }}  {{ show.number }}</strong>  {{ show.authors }} - {{ show.title }}  ({{ show.releasedAt|date('d/m/Y') }}) / <a href="{{ show.urlDownload }}"> télécharger</a>

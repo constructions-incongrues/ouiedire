@@ -521,7 +521,7 @@ ol.mejs-smartplaylist-playlist {
 	margin:3px 10px 3px 20px;
 
 }
-span {
+span.otherShows  {
 	padding:0px;
 	color:#FFF;
 	font-weight: bold;

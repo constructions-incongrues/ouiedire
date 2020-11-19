@@ -356,12 +356,11 @@ h1 {
     text-transform: uppercase;
     position: relative;
     left: 400px;
-    top: -105px;
+    top: -120px;
     padding: 20px;
     background-color: #fff;
     padding: 0;
     font-weight: lighter;
-    display: inline-block;
 }
 h2 {
 	padding:4px;
@@ -524,7 +523,7 @@ ol.mejs-smartplaylist-playlist {
 .otherShows  {
 	padding:0px;
 	color:#FFF;
-	font-weight: bold;
+	font-weight: lighter;
 	background-color: #000;
 	font-size: 1.3rem;
 	text-transform: uppercase;

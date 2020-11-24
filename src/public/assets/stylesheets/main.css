@@ -252,7 +252,6 @@ h1 a {
 	text-decoration: none;
 	text-transform: capitalize;
 	background-color: #000; 
-	padding: 11px;
 }
 
 h1 a:hover {
@@ -505,7 +504,7 @@ a.mejs-smartplaylist-time.mejs-smartplaylist-current {
 ol.mejs-smartplaylist-playlist {
 	list-style-type: none;
 	margin-left: -60px;
-	margin-top:- 20px;
+	margin-top:-10px;
 }
 .mejs-smartplaylist-playlist li {
 	text-decoration: none;
@@ -514,9 +513,9 @@ ol.mejs-smartplaylist-playlist {
 	padding: 3px;
 	position:relative;
 	top:-5px;
-	width: 96.4%;
+	width: 97%;
 	font-size:1.8rem;
-	margin:3px 10px 3px 20px;
+	margin:-5px 10px 3px 20px;
 
 }
 .otherShows

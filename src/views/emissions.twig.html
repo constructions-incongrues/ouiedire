@@ -9,41 +9,45 @@
 {% endblock %}
 
 {% block showsfilters %}
- <p class="legendinfo">
- 	<span class="emissions_legend">Les émissions :</span>
-	<span class="all_legend" onclick="filterSelection('all')">TOUT !</span> 
-	<span class="ailleurs_legend" onclick="filterSelection('ailleurs')"><strong>Ailleurs</strong> invité</span> 
-	<span class="bagage_legend" onclick="filterSelection('bagage')"><strong>Bagage</strong> maison de disques</span> 
-	<span class="bureau_legend" onclick="filterSelection('bureau')"><strong>Bureau</strong> réunions incongrues</span> 
-	<span class="ouiedire_legend" onclick="filterSelection('ouiedire')"><strong>Ouïedire</strong> fait maison</span>
-</p>
+ <div class="legendinfo">
+ 	<div class="emissions_legend">Les émissions :</div>
+	<div class="all_legend" onclick="filterSelection('all')">TOUT !</div> 
+	<div class="ailleurs_legend" onclick="filterSelection('ailleurs')"><strong>Ailleurs</strong> invité</div> 
+	<div class="bagage_legend" onclick="filterSelection('bagage')"><strong>Bagage</strong> maison de disques</div> 
+	<div class="bureau_legend" onclick="filterSelection('bureau')"><strong>Bureau</strong> réunions incongrues</div> 
+	<div class="ouiedire_legend" onclick="filterSelection('ouiedire')"><strong>Ouïedire</strong> fait maison</div>
+</div>
 {% endblock %}
 
 {% block content %}
 <!-- <h5><a href="{{ path('emission', {id:randomShow.id, type:randomShow.typeSlug}) }}">Écouter de manière aléatoire</a></h5><hr>-->
-<div class="bloc">
-	<p class="infos">
-		<a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes </a>  ◈
-		{{ shows|length }}  émissions  ◈ {{ djs|length }} curateurs ◈	<a href="#infosfooter">informations</a> ◈ 
-		<a href="http://www.canalb.fr/gabuzomix/podcasts">Canal B</a> ◈
-		<a href="http://www.choq.ca/emissions-details/ouiedire/">Choq CA</a> ◈
-		<a href="https://www.facebook.com/cjucfm/?ref=br_rs">Cjuc 92.5 FM</a> ◈
-		<a href="http://www.radioeponyme.com/emissions/ouie-dire/">Eponyme</a> ◈
-		<a href="https://p-node.org/">π-node</a> ◈
-		<a href="http://radio-octopus.org">Radio Octopus</a> ◈
-		<a href="http://lastation.paris/station.station/ouiedire/">Station Station</a>
-	</p>
+<div class="grid-100">
+	<div class="bloc">
+		<p class="infos">
+			<a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes </a>  ◈
+			{{ shows|length }}  émissions  ◈ {{ djs|length }} curateurs ◈	<a href="#infosfooter">informations</a> ◈ 
+			<a href="http://www.canalb.fr/gabuzomix/podcasts">Canal B</a> ◈
+			<a href="http://www.choq.ca/emissions-details/ouiedire/">Choq CA</a> ◈
+			<a href="https://www.facebook.com/cjucfm/?ref=br_rs">Cjuc 92.5 FM</a> ◈
+			<a href="http://www.radioeponyme.com/emissions/ouie-dire/">Eponyme</a> ◈
+			<a href="https://p-node.org/">π-node</a> ◈
+			<a href="http://radio-octopus.org">Radio Octopus</a> ◈
+			<a href="http://lastation.paris/station.station/ouiedire/">Station Station</a>
+		</p>
+	</div>
 </div>
 <div class="grid-100 mobile-grid-100">
-	<ul>
-	{% for show in shows %}
-		{% if loop.index0 == (loop.length / 1)|number_format %}{% endif %}
+	<div class="allshows">
+		<ul>
+		{% for show in shows %}
+			{% if loop.index0 == (loop.length / 1)|number_format %}{% endif %}
 			<li class="emission {{ show.typeSlug }}">
-				<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}">
-					<strong>{{ show.number }}</strong>{{ show.authors }} - {{ show.title }} <span class="date">{{ show.releasedAt|date('d/m/Y') }}</span>)
+				<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}" title="{{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})">
+					<strong>{{ show.number }}</strong> {{ show.authors }} - {{ show.title }}
 				</a>
 			</li>
-	{% endfor %}
-	</ul>		
+		{% endfor %}
+		</ul>	
+	</div>	
 </div>
 {% endblock %}

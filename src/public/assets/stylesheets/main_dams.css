@@ -1,0 +1,185 @@
+/*Code by Constructions Incongrues www.constructions-incongrues.net/.pCode licensed under the GNU AGPLv3:http://www.gnu.org/licenses/gpl.txVersion: 1.0*/
+/* TODO : A cleaner */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+html {
+	font-size:13px;
+}
+body {
+	background-color: #FFF;
+	background-image: url(../img/pattern.gif);
+	background-repeat: repeat;
+	background-attachment: fixed;
+	font-family: 'Roboto Mono', sans-serif;
+}
+
+/* links */
+.legendinfo {
+	margin-top:50px;
+    background-color: transparent;
+    float: right !important;
+}
+.legendinfo div {
+	display: inline-block;
+    padding: 10px 10px 10px 0; 
+	font-size: 1.1rem;
+}
+.emissions_legend{
+	color:#000;
+	margin-right: 10px;
+	text-transform: lowercase;
+	background-color: #FCFE04;
+	padding: 10px 8px !important;
+}
+.all_legend {
+	color:#000;
+	margin-right: 10px;
+	font-weight: lighter;
+	background-color: #FFF;
+	cursor:pointer;
+	padding: 10px 8px !important;
+}
+.ailleurs_legend {
+	color:#000;
+	margin-right: 10px;
+	text-transform: lowercase;
+	font-weight: lighter;
+	background-color: #FFF;
+	cursor:pointer;
+	padding: 0px 0px 10px 0px;
+}
+.ailleurs_legend strong {
+	background-color:#000;
+	color: #FFF;
+	padding: 10px 8px;
+}
+.bagage_legend {
+	color:#fc029c;
+	margin-right: 10px;
+	text-transform: lowercase;
+	font-weight: lighter;
+	background-color: #FFF;
+	cursor:pointer;
+	padding: 0px 0px 10px 0px;
+}
+.bagage_legend strong {
+	background-color:#fc029c;
+	color: #FFF;
+	padding: 10px 8px;
+}
+.bureau_legend {
+	color:#0099FF;
+	margin-right: 10px;
+	text-transform: lowercase;
+	font-weight: lighter;
+	background-color: #FFF;
+	cursor:pointer;
+	padding: 0px 0px 10px 0px;
+}
+.bureau_legend strong {
+	background-color:#0099FF;
+	color: #FFF;
+	padding: 10px 8px;
+}
+.ouiedire_legend {
+	color:#8A2BE2;
+	margin-right: 0px;
+	text-transform: lowercase;
+	font-weight: lighter;
+	background-color: #FFF;
+	cursor:pointer;
+	padding: 0px 0px 10px 0px;
+}
+.ouiedire_legend strong {
+	background-color:#8A2BE2;
+	color: #FFF;
+	padding: 10px 8px;
+}
+
+
+/* liens émissions */
+/* ----- list ----- */
+.allshows ul{
+      -webkit-columns: 5 300px;
+     -moz-columns: 5 300px;
+          columns: 5 300px;
+  -webkit-column-gap: 2em;
+     -moz-column-gap: 2em;
+          column-gap: 2em;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.allshows li.emission {
+	text-transform: capitalize;
+	padding: 5px;
+	margin-bottom: 10px;
+	background-color: #FFF;
+}
+.allshows li.emission a{
+	text-decoration:none;
+	padding: 0 5px 0 0;
+}
+li.emission strong{
+	padding: 0 10px;
+}
+li.ailleurs a {
+	color:#000;
+}
+li.ailleurs strong, li.ailleurs a:hover, .ailleurs_legend:hover, .all_legend:hover{
+	color: #FFF;
+	background-color:#000;
+}
+li.bagage a {
+	color:#000;
+}
+li.bagage strong, li.bagage a:hover, .bagage_legend:hover{
+	color:#fff;
+	background-color: #fc029c;
+}
+li.ouiedire a {
+	color:#000;
+}
+li.ouiedire strong, li.ouiedire a:hover, .ouiedire_legend:hover {
+	color: #FFF;
+	background-color:#8A2BE2;
+}
+li.bureau a {
+	color:#000;
+}
+li.bureau strong, li.bureau a:hover, .bureau_legend:hover {
+	color: #FFF;
+	background-color:#0099FF;
+}
+
+.date{
+	color:#ccc;
+	font-size:0.8em;
+}
+
+.bloc{
+	
+	background-color: #000;
+    text-align:center;
+}
+p.infos {
+	font-size: 1.6em;
+	color: #FFF;
+	line-height: 2.6em;
+	margin-top: 10px;
+}
+.bloc a {
+	text-decoration: none;
+	color: #FCFE04;
+	text-transform:capitalize;
+}
+
+
+
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display : block;
+}
+.hide {
+  display: none;
+}

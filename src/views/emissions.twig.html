@@ -23,7 +23,7 @@
                 <a href="{{ url('dons') }}"><3</a>
 <br /> --><p class="infos">
                 <a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes </a>  
-                 {{ shows|length }}  émissions   {{ djs|length }} curateurs 
+                 {{ shows|length }}  émissions   {{ djs|length }} curateurs 	<br/> 
   <br /> 
                 
                 <a href="http://www.canalb.fr/gabuzomix/podcasts">Canal B</a> 
@@ -59,7 +59,7 @@
 	{% endif %}
   		<li class="{{ show.typeSlug }}">
   			<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}">
-  				<strong>{{ show.number }} {{ show.authors }} </strong> {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }}) 
+  				<strong>{{ show.number }} / </strong>{{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }}) 
   			</a>
   		</li>
 {% endfor %}

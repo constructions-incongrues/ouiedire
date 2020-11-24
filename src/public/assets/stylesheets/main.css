@@ -76,10 +76,9 @@ font-size: 18px;
 }
 
 .nav p {
-    text-align: left;
     position: relative;
-    top: -150px;
-    right: -15px;
+    top: -20px;
+    right: 5px;
     font-weight: lighter;
     text-align: right;
 }

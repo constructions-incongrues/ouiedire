@@ -428,9 +428,11 @@ ul{
 	/*list-style-image:url('../img/files_black.png')*/
 	;
 	list-style-type: none;
-	margin:0px 0px 20px -48px;
-	columns: 3;
-}
+	margin:0px 0px 20px -30px;
+	columns: 2;
+	column-count:unset;
+/*	columns: 3;
+*/}
 .nav ul, .nav li {
 	display: inline;
 	color:#000;
@@ -662,7 +664,7 @@ font-size: 18px;
 li.bagage, li.ailleurs, li.bureau, li.ouiedire{
 	font-size: 1.8rem;
 	line-height: 0px;
-	margin: 30px 0px 30px 0px;
+	margin: 30px 15px 30px 0px;
 }
 .maxi-player{
 	background-color: #000

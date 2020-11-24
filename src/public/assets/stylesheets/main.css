@@ -660,7 +660,7 @@ font-size: 18px;
 }
 li.bagage, li.ailleurs, li.bureau, li.ouiedire{
 	font-size: 1.8rem;
-	display: inline-flex;
+	display: inline-grid;
 
 }
 .maxi-player{

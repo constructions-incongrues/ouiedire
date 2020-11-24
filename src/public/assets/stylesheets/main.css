@@ -16,6 +16,7 @@ header {
 	margin-bottom:20px;
 }
 /* ====== Text treatments ====== */
+.grid-100 {margin-bottom: 20px;}
 .grid-30 span {
 	background-color:#000;
 	color:#FFF;

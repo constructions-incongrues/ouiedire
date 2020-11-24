@@ -112,6 +112,8 @@ font-size: 18px;
 	text-transform: lowercase;
 	font-weight: bold;
 	background-color: #FFF;
+	padding: 10px;
+	text-decoration: none;
 
 }
 .ailleurs_legend {
@@ -338,12 +340,14 @@ h4 a:hover {
 .legendinfo {
     font-size: 1.8rem;
     background-color: transparent;
-    margin-top: -140px;
+    margin-top: 0px;
     margin-left: 12px;
     text-align: right;
     margin-right: -10px;
     margin-bottom: 30px;
-    padding: 3;
+    position: fixed;
+    top: 100px
+    right:20px;
 }
 .legendinfo span {
 	padding: 10px; 
@@ -431,7 +435,7 @@ ul{
 	/*list-style-image:url('../img/files_black.png')*/
 	;
 	list-style-type: none;
-	margin:110px 0px 20px -48px;
+	margin:0px 0px 20px -48px;
 }
 .nav ul, .nav li {
 	display: inline;
@@ -456,7 +460,7 @@ nav {
 header img {
 	max-width: 100%;
 	max-height: 100%;
-	margin: 0px 0x 0px -16px;
+	margin: 0px 0px -40px -0px;
 }
 audio {
 	position:relative;

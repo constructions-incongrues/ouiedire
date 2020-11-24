@@ -429,9 +429,9 @@ ul{
 	;
 	list-style-type: none;
 	margin:0px 0px 20px -30px;
-	columns: 2;
+/*	columns: 2;
 	column-count:unset;
-/*	columns: 3;
+/*	columns: 3;*/
 */}
 .nav ul, .nav li {
 	display: inline;

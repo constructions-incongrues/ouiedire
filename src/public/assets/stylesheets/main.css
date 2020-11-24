@@ -1,6 +1,6 @@
 /*Code by Constructions Incongrues www.constructions-incongrues.net/.pCode licensed under the GNU AGPLv3:http://www.gnu.org/licenses/gpl.txVersion: 1.0*/
 /* TODO : A cleaner */
-@import url(http://fonts.googleapis.com/css?family=Metrophobic);
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
 html {
 	font-size:62.5%;
 }
@@ -9,7 +9,7 @@ body {
 	background-image: url(../img/pattern.gif);
 	background-repeat: repeat;
 	background-attachment: fixed;
-	font-family: 'Metrophobic', sans-serif;
+	font-family: 'Roboto Mono', sans-serif;
 	margin-left:30px;
 }
 header {
@@ -36,7 +36,6 @@ header {
 	margin:-78px 0px 0px 10px;
 }
 .descriptiontext p {
-    font-weight: 700;
 	font-size: 13px;
 	font-size: 1.3rem;
     margin: 0px 0 0 10px;
@@ -45,6 +44,8 @@ header {
     padding: 10px;
     font-weight: bold;
 }
+.descriptiontext a{
+    color: #00CCFF !important;
 }
 .grid-70 p:nth-child(2) {
 	position: relative;
@@ -52,7 +53,6 @@ header {
 	left:18px;
 	font-weight: bold;
 	text-transform: uppercase;
-	;
 	background-color: #00CCFF;
 	padding:4px;
 font-size: 18px;
@@ -73,7 +73,6 @@ font-size: 18px;
 }
 
 .nav p {
-    text-align: left;
     position: relative;
     top: -150px;
     right: -15px;
@@ -108,72 +107,144 @@ font-size: 18px;
 	text-transform: uppercase;
 }
 /* links */
+.emissions_legend{
+	color:#000;
+	margin-right: 10px;
+	text-transform: lowercase;
+	background-color: #FCFE04;
+	padding: 10px 8px !important;
+}
+.all_legend {
+	color:#000;
+	margin-right: 10px;
+	font-weight: lighter;
+	background-color: #FFF;
+	cursor:pointer;
+	padding: 10px 8px !important;
+}
 .ailleurs_legend {
 	color:#000;
 	margin-right: 10px;
 	text-transform: lowercase;
-			font-weight: lighter;
-
-			background-color: #FFF;
-
+	font-weight: lighter;
+	background-color: #FFF;
+	cursor:pointer;
+	padding: 0px 0px 10px 0px;
+}
+.ailleurs_legend strong {
+	background-color:#000;
+	color: #FFF;
+	padding: 10px 8px;
 }
 .bagage_legend {
 	color:#fc029c;
 	margin-right: 10px;
-		text-transform: lowercase;
-			font-weight: lighter;
-			background-color: #FFF;
-
-
+	text-transform: lowercase;
+	font-weight: lighter;
+	background-color: #FFF;
+	cursor:pointer;
+	padding: 0px 0px 10px 0px;
+}
+.bagage_legend strong {
+	background-color:#fc029c;
+	color: #FFF;
+	padding: 10px 8px;
 }
 .bureau_legend {
 	color:#0099FF;
 	margin-right: 10px;
-		text-transform: lowercase;
-			font-weight: lighter;
-						background-color: #FFF;
-
-
-
+	text-transform: lowercase;
+	font-weight: lighter;
+	background-color: #FFF;
+	cursor:pointer;
+	padding: 0px 0px 10px 0px;
+}
+.bureau_legend strong {
+	background-color:#0099FF;
+	color: #FFF;
+	padding: 10px 8px;
 }
 .ouiedire_legend {
 	color:#8A2BE2;
-	margin-right: 10px;
-		text-transform: lowercase;
-			font-weight: lighter;
-						background-color: #FFF;
-
-
-
+	margin-right: 0px;
+	text-transform: lowercase;
+	font-weight: lighter;
+	background-color: #FFF;
+	cursor:pointer;
+	padding: 0px 0px 10px 0px;
+}
+.ouiedire_legend strong {
+	background-color:#8A2BE2;
+	color: #FFF;
+	padding: 10px 8px;
 }
 li.ailleurs a, dd a:first-child {
-		background-color: #FFF;
-
+	background-color: #FFF;
 	text-decoration: none;
 	color:#000;
-	padding: 10px;
+	padding:  10px 10px 10px 0px;
 	position:relative;
+}
+li.ailleurs strong {
+	color: #FFF;
+	background-color:#000;
+	padding: 10px;
+}
+li.ailleurs a:hover, .ailleurs_legend:hover, .all_legend:hover{
+	color: #FFF;
+	background-color:#000;
 }
 li.bagage a, dd a:first-child {
 	text-decoration: none;
 	color:#fc029c;
 	background-color: #FFF;
-	padding: 10px;
+	padding:  10px 10px 10px 0px;
 	position:relative;
+}
+li.bagage strong {
+	color: #FFF;
+	background-color:#fc029c;
+	padding: 10px;
+}
+li.bagage a:hover, .bagage_legend:hover{
+	background-color: #fc029c;
+	color:#fff;
 }
 li.ouiedire a, dd a:first-child {
 	text-decoration: none;
 	color:#8A2BE2;
 	background-color: #FFF;
-	padding: 10px;
+	padding:  10px 10px 10px 0px;
 	position:relative;
+}
+li.ouiedire strong {
+	color: #FFF;
+	background-color:#8A2BE2;
+	padding: 10px;
+}
+li.ouiedire a:hover, .ouiedire_legend:hover {
+	background-color:#8A2BE2;
+	color: #FFF;
 }
 li.bureau a, dd a:first-child {
 	text-decoration: none;
 	color:#0099FF;
 	background-color: #FFF;
-	padding: 10px;
+	padding:  10px 10px 10px 0px;
 	position:relative;
+}
+li.bureau strong {
+	color: #FFF;
+	background-color:#0099FF;
+	padding: 10px;
+}
+li.bureau a:hover, .bureau_legend:hover {
+	background-color:#0099FF;
+	color: #FFF;
+}
+.date{
+	color:#ccc;
+	font-size:0.8em;
 }
 ol a, ol li span,.description a {
 	font-weight: bold;
@@ -184,7 +255,6 @@ ol a, ol li span,.description a {
 footer p:first-child a, nav a {
 	background-color: #000;
 	color:#FFF;
-	padding:4px;
 	text-transform: uppercase;
 	font-size:18px;
 	font-size: 1.8rem;
@@ -205,10 +275,10 @@ nav a {
 	text-decoration: none;
 	font-weight: bold;
 }
-li a:hover, dd a:hover:first-child {
+/*li a:hover, dd a:hover:first-child {
 	background-color: #000;
-	color:#FFF;
-}
+	color:#00CCFF;
+}*/
 .download {
 	float:right;
 	position:relative;
@@ -228,7 +298,7 @@ li a:hover, dd a:hover:first-child {
 	color: #00CCFF;
 }
 ol li a:hover {
-	border-bottom:1px solid #000;
+	border-bottom:1px solid #00CCFF;
 	background-color: transparent;
 }
 .description a {
@@ -257,7 +327,6 @@ h1 a:hover {
 
 }
 .nav p a {
-	text-decoration: none;
 	font-weight:bold;
 	background-color:transparent;
 	text-transform:lowercase;
@@ -304,48 +373,42 @@ h4 a:hover {
 }
 .bloc a {
 	text-decoration: none;
-	font-weight: bold;
-	color: #FFF;
+	color: #FCFE04;
 	text-transform:capitalize;}
 .bloc .infos {
     text-decoration: none;
-    font-weight: lighter;
     color: #FFF;
-    line-height: 25px;
-    display: inline-block;
+    line-height: 2em;
+    display: block;
     margin-top: 30px;
     margin-left: 20px;
 }
 .bloc p.infos {
 	background-color:#000;
 	text-decoration: none;
-	font-weight: none;
 	color:#FFF;
 	text-transform: capitalize;
+    text-align:center !important;
 }
 .bloc a:hover h6 a:hover{
 	color:#FFF;
 	font-weight: lighter;
 }
 .bloc a:hover {
-	text-decoration: line-through;
+	text-decoration: underline;
 }
 
 .legendinfo {
     font-size: 1.8rem;
     background-color: transparent;
-    margin-top: -140px;
-    margin-left: 12px;
-    text-align: right;
-    margin-right: -10px;
-    margin-bottom: 30px;
-    padding: 3;
+    float: right !important;
+    margin-top:60px;
+    margin-right:-20px;
 }
-.legendinfo span {padding: 10px; 
-margin-top: -50px;
-margin-left: 400px
-font-size: 18px;
-	font-size: 1.8rem;}
+.legendinfo span {
+    padding: 10px 10px 10px 0; 
+	font-size: 1.6rem;
+}
 h6 a {
 	font-weight:bold;
 }
@@ -357,7 +420,6 @@ h1 {
     position: relative;
     left: 400px;
     top: -120px;
-    padding: 20px;
     background-color: #fff;
     padding: 0;
     font-weight: lighter;
@@ -375,18 +437,16 @@ h2 {
 }
 .bloc {
 	margin: 40px 0 20px 18px;
-	font-size: 25px;
-	font-size: 2.5rem;
+	font-size: 2.2em;
 	padding: 0px;
 	text-transform: none;
-	font-weight: bold;
 	line-height: 20px;
 	display: block;
 	position: relative;
 	top:-0px;
 	background-color: #000;
 	color: #FFF;
-	font-weight: lighter;
+	font-weight: normal;
 }
 h6 {
 	margin: 50px 0px 0px 15px;
@@ -403,7 +463,6 @@ h6 {
 	color: #FFF;
 	position: relative;
 	top:25px;
-	font-size: 13px;
 	font-weight: bold;
 	font-size: 1.3rem;
 	padding: 4px;
@@ -430,7 +489,7 @@ ul{
 	/*list-style-image:url('../img/files_black.png')*/
 	;
 	list-style-type: none;
-	margin:110px 0px 20px -48px;
+	margin: 0 0 20px -50px;
 }
 .nav ul, .nav li {
 	display: inline;
@@ -466,25 +525,35 @@ audio {
 	max-height: 100%;
 }
 /* **************** MEDIA PLAYER (http://mediaelementjs.com) ***************** */
+.mejs-container .mejs-controls div{
+	font-family: 'Roboto Mono', sans-serif !important;    
+}
+.mejs-time-rail{
+    max-width:717px !important;
+}
 .mejs-container {
-	margin:-65px 0px 0px 0px;
-	width: 98%
+	margin:-70px 0px 0px 0px !important;
+	width: 98% !important
+}
+.mejs-controls .mejs-time-rail .mejs-time-loaded{
+	background-color:#00CCFF !important; 
+    background-image:none !important;
+}
+.mejs-controls .mejs-time-rail .mejs-time-current, .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{
+	background-color:#FFF !important; 
+    background-image:none !important;    
 }
 a.mejs-smartplaylist-time {
 	background-color:#fff;
 	color:#000;
-	padding: 3px;
-
-	font-family:"Helvetica";
-font-size: 18px;
-	font-size: 1.8rem;
-	font-weight: lighter;
-	font-size: 1.5rem;
 	text-decoration: none;
+    margin:0 !important;
+    padding:3px !important;
+	font-family: 'Roboto Mono', sans-serif !important;
+	font-size:1.4rem;
 }
 .mejs-smartplaylist-time a:hover.mejs-smartplaylist-time {
 	color:#000;
-	font-weight: bold;
 	background-color: transparent;
 }
 a.mejs-smartplaylist-time:after {
@@ -498,32 +567,30 @@ a.mejs-smartplaylist-time:before {
 	width: 98%;
 }
 a.mejs-smartplaylist-time.mejs-smartplaylist-current {
-	background-color: #000;
-	color:#FFF;
-	font-weight: bold;
-	margin-left: -3px;
-	padding: 6px;
+	background-color: #FCFE04;
+	color:#000;
+    margin:0 !important;
+    padding:3px !important;
+    font-weight:normal !important;
 }
 ol.mejs-smartplaylist-playlist {
 	list-style-type: none;
 	margin-left: -60px;
-	margin-top:- 20px;
+	margin-top: 20px;
 }
 .mejs-smartplaylist-playlist li {
 	text-decoration: none;
 	color:#000;
 	background-color: #fff;
-	padding: 3px;
+	padding: 2px 0;
 	position:relative;
 	top:-5px;
-	width: 96.4%;
-	font-size:1.8rem;
-	margin:3px 10px 3px 20px;
+	font-size:1.4rem;
+	margin:0px 10px 0px 20px;
 
 }
 .otherShows
   {
-	padding:0px;
 	color:#FFF;
 	font-weight: lighter;
 	background-color: #000;
@@ -538,7 +605,6 @@ ol.mejs-smartplaylist-playlist {
 	background-color: #000;
 	color: #FFF;
 	font-weight:bold;
-	text-transform: lighter;
 	text-transform: uppercase;
 	font-size: 1.8rem;
 }
@@ -570,7 +636,7 @@ dt {
 	margin: 10px 0px 0px -2px;
 }
 dt a {
-	background-color: none;
+	background-color: transparent;
 }
 dl {
 	font-size: 18px;
@@ -613,15 +679,11 @@ h5 {
 	font-size: 13px;
 	font-size: 1.3rem;
 	text-transform: uppercase;
-	margin-left: 0px;
-	margin-top: 0px!important;
-	margin-bottom: 0px;
 	background-color: yellow;
 	padding: 5px;
 	font-weight: bold;
 	border:none;
 	margin-left: 17px;
-	width: 8.5%;
 	display: inline;
 }
 h5 a {
@@ -642,7 +704,6 @@ font-size: 18px;
 	font-size: 1.8rem;
 	padding: 4px;
 	text-transform: uppercase;
-	font-weight: lighter;
 	background-color: #000;
 	color: #FFF;
 	font-weight: bold;
@@ -653,7 +714,6 @@ font-size: 18px;
 font-size: 18px;
 	font-size: 1.8rem;
 	padding: 4px;
-	font-weight: none;
 	text-transform:uppercase;
 	background-color: transparent;
 	color: #000;
@@ -664,8 +724,22 @@ font-size: 18px;
 	margin-left:-14px;
 }
 li.bagage, li.ailleurs, li.bureau, li.ouiedire{
-	font-size: 1.8rem;
+	font-size: 1.4rem;
+}
+li.bagage strong, li.ailleurs strong, li.bureau strong, li.ouiedire strong{
+	font-size: 1.4rem;
 }
 .maxi-player{
 	background-color: #000
+}
+
+
+
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display : inline-block;
+}
+.hide {
+  display: none;
 }

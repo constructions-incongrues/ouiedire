@@ -422,14 +422,14 @@ li {
 	font-size: 13px;
 	font-size: 1.3rem;
 	text-transform: capitalize;
-	display: inline-block;
+	display: inline-flex;
 }
 ul{
 	/*list-style-image:url('../img/files_black.png')*/
 	;
 	list-style-type: none;
 	margin:0px 0px 20px -48px;
-	line-height: 40px
+	line-height: 20px
 }
 .nav ul, .nav li {
 	display: inline;

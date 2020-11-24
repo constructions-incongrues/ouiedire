@@ -10,6 +10,7 @@ body {
 	background-repeat: repeat;
 	background-attachment: fixed;
 	font-family: 'Metrophobic', sans-serif;
+	margin:0px 30px 0px 30px;
 }
 
 /* ====== Text treatments ====== */
@@ -343,10 +344,9 @@ h4 a:hover {
     margin-top: 0px;
     margin-left: 12px;
     text-align: right;
-    margin-right: -10px;
     margin-bottom: 30px;
     position: fixed;
-    top: 100px;
+    top: 90px;
     right:20px;
 }
 .legendinfo span {
@@ -535,9 +535,6 @@ ol.mejs-smartplaylist-playlist {
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	padding: 20px;
-	margin-top: -20px;
-	margin-left: 0px;
-	margin-bottom: 0px;
 }
 .otherShows  a {
 	background-color: #000;

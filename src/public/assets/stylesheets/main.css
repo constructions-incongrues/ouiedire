@@ -32,9 +32,7 @@ body {
 	font-size: 13px;
 	font-size: 1.3rem;
 }
-.description img {
-	margin:0px 0px 0px 10px;
-}
+
 .descriptiontext p {
     font-weight: 700;
 	font-size: 13px;
@@ -198,10 +196,7 @@ footer p:first-child a, nav a {
 	font-size: 1.8rem;
 	padding:11px;
 }
-footer p:first-child a:hover, nav a:hover {
-	font-weight: normal;
-	border-bottom: 2px solid #00CCFF
-}
+
 footer a, .flyer p a {
 	text-decoration: none;
 	color: #000;
@@ -346,7 +341,7 @@ h4 a:hover {
     text-align: right;
     margin-bottom: 30px;
     position: fixed;
-    top: 90px;
+    top: 130px;
     right:42px;
 }
 .legendinfo span {
@@ -460,7 +455,7 @@ nav {
 header img {
 	max-width: 100%;
 	max-height: 100%;
-	margin: 10px 0px -30px -0px;
+	margin: 20px 0px -20px -0px;
 }
 audio {
 	position:relative;

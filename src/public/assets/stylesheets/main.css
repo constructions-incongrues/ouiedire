@@ -340,7 +340,7 @@ h4 a:hover {
     margin-left: 12px;
     text-align: right;
     margin-bottom: 30px;
-    position: fixed;
+    position: absolute;
     top: 130px;
     right:42px;
 }

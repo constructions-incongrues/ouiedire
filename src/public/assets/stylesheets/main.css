@@ -422,7 +422,6 @@ li {
 	font-size: 13px;
 	font-size: 1.3rem;
 	text-transform: capitalize;
-	display: inline-flex;
 }
 ul{
 	/*list-style-image:url('../img/files_black.png')*/
@@ -661,6 +660,8 @@ font-size: 18px;
 }
 li.bagage, li.ailleurs, li.bureau, li.ouiedire{
 	font-size: 1.8rem;
+	display: inline-flex;
+
 }
 .maxi-player{
 	background-color: #000

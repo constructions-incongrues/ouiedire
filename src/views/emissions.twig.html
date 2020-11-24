@@ -51,7 +51,7 @@
  	<span class="ailleurs_legend">Ailleurs, invité </span> <span class="bagage_legend">Bagage, maison de disques</span> <span class="bureau_legend">Bureau, réunions incongrues </span> <span class="ouiedire_legend"> Ouïedire, fait maison </span> 
  	</p>
 
-
+<div class="allshows">
 		<ul>
 {% for show in shows %}
 	{% if loop.index0 == (loop.length / 1)|number_format %}
@@ -64,6 +64,7 @@
   		</li>
 {% endfor %}
 		</ul>
+		</div>
 		
 	</div><!-- grid-50 -->
 {% endblock %}

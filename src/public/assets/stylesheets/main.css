@@ -428,7 +428,8 @@ ul{
 	;
 	list-style-type: none;
 	margin:0px 0px 20px -48px;
-	line-height: 20px
+	line-height: 20px;
+	display: grid;
 }
 .nav ul, .nav li {
 	display: inline;

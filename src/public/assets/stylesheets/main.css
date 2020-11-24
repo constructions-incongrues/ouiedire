@@ -418,7 +418,7 @@ h4, h5 {
 }
 /* ----- list ----- */
 li {
-	margin:15px 10px 15px 20px;
+	margin:10px 10px 10px 20px;
 	font-size: 13px;
 	font-size: 1.3rem;
 	text-transform: capitalize;
@@ -429,6 +429,7 @@ ul{
 	;
 	list-style-type: none;
 	margin:0px 0px 20px -48px;
+	line-height: 40px
 }
 .nav ul, .nav li {
 	display: inline;
@@ -665,4 +666,4 @@ li.bagage, li.ailleurs, li.bureau, li.ouiedire{
 	background-color: #000
 }
 
-.allshows {columns: 3;}
+.allshows {columns: 4;}

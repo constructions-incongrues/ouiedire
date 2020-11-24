@@ -54,7 +54,9 @@
 </nav> -->
 
 <div class="grid-100 mobile-grid-100">
-    <section class="nav">
+
+
+<section class="nav">
 <p>
 {% if (previous) %}
 <a class="previous" href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}"> anciennes émissions  </a> {% endif %}
@@ -63,7 +65,6 @@
 </p>
 </section>
    
-
     <h1 class="otherShows">
 
 
@@ -80,10 +81,7 @@
            <strong> {{ show.typeSlug }}  {{ show.number }}</strong>  {{ show.authors }} - {{ show.title }}  ({{ show.releasedAt|date('d/m/Y') }}) / <a href="{{ show.urlDownload }}"> télécharger</a>
         </a>
                
-
-              
-
-    </h1>
+  </h1>
 </div> 
 
 
@@ -103,26 +101,15 @@
 
 <div class="grid-50 mobile-grid-100 description">
 
-<hr />
-
 {% for urlCover in show.covers %}
         <img src="{{ urlCover }}" alt="Artwork" /><br />
 {% endfor %}
-<p>
-       <div class="descriptiontext"> {{ show.description|raw }}
-       <hr />
 
-       </p>
+  <div class="descriptiontext"> 
+  <p>{{ show.description|raw }} </p>
 
 
     </div>
-
-
-
-
-
-
-    
 
 </div><!-- grid-50 -->
 

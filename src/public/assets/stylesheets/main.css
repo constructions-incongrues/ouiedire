@@ -15,8 +15,10 @@ body {
 header {
 	margin-bottom:20px;
 }
+
 /* ====== Text treatments ====== */
 .grid-100 {margin-bottom: 20px;}
+
 .grid-30 span {
 	background-color:#000;
 	color:#FFF;
@@ -34,7 +36,7 @@ header {
 	font-size: 1.3rem;
 }
 .description img {
-	margin:-78px 0px 0px 10px;
+	margin:17px 0px 0px 10px;
 }
 .descriptiontext p {
     font-weight: 700;
@@ -354,13 +356,9 @@ h6 a {
 h1 {
     font-size: 20px;
     font-size: 2rem;
-    text-transform: uppercase;
-    position: relative;
-    left: 400px;
-    top: -120px;
+    text-transform: uppercase; 
     padding: 20px;
     background-color: #fff;
-    padding: 0;
     font-weight: lighter;
     display: inline;
 }
@@ -468,8 +466,8 @@ audio {
 }
 /* **************** MEDIA PLAYER (http://mediaelementjs.com) ***************** */
 .mejs-container {
-	margin:-65px 0px 0px 0px;
-	width: 98%
+	margin:30px 0px 30px 0px;
+	width: 97%
 }
 a.mejs-smartplaylist-time {
 	background-color:#fff;

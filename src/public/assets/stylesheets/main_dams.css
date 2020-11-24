@@ -111,46 +111,40 @@ body {
 }
 .allshows li.emission {
 	text-transform: capitalize;
-	padding: 5px;
 	margin-bottom: 10px;
 	background-color: #FFF;
 }
 .allshows li.emission a{
+	color:#000;
 	text-decoration:none;
-	padding: 0 5px 0 0;
+	padding: 5px 5px 5px 0;
+	display:block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 li.emission strong{
-	padding: 0 10px;
-}
-li.ailleurs a {
-	color:#000;
+	padding: 5px 10px;
 }
 li.ailleurs strong, li.ailleurs a:hover, .ailleurs_legend:hover, .all_legend:hover{
 	color: #FFF;
 	background-color:#000;
 }
-li.bagage a {
-	color:#000;
-}
 li.bagage strong, li.bagage a:hover, .bagage_legend:hover{
 	color:#fff;
 	background-color: #fc029c;
 }
-li.ouiedire a {
-	color:#000;
-}
+
 li.ouiedire strong, li.ouiedire a:hover, .ouiedire_legend:hover {
 	color: #FFF;
 	background-color:#8A2BE2;
-}
-li.bureau a {
-	color:#000;
 }
 li.bureau strong, li.bureau a:hover, .bureau_legend:hover {
 	color: #FFF;
 	background-color:#0099FF;
 }
-
+.title_to_cut{
+}
 .date{
 	color:#ccc;
 	font-size:0.8em;

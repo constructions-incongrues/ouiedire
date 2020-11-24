@@ -43,7 +43,7 @@
 			{% if loop.index0 == (loop.length / 1)|number_format %}{% endif %}
 			<li class="emission {{ show.typeSlug }}">
 				<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}" title="{{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})">
-					<strong>{{ show.number }}</strong> {{ show.authors }} - {{ show.title }}
+					<span class="title_to_cut"><strong>{{ show.number }}</strong> {{ show.authors }} - {{ show.title }}</span>
 				</a>
 			</li>
 		{% endfor %}

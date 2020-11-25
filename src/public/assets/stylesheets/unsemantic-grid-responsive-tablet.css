@@ -74,6 +74,10 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .grid-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .mobile-grid-100:before,
   .mobile-grid-100:after {
     content: ".";

@@ -12,39 +12,56 @@ body {
 	font-family: 'Roboto Mono', sans-serif;
 }
 
-/* links */
+
+
+/* Boutons filtres "type d'emission" */
+/* ================================= */
 .legendinfo {
-	margin-top:50px;
     background-color: transparent;
     float: right !important;
 }
 .legendinfo div {
 	display: inline-block;
+	text-transform: lowercase;
+	font-weight: lighter;
+	cursor:pointer;
     padding: 10px 10px 10px 0; 
-	font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+@media screen and (min-width: 1025px) {
+	.legendinfo {
+		margin-top:50px;
+	}
+	.legendinfo div {
+		font-size: 1.2rem;
+	}
+	.ailleurs_legend, .bagage_legend, .bureau_legend, .ouiedire_legend {
+		padding: 0px 0px 10px 0px;
+	}
 }
 .emissions_legend{
 	color:#000;
 	margin-right: 10px;
-	text-transform: lowercase;
+	cursor:default !important;
 	background-color: #FCFE04;
 	padding: 10px 8px !important;
 }
 .all_legend {
 	color:#000;
 	margin-right: 10px;
-	font-weight: lighter;
+	text-transform: uppercase;
 	background-color: #FFF;
-	cursor:pointer;
-	padding: 10px 8px !important;
+	padding: 0px !important;
+}
+.all_legend strong {
+	background-color:#FFF;
+	color: #000;
+	padding: 10px 8px;
 }
 .ailleurs_legend {
 	color:#000;
 	margin-right: 10px;
-	text-transform: lowercase;
-	font-weight: lighter;
 	background-color: #FFF;
-	cursor:pointer;
 	padding: 0px 0px 10px 0px;
 }
 .ailleurs_legend strong {
@@ -55,10 +72,7 @@ body {
 .bagage_legend {
 	color:#fc029c;
 	margin-right: 10px;
-	text-transform: lowercase;
-	font-weight: lighter;
 	background-color: #FFF;
-	cursor:pointer;
 	padding: 0px 0px 10px 0px;
 }
 .bagage_legend strong {
@@ -69,10 +83,7 @@ body {
 .bureau_legend {
 	color:#0099FF;
 	margin-right: 10px;
-	text-transform: lowercase;
-	font-weight: lighter;
 	background-color: #FFF;
-	cursor:pointer;
 	padding: 0px 0px 10px 0px;
 }
 .bureau_legend strong {
@@ -83,10 +94,7 @@ body {
 .ouiedire_legend {
 	color:#8A2BE2;
 	margin-right: 0px;
-	text-transform: lowercase;
-	font-weight: lighter;
 	background-color: #FFF;
-	cursor:pointer;
 	padding: 0px 0px 10px 0px;
 }
 .ouiedire_legend strong {
@@ -94,10 +102,23 @@ body {
 	color: #FFF;
 	padding: 10px 8px;
 }
+@media screen and (max-width: 767px) {
+	.ailleurs_legend, .bagage_legend, .bureau_legend, .ouiedire_legend {
+		padding: 0 !important;
+	}
+	.ailleurs_legend strong, .bagage_legend strong, .bureau_legend strong, .ouiedire_legend strong {
+		padding: 5px 5px;
+	}
+	.ailleurs_legend, .bagage_legend, .bureau_legend {
+		margin-right: 2px !important;
+	}
+}
+
+
 
 
 /* liens émissions */
-/* ----- list ----- */
+/* =============== */
 .allshows ul{
   -webkit-columns: 5 300px;
      -moz-columns: 5 300px;
@@ -148,21 +169,34 @@ li.bureau strong, li.bureau a:hover, .bureau_legend:hover {
 	font-size:0.8em;
 }
 
+/* BLOC NOIR */
+/* ========= */
 .bloc{	
 	background-color: #000;
-    text-align:center;
+    text-align: center;
+    padding:7px 10px 14px 10px;
+    margin-bottom:20px;
 }
-p.infos {
-	font-size: 1.6em;
+div.infos {
 	color: #FFF;
-	line-height: 2.6em;
-	margin-top: 10px;
+}
+@media screen and (min-width: 1025px) {
+	div.infos .big{
+		font-size: 1.6em;
+	}
+	div.infos .small{
+		font-size: 1.2em;
+	}
 }
 .bloc a {
 	text-decoration: none;
 	color: #FCFE04;
 	text-transform:capitalize;
 }
+.diamond{
+	opacity:0.3;
+}
+
 
 
 

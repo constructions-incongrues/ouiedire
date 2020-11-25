@@ -10,12 +10,12 @@
 
 {% block showsfilters %}
  <div class="legendinfo" style="text-align:right;">
- 	<div class="emissions_legend">Les émissions :</div>
-	<div class="all_legend" onclick="filterSelection('all')">TOUT !</div> 
-	<div class="ailleurs_legend" onclick="filterSelection('ailleurs')"><strong>Ailleurs</strong> invité</div> 
-	<div class="bagage_legend" onclick="filterSelection('bagage')"><strong>Bagage</strong> maison de disques</div> 
-	<div class="bureau_legend" onclick="filterSelection('bureau')"><strong>Bureau</strong> réunions incongrues</div> 
-	<div class="ouiedire_legend" onclick="filterSelection('ouiedire')"><strong>Ouïedire</strong> fait maison</div>
+ 	<div class="emissions_legend hide-on-mobile">Les émissions :</div>
+	<div class="all_legend hide-on-mobile" onclick="filterSelection('all')"><strong>TOUT !</strong></div> 
+	<div class="ailleurs_legend" onclick="filterSelection('ailleurs')"><strong>Ailleurs</strong><span class="hide-on-mobile"> invité</span></div> 
+	<div class="bagage_legend" onclick="filterSelection('bagage')"><strong>Bagage</strong><span class="hide-on-mobile"> maison de disques</span></div> 
+	<div class="bureau_legend" onclick="filterSelection('bureau')"><strong>Bureau</strong><span class="hide-on-mobile"> réunions incongrues</span></div> 
+	<div class="ouiedire_legend" onclick="filterSelection('ouiedire')"><strong>Ouïedire</strong><span class="hide-on-mobile"> fait maison</span></div>
 </div>
 {% endblock %}
 
@@ -23,17 +23,23 @@
 <!-- <h5><a href="{{ path('emission', {id:randomShow.id, type:randomShow.typeSlug}) }}">Écouter de manière aléatoire</a></h5><hr>-->
 <div class="grid-100 tablet-grid-100 mobile-grid-100">
 	<div class="bloc">
-		<p class="infos">
-			<a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes </a>  ◈
-			{{ shows|length }}  émissions  ◈ {{ djs|length }} curateurs ◈	<a href="#infosfooter">informations</a> ◈ 
-			<a href="http://www.canalb.fr/gabuzomix/podcasts">Canal B</a> ◈
-			<a href="http://www.choq.ca/emissions-details/ouiedire/">Choq CA</a> ◈
-			<a href="https://www.facebook.com/cjucfm/?ref=br_rs">Cjuc 92.5 FM</a> ◈
-			<a href="http://www.radioeponyme.com/emissions/ouie-dire/">Eponyme</a> ◈
-			<a href="https://p-node.org/">π-node</a> ◈
-			<a href="http://radio-octopus.org">Radio Octopus</a> ◈
-			<a href="http://lastation.paris/station.station/ouiedire/">Station Station</a>
-		</p>
+		<div class="infos">
+			<span class="big"> 
+				<a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes </a> <span class="diamond"> &#11045; </span>
+				{{ shows|length }} émissions <span class="diamond"> &#11045; </span> 
+				{{ djs|length }} curateurs
+			</span>
+			<span class="small hide-on-mobile"> 
+				<br>
+				<a href="http://www.canalb.fr/gabuzomix/podcasts">Canal B</a> <span class="diamond"> &#11045; </span>
+				<a href="http://www.choq.ca/emissions-details/ouiedire/">Choq CA</a> <span class="diamond"> &#11045; </span>
+				<a href="https://www.facebook.com/cjucfm/?ref=br_rs">Cjuc 92.5 FM</a> <span class="diamond"> &#11045; </span>
+				<a href="http://www.radioeponyme.com/emissions/ouie-dire/">Eponyme</a> <span class="diamond"> &#11045; </span>
+				<a href="https://p-node.org/">π-node</a> <span class="diamond"> &#11045; </span>
+				<a href="http://radio-octopus.org">Radio Octopus</a> <span class="diamond"> &#11045; </span>
+				<a href="http://lastation.paris/station.station/ouiedire/">Station Station</a>
+			</span>
+		</div>
 	</div>
 </div>
 <div class="grid-100 mobile-grid-100">

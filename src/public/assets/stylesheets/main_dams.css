@@ -99,7 +99,7 @@ body {
 /* liens émissions */
 /* ----- list ----- */
 .allshows ul{
-      -webkit-columns: 5 300px;
+  -webkit-columns: 5 300px;
      -moz-columns: 5 300px;
           columns: 5 300px;
   -webkit-column-gap: 2em;
@@ -119,9 +119,9 @@ body {
 	text-decoration:none;
 	padding: 5px 5px 5px 0;
 	display:block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 li.emission strong{
 	padding: 5px 10px;
@@ -143,15 +143,12 @@ li.bureau strong, li.bureau a:hover, .bureau_legend:hover {
 	color: #FFF;
 	background-color:#0099FF;
 }
-.title_to_cut{
-}
 .date{
 	color:#ccc;
 	font-size:0.8em;
 }
 
-.bloc{
-	
+.bloc{	
 	background-color: #000;
     text-align:center;
 }

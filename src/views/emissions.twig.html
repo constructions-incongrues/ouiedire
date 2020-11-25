@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block showsfilters %}
- <div class="legendinfo">
+ <div class="legendinfo" style="text-align:right;">
  	<div class="emissions_legend">Les émissions :</div>
 	<div class="all_legend" onclick="filterSelection('all')">TOUT !</div> 
 	<div class="ailleurs_legend" onclick="filterSelection('ailleurs')"><strong>Ailleurs</strong> invité</div> 
@@ -21,7 +21,7 @@
 
 {% block content %}
 <!-- <h5><a href="{{ path('emission', {id:randomShow.id, type:randomShow.typeSlug}) }}">Écouter de manière aléatoire</a></h5><hr>-->
-<div class="grid-100">
+<div class="grid-100 tablet-grid-100 mobile-grid-100">
 	<div class="bloc">
 		<p class="infos">
 			<a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes </a>  ◈
@@ -43,7 +43,7 @@
 			{% if loop.index0 == (loop.length / 1)|number_format %}{% endif %}
 			<li class="emission {{ show.typeSlug }}">
 				<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}" title="{{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})">
-					<span class="title_to_cut"><strong>{{ show.number }}</strong> {{ show.authors }} - {{ show.title }}</span>
+					<strong>{{ show.number }}</strong> {{ show.authors }} - {{ show.title }}
 				</a>
 			</li>
 		{% endfor %}

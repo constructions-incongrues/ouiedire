@@ -9,13 +9,13 @@
 {% endblock %}
 
 {% block showsfilters %}
- <div class="legendinfo" style="text-align:right;">
- 	<div class="emissions_legend hide-on-mobile">Les émissions :</div>
-	<div class="all_legend hide-on-mobile" onclick="filterSelection('all')"><strong>TOUT !</strong></div> 
-	<div class="ailleurs_legend" onclick="filterSelection('ailleurs')"><strong>Ailleurs</strong><span class="hide-on-mobile"> invité</span></div> 
-	<div class="bagage_legend" onclick="filterSelection('bagage')"><strong>Bagage</strong><span class="hide-on-mobile"> maison de disques</span></div> 
-	<div class="bureau_legend" onclick="filterSelection('bureau')"><strong>Bureau</strong><span class="hide-on-mobile"> réunions incongrues</span></div> 
-	<div class="ouiedire_legend" onclick="filterSelection('ouiedire')"><strong>Ouïedire</strong><span class="hide-on-mobile"> fait maison</span></div>
+ <div class="filterContainer" style="text-align:right;">
+ 	<div class="showsFakeFilter hide-on-mobile">Les émissions :</div>
+	<div class="allFilter hide-on-mobile" onclick="filterSelection('all')"><strong>TOUT !</strong></div> 
+	<div class="ailleursFilter" onclick="filterSelection('ailleurs')"><strong>Ailleurs</strong><span class="hide-on-mobile"> invité</span></div> 
+	<div class="bagageFilter" onclick="filterSelection('bagage')"><strong>Bagage</strong><span class="hide-on-mobile"> maison de disques</span></div> 
+	<div class="bureauFilter" onclick="filterSelection('bureau')"><strong>Bureau</strong><span class="hide-on-mobile"> réunions incongrues</span></div> 
+	<div class="ouiedireFilter" onclick="filterSelection('ouiedire')"><strong>Ouïedire</strong><span class="hide-on-mobile"> fait maison</span></div>
 </div>
 {% endblock %}
 
@@ -43,11 +43,11 @@
 	</div>
 </div>
 <div class="grid-100 mobile-grid-100">
-	<div class="allshows">
+	<div class="showContainer">
 		<ul>
 		{% for show in shows %}
 			{% if loop.index0 == (loop.length / 1)|number_format %}{% endif %}
-			<li class="emission {{ show.typeSlug }}">
+			<li class="show {{ show.typeSlug }}">
 				<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}" title="{{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})">
 					<strong>{{ show.number }}</strong> {{ show.authors }} - {{ show.title }}
 				</a>

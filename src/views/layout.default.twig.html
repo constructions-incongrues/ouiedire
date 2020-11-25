@@ -56,10 +56,10 @@
 		  emissions = document.getElementsByClassName("emission");
 		  if (choice == "all") choice = "";
 		  for (i = 0; i < emissions.length; i++) {
-			  removeClass(emissions[i], "show");
-			  addClass(emissions[i], "hide");
-		    if (emissions[i].className.indexOf(choice) > -1) addClass(emissions[i], "show");
-		    if (emissions[i].className.indexOf(choice) > -1) removeClass(emissions[i], "hide");
+			  removeClass(emissions[i], "displayBlock");
+			  addClass(emissions[i], "displayNone");
+		    if (emissions[i].className.indexOf(choice) > -1) addClass(emissions[i], "displayBlock");
+		    if (emissions[i].className.indexOf(choice) > -1) removeClass(emissions[i], "displayNone");
 		  }
 		}
 		function addClass(element, name) {

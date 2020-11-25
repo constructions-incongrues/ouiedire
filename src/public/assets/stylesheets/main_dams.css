@@ -16,100 +16,90 @@ body {
 
 /* Boutons filtres "type d'emission" */
 /* ================================= */
-.legendinfo {
+.filterContainer {
     background-color: transparent;
     float: right !important;
 }
-.legendinfo div {
+.filterContainer div { /* TOUS LES FILTRES HERITENT DE CE TRUC */
 	display: inline-block;
 	text-transform: lowercase;
-	font-weight: lighter;
+	font-weight: normal;
 	cursor:pointer;
     padding: 10px 10px 10px 0; 
     margin-bottom: 20px;
+	margin-right: 10px;
+}
+.filterContainer div strong{
+	padding: 10px 8px;
 }
 @media screen and (min-width: 1025px) {
-	.legendinfo {
+	.filterContainer {
 		margin-top:50px;
 	}
-	.legendinfo div {
+	.filterContainer div {
 		font-size: 1.2rem;
 	}
-	.ailleurs_legend, .bagage_legend, .bureau_legend, .ouiedire_legend {
+	.ailleursFilter, .bagageFilter, .bureauFilter, .ouiedireFilter {
 		padding: 0px 0px 10px 0px;
 	}
 }
-.emissions_legend{
+.showsFakeFilter{
 	color:#000;
-	margin-right: 10px;
-	cursor:default !important;
 	background-color: #FCFE04;
+	cursor: default !important;
 	padding: 10px 8px !important;
 }
-.all_legend {
+.allFilter {
 	color:#000;
-	margin-right: 10px;
-	text-transform: uppercase;
 	background-color: #FFF;
+	text-transform: uppercase;
 	padding: 0px !important;
 }
-.all_legend strong {
-	background-color:#FFF;
+.allFilter strong {
 	color: #000;
-	padding: 10px 8px;
+	background-color:#FFF;
 }
-.ailleurs_legend {
+.ailleursFilter {
 	color:#000;
-	margin-right: 10px;
 	background-color: #FFF;
-	padding: 0px 0px 10px 0px;
 }
-.ailleurs_legend strong {
+.ailleursFilter strong {
+	color: #FFF;
 	background-color:#000;
-	color: #FFF;
-	padding: 10px 8px;
 }
-.bagage_legend {
+.bagageFilter {
 	color:#fc029c;
-	margin-right: 10px;
 	background-color: #FFF;
-	padding: 0px 0px 10px 0px;
 }
-.bagage_legend strong {
+.bagageFilter strong {
+	color: #FFF;
 	background-color:#fc029c;
-	color: #FFF;
-	padding: 10px 8px;
 }
-.bureau_legend {
+.bureauFilter {
 	color:#0099FF;
-	margin-right: 10px;
 	background-color: #FFF;
-	padding: 0px 0px 10px 0px;
 }
-.bureau_legend strong {
-	background-color:#0099FF;
+.bureauFilter strong {
 	color: #FFF;
-	padding: 10px 8px;
+	background-color:#0099FF;
 }
-.ouiedire_legend {
+.ouiedireFilter {
 	color:#8A2BE2;
-	margin-right: 0px;
 	background-color: #FFF;
-	padding: 0px 0px 10px 0px;
+	margin-right: 0px !important;
 }
-.ouiedire_legend strong {
+.ouiedireFilter strong {
 	background-color:#8A2BE2;
 	color: #FFF;
-	padding: 10px 8px;
 }
 @media screen and (max-width: 767px) {
-	.ailleurs_legend, .bagage_legend, .bureau_legend, .ouiedire_legend {
+	.ailleursFilter, .bagageFilter, .bureauFilter, .ouiedireFilter {
 		padding: 0 !important;
 	}
-	.ailleurs_legend strong, .bagage_legend strong, .bureau_legend strong, .ouiedire_legend strong {
+	.ailleursFilter strong, .bagageFilter strong, .bureauFilter strong, .ouiedireFilter strong {
 		padding: 5px 5px;
 	}
-	.ailleurs_legend, .bagage_legend, .bureau_legend {
+	.ailleursFilter, .bagageFilter, .bureauFilter {
 		margin-right: 2px !important;
 	}
 }
@@ -119,7 +109,7 @@ body {
 
 /* liens émissions */
 /* =============== */
-.allshows ul{
+.showContainer ul{
   -webkit-columns: 5 300px;
      -moz-columns: 5 300px;
           columns: 5 300px;
@@ -130,12 +120,12 @@ body {
 	margin: 0;
 	padding: 0;
 }
-.allshows li.emission {
+.showContainer li.show {
 	text-transform: capitalize;
 	margin-bottom: 10px;
 	background-color: #FFF;
 }
-.allshows li.emission a{
+.showContainer li.show a{
 	color:#000;
 	text-decoration:none;
 	padding: 5px 5px 5px 0;
@@ -144,23 +134,23 @@ body {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-li.emission strong{
+li.show strong{
 	padding: 5px 10px;
 }
-li.ailleurs strong, li.ailleurs a:hover, .ailleurs_legend:hover, .all_legend:hover{
+li.ailleurs strong, li.ailleurs a:hover, .ailleursFilter:hover, .allFilter:hover{
 	color: #FFF;
 	background-color:#000;
 }
-li.bagage strong, li.bagage a:hover, .bagage_legend:hover{
+li.bagage strong, li.bagage a:hover, .bagageFilter:hover{
 	color:#fff;
 	background-color: #fc029c;
 }
 
-li.ouiedire strong, li.ouiedire a:hover, .ouiedire_legend:hover {
+li.ouiedire strong, li.ouiedire a:hover, .ouiedireFilter:hover {
 	color: #FFF;
 	background-color:#8A2BE2;
 }
-li.bureau strong, li.bureau a:hover, .bureau_legend:hover {
+li.bureau strong, li.bureau a:hover, .bureauFilter:hover {
 	color: #FFF;
 	background-color:#0099FF;
 }
@@ -202,9 +192,9 @@ div.infos {
 
 
 /* The "show" class is added to the filtered elements */
-.show {
+.displayBlock {
   display : block;
 }
-.hide {
+.displayNone {
   display: none;
 }

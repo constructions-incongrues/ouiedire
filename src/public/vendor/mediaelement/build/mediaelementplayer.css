@@ -431,8 +431,12 @@
 
 .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
 	position: absolute;
-	left: 11px;
-	top: 8px;
+	left: 0;
+	top: 11px;
+	left: 0;
+	height: 8px;
+	margin: -15px -80px 0px 0px;
+	float: right;	left: 11px;
 	width: 2px;
 	height: 100px;
 	background: #ddd;
@@ -442,8 +446,11 @@
 
 .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
 	position: absolute;
-	left: 11px;
-	top: 8px;
+	left: 0;
+	top: 11px;
+	height: 8px;
+	margin: -15px -80px 0px 0px;
+	float: right;
 	width: 2px;
 	height: 100px;
 	background: #ddd;
@@ -453,12 +460,16 @@
 
 .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
 	position: absolute;
-	left: 4px;
-	top: -3px;
+	left: 0;
+	top: 11px;
+	left: 0;
+	height: 8px;
+	margin: -15px -80px 0px 0px;
+	float: right;
 	width: 16px;
 	height: 6px;
-	background: #ddd;
-	background: rgba(255, 255, 255, 0.9);
+	background: #fff
+	background:#fff;
 	cursor: N-resize;
 	-webkit-border-radius: 1px;
 	-moz-border-radius: 1px;
@@ -474,11 +485,18 @@
 }
 
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
-	position: absolute;
-	left: 0;
+	
 	top: 11px;
 	width: 50px;
 	height: 8px;
+	height: 8px;
+	margin: -15px -80px 0px 0px;
+	float: right;
+	padding: 0;
+	font-size: 1px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
 	margin: 0;
 	padding: 0;
 	font-size: 1px;
@@ -498,9 +516,17 @@
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
 	position: absolute;
 	left: 0;
+	top: 11px;
+	left: 0;
 	height: 8px;
 	margin: -15px -80px 0px 0px;
 	float: right;
+	padding: 0;
+	font-size: 1px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;	height: 8px;
+	margin: 0;
 	padding: 0;
 	font-size: 1px;
 	-webkit-border-radius: 2px;

@@ -485,6 +485,7 @@ font-size: 18px;
 	font-weight: bold;
 	background-color: transparent;
 }
+.mejs__volume-button > .mejs__volume-slider {background-color: #FFF!important;}
 a.mejs-smartplaylist-time:after {
 	content:"";
 }
@@ -496,8 +497,11 @@ a.mejs-smartplaylist-time:before {
 	width: 100%;
     background-color: #000;
    color:#FFF; }
+   .mejs__time-total {
+   	background-color: #FFF!important;
+   }
 a.mejs-smartplaylist-time.mejs-smartplaylist-current {
-	background-color: #000;
+	background-color: #fff;
 	color:#FFF;
 	font-weight: bold;
 	margin-left: -3px;

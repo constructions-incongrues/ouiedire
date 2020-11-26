@@ -16,32 +16,104 @@ body {
 }
 
 
-/* BLOC NOIR */
-/* ========= */
+/*  BLOC NOIR pour LISTE des émissions */
+/* =================================== */
+.center{
+    text-align: center;	
+}
 .bloc{	
 	background-color: #000;
-    text-align: center;
     padding: 7px 10px 14px 10px;
     margin: 10px 0 20px 0;
 }
+
 div.infos {
 	color: #FFF;
 }
 @media screen and (min-width: 1025px) {
+	.bloc{	
+    	padding: 7px 10px 7px 10px;
+	}
 	div.infos .big{
 		font-size: 1.6em;
 	}
 	div.infos .small{
+		display: block;
 		font-size: 1.2em;
+		margin-bottom:8px
 	}
 }
 .bloc a {
 	text-decoration: none;
 	color: #FCFE04;
-	text-transform:capitalize;
+	text-transform: capitalize;
 }
 .diamond{
 	opacity:0.3;
+}
+
+
+/*  BLOC NOIR pour UNE émission */
+/* ============================ */
+.cartouche{	
+	background-color: #000;
+    padding: 0;
+    margin: 10px 0 20px 0;
+}
+h2.showNumber{
+	display:inline-block;
+    text-transform: uppercase;
+	margin: 0;
+    padding: 10px 15px;
+	font-size: 1.6em;
+}
+		.showNumber.ailleurs{
+			color: #fff;
+			background-color:#333;
+		}
+		.showNumber.bagage{
+			color: #FFF;
+			background-color:#fc029c;
+		}
+		.showNumber.bureau{
+			color: #FFF;
+			background-color:#0099FF;
+		}
+		.showNumber.ouiedire{
+			color: #FFF;
+			background-color:#8A2BE2;
+		}
+h1.showTitle{
+	display:inline-block;
+	color: #fff;
+	margin: 0;
+	font-weight: normal;
+    padding: 0 15px;
+	font-size: 1.6em;
+}
+h3.showDate{
+	display: inline-block;
+	color:#666;
+	margin: 0;
+    padding: 10px 15px;
+	font-size: 1.6em;
+	float: right;
+	font-weight: normal;
+}
+h3.showDownload{
+	display: inline-block;
+	margin: 7px 0 0 20px;
+	font-size: 1.6em;
+	font-weight: normal;
+	position: absolute;
+}
+h3.showDownload a{	
+	color: #fff;
+	background-color:#333;
+    text-transform: uppercase;
+    text-decoration: none;
+	padding: 5px 10px;
+	font-size: 0.6em;
 }
 
 
@@ -127,7 +199,7 @@ div.infos {
 }
 .ailleursFilter strong {
 	color: #FFF;
-	background-color:#000;
+	background-color:#333;
 }
 .bagageFilter {
 	color:#fc029c;
@@ -151,8 +223,8 @@ div.infos {
 	margin-right: 0px !important;
 }
 .ouiedireFilter strong {
-	background-color:#8A2BE2;
 	color: #FFF;
+	background-color:#8A2BE2;
 }
 @media screen and (max-width: 767px) {
 	#logoDiv{
@@ -211,7 +283,7 @@ li.show strong{
 }
 li.ailleurs strong, li.ailleurs a:hover, .ailleursFilter:hover, .allFilter:hover{
 	color: #FFF;
-	background-color:#000;
+	background-color:#333;
 }
 li.bagage strong, li.bagage a:hover, .bagageFilter:hover{
 	color:#fff;
@@ -225,10 +297,6 @@ li.ouiedire strong, li.ouiedire a:hover, .ouiedireFilter:hover {
 li.bureau strong, li.bureau a:hover, .bureauFilter:hover {
 	color: #FFF;
 	background-color:#0099FF;
-}
-.date{
-	color:#ccc;
-	font-size:0.8em;
 }
 
 

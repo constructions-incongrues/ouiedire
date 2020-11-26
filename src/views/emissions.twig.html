@@ -22,7 +22,7 @@
 {% block content %}
 <!-- <h5><a href="{{ path('emission', {id:randomShow.id, type:randomShow.typeSlug}) }}">Écouter de manière aléatoire</a></h5><hr>-->
 <div class="grid-100 tablet-grid-100 mobile-grid-100">
-	<div class="bloc">
+	<div class="bloc center">
 		<div class="infos">
 			<span class="big"> 
 				<a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes </a> <span class="diamond"> &#11045; </span>
@@ -30,7 +30,6 @@
 				{{ djs|length }} curateurs
 			</span>
 			<span class="small hide-on-mobile"> 
-				<br>
 				<a href="http://www.canalb.fr/gabuzomix/podcasts">Canal B</a> <span class="diamond"> &#11045; </span>
 				<a href="http://www.choq.ca/emissions-details/ouiedire/">Choq CA</a> <span class="diamond"> &#11045; </span>
 				<a href="https://www.facebook.com/cjucfm/?ref=br_rs">Cjuc 92.5 FM</a> <span class="diamond"> &#11045; </span>

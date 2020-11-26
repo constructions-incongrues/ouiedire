@@ -668,8 +668,8 @@ li.bagage, li.ailleurs, li.bureau, li.ouiedire{
 }
 
 .allshows {columns: 4;}
-.mej-time-rail {max-width: 60%}
-.mej-time-total {width: 78%}
+.mej-time-rail {width: 80%!important;}
+.mej-time-total {width: 75%!important;}
 .mej-time {
 	color: #fff;
     font-size: 11px;

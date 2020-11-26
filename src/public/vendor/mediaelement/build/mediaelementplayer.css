@@ -414,7 +414,6 @@
 	left: 0;
 	z-index: 1;
 	position: absolute;
-	margin: 0;
 }
 
 .mejs-controls .mejs-volume-button:hover {
@@ -440,7 +439,6 @@
 	left: 11px;
 	width: 2px;
 	height: 100px;
-	background: red;
 }
 
 .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
@@ -454,7 +452,6 @@
 	left: 11px;
 	width: 2px;
 	height: 100px;
-	background: red;
 }
 
 .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
@@ -468,7 +465,6 @@
 	left: 11px;
 	width: 2px;
 	height: 100px;
-	background: red;
 }
 
 /* horizontal version */
@@ -510,7 +506,6 @@ background: #FFF;
 	left: 11px;
 	width: 2px;
 	height: 100px;
-	background: red;
 }
 
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle {

@@ -21,8 +21,8 @@ body {
 .bloc{	
 	background-color: #000;
     text-align: center;
-    padding:7px 10px 14px 10px;
-    margin-bottom:20px;
+    padding: 7px 10px 14px 10px;
+    margin: 10px 0 20px 0;
 }
 div.infos {
 	color: #FFF;
@@ -46,6 +46,28 @@ div.infos {
 
 
 
+/*  PREV / NEXT EMISSION  */
+/* ====================== */
+.nav a {
+    color: #FFF;
+    background-color: #000;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.nav a:hover {
+    color: #000;
+    background-color: #FCFE04;
+}
+.nav {
+    float: right !important;
+	margin-top:15px;
+}
+@media screen and (min-width: 1025px) {
+	.nav {
+		margin-top:10px;
+	}
+}
 
 
 /* Boutons filtres "type d'emission" */
@@ -57,7 +79,7 @@ div.infos {
 }
 .filterContainer {
     float: right !important;
-		margin-top:20px;
+	margin-top:15px;
 }
 .filterContainer div { /* TOUS LES FILTRES HERITENT DE CE TRUC */
 	display: inline-block;
@@ -65,7 +87,7 @@ div.infos {
 	font-weight: normal;
 	cursor:pointer;
     padding: 10px 10px 10px 0; 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 	margin-right: 10px;
 }
 .filterContainer div strong{
@@ -77,6 +99,7 @@ div.infos {
 	}
 	.filterContainer div {
 		font-size: 1.2rem;
+    	margin-bottom: 0px;
 	}
 	.ailleursFilter, .bagageFilter, .bureauFilter, .ouiedireFilter {
 		padding: 0px 0px 10px 0px;
@@ -210,13 +233,19 @@ li.bureau strong, li.bureau a:hover, .bureauFilter:hover {
 
 
 
+
+
+
+
+
+
 /*  FOOTER  */
 /* ======== */
 footer{
-    font-size: 1.2rem;
-	margin-top: 1.5em;
+    font-size: 1.2em;
+	margin-top: 1em;
 }
-footer p.links a {
+footer p.links a{
     color: #FFF;
     background-color: #000;
     padding: 11px;
@@ -240,7 +269,7 @@ footer p.text a:hover {
 }
 @media screen and (max-width: 767px) {
 	footer{
-	    font-size: 1rem;
+	    font-size: 1em;
 		margin-top: 1em;
 	}
 	footer p.links a {

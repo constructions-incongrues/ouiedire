@@ -2,144 +2,106 @@
 
 {% block title %}Émission #{{ show.number }} : {{ show.title }}, par {{ show.authors }}{% endblock %}
 
-
 {% block latest %}
-<a href="{{ path('emission', {id:latest.id, type:latest.typeSlug}) }}">
-  {{ latest.type }} {{ latest.number }} : {{ latest.authors }} - {{ latest.title }}
-</a>
+	<a href="{{ path('emission', {id:latest.id, type:latest.typeSlug}) }}">
+	  {{ latest.type }} {{ latest.number }} : {{ latest.authors }} - {{ latest.title }}
+	</a>
 {% endblock %}
 
 {% block opengraph %}
-  {% if show.type == "Ouïedire" %}
-<meta property="og:title" content="Ouïedire - Émission #{{ show.number }} : {{ show.title }}, par {{ show.authors }}" />
-  {% else %}
-<meta property="og:title" content="Ouïedire {{ show.type }} - Émission #{{ show.number }} : {{ show.title }}, par {{ show.authors }}" />
-  {% endif %}
-<meta property="og:type" content="video.other" />
-<meta property="og:description" content="{{ show.description|striptags|trim }}" />
-<meta property="og:url" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getRequestUri() }}" />
-<meta property="og:image" content="{{ show.covers.0 }}" />
-<meta property="og:video" content="http://{{ urlSwfPlayer|raw }}" />
-<meta property="og:video:secure_url" content="https://{{ urlSwfPlayer|raw }}" />
-<meta property="og:video:height" content="450" />
-<meta property="og:video:width" content="450" />
-<meta property="og:video:type" content="application/x-shockwave-flash" />
+	{% if show.type == "Ouïedire" %}
+		<meta property="og:title" content="Ouïedire - Émission #{{ show.number }} : {{ show.title }}, par {{ show.authors }}" />
+	{% else %}
+		<meta property="og:title" content="Ouïedire {{ show.type }} - Émission #{{ show.number }} : {{ show.title }}, par {{ show.authors }}" />
+	{% endif %}
+	<meta property="og:type" content="video.other" />
+	<meta property="og:description" content="{{ show.description|striptags|trim }}" />
+	<meta property="og:url" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getRequestUri() }}" />
+	<meta property="og:image" content="{{ show.covers.0 }}" />
+	<meta property="og:video" content="http://{{ urlSwfPlayer|raw }}" />
+	<meta property="og:video:secure_url" content="https://{{ urlSwfPlayer|raw }}" />
+	<meta property="og:video:height" content="450" />
+	<meta property="og:video:width" content="450" />
+	<meta property="og:video:type" content="application/x-shockwave-flash" />
 {% endblock %}
 
 {% block oembed %}
-<link rel="alternate" type="application/json+oembed" title="oEmbed endpoint" href="{{ url('oembed') }}?format=json&url={{ url('emission', {type: show.typeSlug, id: show.id})|url_encode }}" />
+	<link rel="alternate" type="application/json+oembed" title="oEmbed endpoint" href="{{ url('oembed') }}?format=json&url={{ url('emission', {type: show.typeSlug, id: show.id})|url_encode }}" />
 {% endblock %}
 
 {% block footer %}
-{% if app.debug %}
-<p>
-  <strong>Debug :</strong>
-  <a href="{{ url('oembed') }}?format=json&url={{ url('emission', {type: show.typeSlug, id: show.id})|url_encode }}">oEmbed endpoint</a>
-  <a href="{{ url('emission', {type: show.typeSlug, id: show.id}) }}?embed">Embedded view</a>
-  <a href="http://{{ urlSwfPlayer }}">Facebook player</a>
-</p>
-{% endif %}
+	{% if app.debug %}
+	<p>
+	  <strong>Debug :</strong>
+	  <a href="{{ url('oembed') }}?format=json&url={{ url('emission', {type: show.typeSlug, id: show.id})|url_encode }}">oEmbed endpoint</a>
+	  <a href="{{ url('emission', {type: show.typeSlug, id: show.id}) }}?embed">Embedded view</a>
+	  <a href="http://{{ urlSwfPlayer }}">Facebook player</a>
+	</p>
+	{% endif %}
+{% endblock %}
+
+{% block navigation %}
+ <div class="filterContainer" id="filterDiv">
+ 	<section class="nav">
+		{% if (previous) %}<a class="previous" href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}">&lt; <span class="hide-on-mobile">Émission </span>précédente</a> {% endif %}
+		{% if (next) %}<a class="next" href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}" title="#{{ next.number }} : {{ next.title }}, par {{ next.authors }}"><span class="hide-on-mobile">Émission</span>suivante &gt;</a>{% endif %}
+	</section> 
+</div>
 {% endblock %}
 
 {% block content %}
-<!-- <nav class="grid-100">
-        <a href="mailto:contact@ouiedire.net">contact@ouiedire.net</a>
-        <a href="{{ url('dons') }}">Dons</a>
-        <a href="http://feeds.feedburner.com/ouiedire">rss</a>
-        <a href="https://www.facebook.com/pages/Ou%C3%AFedire/35795699060">facebook</a>
-        <a href="https://twitter.com/OuiedireShow">twitter</a>
-        <a href="{{ url('flyers') }}">Flyers des programmations</a>
-
-
-</nav> -->
-
-<div class="grid-100 mobile-grid-100">
-    <section class="nav">
-<p>
-{% if (previous) %}
-<a class="previous" href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}"> anciennes émissions  </a> {% endif %}
-{% if (next) %} / <a class="next" href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}" title="#{{ next.number }} : {{ next.title }}, par {{ next.authors }}"> nouvelles émissions </a>
-{% endif %}
-</p>
-</section>
-   
-
-    <h1 class="otherShows">
-
-
-         {% if otherShows %}
-    {{ show.authors }} : 
-{% for show in otherShows %}
-    
-        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} </a>
-    
-{% endfor %}
-<br /><br />
-{% endif %} 
-        <a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
-           <strong> {{ show.typeSlug }}  {{ show.number }}</strong>  {{ show.authors }} - {{ show.title }}  ({{ show.releasedAt|date('d/m/Y') }}) / <a href="{{ show.urlDownload }}"> télécharger</a>
-        </a>
-               
-
-              
-
-    </h1>
-</div> 
-
-
-<div class="grid-40 mobile-grid-100">
-    <audio controls="controls">
-        <source src="{{ show.urlDownload }}" type="audio/mp3" />
-        <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
-        <object width="318" height="240" type="application/x-shockwave-flash" data="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf">
-        <param name="movie" value="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf" />
-        <param name="flashvars" value="controls=true&file={{ show.urlDownload }}" />
-        </object>
-    </audio>
-
-{{ show.playlist|raw }}
-
-</div><!-- grid-50 -->
-
-<div class="grid-50 mobile-grid-100 description">
-
-<hr />
-
-{% for urlCover in show.covers %}
-        <img src="{{ urlCover }}" alt="Artwork" /><br />
-{% endfor %}
-<p>
-       <div class="descriptiontext"> {{ show.description|raw }}
-       <hr />
-
-       </p>
-
-
-    </div>
-
-
-
-
-
-
-    
-
-</div><!-- grid-50 -->
-
-<!-- Player state -->
-<script>
-{%- if player.play -%}
-window.MejsAutoplay = true;
-{% else %}
-window.play = false;
-{%- endif -%}
-{%- if player.position -%}
-window.MejsSmartplaylistPosition = {{ player.position }};
-window.MejsAutoplay = true;
-{% else %}
-window.MejsSmartplaylistPosition = false;
-{% endif %}
-window.MejsOuiedireDownloadUrl = '{{ show.urlDownload }}';
-</script>
-
+	<div class="grid-100 tablet-grid-100 mobile-grid-100">
+		<div class="bloc">     
+		    <h1 class="otherShows">
+				{% if otherShows %}
+					{{ show.authors }} : 
+					{% for show in otherShows %}
+						<a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} </a>
+			    	{% endfor %}
+					<br /><br />
+				{% endif %} 
+				<a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}">
+					<strong> {{ show.typeSlug }}  {{ show.number }}</strong>  {{ show.authors }} - {{ show.title }}  ({{ show.releasedAt|date('d/m/Y') }}) / <a href="{{ show.urlDownload }}"> télécharger</a>
+				</a>
+		    </h1>
+		</div> 
+	</div> 
+	
+	<div class="grid-40 mobile-grid-100">
+	    <audio controls="controls">
+	        <source src="{{ show.urlDownload }}" type="audio/mp3" />
+	        <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
+	        <object width="318" height="240" type="application/x-shockwave-flash" data="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf">
+	        <param name="movie" value="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf" />
+	        <param name="flashvars" value="controls=true&file={{ show.urlDownload }}" />
+	        </object>
+	    </audio>
+		{{ show.playlist|raw }}
+	</div><!-- grid-50 -->
+	
+	<div class="grid-60 mobile-grid-100 description">
+		{% for urlCover in show.covers %}
+			<img src="{{ urlCover }}" alt="Artwork" /><br />
+		{% endfor %}
+		<div class="descriptiontext">
+			{{ show.description|raw }}
+		</div>
+		<hr />
+	</div>
+	
+	<!-- Player state -->
+	<script>
+		{%- if player.play -%}
+		window.MejsAutoplay = true;
+		{% else %}
+		window.play = false;
+		{%- endif -%}
+		{%- if player.position -%}
+		window.MejsSmartplaylistPosition = {{ player.position }};
+		window.MejsAutoplay = true;
+		{% else %}
+		window.MejsSmartplaylistPosition = false;
+		{% endif %}
+		window.MejsOuiedireDownloadUrl = '{{ show.urlDownload }}';
+	</script>
 {% endblock %}

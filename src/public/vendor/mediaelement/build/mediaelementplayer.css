@@ -390,12 +390,11 @@
 }
 
 .mejs-controls .mejs-mute button {
-		background-color: red;
-
+	background-position: -16px -16px;
 }
 
 .mejs-controls .mejs-unmute button {
-	background-color: red;
+	background-position: -16px 0;
 }
 
 .mejs-controls .mejs-volume-button {
@@ -406,8 +405,7 @@
 	display: none;
 	height: 115px;
 	width: 25px;
-	background: url(background.png);
-	background: rgba(50, 50, 50, 0.7);
+	background: yellow;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
@@ -440,8 +438,7 @@
 	float: right;	left: 11px;
 	width: 2px;
 	height: 100px;
-	background: #ddd;
-	background: rgba(255, 255, 255, 0.5);
+	background: blue;
 	margin: 0;
 }
 
@@ -454,8 +451,7 @@
 	float: right;
 	width: 2px;
 	height: 100px;
-	background: #ddd;
-	background: rgba(255, 255, 255, 0.9);
+	background:pink;
 	margin: 0;
 }
 
@@ -563,8 +559,7 @@
 	right: -10px;
 	width: 130px;
 	height: 100px;
-	background: url(background.png);
-	background: rgba(50,50,50,0.7);
+	background-color: green;
 	border: solid 1px transparent;
 	padding: 10px;
 	overflow: hidden;

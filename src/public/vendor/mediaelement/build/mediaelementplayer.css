@@ -390,9 +390,12 @@
 }
 
 .mejs-controls .mejs-mute button {
+	background-color: transparent url(mejs-controls.svg)
 }
 
 .mejs-controls .mejs-unmute button {
+		background-color: transparent url(mejs-controls.svg)
+
 }
 
 .mejs-controls .mejs-volume-button {

@@ -252,7 +252,7 @@
 	background: -moz-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
 	background: -o-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
 	background: -ms-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
-	background: linear-gradient(rgba(30,30,30,0.8), rgba(60,60,60,0.8));
+	background: #FFF;
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-buffering {
@@ -490,14 +490,13 @@
 	width: 50px;
 	height: 8px;
 	height: 8px;
-	margin: -15px -80px 0px 0px;
+	margin: -15px -85px 0px 0px;
 	float: right;
 	padding: 0;
 	font-size: 1px;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
-	margin: 0;
 	padding: 0;
 	font-size: 1px;
 	-webkit-border-radius: 2px;
@@ -510,7 +509,7 @@
 	background: -moz-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
 	background: -o-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
 	background: -ms-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
-	background: linear-gradient(rgba(30,30,30,0.8), rgba(60,60,60,0.8));
+	background: #FFF;
 }
 
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {

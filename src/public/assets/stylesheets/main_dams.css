@@ -11,14 +11,53 @@ body {
 	background-attachment: fixed;
 	font-family: 'Roboto Mono', sans-serif;
 }
+#container{
+	margin-top: 20px
+}
+
+
+/* BLOC NOIR */
+/* ========= */
+.bloc{	
+	background-color: #000;
+    text-align: center;
+    padding:7px 10px 14px 10px;
+    margin-bottom:20px;
+}
+div.infos {
+	color: #FFF;
+}
+@media screen and (min-width: 1025px) {
+	div.infos .big{
+		font-size: 1.6em;
+	}
+	div.infos .small{
+		font-size: 1.2em;
+	}
+}
+.bloc a {
+	text-decoration: none;
+	color: #FCFE04;
+	text-transform:capitalize;
+}
+.diamond{
+	opacity:0.3;
+}
+
+
 
 
 
 /* Boutons filtres "type d'emission" */
 /* ================================= */
+.displayBlock {display : block;}
+.displayNone {display: none;}
+#filterDiv{
+	text-align:right;
+}
 .filterContainer {
-    background-color: transparent;
     float: right !important;
+		margin-top:20px;
 }
 .filterContainer div { /* TOUS LES FILTRES HERITENT DE CE TRUC */
 	display: inline-block;
@@ -93,6 +132,16 @@ body {
 	color: #FFF;
 }
 @media screen and (max-width: 767px) {
+	#logoDiv{
+		text-align: center;
+	}
+	#filterDiv{
+		text-align: center;
+	}
+	.filterContainer {
+	    float: none !important;
+		text-align: center;
+	}
 	.ailleursFilter, .bagageFilter, .bureauFilter, .ouiedireFilter {
 		padding: 0 !important;
 	}
@@ -107,8 +156,8 @@ body {
 
 
 
-/* liens émissions */
-/* =============== */
+/* liens émissions (shows) */
+/* ======================= */
 .showContainer ul{
   -webkit-columns: 5 300px;
      -moz-columns: 5 300px;
@@ -159,42 +208,43 @@ li.bureau strong, li.bureau a:hover, .bureauFilter:hover {
 	font-size:0.8em;
 }
 
-/* BLOC NOIR */
-/* ========= */
-.bloc{	
-	background-color: #000;
-    text-align: center;
-    padding:7px 10px 14px 10px;
-    margin-bottom:20px;
+
+
+/*  FOOTER  */
+/* ======== */
+footer{
+    font-size: 1.2rem;
+	margin-top: 1.5em;
 }
-div.infos {
-	color: #FFF;
+footer p.links a {
+    color: #FFF;
+    background-color: #000;
+    padding: 11px;
+    text-transform: uppercase;
+    text-decoration: none;
 }
-@media screen and (min-width: 1025px) {
-	div.infos .big{
-		font-size: 1.6em;
+footer p.links a:hover {
+    color: #000;
+    background-color: #FCFE04;
+}
+footer p.text a {
+    color: #000;
+	background-color:#E6FAFF;
+	font-weight: bold;
+    text-decoration: none;
+	padding:0 4px;
+}
+footer p.text a:hover {
+    color: #fff;
+	background-color:#0099FF;
+}
+@media screen and (max-width: 767px) {
+	footer{
+	    font-size: 1rem;
+		margin-top: 1em;
 	}
-	div.infos .small{
-		font-size: 1.2em;
+	footer p.links a {
+	    padding: 5px;
+	    line-height:2.7em;
 	}
-}
-.bloc a {
-	text-decoration: none;
-	color: #FCFE04;
-	text-transform:capitalize;
-}
-.diamond{
-	opacity:0.3;
-}
-
-
-
-
-
-/* The "show" class is added to the filtered elements */
-.displayBlock {
-  display : block;
-}
-.displayNone {
-  display: none;
 }

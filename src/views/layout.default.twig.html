@@ -53,7 +53,7 @@
 		filterSelection("all") 
 		function filterSelection(choice) {
 		  var x, i;
-		  emissions = document.getElementsByClassName("emission");
+		  emissions = document.getElementsByClassName("show");
 		  if (choice == "all") choice = "";
 		  for (i = 0; i < emissions.length; i++) {
 			  removeClass(emissions[i], "displayBlock");
@@ -84,11 +84,11 @@
 		  element.className = arr1.join(" ");
 		}
 	</script>
-	<div class="grid-container">
+	<div class="grid-container" id="container">
 		<header class="">
-			<div class="grid-30 tablet-grid-50 mobile-grid-100">
+			<div class="grid-30 tablet-grid-50 mobile-grid-100" id="logoDiv">
 				<a href="{{ url('emissions') }}">
-					<img src="{{ app.request.getBasePath() }}/assets/img/logo.png" alt="Ouïedire" title="Consulter la liste des émissions disponibles" />
+					<img src="{{ app.request.getBasePath() }}/assets/img/logo_trim.png" alt="Ouïedire" title="Consulter la liste des émissions disponibles" />
 				</a>
 				{# % block jingle %}
 			 	<h4><a href="{{ url('jingle') }}">Proposer un jingle !</a></h4>
@@ -107,14 +107,14 @@
 		{% endblock %}
 	
 		<footer class="grid-100" id="infosfooter">
-			<p>
+			<p class="links">
 				<a href="mailto:contact@ouiedire.net">contact@ouiedire.net</a>
 				<a href="https://www.facebook.com/pages/Ou%C3%AFedire/35795699060">facebook</a>
 				<a href="https://twitter.com/OuiedireShow">twitter</a>
 			    <a href="http://feeds.feedburner.com/ouiedire">rss</a>
 				<a href="{{ url('dons') }}">Dons</a>
 			</p>
-			<p>
+			<p class="text">
 				Le projet <a href="http://www.ouiedire.net">Ouïedire</a> est développé par <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> et est hébergé par <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.
 				<br />
 				Le logo a été réalisé par <a href="http://www.thejazzist.nu/">Otro</a>.

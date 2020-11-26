@@ -390,11 +390,12 @@
 }
 
 .mejs-controls .mejs-mute button {
-	background-position: -16px -16px;
+		background-color: red;
+
 }
 
 .mejs-controls .mejs-unmute button {
-	background-position: -16px 0;
+	background-color: red;
 }
 
 .mejs-controls .mejs-volume-button {

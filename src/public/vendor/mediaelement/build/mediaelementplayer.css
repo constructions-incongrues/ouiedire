@@ -252,7 +252,7 @@
 	background: -moz-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
 	background: -o-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
 	background: -ms-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
-	background: #FFF;
+	background: linear-gradient(rgba(30,30,30,0.8), rgba(60,60,60,0.8));
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-buffering {
@@ -307,7 +307,7 @@
 .mejs-controls .mejs-time-rail .mejs-time-handle {
 	display: none;
 	position: absolute;
-	margin: -15px -85px 0px 0px;
+	margin: 0;
 	width: 10px;
 	background: #fff;
 	-webkit-border-radius: 5px;
@@ -390,12 +390,11 @@
 }
 
 .mejs-controls .mejs-mute button {
-	background-color: transparent url(mejs-controls.svg)
+	background-position: -16px -16px;
 }
 
 .mejs-controls .mejs-unmute button {
-		background-color: transparent url(mejs-controls.svg)
-
+	background-position: -16px 0;
 }
 
 .mejs-controls .mejs-volume-button {
@@ -415,6 +414,7 @@
 	left: 0;
 	z-index: 1;
 	position: absolute;
+	margin: 0;
 }
 
 .mejs-controls .mejs-volume-button:hover {
@@ -431,41 +431,39 @@
 
 .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
 	position: absolute;
-	left: 0;
-	top: 11px;
-	left: 0;
-	height: 8px;
-	margin: -15px -80px 0px 0px;
-	float: right;	
 	left: 11px;
+	top: 8px;
 	width: 2px;
 	height: 100px;
+	background: #ddd;
+	background: rgba(255, 255, 255, 0.5);
+	margin: 0;
 }
 
 .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
 	position: absolute;
-	left: 0;
-	top: 11px;
-	left: 0;
-	height: 8px;
-	margin: -15px -80px 0px 0px;
-	float: right;	
 	left: 11px;
+	top: 8px;
 	width: 2px;
 	height: 100px;
+	background: #ddd;
+	background: rgba(255, 255, 255, 0.9);
+	margin: 0;
 }
 
 .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
 	position: absolute;
-	left: 0;
-	top: 11px;
-	left: 0;
-	height: 8px;
-	margin: -15px -80px 0px 0px;
-	float: right;	
-	left: 11px;
-	width: 2px;
-	height: 100px;
+	left: 4px;
+	top: -3px;
+	width: 16px;
+	height: 6px;
+	background: #ddd;
+	background: rgba(255, 255, 255, 0.9);
+	cursor: N-resize;
+	-webkit-border-radius: 1px;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+	margin: 0;
 }
 
 /* horizontal version */
@@ -476,32 +474,47 @@
 }
 
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
-	
+	position: absolute;
+	left: 0;
 	top: 11px;
 	width: 50px;
 	height: 8px;
-	height: 8px;
-	margin: 10px -85px 0px 0px;
-	padding: 0;
-	font-size: 1px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
+	margin: 0;
 	padding: 0;
 	font-size: 1px;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;	
-background: #FFF;
+	background: #333;
+	background: rgba(50,50,50,0.8);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(30,30,30,0.8)), to(rgba(60,60,60,0.8)));
+	background: -webkit-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8)); 
+	background: -moz-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
+	background: -o-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
+	background: -ms-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
+	background: linear-gradient(rgba(30,30,30,0.8), rgba(60,60,60,0.8));
 }
 
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
-		position: absolute;
+	position: absolute;
+	left: 0;
+	top: 11px;
+	width: 50px;
 	height: 8px;
-	margin: 10px -80px 0px 0px;
-	float: right;	
-	width: 2px;
-	height: 8px;
+	margin: 0;
+	padding: 0;
+	font-size: 1px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background: #fff;
+	background: rgba(255,255,255,0.8);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0.9)), to(rgba(200,200,200,0.8)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.8));
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.8)); 
+	background: -o-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.8));
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.8));
+	background: linear-gradient(rgba(255,255,255,0.9), rgba(200,200,200,0.8));
 }
 
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle {

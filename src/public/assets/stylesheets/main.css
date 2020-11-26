@@ -494,7 +494,7 @@ a.mejs-smartplaylist-time:before {
 .mejs-container {
 	height: 100%;
 	width: 100%;
-    background-color: : #000;
+    background-color: #000;
    color:#FFF; }
 a.mejs-smartplaylist-time.mejs-smartplaylist-current {
 	background-color: #000;

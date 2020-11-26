@@ -493,7 +493,7 @@ a.mejs-smartplaylist-time:before {
 }
 .mejs-container {
 	height: 100%;
-	width: 98%;
+	width: 100%;
 }
 a.mejs-smartplaylist-time.mejs-smartplaylist-current {
 	background-color: #000;

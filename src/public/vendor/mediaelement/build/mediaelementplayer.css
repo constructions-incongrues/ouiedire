@@ -14,7 +14,8 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 .mejs__container {
-    background: #000;
+    color: #FFF
+     background-color: : #000;
     box-sizing: border-box;
     font-family: 'Helvetica', Arial, serif;
     position: relative;
@@ -384,7 +385,7 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
     background: #eee;
     border: solid 1px #333;
     bottom: 100%;
-    color: #111;
+    color: #FFF;
     display: none;
     height: 17px;
     margin-bottom: 9px;
@@ -517,7 +518,7 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 }
 
 .mejs__horizontal-volume-total {
-    background: rgba(50, 50, 50, 0.8);
+    background: #FFF;
     border-radius: 2px;
     font-size: 1px;
     height: 8px;
@@ -628,7 +629,7 @@ Reference: http://blog.rrwd.nl/2015/04/04/the-screen-reader-text-class-why-and-h
 
 .mejs__captions-selected,
 .mejs__chapters-selected {
-    color: rgba(33, 248, 248, 1);
+    color: #FFF;
 }
 
 .mejs__captions-translations {

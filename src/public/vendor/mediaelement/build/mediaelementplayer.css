@@ -307,7 +307,7 @@
 .mejs-controls .mejs-time-rail .mejs-time-handle {
 	display: none;
 	position: absolute;
-	margin: 0;
+	margin: -15px -85px 0px 0px;
 	width: 10px;
 	background: #fff;
 	-webkit-border-radius: 5px;

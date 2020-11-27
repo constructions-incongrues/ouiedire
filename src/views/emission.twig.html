@@ -87,7 +87,12 @@
 			{{ show.description|raw }}
 		</div>
 		<hr />
-	</div>
+	</div>	
+	
+	<div id="playerStatus" style="position:fixed;bottom:0;left:0;width:100%;display:none;background-color:#FCFE04;text-align:center"></div>
+	
+	
+	
 	
 	<!-- Player state -->
 	<script>
@@ -103,5 +108,27 @@
 		window.MejsSmartplaylistPosition = false;
 		{% endif %}
 		window.MejsOuiedireDownloadUrl = '{{ show.urlDownload }}';
+	</script>
+{% endblock %}
+
+{% block userscript %}
+	<script>
+	$(document).ready(function() {
+		$(".mejs-smartplaylist-time").on("click", function() {
+			$('#playerStatus').stop().fadeOut().hide();
+			setTimeout(
+	            function() {
+					var trackTime = $(".mejs-smartplaylist-current").text().trim();
+					var trackArtist = $(".mejs-smartplaylist-current").siblings().text().trim();
+					var trackAllInfos = $(".mejs-smartplaylist-current").parent().text().trim();
+					var array = trackAllInfos.split(" - ");
+					var trackTitle = array[1];
+					console.log(trackTime+' '+trackArtist+' '+trackTitle);
+					$('#playerStatus').html('<h2>'+trackArtist+' - '+trackTitle+'</h2>');
+					$('#playerStatus').fadeIn(750).fadeOut(4000);
+	            },
+            100);			
+		});
+	});	
 	</script>
 {% endblock %}

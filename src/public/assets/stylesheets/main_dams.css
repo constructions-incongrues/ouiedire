@@ -115,7 +115,10 @@ h3.showDownload a{
 	padding: 5px 10px;
 	font-size: 0.6em;
 }
-
+h3.showDownload a:hover{	
+	color:#333;
+	background-color: #fff;
+}
 
 
 /*  PREV / NEXT EMISSION  */
@@ -299,6 +302,62 @@ li.bureau strong, li.bureau a:hover, .bureauFilter:hover {
 	background-color:#0099FF;
 }
 
+
+
+
+
+
+/* MEDIA PLAYER mediaelementjs.com 2.12.0 */
+/* ====================================== */
+.mejs-container {
+	height: 40px !important;
+	width: 100%;
+}
+a.mejs-smartplaylist-time {
+	color:#000;
+	padding: 5px;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.mejs-smartplaylist-time:hover {
+	color:#000;
+	background-color:#FCFE04;
+}
+a.mejs-smartplaylist-time.mejs-smartplaylist-current{
+	background-color:#000;
+	color: #FCFE04;
+	font-weight: bold;
+}
+.mejs-smartplaylist-time a:hover.mejs-smartplaylist-time {
+	color:#000;
+	font-weight: bold;
+}
+a.mejs-smartplaylist-time:after {
+	content:"]";
+	color: #000;
+}
+a.mejs-smartplaylist-time:before {
+	content:"[";
+	color: #000;
+}
+ol.mejs-smartplaylist-playlist {
+	list-style-type: none;
+	margin: 5px 0 0 -40px;
+}
+.mejs-smartplaylist-playlist li {
+	text-decoration: none;
+	color:#000;
+	padding: 5px 0;
+	position:relative;
+	top:-5px;
+}
+.mejs-smartplaylist-playlist li:nth-child(even) {background: #fff}
+.mejs-smartplaylist-playlist li:nth-child(odd) {background: #eee}
+
+.mejs-smartplaylist-playlist li span{
+	font-weight: bold;
+	text-transform: uppercase;
+}
 
 
 

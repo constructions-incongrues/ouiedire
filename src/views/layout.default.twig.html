@@ -128,11 +128,13 @@
 
 	<!-- mediaelement.js : http://mediaelementjs.com -->
 	<script src="{{ app.request.getBasePath() }}/vendor/jquery/jquery.min.js"></script>
-	<script src="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelement-and-player.min.js"></script>
+	<!-- <script src="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelement-and-player.min.js"></script> -->
+	<script src="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelement-and-player.js"></script>
 	<script src="{{ app.request.getBasePath() }}/vendor/net.constructions-incongrues.mejs/src/mep-feature-smartplaylist.js?{{ app.assetsVersion }}"></script>
 	<script src="{{ app.request.getBasePath() }}/vendor/net.constructions-incongrues.mejs/src/mep-feature-autochange.js?{{ app.assetsVersion }}"></script>
 	<script src="{{ app.request.getBasePath() }}/assets/javascripts/mep-feature-ouiedire.js?{{ app.assetsVersion }}"></script>
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelementplayer.css" /></link>
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/mejs.css?{{ app.assetsVersion }}" /></link>
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/mejs_dams.css?{{ app.assetsVersion }}" /></link>
 	<script src="{{ app.request.getBasePath() }}/assets/javascripts/behaviors.js?{{ app.assetsVersion }}"></script>
 </body>

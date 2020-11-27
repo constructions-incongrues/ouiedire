@@ -54,7 +54,7 @@
 		<div class="cartouche">     
 		    <h2 class="showNumber {{ show.typeSlug }}"><span class="hide-on-mobile">{{ show.typeSlug }}  </span>{{ show.number }}</h2>
 		    <h1 class="showTitle">{{ show.authors }} - {{ show.title }}</h1>
-		    <h3 class="showDownload hide-on-mobile"><a href="{{ show.urlDownload }}">télécharger</a></h3>
+		    <h3 class="showDownload hide-on-mobile"><a href="{{ show.urlDownload }}" title="Télécharger l'émission au format MP3">télécharger</a></h3>
 		    <h3 class="showDate hide-on-mobile">{{ show.releasedAt|date('d/m/Y') }}</h3>
 		</div> 
 	</div> 
@@ -67,7 +67,7 @@
 			<br /><br />
 		{% endif %} 
 	</div> 
-	<div class="grid-40 mobile-grid-100">
+	<div class="grid-50 mobile-grid-100">
 	    <audio controls="controls">
 	        <source src="{{ show.urlDownload }}" type="audio/mp3" />
 	        <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
@@ -79,7 +79,7 @@
 		{{ show.playlist|raw }}
 	</div><!-- grid-50 -->
 	
-	<div class="grid-60 mobile-grid-100 description">
+	<div class="grid-50 mobile-grid-100 description">
 		{% for urlCover in show.covers %}
 			<img src="{{ urlCover }}" alt="Artwork" /><br />
 		{% endfor %}

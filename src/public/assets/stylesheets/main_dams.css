@@ -12,7 +12,25 @@ body {
 	font-family: 'Roboto Mono', sans-serif;
 }
 #container{
-	margin-top: 20px
+	margin-top: 20px;
+}
+/*  COULEURS */
+/* ========= */
+.ailleurs{
+	color: #fff;
+	background-color:#333;
+}
+.bagage{
+	color: #FFF;
+	background-color:#fc029c;
+}
+.bureau{
+	color: #FFF;
+	background-color:#0099FF;
+}
+.ouiedire{
+	color: #FFF;
+	background-color:#8A2BE2;
 }
 
 
@@ -67,22 +85,6 @@ h2.showNumber{
     padding: 10px 15px;
 	font-size: 1.6em;
 }
-		.showNumber.ailleurs{
-			color: #fff;
-			background-color:#333;
-		}
-		.showNumber.bagage{
-			color: #FFF;
-			background-color:#fc029c;
-		}
-		.showNumber.bureau{
-			color: #FFF;
-			background-color:#0099FF;
-		}
-		.showNumber.ouiedire{
-			color: #FFF;
-			background-color:#8A2BE2;
-		}
 h1.showTitle{
 	display:inline-block;
 	color: #fff;
@@ -319,11 +321,11 @@ a.mejs-smartplaylist-time {
 	font-weight: bold;
 	text-decoration: none;
 }
-a.mejs-smartplaylist-time:hover {
+a.mejs-smartplaylist-time:hover { /* over-ridé dans la page émission */
 	color:#000;
 	background-color:#FCFE04;
 }
-a.mejs-smartplaylist-time.mejs-smartplaylist-current{
+a.mejs-smartplaylist-time.mejs-smartplaylist-current{ /* over-ridé dans la page émission */
 	background-color:#000;
 	color: #FCFE04;
 	font-weight: bold;
@@ -360,8 +362,34 @@ ol.mejs-smartplaylist-playlist {
 }
 
 
+#playerStatus{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: none;
+	text-align: center;
+}
 
-
+.descriptiontext{
+	font-size: 1.1em;
+	margin-top: 10px;
+}
+.descriptiontext p{
+	display: inline-block;
+    color: #000;
+	background-color: #E6FAFF;
+	padding: 0 4px;
+}
+.descriptiontext a {
+    color: #000;
+	font-weight: bold;
+    text-decoration: none;
+}
+.descriptiontext a:hover {
+    color: #fff;
+	background-color:#0099FF;
+}
 
 
 
@@ -370,12 +398,12 @@ ol.mejs-smartplaylist-playlist {
 /* ======== */
 footer{
     font-size: 1.2em;
-	margin-top: 1em;
+	margin-top: 0em;
 }
 footer p.links a{
     color: #FFF;
     background-color: #000;
-    padding: 11px;
+    padding: 6px 9px;
     text-transform: uppercase;
     text-decoration: none;
 }
@@ -383,12 +411,15 @@ footer p.links a:hover {
     color: #000;
     background-color: #FCFE04;
 }
-footer p.text a {
+footer p.text span{
     color: #000;
 	background-color:#E6FAFF;
+	padding:0 4px;
+}
+footer p.text a {
+    color: #000;
 	font-weight: bold;
     text-decoration: none;
-	padding:0 4px;
 }
 footer p.text a:hover {
     color: #fff;

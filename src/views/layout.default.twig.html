@@ -37,7 +37,7 @@
 	<meta property="og:image" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getBasePath() }}/assets/img/logo.png" />
 	{% endblock %}
 </head>
-<body>
+<body id="body">
 	<script type="text/javascript">	
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-673133-4']);
@@ -49,41 +49,7 @@
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();	
 	</script>
-	<script type="text/javascript">
-		filterSelection("all") 
-		function filterSelection(choice) {
-		  var x, i;
-		  emissions = document.getElementsByClassName("show");
-		  if (choice == "all") choice = "";
-		  for (i = 0; i < emissions.length; i++) {
-			  removeClass(emissions[i], "displayBlock");
-			  addClass(emissions[i], "displayNone");
-		    if (emissions[i].className.indexOf(choice) > -1) addClass(emissions[i], "displayBlock");
-		    if (emissions[i].className.indexOf(choice) > -1) removeClass(emissions[i], "displayNone");
-		  }
-		}
-		function addClass(element, name) {
-		  var i, arr1, arr2;
-		  arr1 = element.className.split(" ");
-		  arr2 = name.split(" ");
-		  for (i = 0; i < arr2.length; i++) {
-		    if (arr1.indexOf(arr2[i]) == -1) {
-		      element.className += " " + arr2[i];
-		    }
-		  }
-		}
-		function removeClass(element, name) {
-		  var i, arr1, arr2;
-		  arr1 = element.className.split(" ");
-		  arr2 = name.split(" ");
-		  for (i = 0; i < arr2.length; i++) {
-		    while (arr1.indexOf(arr2[i]) > -1) {
-		      arr1.splice(arr1.indexOf(arr2[i]), 1);
-		    }
-		  }
-		  element.className = arr1.join(" ");
-		}
-	</script>
+
 	<div class="grid-container" id="container">
 		<header class="">
 			<div class="grid-30 tablet-grid-50 mobile-grid-100" id="logoDiv">
@@ -105,8 +71,8 @@
 		{% block content %}
 		CONTENT
 		{% endblock %}
-	
-		<footer class="grid-100" id="infosfooter">
+		
+		<footer class="grid-100 row" id="infosfooter">
 			<p class="links">
 				<a href="mailto:contact@ouiedire.net">contact@ouiedire.net</a>
 				<a href="https://www.facebook.com/pages/Ou%C3%AFedire/35795699060">facebook</a>
@@ -115,10 +81,9 @@
 				<a href="{{ url('dons') }}">Dons</a>
 			</p>
 			<p class="text">
-				Le projet <a href="http://www.ouiedire.net">Ouïedire</a> est développé par <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> et est hébergé par <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.
+				<span>Le projet <a href="http://www.ouiedire.net">Ouïedire</a> est développé par <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> et est hébergé par <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.</span>
 				<br />
-				Le logo a été réalisé par <a href="http://www.thejazzist.nu/">Otro</a>.
-				Le code source est <a href="https://github.com/constructions-incongrues/net.ouiedire.www">distribué</a> sous licence <a href="http://www.gnu.org/licenses/agpl.html">AGPL3</a>.
+				<span>Le logo a été réalisé par <a href="http://www.thejazzist.nu/">Otro</a>. Le code source est <a href="https://github.com/constructions-incongrues/net.ouiedire.www">distribué</a> sous licence <a href="http://www.gnu.org/licenses/agpl.html">AGPL3</a>.</span>
 				<br />
 				{% block footer %}
 				{% endblock %}
@@ -136,8 +101,8 @@
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelementplayer.css" /></link>
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/mejs.css?{{ app.assetsVersion }}" /></link>
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/mejs_dams.css?{{ app.assetsVersion }}" /></link>
+	{% block userstyle %}{% endblock %}
 	<script src="{{ app.request.getBasePath() }}/assets/javascripts/behaviors.js?{{ app.assetsVersion }}"></script>
-	{% block userscript %}
-	{% endblock %}
+	{% block userscript %}{% endblock %}
 </body>
 </html>

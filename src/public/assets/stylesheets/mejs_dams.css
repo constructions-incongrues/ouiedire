@@ -25,10 +25,10 @@
 	background: #fff;
 }
 .mejs-controls .mejs-time-rail .mejs-time-current {
-	background: #FCFE04;
+	background: #FCFE04;  /* over-ridé dans la page émission */
 }
 .mejs-controls .mejs-time-rail .mejs-time-float {
-	background: #FCFE04;
+	background: #FCFE04;  /* over-ridé dans la page émission */
 	width: 58px !important;
 	top: -23px;
 	margin-left: -29px !important;
@@ -63,7 +63,7 @@
 }    
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{
     border-radius: 0;
-	background: #FCFE04;    
+	background: #FCFE04;  /* over-ridé dans la page émission */    
 }
 .mejs-controls .mejs-button button:focus {
     fill: #ff0;

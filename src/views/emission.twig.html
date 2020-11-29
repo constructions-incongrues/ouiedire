@@ -77,6 +77,7 @@
 	        </object>
 	    </audio>
 		{{ show.playlist|raw }}
+		<br>
 	</div><!-- grid-50 -->
 	
 	<div class="grid-50 mobile-grid-100 description">
@@ -89,7 +90,7 @@
 		<hr />
 	</div>	
 	
-	<div id="playerStatus" style="position:fixed;bottom:0;left:0;width:100%;display:none;background-color:#FCFE04;text-align:center"></div>
+	<div id="playerStatus" class="{{ show.typeSlug }}"></div>
 	
 	
 	
@@ -118,17 +119,100 @@
 			$('#playerStatus').stop().fadeOut().hide();
 			setTimeout(
 	            function() {
-					var trackTime = $(".mejs-smartplaylist-current").text().trim();
-					var trackArtist = $(".mejs-smartplaylist-current").siblings().text().trim();
-					var trackAllInfos = $(".mejs-smartplaylist-current").parent().text().trim();
-					var array = trackAllInfos.split(" - ");
-					var trackTitle = array[1];
-					console.log(trackTime+' '+trackArtist+' '+trackTitle);
+					var trackTime		= $(".mejs-smartplaylist-current").text().trim();
+					var trackArtist 	= $(".mejs-smartplaylist-current").siblings().text().trim();
+					var trackAllInfos 	= $(".mejs-smartplaylist-current").parent().text().trim();
+					var trackTitle 		= trackAllInfos.split(" - ")[1];
 					$('#playerStatus').html('<h2>'+trackArtist+' - '+trackTitle+'</h2>');
 					$('#playerStatus').fadeIn(750).fadeOut(4000);
 	            },
             100);			
 		});
 	});	
+	
+	function fixTheFooter(){
+		var bodyHeight = document.getElementById("body").offsetHeight, windowHeight=window.innerHeight;
+		if(bodyHeight<windowHeight){
+		    var footer= document.getElementById("infosfooter");
+		    footer.style.position="absolute";
+		    footer.style.left="20px"
+		    footer.style.top=windowHeight-footer.offsetHeight+'px';
+		    footer.style.width='auto';
+		} 
+	}
+	window.addEventListener('load', fixTheFooter);
+	window.addEventListener('resize', fixTheFooter);
 	</script>
+{% endblock %}
+
+
+
+{% block userstyle %}
+	<style>
+	a.mejs-smartplaylist-time:hover {
+		{%- if show.typeSlug == 'bagage' -%}
+		color: #FFF;
+		background-color:#fc029c;
+		{% elseif show.typeSlug == 'bureau' -%}
+		color: #FFF;
+		background-color:#0099FF;
+		{% elseif show.typeSlug == 'ailleurs' -%}
+		color: #FFF;
+		background-color:#333;
+		{% elseif show.typeSlug == 'ouiedire' -%}
+		color: #FFF;
+		background-color:#8A2BE2;
+		{% endif %}
+	}
+	a.mejs-smartplaylist-time.mejs-smartplaylist-current{
+		{%- if show.typeSlug == 'bagage' -%}
+		background-color: #000;
+		color:#fc029c;
+		{% elseif show.typeSlug == 'bureau' -%}
+		background-color: #000;
+		color:#0099FF;
+		{% elseif show.typeSlug == 'ailleurs' -%}
+		background-color: #000;
+		color:#fff;
+		{% elseif show.typeSlug == 'ouiedire' -%}
+		background-color: #000;
+		color:#8A2BE2;
+		{% endif %}
+		font-weight: bold;
+	}
+	.mejs-controls .mejs-time-rail .mejs-time-current {
+		{%- if show.typeSlug == 'bagage' -%}
+		background-color:#fc029c;
+		{% elseif show.typeSlug == 'bureau' -%}
+		background-color:#0099FF;
+		{% elseif show.typeSlug == 'ailleurs' -%}
+		background-color:#333;
+		{% elseif show.typeSlug == 'ouiedire' -%}
+		background-color:#8A2BE2;
+		{% endif %}
+	}
+	.mejs-controls .mejs-time-rail .mejs-time-float {
+		{%- if show.typeSlug == 'bagage' -%}
+		background-color:#fc029c;
+		{% elseif show.typeSlug == 'bureau' -%}
+		background-color:#0099FF;
+		{% elseif show.typeSlug == 'ailleurs' -%}
+		background-color:#fff;
+		{% elseif show.typeSlug == 'ouiedire' -%}
+		background-color:#8A2BE2;
+		{% endif %}
+	}
+	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{		
+		{%- if show.typeSlug == 'bagage' -%}
+		background-color:#fc029c;
+		{% elseif show.typeSlug == 'bureau' -%}
+		background-color:#0099FF;
+		{% elseif show.typeSlug == 'ailleurs' -%}
+		background-color:#fff;
+		{% elseif show.typeSlug == 'ouiedire' -%}
+		background-color:#8A2BE2;
+		{% endif %}    
+	}
+
+	</style>
 {% endblock %}

@@ -16,7 +16,7 @@
 	<div class="bagageFilter" onclick="filterSelection('bagage')"><strong>Bagage</strong><span class="hide-on-mobile"> maison de disques</span></div> 
 	<div class="bureauFilter" onclick="filterSelection('bureau')"><strong>Bureau</strong><span class="hide-on-mobile"> réunions incongrues</span></div> 
 	<div class="ouiedireFilter" onclick="filterSelection('ouiedire')"><strong>Ouïedire</strong><span class="hide-on-mobile"> fait maison</span></div> -->
-	<div class="allFilter hide-on-mobile" onclick="filterSelection('all')"><strong>Toutes les émissions</strong></div> 
+	<div class="allFilter hide-on-mobile" onclick="filterSelection('all')"><strong>Collections</strong></div> 
 	<div class="ailleursFilter" onclick="filterSelection('ailleurs')"><strong>Ailleurs</strong></div> 
 	<div class="bagageFilter" onclick="filterSelection('bagage')"><strong>Bagage</strong></div> 
 	<div class="bureauFilter" onclick="filterSelection('bureau')"><strong>Bureau</strong></div> 
@@ -33,7 +33,6 @@
 				<a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes </a> <span class="diamond"> &#11045; </span>
 				{{ shows|length }} émissions <span class="diamond"> &#11045; </span> 
 				{{ djs|length }} curateurs <span class="diamond"> &#11045; </span>
-				8 radios
 			</span>
 		</div>
 	</div>

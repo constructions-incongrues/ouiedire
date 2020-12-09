@@ -72,3 +72,6 @@
     padding: 12px 6px 12px 6px;
     width: 119px;
 }
+p.download{
+	display:none;
+}

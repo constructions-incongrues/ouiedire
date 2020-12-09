@@ -58,15 +58,6 @@
 		    <h3 class="showDate hide-on-mobile">{{ show.releasedAt|date('d/m/Y') }}</h3>
 		</div> 
 	</div> 
-	<div class="grid-100 tablet-grid-100 mobile-grid-100">	
-		{% if otherShows %}
-			{{ show.authors }} : 
-			{% for show in otherShows %}
-				<a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} </a>
-	    	{% endfor %}
-			<br /><br />
-		{% endif %} 
-	</div> 
 	<div class="grid-50 mobile-grid-100">
 	    <audio controls="controls">
 	        <source src="{{ show.urlDownload }}" type="audio/mp3" />
@@ -88,6 +79,16 @@
 			{{ show.description|raw }}
 		</div>
 	</div>	
+	
+	<div class="grid-100 tablet-grid-100 mobile-grid-100">	
+		{% if otherShows %}
+			{{ show.authors }} : 
+			{% for show in otherShows %}
+				<a href="{{ url('emission', {id:show.id, type:show.typeSlug}) }}" title="#{{ show.number }} : {{ show.title }}, par {{ show.authors }}">{{ show.type }} #{{ show.number }} </a>
+	    	{% endfor %}
+			<br /><br />
+		{% endif %} 
+	</div> 
 	
 	<div id="playerStatus" class="{{ show.typeSlug }}"></div>
 	

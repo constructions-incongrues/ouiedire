@@ -1,0 +1,74 @@
+.mejs-container .mejs-controls {
+	background:#000;
+	height: 40px;
+}
+.mejs-controls div.mejs-time-rail{
+    padding-top: 0px;
+}
+
+.mejs-container .mejs-controls div{
+    width: 40px;
+	font-family: 'Roboto Mono', sans-serif;
+    height: 40px;
+}
+.mejs-controls .mejs-time-rail span {
+	height: 40px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+.mejs-controls .mejs-time-rail .mejs-time-total {
+	margin: 0 0px;
+	background: #333;
+}
+.mejs-controls .mejs-time-rail .mejs-time-loaded {
+	background: #fff;
+}
+.mejs-controls .mejs-time-rail .mejs-time-current {
+	background: #FCFE04;  /* over-ridé dans la page émission */
+}
+.mejs-controls .mejs-time-rail .mejs-time-float {
+	background: #FCFE04;  /* over-ridé dans la page émission */
+	width: 58px !important;
+	top: -23px;
+	margin-left: -29px !important;
+	color: #111;
+    text-align: center;
+}
+.mejs-controls .mejs-time-rail .mejs-time-float-corner {
+	border: solid 5px #000;
+	border-color: #000 transparent transparent transparent;
+	top: 18px;
+	left: 25px !important;
+}
+
+.mejs-play button, .mejs-pause button {
+	margin: 12px !important;
+}
+.mejs-volume-button {
+    width: 20px !important;
+}
+.mejs-volume-button button {
+	margin: 12px 0px !important;
+}
+
+
+.mejs-controls .mejs-horizontal-volume-slider{
+    width: 70px !important;
+    margin: 5px 0 !important;
+}
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total{
+    border-radius: 0;
+	background: #333;
+}    
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{
+    border-radius: 0;
+	background: #FCFE04;  /* over-ridé dans la page émission */    
+}
+.mejs-controls .mejs-button button:focus {
+    fill: #ff0;
+}
+.mejs-container .mejs-controls .mejs-time{
+    padding: 12px 6px 12px 6px;
+    width: 119px;
+}

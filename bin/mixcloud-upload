@@ -5,12 +5,12 @@ set -ex
 
 # Get show metadata
 SHOW_NUMBER=$(echo $1 |grep -Eo '[0-9]{1,4}')
-SHOW_TYPE=$(jq .type ./src/data/emission/$1/manifest.json)
+SHOW_TYPE=$(cat ./src/data/emission/$1/manifest.json | jq .type)
 SHOW_TYPE_SLUG=$(echo $SHOW_TYPE | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
-SHOW_AUTHORS=$(jq .authors ./src/data/emission/$1/manifest.json)
+SHOW_AUTHORS=$(cat ./src/data/emission/$1/manifest.json | jq .authors)
 SHOW_AUTHORS_SLUG=$(echo $SHOW_AUTHORS | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
-SHOW_TITLE_SLUG=$(echo $(jq .title ./src/data/emission/$1/manifest.json) | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
-SHOW_TITLE="$SHOW_TYPE $SHOW_NUMBER: $SHOW_AUTHORS - $(jq .title ./src/data/emission/$1/manifest.json)"
+SHOW_TITLE_SLUG=$(echo $(cat ./src/data/emission/$1/manifest.json | jq .title) | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
+SHOW_TITLE="$SHOW_TYPE $SHOW_NUMBER: $SHOW_AUTHORS - $(cat ./src/data/emission/$1/manifest.json | jq .title )"
 SHOW_TITLE=$(echo $SHOW_TITLE | tr -d '"')
 SHOW_TAGS=$(echo "ouiedire,musiques-incongrues,$SHOW_TYPE" | tr '[:upper:]' '[:lower:]' | tr -d '"')
 SHOW_DESCRIPTION="Écoute et téléchargement sur http://www.ouiedire.net/emission/$1 -  $(cat ./src/data/emission/$1/description.html | sed -e 's/<[^>]*>//g'  | tr -d "\n")"

@@ -1,0 +1,439 @@
+/*Code by Constructions Incongrues www.constructions-incongrues.net/.pCode licensed under the GNU AGPLv3:http://www.gnu.org/licenses/gpl.txVersion: 1.0*/
+/* TODO : A cleaner */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+html {
+	font-size:13px;
+}
+body {
+	background-color: #FFF;
+	background-image: url(../img/pattern.gif);
+	background-repeat: repeat;
+	background-attachment: fixed;
+	font-family: 'Roboto Mono', sans-serif;
+}
+#container{
+	margin-top: 20px;
+}
+/*  COULEURS */
+/* ========= */
+.ailleurs{
+	color: #fff;
+	background-color:#333;
+}
+.bagage{
+	color: #FFF;
+	background-color:#fc029c;
+}
+.bureau{
+	color: #FFF;
+	background-color:#0099FF;
+}
+.ouiedire{
+	color: #FFF;
+	background-color:#8A2BE2;
+}
+
+
+/*  BLOC NOIR pour LISTE des émissions */
+/* =================================== */
+.center{
+    text-align: center;	
+}
+.bloc{	
+	background-color: #000;
+    padding: 7px 10px 14px 10px;
+    margin: 10px 0 20px 0;
+}
+
+div.infos {
+	color: #FFF;
+}
+@media screen and (min-width: 1025px) {
+	.bloc{	
+    	padding: 7px 10px 7px 10px;
+	}
+	div.infos .big{
+		font-size: 1.6em;
+	}
+	div.infos .small{
+		display: block;
+		font-size: 1.2em;
+		margin-bottom:8px
+	}
+}
+.bloc a {
+	text-decoration: none;
+	color: #FCFE04;
+	text-transform: capitalize;
+}
+.diamond{
+	opacity:0.3;
+}
+
+
+/*  BLOC NOIR pour UNE émission */
+/* ============================ */
+.cartouche{	
+	background-color: #000;
+    padding: 0;
+    margin: 10px 0 20px 0;
+}
+h2.showNumber{
+	display:inline-block;
+    text-transform: uppercase;
+	margin: 0;
+    padding: 10px 15px;
+	font-size: 1.6em;
+}
+h1.showTitle{
+	display:inline-block;
+	color: #fff;
+	margin: 0;
+	font-weight: normal;
+    padding: 0 15px;
+	font-size: 1.6em;
+}
+h3.showDate{
+	display: inline-block;
+	color:#666;
+	margin: 0;
+    padding: 10px 15px;
+	font-size: 1.6em;
+	float: right;
+	font-weight: normal;
+}
+h3.showDownload{
+	display: inline-block;
+	margin: 7px 0 0 20px;
+	font-size: 1.6em;
+	font-weight: normal;
+	position: absolute;
+}
+h3.showDownload a{	
+	color: #fff;
+	background-color:#333;
+    text-transform: uppercase;
+    text-decoration: none;
+	padding: 5px 10px;
+	font-size: 0.6em;
+}
+h3.showDownload a:hover{	
+	color:#333;
+	background-color: #fff;
+}
+
+
+/*  PREV / NEXT EMISSION  */
+/* ====================== */
+.nav a {
+    color: #FFF;
+    background-color: #000;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.nav a:hover {
+    color: #000;
+    background-color: #FCFE04;
+}
+.nav {
+    float: right !important;
+	margin-top:15px;
+}
+@media screen and (min-width: 1025px) {
+	.nav {
+		margin-top:10px;
+	}
+}
+
+
+/* Boutons filtres "type d'emission" */
+/* ================================= */
+.displayBlock {display : block;}
+.displayNone {display: none;}
+#filterDiv{
+	text-align:right;
+}
+.filterContainer {
+    float: right !important;
+	margin-top:15px;
+}
+.filterContainer div { /* TOUS LES FILTRES HERITENT DE CE TRUC */
+	display: inline-block;
+	text-transform: lowercase;
+	font-weight: normal;
+	cursor:pointer;
+    padding: 10px 10px 10px 0; 
+    margin-bottom: 10px;
+	margin-right: 10px;
+}
+.filterContainer div strong{
+	padding: 10px 8px;
+}
+@media screen and (min-width: 1025px) {
+	.filterContainer {
+		margin-top:50px;
+	}
+	.filterContainer div {
+		font-size: 1.2rem;
+    	margin-bottom: 0px;
+	}
+	.ailleursFilter, .bagageFilter, .bureauFilter, .ouiedireFilter {
+		padding: 0px 0px 10px 0px;
+	}
+}
+.showsFakeFilter{
+	color:#000;
+	background-color: #FCFE04;
+	cursor: default !important;
+	padding: 10px 8px !important;
+}
+.allFilter {
+	color:#000;
+	background-color: #FFF;
+	text-transform: uppercase;
+	padding: 0px !important;
+}
+.allFilter strong {
+	color: #000;
+	background-color:#FFF;
+}
+.ailleursFilter {
+	color:#000;
+	background-color: #FFF;
+}
+.ailleursFilter strong {
+	color: #FFF;
+	background-color:#333;
+}
+.bagageFilter {
+	color:#fc029c;
+	background-color: #FFF;
+}
+.bagageFilter strong {
+	color: #FFF;
+	background-color:#fc029c;
+}
+.bureauFilter {
+	color:#0099FF;
+	background-color: #FFF;
+}
+.bureauFilter strong {
+	color: #FFF;
+	background-color:#0099FF;
+}
+.ouiedireFilter {
+	color:#8A2BE2;
+	background-color: #FFF;
+	margin-right: 0px !important;
+}
+.ouiedireFilter strong {
+	color: #FFF;
+	background-color:#8A2BE2;
+}
+@media screen and (max-width: 767px) {
+	#logoDiv{
+		text-align: center;
+	}
+	#filterDiv{
+		text-align: center;
+	}
+	.filterContainer {
+	    float: none !important;
+		text-align: center;
+	}
+	.ailleursFilter, .bagageFilter, .bureauFilter, .ouiedireFilter {
+		padding: 0 !important;
+	}
+	.ailleursFilter strong, .bagageFilter strong, .bureauFilter strong, .ouiedireFilter strong {
+		padding: 5px 5px;
+	}
+	.ailleursFilter, .bagageFilter, .bureauFilter {
+		margin-right: 2px !important;
+	}
+}
+
+
+
+
+/* liens émissions (shows) */
+/* ======================= */
+.showContainer ul{
+  -webkit-columns: 5 300px;
+     -moz-columns: 5 300px;
+          columns: 5 300px;
+  -webkit-column-gap: 2em;
+     -moz-column-gap: 2em;
+          column-gap: 2em;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.showContainer li.show {
+	text-transform: capitalize;
+	margin-bottom: 10px;
+	background-color: #FFF;
+}
+.showContainer li.show a{
+	color:#000;
+	text-decoration:none;
+	padding: 5px 5px 5px 0;
+	display:block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+li.show strong{
+	padding: 5px 10px;
+}
+li.ailleurs strong, li.ailleurs a:hover, .ailleursFilter:hover, .allFilter:hover{
+	color: #FFF;
+	background-color:#333;
+}
+li.bagage strong, li.bagage a:hover, .bagageFilter:hover{
+	color:#fff;
+	background-color: #fc029c;
+}
+
+li.ouiedire strong, li.ouiedire a:hover, .ouiedireFilter:hover {
+	color: #FFF;
+	background-color:#8A2BE2;
+}
+li.bureau strong, li.bureau a:hover, .bureauFilter:hover {
+	color: #FFF;
+	background-color:#0099FF;
+}
+
+
+
+
+
+
+/* MEDIA PLAYER mediaelementjs.com 2.12.0 */
+/* ====================================== */
+.mejs-container {
+	height: 40px !important;
+	width: 100%;
+}
+a.mejs-smartplaylist-time {
+	color:#000;
+	padding: 5px;
+	font-weight: bold;
+	text-decoration: none;
+}
+a.mejs-smartplaylist-time:hover { /* over-ridé dans la page émission */
+	color:#000;
+	background-color:#FCFE04;
+}
+a.mejs-smartplaylist-time.mejs-smartplaylist-current{ /* over-ridé dans la page émission */
+	background-color:#000;
+	color: #FCFE04;
+	font-weight: bold;
+}
+.mejs-smartplaylist-time a:hover.mejs-smartplaylist-time {
+	color:#000;
+	font-weight: bold;
+}
+a.mejs-smartplaylist-time:after {
+	content:"]";
+	color: #000;
+}
+a.mejs-smartplaylist-time:before {
+	content:"[";
+	color: #000;
+}
+ol.mejs-smartplaylist-playlist {
+	list-style-type: none;
+	margin: 5px 0 0 -40px;
+}
+.mejs-smartplaylist-playlist li {
+	text-decoration: none;
+	color:#000;
+	padding: 5px 0;
+	position:relative;
+	top:-5px;
+	text-transform: capitalize;
+}
+.mejs-smartplaylist-playlist li:nth-child(even) {background: #fff}
+.mejs-smartplaylist-playlist li:nth-child(odd) {background: #eee}
+
+.mejs-smartplaylist-playlist li span{
+	font-weight: bold;
+}
+
+
+#playerStatus{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: none;
+	text-align: center;
+	z-index: 1;
+	text-transform: capitalize;
+}
+
+.descriptiontext{
+	font-size: 1.1em;
+	margin-top: 10px;
+}
+.descriptiontext p{
+	display: inline-block;
+    color: #000;
+	background-color: #E6FAFF;
+	padding: 0 4px;
+}
+.descriptiontext a {
+    color: #000;
+	font-weight: bold;
+    text-decoration: none;
+}
+.descriptiontext a:hover {
+    color: #fff;
+	background-color:#0099FF;
+}
+
+
+
+
+/*  FOOTER  */
+/* ======== */
+footer{
+    font-size: 1.2em;
+	margin-top: 0em;
+}
+footer p.links a{
+    color: #FFF;
+    background-color: #000;
+    padding: 6px 9px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+footer p.links a:hover {
+    color: #000;
+    background-color: #FCFE04;
+}
+footer p.text span{
+    color: #000;
+	background-color:#E6FAFF;
+	padding:0 4px;
+}
+footer p.text a {
+    color: #000;
+	font-weight: bold;
+    text-decoration: none;
+}
+footer p.text a:hover {
+    color: #fff;
+	background-color:#0099FF;
+}
+@media screen and (max-width: 767px) {
+	footer{
+	    font-size: 1em;
+		margin-top: 1em;
+	}
+	footer p.links a {
+	    padding: 5px;
+	    line-height:2.7em;
+	}
+}

@@ -203,6 +203,8 @@ function getShow($id, Silex\Application $app = null, $config = array()) {
     // Pretty show number
     $show['id'] = $show['number'];
     if ($show['id'] < 10) {
+        $show['number'] = '00'.$show['id'];
+    } elseif ($show['id'] < 100) {
         $show['number'] = '0'.$show['id'];
     } else {
         $show['number'] = $show['id'];

@@ -8,7 +8,7 @@ $(document).ready(function() {
   $('audio').mediaelementplayer(
     {
       // Enabled features
-      features: ['playpause','progress','current','duration','tracks','smartplaylist', 'googleanalytics', 'autochange', 'ouiedire'],
+      features: ['playpause','progress','current','duration','tracks','volume','smartplaylist', 'googleanalytics', 'autochange', 'ouiedire'],
 
       // Player size
       audioWidth: '100%',

@@ -352,13 +352,13 @@ ol.mejs-smartplaylist-playlist {
 	padding: 5px 0;
 	position:relative;
 	top:-5px;
+	text-transform: capitalize;
 }
 .mejs-smartplaylist-playlist li:nth-child(even) {background: #fff}
 .mejs-smartplaylist-playlist li:nth-child(odd) {background: #eee}
 
 .mejs-smartplaylist-playlist li span{
 	font-weight: bold;
-	text-transform: uppercase;
 }
 
 
@@ -369,6 +369,8 @@ ol.mejs-smartplaylist-playlist {
 	width: 100%;
 	display: none;
 	text-align: center;
+	z-index: 1;
+	text-transform: capitalize;
 }
 
 .descriptiontext{

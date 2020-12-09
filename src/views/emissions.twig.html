@@ -10,12 +10,17 @@
 
 {% block navigation %}
  <div class="filterContainer" id="filterDiv">
- 	<!-- <div class="showsFakeFilter hide-on-mobile">Les émissions :</div> -->
+ 	<!-- <div class="showsFakeFilter hide-on-mobile">Les émissions :</div>
 	<div class="allFilter hide-on-mobile" onclick="filterSelection('all')"><strong>TOUT !</strong></div> 
 	<div class="ailleursFilter" onclick="filterSelection('ailleurs')"><strong>Ailleurs</strong><span class="hide-on-mobile"> invité</span></div> 
 	<div class="bagageFilter" onclick="filterSelection('bagage')"><strong>Bagage</strong><span class="hide-on-mobile"> maison de disques</span></div> 
 	<div class="bureauFilter" onclick="filterSelection('bureau')"><strong>Bureau</strong><span class="hide-on-mobile"> réunions incongrues</span></div> 
-	<div class="ouiedireFilter" onclick="filterSelection('ouiedire')"><strong>Ouïedire</strong><span class="hide-on-mobile"> fait maison</span></div>
+	<div class="ouiedireFilter" onclick="filterSelection('ouiedire')"><strong>Ouïedire</strong><span class="hide-on-mobile"> fait maison</span></div> -->
+	<div class="allFilter hide-on-mobile" onclick="filterSelection('all')"><strong>Toutes les émissions</strong></div> 
+	<div class="ailleursFilter" onclick="filterSelection('ailleurs')"><strong>Ailleurs</strong></div> 
+	<div class="bagageFilter" onclick="filterSelection('bagage')"><strong>Bagage</strong></div> 
+	<div class="bureauFilter" onclick="filterSelection('bureau')"><strong>Bureau</strong></div> 
+	<div class="ouiedireFilter" onclick="filterSelection('ouiedire')"><strong>Ouïedire</strong></div>
 </div>
 {% endblock %}
 
@@ -27,7 +32,7 @@
 			<span class="big"> 
 				<a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes </a> <span class="diamond"> &#11045; </span>
 				{{ shows|length }} émissions <span class="diamond"> &#11045; </span> 
-				{{ djs|length }} curateurz
+				{{ djs|length }} curateurs
 			</span>
 		</div>
 	</div>

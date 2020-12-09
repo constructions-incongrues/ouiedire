@@ -66,9 +66,6 @@ div.infos {
 	color: #FCFE04;
 	text-transform: capitalize;
 }
-.diamond{
-	opacity:0.3;
-}
 
 
 /*  BLOC NOIR pour UNE émission */
@@ -399,6 +396,7 @@ ol.mejs-smartplaylist-playlist {
 /*  FOOTER  */
 /* ======== */
 footer{
+	margin-top:15px;
     font-size: 1em;
 	margin-top: 0em;
 }

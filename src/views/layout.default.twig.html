@@ -71,34 +71,28 @@
 		{% block content %}
 		CONTENT
 		{% endblock %}
-		<div class="grid-100 tablet-grid-100 mobile-grid-100">
-			<div class="bloc center">
-				<div class="infos">
-					<span class="small hide-on-mobile"> 
-						<a href="http://www.canalb.fr/gabuzomix/podcasts">Canal B</a> <span class="diamond"> &#11045; </span>
-						<a href="http://www.choq.ca/emissions-details/ouiedire/">Choq CA</a> <span class="diamond"> &#11045; </span>
-						<a href="https://www.facebook.com/cjucfm/?ref=br_rs">Cjuc 92.5 FM</a> <span class="diamond"> &#11045; </span>
-						<a href="http://www.radioeponyme.com/emissions/ouie-dire/">Eponyme</a> <span class="diamond"> &#11045; </span>
-						<a href="https://p-node.org/">π-node</a> <span class="diamond"> &#11045; </span>
-						<a href="http://radio-octopus.org">Radio Octopus</a> <span class="diamond"> &#11045; </span>
-						<a href="http://lastation.paris/station.station/ouiedire/">Station Station</a>
-					</span>
-				</div>
-			</div>
-		</div>
 		<footer class="grid-100 row" id="infosfooter">
-			<p class="links">
+			<!-- <p class="links">
 				<a href="mailto:contact@ouiedire.net">contact@ouiedire.net</a>
 				<a href="{{ url('dons') }}">Dons</a>
 				<a href="https://www.facebook.com/pages/Ou%C3%AFedire/35795699060">facebook</a>
-				<!-- <a href="https://twitter.com/OuiedireShow">twitter</a>
-			    <a href="http://feeds.feedburner.com/ouiedire">rss</a> -->
-			</p>
+				<a href="https://twitter.com/OuiedireShow">twitter</a>
+			    <a href="http://feeds.feedburner.com/ouiedire">rss</a>
+			</p> -->
 			<p class="text">
-				<span>Le projet <a href="http://www.ouiedire.net">Ouïedire</a> est développé par <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> et est hébergé par <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.</span>
+				<span><a href="mailto:contact@ouiedire.net">Contactez-nous</a> - <a href="{{ url('dons') }}">Soutenez-nous</a></span>
 				<br />
 				<span>Le logo a été réalisé par <a href="http://www.thejazzist.nu/">Otro</a>. Le code source est <a href="https://github.com/constructions-incongrues/net.ouiedire.www">distribué</a> sous licence <a href="http://www.gnu.org/licenses/agpl.html">AGPL3</a>.</span>
 				<br />
+				<span>Le projet <a href="http://www.ouiedire.net">Ouïedire</a> est développé par <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> et est hébergé par <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.</span>
+				<br />
+				<span>Les émissions sont rediffusées chez nos amis : <a href="http://www.canalb.fr/gabuzomix/podcasts">Canal B</a> - 
+				<a href="http://www.choq.ca/emissions-details/ouiedire/">Choq CA</a> - 
+				<a href="https://www.facebook.com/cjucfm/?ref=br_rs">Cjuc 92.5 FM</a> - 
+				<a href="http://www.radioeponyme.com/emissions/ouie-dire/">Eponyme</a> - 
+				<a href="https://p-node.org/">π-node</a> - 
+				<a href="http://radio-octopus.org">Radio Octopus</a> - 
+				<a href="http://lastation.paris/station.station/ouiedire/">Station Station</a></span>
 				{% block footer %}
 				{% endblock %}
 			</p>

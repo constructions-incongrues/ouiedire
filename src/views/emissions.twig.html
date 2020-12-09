@@ -8,63 +8,91 @@
 </a>
 {% endblock %}
 
-{% block content %}
-
-
-<!-- <h5><a href="{{ path('emission', {id:randomShow.id, type:randomShow.typeSlug}) }}">Écouter de manière aléatoire</a></h5>
-<hr>
- -->
-
-<div class="bloc">
-
-<!-- <a href="mailto:contact@ouiedire.net">email </a>
-				<a href="https://www.facebook.com/pages/Ou%C3%AFedire/35795699060">facebook</a>
-                <a href="http://feeds.feedburner.com/ouiedire">rss</a>
-                <a href="{{ url('dons') }}"><3</a>
-<br /> --><p class="infos">
-                <a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes </a>  
-                 {{ shows|length }}  émissions   {{ djs|length }} curateurs 	<br/> 
-  <br /> 
-                
-                <a href="http://www.canalb.fr/gabuzomix/podcasts">Canal B</a> 
-				<a href="http://www.choq.ca/emissions-details/ouiedire/">Choq CA</a> 
-				<a href="https://www.facebook.com/cjucfm/?ref=br_rs">Cjuc 92.5 FM</a> 
-				<a href="http://www.radioeponyme.com/emissions/ouie-dire/">Eponyme</a> 
-				<a href="https://p-node.org/">π-node</a> 
-				<a href="http://radio-octopus.org">Radio Octopus</a> 
-				<a href="http://lastation.paris/station.station/ouiedire/">Station Station</a> 
-
-			
-				 </p>
+{% block navigation %}
+ <div class="filterContainer" id="filterDiv">
+ 	<div class="showsFakeFilter hide-on-mobile">Les émissions :</div>
+	<div class="allFilter hide-on-mobile" onclick="filterSelection('all')"><strong>TOUT !</strong></div> 
+	<div class="ailleursFilter" onclick="filterSelection('ailleurs')"><strong>Ailleurs</strong><span class="hide-on-mobile"> invité</span></div> 
+	<div class="bagageFilter" onclick="filterSelection('bagage')"><strong>Bagage</strong><span class="hide-on-mobile"> maison de disques</span></div> 
+	<div class="bureauFilter" onclick="filterSelection('bureau')"><strong>Bureau</strong><span class="hide-on-mobile"> réunions incongrues</span></div> 
+	<div class="ouiedireFilter" onclick="filterSelection('ouiedire')"><strong>Ouïedire</strong><span class="hide-on-mobile"> fait maison</span></div>
 </div>
+{% endblock %}
 
-      <!--              
-<div class="legend"> 
-<p> <span class="ailleurs_legend">Ailleurs est dédié à la sélection d'un curateur </span> <br /> <span class="bagage_legend">Bagage est dédié à la découverte d'un label </span> 
-<p> <span class="bureau_legend">Bureau est dédié a la captation des lives lors des réunions Constructions Incongrues </span> <span class="ouiedire_legend">Ouïedire est dédié aux projet initial</span> </p>
-</p>
-
-</div> -->
- <div class="grid-100 mobile-grid-100">
-
- <p class="legendinfo">
- 	<span class="ailleurs_legend">Ailleurs, invité </span> <span class="bagage_legend">Bagage, maison de disques</span> <span class="bureau_legend">Bureau, réunions incongrues </span> <span class="ouiedire_legend"> Ouïedire, fait maison </span> 
- 	</p>
-
-<div class="allshows">
-		<ul>
-{% for show in shows %}
-	{% if loop.index0 == (loop.length / 1)|number_format %}
-	
-	{% endif %}
-  		<li class="{{ show.typeSlug }}">
-  			<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}">
-  				<strong>{{ show.number }} / </strong>{{ show.authors }} - {{ show.title }} <!-- m({{ show.releasedAt|date('d/m/Y') }})  -->
-  			</a>
-  		</li>
-{% endfor %}
-		</ul>
+{% block content %}
+<!-- <h5><a href="{{ path('emission', {id:randomShow.id, type:randomShow.typeSlug}) }}">Écouter de manière aléatoire</a></h5><hr>-->
+<div class="grid-100 tablet-grid-100 mobile-grid-100">
+	<div class="bloc center">
+		<div class="infos">
+			<span class="big"> 
+				<a href="{{ url('artists', {artist:artist}) }}"> {{ artists|length }} artistes </a> <span class="diamond"> &#11045; </span>
+				{{ shows|length }} émissions <span class="diamond"> &#11045; </span> 
+				{{ djs|length }} curateurs
+			</span>
+			<span class="small hide-on-mobile"> 
+				<a href="http://www.canalb.fr/gabuzomix/podcasts">Canal B</a> <span class="diamond"> &#11045; </span>
+				<a href="http://www.choq.ca/emissions-details/ouiedire/">Choq CA</a> <span class="diamond"> &#11045; </span>
+				<a href="https://www.facebook.com/cjucfm/?ref=br_rs">Cjuc 92.5 FM</a> <span class="diamond"> &#11045; </span>
+				<a href="http://www.radioeponyme.com/emissions/ouie-dire/">Eponyme</a> <span class="diamond"> &#11045; </span>
+				<a href="https://p-node.org/">π-node</a> <span class="diamond"> &#11045; </span>
+				<a href="http://radio-octopus.org">Radio Octopus</a> <span class="diamond"> &#11045; </span>
+				<a href="http://lastation.paris/station.station/ouiedire/">Station Station</a>
+			</span>
 		</div>
-		
-	</div><!-- grid-50 -->
+	</div>
+</div>
+<div class="grid-100 mobile-grid-100">
+	<div class="showContainer">
+		<ul>
+		{% for show in shows %}
+			{% if loop.index0 == (loop.length / 1)|number_format %}{% endif %}
+			<li class="show {{ show.typeSlug }}">
+				<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}" title="{{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})">
+					<strong>{{ show.number }}</strong> {{ show.authors }} - {{ show.title }}
+				</a>
+			</li>
+		{% endfor %}
+		</ul>	
+	</div>	
+</div>
+{% endblock %}
+
+
+
+{% block userscript %}
+<script type="text/javascript">
+	filterSelection("all") 
+	function filterSelection(choice) {
+	  var x, i;
+	  emissions = document.getElementsByClassName("show");
+	  if (choice == "all") choice = "";
+	  for (i = 0; i < emissions.length; i++) {
+		  removeClass(emissions[i], "displayBlock");
+		  addClass(emissions[i], "displayNone");
+	    if (emissions[i].className.indexOf(choice) > -1) addClass(emissions[i], "displayBlock");
+	    if (emissions[i].className.indexOf(choice) > -1) removeClass(emissions[i], "displayNone");
+	  }
+	}
+	function addClass(element, name) {
+	  var i, arr1, arr2;
+	  arr1 = element.className.split(" ");
+	  arr2 = name.split(" ");
+	  for (i = 0; i < arr2.length; i++) {
+	    if (arr1.indexOf(arr2[i]) == -1) {
+	      element.className += " " + arr2[i];
+	    }
+	  }
+	}
+	function removeClass(element, name) {
+	  var i, arr1, arr2;
+	  arr1 = element.className.split(" ");
+	  arr2 = name.split(" ");
+	  for (i = 0; i < arr2.length; i++) {
+	    while (arr1.indexOf(arr2[i]) > -1) {
+	      arr1.splice(arr1.indexOf(arr2[i]), 1);
+	    }
+	  }
+	  element.className = arr1.join(" ");
+	}
+</script>
 {% endblock %}

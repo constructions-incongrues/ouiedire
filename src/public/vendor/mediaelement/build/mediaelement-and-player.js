@@ -2749,7 +2749,7 @@ if (typeof jQuery != 'undefined') {
 			// outer area
 			rail.width(railWidth);
 			// dark space
-			total.width(railWidth - (total.outerWidth(true) - total.width()));
+			total.width(railWidth - (total.outerWidth(true) - total.width()) - 1);
 
 			if (t.setProgressRail)
 				t.setProgressRail();

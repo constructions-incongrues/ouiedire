@@ -4,36 +4,29 @@
 	<!-- Description -->
 	<title>{% block title %}{% endblock %} | Ouïedire</title>
 	<meta name="description" content="Ouïedire, j'en ai déjà entendu parler quelque part" />
-
 	<!-- Technical -->
 	<meta charset="utf-8" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/main.css?{{ app.assetsVersion }}" />
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/main_dams.css?{{ app.assetsVersion }}" />
 	<!--[if (gt IE 8) | (IEMobile)]><!-->
-	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/unsemantic-grid-responsive.css" />
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/unsemantic-grid-responsive-tablet.css" />
 	<!--<![endif]-->
 	<!--[if (lt IE 9) & (!IEMobile)]>
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/ie.css" />
 	<![endif]-->
-
 	<!-- JavaScript -->
 	<!--[if lt IE 9]>
 	<script src="{{ app.request.getBasePath() }}/assets/javascripts/html5.js"></script>
 	<![endif]-->
-
 	<!-- Favicon -->
 	<link rel="icon" href="{{ app.request.getBasePath() }}/assets/img/favicon.png?{{ app.assetsVersion }}" type="image/x-icon"/>
-
 	<!-- Feeds -->
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/ouiedire" />
-
   <!-- oEmbed -->
   {% block oembed %}
 	{% endblock %}
-
 	<!-- Opengraph -->
 	<meta property="og:locale" content="fr_FR" />
 	{% block opengraph %}
@@ -44,87 +37,72 @@
 	<meta property="og:image" content="{{ app.request.getScheme }}://{{ app.request.getHost() }}{{ app.request.getBasePath() }}/assets/img/logo.png" />
 	{% endblock %}
 </head>
+<body id="body">
+	<script type="text/javascript">	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-673133-4']);
+	  _gaq.push(['_setDomainName', 'ouiedire.net']);
+	  _gaq.push(['_trackPageview']);	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();	
+	</script>
 
-<body>
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-673133-4']);
-  _gaq.push(['_setDomainName', 'ouiedire.net']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-	<div class="grid-container">
-
-		<header class="grid-100">
-			<div class="grid-30 mobile-grid-100">
-					<p>
+	<div class="grid-container" id="container">
+		<header class="">
+			<div class="grid-30 tablet-grid-50 mobile-grid-100" id="logoDiv">
 				<a href="{{ url('emissions') }}">
-					<img src="{{ app.request.getBasePath() }}/assets/img/logo.png" alt="Ouïedire" title="Consulter la liste des émissions disponibles" />
+					<img src="{{ app.request.getBasePath() }}/assets/img/logo_trim.png" alt="Ouïedire" title="Consulter la liste des émissions disponibles" />
 				</a>
-
-			</p>
-
-
-			{# % block jingle %}
-			 <h4><a href="{{ url('jingle') }}">Proposer un jingle !</a></h4>{% endblock % #}
-
-
-
-		</div>
- <div class="grid-70 mobile-grid-100">
-
-
-                    <!-- <h3>La dernière émission : </h3> <h4> {% block latest %} LATEST SHOW {% endblock %} </h4> -->
-
-                    <!-- <h3 class="flyerinfos"> <a href="{{ url('flyers') }}">Flyers des programmations (Janvier 2015 à Juin 2016)</a></h3> -->
-                    {% block flyer %}{% endblock %}
-
-                </div>
+				{# % block jingle %}
+			 	<h4><a href="{{ url('jingle') }}">Proposer un jingle !</a></h4>
+			 	{% endblock % #}
+			</div>
+			<div class="grid-70 tablet-grid-50 mobile-grid-100" >
+				<!-- <h3>La dernière émission : </h3> <h4> {% block latest %} LATEST SHOW {% endblock %} </h4> -->
+				<!-- <h3 class="flyerinfos"> <a href="{{ url('flyers') }}">Flyers des programmations (Janvier 2015 à Juin 2016)</a></h3> -->
+			    <!-- {% block flyer %}{% endblock %} -->
+			    {% block navigation %}{% endblock %}	
+			</div>
 		</header>
-
+	
 		{% block content %}
 		CONTENT
-
 		{% endblock %}
-
-		<footer class="grid-100" id="infosfooter">
-			<p>
-			main	<a href="mailto:contact@ouiedire.net">contact@ouiedire.net</a>
+		
+		<footer class="grid-100 row" id="infosfooter">
+			<p class="links">
+				<a href="mailto:contact@ouiedire.net">contact@ouiedire.net</a>
 				<a href="https://www.facebook.com/pages/Ou%C3%AFedire/35795699060">facebook</a>
 				<a href="https://twitter.com/OuiedireShow">twitter</a>
 			    <a href="http://feeds.feedburner.com/ouiedire">rss</a>
 				<a href="{{ url('dons') }}">Dons</a>
-
 			</p>
-
-				<p>
-				Le projet <a href="http://www.ouiedire.net">Ouïedire</a> est développé par <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> et est hébergé par <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.
+			<p class="text">
+				<span>Le projet <a href="http://www.ouiedire.net">Ouïedire</a> est développé par <a href="http://www.constructions-incongrues.net">Constructions Incongrues</a> et est hébergé par <a href="http://www.pastis-hosting.net">Pastis Hosting</a>.</span>
 				<br />
-				Le logo a été réalisé par <a href="http://www.thejazzist.nu/">Otro</a>.
-				Le code source est <a href="https://github.com/constructions-incongrues/net.ouiedire.www">distribué</a> sous licence <a href="http://www.gnu.org/licenses/agpl.html">AGPL3</a>.
+				<span>Le logo a été réalisé par <a href="http://www.thejazzist.nu/">Otro</a>. Le code source est <a href="https://github.com/constructions-incongrues/net.ouiedire.www">distribué</a> sous licence <a href="http://www.gnu.org/licenses/agpl.html">AGPL3</a>.</span>
 				<br />
-
 				{% block footer %}
 				{% endblock %}
 			</p>
-
 		</footer>
 	</div> <!-- grid-container -->
 
 	<!-- mediaelement.js : http://mediaelementjs.com -->
 	<script src="{{ app.request.getBasePath() }}/vendor/jquery/jquery.min.js"></script>
 	<script src="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelement-and-player.min.js"></script>
+	<!-- <script src="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelement-and-player.js"></script> -->
 	<script src="{{ app.request.getBasePath() }}/vendor/net.constructions-incongrues.mejs/src/mep-feature-smartplaylist.js?{{ app.assetsVersion }}"></script>
 	<script src="{{ app.request.getBasePath() }}/vendor/net.constructions-incongrues.mejs/src/mep-feature-autochange.js?{{ app.assetsVersion }}"></script>
 	<script src="{{ app.request.getBasePath() }}/assets/javascripts/mep-feature-ouiedire.js?{{ app.assetsVersion }}"></script>
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelementplayer.css" /></link>
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/mejs.css?{{ app.assetsVersion }}" /></link>
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/mejs_dams.css?{{ app.assetsVersion }}" /></link>
+	{% block userstyle %}{% endblock %}
 	<script src="{{ app.request.getBasePath() }}/assets/javascripts/behaviors.js?{{ app.assetsVersion }}"></script>
+	{% block userscript %}{% endblock %}
 </body>
 </html>

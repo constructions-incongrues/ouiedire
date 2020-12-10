@@ -66,9 +66,6 @@ div.infos {
 	color: #FCFE04;
 	text-transform: capitalize;
 }
-.diamond{
-	opacity:0.3;
-}
 
 
 /*  BLOC NOIR pour UNE émission */
@@ -175,7 +172,7 @@ h3.showDownload a:hover{
 		margin-top:50px;
 	}
 	.filterContainer div {
-		font-size: 1.2rem;
+		font-size: 1.1rem;
     	margin-bottom: 0px;
 	}
 	.ailleursFilter, .bagageFilter, .bureauFilter, .ouiedireFilter {
@@ -401,7 +398,8 @@ ol.mejs-smartplaylist-playlist {
 /*  FOOTER  */
 /* ======== */
 footer{
-    font-size: 1.2em;
+	margin-top:15px;
+    font-size: 1em;
 	margin-top: 0em;
 }
 footer p.links a{

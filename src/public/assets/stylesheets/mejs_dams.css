@@ -56,6 +56,7 @@
 .mejs-controls .mejs-horizontal-volume-slider{
     width: 70px !important;
     margin: 5px 0 !important;
+    display: none !important;
 }
 .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total{
     border-radius: 0;
@@ -71,4 +72,7 @@
 .mejs-container .mejs-controls .mejs-time{
     padding: 12px 6px 12px 6px;
     width: 119px;
+}
+p.download{
+	display:none;
 }

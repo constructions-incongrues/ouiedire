@@ -160,7 +160,7 @@ h3.showDownload a:hover{
 	text-transform: lowercase;
 	font-weight: normal;
 	cursor:pointer;
-    padding: 10px 10px 10px 0; 
+    padding: 10px 0px 10px 0; 
     margin-bottom: 10px;
 	margin-right: 10px;
 }

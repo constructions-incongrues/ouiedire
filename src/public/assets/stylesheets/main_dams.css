@@ -282,6 +282,8 @@ h3.showDownload a:hover{
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	break-inside: avoid;
+
 }
 li.show strong{
 	padding: 5px 10px;

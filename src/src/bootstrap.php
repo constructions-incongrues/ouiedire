@@ -181,15 +181,27 @@ function getShow($id, Silex\Application $app = null, $config = array()) {
 
     // Guess covers URL
     $show['covers'] = array();
+    $finderHd = new Finder();
     $finder = new Finder();
     try {
-        $covers = $finder
+        $coversHd = $finderHd
         ->files()
-        ->name('*_cover-*.*')
+        ->name('*_cover_hd.*')
         ->in($pathPublicEmission);
-        foreach ($covers as $cover) {
-            $show['covers'][] = sprintf('%s/%s', $urlAssets, basename($cover->getRealPath()));
+        /*foreach ($coversHd as $cover) {
+            if(file_exists($cover->getRealpath())){
+                $show['covers'][] = sprintf('%s/%s', $urlAssets, basename($cover->getRealPath()));                    
+            }
         }
+        if(empty($show['covers'])){*/
+            $covers = $finder
+            ->files()
+            ->name('*_cover-*.*')
+            ->in($pathPublicEmission);
+            foreach ($covers as $cover) {
+                $show['covers'][] = sprintf('%s/%s', $urlAssets, basename($cover->getRealPath()));
+            }
+        //}    
     } catch (\InvalidArgumentException $e) {
         // whatever
     }
@@ -209,7 +221,8 @@ function getShow($id, Silex\Application $app = null, $config = array()) {
     } else {
         $show['number'] = $show['id'];
     }
-
+    
+    //print_r($show);
     return $show;
 }
 
@@ -556,6 +569,7 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, Request $req
     );
 })
 ->bind('emission');
+
 
 $app->get('/artists', function(Silex\Application $app, Request $request) use ($config) {
     $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));

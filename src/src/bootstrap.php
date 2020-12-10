@@ -68,7 +68,7 @@ function getArtists(array $show)
     $domArtists = $crawler->filter('.mejs-smartplaylist-time + span');
     foreach ($domArtists as $domArtist) {
         $artist = strtolower(trim($domArtist->textContent));
-        if (!empty($artist)) {
+        if (!empty($artist) && $artist!='intro' && $artist!='outro') {
             $artists[] = strtolower(trim($domArtist->textContent));
         }
     }

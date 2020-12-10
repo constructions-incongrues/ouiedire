@@ -78,29 +78,29 @@
 		<div class="descriptiontext">
 			{{ show.description|raw }}
 		</div>
+		{% if otherShows %}
+		<!-- <div class="grid-50 tablet-grid-100 mobile-grid-100"> -->
+			<div class="cartouche" style="margin-top:20px">     
+			    <h2 class="showNumber {{ show.typeSlug }}">{{ show.authors }}</h2>
+			</div> 
+			<div class="showContainer">
+				<ul>
+				{% for show in otherShows %}
+					{% if loop.index0 == (loop.length / 1)|number_format %}{% endif %}
+					<li class="show {{ show.typeSlug }}">
+						<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}" title="{{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})">
+							<strong>{{ show.number }}</strong> {{ show.title }}
+						</a>
+					</li>
+				{% endfor %}
+				</ul>	
+			</div>
+		<!-- </div>  -->
+		<br><br>
+		{% endif %} 
 	</div>	
 	
-	{% if otherShows %}
-	<div class="grid-50 tablet-grid-100 mobile-grid-100">
-		<br>
-		<div class="cartouche">     
-		    <h2 class="showNumber {{ show.typeSlug }}">{{ show.authors }}</h2>
-		</div> 
-		<div class="showContainer">
-			<ul>
-			{% for show in otherShows %}
-				{% if loop.index0 == (loop.length / 1)|number_format %}{% endif %}
-				<li class="show {{ show.typeSlug }}">
-					<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}" title="{{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})">
-						<strong>{{ show.number }}</strong> {{ show.title }}
-					</a>
-				</li>
-			{% endfor %}
-			</ul>	
-		</div>
-	</div> 
-	<br><br>
-	{% endif %} 
+	
 	
 	
 	<div id="playerStatus" class="{{ show.typeSlug }}"></div>

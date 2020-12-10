@@ -280,6 +280,8 @@ h3.showDownload a:hover{
 	overflow: hidden;
 	text-overflow: ellipsis;
 	break-inside: avoid;
+	-webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
 
 }
 li.show strong{

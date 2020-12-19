@@ -1,0 +1,33 @@
+{% extends "layout.default.twig.html" %}
+
+{% block latest %}
+<a href="{{ path('emission', {id:shows.0.id, type:shows.0.typeSlug}) }}">
+  {{ shows.0.type }} {{ shows.0.number }} : {{ shows.0.authors }} - {{ shows.0.title }}
+</a>
+{% endblock %}
+
+{% block title %}Curateurs ({{ djs|length }}){% endblock %}
+
+{% block content %}
+<div class="grid-100 tablet-grid-100 mobile-grid-100">
+	<div class="bloc center">
+		<div class="infos">
+			<span class="big"> 
+				<a href="{{ url('emissions') }}">{{ shows|length }} émissions</a> <span class="diamond"> &#11045; </span> 
+				{{ djs|length }} curateurs
+			</span>
+		</div>
+	</div>
+</div>
+<div class="grid-100 tablet-grid-100 mobile-grid-100">
+		<div class="showContainer">
+			<ul>
+	        {% for dj in djs %}
+	             <li class="artist" style="padding-left:5px">
+	                {{ dj }}		            
+	            </li>
+	        {% endfor %}
+			</ul>	
+		</div>	
+</div>
+{% endblock %}

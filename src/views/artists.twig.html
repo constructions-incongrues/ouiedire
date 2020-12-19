@@ -6,7 +6,7 @@
 </a>
 {% endblock %}
 
-{% block title %}Artists ({{ artists|length }}){% endblock %}
+{% block title %}Artistes ({{ artists|length }}){% endblock %}
 
 {% block content %}
 <div class="grid-100 tablet-grid-100 mobile-grid-100">
@@ -28,6 +28,7 @@
 	        {% for artist in artists %}
 	             <li class="artist" style="padding-left:5px">
 	                {{ artist }}
+	                
 		            {% for show in showsGroupedByArtist[artist] -%}
 	                    <strong>
 		                    <a href="{{ url('emission', {'type':show.typeSlug, 'id':show.id}) }}?artist={{ artist|url_encode }}" title="{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})" class="{{show.typeSlug}}">

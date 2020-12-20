@@ -50,4 +50,16 @@ $(document).ready(function() {
     }
   );
 
+
+	var player = $('audio').mediaelementplayer();	
+	$(player).on("play", function(event) {	
+	  window.onbeforeunload = function() {
+	    return "Vous êtes sur le point d'arrêter la lecture de l'émission.";
+	  }	
+	}).on("pause", function(event) {	
+	  window.onbeforeunload = void(0);	
+	});
+
+
+
 });

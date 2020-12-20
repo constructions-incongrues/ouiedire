@@ -30,7 +30,7 @@
 	                {{ dj }}	
 	                {% for show in showsGroupedByDj[dj] -%}
 	                    <strong>
-		                    <a href="{{ url('emission', {'type':show.typeSlug, 'id':show.id}) }}?artist={{ dj|url_encode }}" title="{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})" class="{{show.typeSlug}}">
+		                    <a href="{{ url('emission', {'type':show.typeSlug, 'id':show.id}) }}?dj={{ dj|url_encode }}" title="{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})" class="{{show.typeSlug}}">
 		                    	<span>{{ show.number }}</span>
 		                    </a>
 	                    </strong>

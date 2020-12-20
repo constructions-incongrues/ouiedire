@@ -123,11 +123,11 @@
       }, false);
 
       // Used when seeking asked and player has not started yet
-      media.addEventListener('playing', function() {
+      /*media.addEventListener('playing', function() {
         if (window.MejsSmartplaylistPosition) {
           media.setCurrentTime(window.MejsSmartplaylistPosition);
         }
-      });
+      });*/
     }
   });
 

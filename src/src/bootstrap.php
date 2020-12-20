@@ -622,7 +622,6 @@ $app->get('/djs', function(Silex\Application $app, Request $request) use ($confi
     $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
     $artists = array();        
     $djs = array();
-    $showsGroupedByDj = getDjsWithShows($shows);
     foreach ($shows as $show) {
         $showDjs = getDjs($shows);
         $djs = array_merge($djs, $showDjs);
@@ -645,7 +644,7 @@ $app->get('/djs', function(Silex\Application $app, Request $request) use ($confi
         array(
             'artists' => $artists,
             'djsGroupedByAlpha' => $djsGroupedByAlpha,
-            'showsGroupedByDj' => $showsGroupedByDj,
+            'showsGroupedByDj' => getDjsWithShows($shows),
             'shows' => $shows
         )
     );

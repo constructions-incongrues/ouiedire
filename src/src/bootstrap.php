@@ -22,6 +22,9 @@ function truncateText($text, $maxLength) {
     return $text;
 }
 
+function dump($array){
+    echo '<pre>';print_r($array);echo '</pre>';
+}
 function slugify($text)
 {
     // @see http://stackoverflow.com/questions/23105925/calling-iconv-via-php-produces-different-results-in-apache-and-command-line
@@ -83,7 +86,7 @@ function getDjs(array $shows)
 {
     $djs = array();
     foreach ($shows as $show) {
-        $djs[] = $show['authors'];
+        $djs[] = trim($show['authors']);
     }
 
     $djs = array_unique($djs);
@@ -91,6 +94,14 @@ function getDjs(array $shows)
     return $djs;
 }
 
+function getDjsWithShows(array $shows)
+{
+    $djs = array();
+    foreach ($shows as $show) {
+        $djs[trim($show['authors'])][] = $show;
+    }
+    return $djs;
+}
 /**
  * Returns data about a show.
  *
@@ -261,7 +272,7 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
             return json_decode($file->getContents(), true)['authors'] === $artist;
         });
     }
-
+    
     $manifests = $finder->in(sprintf('%s/emission/', $pathData));
 
     // Parse manifests
@@ -580,7 +591,6 @@ $app->get('/artists', function(Silex\Application $app, Request $request) use ($c
         $artists = array_merge($artists, $showArtists);
         $artists = array_unique($artists);
         sort($artists);
-
         // Group by shows by artist
         foreach ($showArtists as $artist) {
             $showsGroupedByArtist[strtolower($artist)][] = $show;
@@ -606,6 +616,42 @@ $app->get('/artists', function(Silex\Application $app, Request $request) use ($c
     );
 })
 ->bind('artists');
+
+// curator list
+$app->get('/djs', function(Silex\Application $app, Request $request) use ($config) {
+    $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
+    $artists = array();        
+    $djs = array();
+    $showsGroupedByDj = getDjsWithShows($shows);
+    foreach ($shows as $show) {
+        $showDjs = getDjs($shows);
+        $djs = array_merge($djs, $showDjs);
+        $djs = array_unique($djs);
+        asort($djs);  
+        $showArtists = getArtists($show);
+        $artists = array_merge($artists, $showArtists);
+        $artists = array_unique($artists);
+        sort($artists);
+    }
+    // Group alphabeticaly
+    $djsGroupedByAlpha = array();
+    foreach ($djs as $k => $dj) {
+        $djsGroupedByAlpha[strtolower(substr($dj, 0, 1))][] = $dj;        
+    }
+    //dump($showsGroupedByDj);
+    // Render view
+    return $app['twig']->render(
+        'djs.twig.html',
+        array(
+            'artists' => $artists,
+            'djsGroupedByAlpha' => $djsGroupedByAlpha,
+            'showsGroupedByDj' => $showsGroupedByDj,
+            'shows' => $shows
+        )
+    );
+})
+->bind('djs');
+
 
 // Dons
 $app->get('/dons', function(Silex\Application $app) {

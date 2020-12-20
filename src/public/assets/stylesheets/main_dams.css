@@ -343,7 +343,14 @@ li.artist a.bagage{
 	color:#fff;
 	background-color: #fc029c;
 }
-
+li.artist a.bureau{
+	color: #FFF;
+	background-color:#0099FF;
+}
+li.artist a.ouiedire{
+	color: #FFF;
+	background-color:#8A2BE2;
+}
 
 /* MEDIA PLAYER mediaelementjs.com 2.12.0 */
 /* ====================================== */

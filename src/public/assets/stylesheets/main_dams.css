@@ -310,6 +310,9 @@ li.bureau strong, li.bureau a:hover, .bureauFilter:hover {
 h2.letter{
 	color: #000;
 	text-transform: uppercase;
+	background-color: #E6FAFF;
+	padding: 0 4px;
+	display: inline-block;
 }
 h2.letter:nth-of-type(1){
     margin-top:0;

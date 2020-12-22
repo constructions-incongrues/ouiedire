@@ -90,9 +90,7 @@ function getDjs(array $shows)
     foreach ($shows as $show) {
         $djs[] = trim($show['authors']);
     }
-
     $djs = array_unique($djs);
-
     return $djs;
 }
 
@@ -104,6 +102,28 @@ function getDjsWithShows(array $shows)
     }
     return $djs;
 }
+
+function getYears(array $shows)
+{
+    $years = array();
+    foreach ($shows as $show) {
+        $releasedAt = new DateTime($show['releasedAt']);
+        $year = $releasedAt->format('Y');
+        $years[$year] = $year;
+    }    
+    $years = array_unique($years);
+    $yearMin = min($years);
+    $yearMax = max($years);
+    return $yearMax-$yearMin;
+}
+
+function getYear($show)
+{
+    $releasedAt = new DateTime($show['releasedAt']);
+    $year = $releasedAt->format('Y');
+    return $year;
+}
+
 /**
  * Returns data about a show.
  *
@@ -369,7 +389,10 @@ $app->get('/liens', function(Silex\Application $app) {
 $app->get('/', function(Silex\Application $app, Request $request) use ($config) {
     $artists = array();
     $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
+    $showsGroupedByYear = array();
     foreach ($shows as $show) {
+        $year = getYear($show);
+        $showsGroupedByYear[$year][] = $show;
         $showArtists = getArtists($show);
         $artists = array_merge($artists, $showArtists);
         $artists = array_unique($artists);
@@ -383,8 +406,9 @@ $app->get('/', function(Silex\Application $app, Request $request) use ($config) 
             'artists'    => $artists,
             'shows'      => $shows,
             'djs'        => getDjs($shows),
-            'randomShow' => $shows[array_rand($shows)],
-            'artist'     => $request->query->get('artist')
+            'artist'     => $request->query->get('artist'),
+            'showsGroupedByYear' => $showsGroupedByYear,
+            'years' => getYears($shows)
           )
     );
 })
@@ -595,7 +619,10 @@ $app->get('/artists', function(Silex\Application $app, Request $request) use ($c
     $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
     $artists = array();
     $showsGroupedByArtist = array();
-    foreach ($shows as $show) {
+    $showsGroupedByYear = array();
+    foreach ($shows as $show) {        
+        $year = getYear($show);
+        $showsGroupedByYear[$year][] = $show;
         $showArtists = getArtists($show);
         $artists = array_merge($artists, $showArtists);
         $artists = array_unique($artists);
@@ -619,8 +646,10 @@ $app->get('/artists', function(Silex\Application $app, Request $request) use ($c
             'artists' => $artists,
             'artistsGroupedByAlpha' => $artistsGroupedByAlpha,
             'showsGroupedByArtist' => $showsGroupedByArtist,
+            'showsGroupedByYear' => $showsGroupedByYear,
             'shows' => $shows,
-            'djs' => getDjs($shows)
+            'djs' => getDjs($shows),
+            'years' => getYears($shows)
         )
     );
 })
@@ -631,7 +660,10 @@ $app->get('/djs', function(Silex\Application $app, Request $request) use ($confi
     $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
     $artists = array();        
     $djs = array();
+    $showsGroupedByYear = array();
     foreach ($shows as $show) {
+        $year = getYear($show);
+        $showsGroupedByYear[$year][] = $show;
         $showDjs = getDjs($shows);
         $djs = array_merge($djs, $showDjs);
         $djs = array_unique($djs);
@@ -654,11 +686,42 @@ $app->get('/djs', function(Silex\Application $app, Request $request) use ($confi
             'artists' => $artists,
             'djsGroupedByAlpha' => $djsGroupedByAlpha,
             'showsGroupedByDj' => getDjsWithShows($shows),
-            'shows' => $shows
+            'showsGroupedByYear' => $showsGroupedByYear,
+            'shows' => $shows,
+            'years' => getYears($shows)
         )
     );
 })
 ->bind('djs');
+
+// years
+$app->get('/years', function(Silex\Application $app, Request $request) use ($config) {
+    $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
+    $artists = array();
+    $showsGroupedByYear = array();
+    foreach ($shows as $show) {
+        $year = getYear($show);
+        $showsGroupedByYear[$year][] = $show;
+        $showArtists = getArtists($show);
+        $artists = array_merge($artists, $showArtists);
+        $artists = array_unique($artists);
+        sort($artists);
+    }
+    //dump($showsGroupedByYear);
+    // Render view
+    return $app['twig']->render(
+        'years.twig.html',
+        array(
+            'artists' => $artists,
+            'showsGroupedByYear' => $showsGroupedByYear,
+            'showsGroupedByDj' => getDjsWithShows($shows),
+            'shows' => $shows,
+            'djs' => getDjs($shows),
+            'years' => getYears($shows)
+        )
+    );
+})
+->bind('years');
 
 
 // Dons

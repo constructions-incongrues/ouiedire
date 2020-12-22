@@ -6,40 +6,34 @@
 </a>
 {% endblock %}
 
-{% block title %}Artistes ({{ artists|length }}){% endblock %}
+{% block title %}Années ({{ years }}){% endblock %}
 
 {% block content %}
 <div class="grid-100 tablet-grid-100 mobile-grid-100">
 	<div class="bloc center">
 		<div class="infos">
 			<span class="big"> 
-				{{ artists|length }} artistes<span class="diamond"> &#11045; </span>
+				<a href="{{ url('artists') }}" title="Voir la liste des {{ artists|length }} artistes">{{ artists|length }} artistes </a><span class="diamond"> &#11045; </span>
 				<a href="{{ url('emissions') }}" title="Voir la liste des {{ shows|length }} émissions">{{ shows|length }} émissions</a><span class="diamond"> &#11045; </span> 
 				<a href="{{ url('djs') }}" title="Voir la liste des {{ djs|length }} curateurs">{{ djs|length }} curateurs</a><span class="diamond"> &#11045; </span> 
-				<a href="{{ url('years') }}" title="Voir les émissions par année">{{ years }} années</a>
+				{{ years }} années
 			</span>
 			<a href="{{ url('random') }}" title="Écouter une émission aléatoire" style="display: inline-block;float:right;padding:0px;margin:0;font-size:1.4em">🔀</a>
 		</div>
 	</div>
 </div>
 <div class="grid-100 tablet-grid-100 mobile-grid-100">
-	{% for letter, artists in artistsGroupedByAlpha %}    
-		<h2 class="letter">{{ letter }}</h2>
+	{% for year, shows in showsGroupedByYear %}    
+		<h2 class="letter">{{ year }}</h2> 
 		<div class="showContainer">
 			<ul>
-	        {% for artist in artists %}
-	             <li class="artist" style="padding-left:5px">
-	                {{ artist }}
-	                
-		            {% for show in showsGroupedByArtist[artist] -%}
-	                    <strong>
-		                    <a href="{{ url('emission', {'type':show.typeSlug, 'id':show.id}) }}?artist={{ artist|url_encode }}" title="{{ show.type }} {{ show.number }} : {{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})" class="{{show.typeSlug}}">
-		                    	<span>{{ show.number }}</span>
-		                    </a>
-	                    </strong>
-		                {%- if not loop.last -%}{% endif -%}
-		            {%- endfor %}
-	            </li>
+	        {% for show in shows %}
+	            {% if loop.index0 == (loop.length / 1)|number_format %}{% endif %}
+				<li class="show {{ show.typeSlug }}">
+					<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}" title="{{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})">
+						<strong>{{ show.number }}</strong> {{ show.authors }} - {{ show.title }}
+					</a>
+				</li>
 	        {% endfor %}
 			</ul>	
 		</div>	

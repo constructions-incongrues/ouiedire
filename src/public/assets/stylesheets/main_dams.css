@@ -311,6 +311,9 @@ h2.letter{
 	color: #000;
 	text-transform: uppercase;
 }
+h2.letter:nth-of-type(1){
+    margin-top:0;
+} 
 .showContainer li.artist {
 	text-transform: capitalize;
 	margin-bottom: 10px;

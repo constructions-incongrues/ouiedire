@@ -15,7 +15,8 @@
 			<span class="big"> 
 				<a href="{{ url('artists') }}" title="Voir la liste des {{ artists|length }} artistes">{{ artists|length }} artistes </a><span class="diamond"> &#11045; </span>
 				<a href="{{ url('emissions') }}" title="Voir la liste des {{ shows|length }} émissions">{{ shows|length }} émissions</a><span class="diamond"> &#11045; </span> 
-				{{ showsGroupedByDj|length }} curateurs
+				{{ showsGroupedByDj|length }} curateurs<span class="diamond"> &#11045; </span> 
+				<a href="{{ url('years') }}" title="Voir les émissions par année">{{ years }} années</a>
 			</span>
 			<a href="{{ url('random') }}" title="Écouter une émission aléatoire" style="display: inline-block;float:right;padding:0px;margin:0;font-size:1.4em">🔀</a>
 		</div>

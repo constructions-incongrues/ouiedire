@@ -168,7 +168,7 @@ h3.showDownload a:hover{
 }
 @media screen and (min-width: 1025px) {
 	.filterContainer {
-		margin-top:25px;
+		margin-top:50px;
 	}
 	.filterContainer div {
 		font-size: 1.1rem;

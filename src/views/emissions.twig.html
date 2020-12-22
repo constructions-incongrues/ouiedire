@@ -10,7 +10,6 @@
 
 {% block navigation %}
  <div class="filterContainer" id="filterDiv">
-	<a href="{{ url('random') }}" title="Écouter une émission aléatoire" style="display: inline-block;color: #000;background-color: #E6FAFF;padding: 0 4px;margin-bottom:10px">Émission aléatoire</a><br>
 	<div class="allFilter hide-on-mobile" onclick="filterSelection('all')"><strong>Collections</strong></div> 
 	<div class="ailleursFilter" onclick="filterSelection('ailleurs')"><strong>Ailleurs</strong></div> 
 	<div class="bagageFilter" onclick="filterSelection('bagage')"><strong>Bagage</strong></div> 
@@ -29,6 +28,7 @@
 				{{ shows|length }} émissions<span class="diamond"> &#11045; </span> 
 				<a href="{{ url('djs') }}" title="Voir la liste des {{ djs|length }} curateurs">{{ djs|length }} curateurs</a>
 			</span>
+			<a href="{{ url('random') }}" title="Écouter une émission aléatoire" style="display: inline-block;float:right;padding:0px;margin:0;font-size:1.4em">🔀</a>
 		</div>
 	</div>
 </div>

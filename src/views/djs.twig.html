@@ -13,8 +13,8 @@
 	<div class="bloc center">
 		<div class="infos">
 			<span class="big"> 
-				<a href="{{ url('artists') }}">{{ artists|length }} artistes </a><span class="diamond"> &#11045; </span>
-				<a href="{{ url('emissions') }}">{{ shows|length }} émissions</a><span class="diamond"> &#11045; </span> 
+				<a href="{{ url('artists') }}" title="Voir la liste des {{ artists|length }} artistes">{{ artists|length }} artistes </a><span class="diamond"> &#11045; </span>
+				<a href="{{ url('emissions') }}" title="Voir la liste des {{ shows|length }} émissions">{{ shows|length }} émissions</a><span class="diamond"> &#11045; </span> 
 				{{ showsGroupedByDj|length }} curateurs
 			</span>
 		</div>

@@ -22,9 +22,11 @@ function truncateText($text, $maxLength) {
     return $text;
 }
 
+// dump an array
 function dump($array){
     echo '<pre>';print_r($array);echo '</pre>';
 }
+
 function slugify($text)
 {
     // @see http://stackoverflow.com/questions/23105925/calling-iconv-via-php-produces-different-results-in-apache-and-command-line
@@ -402,6 +404,13 @@ $app->get('/flyers', function(Silex\Application $app) {
 })
 ->bind('flyers');
 
+// Random
+$app->get('/random', function(Silex\Application $app) {
+    // Render view
+    $randomShow = getRandomShow($app);
+    return $app->redirect($app['url_generator']->generate('emission', array('id' => $randomShow['id'], 'type' => $randomShow['typeSlug']), UrlGenerator::ABSOLUTE_URL));
+})
+->bind('random');
 
 // Shows RSS feed (@see http://framework.zend.com/manual/2.1/en/modules/zend.feed.writer.html)
 $app->get('/feed', function(Silex\Application $app) {

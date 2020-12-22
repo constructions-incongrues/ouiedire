@@ -10,12 +10,7 @@
 
 {% block navigation %}
  <div class="filterContainer" id="filterDiv">
- 	<!-- <div class="showsFakeFilter hide-on-mobile">Les émissions :</div>
-	<div class="allFilter hide-on-mobile" onclick="filterSelection('all')"><strong>TOUT !</strong></div> 
-	<div class="ailleursFilter" onclick="filterSelection('ailleurs')"><strong>Ailleurs</strong><span class="hide-on-mobile"> invité</span></div> 
-	<div class="bagageFilter" onclick="filterSelection('bagage')"><strong>Bagage</strong><span class="hide-on-mobile"> maison de disques</span></div> 
-	<div class="bureauFilter" onclick="filterSelection('bureau')"><strong>Bureau</strong><span class="hide-on-mobile"> réunions incongrues</span></div> 
-	<div class="ouiedireFilter" onclick="filterSelection('ouiedire')"><strong>Ouïedire</strong><span class="hide-on-mobile"> fait maison</span></div> -->
+	<a href="{{ url('random') }}" title="Écouter une émission aléatoire" style="display: inline-block;color: #000;background-color: #E6FAFF;padding: 0 4px;margin-bottom:10px">Émission aléatoire</a><br>
 	<div class="allFilter hide-on-mobile" onclick="filterSelection('all')"><strong>Collections</strong></div> 
 	<div class="ailleursFilter" onclick="filterSelection('ailleurs')"><strong>Ailleurs</strong></div> 
 	<div class="bagageFilter" onclick="filterSelection('bagage')"><strong>Bagage</strong></div> 
@@ -30,9 +25,9 @@
 	<div class="bloc center">
 		<div class="infos">
 			<span class="big"> 
-				<a href="{{ url('artists', {artist:artist}) }}">{{ artists|length }} artistes </a><span class="diamond"> &#11045; </span>
+				<a href="{{ url('artists', {artist:artist}) }}" title="Voir la liste des {{ artists|length }} artistes">{{ artists|length }} artistes </a><span class="diamond"> &#11045; </span>
 				{{ shows|length }} émissions<span class="diamond"> &#11045; </span> 
-				<a href="{{ url('djs') }}">{{ djs|length }} curateurs</a>
+				<a href="{{ url('djs') }}" title="Voir la liste des {{ djs|length }} curateurs">{{ djs|length }} curateurs</a>
 			</span>
 		</div>
 	</div>

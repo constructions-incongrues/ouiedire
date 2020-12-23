@@ -270,51 +270,63 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
     // Path to data directories
     $pathData = __DIR__.'/../data';
 
-    // Search for shows manifests
-    $finder = new Finder();
-    $finder = $finder
+    // cache
+    $cacheFile = $pathData.'/cache/shows_'.$preview.'_'.$artist.'.txt';
+    if(file_exists($cacheFile) && time()-filemtime($cacheFile) < 3600){
+        $current = file_get_contents($cacheFile);        
+        $shows = unserialize($current);
+    }
+    else{
+        // Search for shows manifests
+        $finder = new Finder();
+        $finder = $finder
         ->files()
         ->name('manifest.json')
         ->filter(function(\SplFileInfo $file) {
             return
-                strpos(basename(dirname($file->getRealPath())), 'ailleurs') !== false
-                || strpos(basename(dirname($file->getRealPath())), 'bagage') !== false
-                || strpos(basename(dirname($file->getRealPath())), 'bureau') !== false
-                || strpos(basename(dirname($file->getRealPath())), 'ouiedire') !== false;
+            strpos(basename(dirname($file->getRealPath())), 'ailleurs') !== false
+            || strpos(basename(dirname($file->getRealPath())), 'bagage') !== false
+            || strpos(basename(dirname($file->getRealPath())), 'bureau') !== false
+            || strpos(basename(dirname($file->getRealPath())), 'ouiedire') !== false;
         })
         ->sort(function(\SplFileInfo $a, \SplFileInfo $b) {
             $dateA = strtotime(json_decode($a->getContents(), true)['releasedAt']);
             $dateB = strtotime(json_decode($b->getContents(), true)['releasedAt']);
-
+            
             return $dateA > $dateB;
         });
-
-    if ($artist !== null) {
-        $finder->filter(function(\SplFileInfo $file) use ($artist) {
-            return json_decode($file->getContents(), true)['authors'] === $artist;
-        });
-    }
-    
-    $manifests = $finder->in(sprintf('%s/emission/', $pathData));
-
-    // Parse manifests
-    $shows = array();
-    foreach ($manifests as $manifest) {
-        try {
-            // In not in preview mode, only return public shows
-            $show = getShow(basename(dirname($manifest->getRealPath())), $app);
-            if ($show['isPublic'] === true || $preview === true) {
-                $shows[] = $show;
-            }
-        } catch (\RuntimeException $e) {
-            // Skip faulty shows
-            continue;
+            
+        if ($artist !== null) {
+            $finder->filter(function(\SplFileInfo $file) use ($artist) {
+                return json_decode($file->getContents(), true)['authors'] === $artist;
+            });
         }
+        
+        $manifests = $finder->in(sprintf('%s/emission/', $pathData));
+        
+        // Parse manifests
+        $shows = array();
+        foreach ($manifests as $manifest) {
+            try {
+                // In not in preview mode, only return public shows
+                $show = getShow(basename(dirname($manifest->getRealPath())), $app);
+                if ($show['isPublic'] === true || $preview === true) {
+                    $shows[] = $show;
+                }
+            } catch (\RuntimeException $e) {
+                // Skip faulty shows
+                continue;
+            }
+        }
+        
+        // Show last show first
+        $shows = array_reverse($shows);
+        
+        file_put_contents($cacheFile, '');   
+        $current = file_get_contents($cacheFile);
+        $current = serialize($shows);
+        file_put_contents($cacheFile, $current);        
     }
-
-    // Show last show first
-    $shows = array_reverse($shows);
-
     return $shows;
 }
 

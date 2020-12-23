@@ -269,14 +269,15 @@ function getShow($id, Silex\Application $app = null, $config = array()) {
 function getShows(Silex\Application $app, $preview = false, $artist = null) {
     // Path to data directories
     $pathData = __DIR__.'/../data';
+    $pathPublic = __DIR__.'/../public';
 
     // cache
-    /*$cacheFile = $pathData.'/cache/shows_'.$preview.'_'.$artist.'.txt';
+    $cacheFile = $pathPublic.'/assets/cache/shows_'.$preview.'_'.$artist.'.txt';
     if(file_exists($cacheFile) && time()-filemtime($cacheFile) < 3600){
         $current = file_get_contents($cacheFile);        
         $shows = unserialize($current);
     }
-    else{*/
+    else{
         // Search for shows manifests
         $finder = new Finder();
         $finder = $finder
@@ -326,7 +327,7 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
         $current = file_get_contents($cacheFile);
         $current = serialize($shows);
         file_put_contents($cacheFile, $current);        
-    //}
+    }
     return $shows;
 }
 

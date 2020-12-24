@@ -36,6 +36,7 @@
 	  <a href="{{ url('oembed') }}?format=json&url={{ url('emission', {type: show.typeSlug, id: show.id})|url_encode }}">oEmbed endpoint</a>
 	  <a href="{{ url('emission', {type: show.typeSlug, id: show.id}) }}?embed">Embedded view</a>
 	  <a href="http://{{ urlSwfPlayer }}">Facebook player</a>
+	  <a href="{{ url('deletecache') }}">Delete cache</a>
 	</p>
 	{% endif %}
 {% endblock %}

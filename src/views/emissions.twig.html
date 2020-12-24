@@ -8,6 +8,16 @@
 </a>
 {% endblock %}
 
+{% block footer %}
+	{% if app.debug %}
+	<p>
+	  <strong>Debug :</strong>
+	  <a href="{{ url('deletecache') }}">Delete cache</a>
+	</p>
+	{% endif %}
+{% endblock %}
+
+
 {% block navigation %}
  <div class="filterContainer" id="filterDiv">
 	<div class="allFilter hide-on-mobile" onclick="filterSelection('all')"><strong>Collections</strong></div> 

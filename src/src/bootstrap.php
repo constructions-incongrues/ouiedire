@@ -273,7 +273,7 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
 
     // cache
     $cacheFile = $pathPublic.'/assets/cache/shows_'.$preview.'_'.rawurlencode($artist).'.txt';
-    if(file_exists($cacheFile) && (time()-filemtime($cacheFile) < 3600)){
+    if(file_exists($cacheFile) && (time()-filemtime($cacheFile) < 43200)){  // le cache est valide 12 heures
         $current = file_get_contents($cacheFile);        
         $shows = unserialize($current);
     }
@@ -734,6 +734,17 @@ $app->get('/years', function(Silex\Application $app, Request $request) use ($con
 })
 ->bind('years');
 
+// Dons
+$app->get('/deletecache', function(Silex\Application $app) {
+    $pathPublic = __DIR__.'/../public';
+    $cacheFolder = $pathPublic.'/assets/cache/';
+    $files = glob($cacheFolder.'*');
+    foreach($files as $file){
+        if(is_file($file)) unlink($file);
+    }
+    return 'Le cache est vidé !';
+})
+->bind('deletecache');
 
 // Dons
 $app->get('/dons', function(Silex\Application $app) {

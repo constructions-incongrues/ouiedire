@@ -118,6 +118,18 @@ h3.showDownload a:hover{
 	background-color: #fff;
 }
 
+/*  NIGHT MODE  */
+/* ============ */
+#divNight{
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 10px 30px;
+}
+#divNight a{
+	text-decoration: none;
+	color:#000;
+}
 
 /*  PREV / NEXT EMISSION  */
 /* ====================== */

@@ -64,8 +64,8 @@
 				<!-- <h3>La dernière émission : </h3> <h4> {% block latest %} LATEST SHOW {% endblock %} </h4> -->
 				<!-- <h3 class="flyerinfos"> <a href="{{ url('flyers') }}">Flyers des programmations (Janvier 2015 à Juin 2016)</a></h3> -->
 			    <!-- {% block flyer %}{% endblock %} -->
-			    <div style="position:fixed;right:0;top:0;padding:10px 30px;">
-			    	<a href="{{ url('night') }}" title="{% if app.request.cookies.get('night') %}Désactiver{% else %}Activer{% endif %} le mode nuit" style="text-decoration:none;color:#000">🌙</a>
+			    <div id="divNight">
+			    	<a href="{{ url('night') }}" title="{% if app.request.cookies.get('night') %}Désactiver{% else %}Activer{% endif %} le mode nuit">🌙</a>
 			    </div>
 			    {% block navigation %}{% endblock %}	
 			</div>

@@ -113,7 +113,7 @@
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/mejs.css?{{ app.assetsVersion }}" />
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/mejs_dams.css?{{ app.assetsVersion }}" />	
 	{% if app.request.cookies.get('night') %}
-	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/main_dams_dark.css?{{ app.assetsVersion }}" />
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/dark.css?{{ app.assetsVersion }}" />
 	{% endif %}
 	{% block userstyle %}{% endblock %}
 	<script src="{{ app.request.getBasePath() }}/assets/javascripts/behaviors.js?{{ app.assetsVersion }}"></script>

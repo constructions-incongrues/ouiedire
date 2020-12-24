@@ -1,0 +1,100 @@
+body {
+	background-color: #222;
+	background-image: url(../img/pattern_dark.gif);
+}
+
+.showContainer li.show, 
+.showContainer li.artist {
+    background-color: #222;
+}
+.showContainer li.show a,
+.showContainer li.artist,
+.mejs-smartplaylist-playlist li,
+a.mejs-smartplaylist-time,
+a.mejs-smartplaylist-time:before,
+a.mejs-smartplaylist-time:after {
+    color: #555;
+}
+div.infos,
+h1.showTitle{
+	color: #888;
+}
+.nav a{
+	color: #888;
+}
+.nav a:hover {
+    background-color: #959719;
+}
+
+.allFilter strong {
+    color: #000;
+    background-color: #888;
+}
+
+li.ailleurs strong, li.ailleurs a:hover, .ailleursFilter:hover, .allFilter:hover,
+li.artist a.ailleurs,
+.ailleursFilter strong,
+.ailleurs {
+	color: #555;
+	background-color:#111;
+}
+li.bagage strong, li.bagage a:hover, .bagageFilter:hover,
+li.artist a.bagage,
+.bagageFilter strong,
+.bagage {
+	color:#777;
+	background-color: #512641;
+}
+
+li.ouiedire strong, li.ouiedire a:hover, .ouiedireFilter:hover,
+li.artist a.ouiedire,
+.ouiedireFilter strong,
+.ouiedire {
+	color: #777;
+	background-color:#39254B;
+}
+li.bureau strong, li.bureau a:hover, .bureauFilter:hover,
+li.artist a.bureau,
+.bureauFilter strong,
+.bureau {
+	color: #777;
+	background-color:#173A51;
+}
+
+h2.letter,
+footer p.text span,
+.descriptiontext p,
+footer p.text a,
+.descriptiontext a {
+    color: #000;
+    background-color: #333;
+}
+
+footer p.text a:hover,
+.descriptiontext a:hover {
+    color: #888;
+	background-color:#173A51;
+}
+
+
+.bloc a {
+    text-decoration: none;
+    color: #959719;
+}
+
+.mejs-smartplaylist-playlist li:nth-child(even) {background: #292929}
+.mejs-smartplaylist-playlist li:nth-child(odd) {background: #222}
+.mejs-controls .mejs-time-rail .mejs-time-total {background: #333;}
+.mejs-controls .mejs-time-rail .mejs-time-loaded {background: #444;}
+.mejs-container .mejs-controls .mejs-time span {color: #888;}
+
+h3.showDownload a {
+    color: #888;
+    background-color: #222;
+}
+h3.showDownload a:hover {
+    color: #888;
+    background-color: #333;
+}
+
+

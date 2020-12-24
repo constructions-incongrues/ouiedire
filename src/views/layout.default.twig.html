@@ -54,7 +54,7 @@
 		<header class="">
 			<div class="grid-30 tablet-grid-50 mobile-grid-100" id="logoDiv">
 				<a href="{{ url('emissions') }}">
-					<img src="{{ app.request.getBasePath() }}/assets/img/logo_trim.png" alt="Ouïedire" title="Consulter la liste des émissions disponibles" />
+					<img src="{{ app.request.getBasePath() }}/assets/img/logo_trim{% if app.request.cookies.get('night') %}_dark{% endif %}.png" alt="Ouïedire" title="Consulter la liste des émissions disponibles" />
 				</a>
 				{# % block jingle %}
 			 	<h4><a href="{{ url('jingle') }}">Proposer un jingle !</a></h4>
@@ -64,6 +64,9 @@
 				<!-- <h3>La dernière émission : </h3> <h4> {% block latest %} LATEST SHOW {% endblock %} </h4> -->
 				<!-- <h3 class="flyerinfos"> <a href="{{ url('flyers') }}">Flyers des programmations (Janvier 2015 à Juin 2016)</a></h3> -->
 			    <!-- {% block flyer %}{% endblock %} -->
+			    <div style="position:fixed;right:0;top:0;padding:10px 30px;">
+			    	<a href="{{ url('night') }}" title="{% if app.request.cookies.get('night') %}Désactiver{% else %}Activer{% endif %} le mode nuit" style="text-decoration:none;color:#000">🌙</a>
+			    </div>
 			    {% block navigation %}{% endblock %}	
 			</div>
 		</header>
@@ -106,9 +109,12 @@
 	<script src="{{ app.request.getBasePath() }}/vendor/net.constructions-incongrues.mejs/src/mep-feature-smartplaylist.js?{{ app.assetsVersion }}"></script>
 	<script src="{{ app.request.getBasePath() }}/vendor/net.constructions-incongrues.mejs/src/mep-feature-autochange.js?{{ app.assetsVersion }}"></script>
 	<script src="{{ app.request.getBasePath() }}/assets/javascripts/mep-feature-ouiedire.js?{{ app.assetsVersion }}"></script>
-	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelementplayer.css" /></link>
-	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/mejs.css?{{ app.assetsVersion }}" /></link>
-	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/mejs_dams.css?{{ app.assetsVersion }}" /></link>
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/vendor/mediaelement/build/mediaelementplayer.css" />
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/mejs.css?{{ app.assetsVersion }}" />
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/mejs_dams.css?{{ app.assetsVersion }}" />	
+	{% if app.request.cookies.get('night') %}
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/main_dams_dark.css?{{ app.assetsVersion }}" />
+	{% endif %}
 	{% block userstyle %}{% endblock %}
 	<script src="{{ app.request.getBasePath() }}/assets/javascripts/behaviors.js?{{ app.assetsVersion }}"></script>
 	{% block userscript %}{% endblock %}

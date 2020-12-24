@@ -735,7 +735,7 @@ $app->get('/years', function(Silex\Application $app, Request $request) use ($con
 })
 ->bind('years');
 
-// Dons
+// Delete cache
 $app->get('/deletecache', function(Silex\Application $app) {
     $pathPublic = __DIR__.'/../public';
     $cacheFolder = $pathPublic.'/assets/cache/';
@@ -746,6 +746,16 @@ $app->get('/deletecache', function(Silex\Application $app) {
     return 'Le cache est vidé !';
 })
 ->bind('deletecache');
+
+// Night mode
+$app->get('/night', function(Silex\Application $app, Request $request) {
+    $refererUrl = $_SERVER['HTTP_REFERER'];
+    if(!isset($_COOKIE['night'])) setcookie("night", 1, time()+(10*365*24*60*60));
+    else setcookie ("night", "", time()-3600);
+    header('Location: '.$refererUrl);
+    exit;
+})
+->bind('night');
 
 // Dons
 $app->get('/dons', function(Silex\Application $app) {

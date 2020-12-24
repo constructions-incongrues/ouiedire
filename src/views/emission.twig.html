@@ -162,69 +162,54 @@
 
 {% block userstyle %}
 	<style>
-	a.mejs-smartplaylist-time:hover {
+	{% if app.request.cookies.get('night') %}
 		{%- if show.typeSlug == 'bagage' -%}
-		color: #FFF;
-		background-color:#fc029c;
+			{% set primary = '512641' %}
+			{% set contrast = '777777' %}
 		{% elseif show.typeSlug == 'bureau' -%}
-		color: #FFF;
-		background-color:#0099FF;
+			{% set primary = '173A51' %}
+			{% set contrast = '777777' %}
 		{% elseif show.typeSlug == 'ailleurs' -%}
-		color: #FFF;
-		background-color:#333;
+			{% set primary = '111111' %}
+			{% set contrast = '555555' %}
 		{% elseif show.typeSlug == 'ouiedire' -%}
-		color: #FFF;
-		background-color:#8A2BE2;
+			{% set primary = '39254B' %}
+			{% set contrast = '777777' %}
+		{% endif %}		
+	{% else %}
+		{%- if show.typeSlug == 'bagage' -%}
+			{% set primary = 'FC029C' %}
+			{% set contrast = 'FFFFFF' %}
+		{% elseif show.typeSlug == 'bureau' -%}
+			{% set primary = '0099FF' %}
+			{% set contrast = 'FFFFFF' %}
+		{% elseif show.typeSlug == 'ailleurs' -%}
+			{% set primary = '333333' %}
+			{% set contrast = 'FFFFFF' %}
+		{% elseif show.typeSlug == 'ouiedire' -%}
+			{% set primary = '8A2BE2' %}
+			{% set contrast = 'FFFFFF' %}
 		{% endif %}
+	{% endif %}
+	
+	a.mejs-smartplaylist-time:hover {
+		color: #{{ contrast }};
+		background-color:#{{ primary }};
 	}
 	a.mejs-smartplaylist-time.mejs-smartplaylist-current{
-		{%- if show.typeSlug == 'bagage' -%}
-		background-color: #000;
-		color:#fc029c;
-		{% elseif show.typeSlug == 'bureau' -%}
-		background-color: #000;
-		color:#0099FF;
-		{% elseif show.typeSlug == 'ailleurs' -%}
-		background-color: #000;
-		color:#fff;
-		{% elseif show.typeSlug == 'ouiedire' -%}
-		background-color: #000;
-		color:#8A2BE2;
-		{% endif %}
+		color: #{{ contrast }};
+		background-color:#{{ primary }};
 		font-weight: bold;
 	}
 	.mejs-controls .mejs-time-rail .mejs-time-current {
-		{%- if show.typeSlug == 'bagage' -%}
-		background-color:#fc029c;
-		{% elseif show.typeSlug == 'bureau' -%}
-		background-color:#0099FF;
-		{% elseif show.typeSlug == 'ailleurs' -%}
-		background-color:#333;
-		{% elseif show.typeSlug == 'ouiedire' -%}
-		background-color:#8A2BE2;
-		{% endif %}
+		background-color:#{{ primary }};
 	}
-	.mejs-controls .mejs-time-rail .mejs-time-float {
-		{%- if show.typeSlug == 'bagage' -%}
-		background-color:#fc029c;
-		{% elseif show.typeSlug == 'bureau' -%}
-		background-color:#0099FF;
-		{% elseif show.typeSlug == 'ailleurs' -%}
-		background-color:#fff;
-		{% elseif show.typeSlug == 'ouiedire' -%}
-		background-color:#8A2BE2;
-		{% endif %}
+	.mejs-controls .mejs-time-rail .mejs-time-float {		
+		color:#{{ contrast }};
+		background-color:#{{ primary }};
 	}
-	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{		
-		{%- if show.typeSlug == 'bagage' -%}
-		background-color:#fc029c;
-		{% elseif show.typeSlug == 'bureau' -%}
-		background-color:#0099FF;
-		{% elseif show.typeSlug == 'ailleurs' -%}
-		background-color:#fff;
-		{% elseif show.typeSlug == 'ouiedire' -%}
-		background-color:#8A2BE2;
-		{% endif %}    
+	.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{				
+		background-color:#{{ primary }};
 	}
 
 	</style>

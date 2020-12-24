@@ -272,7 +272,7 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
     $pathPublic = __DIR__.'/../public';
 
     // cache
-    $cacheFile = $pathPublic.'/assets/cache/shows_'.$preview.'_'.urlencode($artist).'.txt';
+    $cacheFile = $pathPublic.'/assets/cache/shows_'.$preview.'_'.rawurlencode($artist).'.txt';
     if(file_exists($cacheFile) && (time()-filemtime($cacheFile) < 3600)){
         $current = file_get_contents($cacheFile);        
         $shows = unserialize($current);

@@ -1,0 +1,111 @@
+a:6:{i:0;a:15:{s:7:"authors";s:15:"Bozoo & Valkiri";s:11:"description";s:48:"<!-- Pas de description pour cette émission -->";s:6:"number";s:3:"005";s:4:"type";s:9:"Ouïedire";s:8:"playlist";s:1680:"<ol class="number">
+<li><span>Vo Ese</span> - Rike's Birthday </li>
+<li><span>Der Mußikant</span>- Meine Welt  <em>2005</em></li>
+<li><span>Die Egozentrischen 2 </span>- The Germans <em>2005</em></li>
+<li><a href="http://loisirsmyralee.free.fr/loisirs/index.php">Loisirs</a> - Paquerette <em>2003</em></li>
+<li><span>Ruth</span> - She Brings The Rain <em>1985</em></li>
+<li><a href="http://www.treewave.com/">Tree Wave</a> - Sleep <em>2004</em></li>
+<li><a href="http://www.jeansteam.de/">Jeans Team</a> - Hi Fans <em>1998</em> </li>
+<li><a href="http://pneu.org">Lem</a> - Mer Licht <em>2003</em></li>
+<li><a href="http://www.yvanlendl.ch/">Yvan&amp;Lendl</a> - Touf Touf Taf <em>2004</em></li>
+<li><a href="http://">Jack Fetterman</a> - La danser des connards<em></em></li>
+<li><a href="http://www.kingrecords.co.jp/">Bruce Haack With Ed Harvey  </a> - Invocation And Dance Of Death<em>2005</em></li>
+<li><a href="http://thebrain.lautre.net/index/novahuta.html">Nova Huta</a> - Heb Dir Deine Tr&auml;nen F&uuml;r Jemand Anders Auf <em>2004</em></li>
+<li><a href="http://www.egotwister.com/">Edm&uuml;nd Prinz</a> - Jean Jacques Goldman <em>2004</em></li>
+<li><span>Licorne Da Desert</span> - Unknow Track </li>
+<li><a href="http://puyopuyo.lautre.net/">Puyo Puyo</a> - We have Joy </li>
+<li><a href="http://www.egotwister.com/etw007.html">[gu&yuml;ôm]</a> - Digital Rock'N'Roll </li>
+<li><a href="www.felixkubin.de/"> Felix Kubin</a> - Japan Japan </li>
+<li><a href="http://www.djurandmir.se/smk/smk/">	Slagsm&aring;lsklubben </a> - Hit Me Hard</li>
+<li><a href="http://www.yvanlendl.ch/">Yvan&amp;Lendl</a> - Schnaps Tarzan (Radio Tuning Edit)</li>
+</ol> ";s:10:"releasedAt";s:19:"2007-03-01 00:00:00";s:5:"title";s:27:"Il y en a un, mais lequel ?";s:11:"urlDownload";s:105:"http://ouiedire/assets/emission/ouiedire-5/ouiedire_ouiedire-5_bozoo-valkiri_il-y-en-a-un-mais-lequel.mp3";s:8:"urlCover";N;s:10:"urlCoverHd";N;s:8:"isPublic";b:1;s:8:"typeSlug";s:8:"ouiedire";s:12:"sizeDownload";i:1;s:6:"covers";a:1:{i:0;s:74:"http://ouiedire/assets/emission/ouiedire-5/ouiedire_ouiedire-5_cover-1.png";}s:2:"id";s:1:"5";}i:1;a:15:{s:7:"authors";s:15:"Bozoo & Valkiri";s:11:"description";s:48:"<!-- Pas de description pour cette émission -->";s:6:"number";s:3:"003";s:4:"type";s:9:"Ouïedire";s:8:"playlist";s:1346:"<ol class="number">
+<li><a href="http://dmxkrew.com/">Computor rockers</a> - Extra Life </li>
+<li><a href="http://www.64chaos.com%20">64 chaos</a> - Zeburaman </li>
+<li> <a href="http://www.monotrona.tv/">Monotrona</a> - Ah, Enemy</li>
+<li> <a href="http://www.mrpacman.com/">Mr Pacman</a> - Girls that go boom </li>
+<li> <a href="http://eat-rabbit.com/">Eat Rabbit</a> - Rush </li>
+<li> <a href="http://puyopuyo.lautre.net/">Puyopuyo</a> - Penguins </li>
+<li> <a href="http://members.jcom.home.ne.jp/mmfan316/">Mmfan 316</a> - School boy </li>
+<li> <span>Fu kraft </span> - Durch hexadecimal </li>
+<li> <span>4096 </span> - Biofe &amp; chin </li>
+<li> <a href="http://www.terobot.com/">Tero</a> - Viides simffonia</li>
+<li> <a href="http://www.goto80.com/">Goto 80 </a>- The meaning of love </li>
+<li> <a href="http://gorehole.org/m3d002.zip">The hardliner</a> - Last night i dreamt </li>
+<li> <a href="http://www.xerak.com/">Xerak</a> - L&egrave;che ta gamelle X </li>
+<li> <a href="http://technopolitan.se/%7Ecrazyq/">Crazy Q</a>  - Phat &amp; Phunky Part 1 1</li>
+<li> <span>Dos stilletos - Audio Track 03 </span> </li>
+<li> <a href="http://www.galerie-transition.de/pc/">Patric Catani </a>-You're a hero </li>
+<li> <a href="http://www.pastis.homelinux.net/pub/dataz/computer_truck/">Computer Truck </a>-Track ???</li>
+</ol>";s:10:"releasedAt";s:19:"2006-12-01 00:00:00";s:5:"title";s:15:"8bit / Chiptune";s:11:"urlDownload";s:94:"http://ouiedire/assets/emission/ouiedire-3/ouiedire_ouiedire-3_bozoo-valkiri_8bit-chiptune.mp3";s:8:"urlCover";N;s:10:"urlCoverHd";N;s:8:"isPublic";b:1;s:8:"typeSlug";s:8:"ouiedire";s:12:"sizeDownload";i:1;s:6:"covers";a:3:{i:0;s:74:"http://ouiedire/assets/emission/ouiedire-3/ouiedire_ouiedire-3_cover-1.png";i:1;s:74:"http://ouiedire/assets/emission/ouiedire-3/ouiedire_ouiedire-3_cover-2.png";i:2;s:74:"http://ouiedire/assets/emission/ouiedire-3/ouiedire_ouiedire-3_cover-3.png";}s:2:"id";s:1:"3";}i:2;a:15:{s:7:"authors";s:15:"Bozoo & Valkiri";s:11:"description";s:48:"<!-- Pas de description pour cette émission -->";s:6:"number";s:3:"006";s:4:"type";s:9:"Ouïedire";s:8:"playlist";s:1587:"<ol class="number">
+<li><a href="http://doddodo.com/">Doddodo</a> - Heresy Country Papa</li>
+<li><a href="http://www.candiehank.com/">Candie Hank</a> - J'adore Whiskey</li>
+<li><a href="http://www.myspace.com/groupgriserror">Groupgris</a> - Return Ktsk</li>
+<li><a href="http://lezziesonx.com/">Lesbians On Ecstasy</a> - Ving </li>
+<li><a href="http://www.bamas.org/">Bruno &amp; Michel Are Smiling </a>- Faith</li>
+<li><a href="http://computertruck.parishq.net/">Computer Truck </a>- Cracovian Scene (Feat Yan From Ben et B&eacute;n&eacute;)</li>
+<li><span>Monster X</span> - X6</li>
+<li><a href="http://www.toxiclipstick.com/">Toxic Lipstick</a> - Mumz Not Home</li>
+<li><a href="http://www.xerak.com">Xerak</a> - Untitled</li>
+<li><a href="http://gagarinrecords.com/artists/brezelgoering/">Brezel goring</a> - Chez Le Dentiste</li>
+<li><span>Helgoland</span> - Sincerely Yows</li>
+<li><a href="http://www.orangezebre.com/">Orange Zebre</a> - Judikael Goodvibes</li>
+<li><a href="http://www.kevyb.com/">Kevin Blechdom</a> - Bucktoof Rebound</li>
+<li><span>Test Tube Kids</span> - Untitled</li>
+<li><a href="http://www.billviolet.be/">Melodik Pinpon</a> - La Tension Montait Dans Le Trome</li>
+<li><a href="http://www.aavikko.net/">Aavikko</a> - Sports Criminal</li>
+<li><a href="http://www.benetbene.net/">Ben Et bene</a> - Dorrie</li>
+<li><a href="http://sexysushi.free.fr/">Sexy Sushi</a> - Hibernatus</li>
+<li><a href="http://www.felixkubin.com/">Felix Kubin</a> - I Hate Art Galleries</li>
+<li><a href="http://www.goto80.com/">Goto80</a> - Cpwillys</li>
+</ol> ";s:10:"releasedAt";s:19:"2007-00-00 00:00:00";s:5:"title";s:20:"Altération Auditive";s:11:"urlDownload";s:100:"http://ouiedire/assets/emission/ouiedire-6/ouiedire_ouiedire-6_bozoo-valkiri_alteration-auditive.mp3";s:8:"urlCover";N;s:10:"urlCoverHd";N;s:8:"isPublic";b:1;s:8:"typeSlug";s:8:"ouiedire";s:12:"sizeDownload";i:1;s:6:"covers";a:1:{i:0;s:74:"http://ouiedire/assets/emission/ouiedire-6/ouiedire_ouiedire-6_cover-1.png";}s:2:"id";s:1:"6";}i:3;a:15:{s:7:"authors";s:15:"Bozoo & Valkiri";s:11:"description";s:48:"<!-- Pas de description pour cette émission -->";s:6:"number";s:3:"004";s:4:"type";s:9:"Ouïedire";s:8:"playlist";s:1625:"<ol class="number">
+<li><a href="http://www.kostrow.com">Oleg Kostrow </a> - V Tri Ruki... <em>2005</em></li>
+<li><span>I hate you when your pregnant </span>- Jimmy Henson  <em>2004</em></li>
+<li><a href="http://www.fraumuller.spb.ru">Messer F&uuml;r Frau M&uuml;ller </a> - Unknow (Ð¡ÐµÐ½ÑÐ¾ÑÑ ÐÑÐ°ÐºÐ¾Ð²ÑÐºÐ¸ album) <em>1992</em></li>
+<li><a href="http://www.8bitpeoples.com/mesukasumai/">Mesu Kasumai</a> -Antenna <em>2005</em></li>
+<li><a href="http://www.celluloide.online.fr">Celluloide</a> - I stay with you <em>2004</em></li>
+<li><a href="http://www.myspace.com/kapbambino">Kap bambino </a> - Secret Girls <em>2002</em> </li>
+<li><a href="http://www.discogs.com/artist/Christian+Morgenstern">Chritian Morgenstern </a> - Persian Voodoo <em>2003</em> </li>
+<li><a href="http://www.shukar-collective.net">Shukar groove collective</a> - <em>doo bad !</em></li>
+<li><a href="http://www.discogs.com/artist/Seymour+Bits">Seymour Bits</a> - You must be the bass <em>2004</em></li>
+<li><a href="http://www.vernonlenoir.com/">Vernon Le Noir</a> - Bazerkle basement<em></em></li>
+<li><a href="http://t.s.u.n.a.m.i.free.fr/">Tsunami</a> - Shaolin Cuts<em></em></li>
+<li><a href="http://www.discogs.com/artist/Computerjockeys">Computerjockeys</a> - Ping Pong <em>1999</em></li>
+<li><a href="http://www.discogs.com/artist/Coburn">Coburn</a> - We Interrupt This Programme (Stanton Warriors Remix) <em>2005</em></li>
+<li><a href="http://www.curtischip.com">Curtis Chip</a> - Chainsawpanda  <em>2005</em></li>
+<li><span>Miniflex</span> - Fur a lovely bust line<em></em></li>
+</ol>";s:10:"releasedAt";s:19:"2005-06-01 00:00:01";s:5:"title";s:4:"none";s:11:"urlDownload";s:85:"http://ouiedire/assets/emission/ouiedire-4/ouiedire_ouiedire-4_bozoo-valkiri_none.mp3";s:8:"urlCover";N;s:10:"urlCoverHd";N;s:8:"isPublic";b:1;s:8:"typeSlug";s:8:"ouiedire";s:12:"sizeDownload";i:1;s:6:"covers";a:1:{i:0;s:74:"http://ouiedire/assets/emission/ouiedire-4/ouiedire_ouiedire-4_cover-1.png";}s:2:"id";s:1:"4";}i:4;a:15:{s:7:"authors";s:15:"Bozoo & Valkiri";s:11:"description";s:48:"<!-- Pas de description pour cette émission -->";s:6:"number";s:3:"002";s:4:"type";s:9:"Ouïedire";s:8:"playlist";s:1266:"<ol class="number">
+	<li><a href="http://www.exoticamusic.ru/cd/news_e.php">Riaba mutant vs P.i. tschaikovsky</a> - The slipping beauty </li>
+	<li><a href="http://www.dmxkrew.com/">.Ðo-<ÐOE+^o '8bit'</a> - Haywadana </li>
+
+	<li><a href="http://www.discogs.com/artist/Roboty">Roboty</a> - MTV</li>
+	<li><a href="http://www.kostrow.com/">Oleg Kostrow</a> - The dog is smiling</li>
+	<li><a href="http://www.discogs.com/artist/Bigoudi">Bigoudi</a> - Renault-Peugeot</li>
+	<li><span>Fathers of hydrogen</span> - Electric </li>
+	<li><a href="http://www.fraumuller.spb.ru">Messer Fru Frau Muller</a> - Pretty girl from Ussr</li>
+
+	<li><span>Eji and Petrucho</span> - Pamyatnik</li>
+	<li><a href="http://www.electrosputnik.com/artist_ANDROID.html">Alexandroid</a> - D3000pt2</li>
+	<li><a href="http://www.co.mikmusik.org">Co</a> - Centralne ogrzewanie</li>
+	<li><span>Dumaz</span> - Pasaka</li>
+
+	<li><a href="http://www.discogs.com/artist/Mescherin%27s+Orchestra">V.mescherin's orchestra</a> - Gallop #2</li>
+	<li><a href="http://www.messerchups.ru">Messer Chups</a> - Difficult love</li>
+	<li><a href="http://www.discogs.com/artist/Igor+Vdovin">Igor Vdoin</a> - Hapiness</li>
+	<li><a href="http://www.discogs.com/artist/Luk">Luk</a> - Katia</li>
+</ol>";s:10:"releasedAt";s:19:"2005-06-01 00:00:00";s:5:"title";s:13:"Pays de l'Est";s:11:"urlDownload";s:94:"http://ouiedire/assets/emission/ouiedire-2/ouiedire_ouiedire-2_bozoo-valkiri_pays-de-l-est.mp3";s:8:"urlCover";N;s:10:"urlCoverHd";N;s:8:"isPublic";b:1;s:8:"typeSlug";s:8:"ouiedire";s:12:"sizeDownload";i:1;s:6:"covers";a:1:{i:0;s:74:"http://ouiedire/assets/emission/ouiedire-2/ouiedire_ouiedire-2_cover-1.png";}s:2:"id";s:1:"2";}i:5;a:15:{s:7:"authors";s:15:"Bozoo & Valkiri";s:11:"description";s:48:"<!-- Pas de description pour cette émission -->";s:6:"number";s:3:"001";s:4:"type";s:9:"Ouïedire";s:8:"playlist";s:1179:"<ol>
+	<li><a href="http://www.asphodel.com/bio/user_th.html">The user</a> - |||||||||||||||||||||||||||</li>
+	<li><a href="http://www.dmxkrew.com/">Dmx Krew</a> - Dmx Funk (Rock Mix)</li>
+	<li><a href="http://www.robotandproud.com/">Iam robot and proud</a> - Grace days</li>
+	<li><a href="http://www.felixkubin.de">Felix Kubin </a>- Trigblotch</li>
+	<li><a href="http://www.peoplelikeus.org">People like us</a> - Dolly pardon</li>
+	<li><span>Kuusumun Profeetta</span> - Vvuosisadan vaihteessa</li>
+	<li><a href="http://www.beck.com">Beck</a> - Mixed Bizness (Nu Wave Dreamix by Les Rythmes Digitales)</li>
+	<li><span>Ðîáîòû (Roboty)</span> - Apartment on the Moon</li>
+	<li><span>The Plastics</span> - Complex</li>
+	<li><a href="http://www.cybernetic-broadcasting.net/">I-f</a> - Space Inv. (Original)</li>
+	<li><a href="http://www.midwestproduct.com">Midwest product</a> - Clicks and Crackers</li>
+	<li><a href="http://gangpol.free.fr/">Gangpol und mit</a> - Le fessier , Kap Bambino &amp; Khima France T.o.c.remix 2004</li>
+	<li><a href="http://www.discogs.com/artist/MU">Mu</a> - Paris Hilton</li>
+	<li><span>Caillou</span> - Le gateau rigolo</li>
+</ol>
+";s:10:"releasedAt";s:19:"2005-01-01 00:00:00";s:5:"title";s:8:"No Theme";s:11:"urlDownload";s:89:"http://ouiedire/assets/emission/ouiedire-1/ouiedire_ouiedire-1_bozoo-valkiri_no-theme.mp3";s:8:"urlCover";N;s:10:"urlCoverHd";N;s:8:"isPublic";b:1;s:8:"typeSlug";s:8:"ouiedire";s:12:"sizeDownload";i:1;s:6:"covers";a:1:{i:0;s:74:"http://ouiedire/assets/emission/ouiedire-1/ouiedire_ouiedire-1_cover-1.png";}s:2:"id";s:1:"1";}}

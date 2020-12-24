@@ -273,11 +273,11 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
 
     // cache
     $cacheFile = $pathPublic.'/assets/cache/shows_'.$preview.'_'.rawurlencode($artist).'.txt';
-    if(file_exists($cacheFile) && (time()-filemtime($cacheFile) < 43200)){  // le cache est valide 12 heures
+    if(file_exists($cacheFile) && (time()-filemtime($cacheFile) < 43200)){  // if cache is valid, we use it
         $current = file_get_contents($cacheFile);        
         $shows = unserialize($current);
     }
-    else{
+    else{  // if cache is invalid, we search for shows and write them in cache
         // Search for shows manifests
         $finder = new Finder();
         $finder = $finder
@@ -323,6 +323,7 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
         // Show last show first
         $shows = array_reverse($shows);
         
+        // write cache
         $current = serialize($shows);
         file_put_contents($cacheFile, $current);        
     }

@@ -19,6 +19,7 @@
 
 # dist
 /src/public/.htaccess
+/src/public/assets/cache/*
 /src/config.json
 
 # vagrant

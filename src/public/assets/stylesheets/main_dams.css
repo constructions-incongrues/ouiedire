@@ -124,11 +124,12 @@ h3.showDownload a:hover{
 	position: absolute;
 	right: 0;
 	top: 0;
-	padding: 10px 30px;
+	padding: 10px 28px;
 }
 #divNight a{
 	text-decoration: none;
 	color:#000;
+	font-size: 1.5em;
 }
 
 /*  PREV / NEXT EMISSION  */

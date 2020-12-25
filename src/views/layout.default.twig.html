@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/main_dams.css?{{ app.assetsVersion }}" />
 	<!--[if (gt IE 8) | (IEMobile)]><!-->
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/unsemantic-grid-responsive-tablet.css" />
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/fontello-embedded.css" />
 	<!--<![endif]-->
 	<!--[if (lt IE 9) & (!IEMobile)]>
 	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/assets/stylesheets/ie.css" />
@@ -65,7 +66,9 @@
 				<!-- <h3 class="flyerinfos"> <a href="{{ url('flyers') }}">Flyers des programmations (Janvier 2015 à Juin 2016)</a></h3> -->
 			    <!-- {% block flyer %}{% endblock %} -->
 			    <div id="divNight">
-			    	<a href="{{ url('night') }}" title="{% if app.request.cookies.get('night') %}Désactiver{% else %}Activer{% endif %} le mode nuit">🌙</a>
+			    	<a href="{{ url('night') }}" title="{% if app.request.cookies.get('night') %}Désactiver{% else %}Activer{% endif %} le mode nuit">
+			    		<i class="icon-moon" style="color:#{% if app.request.cookies.get('night') %}959719{% else %}000{% endif %}"></i>
+			    	</a>
 			    </div>
 			    {% block navigation %}{% endblock %}	
 			</div>

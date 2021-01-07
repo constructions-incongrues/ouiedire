@@ -30,3 +30,12 @@
 .project
 .settings/org.eclipse.php.core.prefs
 .settings/org.eclipse.wst.common.project.facet.core.xml
+src/public/assets/.DS_Store
+src/.DS_Store
+src/data/.DS_Store
+src/data/emission/.DS_Store
+src/public/assets/emission/.DS_Store
+src/public/assets/emission/ailleurs-271/.DS_Store
+src/public/assets/emission/ailleurs-274/.DS_Store
+src/public/.DS_Store
+src/public/assets/emission/ailleurs-272/.DS_Store

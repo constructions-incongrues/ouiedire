@@ -44,8 +44,8 @@
 {% block navigation %}
  <div class="filterContainer" id="filterDiv">
  	<section class="nav">
-		{% if (previous) %}<a class="previous" href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}">&lt; <span class="hide-on-mobile">Émission </span>précédente</a> {% endif %}
-		{% if (next) %}<a class="next" href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}" title="#{{ next.number }} : {{ next.title }}, par {{ next.authors }}"><span class="hide-on-mobile">Émission </span>suivante &gt;</a>{% endif %}
+		{% if (previous) %}<a class="previous" href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}"><i class="icon-left-open"></i> <span class="hide-on-mobile">Émission </span>précédente</a> {% endif %}
+		{% if (next) %}<a class="next" href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}" title="#{{ next.number }} : {{ next.title }}, par {{ next.authors }}"><span class="hide-on-mobile">Émission </span>suivante <i class="icon-right-open"></i></a>{% endif %}
 	</section> 
 </div>
 {% endblock %}
@@ -55,7 +55,7 @@
 		<div class="cartouche">     
 		    <h2 class="showNumber {{ show.typeSlug }}"><span class="hide-on-mobile">{{ show.typeSlug }}  </span>{{ show.number }}</h2>
 		    <h1 class="showTitle">{{ show.authors }} - {{ show.title }}</h1>
-		    <h3 class="showDownload hide-on-mobile"><a href="{{ show.urlDownload }}" title="Télécharger l'émission au format MP3">télécharger</a></h3>
+		    <h3 class="showDownload hide-on-mobile"><a href="{{ show.urlDownload }}" title="Télécharger l'émission au format MP3"><i class="icon-download" style="color:#{% if app.request.cookies.get('night') %}555{% else %}fff{% endif %}"></i></a></h3>
 		    <h3 class="showDate hide-on-mobile">{{ show.releasedAt|date('d/m/Y') }}</h3>
 		</div> 
 	</div> 

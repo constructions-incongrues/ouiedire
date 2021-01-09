@@ -100,7 +100,7 @@ h3.showDate{
 }
 h3.showDownload{
 	display: inline-block;
-	margin: 7px 0 0 20px;
+	margin: 7px 0 0 0px;
 	font-size: 1.6em;
 	font-weight: normal;
 	position: absolute;
@@ -415,6 +415,9 @@ ol.mejs-smartplaylist-playlist {
 	position:relative;
 	top:-5px;
 	text-transform: capitalize;
+}
+.mejs-smartplaylist-playlist li em, .mejs-smartplaylist-playlist li i{
+	opacity: .4;
 }
 .mejs-smartplaylist-playlist li:nth-child(even) {background: #fff}
 .mejs-smartplaylist-playlist li:nth-child(odd) {background: #eee}

@@ -207,7 +207,7 @@ function getShow($id, Silex\Application $app = null, $config = array()) {
     $show['urlDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), $manifest->slug));
     try {
         $fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $pathPublicEmission, slugify($show['type']), $show['number'], slugify($show['authors']), $manifest->slug));
-        $show['sizeDownload'] = $fileMp3->getSize();
+        $show['sizeDownload'] = round($fileMp3->getSize()/(1024*1024),2).' Mo';       
     } catch (\RuntimeException $e) {
         $show['sizeDownload'] = 1;
     }

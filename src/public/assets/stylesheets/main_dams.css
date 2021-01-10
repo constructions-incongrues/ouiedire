@@ -117,6 +117,24 @@ h3.showDownload a:hover{
 	color:#333;
 	background-color: #555;
 }
+@media screen and (max-width: 1024px) {
+	h2.showNumber{
+		font-size: 1.2em;
+	}
+	h1.showTitle{
+		font-size: 1.2em;
+	}
+	h3.showDate{
+		font-size: 1.2em;
+	}
+	h3.showDownload{
+		font-size: 1.2em;
+	}
+	h3.showDownload a{	
+		font-size: 0.6em;
+	}
+}
+
 
 /*  NIGHT MODE  */
 /* ============ */
@@ -154,10 +172,12 @@ h3.showDownload a:hover{
 }
 .nav {
     float: right !important;
+	margin-bottom:10px;
 	margin-top:15px;
 }
 @media screen and (min-width: 1025px) {
 	.nav {
+		margin-bottom:0px;
 		margin-top:10px;
 	}
 }
@@ -441,6 +461,13 @@ ol.mejs-smartplaylist-playlist {
 	position:relative;
 	top:-5px;
 	text-transform: capitalize;
+	display:block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	break-inside: avoid;
+	-webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
 }
 .mejs-smartplaylist-playlist li em, .mejs-smartplaylist-playlist li i{
 	opacity: .4;

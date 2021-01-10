@@ -74,7 +74,7 @@
 	
 	<div class="grid-50 mobile-grid-100 description">
 		{% for urlCover in show.covers %}
-			<img src="{{ urlCover }}" alt="Artwork" /><br />
+			<img src="{{ urlCover }}" alt="Artwork" class="responsive" /><br />
 		{% endfor %}
 		<div class="descriptiontext">
 			{{ show.description|raw }}

@@ -131,7 +131,14 @@ h3.showDownload a:hover{
 	color:#000;
 	font-size: 1.5em;
 }
-
+@media screen and (max-width: 1024px) {
+	#divNight{
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0px 0px;
+}
+}
 /*  PREV / NEXT EMISSION  */
 /* ====================== */
 .nav a {

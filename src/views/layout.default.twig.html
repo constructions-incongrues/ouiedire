@@ -55,7 +55,7 @@
 		<header class="">
 			<div class="grid-30 tablet-grid-50 mobile-grid-100" id="logoDiv">
 				<a href="{{ url('emissions') }}">
-					<img src="{{ app.request.getBasePath() }}/assets/img/logo_trim{% if app.request.cookies.get('night') %}_dark{% endif %}.png" alt="Ouïedire" title="Consulter la liste des émissions disponibles" />
+					<img src="{{ app.request.getBasePath() }}/assets/img/logo_trim{% if app.request.cookies.get('night') %}_dark{% endif %}.png" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="responsive" />
 				</a>
 				{# % block jingle %}
 			 	<h4><a href="{{ url('jingle') }}">Proposer un jingle !</a></h4>

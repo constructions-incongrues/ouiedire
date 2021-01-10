@@ -131,12 +131,9 @@
 			$('#playerStatus').stop().fadeOut().hide();
 			setTimeout(
 	            function() {
-					var trackTime		= $(".mejs-smartplaylist-current").text().trim();
-					var trackArtist 	= $(".mejs-smartplaylist-current").siblings().text().trim();
 					var trackAllInfos 	= $(".mejs-smartplaylist-current").parent().text().trim();
-					var trackTitle 		= trackAllInfos.split(" - ")[1];
-					$('#playerStatus').html('<h2>'+trackArtist+' - '+trackTitle+'</h2>');
-					$('#playerStatus').fadeIn(750).fadeOut(4000);
+					$('#playerStatus').html('<h2>'+trackAllInfos.substring(9)+'</h2>');
+					$('#playerStatus').fadeIn(750).fadeOut(5000);
 	            },
             100);			
 		});

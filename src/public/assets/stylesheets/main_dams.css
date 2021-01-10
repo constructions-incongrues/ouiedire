@@ -263,7 +263,26 @@ h3.showDownload a:hover{
 }
 
 
-
+/* Flyers */
+/* ======================= */
+.flyersContainer{
+  -webkit-columns: 5 300px;
+     -moz-columns: 5 300px;
+          columns: 5 300px;
+  -webkit-column-gap: 2em;
+     -moz-column-gap: 2em;
+          column-gap: 2em;
+	list-style-type: none;
+	margin: 15px 0;
+	padding: 0;
+}
+.flyer{
+	margin-bottom:20px;
+}
+.responsive {
+  max-width: 100%;
+  height: 100%;
+}
 
 /* liens émissions (shows) */
 /* ======================= */

@@ -13,7 +13,7 @@ body {
 a.mejs-smartplaylist-time,
 a.mejs-smartplaylist-time:before,
 a.mejs-smartplaylist-time:after {
-    color: #555;
+    color: #666;
 }
 div.infos,
 h1.showTitle{
@@ -35,7 +35,7 @@ li.ailleurs strong, li.ailleurs a:hover, .ailleursFilter:hover, .allFilter:hover
 li.artist a.ailleurs,
 .ailleursFilter strong,
 .ailleurs {
-	color: #555;
+	color: #666;
 	background-color:#111;
 }
 li.bagage strong, li.bagage a:hover, .bagageFilter:hover,
@@ -66,8 +66,8 @@ footer p.text span,
 .descriptiontext p,
 footer p.text a,
 .descriptiontext a {
-    color: #000;
-    background-color: #333;
+    color: #666;
+    background-color: #222;
 }
 
 footer p.text a:hover,
@@ -82,7 +82,7 @@ footer p.text a:hover,
     color: #959719;
 }
 
-.mejs-smartplaylist-playlist li:nth-child(even) {background: #292929}
+.mejs-smartplaylist-playlist li:nth-child(even) {background: #1c1c1c}
 .mejs-smartplaylist-playlist li:nth-child(odd) {background: #222}
 .mejs-controls .mejs-time-rail .mejs-time-total {background: #333;}
 .mejs-controls .mejs-time-rail .mejs-time-loaded {background: #444;}

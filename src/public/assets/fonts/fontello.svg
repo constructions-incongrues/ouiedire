@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2021 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="moon" unicode="&#xe800;" d="M524 238q106 106 125 252t-53 270q52-26 96-72 128-128 128-309t-128-309-310-128-310 128q-40 40-72 94 124-70 271-51t253 125z" horiz-adv-x="820" />
+
+<glyph glyph-name="shuffle" unicode="&#xe801;" d="M754 516q-54 0-105-32t-80-66-83-104q-48-62-75-94t-78-77-107-66-122-21l-104 0 0 140 104 0q54 0 106 32t81 66 83 104q62 82 101 126t116 88 163 44l36 0 0 120 210-180-210-180 0 100-36 0z m-484-88q-74 78-166 78l-104 0 0 140 104 0q140 0 254-108-14-16-37-45t-27-33q-8-12-24-32z m520-242l0 100 210-180-210-180 0 120-36 0q-140 0-260 116 46 58 72 92 0 2 6 9t8 11q84-88 174-88l36 0z" horiz-adv-x="1000" />
+
+<glyph glyph-name="download" unicode="&#xe802;" d="M968 198q18-10 27-32t3-40l-28-154q-4-20-22-33t-40-13l-816 0q-22 0-40 13t-22 33l-28 154q-10 48 32 72l158 108 98 0-170-130 178 0q8 0 12-8l40-110 300 0 40 110q8 8 12 8l178 0-170 130 98 0z m-208 322l-260-244-260 244 166 0 0 256 190 0 0-256 164 0z" horiz-adv-x="1000" />
+
+<glyph glyph-name="left-open" unicode="&#xe803;" d="M481 684q32-31 32-74t-32-74l-186-186 186-186q32-31 32-74t-32-74-73-31-74 31l-334 334 334 334q30 31 74 31t73-31z" horiz-adv-x="513" />
+
+<glyph glyph-name="right-open" unicode="&#xe804;" d="M31 684q30 31 74 31t74-31l335-334-335-334q-31-31-74-31t-74 31-31 74 31 74l188 186-188 186q-31 32-31 74t31 74z" horiz-adv-x="514" />
+</font>
+</defs>
+</svg>

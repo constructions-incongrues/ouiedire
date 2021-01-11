@@ -7,125 +7,132 @@
 {% endblock %}
 
 {% block title %}Flyers{% endblock %}
-{% block flyer %} {% endblock %}
+{% block responsive %} {% endblock %}
 
 {% block content %}
-<div class="flyer">
-
-	<div class="grid-100 mobile-grid-100">
-		
-	<p>Illustration de :<a href="http://www.corbenstudios.com/">Richard Corben</a> (16/01/18 au 15/02/18) <a href="http://goupilacneique.tumblr.com/">Goupil Acneique (septembre 2016)</a>,<a href="https://www.flickr.com/photos/okchickadee/with/6115272028/">Angie Wang (juin 2016)</a>, <a href="http://blog.crcr.fr">http://blog.crcr.fr</a> (avril 2016),<a href="http://blog.crcr.fr
-">CRCR (mai 2016)</a>, <a href="https://fr.wikipedia.org/wiki/Makoto_Aida">Makoto Aida (janvier 2016)</a>, <a href="https://fr.wikipedia.org/wiki/Charles_Burns">Charle Burns</a> (décembre 2015)<a href="http://www.yueminjun.com.cn/en/">, Yue Minjun</a> (octobre &amp; novembre 2015) , <a href="http://www.ukiyoe-gallery.com/shimura.htm">Shimura Tatsumi (juillet 2015)</a>,<a href="http://mestrefungo.com">Mestre Funfo</a> (juin 2015), <a href="http://jonnynegron.tumblr.com/">Jonny Negron</a> (mai 2015), <a href="http://www.corbenstudios.com/">Richard Corben</a> (avril 2015, <a href="http://iam.stuntkid.com/">Stuntkid</a> (mars 2015), <a href="http://fr.wikipedia.org/wiki/Tanino_Liberatore">Liberatore</a> (janvier et février 2015) <br /> Flyer réalisé par <a href="http://goupilacneique.tumblr.com/">Goupil Acneique</a></p>
+<div class="grid-100 tablet-grid-100 mobile-grid-100">
+	<div class="cartouche">     
+	    <h2 class="showNumber ailleurs">Flyers</h2>
+	</div> 
+</div> 
+<div class="grid-100 mobile-grid-100">
+	<div class="descriptiontext" style="margin-top:0;">
+		<p>Illustrations par : 
+		<a href="http://www.corbenstudios.com/">Richard Corben</a> (16/01/18 au 15/02/18) - 
+		<a href="http://goupilacneique.tumblr.com/">Goupil Acnéique</a> (2016/09) - 
+		<a href="https://www.flickr.com/photos/okchickadee/with/6115272028/">Angie Wang</a> (2016/06) - 
+		<a href="http://blog.crcr.fr">CRCR</a> (2016/05) - 
+		<a href="http://blog.crcr.fr">blog.crcr.fr</a> (2016/04) - 
+		<a href="https://fr.wikipedia.org/wiki/Makoto_Aida">Makoto Aida</a> (2016/01) - 
+		<a href="https://fr.wikipedia.org/wiki/Charles_Burns">Charle Burns</a> (2015/12) - 
+		<a href="http://www.yueminjun.com.cn/en/">Yue Minjun</a> (2015/10 & 2015/11) - 
+		<a href="http://www.ukiyoe-gallery.com/shimura.htm">Shimura Tatsumi</a> (2015/07) - 
+		<a href="http://mestrefungo.com">Mestre Funfo</a> (2015/06) - 
+		<a href="http://jonnynegron.tumblr.com/">Jonny Negron</a> (2015/05) - 
+		<a href="http://www.corbenstudios.com/">Richard Corben</a> (2015/04) - 
+		<a href="http://iam.stuntkid.com/">Stuntkid</a> (2015/03) - 
+		<a href="http://fr.wikipedia.org/wiki/Tanino_Liberatore">Liberatore</a> (2015/01 & 2015/02)
+		</p>
 	</div>
-fly_ouiedire_01_2018.jpg
-
-<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_01_2018.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
+	<div class="flyersContainer">
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_01_2018.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_01_2018.jpg" alt="Ouïedire" title="Janvier 2018 - Richard Corben" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_vacances2016.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_vacances2016.jpg" alt="Ouïedire" title="Vacances 2016 - Goupil Acnéique" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_juin2016_1.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_juin2016_1.jpg" alt="Ouïedire" title="Juin 2016 - Angie Wang" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mai_2016.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mai_2016.jpg" alt="Ouïedire" title="Mai 2016 - CRCR" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_avril2016.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_avril2016.jpg" alt="Ouïedire" title="Avril 2016 - blog.crcr.fr" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mars2016.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mars2016.jpg" alt="Ouïedire" title="Mars 2016" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_fevier2016.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_fevier2016.jpg" alt="Ouïedire" title="Février 2016" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier2016.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier2016.jpg" alt="Ouïedire" title="Janvier 2016 - Makoto Aida" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_decembre.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_decembre.jpg" alt="Ouïedire" title="Décembre 2015 - Charle Burns" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_novembre.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_novembre.jpg" alt="Ouïedire" title="Novembre 2015 - Yue Minjun" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_octobre.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_octobre.jpg" alt="Ouïedire" title="Octobre 2015 - Yue Minjun" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_juillet.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_juillet.jpg" alt="Ouïedire" title="Juillet 2015 - Shimura Tatsumi" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_juin.gif" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_juin.gif" alt="Ouïedire" title="Juin 2015 - Mestre Funfo" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mai.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mai.jpg" alt="Ouïedire" title="Mai 2015 - Jonny Negron" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_avril.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_avril.jpg" alt="Ouïedire" title="Avril 2015 - Richard Corben" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mars.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mars.jpg" alt="Ouïedire" title="Mars 2015 - Stuntkid" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_fevrier.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_fevrier.jpg" alt="Ouïedire" title="Février 2015 - Liberatore" class="responsive"/>
+			</a>
+		</div>
+		<div class="flyer">
+			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier.jpg" >
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier.jpg" alt="Ouïedire" title="Janvier 2015 - Liberatore" class="responsive"/>
+			</a>
+		</div>
 	</div>
-
-<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_vacances2016.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
-	</div>
-<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_juin2016_1.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
-	</div>
-<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mai_2016.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
-	</div>
-<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_avril2016.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
-	</div>
-<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mars2016.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
-	</div>	
-<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_fevier2016.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
-	</div>	
-<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier2016.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
-	</div>	
-
-<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_decembre.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
-	</div>	
-
-<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_novembre.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
-	</div>	
-
-	<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_octobre.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
-	</div>	
-	
-
-	<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_juillet.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
-	</div>	
-	
-	<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_juin.gif" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
-	</div>	
-
-	<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mai.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
-	</div>
-
-	<div class="grid-33 mobile-grid-33">
-		<a href="{{ url('emissions')}}" >
-			<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_avril.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-		</a>
-	</div>
-
-
-	<div class="grid-33 mobile-grid-33">
-	<a href="{{ url('emissions')}}" >
-		<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_mars.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-	</a>
-
-	</div>
-_
-	<div class="grid-33 mobile-grid-33">
-	<a href="{{ url('emissions')}}" >
-		<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_fevrier.jpg" alt="Ouïedire" title="Consulter la liste des émissions disponibles" class="flyer"/>
-	</a>
-	</div>
-
-	<div class="grid-33 mobile-grid-33">
-	<a href="{{ url('emissions')}}" >
-		<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier.jpg" alt="Ouïedire"
-		title="Consulter la liste des émissions disponibles" class="flyer"/>
-	</a>
-
-	</div>
-	
-
 </div>
+{% endblock %}
+
+{% block userscript %}
+	<script src="{{ app.request.getBasePath() }}/vendor/andreknieriem-simplelightbox/dist/simple-lightbox.min.js?{{ app.assetsVersion }}"></script>
+	<link rel="stylesheet" href="{{ app.request.getBasePath() }}/vendor/andreknieriem-simplelightbox/dist/simple-lightbox.min.css" />
+	<script type="text/javascript">
+		let gallery = new SimpleLightbox('.flyersContainer a');
+	</script>
 {% endblock %}

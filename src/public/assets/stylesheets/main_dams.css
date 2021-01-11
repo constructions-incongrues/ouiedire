@@ -100,7 +100,7 @@ h3.showDate{
 }
 h3.showDownload{
 	display: inline-block;
-	margin: 7px 0 0 20px;
+	margin: 7px 0 0 0px;
 	font-size: 1.6em;
 	font-weight: normal;
 	position: absolute;
@@ -115,8 +115,26 @@ h3.showDownload a{
 }
 h3.showDownload a:hover{	
 	color:#333;
-	background-color: #fff;
+	background-color: #555;
 }
+@media screen and (max-width: 1024px) {
+	h2.showNumber{
+		font-size: 1.2em;
+	}
+	h1.showTitle{
+		font-size: 1.2em;
+	}
+	h3.showDate{
+		font-size: 1.2em;
+	}
+	h3.showDownload{
+		font-size: 1.2em;
+	}
+	h3.showDownload a{	
+		font-size: 0.6em;
+	}
+}
+
 
 /*  NIGHT MODE  */
 /* ============ */
@@ -131,7 +149,14 @@ h3.showDownload a:hover{
 	color:#000;
 	font-size: 1.5em;
 }
-
+@media screen and (max-width: 1024px) {
+	#divNight{
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0px 0px;
+}
+}
 /*  PREV / NEXT EMISSION  */
 /* ====================== */
 .nav a {
@@ -147,10 +172,12 @@ h3.showDownload a:hover{
 }
 .nav {
     float: right !important;
+	margin-bottom:10px;
 	margin-top:15px;
 }
 @media screen and (min-width: 1025px) {
 	.nav {
+		margin-bottom:0px;
 		margin-top:10px;
 	}
 }
@@ -263,7 +290,26 @@ h3.showDownload a:hover{
 }
 
 
-
+/* Flyers */
+/* ======================= */
+.flyersContainer{
+  -webkit-columns: 5 300px;
+     -moz-columns: 5 300px;
+          columns: 5 300px;
+  -webkit-column-gap: 2em;
+     -moz-column-gap: 2em;
+          column-gap: 2em;
+	list-style-type: none;
+	margin: 15px 0;
+	padding: 0;
+}
+.flyer{
+	margin-bottom:20px;
+}
+.responsive {
+  max-width: 100%;
+  height: 100%;
+}
 
 /* liens émissions (shows) */
 /* ======================= */
@@ -415,6 +461,16 @@ ol.mejs-smartplaylist-playlist {
 	position:relative;
 	top:-5px;
 	text-transform: capitalize;
+	display:block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	break-inside: avoid;
+	-webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+}
+.mejs-smartplaylist-playlist li em, .mejs-smartplaylist-playlist li i{
+	opacity: .4;
 }
 .mejs-smartplaylist-playlist li:nth-child(even) {background: #fff}
 .mejs-smartplaylist-playlist li:nth-child(odd) {background: #eee}

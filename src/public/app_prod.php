@@ -5,4 +5,4 @@ require(__DIR__.'/../src/bootstrap.php');
 // Run application
 $app->run();
 
-// CHACUN TRAÎNE SON ENFER PERSONNEL
+// ✝ CHACUN TRAÎNE SON ENFER PERSONNEL ✝

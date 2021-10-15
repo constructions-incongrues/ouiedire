@@ -52,7 +52,7 @@ echo $process->getOutput();
 
 // Définition du commentaire
 $command = sprintf(
-    'eyeD3 --set-encoding=utf8 --comment="fre:Description:%s" %s',
+    'eyeD3 --encoding=utf8 --comment="fre:Description:%s" %s',
     str_replace('"', '\"', strip_tags($show['description'])),
     $mp3
 );
@@ -75,7 +75,7 @@ if (isset($show['covers'][0])) {
 }
 
 // Ajout de l'URL
-$command = sprintf('eyeD3 --set-user-url-frame="Canonical:http://www.ouiedire.net/%s-%d" %s', strtolower($show['type']), $show['number'], $mp3);
+$command = sprintf('eyeD3 --user-url-frame="Canonical:http://www.ouiedire.net/emission/%s-%d" %s', strtolower($show['type']), $show['number'], $mp3);
 $process = new Process($command);
 $process->run();
 if (!$process->isSuccessful()) {
@@ -84,7 +84,7 @@ if (!$process->isSuccessful()) {
 echo $process->getOutput();
 
 // Année (le flag eyeD3 --year ne fonctionne pas)
-$command = sprintf('eyeD3 --set-text-frame="TYER:%d" %s', substr($show['releasedAt'], 0, 4), $mp3);
+$command = sprintf('eyeD3 --text-frame="TYER:%d" %s', substr($show['releasedAt'], 0, 4), $mp3);
 $process = new Process($command);
 $process->run();
 if (!$process->isSuccessful()) {
@@ -93,7 +93,7 @@ if (!$process->isSuccessful()) {
 echo $process->getOutput();
 
 // Artiste de l'album
-$command = sprintf('eyeD3 --set-text-frame="TPE2:Various Artists" %s', $mp3);
+$command = sprintf('eyeD3 --text-frame="TPE2:Various Artists" %s', $mp3);
 $process = new Process($command);
 $process->run();
 if (!$process->isSuccessful()) {

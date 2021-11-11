@@ -25,7 +25,8 @@
 				{{ artists|length }} artistes<span class="diamond"> &#11045; </span>
 				<a href="{{ url('emissions') }}" title="Voir la liste des {{ shows|length }} émissions">{{ shows|length }} émissions</a><span class="diamond"> &#11045; </span> 
 				<a href="{{ url('djs') }}" title="Voir la liste des {{ djs|length }} curateurs">{{ djs|length }} curateurs</a><span class="diamond"> &#11045; </span> 
-				<a href="{{ url('years') }}" title="Voir les émissions par année">{{ years }} années</a>
+				<a href="{{ url('years') }}" title="Voir les émissions par année">{{ years }} années</a><span class="diamond"> &#11045; </span> 
+				<a href="{{ url('flyers') }}">39 flyers</a>
 			</span>
 			<a href="{{ url('random') }}" title="Écouter une émission aléatoire" style="display: inline-block;float:right;padding:0px;margin:0;font-size:1.5em">
 				<i class="icon-shuffle" style="color:#{% if app.request.cookies.get('night') %}959719{% else %}FCFE04{% endif %}"></i>

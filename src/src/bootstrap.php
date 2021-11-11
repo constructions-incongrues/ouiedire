@@ -1,6 +1,6 @@
 <?php
 // Setup autoloading
-require_once __DIR__.'/../../vendor/autoload.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
 // Uses
 use Silex\Provider;
@@ -191,23 +191,14 @@ function getShow($id, Silex\Application $app = null, $config = array()) {
     }
 
   // Absolute URL to show assets
-    if ($app && empty($config['cdn_url'])) {
-        $urlAssets = sprintf(
-            '%s://%s%s/assets/emission/%s-%s',
-            $app['request']->getScheme(),
-            $app['request']->getHttpHost(),
-            $app['request']->getBasePath(),
-            $show['typeSlug'],
-            $show['number']
-        );
-    } else {
-        $urlAssets = sprintf(
-            '%s/assets/emission/%s-%s',
-            $config['cdn_url'],
-            $show['typeSlug'],
-            $show['number']
-        );
-    }
+    $urlAssets = sprintf(
+        '%s://%s%s/assets/emission/%s-%s',
+        $app['request']->getScheme(),
+        $app['request']->getHttpHost(),
+        $app['request']->getBasePath(),
+        $show['typeSlug'],
+        $show['number']
+    );
 
     // Guess show MP3 properties
     $show['urlDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), $manifest->slug));
@@ -276,9 +267,10 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
     // Path to data directories
     $pathData = __DIR__.'/../data';
     $pathPublic = __DIR__.'/../public';
+    $pathCache = __DIR__.'/../cache';
 
     // cache
-    $cacheFile = $pathPublic.'/assets/cache/shows_'.$preview.'_'.rawurlencode($artist).'.txt';
+    $cacheFile = $pathCache . '/shows_'.$preview.'_'.rawurlencode($artist).'.txt';
     if(file_exists($cacheFile) && (time()-filemtime($cacheFile) < 43200)){  // if cache is valid, we use it
         $current = file_get_contents($cacheFile);        
         $shows = unserialize($current);
@@ -362,12 +354,6 @@ function getRandomShow(Silex\Application $app)
     return $shows[array_rand($shows)];
 }
 
-// Load config
-$config = json_decode(file_get_contents(__DIR__.'/../config.json'), true);
-if (false === $config) {
-    throw new \RuntimeException('Impossible de charger la configuration - pathConfig='.__DIR__.'/../config.json');
-}
-
 // Configure application
 $app = new Silex\Application();
 
@@ -389,7 +375,7 @@ if (isset($debug) && $debug == true) {
 
     // Web Profiler (@see https://github.com/sensiolabs/Silex-WebProfiler)
     $app->register(new Provider\WebProfilerServiceProvider(), array(
-        'profiler.cache_dir' => __DIR__.'/../cache/profiler',
+        'profiler.cache_dir' => $pathCache . '/profiler',
         'profiler.mount_prefix' => '/_profiler', // this is the default
     ));
 }
@@ -404,7 +390,7 @@ $app->get('/liens', function(Silex\Application $app) {
 ->bind('liens');
 
 // Shows list
-$app->get('/', function(Silex\Application $app, Request $request) use ($config) {
+$app->get('/', function(Silex\Application $app, Request $request) {
     $artists = array();
     $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
     $showsGroupedByYear = array();
@@ -646,7 +632,7 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, Request $req
 ->bind('emission');
 
 
-$app->get('/artists', function(Silex\Application $app, Request $request) use ($config) {
+$app->get('/artists', function(Silex\Application $app, Request $request) {
     $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
     $artists = array();
     $showsGroupedByArtist = array();
@@ -688,7 +674,7 @@ $app->get('/artists', function(Silex\Application $app, Request $request) use ($c
 ->bind('artists');
 
 // curator list
-$app->get('/djs', function(Silex\Application $app, Request $request) use ($config) {
+$app->get('/djs', function(Silex\Application $app, Request $request) {
     $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
     $artists = array();        
     $djs = array();
@@ -728,7 +714,7 @@ $app->get('/djs', function(Silex\Application $app, Request $request) use ($confi
 ->bind('djs');
 
 // years
-$app->get('/years', function(Silex\Application $app, Request $request) use ($config) {
+$app->get('/years', function(Silex\Application $app, Request $request) {
     $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
     $artists = array();
     $showsGroupedByYear = array();

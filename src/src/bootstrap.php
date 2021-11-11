@@ -140,10 +140,7 @@ function getDuration()
  *
  * @throws \RuntimeException When a show data file could not be loaded
  */
-function getShow($id, Silex\Application $app = null, $config = array()) {
-    // Defaults
-    $config = array_merge(array('assets_version' => time(), 'cdn_url' => ''));
-
+function getShow($id, Silex\Application $app = null) {
     // Path to data directories
     $id = explode('-', $id);
     $pathData = __DIR__.'/../data';
@@ -381,7 +378,7 @@ if (isset($debug) && $debug == true) {
 }
 
 // Assets invalidator
-$app['assetsVersion'] = time();
+$app['assetsVersion'] = '';
 
 // Links
 $app->get('/liens', function(Silex\Application $app) {

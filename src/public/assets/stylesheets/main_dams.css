@@ -307,7 +307,7 @@ h3.showDownload a:hover{
 	margin-bottom:20px;
 }
 .responsive {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
 }
 

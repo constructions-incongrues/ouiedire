@@ -470,7 +470,7 @@ $app->get('/feed', function(Silex\Application $app) {
     try {
         $feed->setDateModified(DateTime::createFromFormat('Y-m-d H:i:s', $shows[0]['releasedAt']));
     } catch (InvalidArgumentException $e) {
-        var_dump($shows[0]);
+        $feed->setDateModified(DateTime::createFromFormat('Y-m-d', $shows[0]['releasedAt']));
     }
 
     // TODO

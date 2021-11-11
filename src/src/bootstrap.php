@@ -467,7 +467,11 @@ $app->get('/feed', function(Silex\Application $app) {
     $feed->setLink($app['url_generator']->generate('emissions', array(), UrlGenerator::ABSOLUTE_URL));
     $feed->setFeedLink($app['url_generator']->generate('feed', array(), UrlGenerator::ABSOLUTE_URL), 'rss');
     $feed->addAuthor(array('name' => 'Ouïedire', 'email' => 'contact@ouiedire.net', 'uri', 'http://www.ouiedire.net'));
-    $feed->setDateModified(DateTime::createFromFormat('Y-m-d H:i:s', $shows[0]['releasedAt']));
+    try {
+        $feed->setDateModified(DateTime::createFromFormat('Y-m-d H:i:s', $shows[0]['releasedAt']));
+    } catch (InvalidArgumentException $e) {
+        $feed->setDateModified(DateTime::createFromFormat('Y-m-d', $shows[0]['releasedAt']));
+    }
 
     // TODO
     $feed->setImage(
@@ -504,8 +508,16 @@ EOT;
         }
         $entry->setContent($htmlContent);
         $entry->addAuthor(array('name' => $show['authors']));
-        $entry->setDateModified(DateTime::createFromFormat('Y-m-d H:i:s', $show['releasedAt']));
-        $entry->setDateCreated(DateTime::createFromFormat('Y-m-d H:i:s', $show['releasedAt']));
+        try {
+            $entry->setDateModified(DateTime::createFromFormat('Y-m-d H:i:s', $show['releasedAt']));
+        } catch (InvalidArgumentException $e) {
+            $entry->setDateModified(DateTime::createFromFormat('Y-m-d', $show['releasedAt']));
+        }
+        try {
+            $entry->setDateCreated(DateTime::createFromFormat('Y-m-d H:i:s', $show['releasedAt']));
+        } catch (InvalidArgumentException $e) {
+            $entry->setDateCreated(DateTime::createFromFormat('Y-m-d', $show['releasedAt']));
+        }
         $entry->setEnclosure(array('type' => 'audio/mpeg', 'uri' => $show['urlDownload'], 'length' => (int)$show['sizeDownload']));
 
         // Add entry to feed

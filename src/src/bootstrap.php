@@ -365,6 +365,26 @@ $app->register(new Provider\UrlGeneratorServiceProvider());
 // Controller classes (required by Web Profiler - @see http://silex.sensiolabs.org/doc/providers/service_controller.html)
 $app->register(new Provider\ServiceControllerServiceProvider());
 
+$app['cache.max_age'] = 3600 * 24 * 90;
+$app['cache.expires'] = 3600 * 24 * 90;
+$app['cache.dir'] = __DIR__ . '/../cache';
+
+use Silex\Provider\HttpCacheServiceProvider;
+
+// Registers Symfony Cache component extension
+$app->register(new HttpCacheServiceProvider(), array(
+    'http_cache.cache_dir'  => $app['cache.dir'],
+    'http_cache.options'    => array(
+        'allow_reload'      => true,
+        'allow_revalidate'  => true
+)));
+
+// Default cache values
+$app['cache.defaults'] = array(
+    'Cache-Control'     => sprintf('public, max-age=%d, s-maxage=%d, must-revalidate, proxy-revalidate', $app['cache.max_age'], $app['cache.max_age']),
+    'Expires'           => date('r', time() + $app['cache.expires'])
+);
+
 // Debugging features
 if (isset($debug) && $debug == true) {
     // Global debug flag
@@ -400,19 +420,24 @@ $app->get('/', function(Silex\Application $app, Request $request) {
         sort($artists);
     }
 
-  // Render view
+    // Render view
+    $template_name = 'emissions.twig.html';
+    $cache_headers = $app['cache.defaults'];
+
     return $app['twig']->render(
-        'emissions.twig.html',
+        $template_name,
         array(
             'artist'     => $request->query->get('artist'),
             'artists'    => $artists,
             'djs'        => getDjs($shows),
-            'duration' => getDuration(),
+            'duration'   => getDuration(),
             'shows'      => $shows,
             'showsGroupedByYear' => $showsGroupedByYear,
             'years' => getYears($shows)
           )
     );
+
+    return new Response($body, 200, $app['debug'] ? array() : $cache_headers);
 })
 ->bind('emissions');
 

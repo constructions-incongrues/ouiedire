@@ -420,10 +420,11 @@ $app->get('/', function(Silex\Application $app, Request $request) use ($config) 
     return $app['twig']->render(
         'emissions.twig.html',
         array(
-            'artists'    => $artists,
-            'shows'      => $shows,
-            'djs'        => getDjs($shows),
             'artist'     => $request->query->get('artist'),
+            'artists'    => $artists,
+            'djs'        => getDjs($shows),
+            'duration' => getDuration(),
+            'shows'      => $shows,
             'showsGroupedByYear' => $showsGroupedByYear,
             'years' => getYears($shows)
           )
@@ -703,10 +704,11 @@ $app->get('/djs', function(Silex\Application $app, Request $request) use ($confi
         array(
             'artists' => $artists,
             'djsGroupedByAlpha' => $djsGroupedByAlpha,
+            'duration' => getDuration(),
             'showsGroupedByDj' => getDjsWithShows($shows),
             'showsGroupedByYear' => $showsGroupedByYear,
             'shows' => $shows,
-            'years' => getYears($shows)
+            'years' => getYears($shows),
         )
     );
 })
@@ -731,10 +733,11 @@ $app->get('/years', function(Silex\Application $app, Request $request) use ($con
         'years.twig.html',
         array(
             'artists' => $artists,
-            'showsGroupedByYear' => $showsGroupedByYear,
-            'showsGroupedByDj' => getDjsWithShows($shows),
-            'shows' => $shows,
             'djs' => getDjs($shows),
+            'duration' => getDuration(),
+            'shows' => $shows,
+            'showsGroupedByDj' => getDjsWithShows($shows),
+            'showsGroupedByYear' => $showsGroupedByYear,
             'years' => getYears($shows)
         )
     );

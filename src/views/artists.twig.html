@@ -23,8 +23,10 @@
 		<div class="infos">
 			<span class="big"> 
 				{{ artists|length }} artistes<span class="diamond"> &#11045; </span>
-				<a href="{{ url('emissions') }}" title="Voir la liste des {{ shows|length }} émissions">{{ shows|length }} émissions 			</a><span class="diamond"> &#11045; </span> 
-				{{ duration }} heures<span class="diamond"> &#11045; </span> 
+				<a href="{{ url('emissions') }}" title="Voir la liste des {{ shows|length }} émissions">{{ shows|length }} émissions </a>
+				<span class="diamond"> &#11045; </span> 
+				{{ duration }} heures
+				<span class="diamond"> &#11045; </span> 
 				<a href="{{ url('djs') }}" title="Voir la liste des {{ djs|length }} curateurs">{{ djs|length }} curateurs</a><span class="diamond"> &#11045; </span> 
 				 <a href="{{ url('flyers') }}" title="Voir les flyers">45 flyers</a><span class="diamond"> &#11045; </span> 
 				 <a href="{{ url('years') }}" title="Voir les émissions par année">{{ years }} années</a>

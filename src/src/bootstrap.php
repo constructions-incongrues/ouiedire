@@ -124,6 +124,11 @@ function getYear($show)
     return $year;
 }
 
+function getDuration()
+{
+    return round(1249590 / 60 / 60);
+}
+
 /**
  * Returns data about a show.
  *
@@ -661,7 +666,8 @@ $app->get('/artists', function(Silex\Application $app, Request $request) use ($c
             'showsGroupedByYear' => $showsGroupedByYear,
             'shows' => $shows,
             'djs' => getDjs($shows),
-            'years' => getYears($shows)
+            'years' => getYears($shows),
+            'duration' => getDuration()
         )
     );
 })

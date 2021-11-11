@@ -293,9 +293,9 @@ h3.showDownload a:hover{
 /* Flyers */
 /* ======================= */
 .flyersContainer{
-  -webkit-columns: 5 300px;
-     -moz-columns: 5 300px;
-          columns: 5 300px;
+  -webkit-columns: 4 300px;
+     -moz-columns: 4 300px;
+          columns: 4 300px;
   -webkit-column-gap: 2em;
      -moz-column-gap: 2em;
           column-gap: 2em;

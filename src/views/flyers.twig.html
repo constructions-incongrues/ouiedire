@@ -7,14 +7,29 @@
 {% endblock %}
 
 {% block title %}Flyers{% endblock %}
+
 {% block responsive %} {% endblock %}
 
 {% block content %}
 <div class="grid-100 tablet-grid-100 mobile-grid-100">
-	<div class="cartouche">     
-	    <h2 class="showNumber ailleurs">Flyers</h2>
-	</div> 
-</div> 
+	<div class="grid-100 tablet-grid-100 mobile-grid-100">
+		<div class="bloc center">
+			<div class="infos">
+				<span class="big"> 
+					{{ shows|length }} émissions<span class="diamond"> &#11045; </span> 
+					<a href="{{ url('artists', {artist:artist}) }}" title="Voir la liste des {{ artists|length }} artistes">{{ artists|length }} artistes </a><span class="diamond"> &#11045; </span>
+					<a href="{{ url('djs') }}" title="Voir la liste des {{ djs|length }} curateurs">{{ djs|length }} curateurs</a><span class="diamond"> &#11045; </span> 
+					{{ duration }} heures  <span class="diamond"> &#11045; </span>
+					<a href="{{ url('flyers') }}" title="Voir les flyers">45 flyers</a>  <span class="diamond"> &#11045; </span>
+					<a href="{{ url('years') }}" title="Voir les émissions par année">{{ years }} années</a> 
+	
+				</span>
+				<a href="{{ url('random') }}" title="Écouter une émission aléatoire" style="display: inline-block;float:right;padding:0px;margin:0;font-size:1.5em">
+					<i class="icon-shuffle" style="color:#{% if app.request.cookies.get('night') %}959719{% else %}FCFE04{% endif %}"></i>
+				</a>
+			</div>
+		</div>
+	</div>
 <div class="grid-100 mobile-grid-100">
 	<div class="descriptiontext" style="margin-top:0;">
 		<!-- <p>Illustrations par : 
@@ -122,12 +137,12 @@
 		</div>
 		<div class="flyer">
 			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier.jpg" >
-				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier.jpg" alt="Ouïedire" title="" class="responsive-flyer"/>
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier.jpg" alt="Ouïedire" title="Illustration : Goupil Acneïque" class="responsive-flyer"/>
 			</a>
 		</div>
 		<div class="flyer">
 			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier2019.gif" >
-				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier2019.gif" alt="Ouïedire" title="" class="responsive-flyer"/>
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/fly_ouiedire_janvier2019.gif" alt="Ouïedire" title="Illustration : Goupil Acneïque" class="responsive-flyer"/>
 			</a>
 		</div>
 		<div class="flyer">
@@ -209,7 +224,7 @@
 		</div>
 		<div class="flyer">
 			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/o.jpg" >
-				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/o.jpg" alt="Ouïedire" title="Illustration :Pia Mélissa Laroche" class="responsive-flyer"/>
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/o.jpg" alt="Ouïedire" title="Illustration : Pia Mélissa Laroche" class="responsive-flyer"/>
 			</a>
 		</div>
 		<div class="flyer">
@@ -224,12 +239,12 @@
 		</div>
 		<div class="flyer">
 			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/r.jpg" >
-				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/r.jpg" alt="Ouïedire" title="Sophie Im" class="responsive-flyer"/>
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/r.jpg" alt="Ouïedire" title="Illustration Sophie Im" class="responsive-flyer"/>
 			</a>
 		</div>
 		<div class="flyer">
 			<a href="{{ app.request.getBasePath() }}/assets/img/flyer/s.jpg" >
-				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/s.jpg" alt="Ouïedire" title="Goupil" class="responsive-flyer"/>
+				<img src="{{ app.request.getBasePath() }}/assets/img/flyer/s.jpg" alt="Ouïedire" title="Illustration : Goupil Acneïque" class="responsive-flyer"/>
 			</a>
 		</div>
 		<div class="flyer">

@@ -35,10 +35,10 @@
 			<span class="big"> 
 				{{ shows|length }} émissions<span class="diamond"> &#11045; </span> 
 				<a href="{{ url('artists', {artist:artist}) }}" title="Voir la liste des {{ artists|length }} artistes">{{ artists|length }} artistes </a><span class="diamond"> &#11045; </span>
-				<span class="diamond"> &#11045; </span> <a href="{{ url('djs') }}" title="Voir la liste des {{ djs|length }} curateurs">{{ djs|length }} curateurs</a><span class="diamond"> &#11045; </span> 
+				<a href="{{ url('djs') }}" title="Voir la liste des {{ djs|length }} curateurs">{{ djs|length }} curateurs</a><span class="diamond"> &#11045; </span> 
 				{{ duration }} heures  <span class="diamond"> &#11045; </span>
-				<a href="{{ url('years') }}" title="Voir les émissions par année">{{ years }} années</a> <span class="diamond"> &#11045; </span>
-				<a href="{{ url('flyers') }}" title="Voir les flyers">45 flyers</a>
+				<a href="{{ url('flyers') }}" title="Voir les flyers">45 flyers</a>  <span class="diamond"> &#11045; </span>
+				<a href="{{ url('years') }}" title="Voir les émissions par année">{{ years }} années</a> 
 
 			</span>
 			<a href="{{ url('random') }}" title="Écouter une émission aléatoire" style="display: inline-block;float:right;padding:0px;margin:0;font-size:1.5em">

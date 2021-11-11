@@ -375,7 +375,7 @@ if (isset($debug) && $debug == true) {
 
     // Web Profiler (@see https://github.com/sensiolabs/Silex-WebProfiler)
     $app->register(new Provider\WebProfilerServiceProvider(), array(
-        'profiler.cache_dir' => $pathCache . '/profiler',
+        'profiler.cache_dir' => __DIR__.'/../cache/profiler',
         'profiler.mount_prefix' => '/_profiler', // this is the default
     ));
 }

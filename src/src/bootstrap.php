@@ -378,7 +378,7 @@ if (isset($debug) && $debug == true) {
 }
 
 // Assets invalidator
-$app['assetsVersion'] = '';
+$app['assetsVersion'] = time();
 
 // Links
 $app->get('/liens', function(Silex\Application $app) {

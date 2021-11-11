@@ -126,7 +126,8 @@ function getYear($show)
 
 function getDuration()
 {
-    return round(1249590 / 60 / 60);
+    $seconds = file_get_contents('../public/duration');
+    return round($seconds / 60 / 60);
 }
 
 /**

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project name="net.ouiedire.www" default="help" basedir=".">
-	<!-- Initialize toolkit -->
-	<import file="vendor/constructions-incongrues/ananas-build-toolkit/modules/toolkit/module.xml" />
-</project>

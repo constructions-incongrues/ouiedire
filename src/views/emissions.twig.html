@@ -44,22 +44,12 @@
 			<a href="{{ url('random') }}" title="Écouter une émission aléatoire" style="display: inline-block;float:right;padding:0px;margin:0;font-size:1.5em">
 				<i class="icon-shuffle" style="color:#{% if app.request.cookies.get('night') %}959719{% else %}FCFE04{% endif %}"></i>
 			</a>
-			<3
 		</div>
 	</div>
 </div>
 <div class="grid-100 mobile-grid-100">
 	<div class="showContainer">
-		<ul>
-		{% for show in shows %}
-			{% if loop.index0 == (loop.length / 1)|number_format %}{% endif %}
-			<li class="show {{ show.typeSlug }}">
-				<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}" title="{{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})">
-					<strong>{{ show.number }}</strong> {{ show.authors }} - {{ show.title }}
-				</a>
-			</li>
-		{% endfor %}
-		</ul>	
+	
 	</div>	
 </div>
 

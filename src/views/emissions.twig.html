@@ -49,7 +49,16 @@
 </div>
 <div class="grid-100 mobile-grid-100">
 	<div class="showContainer">
-	
+		<ul>
+		{% for show in shows %}
+			{% if loop.index0 == (loop.length / 1)|number_format %}{% endif %}
+			<li class="show {{ show.typeSlug }}">
+				<a href="{{ path('emission', {id:show.id, type:show.typeSlug}) }}" title="{{ show.authors }} - {{ show.title }} ({{ show.releasedAt|date('d/m/Y') }})">
+					<strong>{{ show.number }}</strong> {{ show.authors }} - {{ show.title }}
+				</a>
+			</li>
+		{% endfor %}
+		</ul>	
 	</div>	
 </div>
 

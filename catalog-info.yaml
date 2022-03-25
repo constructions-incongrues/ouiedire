@@ -9,6 +9,6 @@ metadata:
       title: ouiedire.net
       icon: public
 spec:
-  type: other
-  lifecycle: unknown
+  type: website
+  lifecycle: production
   owner: ouiedire

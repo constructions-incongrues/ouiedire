@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: net.ouiedire.www
+  annotations:
+    github.com/project-slug: constructions-incongrues/net.ouiedire.www
+spec:
+  type: other
+  lifecycle: unknown
+  owner: ouiedire

@@ -39,9 +39,7 @@ spec:
   type: blockstorage
   owner: constructions
   system: ouiedire
-  dependsOn:
-    - plesk
-
+  
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -52,8 +50,6 @@ spec:
   lifecycle: production
   owner: constructions
   system: ouiedire
-  apiProvidedBy:
-    - directus
   definition: |
     openapi: "3.0.0"
     info:

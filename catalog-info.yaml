@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ouiedire-website
+  name: ouiedire
   description: Le site ouiedire.net
   annotations:
     github.com/project-slug: constructions-incongrues/net.ouiedire.www
@@ -34,9 +34,8 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: ouiedire-audio-files
-  description: Les fichiers audio des émissions
+  name: ouiedire-storage
 spec:
-  type: catalog
+  type: blockstorage
   owner: constructions
   system: ouiedire

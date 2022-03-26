@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ouiedire
+  name: ouiedire-website
   description: Le site ouiedire.net
   annotations:
     github.com/project-slug: constructions-incongrues/net.ouiedire.www
@@ -39,7 +39,8 @@ spec:
   type: blockstorage
   owner: constructions
   system: ouiedire
-
+  dependsOn:
+    - plesk
 
 ---
 apiVersion: backstage.io/v1alpha1
@@ -58,3 +59,5 @@ spec:
     info:
       version: 1.0.0
       title: ouiedire API
+    servers:
+      - url: https://data.constructions-incongrues.net/ouiedire/

@@ -1,7 +1,9 @@
+---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ouiedire
+  name: ouiedire-website
+  description: Le site ouiedire.net
   annotations:
     github.com/project-slug: constructions-incongrues/net.ouiedire.www
   links:
@@ -14,8 +16,27 @@ metadata:
     - url: https://plesk.pastis-hosting.net/modules/ssh-terminal/?dom_id=64&site_id=64
       title: Terminal SSH
       icon: terminal
-
 spec:
   type: website
   lifecycle: production
   owner: constructions
+  system: ouiedire
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: ouiedire
+spec:
+  owner: constructions
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ouiedire-audio-files
+  description: Les fichiers audio des émissions
+spec:
+  type: catalog
+  owner: constructions
+  system: ouiedire

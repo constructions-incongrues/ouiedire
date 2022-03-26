@@ -39,3 +39,22 @@ spec:
   type: blockstorage
   owner: constructions
   system: ouiedire
+
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: ouiedire-api
+spec:
+  type: openapi
+  lifecycle: production
+  owner: constructions
+  system: ouiedire
+  apiProvidedBy:
+    - directus
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: ouiedire API

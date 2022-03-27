@@ -8,7 +8,6 @@ metadata:
 spec:
   type: website
   owner: default/ouiedire-net
-  system: ouiedire
   lifecycle: plesk-git
   dependsOn:
     - component:plesk/storage

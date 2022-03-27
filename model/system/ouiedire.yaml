@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
-  name: web
+  name: ouiedire
   namespace: ouiedire
 spec:
   owner: default/ouiedire-net

@@ -19,6 +19,6 @@ spec:
   type: website
   lifecycle: production
   owner: default/ouiedire-net
-  system: ouiedire/web
+  system: ouiedire
   dependsOn:
     - component:plesk/server

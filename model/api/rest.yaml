@@ -7,7 +7,7 @@ spec:
   type: openapi
   lifecycle: production
   owner: default/ouiedire-net
-  system: ouiedire/web
+  system: ouiedire
   definition: |
     openapi: "3.0.0"
     info:

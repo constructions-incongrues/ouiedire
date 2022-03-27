@@ -7,3 +7,5 @@ spec:
   type: storage
   owner: default/ci
   system: ouiedire/system
+  dependencyOf:
+    - component:ouiedire/web

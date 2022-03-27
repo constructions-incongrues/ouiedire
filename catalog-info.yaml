@@ -7,5 +7,5 @@ spec:
   targets:
     - model/api/rest.yaml
     - model/component/website.yaml
-    - model/resources/block.yaml
+    - model/resource/block.yaml
     - model/system/web.yaml

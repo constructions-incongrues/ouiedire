@@ -3,7 +3,6 @@ kind: Component
 metadata:
   name: website
   namespace: ouiedire
-  description: Le site ouiedire.net
   annotations:
     github.com/project-slug: constructions-incongrues/net.ouiedire.www
   links:

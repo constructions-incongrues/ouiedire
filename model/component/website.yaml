@@ -17,8 +17,8 @@ metadata:
       icon: terminal
 spec:
   type: website
-  lifecycle: production
   owner: default/ouiedire-net
   system: ouiedire
   dependsOn:
-    - component:plesk/server
+    - component:plesk/git
+    - component:plesk/storage

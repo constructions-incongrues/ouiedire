@@ -2,12 +2,14 @@ apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
   name: disk
+  tags:
+    - block
   namespace: ouiedire
 spec:
   type: storage
-  tags:
-    - block
   owner: default/ouiedire-net
   system: ouiedire/system
   dependencyOf:
     - component:ouiedire/web
+  dependsOn:
+    - component:plesk/server

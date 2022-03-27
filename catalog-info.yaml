@@ -7,6 +7,5 @@ spec:
   targets:
     - model/api/rest.yaml
     - model/component/website.yaml
-    - model/resource/disk.yaml
     - model/system/web.yaml
   owner: default/ouiedire-net

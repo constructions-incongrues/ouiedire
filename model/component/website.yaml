@@ -21,4 +21,4 @@ spec:
   owner: default/ouiedire-net
   system: ouiedire/web
   dependsOn:
-    - resource:plesk/server
+    - component:plesk/server

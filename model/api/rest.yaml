@@ -6,7 +6,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: default/ci
+  owner: default/ouiedire-net
   system: ouiedire/web
   definition: |
     openapi: "3.0.0"

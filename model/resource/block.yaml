@@ -5,7 +5,7 @@ metadata:
   namespace: ouiedire
 spec:
   type: storage
-  owner: default/ci
+  owner: default/ouiedire-net
   system: ouiedire/system
   dependencyOf:
     - component:ouiedire/web

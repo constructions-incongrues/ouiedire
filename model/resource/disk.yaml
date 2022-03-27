@@ -4,7 +4,9 @@ metadata:
   name: disk
   namespace: ouiedire
 spec:
-  type: storage:block
+  type: storage
+  tags:
+    - block
   owner: default/ouiedire-net
   system: ouiedire/system
   dependencyOf:

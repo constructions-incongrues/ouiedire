@@ -20,3 +20,6 @@ spec:
   lifecycle: production
   owner: default/ouiedire-net
   system: ouiedire/web
+  dependsOn:
+    - resource:plesk/db
+    - resource:plesk/disk

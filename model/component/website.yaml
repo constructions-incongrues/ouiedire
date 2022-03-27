@@ -18,5 +18,5 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: default/ci
+  owner: default/ouiedire-net
   system: ouiedire/web

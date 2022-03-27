@@ -4,5 +4,5 @@ metadata:
   name: web
   namespace: ouiedire
 spec:
-  owner: default/ci
+  owner: default/ouiedire-net
   domain: default/music

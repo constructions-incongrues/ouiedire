@@ -7,6 +7,7 @@ spec:
   type: openapi
   owner: default/ouiedire-net
   system: ouiedire
+  lifecycle: experimental
   definition: |
     openapi: "3.0.0"
     info:

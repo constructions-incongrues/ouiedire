@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: web
+  namespace: ouiedire
+spec:
+  owner: default/ci
+  domain: default/music

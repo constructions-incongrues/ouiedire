@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: rest
+  namespace: ouiedire
+spec:
+  type: openapi
+  lifecycle: production
+  owner: default/ci
+  system: ouiedire/web
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: ouiedire API
+    servers:
+      - url: https://data.constructions-incongrues.net/ouiedire/

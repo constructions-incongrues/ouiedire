@@ -1,59 +1,12 @@
----
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Location
 metadata:
-  name: ouiedire-website
-  description: Le site ouiedire.net
-  annotations:
-    github.com/project-slug: constructions-incongrues/net.ouiedire.www
-  links:
-    - url: https://www.ouiedire.net
-      title: ouiedire.net
-      icon: public
-    - url: https://plesk.pastis-hosting.net/smb/file-manager/list/domainId/64
-      title: Gestionnaire de fichiers
-      icon: folder
-    - url: https://plesk.pastis-hosting.net/modules/ssh-terminal/?dom_id=64&site_id=64
-      title: Terminal SSH
-      icon: terminal
+  name: model
+  namespace: ouiedire
 spec:
-  type: website
-  lifecycle: production
-  owner: constructions
-  system: ouiedire
-
----
-apiVersion: backstage.io/v1alpha1
-kind: System
-metadata:
-  name: ouiedire
-spec:
-  owner: constructions
-
----
-apiVersion: backstage.io/v1alpha1
-kind: Resource
-metadata:
-  name: ouiedire-storage
-spec:
-  type: blockstorage
-  owner: constructions
-  system: ouiedire
-  
----
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: ouiedire-api
-spec:
-  type: openapi
-  lifecycle: production
-  owner: constructions
-  system: ouiedire
-  definition: |
-    openapi: "3.0.0"
-    info:
-      version: 1.0.0
-      title: ouiedire API
-    servers:
-      - url: https://data.constructions-incongrues.net/ouiedire/
+  type: file
+  targets:
+    - model/api/rest.yaml
+    - model/component/website.yaml
+    - model/resources/block.yaml
+    - model/system/web.yaml

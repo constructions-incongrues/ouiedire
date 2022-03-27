@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: block
+  namespace: ouiedire
+spec:
+  type: storage
+  owner: default/ci
+  system: ouiedire/system

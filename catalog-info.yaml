@@ -6,6 +6,6 @@ metadata:
 spec:
   targets:
     - model/api/rest.yaml
-    - model/component/website.yaml
+    - model/component/www.yaml
     - model/system/ouiedire.yaml
   owner: default/ouiedire-net

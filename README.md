@@ -1,6 +1,4 @@
-# ouiedire.net
-
-Ouïedire : j'en ai déjà entendu parler quelque part.
+# ouiedire
 
 ## Déploiement
 

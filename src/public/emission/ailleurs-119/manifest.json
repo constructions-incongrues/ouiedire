@@ -1,16 +1,32 @@
 {
-  "title": "Life's too short ! Let's listen to some lengthy versions",
-  "slug": "lifes-too-short-lets-listen-to-some-lengthy-versions",
   "authors": "Big Pink Pig",
-  "releasedAt": "2016-02-15 00:00:00",
-  "type": "ailleurs",
-  "isPublic": true,
+  "tracks": [
+    {
+      "timecode": "00:00:00",
+      "title": "The Crackle Of Dogs And Laughter Of Death",
+      "artists": [
+        {
+          "name": "BJ Nielsen"
+        },
+        {
+          "name": "Nana April Jun"
+        }
+      ]
+    }
+  ],
   "number": "119",
+  "slug": "lifes-too-short-lets-listen-to-some-lengthy-versions",
+  "releasedAt": "2016-02-15 00:00:00",
+  "playlist": {
+    "code": "<ol class=\"mejs-smartplaylist-playlist\">\n<li><a class=\"mejs-smartplaylist-time\">00:00:00</a> <span> Hawaiian Pups </span> - Baby Judy (Extended Version 1983) </li>\n<li><a class=\"mejs-smartplaylist-time\">00:04:57</a> <span> Teisutis Makačinas </span> -  Į Dieną Einam </li>\n<li><a class=\"mejs-smartplaylist-time\">00:10:27</a> <span> Co)))trane </span> - </li>\n<li><a class=\"mejs-smartplaylist-time\">00:23:49</a> <span> Eberhard Schoener</span> -  Nadi </li>\n<li><a class=\"mejs-smartplaylist-time\">00:34:04</a> <span> Toto Coelo </span> -  I eat cannibals </li>\n<li><a class=\"mejs-smartplaylist-time\">00:45:36</a> <span> Amanda Lear </span> -  Follow Me (extended mix) </li>\n<li><a class=\"mejs-smartplaylist-time\">00:57:31</a> <span> Mohammad </span> -  Lapli </li>\n<li><a class=\"mejs-smartplaylist-time\">01:05:39</a> <span> Dalida </span> -  1 </li>\n<li><a class=\"mejs-smartplaylist-time\">01:25:49</a> <span> Aavikko </span> -  Novo atlantis II </li>\n<li><a class=\"mejs-smartplaylist-time\">01:40:46</a> <span> Bronski Beat With Marc Almond </span> -  I feel love (medley) </li>\n<li><a class=\"mejs-smartplaylist-time\">01:49:06</a> <span> Shit and Shine </span> -  Electric Ponny 2 </li>\n<li><a class=\"mejs-smartplaylist-time\">01:58:57</a> <span> Matana Robert </span> -  I am </li>\n<li><a class=\"mejs-smartplaylist-time\">02:09:00</a> <span> Niños del Brasil ​</span> - Sombra Da Lua </li>\n<li><a class=\"mejs-smartplaylist-time\">02:15:15</a> <span> Michael Jackson & Paul McCartney </span> -  Say Say Say (Ultrasound) </li>\n</ol>",
+    "lang": "HTML"
+  },
+  "isPublic": true,
+  "title": "Life's too short ! Let's listen to some lengthy versions",
+  "type": "ailleurs",
   "image": "ouiedire_ailleurs-119_cover-1.png",
   "description": {
-    "code": "<p>Space-time continuum extended rewind, more or less</p>"
-  },
-  "playlist": {
-    "code": "<ol class=\"mejs-smartplaylist-playlist\">\n<li><a class=\"mejs-smartplaylist-time\">00:00:00</a> <span> Hawaiian Pups </span> - Baby Judy (Extended Version 1983) </li>\n<li><a class=\"mejs-smartplaylist-time\">00:04:57</a> <span> Teisutis Makačinas </span> -  Į Dieną Einam </li>\n<li><a class=\"mejs-smartplaylist-time\">00:10:27</a> <span> Co)))trane </span> - </li>\n<li><a class=\"mejs-smartplaylist-time\">00:23:49</a> <span> Eberhard Schoener</span> -  Nadi </li>\n<li><a class=\"mejs-smartplaylist-time\">00:34:04</a> <span> Toto Coelo </span> -  I eat cannibals </li>\n<li><a class=\"mejs-smartplaylist-time\">00:45:36</a> <span> Amanda Lear </span> -  Follow Me (extended mix) </li>\n<li><a class=\"mejs-smartplaylist-time\">00:57:31</a> <span> Mohammad </span> -  Lapli </li>\n<li><a class=\"mejs-smartplaylist-time\">01:05:39</a> <span> Dalida </span> -  1 </li>\n<li><a class=\"mejs-smartplaylist-time\">01:25:49</a> <span> Aavikko </span> -  Novo atlantis II </li>\n<li><a class=\"mejs-smartplaylist-time\">01:40:46</a> <span> Bronski Beat With Marc Almond </span> -  I feel love (medley) </li>\n<li><a class=\"mejs-smartplaylist-time\">01:49:06</a> <span> Shit and Shine </span> -  Electric Ponny 2 </li>\n<li><a class=\"mejs-smartplaylist-time\">01:58:57</a> <span> Matana Robert </span> -  I am </li>\n<li><a class=\"mejs-smartplaylist-time\">02:09:00</a> <span> Niños del Brasil ​</span> - Sombra Da Lua </li>\n<li><a class=\"mejs-smartplaylist-time\">02:15:15</a> <span> Michael Jackson & Paul McCartney </span> -  Say Say Say (Ultrasound) </li>\n</ol>"
+    "code": "<p>Space-time continuum extended rewind, more or less</p>",
+    "lang": "HTML"
   }
 }

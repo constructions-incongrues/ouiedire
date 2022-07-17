@@ -54,6 +54,7 @@ collections:
         widget: "image"
         choose_url: false
         media_folder: /src/public/assets/emission/{{slug}}
+        public_folder: /assets/emission/{{slug}}
         media_library:
           config:
             multiple: false

@@ -1,16 +1,18 @@
 {
-  "title": " Musique électronique inaccoutumée",
-  "slug": "musique-electronique-inaccoutumee",
   "authors": "Martine Ravage",
-  "releasedAt": "2022-06-17",
-  "type": "bagage",
-  "isPublic": true,
   "number": "30",
+  "slug": "musique-electronique-inaccoutumee",
+  "releasedAt": "2022-06-17",
+  "playlist": {
+    "code": "  <ol class=\"mejs-smartplaylist-playlist\">\r\n    <li><a class=\"mejs-smartplaylist-time\">00:00:00</a> Méconium - </span>EEVCR [RAVAGE03] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:01:15</a> Le Cri - </span>d [RAVAGE05] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:06:28</a> Mac Hertz - </span>Matrice Active [RAVAGE08] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:10:53</a> Evilshit - </span>29B [RAVAGE07] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:15:33</a> Hassan K - </span>Barq [RAVAGE02] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:18:26</a> calaisquelleaventure - </span>Ciao Pantoufle [RAVAGE01] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:24:18</a> Labarbak - </span>Nettoyage Ethique [RAVAGE01] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:28:14</a> Méconomicktus - </span>Excès dentaire [RAVAGE01] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:32:11</a> Abruti - </span>Fric Joute [RAVAGE04] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:33:15</a>  Evamuss - </span>Yurimaguas [RAVAGE06] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:37:38</a> Totale Chien - </span>Les Mecs Du Cheval [RAVAGE11]</li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:40:00</a> Le Diable - </span>Caca n°2 [RAVAGE06] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:46:37</a> Riak Frimakry - </span>Desman 2.9 [RAVAGE06]</li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:51:07</a> Datatears - </span>Techno Tears [RAVAGE09] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:54:29</a> Le Cri - </span>i [RAVAGE05] </li>\r\n    \r\n    </ol>",
+    "lang": "HTML"
+  },
+  "isPublic": true,
+  "title": " Musique électronique inaccoutumée",
+  "type": "bagage",
   "image": "ouiedire_bagage-30_cover-1.png",
   "description": {
-    "code": ""
-  },
-  "playlist": {
-    "code": "  <ol class=\"mejs-smartplaylist-playlist\">\r\n    <li><a class=\"mejs-smartplaylist-time\">00:00:00</a> Méconium - </span>EEVCR [RAVAGE03] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:01:15</a> Le Cri - </span>d [RAVAGE05] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:06:28</a> Mac Hertz - </span>Matrice Active [RAVAGE08] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:10:53</a> Evilshit - </span>29B [RAVAGE07] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:15:33</a> Hassan K - </span>Barq [RAVAGE02] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:18:26</a> calaisquelleaventure - </span>Ciao Pantoufle [RAVAGE01] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:24:18</a> Labarbak - </span>Nettoyage Ethique [RAVAGE01] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:28:14</a> Méconomicktus - </span>Excès dentaire [RAVAGE01] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:32:11</a> Abruti - </span>Fric Joute [RAVAGE04] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:33:15</a>  Evamuss - </span>Yurimaguas [RAVAGE06] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:37:38</a> Totale Chien - </span>Les Mecs Du Cheval [RAVAGE11]</li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:40:00</a> Le Diable - </span>Caca n°2 [RAVAGE06] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:46:37</a> Riak Frimakry - </span>Desman 2.9 [RAVAGE06]</li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:51:07</a> Datatears - </span>Techno Tears [RAVAGE09] </li>\r\n     <li><a class=\"mejs-smartplaylist-time\">00:54:29</a> Le Cri - </span>i [RAVAGE05] </li>\r\n    \r\n    </ol>"
+    "code": "",
+    "lang": "HTML"
   }
 }

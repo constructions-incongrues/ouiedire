@@ -1,0 +1,15 @@
+{
+  "authors": "COUCOU",
+  "number": 666,
+  "releasedAt": "2022-07-17T09:12:59.569Z",
+  "playlist": {
+    "lang": "HTML"
+  },
+  "isPublic": true,
+  "title": "WESH",
+  "type": "ailleurs",
+  "image": "bender.png",
+  "description": {
+    "lang": "HTML"
+  }
+}

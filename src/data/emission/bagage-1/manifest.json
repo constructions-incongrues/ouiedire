@@ -6,5 +6,5 @@
   "type": "Bagage",
   "isPublic": true,
   "number": "1",
-  "image": "./src/public/assets/emission/bagage-1/ouiedire_bagage-1_cover-1.png"
+  "image": "/src/public/assets/emissions/bagage-1/ouiedire_bagage-1_cover-1.png"
 }

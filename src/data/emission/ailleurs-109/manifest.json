@@ -6,5 +6,5 @@
   "type": "Ailleurs",
   "isPublic": true,
   "number": "109",
-  "image": "./src/public/assets/emission/ailleurs-109/ouiedire_ailleurs-109_cover-1.png"
+  "image": "/src/public/assets/emissions/ailleurs-109/ouiedire_ailleurs-109_cover-1.png"
 }

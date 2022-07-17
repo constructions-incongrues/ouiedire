@@ -5,6 +5,6 @@ services:
     build: .
     command: /bin/sh -c "mkdir -p cache && chmod 777 cache && composer install && apache2ctl -D FOREGROUND"
     ports:
-      - 80:80
+      - 8000:80
     volumes:
       - ./src:/usr/local/src/app

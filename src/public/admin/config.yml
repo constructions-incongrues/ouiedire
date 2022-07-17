@@ -10,7 +10,7 @@ backend:
   use_graphql: true
   squash_merges: true
 
-media_folder: /src/public/assets
+media_folder: ''
 public_folder: /assets
 
 site_url: https://ouiedire.net
@@ -21,6 +21,8 @@ collections:
   - label: 'Emission'
     name: emission
     folder: src/data/emission
+    media_folder: ''
+    public_folder: ''
     create: true
     slug: '{{title}}'
     preview_path: '{{slug}}'
@@ -53,7 +55,6 @@ collections:
         name: "image"
         widget: "image"
         choose_url: false
-        media_folder: ''
         media_library:
           config:
             multiple: false

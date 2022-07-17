@@ -5,5 +5,6 @@
   "releasedAt": "2013-09-25 00:00:00",
   "type": "Ailleurs",
   "isPublic": true,
-  "number": "30"
+  "number": "30",
+  "image": "./src/public/assets/emission/ailleurs-30/ouiedire_ailleurs-30_cover-1.png"
 }

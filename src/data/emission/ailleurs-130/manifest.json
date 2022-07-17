@@ -5,5 +5,6 @@
   "releasedAt": "2016-05-16 00:00:00",
   "type": "Ailleurs",
   "isPublic": true,
-  "number": "130"
+  "number": "130",
+  "image": "./src/public/assets/emission/ailleurs-130/ouiedire_ailleurs-130_cover-1.png"
 }

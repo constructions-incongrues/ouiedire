@@ -5,5 +5,6 @@
   "releasedAt": "2015-12-21 00:00:00",
   "type": "Ailleurs",
   "isPublic": true,
-  "number": "111"
+  "number": "111",
+  "image": "./src/public/assets/emission/ailleurs-111/ouiedire_ailleurs-111_cover-1.png"
 }

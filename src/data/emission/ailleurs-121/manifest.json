@@ -5,5 +5,6 @@
   "releasedAt": "2016-03-07 00:00:00",
   "type": "Ailleurs",
   "isPublic": true,
-  "number": "121"
+  "number": "121",
+  "image": "./src/public/assets/emission/ailleurs-121/ouiedire_ailleurs-121_cover-1.png"
 }

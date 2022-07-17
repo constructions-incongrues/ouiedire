@@ -5,5 +5,6 @@
   "releasedAt": "2010-04-01 00:00:00",
   "type": "Ailleurs",
   "isPublic": true,
-  "number": "17bis"
+  "number": "17bis",
+  "image": "./src/public/assets/emission/ailleurs-17bis/ouiedire_ailleurs-17_cover-1.png"
 }

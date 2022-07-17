@@ -5,5 +5,6 @@
   "releasedAt": "2014-08-20 00:00:00",
   "type": "Ailleurs",
   "isPublic": true,
-  "number": "62"
+  "number": "62",
+  "image": "./src/public/assets/emission/ailleurs-62/ouiedire_ailleurs-62_cover-1.png"
 }

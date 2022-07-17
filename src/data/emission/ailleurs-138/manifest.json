@@ -5,5 +5,6 @@
   "releasedAt": "2016-10-03 00:00:00",
   "type": "Ailleurs",
   "isPublic": true,
-  "number": "138"
+  "number": "138",
+  "image": "./src/public/assets/emission/ailleurs-138/ouiedire_ailleurs-138_cover-1.png"
 }

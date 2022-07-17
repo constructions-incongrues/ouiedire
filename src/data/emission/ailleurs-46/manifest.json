@@ -5,5 +5,6 @@
   "releasedAt": "2014-04-01 00:00:00",
   "type": "Ailleurs",
   "isPublic": true,
-  "number": "46"
+  "number": "46",
+  "image": "./src/public/assets/emission/ailleurs-46/ouiedire_ailleurs-46_cover-1.png"
 }

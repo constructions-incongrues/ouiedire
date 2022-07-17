@@ -49,3 +49,11 @@ collections:
         options: ["Ailleurs", "Bagage", "Bureau", "Ouïedire", ]
       - { label: 'Number', name: 'number', widget: 'number' }
       - {label: "Public ?", name: "isPublic", widget: "boolean", default: false}
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        choose_url: false
+        media_folder: /src/public/assets/emission/{{slug}}
+        media_library:
+          config:
+            multiple: false

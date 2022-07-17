@@ -5,5 +5,6 @@
   "releasedAt": "2006-12-01 00:00:00",
   "type": "Ailleurs",
   "isPublic": true,
-  "number": "3"
+  "number": "3",
+  "image": "./src/public/assets/emission/ailleurs-3/ouiedire_ailleurs-3_cover-1.png"
 }

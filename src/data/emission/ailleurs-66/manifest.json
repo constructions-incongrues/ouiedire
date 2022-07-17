@@ -5,5 +5,6 @@
   "releasedAt": "2014-09-16 00:00:00",
   "type": "Ailleurs",
   "isPublic": true,
-  "number": "66"
+  "number": "66",
+  "image": "./src/public/assets/emission/ailleurs-66/ouiedire_ailleurs-66_cover-1.png"
 }

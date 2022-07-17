@@ -5,5 +5,6 @@
   "releasedAt": "2017-07-06 00:00:00",
   "type": "Ailleurs",
   "isPublic": true,
-  "number": "144"
+  "number": "144",
+  "image": "./src/public/assets/emission/ailleurs-144/ouiedire_ailleurs-144_cover-1.png"
 }

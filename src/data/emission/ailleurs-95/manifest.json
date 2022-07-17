@@ -5,5 +5,6 @@
   "releasedAt": "2015-06-22 00:00:00",
   "type": "Ailleurs",
   "isPublic": true,
-  "number": "95"
+  "number": "95",
+  "image": "./src/public/assets/emission/ailleurs-95/ouiedire_ailleurs-95_cover-1.png"
 }

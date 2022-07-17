@@ -5,5 +5,6 @@
   "releasedAt": "2018-01-16 00:00:00",
   "type": "Bagage",
   "isPublic": true,
-  "number": "10"
+  "number": "10",
+  "image": "./src/public/assets/emission/bagage-10/ouiedire_bagage-10_cover-1.png"
 }

@@ -5,5 +5,6 @@
   "releasedAt": "2018-03-05 00:00:00",
   "type": "Ailleurs",
   "isPublic": true,
-  "number": "148"
+  "number": "148",
+  "image": "./src/public/assets/emission/ailleurs-148/ouiedire_ailleurs-148_cover_hd.png"
 }

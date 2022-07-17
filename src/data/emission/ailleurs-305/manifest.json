@@ -5,5 +5,6 @@
   "releasedAt": "2022-05-07",
   "type": "Ailleurs",
   "isPublic": true,
-  "number": "305"
+  "number": "305",
+  "image": "./src/public/assets/emission/ailleurs-305/ouiedire_ailleurs-305_cover-1.png"
 }

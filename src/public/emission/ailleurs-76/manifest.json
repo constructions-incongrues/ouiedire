@@ -1,16 +1,18 @@
 {
-  "title": "Une Ouïe Dire en forme de slavsquat",
-  "slug": "une-ouiedire-en-forme-de-slavsquat",
   "authors": "Grand Gravier",
-  "releasedAt": "2014-12-11 00:00:00",
-  "type": "ailleurs",
-  "isPublic": false,
   "number": "76",
+  "slug": "une-ouiedire-en-forme-de-slavsquat",
+  "releasedAt": "2014-12-11 00:00:00",
+  "playlist": {
+    "code": "<ol class=\"mejs-smartplaylist-playlist\">\n<li><a class=\"mejs-smartplaylist-time\">00:00:00</a><span> David Behrman</span> - On the other ocean</li>\n<li><a class=\"mejs-smartplaylist-time\">00:06:44</a><span> Concertmate</span> - Requiem pour un Casio</li>\n<li><a class=\"mejs-smartplaylist-time\">00:09:37</a><span> Easter</span> - Psychobitch</li>\n<li><a class=\"mejs-smartplaylist-time\">00:14:46</a><span> Fabio Frizzi</span> - Zombie's theme</li>\n<li><a class=\"mejs-smartplaylist-time\">00:18:44</a><span> Mathémathique</span> - Yawun</li>\n<li><a class=\"mejs-smartplaylist-time\">00:23:39</a><span> Der Favourit</span> - Die Androiden</li>\n<li><a class=\"mejs-smartplaylist-time\">00:27:01</a><span> David Garland</span> - I am with you</li>\n<li><a class=\"mejs-smartplaylist-time\">00:30:19</a><span> TG Gondard</span> - Tes bras</li>\n<li><a class=\"mejs-smartplaylist-time\">00:33:02</a><span> Molly Nilsson</span> - Hello Loneliness</li>\n<li><a class=\"mejs-smartplaylist-time\">00:35:00</a><span> Ouïe dire</span></li>\n<li><a class=\"mejs-smartplaylist-time\">00:35:15</a><span> Decapited heD</span> - Repulsion Orbit</li>\n<li><a class=\"mejs-smartplaylist-time\">00:39:34</a><span> Opera Mort</span> - Fameck</li>\n<li><a class=\"mejs-smartplaylist-time\">00:44:40</a><span> Plastobéton</span> - Hard to kill</li>\n<li><a class=\"mejs-smartplaylist-time\">00:49:33</a><span> Skatt Brothers</span> - Walk the night</li>\n</ol>",
+    "lang": "HTML"
+  },
+  "isPublic": false,
+  "title": "Une Ouïe Dire en forme de slavsquat",
+  "type": "ailleurs",
   "image": "ouiedire_ailleurs-76_cover-1.png",
   "description": {
-    "code": "<p>A écouter en boule sous une table ou sous une couette.</p>"
-  },
-  "playlist": {
-    "code": "<ol class=\"mejs-smartplaylist-playlist\">\n<li><a class=\"mejs-smartplaylist-time\">00:00:00</a><span> David Behrman</span> - On the other ocean</li>\n<li><a class=\"mejs-smartplaylist-time\">00:06:44</a><span> Concertmate</span> - Requiem pour un Casio</li>\n<li><a class=\"mejs-smartplaylist-time\">00:09:37</a><span> Easter</span> - Psychobitch</li>\n<li><a class=\"mejs-smartplaylist-time\">00:14:46</a><span> Fabio Frizzi</span> - Zombie's theme</li>\n<li><a class=\"mejs-smartplaylist-time\">00:18:44</a><span> Mathémathique</span> - Yawun</li>\n<li><a class=\"mejs-smartplaylist-time\">00:23:39</a><span> Der Favourit</span> - Die Androiden</li>\n<li><a class=\"mejs-smartplaylist-time\">00:27:01</a><span> David Garland</span> - I am with you</li>\n<li><a class=\"mejs-smartplaylist-time\">00:30:19</a><span> TG Gondard</span> - Tes bras</li>\n<li><a class=\"mejs-smartplaylist-time\">00:33:02</a><span> Molly Nilsson</span> - Hello Loneliness</li>\n<li><a class=\"mejs-smartplaylist-time\">00:35:00</a><span> Ouïe dire</span></li>\n<li><a class=\"mejs-smartplaylist-time\">00:35:15</a><span> Decapited heD</span> - Repulsion Orbit</li>\n<li><a class=\"mejs-smartplaylist-time\">00:39:34</a><span> Opera Mort</span> - Fameck</li>\n<li><a class=\"mejs-smartplaylist-time\">00:44:40</a><span> Plastobéton</span> - Hard to kill</li>\n<li><a class=\"mejs-smartplaylist-time\">00:49:33</a><span> Skatt Brothers</span> - Walk the night</li>\n</ol>"
+    "code": "<p>A écouter en boule sous une table ou sous une couette.</p>",
+    "lang": "HTML"
   }
 }

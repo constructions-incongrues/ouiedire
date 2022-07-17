@@ -4,13 +4,13 @@ backend:
   branch: netlify
   site_domain: 68f54904-001d-4ec7-bde3-4b2188078e16
   auth_scope: repo
-  use_graphql: true
+  use_graphql: false
   squash_merges: true
 
 media_folder: ''
 public_folder: /assets
 
-site_url: https://ouiedire.net
+site_url: https://demo.ouiedire.net
 show_preview_links: true
 
 collections:

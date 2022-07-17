@@ -7,6 +7,10 @@
   "isPublic": true,
   "number": "46",
   "image": "ouiedire_ailleurs-46_cover-1.png",
-  "description": "",
-  "playlist": "&lt;h3&gt;DJ sound &amp;amp; DJ Chris Wonderful n&apos;ont pas été en mesure de nous transmettre la playlist. &lt;br /&gt; Cependant vous pouvez retrouver toutes les informations à propos des morceaux directement dans l&apos;émission.&lt;/h3&gt;"
+  "description": {
+    "code": ""
+  },
+  "playlist": {
+    "code": "<h3>DJ sound &amp; DJ Chris Wonderful n'ont pas été en mesure de nous transmettre la playlist. <br /> Cependant vous pouvez retrouver toutes les informations à propos des morceaux directement dans l'émission.</h3>"
+  }
 }

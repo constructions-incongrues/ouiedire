@@ -7,6 +7,10 @@
   "isPublic": true,
   "number": "1",
   "image": "ouiedire_bureau-1_cover-1.png",
-  "description": "&lt;p&gt;Machines utilisées :&lt;/p&gt;\n&lt;p&gt;\n    Elektron Digitakt&lt;br /&gt;\n    Elektron Analog Heat 2&lt;br /&gt;\n    Enzo Meris&lt;br /&gt;\n    Vermona DRM1 MKII&lt;br /&gt;\n    Vermona Lancet 15&lt;br /&gt;\n&lt;/p&gt;\n\n&lt;p&gt;\nDiffusé sur &lt;a href=&quot;http://p-node.org&quot;&gt;p-node.org&lt;/a&gt; le 16 septembre 2020 depuis la rue sorbier dans le 20 ème arrondissement de Paris. \nRéarrangé le 22 septembre pour &lt;a href=&quot;http://ouiedire.net&quot;&gt;ouiedire.net&lt;/a&gt; &lt;/p&gt;\n&lt;/p&gt;",
-  "playlist": ""
+  "description": {
+    "code": "<p>Machines utilisées :</p>\n<p>\n    Elektron Digitakt<br />\n    Elektron Analog Heat 2<br />\n    Enzo Meris<br />\n    Vermona DRM1 MKII<br />\n    Vermona Lancet 15<br />\n</p>\n\n<p>\nDiffusé sur <a href=\"http://p-node.org\">p-node.org</a> le 16 septembre 2020 depuis la rue sorbier dans le 20 ème arrondissement de Paris. \nRéarrangé le 22 septembre pour <a href=\"http://ouiedire.net\">ouiedire.net</a> </p>\n</p>"
+  },
+  "playlist": {
+    "code": ""
+  }
 }

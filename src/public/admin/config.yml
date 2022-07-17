@@ -65,6 +65,8 @@ collections:
       - label: "Description"
         name: "description"
         widget: "code"
+        default_language: html
       - label: "Playlist"
         name: "playlist"
         widget: "code"
+        default_language: html

@@ -7,6 +7,10 @@
   "isPublic": true,
   "number": "55",
   "image": "ouiedire_ailleurs-55_cover-1.png",
-  "description": "",
-  "playlist": "&lt;h3&gt;Dj Ron Johnnnn na pas été en mesure de nous transmettre la playlist. &lt;br /&gt; Cependant vous pouvez retrouver toutes les informations à propos des morceaux directement dans l&apos;émission.&lt;/h3&gt;"
+  "description": {
+    "code": ""
+  },
+  "playlist": {
+    "code": "<h3>Dj Ron Johnnnn na pas été en mesure de nous transmettre la playlist. <br /> Cependant vous pouvez retrouver toutes les informations à propos des morceaux directement dans l'émission.</h3>"
+  }
 }

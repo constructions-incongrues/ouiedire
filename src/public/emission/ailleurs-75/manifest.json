@@ -7,6 +7,10 @@
   "isPublic": true,
   "number": "75",
   "image": "ouiedire_ailleurs-75_cover-1.png",
-  "description": "",
-  "playlist": "&lt;h3&gt;Obsolescence cérébrale : un mix réalisé sous l&apos;emprise de l&apos;alcool, après un crash d&apos;ordinateur plus aucune playlist n&apos;existe. Bonne écoute &lt;/h3&gt;"
+  "description": {
+    "code": ""
+  },
+  "playlist": {
+    "code": "<h3>Obsolescence cérébrale : un mix réalisé sous l'emprise de l'alcool, après un crash d'ordinateur plus aucune playlist n'existe. Bonne écoute </h3>"
+  }
 }

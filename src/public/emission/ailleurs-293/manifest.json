@@ -7,6 +7,10 @@
   "isPublic": true,
   "number": "293",
   "image": "ouiedire_ailleurs-293_cover-1.png",
-  "description": "",
-  "playlist": "&lt;h1&gt;\r\n    Avec par ordre d&apos;apparition : \r\n&lt;/h1&gt;\r\n&lt;p&gt;&lt;strong&gt;    Åke Hodell &lt;br /&gt;  \r\n    Christian Zanési &lt;br /&gt;  \r\n    Alessandro Moreschi &lt;br /&gt; \r\n    Ann Southam &lt;br /&gt; \r\n    Asha Sheshadri &lt;br /&gt; \r\n    Cindy Lee &lt;br /&gt; \r\n    Bernard Fort &lt;br /&gt; \r\n    David Cope &lt;br /&gt; \r\n    Costin Miereanu &lt;br /&gt; \r\n    Fe-Mail &lt;br /&gt; \r\n    Emmanuel Schotté &lt;br /&gt; Wilhelm Zobl &lt;br /&gt; Dim Garden &lt;br /&gt; Erykah Badu &lt;br /&gt; Presocratics &lt;br /&gt; Steve Birchall &lt;br /&gt; Trevor Wishart &lt;br /&gt; Friday Dunard &lt;br /&gt; Eric Andersen &lt;br /&gt; Lars-Gunnar Bodin &lt;br /&gt; K&amp;I &lt;br /&gt; Open Corner &lt;br /&gt; Nika Son &lt;br /&gt; Günther Becker &lt;br /&gt; Luis De Pablo &lt;br /&gt; Lucy Liyou &lt;br /&gt; Sarah Davachi &lt;br /&gt; Susana Santos Silva &lt;br /&gt; Peter Behrendsen &lt;br /&gt; ΤΣΟΚΟΛΣ &lt;br /&gt; Laila Sakini &lt;br /&gt; Ivan Pequano &lt;br /&gt; Christophe &lt;br /&gt; Market\r\n&lt;/strong&gt;\r\n\r\n&lt;/p&gt;"
+  "description": {
+    "code": ""
+  },
+  "playlist": {
+    "code": "<h1>\r\n    Avec par ordre d'apparition : \r\n</h1>\r\n<p><strong>    Åke Hodell <br />  \r\n    Christian Zanési <br />  \r\n    Alessandro Moreschi <br /> \r\n    Ann Southam <br /> \r\n    Asha Sheshadri <br /> \r\n    Cindy Lee <br /> \r\n    Bernard Fort <br /> \r\n    David Cope <br /> \r\n    Costin Miereanu <br /> \r\n    Fe-Mail <br /> \r\n    Emmanuel Schotté <br /> Wilhelm Zobl <br /> Dim Garden <br /> Erykah Badu <br /> Presocratics <br /> Steve Birchall <br /> Trevor Wishart <br /> Friday Dunard <br /> Eric Andersen <br /> Lars-Gunnar Bodin <br /> K&I <br /> Open Corner <br /> Nika Son <br /> Günther Becker <br /> Luis De Pablo <br /> Lucy Liyou <br /> Sarah Davachi <br /> Susana Santos Silva <br /> Peter Behrendsen <br /> ΤΣΟΚΟΛΣ <br /> Laila Sakini <br /> Ivan Pequano <br /> Christophe <br /> Market\r\n</strong>\r\n\r\n</p>"
+  }
 }

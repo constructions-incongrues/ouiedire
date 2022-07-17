@@ -1,10 +1,9 @@
-
 {
   "title": "Which language is it ?",
   "slug": "which-language-is-it",
-  "authors": "David Fenech" ,
+  "authors": "David Fenech",
   "releasedAt": "2021-11-16",
   "type": "Ailleurs",
-  "isPublic": true
+  "isPublic": true,
+  "number": "288"
 }
-

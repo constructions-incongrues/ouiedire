@@ -1,9 +1,9 @@
 {
   "title": "Carton Du Tendron",
   "slug": "carton-du-tendron",
-  "authors": "Jo Bur" ,
+  "authors": "Jo Bur",
   "releasedAt": "2021-04-09",
   "type": "Ailleurs",
-  "isPublic": true
+  "isPublic": true,
+  "number": "277"
 }
- 

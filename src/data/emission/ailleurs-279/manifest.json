@@ -1,9 +1,9 @@
 {
   "title": "Le cinéma ? J’en ai déjà entendu parler quelque part ...",
   "slug": "le-cinema-j'en-ai-deja-entendu-parler-quelque-part",
-  "authors": "Mégapute" ,
+  "authors": "Mégapute",
   "releasedAt": "2021-04-19",
   "type": "Ailleurs",
-  "isPublic": true
+  "isPublic": true,
+  "number": "279"
 }
- 

@@ -4,5 +4,6 @@
   "authors": "Mediaevil Moisture",
   "releasedAt": "2016-03-21 00:00:00",
   "type": "Ailleurs",
-  "isPublic": true
+  "isPublic": true,
+  "number": "123"
 }

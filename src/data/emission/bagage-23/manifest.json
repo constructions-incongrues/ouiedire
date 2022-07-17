@@ -4,6 +4,6 @@
   "authors": "Le Vilain Chien",
   "releasedAt": "2020-11-23 00:00:00",
   "type": "Bagage",
-  "isPublic": true
+  "isPublic": true,
+  "number": "23"
 }
-

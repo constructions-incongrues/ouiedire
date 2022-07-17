@@ -4,6 +4,6 @@
   "authors": "Tripalium Corp",
   "releasedAt": "2020-04-27 00:00:00",
   "type": "Bagage",
-  "isPublic": true
+  "isPublic": true,
+  "number": "20"
 }
-

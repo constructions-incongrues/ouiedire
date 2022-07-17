@@ -20,15 +20,32 @@ show_preview_links: true
 collections:
   - label: 'Emission'
     name: emission
-    folder: data/emission
+    folder: src/data/emission
     create: true
     slug: '{{title}}'
-    # preview_path: 'empilements/{{slug}}'
+    preview_path: '{{slug}}'
     path: '{{slug}}/manifest'
     extension: json
     format: json
-    summary: "{{title}}"
+    summary: "{{type}} #{{number}} - {{authors}} - {{title}}"
     sortable_fields: [releasedAt, title]
+    view_groups:
+      - label: Year
+        field: releasedAt
+        pattern: \d{4}
+      - label: Public
+        field: isPublic
+      - label: Type
+        field: type
+      - label: Authors
+        field: authors
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Release Date', name: 'releasedAt', widget: 'date' }
+      - { label: 'Authors', name: 'authors', widget: 'string' }
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options: ["Ailleurs", "Bagage", "Bureau", "Ouïedire", ]
+      - { label: 'Number', name: 'number', widget: 'number' }
+      - {label: "Public ?", name: "isPublic", widget: "boolean", default: false}

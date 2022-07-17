@@ -1,10 +1,9 @@
-
 {
   "title": "Comme une compilation cassette",
   "slug": "comme-une-compilation-cassette",
-  "authors": "Christophe Petchanatz" ,
+  "authors": "Christophe Petchanatz",
   "releasedAt": "2021-11-11",
   "type": "Ailleurs",
-  "isPublic": true
+  "isPublic": true,
+  "number": "287"
 }
-

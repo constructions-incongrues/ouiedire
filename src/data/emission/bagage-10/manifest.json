@@ -4,5 +4,6 @@
   "authors": "Fougère",
   "releasedAt": "2018-01-16 00:00:00",
   "type": "Bagage",
-  "isPublic": true
+  "isPublic": true,
+  "number": "10"
 }

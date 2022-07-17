@@ -4,5 +4,6 @@
   "authors": "Mutant Swing",
   "releasedAt": "2014-08-12 00:00:00",
   "type": "Bagage",
-  "isPublic": true
+  "isPublic": true,
+  "number": "1"
 }

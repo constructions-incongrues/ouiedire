@@ -3,8 +3,10 @@
   "slug": "un-ardent-espoirt",
   "authors": "Mecano Lacrymo",
   "releasedAt": "2019-12-10 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "212",
-  "image": ""
+  "image": "ouiedire_ailleurs-212_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

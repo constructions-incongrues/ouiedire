@@ -3,8 +3,10 @@
   "slug": "cause-demenagement",
   "authors": "Chouferbad",
   "releasedAt": "2018-11-26 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "172",
-  "image": ""
+  "image": "",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

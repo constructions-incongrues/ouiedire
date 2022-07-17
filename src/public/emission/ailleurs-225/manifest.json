@@ -3,8 +3,10 @@
   "slug": "hit-machine-2020",
   "authors": "Nils Bertho",
   "releasedAt": "2020-03-17 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "225",
-  "image": ""
+  "image": "ouiedire_ailleurs-225_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

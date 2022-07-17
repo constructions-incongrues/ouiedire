@@ -3,8 +3,10 @@
   "slug": "royal-caniche",
   "authors": "Stéven Marcato",
   "releasedAt": "2020-11-15 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "265",
-  "image": "ouiedire_ailleurs-265_cover-1.png"
+  "image": "ouiedire_ailleurs-265_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

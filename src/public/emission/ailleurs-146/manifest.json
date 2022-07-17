@@ -3,8 +3,10 @@
   "slug": "a-k-carambar",
   "authors": "L’Enfant Fourmi",
   "releasedAt": "2018-02-05 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": false,
   "number": "146",
-  "image": "ouiedire_ailleurs-146_cover_hd.png"
+  "image": "ouiedire_ailleurs-146_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

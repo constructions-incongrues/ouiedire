@@ -3,8 +3,10 @@
   "slug": "tremellodon-gelatineux",
   "authors": "Julie aka Paxille",
   "releasedAt": "2022-03-06",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "299",
-  "image": "ouiedire_ailleurs-299_cover-1.png"
+  "image": "ouiedire_ailleurs-299_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

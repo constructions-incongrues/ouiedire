@@ -3,8 +3,10 @@
   "slug": "sorties-du-komma",
   "authors": "Kommanull",
   "releasedAt": "2018-09-24 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "13",
-  "image": ""
+  "image": "ouiedire_bagage-13_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

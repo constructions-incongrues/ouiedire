@@ -3,8 +3,10 @@
   "slug": "ultimatomme-2",
   "authors": "Germain GNG",
   "releasedAt": "2018-04-29 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "154",
-  "image": ""
+  "image": "ouiedire_ailleurs-154_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "les-francais-chantent-mal-2",
   "authors": "Chaton Pute",
   "releasedAt": "2006-12-01 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "3",
-  "image": "ouiedire_ailleurs-3_cover-1.png"
+  "image": "ouiedire_ailleurs-3_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "a-la-niche",
   "authors": "Le Dogue",
   "releasedAt": "2020-04-04 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "231",
-  "image": ""
+  "image": "ouiedire_ailleurs-231_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

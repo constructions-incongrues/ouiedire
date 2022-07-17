@@ -3,8 +3,10 @@
   "slug": "dj-ero",
   "authors": "Z_Taueber",
   "releasedAt": "2019-12-02 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "211",
-  "image": ""
+  "image": "ouiedire_ailleurs-211_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

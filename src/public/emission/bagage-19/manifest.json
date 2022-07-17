@@ -3,8 +3,10 @@
   "slug": "chateau-doki",
   "authors": "Dokidoki",
   "releasedAt": "2019-06-17 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "19",
-  "image": ""
+  "image": "ouiedire_bagage-19_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

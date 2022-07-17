@@ -3,8 +3,10 @@
   "slug": "2010-2020",
   "authors": "Stochastic Releases",
   "releasedAt": "2020-11-08 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "21",
-  "image": ""
+  "image": "ouiedire_bagage-21_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

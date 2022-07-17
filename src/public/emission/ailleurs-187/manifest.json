@@ -3,8 +3,10 @@
   "slug": "a-la-recherche-du-son-...",
   "authors": "Bernard Filipetti",
   "releasedAt": "2019-04-08 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "187",
-  "image": ""
+  "image": "ouiedire_ailleurs-187_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

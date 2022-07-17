@@ -3,8 +3,10 @@
   "slug": "glitch",
   "authors": "Bitcrusher",
   "releasedAt": "2014-10-15 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "70",
-  "image": ""
+  "image": "ouiedire_ailleurs-70_cover-1.gif",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

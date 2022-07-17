@@ -3,8 +3,10 @@
   "slug": "i-wish-i-were-underground-to-stick-it-on-my-face",
   "authors": "Alto Clark",
   "releasedAt": "2013-08-12 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "25",
-  "image": "ouiedire_ailleurs-25_cover-1.png"
+  "image": "ouiedire_ailleurs-25_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

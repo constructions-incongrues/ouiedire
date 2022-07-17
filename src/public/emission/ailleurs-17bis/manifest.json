@@ -3,8 +3,10 @@
   "slug": "rebondir",
   "authors": "Dj [guÿôm] ",
   "releasedAt": "2010-04-01 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleursbis",
   "isPublic": true,
   "number": "17bis",
-  "image": "ouiedire_ailleurs-17_cover-1.png"
+  "image": "ouiedire_ailleurs-17_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

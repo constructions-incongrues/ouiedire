@@ -3,8 +3,10 @@
   "slug": "eikon",
   "authors": "Ovian Tales",
   "releasedAt": "2022-02-08",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "295",
-  "image": "ouiedire_ailleurs-295_cover-1.png"
+  "image": "ouiedire_ailleurs-295_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

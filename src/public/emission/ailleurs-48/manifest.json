@@ -3,8 +3,10 @@
   "slug": "pure-innocense",
   "authors": "Norman Bambi",
   "releasedAt": "2014-04-24 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "48",
-  "image": "ouiedire_ailleurs-48_cover-1.png"
+  "image": "ouiedire_ailleurs-48_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

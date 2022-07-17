@@ -3,8 +3,10 @@
   "slug": "selection-piege-a-cons",
   "authors": "Macon",
   "releasedAt": "2019-10-09 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "203",
-  "image": ""
+  "image": "ouiedire_ailleurs-203_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

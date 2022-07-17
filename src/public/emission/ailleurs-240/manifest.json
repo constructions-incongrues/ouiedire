@@ -3,8 +3,10 @@
   "slug": "monique-protest",
   "authors": "Ségolène Régal feat De Traviole",
   "releasedAt": "2020-04-24 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "240",
-  "image": ""
+  "image": "ouiedire_ailleurs-240_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "a-touch-of-zen",
   "authors": "UVB76",
   "releasedAt": "2020-03-31 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "229",
-  "image": ""
+  "image": "ouiedire_ailleurs-229_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

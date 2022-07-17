@@ -3,8 +3,10 @@
   "slug": "fukushima-blues",
   "authors": "Guillaume Guillaume",
   "releasedAt": "2018-11-19 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "171",
-  "image": ""
+  "image": "ouiedire_ailleurs-171_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

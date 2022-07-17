@@ -3,8 +3,10 @@
   "slug": "la-de-des-puisque-vous-moins-que-pour-dont-autour",
   "authors": "Maréchal Putain",
   "releasedAt": "2018-10-15 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "167",
-  "image": "ouiedire_ailleurs-167_cover-1.png"
+  "image": "ouiedire_ailleurs-167_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

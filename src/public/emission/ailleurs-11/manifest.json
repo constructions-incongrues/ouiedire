@@ -3,8 +3,10 @@
   "slug": "sans-titre",
   "authors": "Valkiri & Machapla & Ubunoir ",
   "releasedAt": "2008-11-01 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "11",
-  "image": "ouiedire_ailleurs-11_cover-1.png"
+  "image": "ouiedire_ailleurs-11_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

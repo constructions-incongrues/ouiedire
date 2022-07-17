@@ -3,8 +3,10 @@
   "slug": "sponge_sandwich_artist_mix",
   "authors": "DJ Invisible Pink",
   "releasedAt": "2019-06-25 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "197",
-  "image": ""
+  "image": "ouiedire_ailleurs-197_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

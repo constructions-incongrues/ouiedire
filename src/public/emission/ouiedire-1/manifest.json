@@ -3,8 +3,10 @@
   "slug": "no-theme",
   "authors": "Bozoo & Valkiri",
   "releasedAt": "2005-01-01 00:00:00",
-  "type": "Ouïedire",
+  "type": "ouiedire",
   "isPublic": true,
   "number": "1",
-  "image": "ouiedire_1_cover_hd.png"
+  "image": "ouiedire_1_cover_hd.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

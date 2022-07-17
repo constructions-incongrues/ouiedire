@@ -3,8 +3,10 @@
   "slug": "fruits-de-la-passions-raisins-de-la-colere",
   "authors": "Bombi'Gum",
   "releasedAt": "2019-10-14 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "204",
-  "image": ""
+  "image": "ouiedire_ailleurs-204_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

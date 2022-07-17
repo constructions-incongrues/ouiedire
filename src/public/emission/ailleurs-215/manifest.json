@@ -3,8 +3,10 @@
   "slug": "nawaz-et-bender-divaguent-face-au-mur",
   "authors": "BouteilleurZ",
   "releasedAt": "2020-01-07 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "215",
-  "image": ""
+  "image": "ouiedire_ailleurs-215_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

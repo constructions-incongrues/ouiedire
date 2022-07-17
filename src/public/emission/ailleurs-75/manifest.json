@@ -3,8 +3,10 @@
   "slug": "obsolescence_cerebrale",
   "authors": "Unknown",
   "releasedAt": "2014-12-04 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "75",
-  "image": "ouiedire_ailleurs-75_cover-1.png"
+  "image": "ouiedire_ailleurs-75_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

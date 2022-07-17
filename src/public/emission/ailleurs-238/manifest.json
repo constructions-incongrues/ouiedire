@@ -3,8 +3,10 @@
   "slug": "forbidden-fruit",
   "authors": "Tryphème",
   "releasedAt": "2020-04-20 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "238",
-  "image": ""
+  "image": "ouiedire_ailleurs-238_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

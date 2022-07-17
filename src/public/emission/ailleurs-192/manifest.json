@@ -3,8 +3,10 @@
   "slug": "le-fiance-la-comedienne-et-le-maquereau",
   "authors": "Z_Taueber",
   "releasedAt": "2019-05-13 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "192",
-  "image": ""
+  "image": "ouiedire_ailleurs-192_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "Vigantoletten",
   "authors": "Debmaster aka DJ Ah Oui",
   "releasedAt": "2014-03-05 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "43",
-  "image": "ouiedire_ailleurs-43_cover-1.png"
+  "image": "ouiedire_ailleurs-43_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

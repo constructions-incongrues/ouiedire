@@ -3,8 +3,10 @@
   "slug": "Skyrock",
   "authors": "Luce & Nils Bertho",
   "releasedAt": "2021-09-23",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "284",
-  "image": ""
+  "image": "ouiedire_ailleurs-284_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

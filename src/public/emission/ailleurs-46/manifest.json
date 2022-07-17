@@ -3,8 +3,10 @@
   "slug": "2",
   "authors": "Radio Schlim Pack",
   "releasedAt": "2014-04-01 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "46",
-  "image": "ouiedire_ailleurs-46_cover-1.png"
+  "image": "ouiedire_ailleurs-46_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

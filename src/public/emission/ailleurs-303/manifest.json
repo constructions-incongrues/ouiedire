@@ -3,8 +3,10 @@
   "slug": "imposed-repulsive-dances",
   "authors": "Rottweiler Slip",
   "releasedAt": "2022-04-01",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "303",
-  "image": ""
+  "image": "ouiedire_ailleurs-303_cover-1.gif",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

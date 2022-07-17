@@ -3,8 +3,10 @@
   "slug": "passage-saint-antoine",
   "authors": "Johan",
   "releasedAt": "2020-05-13 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "247",
-  "image": ""
+  "image": "ouiedire_ailleurs-247_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

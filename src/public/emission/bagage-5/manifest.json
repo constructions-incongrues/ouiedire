@@ -3,8 +3,10 @@
   "slug": "digital-megamix-2015",
   "authors": "Flogsta Danshall",
   "releasedAt": "2015-05-04 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "5",
-  "image": "ouiedire_bagage-5_cover-1.png"
+  "image": "ouiedire_bagage-5_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "and-a-one-and-a-two",
   "authors": "Dj Holowestcaust & Ulfablabla",
   "releasedAt": "2022-03-21",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "302",
-  "image": ""
+  "image": "ouiedire_ailleurs-302_cover-1.gif",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

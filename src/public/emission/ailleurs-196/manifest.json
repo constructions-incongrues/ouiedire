@@ -3,8 +3,10 @@
   "slug": "techno-gym",
   "authors": "Gina Mit",
   "releasedAt": "2019-06-11 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "196",
-  "image": ""
+  "image": "ouiedire_ailleurs-196_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

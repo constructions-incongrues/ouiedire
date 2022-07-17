@@ -3,8 +3,10 @@
   "slug": "episodique-4",
   "authors": "Johan",
   "releasedAt": "2018-03-15 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "149",
-  "image": "ouiedire_ailleurs-149_cover_hd.png"
+  "image": "ouiedire_ailleurs-149_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

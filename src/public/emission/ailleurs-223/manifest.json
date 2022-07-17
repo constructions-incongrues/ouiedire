@@ -3,8 +3,10 @@
   "slug": "oestroghaine",
   "authors": "Rottweiler Slip",
   "releasedAt": "2020-03-09 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "223",
-  "image": ""
+  "image": "ouiedire_ailleurs-223_cover-1.gif",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

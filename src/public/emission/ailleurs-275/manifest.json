@@ -3,8 +3,10 @@
   "slug": "astor-x-le-terrien-et-lea",
   "authors": "Marc Chutney",
   "releasedAt": "2021-03-09",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "275",
-  "image": ""
+  "image": "ouiedire_ailleurs-275_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

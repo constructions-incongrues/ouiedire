@@ -3,8 +3,10 @@
   "slug": "fait-encore-son-cinema",
   "authors": "Mégapute",
   "releasedAt": "2018-11-13 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "170",
-  "image": ""
+  "image": "ouiedire_ailleurs-170_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

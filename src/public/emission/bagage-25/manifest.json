@@ -3,8 +3,10 @@
   "slug": "10-ans-du-label",
   "authors": "Spielzeug Muzak",
   "releasedAt": "2021-02-12 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "25",
-  "image": ""
+  "image": "ouiedire_bagage-25_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

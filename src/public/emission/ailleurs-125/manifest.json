@@ -3,8 +3,10 @@
   "slug": "copinage",
   "authors": "Somaticae",
   "releasedAt": "2016-04-04 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "125",
-  "image": "ouiedire_ailleurs-125_cover-1.png"
+  "image": "ouiedire_ailleurs-125_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

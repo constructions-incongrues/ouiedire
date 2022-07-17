@@ -3,8 +3,10 @@
   "slug": "sp22",
   "authors": "Sonic Protest",
   "releasedAt": "2022-03-11",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "300",
-  "image": "ouiedire_ailleurs-300_cover-1.png"
+  "image": "ouiedire_ailleurs-300_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

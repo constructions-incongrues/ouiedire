@@ -3,8 +3,10 @@
   "slug": "episodique-6",
   "authors": "Johan",
   "releasedAt": "2019-09-15 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "200",
-  "image": ""
+  "image": "ouiedire_ailleurs-200_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

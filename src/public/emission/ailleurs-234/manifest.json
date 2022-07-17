@@ -3,8 +3,10 @@
   "slug": "original-motion-picture-soundtrack",
   "authors": "Silicate",
   "releasedAt": "2020-04-10 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "234",
-  "image": ""
+  "image": "ouiedire_ailleurs-234_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

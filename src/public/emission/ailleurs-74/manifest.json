@@ -3,8 +3,10 @@
   "slug": "france-boogie-2",
   "authors": "Frédéric & le Grand Orchestre de Saint Tropez",
   "releasedAt": "2014-11-27 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "74",
-  "image": "ouiedire_ailleurs-74_cover-1.png"
+  "image": "ouiedire_ailleurs-74_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

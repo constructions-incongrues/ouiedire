@@ -3,8 +3,10 @@
   "slug": "tombs_of_the_blind_dead",
   "authors": "Mediaevil Moisture",
   "releasedAt": "2016-03-21 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "123",
-  "image": "ouiedire_ailleurs-123_cover-1.png"
+  "image": "ouiedire_ailleurs-123_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "clin-d-oeil",
   "authors": "Rachitik Data",
   "releasedAt": "2021-01-21",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "273",
-  "image": ""
+  "image": "ouiedire_ailleurs-273_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

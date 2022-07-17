@@ -3,8 +3,10 @@
   "slug": "joyeux_tropiques",
   "authors": "Khâgneux West",
   "releasedAt": "2015-03-09 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "86",
-  "image": "ouiedire_ailleurs-86_cover-1.png"
+  "image": "ouiedire_ailleurs-86_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

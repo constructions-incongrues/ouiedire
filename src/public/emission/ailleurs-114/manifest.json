@@ -3,8 +3,10 @@
   "slug": "ultimatomme",
   "authors": "GNG",
   "releasedAt": "2016-01-11 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "114",
-  "image": "ouiedire_ailleurs-114_cover-1.png"
+  "image": "ouiedire_ailleurs-114_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

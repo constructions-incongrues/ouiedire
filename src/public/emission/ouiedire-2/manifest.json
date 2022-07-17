@@ -3,8 +3,10 @@
   "slug": "pays-de-l-est",
   "authors": "Bozoo & Valkiri",
   "releasedAt": "2005-06-01 00:00:00",
-  "type": "Ouïedire",
+  "type": "ouiedire",
   "isPublic": true,
   "number": "2",
-  "image": "ouiedire_ouiedire-2_cover-1.png"
+  "image": "ouiedire_ouiedire-2_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

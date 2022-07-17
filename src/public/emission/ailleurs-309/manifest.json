@@ -3,8 +3,10 @@
   "slug": "le-reve-apparemment-fou",
   "authors": "Marc Chutney",
   "releasedAt": "2022-06-17",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "309",
-  "image": "ouiedire_ailleurs-309_cover-1.png"
+  "image": "ouiedire_ailleurs-309_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

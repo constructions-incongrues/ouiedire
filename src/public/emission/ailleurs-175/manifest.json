@@ -3,8 +3,10 @@
   "slug": "Corazon-envenenado-underground-chilien",
   "authors": "Oso El Roto",
   "releasedAt": "2018-12-18 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "175",
-  "image": ""
+  "image": "",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "des-evenements-risquent-d-etre-annules",
   "authors": "Arnaud Rivière",
   "releasedAt": "2021-01-11",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "271",
-  "image": ""
+  "image": "ouiedire_ailleurs-271_cover-1.gif",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "des-va-a-haches-et-de-mou-ouches",
   "authors": "No Lagos Musique",
   "releasedAt": "2019-03-12 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "17",
-  "image": ""
+  "image": "ouiedire_bagage-17_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

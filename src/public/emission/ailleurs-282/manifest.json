@@ -3,8 +3,10 @@
   "slug": "bunker-moule-borgne",
   "authors": "Goupil Acneique",
   "releasedAt": "2021-04-29",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "282",
-  "image": ""
+  "image": "ouiedire_ailleurs-282_cover-1.gif",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "zouk-core-vol-1",
   "authors": "Piet Du Congo",
   "releasedAt": "2020-06-22 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "261",
-  "image": ""
+  "image": "ouiedire_ailleurs-261_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

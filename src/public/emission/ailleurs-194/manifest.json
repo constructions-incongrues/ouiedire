@@ -3,8 +3,10 @@
   "slug": "suite-of-dreams",
   "authors": "Deeat Palace",
   "releasedAt": "2019-05-27 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "194",
-  "image": ""
+  "image": "ouiedire_ailleurs-194_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

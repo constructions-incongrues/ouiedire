@@ -3,8 +3,10 @@
   "slug": "kidcore",
   "authors": "Les Zonardes (zerolexe+helloise)",
   "releasedAt": "2021-09-22",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "283",
-  "image": ""
+  "image": "ouiedire_ailleurs-283_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

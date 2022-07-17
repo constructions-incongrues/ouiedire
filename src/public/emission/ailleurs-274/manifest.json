@@ -3,8 +3,10 @@
   "slug": "the-legacy",
   "authors": "Flow Disciple",
   "releasedAt": "2021-01-24",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "274",
-  "image": ""
+  "image": "ouiedire_ailleurs-274_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

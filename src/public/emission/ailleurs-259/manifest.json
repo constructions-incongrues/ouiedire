@@ -3,8 +3,10 @@
   "slug": "bruit-est-amour",
   "authors": "Jean Bender",
   "releasedAt": "2020-06-17 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "259",
-  "image": ""
+  "image": "ouiedire_ailleurs-259_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

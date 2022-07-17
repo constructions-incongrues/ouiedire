@@ -3,8 +3,10 @@
   "slug": "wanky-party-misque",
   "authors": "Glafouk",
   "releasedAt": "2020-06-08 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "257",
-  "image": ""
+  "image": "ouiedire_ailleurs-257_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "la-vieille-boite-a-musique",
   "authors": "Isidore Bisou",
   "releasedAt": "2020-05-21 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "250",
-  "image": ""
+  "image": "ouiedire_ailleurs-250_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

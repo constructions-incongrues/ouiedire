@@ -3,8 +3,10 @@
   "slug": "dance-party-2007",
   "authors": "Jacky Durand",
   "releasedAt": "2007-06-01 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "6",
-  "image": "ouiedire_ailleurs-6_cover-1.png"
+  "image": "ouiedire_ailleurs-6_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

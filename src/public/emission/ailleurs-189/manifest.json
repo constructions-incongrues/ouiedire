@@ -3,8 +3,10 @@
   "slug": "de-profundis-discothecus",
   "authors": "Varius Radar",
   "releasedAt": "2019-04-27 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "189",
-  "image": ""
+  "image": "ouiedire_ailleurs-189_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

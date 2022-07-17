@@ -3,8 +3,10 @@
   "slug": "envoyez-cette-page-a-un-ami-et-gagnez-7-euros",
   "authors": "Club Miskine",
   "releasedAt": "2018-12-10 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "174",
-  "image": ""
+  "image": "ouiedire_ailleurs-174_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

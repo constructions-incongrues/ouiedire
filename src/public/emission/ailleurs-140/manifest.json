@@ -3,8 +3,10 @@
   "slug": "big-poppers-mix",
   "authors": "Holzkopf",
   "releasedAt": "2016-11-03 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "140",
-  "image": "ouiedire_ailleurs-140_cover-1.png"
+  "image": "ouiedire_ailleurs-140_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

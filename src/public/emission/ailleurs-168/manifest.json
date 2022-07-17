@@ -3,8 +3,10 @@
   "slug": "pump-up-the-valium",
   "authors": "Rottweiler Slip",
   "releasedAt": "2018-10-23 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "168",
-  "image": ""
+  "image": "ouiedire_ailleurs-168_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

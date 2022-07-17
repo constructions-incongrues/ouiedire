@@ -3,8 +3,10 @@
   "slug": "emo-mix",
   "authors": "Dee How You",
   "releasedAt": "2013-06-25 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "20",
-  "image": "ouiedire_ailleurs-20_cover-1.png"
+  "image": "ouiedire_ailleurs-20_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "the-xloptuny-curse",
   "authors": "Ale",
   "releasedAt": "2019-03-05 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "184",
-  "image": ""
+  "image": "ouiedire_ailleurs-184_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

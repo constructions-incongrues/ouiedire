@@ -3,8 +3,10 @@
   "slug": "present-cheesy-aventures-in-global-sons",
   "authors": "Cheese Masta",
   "releasedAt": "2019-01-07 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "177",
-  "image": ""
+  "image": "ouiedire_ailleurs-177_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

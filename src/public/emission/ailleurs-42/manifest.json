@@ -3,8 +3,10 @@
   "slug": "voyage-a-travers-le-temps-et-les-spasmes",
   "authors": "Infecticide",
   "releasedAt": "2014-02-23 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "42",
-  "image": ""
+  "image": "",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

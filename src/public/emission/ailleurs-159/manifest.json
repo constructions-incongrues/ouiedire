@@ -3,8 +3,10 @@
   "slug": "love-not-love-quelques-chansons-damour-de-notre-epoque",
   "authors": "Dasz",
   "releasedAt": "2018-06-04 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "159",
-  "image": ""
+  "image": "ouiedire_ailleurs-159_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

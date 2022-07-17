@@ -3,8 +3,10 @@
   "slug": "episodique-7",
   "authors": "Johan",
   "releasedAt": "2022-03-12",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "301",
-  "image": "ouiedire_ailleurs-301_cover-1.png"
+  "image": "ouiedire_ailleurs-301_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

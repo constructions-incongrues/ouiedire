@@ -3,8 +3,10 @@
   "slug": "original-motion-picture-soundtrack-saison-2",
   "authors": "Silicate",
   "releasedAt": "2022-02-20",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "297",
-  "image": "ouiedire_ailleurs-297_cover-1.png"
+  "image": "ouiedire_ailleurs-297_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

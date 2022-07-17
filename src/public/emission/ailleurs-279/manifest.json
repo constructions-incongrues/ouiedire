@@ -3,8 +3,10 @@
   "slug": "le-cinema-j'en-ai-deja-entendu-parler-quelque-part",
   "authors": "Mégapute",
   "releasedAt": "2021-04-19",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "279",
-  "image": ""
+  "image": "ouiedire_ailleurs-279_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

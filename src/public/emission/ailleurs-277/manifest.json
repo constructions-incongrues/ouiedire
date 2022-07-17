@@ -3,8 +3,10 @@
   "slug": "carton-du-tendron",
   "authors": "Jo Bur",
   "releasedAt": "2021-04-09",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "277",
-  "image": ""
+  "image": "carton",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

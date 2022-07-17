@@ -3,8 +3,10 @@
   "slug": "roma-a-mano-ligata",
   "authors": "DJ Fulci SeleKtone",
   "releasedAt": "2015-05-25 00:00:01",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "93",
-  "image": "ouiedire_ailleurs-93_cover-1.png"
+  "image": "ouiedire_ailleurs-93_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "tourelle",
   "authors": "Lolo Tuerie",
   "releasedAt": "2018-03-26 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "150",
-  "image": ""
+  "image": "ouiedire_ailleurs-150_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

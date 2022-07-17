@@ -3,8 +3,10 @@
   "slug": "episodique-3",
   "authors": "Johan",
   "releasedAt": "2017-11-06 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "145",
-  "image": "ouiedire_ailleurs-145_cover_hd.png"
+  "image": "ouiedire_ailleurs-145_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

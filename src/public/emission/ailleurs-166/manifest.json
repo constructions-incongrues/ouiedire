@@ -3,8 +3,10 @@
   "slug": "episodique-5",
   "authors": "Johan",
   "releasedAt": "2018-10-08 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "166",
-  "image": ""
+  "image": "ouiedire_ailleurs-166_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

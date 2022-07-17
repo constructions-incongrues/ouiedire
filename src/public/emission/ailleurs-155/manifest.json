@@ -3,8 +3,10 @@
   "slug": "la-hadra",
   "authors": "Antoine Capet",
   "releasedAt": "2018-05-08 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "155",
-  "image": ""
+  "image": "ouiedire_ailleurs-155_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

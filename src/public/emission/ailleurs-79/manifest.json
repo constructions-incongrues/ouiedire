@@ -3,8 +3,10 @@
   "slug": "jai-fait-un-ouiedire-sur-les-trous-noirs-avec-mes-25-amis-imaginaires",
   "authors": "Zero Le Tigre",
   "releasedAt": "2015-01-12 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "79",
-  "image": "ouiedire_ailleurs-79_cover-1.png"
+  "image": "ouiedire_ailleurs-79_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

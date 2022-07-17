@@ -3,8 +3,10 @@
   "slug": "vintage-oddities",
   "authors": "Christophe Petchanatz",
   "releasedAt": "2021-12-24",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "290",
-  "image": "ouiedire_ailleurs-290_cover-1.png"
+  "image": "ouiedire_ailleurs-290_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

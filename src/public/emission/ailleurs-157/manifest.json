@@ -3,8 +3,10 @@
   "slug": "the-creep-zone-of-my-bhead",
   "authors": "Z_Taueber",
   "releasedAt": "2018-05-21 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "157",
-  "image": ""
+  "image": "ouiedire_ailleurs-157_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

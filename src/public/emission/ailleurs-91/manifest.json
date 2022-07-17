@@ -3,8 +3,10 @@
   "slug": "pourquoi-me-reveiller-o-souffle-du-printemps",
   "authors": "Sascii (dokidoki)",
   "releasedAt": "2015-05-11 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "91",
-  "image": "ouiedire_ailleurs-90_cover-1.png"
+  "image": "ouiedire_ailleurs-90_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

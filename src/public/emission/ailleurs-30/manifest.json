@@ -3,8 +3,10 @@
   "slug": "fait-son-cinema",
   "authors": "Mégapute",
   "releasedAt": "2013-09-25 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "30",
-  "image": "ouiedire_ailleurs-30_cover-1.png"
+  "image": "ouiedire_ailleurs-30_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

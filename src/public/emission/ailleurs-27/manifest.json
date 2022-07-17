@@ -3,8 +3,10 @@
   "slug": "street-fighters-of-philadelphia",
   "authors": "Goupil Acneique",
   "releasedAt": "2013-08-29 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "27",
-  "image": "ouiedire_ailleurs-27_cover-1.png"
+  "image": "ouiedire_ailleurs-27_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

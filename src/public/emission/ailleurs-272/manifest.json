@@ -3,8 +3,10 @@
   "slug": "saxophone-feat-hector-arnau",
   "authors": "Manu Louis",
   "releasedAt": "2021-01-14",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "272",
-  "image": ""
+  "image": "ouiedire_ailleurs-272_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

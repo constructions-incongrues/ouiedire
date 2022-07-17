@@ -3,8 +3,10 @@
   "slug": "1000-girlz",
   "authors": "Klaten",
   "releasedAt": "2020-05-02 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "242",
-  "image": ""
+  "image": "ouiedire_ailleurs-242_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

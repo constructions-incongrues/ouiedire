@@ -3,8 +3,10 @@
   "slug": "la-verite-sur-perrin",
   "authors": "Hu",
   "releasedAt": "2014-08-20 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "62",
-  "image": "ouiedire_ailleurs-62_cover-1.png"
+  "image": "ouiedire_ailleurs-62_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

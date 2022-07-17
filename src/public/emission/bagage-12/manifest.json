@@ -3,8 +3,10 @@
   "slug": "ttteee",
   "authors": "Third Type Tapes",
   "releasedAt": "2018-09-17 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "12",
-  "image": ""
+  "image": "ouiedire_bagage-12_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

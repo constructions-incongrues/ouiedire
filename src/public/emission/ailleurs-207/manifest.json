@@ -3,8 +3,10 @@
   "slug": "salade-cesarienne",
   "authors": "Josianne Tabasco",
   "releasedAt": "2019-11-04 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "207",
-  "image": ""
+  "image": "ouiedire_ailleurs-207_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

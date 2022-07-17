@@ -3,8 +3,10 @@
   "slug": "prostitution",
   "authors": "Cumpire ",
   "releasedAt": "2017-07-06 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "144",
-  "image": "ouiedire_ailleurs-144_cover-1.png"
+  "image": "ouiedire_ailleurs-144_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "chambre-de-visite-s1e3p2",
   "authors": "Vlek",
   "releasedAt": "2021-01-18 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "24",
-  "image": ""
+  "image": "ouiedire_bagage-24_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

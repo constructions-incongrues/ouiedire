@@ -3,8 +3,10 @@
   "slug": "voyage-aux-confins-1",
   "authors": "Varius Radar",
   "releasedAt": "2020-04-17 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "237",
-  "image": ""
+  "image": "ouiedire_ailleurs-237_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

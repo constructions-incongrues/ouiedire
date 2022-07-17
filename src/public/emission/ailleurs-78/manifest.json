@@ -3,8 +3,10 @@
   "slug": "a_certain_vision_of_france_80s-part1",
   "authors": "Rodolph ohboy",
   "releasedAt": "2015-01-05 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "78",
-  "image": "ouiedire_ailleurs-78_cover-1.png"
+  "image": "ouiedire_ailleurs-78_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

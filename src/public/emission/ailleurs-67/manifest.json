@@ -3,8 +3,10 @@
   "slug": "une-promenade-a-cheval",
   "authors": "Princesse Rotative",
   "releasedAt": "2014-09-23 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "67",
-  "image": "ouiedire_ailleurs-67_cover-1.png"
+  "image": "ouiedire_ailleurs-67_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "deo-et-debats-sent-dessous-dessus",
   "authors": "Glafouk",
   "releasedAt": "2014-04-29 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "49",
-  "image": "ouiedire_ailleurs-49_cover-1.png"
+  "image": "ouiedire_ailleurs-49_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

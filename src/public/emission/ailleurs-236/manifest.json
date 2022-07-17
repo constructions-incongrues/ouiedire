@@ -3,8 +3,10 @@
   "slug": "cine-mioum",
   "authors": "Mégapute",
   "releasedAt": "2020-04-15 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "236",
-  "image": ""
+  "image": "ouiedire_ailleurs-236_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

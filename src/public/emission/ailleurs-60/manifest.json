@@ -3,8 +3,10 @@
   "slug": "chansons-francaise-degeneree",
   "authors": "Jacques Canon",
   "releasedAt": "2014-07-29 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "60",
-  "image": "ouiedire_ailleurs-60_cover-1.png"
+  "image": "ouiedire_ailleurs-60_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

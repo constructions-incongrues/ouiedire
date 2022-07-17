@@ -3,8 +3,10 @@
   "slug": "le-cri-de-la-courgette",
   "authors": "Nina Kardec",
   "releasedAt": "2016-11-10 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "141",
-  "image": "ouiedire_ailleurs-141_cover-1.png"
+  "image": "ouiedire_ailleurs-141_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

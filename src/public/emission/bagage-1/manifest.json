@@ -3,8 +3,10 @@
   "slug": "radiation-show-with-happy-joe-and-torgny",
   "authors": "Mutant Swing",
   "releasedAt": "2014-08-12 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "1",
-  "image": "ouiedire_bagage-1_cover-1.png"
+  "image": "ouiedire_bagage-1_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

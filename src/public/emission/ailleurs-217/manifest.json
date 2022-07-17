@@ -3,8 +3,10 @@
   "slug": "la-valdingue",
   "authors": "Gakona",
   "releasedAt": "2020-01-20 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "217",
-  "image": ""
+  "image": "ouiedire_ailleurs-217_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

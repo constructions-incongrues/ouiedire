@@ -7,7 +7,7 @@ backend:
   site_domain: 1a522206-9642-4c26-bac4-280770cfbff4
   auth_scope: repo
   # open_authoring: true
-  use_graphql: true
+  # use_graphql: true
   squash_merges: true
 
 media_folder: ''
@@ -25,8 +25,8 @@ collections:
     public_folder: ''
     create: true
     slug: '{{title}}'
-    preview_path: '{{slug}}'
-    path: '{{slug}}/manifest'
+    path: '{{type}}-{{number}}/manifest'
+    preview_path: /emission/{{type}}-{{number}}
     extension: json
     format: json
     summary: "{{type}} #{{number}} - {{authors}} - {{title}}"
@@ -48,12 +48,32 @@ collections:
       - label: "Type"
         name: "type"
         widget: "select"
-        options: ["Ailleurs", "Bagage", "Bureau", "Ouïedire", ]
+        options:
+        - { label: "Ailleurs", value: "ailleurs" }
+        - { label: "Bagage", value: "bagage" }
+        - { label: "Bureau", value: "bureau" }
+        - { label: "Ouiedire", value: "ouiedire" }
       - { label: 'Number', name: 'number', widget: 'number' }
       - {label: "Public ?", name: "isPublic", widget: "boolean", default: false}
       - label: "Image"
         name: "image"
         widget: "image"
+        choose_url: false
+        media_library:
+          config:
+            multiple: false
+      - label: "Description"
+        name: "description"
+        widget: "file"
+        default: "description.html"
+        choose_url: false
+        media_library:
+          config:
+            multiple: false
+      - label: "Playlist"
+        name: "playlist"
+        widget: "file"
+        default: "playlist.html"
         choose_url: false
         media_library:
           config:

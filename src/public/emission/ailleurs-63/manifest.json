@@ -3,8 +3,10 @@
   "slug": "ouie-ouie-ouie-ouie",
   "authors": "John Deneuve",
   "releasedAt": "2014-08-28 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "63",
-  "image": "ouiedire_ailleurs-63_cover-1.png"
+  "image": "ouiedire_ailleurs-63_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

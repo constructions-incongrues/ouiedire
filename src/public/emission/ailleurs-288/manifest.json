@@ -3,8 +3,10 @@
   "slug": "which-language-is-it",
   "authors": "David Fenech",
   "releasedAt": "2021-11-16",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "288",
-  "image": "ouiedire_ailleurs-288_cover-1.png"
+  "image": "ouiedire_ailleurs-288_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

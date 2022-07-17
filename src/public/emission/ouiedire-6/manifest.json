@@ -3,8 +3,10 @@
   "slug": "alteration-auditive",
   "authors": "Bozoo & Valkiri",
   "releasedAt": "2007-00-00 00:00:00",
-  "type": "Ouïedire",
+  "type": "ouiedire",
   "isPublic": true,
   "number": "6",
-  "image": "ouiedire_ouiedire-6_cover-1.png"
+  "image": "ouiedire_ouiedire-6_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

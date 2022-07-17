@@ -3,8 +3,10 @@
   "slug": "je-fais-pas-que-les-aperos",
   "authors": "Lolo Tuerie",
   "releasedAt": "2020-11-19 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "266",
-  "image": "ouiedire_ailleurs-266_cover-1.png"
+  "image": "ouiedire_ailleurs-266_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

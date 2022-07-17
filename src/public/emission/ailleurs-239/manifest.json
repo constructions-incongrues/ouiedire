@@ -3,8 +3,10 @@
   "slug": "nous-deux-c-est-champion",
   "authors": "Sidonie Absolon",
   "releasedAt": "2020-04-22 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "239",
-  "image": ""
+  "image": "ouiedire_ailleurs-239_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "ouiedire",
   "authors": "Projet de vie",
   "releasedAt": "2020-03-02 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "224",
-  "image": ""
+  "image": "ouiedire_ailleurs-224_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

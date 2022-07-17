@@ -3,8 +3,10 @@
   "slug": "panorama",
   "authors": "Sidonie Absolon",
   "releasedAt": "2019-12-17 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "214",
-  "image": ""
+  "image": "ouiedire_ailleurs-213_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

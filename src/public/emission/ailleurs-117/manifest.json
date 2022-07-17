@@ -3,8 +3,10 @@
   "slug": "the-royal-danish-mix",
   "authors": "DW Robertson aka Ergo Phizmiz",
   "releasedAt": "2016-02-01 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "117",
-  "image": "ouiedire_ailleurs-117_cover-1.png"
+  "image": "ouiedire_ailleurs-117_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

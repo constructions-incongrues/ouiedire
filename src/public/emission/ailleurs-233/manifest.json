@@ -3,8 +3,10 @@
   "slug": "pandemix-hand-sanitizer-fire-challenge-other-amusements",
   "authors": "Christian F",
   "releasedAt": "2020-04-08 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "233",
-  "image": ""
+  "image": "ouiedire_ailleurs-233_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

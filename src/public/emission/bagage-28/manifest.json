@@ -3,8 +3,10 @@
   "slug": "mix-2021",
   "authors": "Cudighi Records",
   "releasedAt": "2022-01-01",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "28",
-  "image": ""
+  "image": "ouiedire_bagage-28_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

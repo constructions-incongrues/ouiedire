@@ -3,8 +3,10 @@
   "slug": "best-of-john-bender",
   "authors": "Jean Bender",
   "releasedAt": "2021-09-22",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "26",
-  "image": ""
+  "image": "ouiedire_bagage-26_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

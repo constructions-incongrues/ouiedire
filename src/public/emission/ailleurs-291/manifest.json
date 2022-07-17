@@ -3,8 +3,10 @@
   "slug": "gomphide-glutineux",
   "authors": "Julie aka Paxille",
   "releasedAt": "2022-01-12",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "291",
-  "image": "ouiedire_ailleurs-291_cover-1.png"
+  "image": "ouiedire_ailleurs-291_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

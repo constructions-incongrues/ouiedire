@@ -3,8 +3,10 @@
   "slug": "salt-shaker-III",
   "authors": "Dj Sainte Rita",
   "releasedAt": "2015-07-27 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "99",
-  "image": "ouiedire_ailleurs-99_cover-1.png"
+  "image": "ouiedire_ailleurs-99_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

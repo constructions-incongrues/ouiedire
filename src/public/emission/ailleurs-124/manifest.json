@@ -3,8 +3,10 @@
   "slug": "Gercure",
   "authors": "Sudori",
   "releasedAt": "2016-03-28 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "124",
-  "image": "ouiedire_ailleurs-124_cover-1.png"
+  "image": "ouiedire_ailleurs-124_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

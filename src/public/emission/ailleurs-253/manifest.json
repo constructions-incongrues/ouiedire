@@ -3,8 +3,10 @@
   "slug": "day-in-day-out",
   "authors": "Méryll Ampe",
   "releasedAt": "2020-06-01 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "253",
-  "image": ""
+  "image": "ouiedire_ailleurs-253_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "timequake-2019",
   "authors": "Erik Minkkinen",
   "releasedAt": "2019-04-16 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "188",
-  "image": ""
+  "image": "",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "double-peine",
   "authors": "Samantha Mox",
   "releasedAt": "2019-02-11 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "181",
-  "image": ""
+  "image": "ouiedire_ailleurs-181_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

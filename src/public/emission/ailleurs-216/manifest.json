@@ -3,8 +3,10 @@
   "slug": "compilation-insignificatogene",
   "authors": "Morusque",
   "releasedAt": "2020-01-12 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "216",
-  "image": ""
+  "image": "ouiedire_ailleurs-216_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

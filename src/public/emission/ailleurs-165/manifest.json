@@ -3,8 +3,10 @@
   "slug": "les-oiseaux-de-l-hiver-nucleaire",
   "authors": "Bernard Grancher",
   "releasedAt": "2018-10-01 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "165",
-  "image": ""
+  "image": "ouiedire_ailleurs-165_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

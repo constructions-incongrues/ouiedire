@@ -3,8 +3,10 @@
   "slug": "isolement",
   "authors": "Opaque",
   "releasedAt": "2020-04-06 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "232",
-  "image": ""
+  "image": "ouiedire_ailleurs-232_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

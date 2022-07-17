@@ -3,8 +3,10 @@
   "slug": "maggie-thatchers-funeral-after-party",
   "authors": "Rottweiler Slip & Caillou",
   "releasedAt": "2020-12-08 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "269",
-  "image": "ouiedire_ailleurs-269_cover_hd.png"
+  "image": "ouiedire_ailleurs-269_cover-1.gif",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

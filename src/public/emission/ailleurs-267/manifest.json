@@ -3,8 +3,10 @@
   "slug": "12-melons-cueillis-au-fond-de-la-mer-premier-service",
   "authors": "Sidonie Absolon",
   "releasedAt": "2020-11-26 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "267",
-  "image": "ouiedire_ailleurs-267_cover-1.png"
+  "image": "ouiedire_ailleurs-267_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

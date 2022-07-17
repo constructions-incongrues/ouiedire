@@ -3,8 +3,10 @@
   "slug": "Portal",
   "authors": "Zamzamrec",
   "releasedAt": "2020-11-12 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "22",
-  "image": ""
+  "image": "ouiedire_bagage-22_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

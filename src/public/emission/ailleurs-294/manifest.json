@@ -3,8 +3,10 @@
   "slug": "micromania-melancholia",
   "authors": "Bloody Biloute",
   "releasedAt": "2022-01-23",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "294",
-  "image": "ouiedire_ailleurs-294_cover-1.png"
+  "image": "ouiedire_ailleurs-294_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "sexe-et-violence",
   "authors": "Trotsky Beat",
   "releasedAt": "2015-06-15 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "94",
-  "image": "ouiedire_ailleurs-94_cover-1.png"
+  "image": "ouiedire_ailleurs-94_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "manmixing",
   "authors": "Rottweiler Slip",
   "releasedAt": "2021-10-19",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "286",
-  "image": "ouiedire_ailleurs-286_cover-1.png"
+  "image": "ouiedire_ailleurs-286_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

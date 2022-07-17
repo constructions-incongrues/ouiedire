@@ -3,8 +3,10 @@
   "slug": "sept-ans-neuf-mois-et-cinq-jours",
   "authors": "Monster K7",
   "releasedAt": "2015-04-13 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "3",
-  "image": "ouiedire_bagage-3_cover-1.png"
+  "image": "ouiedire_bagage-3_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

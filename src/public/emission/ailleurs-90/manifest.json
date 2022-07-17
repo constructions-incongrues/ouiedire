@@ -3,8 +3,10 @@
   "slug": "succes_des_radios_daujourdhui_avec_remix_80",
   "authors": "DJ INTERNET aka Pascal Lebrain",
   "releasedAt": "2015-04-27 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "90",
-  "image": "ouiedire_ailleurs-90_cover-1.png"
+  "image": "ouiedire_ailleurs-90_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

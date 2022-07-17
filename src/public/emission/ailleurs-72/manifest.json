@@ -3,8 +3,10 @@
   "slug": "ecran-monster-bash",
   "authors": "Yolande Charlie",
   "releasedAt": "2014-10-28 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "72",
-  "image": "ouiedire_ailleurs-72_cover-1.png"
+  "image": "ouiedire_ailleurs-72_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

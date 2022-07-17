@@ -3,8 +3,10 @@
   "slug": "remontees-d-after",
   "authors": "Il est chelou ton son",
   "releasedAt": "2019-09-23 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "201",
-  "image": ""
+  "image": "ouiedire_ailleurs-201_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

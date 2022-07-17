@@ -3,8 +3,10 @@
   "slug": "salt-shaker",
   "authors": "Nils",
   "releasedAt": "2013-08-21 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "26",
-  "image": "ouiedire_ailleurs-26_cover-1.png"
+  "image": "ouiedire_ailleurs-26_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

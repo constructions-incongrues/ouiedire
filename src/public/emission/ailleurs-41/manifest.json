@@ -3,8 +3,10 @@
   "slug": "le-minty-tour-du-monde",
   "authors": "Minty",
   "releasedAt": "2014-02-11 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "41",
-  "image": "ouiedire_ailleurs-41_cover-1.png"
+  "image": "ouiedire_ailleurs-41_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

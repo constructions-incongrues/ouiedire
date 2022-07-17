@@ -3,8 +3,10 @@
   "slug": "cruising-on-the-edge-of-hell",
   "authors": "Colt",
   "releasedAt": "2019-10-29 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "206",
-  "image": ""
+  "image": "ouiedire_ailleurs-206_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

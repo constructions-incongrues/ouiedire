@@ -3,8 +3,10 @@
   "slug": "grosse-sieste-nerveuse",
   "authors": "Sudori",
   "releasedAt": "2015-10-15 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "103",
-  "image": "ouiedire_ailleurs-103_cover-1.png"
+  "image": "ouiedire_ailleurs-103_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

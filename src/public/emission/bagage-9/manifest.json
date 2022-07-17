@@ -3,8 +3,10 @@
   "slug": "proot-mixcomp-1",
   "authors": "Thiaz Itch - Proot Records",
   "releasedAt": "2017-12-15 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "9",
-  "image": "ouiedire_bagage-9_cover-1.png"
+  "image": "ouiedire_bagage-9_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

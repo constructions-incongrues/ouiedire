@@ -3,8 +3,10 @@
   "slug": "2010-2019",
   "authors": "Serendip Lab",
   "releasedAt": "2019-01-15 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "16",
-  "image": ""
+  "image": "ouiedire_ailleurs-178_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

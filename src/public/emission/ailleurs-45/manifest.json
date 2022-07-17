@@ -3,8 +3,10 @@
   "slug": "usa-kings",
   "authors": "Usa Kings",
   "releasedAt": "2014-04-01 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "45",
-  "image": "ouiedire_ailleurs-45_cover-1.png"
+  "image": "ouiedire_ailleurs-45_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

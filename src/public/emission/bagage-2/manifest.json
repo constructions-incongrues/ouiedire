@@ -3,8 +3,10 @@
   "slug": "volcano-classics",
   "authors": "Pneu-Lexidisques",
   "releasedAt": "2015-02-23 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "2",
-  "image": "ouiedire_bagage-1_cover-1.png"
+  "image": "ouiedire_bagage-1_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

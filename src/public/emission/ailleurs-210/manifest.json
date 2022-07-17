@@ -3,8 +3,10 @@
   "slug": "enfance-vermifugee",
   "authors": "Grenadine Vengeance",
   "releasedAt": "2019-11-25 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "210",
-  "image": ""
+  "image": "ouiedire_ailleurs-210_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

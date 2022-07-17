@@ -3,8 +3,10 @@
   "slug": "demain-jarret",
   "authors": "Nota",
   "releasedAt": "2014-05-21 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "52",
-  "image": "ouiedire_ailleurs-52_cover-1.png"
+  "image": "ouiedire_ailleurs-52_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "biere-chaude",
   "authors": "Storky",
   "releasedAt": "2021-01-07 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "270",
-  "image": ""
+  "image": "ouiedire_ailleurs-270_cover-1.gif",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

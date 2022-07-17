@@ -3,8 +3,10 @@
   "slug": "mi-pute-mi-soumise",
   "authors": "Paris Poubelle",
   "releasedAt": "2019-05-21 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "193",
-  "image": ""
+  "image": "ouiedire_ailleurs-193_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

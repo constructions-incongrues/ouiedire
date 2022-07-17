@@ -3,8 +3,10 @@
   "slug": "Vortex",
   "authors": "Mechanical Heaven",
   "releasedAt": "2018-12-03 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "173",
-  "image": ""
+  "image": "ouiedire_ailleurs-173_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

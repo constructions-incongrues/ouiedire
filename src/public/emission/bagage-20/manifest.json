@@ -3,8 +3,10 @@
   "slug": "elle-est-ou-l-after",
   "authors": "Tripalium Corp",
   "releasedAt": "2020-04-27 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "20",
-  "image": ""
+  "image": "ouiedire_bagage-20_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

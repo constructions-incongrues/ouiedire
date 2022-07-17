@@ -3,8 +3,10 @@
   "slug": "lifes-too-short-lets-listen-to-some-lengthy-versions",
   "authors": "Big Pink Pig",
   "releasedAt": "2016-02-15 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "119",
-  "image": "ouiedire_ailleurs-119_cover-1.png"
+  "image": "ouiedire_ailleurs-119_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

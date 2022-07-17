@@ -3,8 +3,10 @@
   "slug": "FR6474-cancelled-flight",
   "authors": "BouteilleurZ",
   "releasedAt": "2020-04-02 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "230",
-  "image": ""
+  "image": "ouiedire_ailleurs-230_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

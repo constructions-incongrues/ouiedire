@@ -3,8 +3,10 @@
   "slug": "2004-2015",
   "authors": "Ego Twister",
   "releasedAt": "2018-01-25 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "11",
-  "image": "ouiedire_bagage-11_cover-1.png"
+  "image": "ouiedire_bagage-11_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

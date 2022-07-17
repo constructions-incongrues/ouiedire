@@ -3,8 +3,10 @@
   "slug": "grand-ecart-quille",
   "authors": "Luck The Reaper",
   "releasedAt": "2022-05-07",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "305",
-  "image": "ouiedire_ailleurs-305_cover-1.png"
+  "image": "ouiedire_ailleurs-305_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

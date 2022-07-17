@@ -3,8 +3,10 @@
   "slug": "they-told-me-in-business-school-it-would-be-easy",
   "authors": "Sergent Buck",
   "releasedAt": "2018-04-23 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "153",
-  "image": ""
+  "image": "ouiedire_ailleurs-153_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

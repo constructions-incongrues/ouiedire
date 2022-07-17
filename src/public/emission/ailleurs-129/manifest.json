@@ -3,8 +3,10 @@
   "slug": "welcome-to-the-chibros-club",
   "authors": "Philip Jacob Nache",
   "releasedAt": "2016-05-09 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "129",
-  "image": "ouiedire_ailleurs-129_cover-1.png"
+  "image": "ouiedire_ailleurs-129_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

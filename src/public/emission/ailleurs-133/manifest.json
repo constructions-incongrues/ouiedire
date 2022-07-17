@@ -3,8 +3,10 @@
   "slug": "coquillages-et-crustaces",
   "authors": "Le Crabe",
   "releasedAt": "2016-06-06 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "133",
-  "image": "ouiedire_ailleurs-133_cover-1.png"
+  "image": "ouiedire_ailleurs-133_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

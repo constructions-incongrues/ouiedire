@@ -3,8 +3,10 @@
   "slug": "champagne-frelate-et-petits-fours-de-synthese",
   "authors": "Tanzprocesz",
   "releasedAt": "2018-12-24 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "15",
-  "image": ""
+  "image": "ouiedire_bagage-15_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

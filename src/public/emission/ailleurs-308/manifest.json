@@ -3,8 +3,10 @@
   "slug": "les-minutes-se-comptent-en-annees",
   "authors": "Charles Barabé",
   "releasedAt": "2022-05-10",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "308",
-  "image": "ouiedire_ailleurs-308_cover-1.png"
+  "image": "ouiedire_ailleurs-308_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

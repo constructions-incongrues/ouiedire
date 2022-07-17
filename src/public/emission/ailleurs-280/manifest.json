@@ -3,8 +3,10 @@
   "slug": "tam-tam-et-samurais",
   "authors": "Marc Chutney",
   "releasedAt": "2021-04-23",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "280",
-  "image": ""
+  "image": "ouiedire_ailleurs-280_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

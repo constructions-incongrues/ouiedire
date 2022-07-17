@@ -3,8 +3,10 @@
   "slug": "la-boucle-vol-1",
   "authors": "Aymeric De Tapol",
   "releasedAt": "2020-03-19 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "226",
-  "image": ""
+  "image": "ouiedire_ailleurs-226_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

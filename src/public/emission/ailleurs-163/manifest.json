@@ -3,8 +3,10 @@
   "slug": "narcosatanism-over-paris",
   "authors": "Cumpire",
   "releasedAt": "2018-09-04 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "163",
-  "image": ""
+  "image": "ouiedire_ailleurs-163_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

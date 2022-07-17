@@ -3,8 +3,10 @@
   "slug": "en-francais-on-dit-on-guinche",
   "authors": "Bill Vortex",
   "releasedAt": "2018-06-21 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "161",
-  "image": "Ouidire-Vortex.png"
+  "image": "Ouidire-Vortex.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

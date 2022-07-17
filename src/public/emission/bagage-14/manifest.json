@@ -3,8 +3,10 @@
   "slug": "you-are-not-so-wrong",
   "authors": "Mik Musik",
   "releasedAt": "2018-11-05 00:00:00",
-  "type": "Bagage",
+  "type": "bagage",
   "isPublic": true,
   "number": "14",
-  "image": ""
+  "image": "ouiedire_bagage-14_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

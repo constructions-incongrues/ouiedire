@@ -3,8 +3,10 @@
   "slug": "ne-parle-pas-francais",
   "authors": "Mr Marcaille",
   "releasedAt": "2019-01-28 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "179",
-  "image": ""
+  "image": "ouiedire_ailleurs-179_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

@@ -3,8 +3,10 @@
   "slug": "les-supers-synthetiseurs",
   "authors": "Howdoyoudance",
   "releasedAt": "2019-09-03 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "198",
-  "image": ""
+  "image": "ouiedire_ailleurs-198_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

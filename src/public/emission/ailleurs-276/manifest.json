@@ -3,8 +3,10 @@
   "slug": "chaque-oiseau-a-la-couleur-de-son-cri",
   "authors": "Rottweiler Slip & Caillou",
   "releasedAt": "2021-03-16",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "276",
-  "image": ""
+  "image": "ouiedire_ailleurs-276_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

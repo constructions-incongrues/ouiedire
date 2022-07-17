@@ -3,8 +3,10 @@
   "slug": "geophonie-enregistrements-sonores-et-field-recording",
   "authors": "Bitcrusher",
   "releasedAt": "2020-04-13 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "235",
-  "image": ""
+  "image": "ouiedire_ailleurs-235_cover-1.jpg",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

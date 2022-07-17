@@ -3,8 +3,10 @@
   "slug": "jaime-pas-quand-ca-chante",
   "authors": "Dj ****",
   "releasedAt": "2014-09-03 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "64",
-  "image": "ouiedire_ailleurs-64_cover-1.png"
+  "image": "ouiedire_ailleurs-64_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

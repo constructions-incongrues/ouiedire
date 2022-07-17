@@ -3,8 +3,10 @@
   "slug": "quelques-ralentissements-a-prevoir-d-apres-zombie-fute",
   "authors": "Glafouk",
   "releasedAt": "2016-05-02 00:00:00",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "128",
-  "image": "ouiedire_ailleurs-128_cover-1.png"
+  "image": "ouiedire_ailleurs-128_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

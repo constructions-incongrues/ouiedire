@@ -3,8 +3,10 @@
   "slug": "choz-gosier",
   "authors": "Marc Chutney",
   "releasedAt": "2021-12-24",
-  "type": "Ailleurs",
+  "type": "ailleurs",
   "isPublic": true,
   "number": "289",
-  "image": "ouiedire_ailleurs-289_cover-1.png"
+  "image": "ouiedire_ailleurs-289_cover-1.png",
+  "description": "description.html",
+  "playlist": "playlist.html"
 }

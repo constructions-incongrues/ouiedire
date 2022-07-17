@@ -34,3 +34,5 @@ ant cloudflare.purgeAll -Dprofile=pastishosting
 ```sh
 ./bin/mixcloud-upload ailleurs-139
 ```
+
+php /usr/lib/plesk-9.0/composer.phar install

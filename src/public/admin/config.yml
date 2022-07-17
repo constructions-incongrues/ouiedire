@@ -2,9 +2,9 @@ backend:
   name: github
   repo: constructions-incongrues/ouiedire
   branch: netlify
-  site_domain: 1a522206-9642-4c26-bac4-280770cfbff4
+  site_domain: 68f54904-001d-4ec7-bde3-4b2188078e16
   auth_scope: repo
-  # use_graphql: true
+  use_graphql: true
   squash_merges: true
 
 media_folder: ''

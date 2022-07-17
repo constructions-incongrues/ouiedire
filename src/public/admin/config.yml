@@ -20,7 +20,7 @@ show_preview_links: true
 collections:
   - label: 'Emission'
     name: emission
-    folder: src/data/emission
+    folder: src/public/emission
     media_folder: ''
     public_folder: ''
     create: true

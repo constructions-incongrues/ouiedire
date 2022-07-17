@@ -6,12 +6,14 @@ backend:
   auth_scope: repo
   use_graphql: false
   squash_merges: true
+  open_authoring: true
 
 media_folder: ''
 public_folder: /assets
 
 site_url: https://demo.ouiedire.net
 show_preview_links: true
+publish_mode: editorial_workflow
 
 collections:
   - label: 'Emission'
@@ -74,6 +76,21 @@ collections:
         name: "playlist"
         widget: "code"
         default_language: HTML
+      # - label: "Tracks"
+      #   name: "tracks"
+      #   widget: "list"
+      #   summary: '[{{fields.timecode}}] {{fields.title}} - {{fields.artists}}'
+      #   fields:
+      #     - {label: Timecode, name: timecode, widget: string}
+      #     - {label: Title, name: title, widget: string}
+      #     - label: Artists
+      #       name: artists
+      #       widget: list
+      #       summary: '{{fields.name}}'
+      #       fields:
+      #         - label: Name
+      #           name: name
+      #           widget: string
       - label: "Image"
         name: "image"
         widget: "image"
@@ -81,3 +98,19 @@ collections:
         media_library:
           config:
             multiple: false
+  # - label: 'Curator'
+  #   name: curator
+  #   folder: src/public/curator
+  #   media_folder: ''
+  #   public_folder: ''
+  #   create: true
+  #   slug: '{{name}}'
+  #   path: '{{slug}}/manifest'
+  #   identifier_field: name
+  #   extension: json
+  #   format: json
+  #   summary: "{{name}}"
+  #   sortable_fields: [name]
+  #   fields:
+  #     - {label: "Name", name: "name", widget: "string"}
+  #     - {label: "URL", name: "url", widget: "string"}

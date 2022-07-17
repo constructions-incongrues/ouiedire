@@ -1,12 +1,15 @@
 {
-  "title": "Grand Écart Quillé",
-  "slug": "grand-ecart-quille",
   "authors": "Luck The Reaper",
-  "releasedAt": "2022-05-07",
-  "type": "ailleurs",
-  "isPublic": true,
   "number": "305",
+  "slug": "grand-ecart-quille",
+  "code": {
+    "code": "<ol class=\"mejs-smartplaylist-playlist\">\n<li><a class=\"mejs-smartplaylist-time\">00:00:00</a> <span> Beatriz Ferreyra</span> - Au revoir l'Ami</li> \n<li><a class=\"mejs-smartplaylist-time\">00:00:00</a>  <span> Dj Medhi</span> - intro </li>\n<li><a class=\"mejs-smartplaylist-time\">00:01:12</a>  <span> Kery James</span> - j'aurais pu dire </li>\n<li><a class=\"mejs-smartplaylist-time\">00:03:45</a>  <span> Oxmo Puccino </span> - Black Poppeyo</li>\n<li><a class=\"mejs-smartplaylist-time\">00:07:02</a>  <span> Kery James</span> - La Vie C'est </li>\n<li><a class=\"mejs-smartplaylist-time\">00:10:50</a>  <span> Oxmo Puccino</span> - Perdre Et Gagner</li>\n<li><a class=\"mejs-smartplaylist-time\">00:13:50</a>  <span> Stupeflip</span> - Apocalypse</li>\n<li><a class=\"mejs-smartplaylist-time\">00:16:58</a>  <span> TTC</span> - Batards Sensibles </li>\n<li><a class=\"mejs-smartplaylist-time\">00:22:04</a>  <span> Aphex Twin</span> - Vordhosbn </li>\n<li><a class=\"mejs-smartplaylist-time\">00:26:30</a>  <span> Squarepusher</span> - Terminal Slam </li>\n<li><a class=\"mejs-smartplaylist-time\">00:31:30</a>  <span> Aphex Twin</span> - Come To Daddy </li>\n<li><a class=\"mejs-smartplaylist-time\">00:36:08</a>  <span> The Dillinger Escape Plan</span> - Come To Daddy Cover </li>\n<li><a class=\"mejs-smartplaylist-time\">00:37:42</a>  <span> Botch-</span> - Fghamistam </li>\n<li><a class=\"mejs-smartplaylist-time\">00:41:54</a>  <span> Converge</span> - In Her Shadow </li>\n<li><a class=\"mejs-smartplaylist-time\">00:46:11</a>  <span> Comity</span> - Part II </li>\n<li><a class=\"mejs-smartplaylist-time\">00:48:51</a>  <span> Birds In Raw</span> - Phoenix </li>\n<li><a class=\"mejs-smartplaylist-time\">00:50:42</a>  <span> Burst</span> - Where The Wave Broke </li>\n<li><a class=\"mejs-smartplaylist-time\">00:53:42</a>  <span> Envy</span> - Color Of Fetters </li>\n<li><a class=\"mejs-smartplaylist-time\">00:57:04</a>  <span> Impure Wilhelmina</span> - Submersible Words </li>\n<li><a class=\"mejs-smartplaylist-time\">01:01:12</a>  <span> Intronaut</span> - Fault Lines </li>\n<li><a class=\"mejs-smartplaylist-time\">01:05:04</a>  <span> Kyrest</span> - Glittering Nothingness </li>\n<li><a class=\"mejs-smartplaylist-time\">01:06:50</a>  <span> Le Dead Projet</span> - No Random </li>\n<li><a class=\"mejs-smartplaylist-time\">01:09:32</a>  <span> Keep On Living</span> - Ashes </li>\n<li><a class=\"mejs-smartplaylist-time\">01:13:22</a>  <span> The Rodeo Idiot Engine</span> - Zigeuner </li>\n<li><a class=\"mejs-smartplaylist-time\">01:15:05</a>  <span> Mastodon</span> - Curl Of The Burl </li>\n<li><a class=\"mejs-smartplaylist-time\">01:18:24</a>  <span> Fantomas</span> - Cape Fear </li>\n<li><a class=\"mejs-smartplaylist-time\">01:20:08</a>  <span> Queen Of The Stone Age</span> - Go With The Flow</li>\n<li><a class=\"mejs-smartplaylist-time\">01:23:11</a>  <span> Eddie Vedder</span> - Long Nights </li>\n<li><a class=\"mejs-smartplaylist-time\">01:25:34</a>  <span> Orbel</span> - Etxe Herdoilduak </li>\n<li><a class=\"mejs-smartplaylist-time\">01:28:58</a>  <span> Orm</span> - N'a Oas d'echo </li>\n<li><a class=\"mejs-smartplaylist-time\">01:33:08</a>  <span> Sangre De Muerdago</span> - Medianoite </li>\n\n</ol>"
+  },
+  "releasedAt": "2022-05-07",
+  "playlist": "playlist.html",
+  "isPublic": true,
+  "title": "Grand Écart Quillé",
+  "type": "ailleurs",
   "image": "ouiedire_ailleurs-305_cover-1.png",
-  "description": "description.html",
-  "playlist": "playlist.html"
+  "description": "description.html"
 }

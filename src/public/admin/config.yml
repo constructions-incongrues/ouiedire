@@ -64,17 +64,7 @@ collections:
             multiple: false
       - label: "Description"
         name: "description"
-        widget: "file"
-        default: "description.html"
-        choose_url: false
-        media_library:
-          config:
-            multiple: false
+        widget: "code"
       - label: "Playlist"
         name: "playlist"
-        widget: "file"
-        default: "playlist.html"
-        choose_url: false
-        media_library:
-          config:
-            multiple: false
+        widget: "code"

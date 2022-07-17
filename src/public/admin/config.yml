@@ -15,7 +15,7 @@ show_preview_links: true
 
 collections:
   - label: 'Emission'
-    description: "Upload des émissions : https://plesk.pastis-hosting.net/smb/file-manager/list/domainId/64"
+    description: "https://plesk.pastis-hosting.net/smb/file-manager/list/domainId/202"
     name: emission
     folder: src/public/emission
     media_folder: ''
@@ -26,7 +26,7 @@ collections:
     preview_path: '/emission/{{type}}-{{number}}'
     extension: json
     format: json
-    summary: "{{type}} #{{number}} - {{authors}} - {{title}}"
+    summary: "[{{type}}] #{{number}} - {{authors}} - {{title}}"
     sortable_fields: [releasedAt, title]
     view_filters:
       - label: Non Publié
@@ -53,9 +53,7 @@ collections:
       - label: Authors
         field: authors
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Release Date', name: 'releasedAt', widget: 'date' }
-      - { label: 'Authors', name: 'authors', widget: 'string' }
+      - {label: "Public ?", name: "isPublic", widget: "boolean", default: false}
       - label: "Type"
         name: "type"
         widget: "select"
@@ -65,14 +63,9 @@ collections:
         - { label: "Bureau", value: "bureau" }
         - { label: "Ouiedire", value: "ouiedire" }
       - { label: 'Number', name: 'number', widget: 'number' }
-      - {label: "Public ?", name: "isPublic", widget: "boolean", default: false}
-      - label: "Image"
-        name: "image"
-        widget: "image"
-        choose_url: false
-        media_library:
-          config:
-            multiple: false
+      - { label: 'Release Date', name: 'releasedAt', widget: 'date' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Authors', name: 'authors', widget: 'string' }
       - label: "Description"
         name: "description"
         widget: "code"
@@ -81,3 +74,10 @@ collections:
         name: "playlist"
         widget: "code"
         default_language: HTML
+      - label: "Image"
+        name: "image"
+        widget: "image"
+        choose_url: false
+        media_library:
+          config:
+            multiple: false

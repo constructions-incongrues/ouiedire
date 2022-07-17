@@ -6,7 +6,7 @@ backend:
   branch: netlify
   site_domain: 1a522206-9642-4c26-bac4-280770cfbff4
   auth_scope: repo
-  open_authoring: true
+  # open_authoring: true
   use_graphql: true
   squash_merges: true
 
@@ -15,7 +15,7 @@ public_folder: /files
 
 site_url: https://ouiedire.net
 show_preview_links: true
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
 collections:
   - label: 'Emission'
@@ -24,55 +24,11 @@ collections:
     create: true
     slug: '{{title}}'
     # preview_path: 'empilements/{{slug}}'
-    # path: '{{slug}}/manifest.json'
+    path: '{{slug}}/manifest'
     extension: json
     format: json
     summary: "{{title}}"
-    sortable_fields: [date, title]
-    view_groups:
-      - label: Year
-        field: date
-        pattern: \d{4}
-      - label: Curators
-        field: curators
-
+    sortable_fields: [releasedAt, title]
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Release Date', name: 'date', widget: 'date' }
-
-      - label: Curators
-        name: curators
-        widget: list
-        summary: '{{name}}'
-        fields:
-          - label: Name
-            name: name
-            widget: string
-
-      - { label: 'Description', name: 'description', widget: 'markdown', required: false }
-
-      - label: Cover
-        name: cover
-        widget: image
-        choose_url: false
-        required: false
-
-      - label: Tracks
-        name: tracks
-        widget: list
-        fields:
-          - label: Track
-            name: track
-            widget: object
-            fields: 
-              - label: Artist 
-                name: artist
-                widget: string
-              - label: Title
-                name: title
-                widget: string
-              - label: File
-                name: file
-                widget: file
-                required: false
-                choose_url: false
+      - { label: 'Release Date', name: 'releasedAt', widget: 'date' }

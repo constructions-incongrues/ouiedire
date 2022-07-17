@@ -5,11 +5,12 @@
   "playlist": {
     "lang": "HTML"
   },
-  "isPublic": true,
+  "isPublic": false,
   "title": "WESH",
   "type": "ailleurs",
   "image": "bender.png",
   "description": {
-    "lang": "HTML"
+    "lang": "HTML",
+    "code": "cezijfcezji \nrzgferg\n mgergetrthrlptrl"
   }
 }

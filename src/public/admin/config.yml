@@ -1,12 +1,9 @@
-backend_local: true
-
 backend:
   name: github
   repo: constructions-incongrues/ouiedire
   branch: netlify
   site_domain: 1a522206-9642-4c26-bac4-280770cfbff4
   auth_scope: repo
-  # open_authoring: true
   # use_graphql: true
   squash_merges: true
 
@@ -15,10 +12,10 @@ public_folder: /assets
 
 site_url: https://ouiedire.net
 show_preview_links: true
-# publish_mode: editorial_workflow
 
 collections:
   - label: 'Emission'
+    description: "Upload des émissions : https://plesk.pastis-hosting.net/smb/file-manager/list/domainId/64"
     name: emission
     folder: src/public/emission
     media_folder: ''
@@ -26,17 +23,31 @@ collections:
     create: true
     slug: '{{title}}'
     path: '{{type}}-{{number}}/manifest'
-    preview_path: /emission/{{type}}-{{number}}
+    preview_path: '/emission/{{type}}-{{number}}'
     extension: json
     format: json
     summary: "{{type}} #{{number}} - {{authors}} - {{title}}"
     sortable_fields: [releasedAt, title]
+    view_filters:
+      - label: Non Publié
+        field: isPublic
+        pattern: false
+      - label: Ailleurs
+        field: type
+        pattern: ailleurs
+      - label: Bagage
+        field: type
+        pattern: bagage
+      - label: Bureau
+        field: type
+        pattern: bureau
+      - label: Ouïedire
+        field: type
+        pattern: ouiedire
     view_groups:
       - label: Year
         field: releasedAt
         pattern: \d{4}
-      - label: Public
-        field: isPublic
       - label: Type
         field: type
       - label: Authors
@@ -65,8 +76,8 @@ collections:
       - label: "Description"
         name: "description"
         widget: "code"
-        default_language: html
+        default_language: HTML
       - label: "Playlist"
         name: "playlist"
         widget: "code"
-        default_language: html
+        default_language: HTML

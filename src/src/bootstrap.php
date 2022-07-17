@@ -143,10 +143,9 @@ function getDuration()
 function getShow($id, Silex\Application $app = null) {
     // Path to data directories
     $id = explode('-', $id);
-    $pathData = __DIR__.'/../data';
     $pathPublic = __DIR__.'/../public';
-    $pathDataEmission = sprintf('%s/emission/%s-%s', $pathData, $id[0], $id[1]);
-    $pathPublicEmission = sprintf('%s/assets/emission/%s-%s', $pathPublic, $id[0], $id[1]);
+    $pathPublicEmission = sprintf('%s/emission/%s-%s', $pathPublic, $id[0], $id[1]);
+    $pathPublicEmission = sprintf('%s/emission/%s-%s', $pathPublic, $id[0], $id[1]);
 
     // This variable describes the show will be passed to view
     $show = array(
@@ -162,11 +161,9 @@ function getShow($id, Silex\Application $app = null) {
         'urlCoverHd'  => null,
         'isPublic'    => false
     );
-
+    
     // Load show data. 404 if some data file cannot be loaded.
-    $fileManifest = new SplFileObject(sprintf('%s/manifest.json', $pathDataEmission));
-    $filePlaylist = new SplFileObject(sprintf('%s/playlist.html', $pathDataEmission));
-    $fileDescription = new SplFileObject(sprintf('%s/description.html', $pathDataEmission));
+    $fileManifest = new SplFileObject(sprintf('%s/manifest.json', $pathPublicEmission));
 
     // Parse manifest data and infer show attributes
     $manifest = json_decode(file_get_contents($fileManifest->getRealPath()));
@@ -174,6 +171,8 @@ function getShow($id, Silex\Application $app = null) {
     $show['releasedAt'] = $manifest->releasedAt;
     $show['title'] = $manifest->title;
     $show['isPublic'] = $manifest->isPublic;
+    $show['playlist'] = $manifest->playlist->code;
+    $show['description'] = $manifest->description->code;
 
     // Pretty show type
     $show['typeSlug'] = $show['type'];
@@ -189,7 +188,7 @@ function getShow($id, Silex\Application $app = null) {
 
   // Absolute URL to show assets
     $urlAssets = sprintf(
-        '%s://%s%s/assets/emission/%s-%s',
+        '%s://%s%s/emission/%s-%s',
         $app['request']->getScheme(),
         $app['request']->getHttpHost(),
         $app['request']->getBasePath(),
@@ -205,39 +204,8 @@ function getShow($id, Silex\Application $app = null) {
     } catch (\RuntimeException $e) {
         $show['sizeDownload'] = 1;
     }
-
     // Guess covers URL
-    $show['covers'] = array();
-    $finderHd = new Finder();
-    $finder = new Finder();
-    try {
-        $coversHd = $finderHd
-        ->files()
-        ->name('*_cover_hd.*')
-        ->in($pathPublicEmission);
-        /*foreach ($coversHd as $cover) {
-            if(file_exists($cover->getRealpath())){
-                $show['covers'][] = sprintf('%s/%s', $urlAssets, basename($cover->getRealPath()));                    
-            }
-        }
-        if(empty($show['covers'])){*/
-            $covers = $finder
-            ->files()
-            ->name('*_cover-*.*')
-            ->in($pathPublicEmission);
-            foreach ($covers as $cover) {
-                $show['covers'][] = sprintf('%s/%s', $urlAssets, basename($cover->getRealPath()));
-            }
-        //}    
-    } catch (\InvalidArgumentException $e) {
-        // whatever
-    }
-
-    // Playlist
-    $show['playlist'] = file_get_contents($filePlaylist->getRealPath());
-
-    // Description
-    $show['description'] = file_get_contents($fileDescription->getRealPath());
+    $show['covers'] = [$manifest->image];
 
     // Pretty show number
     $show['id'] = $show['number'];
@@ -262,13 +230,12 @@ function getShow($id, Silex\Application $app = null) {
  */
 function getShows(Silex\Application $app, $preview = false, $artist = null) {
     // Path to data directories
-    $pathData = __DIR__.'/../data';
     $pathPublic = __DIR__.'/../public';
     $pathCache = __DIR__.'/../cache';
 
     // cache
     $cacheFile = $pathCache . '/shows_'.$preview.'_'.rawurlencode($artist).'.txt';
-    if(file_exists($cacheFile) && (time()-filemtime($cacheFile) < 43200)){  // if cache is valid, we use it
+    if(false && file_exists($cacheFile) && (time()-filemtime($cacheFile) < 43200)){  // if cache is valid, we use it
         $current = file_get_contents($cacheFile);        
         $shows = unserialize($current);
     }
@@ -298,8 +265,8 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
             });
         }
         
-        $manifests = $finder->in(sprintf('%s/emission/', $pathData));
-        
+        $manifests = $finder->in(sprintf('%s/emission/', $pathPublic));
+
         // Parse manifests
         $shows = array();
         foreach ($manifests as $manifest) {
@@ -540,9 +507,9 @@ EOT;
 $app->get('/oembed', function(Silex\Application $app) {
     // Fetch show
     try {
-        $url = $app['request']->get('url');
+        $url = basename($app['request']->get('url'));
         $matches = array();
-        preg_match('/^.*(ouiedire|ailleurs)-(\d+)$/', $url, $matches);
+        preg_match('/^(\w+)-(\d+)$/', $url, $matches);
         $show = getShow("$matches[1]-$matches[2]", $app);
     } catch (\RuntimeException $e) {
         if ($app['debug']) {
@@ -586,7 +553,7 @@ EOT;
 ->bind('oembed');
 
 // Show page
-$app->get('/emission/{type}-{id}', function(Silex\Application $app, Request $request, $type, $id) {
+$app->get('/emission/{type}-{id}/', function(Silex\Application $app, Request $request, $type, $id) {
     // Fetch show
     try {
         $show = getShow("$type-$id", $app);
@@ -621,16 +588,6 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, Request $req
         $view = 'emission.twig.html';
     }
 
-    // Facebook player
-    // NOTE : it's not possible to use MediaElement.js Flash player because it forbids passing file as a query string parameter
-    $urlSwfPlayer = sprintf(
-        '%s%s/vendor/mediaplayer-5.9/player.swf?autostart=true&file=%s&image=%s&width=450&height=450',
-        $app['request']->getHost(),
-        $app['request']->getBasePath(),
-        urlencode($show['urlDownload']),
-        urlencode($show['covers'][0])
-    );
-
     // Other shows by the same DJ
     $otherShows = getShows($app, array_key_exists('preview', $_GET), $show['authors']);
     $otherShows = array_filter($otherShows, function ($otherShow) use ($show) {
@@ -646,13 +603,11 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, Request $req
             'player'        => $player,
             'previous'      => $siblings[0],
             'show'          => $show,
-            'urlSwfPlayer'  => $urlSwfPlayer,
             'otherShows'    => $otherShows
         )
     );
 })
 ->bind('emission');
-
 
 $app->get('/artists', function(Silex\Application $app, Request $request) {
     $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
@@ -768,7 +723,7 @@ $app->get('/years', function(Silex\Application $app, Request $request) {
 // Delete cache
 $app->get('/deletecache', function(Silex\Application $app) {
     $pathPublic = __DIR__.'/../public';
-    $cacheFolder = $pathPublic.'/assets/cache/';
+    $cacheFolder = $pathPublic.'/cache/';
     $files = glob($cacheFolder.'*');
     foreach($files as $file){
         if(is_file($file)) unlink($file);

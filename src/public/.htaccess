@@ -1,6 +1,3 @@
-# Misc
-Options FollowSymlinks
-
 # Rewriting rules
 <IfModule mod_rewrite.c>
     RewriteEngine On

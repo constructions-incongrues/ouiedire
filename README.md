@@ -1,5 +1,11 @@
 # ouiedire
 
+## Développement
+
+- Cloner le dépôt <https://github.com/constructions-incongrues/ouiedire>
+- À la racine du dépôt cloné, exécuter la commande : `docker-compose up`
+- Le site est accessible à l'adresse <http://ouiedire.localhost/app_dev.php>
+
 ## Déploiement
 
 ### Conversion MP3 en CBR

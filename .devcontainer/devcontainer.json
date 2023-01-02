@@ -15,8 +15,14 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [],
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [8000],
+
+	"portsAttributes": {
+		"8000": {
+			"label": "Website",
+			"onAutoForward": "openBrowser"
+		}
+	},
 
 	// Run after container creation, prior to postStartCommand
 	"postCreateCommand": "cd src && mkdir -p cache && chmod 777 cache && composer install && touch public/duration",

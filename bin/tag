@@ -75,7 +75,7 @@ if (isset($show['covers'][0])) {
 }
 
 // Ajout de l'URL
-$command = sprintf('eyeD3 --user-url-frame="Canonical:http://www.ouiedire.net/emission/%s-%d" %s', strtolower($show['type']), $show['number'], $mp3);
+$command = sprintf('eyeD3 --user-url-frame="Canonical:https://www.ouiedire.net/emission/%s-%d" %s', strtolower($show['type']), $show['number'], $mp3);
 $process = new Process($command);
 $process->run();
 if (!$process->isSuccessful()) {

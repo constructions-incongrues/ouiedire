@@ -10,7 +10,7 @@ RUN echo "date.timezone = Europe/Paris" > /usr/local/etc/php/php.ini
 
 # Install additional packages and PHP extensions
 RUN apt-get -y update \
-    && apt-get -y install curl git zip \
+    && apt-get -y install curl git eyed3 mp3info zip \
     && apt-get -y clean \
     && apt-get -y autoremove
 

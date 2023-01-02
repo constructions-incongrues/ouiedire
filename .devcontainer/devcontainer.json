@@ -11,10 +11,6 @@
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {},
-
-	"features": {
-		"ghcr.io/devcontainers/features/git-lfs:1": {}
-	},
 	
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [],

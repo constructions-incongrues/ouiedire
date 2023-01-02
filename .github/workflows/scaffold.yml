@@ -23,3 +23,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH_NAME: emission-xxx
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4

@@ -143,9 +143,7 @@ function getDuration()
 function getShow($id, Silex\Application $app = null) {
     // Path to data directories
     $id = explode('-', $id);
-    $pathData = __DIR__.'/../data';
     $pathPublic = __DIR__.'/../public';
-    $pathDataEmission = sprintf('%s/emission/%s-%s', $pathData, $id[0], $id[1]);
     $pathPublicEmission = sprintf('%s/assets/emission/%s-%s', $pathPublic, $id[0], $id[1]);
 
     // This variable describes the show will be passed to view
@@ -164,9 +162,9 @@ function getShow($id, Silex\Application $app = null) {
     );
 
     // Load show data. 404 if some data file cannot be loaded.
-    $fileManifest = new SplFileObject(sprintf('%s/manifest.json', $pathDataEmission));
-    $filePlaylist = new SplFileObject(sprintf('%s/playlist.html', $pathDataEmission));
-    $fileDescription = new SplFileObject(sprintf('%s/description.html', $pathDataEmission));
+    $fileManifest = new SplFileObject(sprintf('%s/manifest.json', $pathPublicEmission));
+    $filePlaylist = new SplFileObject(sprintf('%s/playlist.html', $pathPublicEmission));
+    $fileDescription = new SplFileObject(sprintf('%s/description.html', $pathPublicEmission));
 
     // Parse manifest data and infer show attributes
     $manifest = json_decode(file_get_contents($fileManifest->getRealPath()));
@@ -256,9 +254,7 @@ function getShow($id, Silex\Application $app = null) {
  * @return array Shows (as returned by getShow())
  */
 function getShows(Silex\Application $app, $preview = false, $artist = null) {
-    // Path to data directories
-    $pathData = __DIR__.'/../data';
-    $pathPublic = __DIR__.'/../public';
+    $pathPublic = __DIR__.'/../public/assets';
 
     // Search for shows manifests
     $finder = new Finder();
@@ -285,7 +281,7 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
         });
     }
 
-    $manifests = $finder->in(sprintf('%s/emission/', $pathData));
+    $manifests = $finder->in(sprintf('%s/emission/', $pathPublic));
 
     // Parse manifests
     $shows = array();

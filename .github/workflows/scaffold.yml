@@ -1,6 +1,30 @@
 name: Nouvelle émission
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      collection:
+        type: choice
+        description: La collection de à laquelle appartiendra l'émission
+        default: ailleurs
+        options:
+        - ailleurs
+        - bagage
+        - bureau
+        - ouiedire
+        required: true
+      number:
+        description: Le numéro de l'émission au sein de sa collection
+        default: "000"
+        required: true
+        type: string
+      title:
+        description: Le titre de l'émission
+        required: true
+        type: string
+      authors:
+        description: Les noms des auteurices de l'émission, séparés par des virgules
+        type: string
 
 jobs:
   scaffold:
@@ -9,13 +33,13 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: main
-      - run: cp -R src/public/assets/emission/skel ./src/public/assets/emission/emission-xxx
+      - run: cp -R src/public/assets/emission/skel ./src/public/assets/emission/${{ inputs.type }}-${{ inputs.number }}
       - run: git config lfs.https://github.com/constructions-incongrues/ouiedire.git/info/lfs.locksverify false
       - uses: peter-evans/create-pull-request@v4
         with:
-          commit-message: "Nouvelle émission: XXX"
-          branch: emission-xxx
+          commit-message: "Création du dossier de l'émission à partir du squelette"
+          title: "[${{ inputs.type }}-${{ inputs.number }}] ${{ inputs.title }}"
+          branch: ${{ inputs.type }}-${{ inputs.number }}
           base: main
           draft: true
           delete-branch: true
-          branch-suffix: timestamp

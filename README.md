@@ -2,39 +2,14 @@
 
 ## Développement
 
-[Ouvrir un environnement de développement](vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/constructions-incongrues/ouiedire)
+Pour lancer un environnement de développement : 
 
-## Déploiement
-
-### Conversion MP3 en CBR
-
-### Tagger un morceau
-
-```bash
-ssh ouiedire_net@ftp.pastis-hosting.net /var/www/vhosts/ouiedire.net/httpdocs/bin/tag <IDENTIFIANT EMISSION (eg. ailleurs-xxx / ouiedire-xxx>
-ssh ouiedire_net@ftp.pastis-hosting.net /var/www/vhosts/ouiedire.net/httpdocs/bin/tag ailleurs-139
-```
-
-### Simulation
-
-```bash
-ant deploy -Dprofile=pastishosting -Dassets.version=`date +%s` -Drsync.option="--dry-run --delete-after"
-```
-
-### Pour de vrai
-
-```bash
-ant deploy cloudflare.purgeAll -Dprofile=pastishosting -Dassets.version=`date +%s` -Drsync.options="--progress --delete-after"
-```
-
-### Invalidation du cache après la mise à jour d'un fichier MP3 sur le serveur
-
-```bash
-ant cloudflare.purgeAll -Dprofile=pastishosting
-```
-
-### Uploader une émission sur Mixcloud
-
-```sh
-./bin/mixcloud-upload ailleurs-139
-```
+- Installer [Visual Studio Code](https://code.visualstudio.com)
+- Cliquer sur ce bouton pour lancer un environnement de développement.
+[
+    ![Open in Dev Containers](
+        https://img.shields.io/static/v1?label=Dev%20-%20Containers&message=Open&color=blue&logo=visualstudiocode
+    )
+](
+    https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/constructions-incongrues/python-devcontainer-template
+)

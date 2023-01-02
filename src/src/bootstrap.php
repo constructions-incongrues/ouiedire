@@ -216,27 +216,15 @@ function getShow($id, Silex\Application $app = null) {
 
     // Guess covers URL
     $show['covers'] = array();
-    $finderHd = new Finder();
     $finder = new Finder();
     try {
-        $coversHd = $finderHd
-        ->files()
-        ->name('*_cover_hd.*')
-        ->in($pathPublicEmission);
-        /*foreach ($coversHd as $cover) {
-            if(file_exists($cover->getRealpath())){
-                $show['covers'][] = sprintf('%s/%s', $urlAssets, basename($cover->getRealPath()));                    
-            }
-        }
-        if(empty($show['covers'])){*/
-            $covers = $finder
+        $covers = $finder
             ->files()
             ->name('*_cover-*.*')
             ->in($pathPublicEmission);
-            foreach ($covers as $cover) {
-                $show['covers'][] = sprintf('%s/%s', $urlAssets, basename($cover->getRealPath()));
-            }
-        //}    
+        foreach ($covers as $cover) {
+            $show['covers'][] = sprintf('%s/%s', $urlAssets, basename($cover->getRealPath()));
+        }
     } catch (\InvalidArgumentException $e) {
         // whatever
     }
@@ -397,7 +385,9 @@ $app['assetsVersion'] = time();
 
 // Links
 $app->get('/liens', function(Silex\Application $app) {
-    return $app['twig']->render('liens.twig.html');
+    $body = $app['twig']->render('liens.twig.html');
+
+    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
 ->bind('liens');
 
@@ -418,9 +408,8 @@ $app->get('/', function(Silex\Application $app, Request $request) {
 
     // Render view
     $template_name = 'emissions.twig.html';
-    $cache_headers = $app['cache.defaults'];
 
-    return $app['twig']->render(
+    $body = $app['twig']->render(
         $template_name,
         array(
             'artist'     => $request->query->get('artist'),
@@ -433,21 +422,25 @@ $app->get('/', function(Silex\Application $app, Request $request) {
           )
     );
 
-    return new Response($body, 200, $app['debug'] ? array() : $cache_headers);
+    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
 ->bind('emissions');
 
 // Jingle
 $app->get('/jingle', function(Silex\Application $app) {
     // Render view
-    return $app['twig']->render('jingle.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+    $body = $app['twig']->render('jingle.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+
+    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
 ->bind('jingle');
 
 // Flyer
 $app->get('/flyers', function(Silex\Application $app) {
     // Render view
-    return $app['twig']->render('flyers.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+    $body = $app['twig']->render('flyers.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+
+    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
 ->bind('flyers');
 
@@ -456,6 +449,8 @@ $app->get('/random', function(Silex\Application $app) {
     // Render view
     $randomShow = getRandomShow($app);
     return $app->redirect($app['url_generator']->generate('emission', array('id' => $randomShow['id'], 'type' => $randomShow['typeSlug']), UrlGenerator::ABSOLUTE_URL));
+
+    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
 ->bind('random');
 
@@ -529,6 +524,8 @@ EOT;
     }
 
     return new Response($feed->export('rss'), 200, array('content-type' => 'application/rss+xml; charset=utf8'));
+
+    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
 ->bind('feed');
 
@@ -578,6 +575,8 @@ EOT;
 
     // Prepare response
     return new Response($responseBody, 200, array('content-type' => 'application/json; charset=utf8'));
+
+    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
 ->bind('oembed');
 
@@ -634,7 +633,7 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, Request $req
     });
 
     // Render view
-    return $app['twig']->render(
+    $body = $app['twig']->render(
         $view,
         array(
             'latest'        => $latest,
@@ -646,6 +645,8 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, Request $req
             'otherShows'    => $otherShows
         )
     );
+
+    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
 ->bind('emission');
 
@@ -675,7 +676,7 @@ $app->get('/artists', function(Silex\Application $app, Request $request) {
     }
 
     // Render view
-    return $app['twig']->render(
+    $body = $app['twig']->render(
         'artists.twig.html',
         array(
             'artists' => $artists,
@@ -688,6 +689,8 @@ $app->get('/artists', function(Silex\Application $app, Request $request) {
             'duration' => getDuration()
         )
     );
+
+    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
 ->bind('artists');
 
@@ -716,7 +719,7 @@ $app->get('/djs', function(Silex\Application $app, Request $request) {
     }
     //dump($showsGroupedByDj);
     // Render view
-    return $app['twig']->render(
+    $body = $app['twig']->render(
         'djs.twig.html',
         array(
             'artists' => $artists,
@@ -728,6 +731,8 @@ $app->get('/djs', function(Silex\Application $app, Request $request) {
             'years' => getYears($shows),
         )
     );
+
+    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
 ->bind('djs');
 
@@ -746,7 +751,7 @@ $app->get('/years', function(Silex\Application $app, Request $request) {
     }
     //dump($showsGroupedByYear);
     // Render view
-    return $app['twig']->render(
+    $body = $app['twig']->render(
         'years.twig.html',
         array(
             'artists' => $artists,
@@ -758,6 +763,8 @@ $app->get('/years', function(Silex\Application $app, Request $request) {
             'years' => getYears($shows)
         )
     );
+
+    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
 ->bind('years');
 
@@ -768,19 +775,25 @@ $app->get('/night', function(Silex\Application $app, Request $request) {
     else setcookie ("night", "", time()-3600);
     header('Location: '.$refererUrl);
     exit;
+
+    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
 ->bind('night');
 
 // Dons
 $app->get('/dons', function(Silex\Application $app) {
     // Render view
-    return $app['twig']->render('dons.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+    $body = $app['twig']->render('dons.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+
+    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
 ->bind('dons');
 
 // Merci <3
 $app->get('/merci', function(Silex\Application $app) {
     // Render view
-    return $app['twig']->render('merci.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+    $body = $app['twig']->render('merci.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+
+    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
 ->bind('merci');

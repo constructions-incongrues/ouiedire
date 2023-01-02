@@ -1,13 +1,6 @@
 {% extends "layout.default.twig.html" %}
 
-{% block footer %}
-	{% if app.debug %}
-	<p>
-	  <strong>Debug :</strong>
-	  <a href="{{ url('deletecache') }}">Delete cache</a>
-	</p>
-	{% endif %}
-{% endblock %}
+
 
 {% block latest %}
 <a href="{{ path('emission', {id:shows.0.id, type:shows.0.typeSlug}) }}">

@@ -3,6 +3,7 @@ $debug = false;
 require(__DIR__.'/../src/bootstrap.php');
 
 // Run application
-$app->run();
+$app['http_cache']->run();
+   
 
 // ✝ CHACUN TRAÎNE SON ENFER PERSONNEL ✝

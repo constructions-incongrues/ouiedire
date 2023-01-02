@@ -23,5 +23,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH_NAME: emission-xxx
+      - run: git config lfs.https://github.com/constructions-incongrues/ouiedire.git/info/lfs.locksverify false
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4

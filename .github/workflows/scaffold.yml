@@ -1,11 +1,10 @@
-name: Nouvelle émission
+name: Créer une émission
 
 on:
   workflow_dispatch:
     inputs:
       collection:
         type: choice
-        description: La collection de à laquelle appartiendra l'émission
         default: ailleurs
         options:
         - ailleurs
@@ -14,26 +13,36 @@ on:
         - ouiedire
         required: true
       number:
-        description: Le numéro de l'émission au sein de sa collection
-        default: "000"
+        default: "0"
         required: true
         type: string
       title:
-        description: Le titre de l'émission
         required: true
         type: string
       authors:
-        description: Les noms des auteurices de l'émission, séparés par des virgules
         type: string
+      releasedAt:
+        type: string
+        default: "YYYY-MM-DD"
 
 jobs:
-  scaffold:
+  generate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
           ref: main
       - run: cp -R src/public/assets/emission/skel ./src/public/assets/emission/${{ inputs.collection }}-${{ inputs.number }}
+      - uses: andrewthetechie/gha-cookiecutter@main
+        with:
+          template: ./src/skel/emission
+          cookiecutterValues: '{
+            "collection": "${{ inputs.collection }}",
+            "title": "${{ inputs.title }}",
+            "number": "${{ inputs.number }}",
+            "authors": "${{ inputs.authors }}",
+            "releasedAt": "${{ inputs.releasedAt }}"
+          }'
       - run: git config lfs.https://github.com/constructions-incongrues/ouiedire.git/info/lfs.locksverify false
       - uses: peter-evans/create-pull-request@v4
         with:

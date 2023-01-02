@@ -249,7 +249,6 @@ function getShow($id, Silex\Application $app = null) {
         $show['number'] = $show['id'];
     }
     
-    //print_r($show);
     return $show;
 }
 
@@ -264,64 +263,52 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
     // Path to data directories
     $pathData = __DIR__.'/../data';
     $pathPublic = __DIR__.'/../public';
-    $pathCache = __DIR__.'/../cache';
 
-    // cache
-    $cacheFile = $pathCache . '/shows_'.$preview.'_'.rawurlencode($artist).'.txt';
-    if(file_exists($cacheFile) && (time()-filemtime($cacheFile) < 43200)){  // if cache is valid, we use it
-        $current = file_get_contents($cacheFile);        
-        $shows = unserialize($current);
-    }
-    else{  // if cache is invalid, we search for shows and write them in cache
-        // Search for shows manifests
-        $finder = new Finder();
-        $finder = $finder
-        ->files()
-        ->name('manifest.json')
-        ->filter(function(\SplFileInfo $file) {
-            return
-            strpos(basename(dirname($file->getRealPath())), 'ailleurs') !== false
-            || strpos(basename(dirname($file->getRealPath())), 'bagage') !== false
-            || strpos(basename(dirname($file->getRealPath())), 'bureau') !== false
-            || strpos(basename(dirname($file->getRealPath())), 'ouiedire') !== false;
-        })
-        ->sort(function(\SplFileInfo $a, \SplFileInfo $b) {
-            $dateA = strtotime(json_decode($a->getContents(), true)['releasedAt']);
-            $dateB = strtotime(json_decode($b->getContents(), true)['releasedAt']);
-            
-            return $dateA > $dateB;
+    // Search for shows manifests
+    $finder = new Finder();
+    $finder = $finder
+    ->files()
+    ->name('manifest.json')
+    ->filter(function(\SplFileInfo $file) {
+        return
+        strpos(basename(dirname($file->getRealPath())), 'ailleurs') !== false
+        || strpos(basename(dirname($file->getRealPath())), 'bagage') !== false
+        || strpos(basename(dirname($file->getRealPath())), 'bureau') !== false
+        || strpos(basename(dirname($file->getRealPath())), 'ouiedire') !== false;
+    })
+    ->sort(function(\SplFileInfo $a, \SplFileInfo $b) {
+        $dateA = strtotime(json_decode($a->getContents(), true)['releasedAt']);
+        $dateB = strtotime(json_decode($b->getContents(), true)['releasedAt']);
+
+        return $dateA > $dateB;
+    });
+
+    if ($artist !== null) {
+        $finder->filter(function(\SplFileInfo $file) use ($artist) {
+            return json_decode($file->getContents(), true)['authors'] === $artist;
         });
-            
-        if ($artist !== null) {
-            $finder->filter(function(\SplFileInfo $file) use ($artist) {
-                return json_decode($file->getContents(), true)['authors'] === $artist;
-            });
-        }
-        
-        $manifests = $finder->in(sprintf('%s/emission/', $pathData));
-        
-        // Parse manifests
-        $shows = array();
-        foreach ($manifests as $manifest) {
-            try {
-                // In not in preview mode, only return public shows
-                $show = getShow(basename(dirname($manifest->getRealPath())), $app);
-                if ($show['isPublic'] === true || $preview === true) {
-                    $shows[] = $show;
-                }
-            } catch (\RuntimeException $e) {
-                // Skip faulty shows
-                continue;
-            }
-        }
-        
-        // Show last show first
-        $shows = array_reverse($shows);
-        
-        // write cache
-        $current = serialize($shows);
-        file_put_contents($cacheFile, $current);        
     }
+
+    $manifests = $finder->in(sprintf('%s/emission/', $pathData));
+
+    // Parse manifests
+    $shows = array();
+    foreach ($manifests as $manifest) {
+        try {
+            // In not in preview mode, only return public shows
+            $show = getShow(basename(dirname($manifest->getRealPath())), $app);
+            if ($show['isPublic'] === true || $preview === true) {
+                $shows[] = $show;
+            }
+        } catch (\RuntimeException $e) {
+            // Skip faulty shows
+            continue;
+        }
+    }
+
+    // Show last show first
+    $shows = array_reverse($shows);
+
     return $shows;
 }
 
@@ -410,6 +397,7 @@ $app->get('/liens', function(Silex\Application $app) {
 $app->get('/', function(Silex\Application $app, Request $request) {
     $artists = array();
     $shows = getShows($app, array_key_exists('preview', $_GET), $request->query->get('artist'));
+
     $showsGroupedByYear = array();
     foreach ($shows as $show) {
         $year = getYear($show);

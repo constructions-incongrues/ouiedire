@@ -13,7 +13,10 @@
 	"settings": {},
 	
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [],
+	"extensions": [
+		"ecmel.vscode-html-css",
+		"whatwedo.twig"
+	],
 
 	"forwardPorts": [8000],
 

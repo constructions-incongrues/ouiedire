@@ -385,7 +385,7 @@ $app['assetsVersion'] = time();
 
 // Links
 $app->get('/liens', function(Silex\Application $app) {
-    $body = $app['twig']->render('liens.twig.html');
+    $body = $app['twig']->render('liens.html.twig');
 
     return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
@@ -407,7 +407,7 @@ $app->get('/', function(Silex\Application $app, Request $request) {
     }
 
     // Render view
-    $template_name = 'emissions.twig.html';
+    $template_name = 'emissions.html.twig';
 
     $body = $app['twig']->render(
         $template_name,
@@ -429,7 +429,7 @@ $app->get('/', function(Silex\Application $app, Request $request) {
 // Jingle
 $app->get('/jingle', function(Silex\Application $app) {
     // Render view
-    $body = $app['twig']->render('jingle.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+    $body = $app['twig']->render('jingle.html.twig', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
 
     return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
@@ -438,7 +438,7 @@ $app->get('/jingle', function(Silex\Application $app) {
 // Flyer
 $app->get('/flyers', function(Silex\Application $app) {
     // Render view
-    $body = $app['twig']->render('flyers.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+    $body = $app['twig']->render('flyers.html.twig', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
 
     return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
@@ -611,9 +611,9 @@ $app->get('/emission/{type}-{id}', function(Silex\Application $app, Request $req
 
     // Choose view
     if (array_key_exists('embed', $_GET)) {
-        $view = 'embed.twig.html';
+        $view = 'embed.html.twig';
     } else {
-        $view = 'emission.twig.html';
+        $view = 'emission.html.twig';
     }
 
     // Facebook player
@@ -677,7 +677,7 @@ $app->get('/artists', function(Silex\Application $app, Request $request) {
 
     // Render view
     $body = $app['twig']->render(
-        'artists.twig.html',
+        'artists.html.twig',
         array(
             'artists' => $artists,
             'artistsGroupedByAlpha' => $artistsGroupedByAlpha,
@@ -720,7 +720,7 @@ $app->get('/djs', function(Silex\Application $app, Request $request) {
     //dump($showsGroupedByDj);
     // Render view
     $body = $app['twig']->render(
-        'djs.twig.html',
+        'djs.html.twig',
         array(
             'artists' => $artists,
             'djsGroupedByAlpha' => $djsGroupedByAlpha,
@@ -752,7 +752,7 @@ $app->get('/years', function(Silex\Application $app, Request $request) {
     //dump($showsGroupedByYear);
     // Render view
     $body = $app['twig']->render(
-        'years.twig.html',
+        'years.html.twig',
         array(
             'artists' => $artists,
             'djs' => getDjs($shows),
@@ -783,7 +783,7 @@ $app->get('/night', function(Silex\Application $app, Request $request) {
 // Dons
 $app->get('/dons', function(Silex\Application $app) {
     // Render view
-    $body = $app['twig']->render('dons.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+    $body = $app['twig']->render('dons.html.twig', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
 
     return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })
@@ -792,7 +792,7 @@ $app->get('/dons', function(Silex\Application $app) {
 // Merci <3
 $app->get('/merci', function(Silex\Application $app) {
     // Render view
-    $body = $app['twig']->render('merci.twig.html', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
+    $body = $app['twig']->render('merci.html.twig', array('shows' => getShows($app, array_key_exists('preview', $_GET))));
 
     return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
 })

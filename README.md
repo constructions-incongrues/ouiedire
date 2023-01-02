@@ -2,9 +2,7 @@
 
 ## Développement
 
-- Cloner le dépôt <https://github.com/constructions-incongrues/ouiedire>
-- À la racine du dépôt cloné, exécuter la commande : `docker-compose up`
-- Le site est accessible à l'adresse <http://ouiedire.localhost/app_dev.php>
+[Ouvrir un environnement de développement](vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/constructions-incongrues/ouiedire)
 
 ## Déploiement
 

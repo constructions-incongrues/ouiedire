@@ -14,7 +14,7 @@
 /src/public/vendor
 
 # assets
-*.mp3
 *.zip
+
 # duration
 /src/public/duration

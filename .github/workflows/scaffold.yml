@@ -3,30 +3,19 @@ name: Nouvelle émission
 on: workflow_dispatch
 
 jobs:
-  serv_content:
+  scaffold:
     runs-on: ubuntu-latest
     steps:
-      - name: Create branch
-        uses: peterjgrainger/action-create-branch@v2.2.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v3
         with:
-          branch: emission-xxx
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          ref: emission-xxx
-      - name: Scaffold
-        run: cp -R src/public/assets/emission/skel ./src/public/assets/emission/emission-xxx
-      - name: Publish
-        uses: eunchurn/action-publish@v1.1.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_NAME: emission-xxx
+          ref: main
+      - run: cp -R src/public/assets/emission/skel ./src/public/assets/emission/emission-xxx
       - run: git config lfs.https://github.com/constructions-incongrues/ouiedire.git/info/lfs.locksverify false
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v4
+      - uses: peter-evans/create-pull-request@v4
         with:
+          commit-message: "Nouvelle émission: XXX"
           branch: emission-xxx
           base: main
           draft: true
+          delete-branch: true
+          branch-suffix: timestamp

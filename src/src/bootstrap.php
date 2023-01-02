@@ -188,14 +188,22 @@ function getShow($id, Silex\Application $app = null) {
     }
 
   // Absolute URL to show assets
-    $urlAssets = sprintf(
-        '%s://%s%s/assets/emission/%s-%s',
-        $app['request']->getScheme(),
-        $app['request']->getHttpHost(),
-        $app['request']->getBasePath(),
-        $show['typeSlug'],
-        $show['number']
-    );
+  if (isset($app['request'])) {
+        $urlAssets = sprintf(
+            '%s://%s%s/assets/emission/%s-%s',
+            $app['request']->getScheme(),
+            $app['request']->getHttpHost(),
+            $app['request']->getBasePath(),
+            $show['typeSlug'],
+            $show['number']
+        );
+    } else {
+        $urlAssets = sprintf(
+            'https://www.ouiedire.net/assets/emission/%s-%s',
+            $show['typeSlug'],
+            $show['number']
+        );
+    }
 
     // Guess show MP3 properties
     $show['urlDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), $manifest->slug));
@@ -462,7 +470,7 @@ $app->get('/feed', function(Silex\Application $app) {
     $feed->setDescription("Ouïedire est une web-radio à but non lucratif née en 2005. Elle a pour but de diffuser des émissions de musique en tout genre.");
     $feed->setLink($app['url_generator']->generate('emissions', array(), UrlGenerator::ABSOLUTE_URL));
     $feed->setFeedLink($app['url_generator']->generate('feed', array(), UrlGenerator::ABSOLUTE_URL), 'rss');
-    $feed->addAuthor(array('name' => 'Ouïedire', 'email' => 'contact@ouiedire.net', 'uri', 'http://www.ouiedire.net'));
+    $feed->addAuthor(array('name' => 'Ouïedire', 'email' => 'contact@ouiedire.net', 'uri', 'https://www.ouiedire.net'));
     try {
         $feed->setDateModified(DateTime::createFromFormat('Y-m-d H:i:s', $shows[0]['releasedAt']));
     } catch (InvalidArgumentException $e) {
@@ -474,7 +482,7 @@ $app->get('/feed', function(Silex\Application $app) {
         array(
             'uri'   => sprintf('%s://%s/%s/assets/img/logo_rss.png', $app['request']->getScheme(), $app['request']->getHttpHost(), $app['request']->getBasePath()),
             'title' => "Ouïedire, j'en ai déjà entendu parler quelque part.",
-            'link'  => 'http://www.ouiedire.net'
+            'link'  => 'https://www.ouiedire.net'
         )
     );
 
@@ -752,18 +760,6 @@ $app->get('/years', function(Silex\Application $app, Request $request) {
     );
 })
 ->bind('years');
-
-// Delete cache
-$app->get('/deletecache', function(Silex\Application $app) {
-    $pathPublic = __DIR__.'/../public';
-    $cacheFolder = $pathPublic.'/assets/cache/';
-    $files = glob($cacheFolder.'*');
-    foreach($files as $file){
-        if(is_file($file)) unlink($file);
-    }
-    return 'Le cache est vidé !';
-})
-->bind('deletecache');
 
 // Night mode
 $app->get('/night', function(Silex\Application $app, Request $request) {

@@ -1,7 +1,7 @@
 {
     "recommendations": [
-        "ecmel.vscode-html-css",
         "ms-vscode-remote.remote-containers",
-        "whatwedo.twig"
+        "mblode.twig-language",
+        "ecmel.vscode-html-css"
     ]
 }

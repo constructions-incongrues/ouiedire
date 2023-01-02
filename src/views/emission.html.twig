@@ -45,7 +45,7 @@
  	<section class="nav">
 		{% if (previous) %}<a class="previous" href="{{ url('emission', {id:previous.id, type:previous.typeSlug}) }}" title="#{{ previous.number }} : {{ previous.title }}, par {{ previous.authors }}"><i class="icon-left-open"></i> <span class="hide-on-mobile">Émission </span>précédente</a> {% endif %}
 		{% if (next) %}<a class="next" href="{{ url('emission', {id:next.id, type:next.typeSlug}) }}" title="#{{ next.number }} : {{ next.title }}, par {{ next.authors }}"><span class="hide-on-mobile">Émission </span>suivante <i class="icon-right-open"></i></a>{% endif %}
-	</section> 
+	</section>
 </div>
 {% endblock %}
 

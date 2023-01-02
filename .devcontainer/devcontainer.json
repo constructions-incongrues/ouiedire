@@ -14,8 +14,7 @@
 	
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"ecmel.vscode-html-css",
-		"whatwedo.twig"
+		"NathanRidley.autotrim"
 	],
 
 	"forwardPorts": [8000],

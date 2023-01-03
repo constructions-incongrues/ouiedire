@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: main
+          depth: "0"
       - uses: andrewthetechie/gha-cookiecutter@main
         with:
           template: ./src/skel/emission

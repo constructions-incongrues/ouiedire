@@ -49,17 +49,18 @@ jobs:
           body: |
             ## Et maintenant ?
 
-            [Créer un espace de travail dédié](https://github.com/codespaces/new?hide_repo_select=true&ref=emission-${{ inputs.collection }}-${{ inputs.number }}&repo=9930817)
-            et s'en servir pour effectuer les actions suivantes.
+            [Créer un espace de travail dédié](https://github.com/codespaces/new?hide_repo_select=true&ref=emission-${{ inputs.collection }}-${{ inputs.number }}&repo=9930817) et s'en servir pour effectuer les actions suivantes.
 
             - [ ] L'image de couverture par défaut a été remplacée
             - [ ] La description est à jour
             - [ ] La liste de lecture est à jour et bien formée
             - [ ] Les informations indiquées dans le manifeste sont exactes
 
-            Une fois ceci fait et poussé sur la branche `${{ inputs.collection }}-${{ inputs.number }}`, on peut merger cette Pull github.event.pull_request.number
+            Une fois ceci fait et poussé sur la branche `${{ inputs.collection }}-${{ inputs.number }}`, on peut merger cette Pull Request.
 
-            L'épisode est à présent visible dans la liste des émisions l'adresse <https://www.ouiedire.net/?preview>.
+            L'épisode est à présent visible dans la liste des émisions à l'adresse <https://www.ouiedire.net/?preview>.
+
+            ## Finitions et publication
 
             En se rendant sur la page de l'émission on peut ensuite :
               - uploader le fichier MP3 sur le serveur en cliquant sur le lien de téléchargement à droite du titre de l'émission
@@ -69,7 +70,6 @@ jobs:
           commit-message: "Initialisation des fichiers nécessaire à partir du squelette d'émission"
           delete-branch: true
           draft: true
-          reviewers: johan-ci
           assignees: ${{ github.actor }}
           title: "Nouvelle émission : ${{ inputs.collection }}-${{ inputs.number }}"
           token: ${{ secrets.PAT }}

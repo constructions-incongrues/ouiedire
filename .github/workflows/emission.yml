@@ -1,4 +1,4 @@
-name: Show PR
+name: Émission
 
 on:
   workflow_dispatch:
@@ -24,7 +24,7 @@ on:
         default: Préfèreraient rester anonymes
 
 jobs:
-  prepare:
+  pull-request:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

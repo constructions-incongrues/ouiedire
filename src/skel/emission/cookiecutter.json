@@ -2,6 +2,7 @@
     "collection": "Collection",
     "collectionSlug": "{{ cookiecutter.collection.lower() }}",
     "title": "Titre",
+    "titleSlug": "{{ cookiecutter.title.lower() }}",
     "number": "Numéro",
     "authors": "Auteurices",
     "releasedAt": "{% now 'utc', '%Y-%m-%d' %}"

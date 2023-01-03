@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: andrewthetechie/gha-cookiecutter@main
+      - uses: andrewthetechie/gha-cookiecutter@v1.1.1
         with:
           template: ./src/skel/emission
           outputDir: ./src/public/assets/emission
@@ -38,33 +38,12 @@ jobs:
             "number": "${{ inputs.number }}",
             "authors": "${{ inputs.authors }}"
           }'
-      - uses: peterjgrainger/action-create-branch@v2.2.0
-        if: github.repository_owner != 'constructions-incongrues'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: EndBug/add-and-commit@v9.1.1
         with:
-          branch: ${{ inputs.collection }}-${{ inputs.number }}
-      - uses: eunchurn/action-publish@v1.1.1
-        if: github.repository_owner != 'constructions-incongrues'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH_NAME: ${{ inputs.collection }}-${{ inputs.number }}
-          USER_NAME: ${{ github.actor }}
-          USER_EMAIL: ${{ github.actor }}@users.noreply.github.com
-      - run: git config lfs.https://github.com/constructions-incongrues/ouiedire.git/info/lfs.locksverify false
-      - run: git add src/public/assets/emission/
-      - run: sudo chown -R $USER:$USER .
-      - uses: peter-evans/create-pull-request@v4
-        with:
-          commit-message: "Création du dossier de l'émission à partir du squelette"
-          title: "[${{ inputs.collection }} #${{ inputs.number }}] ${{ inputs.title }}"
-          branch: "${{ inputs.collection }}-${{ inputs.number }}"
-          draft: true
-          delete-branch: true
-          labels: Émission,${{ inputs.collection }}
-          body: |
-            - [ ] Description OK ?
-            - [ ] Image OK ?
-            - [ ] MP3 OK ?
-            - [ ] Playlist OK ?
+          add: './src/public/assets/emission'
+          # The message for the commit.
+          # Default: 'Commit from GitHub Actions (name of the workflow)'
+          message: '${{ inputs.collection }} #${{ inputs.number }} : initialisation du dossier'
 
+          # If this input is set, the action will push the commit to a new branch with this name.
+          new_branch: ${{ inputs.collection }}-${{ inputs.number }}

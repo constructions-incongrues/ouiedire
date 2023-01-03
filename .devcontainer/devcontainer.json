@@ -16,7 +16,9 @@
 	"extensions": [
 		"NathanRidley.autotrim",
 		"cschleiden.vscode-github-actions",
-		"me-dutour-mathieu.vscode-github-actions"
+		"me-dutour-mathieu.vscode-github-actions",
+		"github.vscode-pull-request-github",
+		"mblode.twig-language-2"
 	],
 
 	"forwardPorts": [8000],

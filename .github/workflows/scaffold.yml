@@ -13,11 +13,10 @@ on:
         - Ouïedire
         required: true
       number:
-        default: "0"
+        default: "999"
         required: true
         type: string
       title:
-        required: true
         type: string
       authors:
         type: string

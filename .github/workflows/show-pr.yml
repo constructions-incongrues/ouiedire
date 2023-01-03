@@ -1,4 +1,3 @@
-# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: Show PR
 
 on:
@@ -14,15 +13,15 @@ on:
         - Ouïedire
         required: true
       number:
-        default: "999"
+        default: "666"
         required: true
         type: string
       title:
         type: string
-        default: TODO
+        default: Est un secret bien gardé
       authors:
         type: string
-        default: TODO
+        default: Préfèreraient rester anonymes
 
 jobs:
   prepare:
@@ -42,17 +41,19 @@ jobs:
               "number": "${{ inputs.number }}",
               "authors": "${{ inputs.authors }}"
             }
+      - run: sudo chmod -R a+rw ./src/public/assets/emission
       - name: Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v4.2.3
         with:
-          branch: ${{ inputs.collection }}-${{ inputs.number }}
+          body: |
+            - [ ] L'image de couverture par défaut a été mise à jour
+          branch: emission-${{ inputs.collection }}-${{ inputs.number }}
+          commit-message: "Initialisation des fichiers nécessaire à partir du squelette d'émission"
+          delete-branch: true
           draft: true
           reviewers: johan-ci
-          label: emission
           title: "Nouvelle émission : ${{ inputs.collection }}-${{ inputs.number }}"
-          delete-branch: true
-          commit-message: "Initialisation des fichiers nécessaire à partir du squelette d'émission"
       - name: Check outputs
         if: ${{ steps.cpr.outputs.pull-request-number }}
         run: |

@@ -48,9 +48,11 @@ jobs:
           branch: "${{ inputs.collection }}-${{ inputs.number }}"
           draft: true
           delete-branch: true
+          labels: Émission,${{ inputs.collection }}
+          reviewers: johan-ci
           body: |
-            - [ ] Image OK ?
             - [ ] Description OK ?
-            - [ ] Playlist OK ?
+            - [ ] Image OK ?
             - [ ] MP3 OK ?
+            - [ ] Playlist OK ?
 

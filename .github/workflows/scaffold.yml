@@ -24,11 +24,13 @@ on:
         default: TODO
 
 jobs:
-  publish:
+  prepare:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: andrewthetechie/gha-cookiecutter@v1.1.1
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Scaffold
+        uses: andrewthetechie/gha-cookiecutter@v1.1.1
         with:
           template: ./src/skel/emission
           outputDir: ./src/public/assets/emission
@@ -38,12 +40,9 @@ jobs:
             "number": "${{ inputs.number }}",
             "authors": "${{ inputs.authors }}"
           }'
-      - uses: EndBug/add-and-commit@v9.1.1
+      - name: Publish
+        uses: EndBug/add-and-commit@v9.1.1
         with:
           add: './src/public/assets/emission'
-          # The message for the commit.
-          # Default: 'Commit from GitHub Actions (name of the workflow)'
-          message: '${{ inputs.collection }} #${{ inputs.number }} : initialisation du dossier'
-
-          # If this input is set, the action will push the commit to a new branch with this name.
+          message: '[${{ inputs.collection }} #${{ inputs.number }}] ${{ inputs.title }}'
           new_branch: ${{ inputs.collection }}-${{ inputs.number }}

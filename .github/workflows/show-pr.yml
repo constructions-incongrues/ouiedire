@@ -42,6 +42,7 @@ jobs:
               "number": "${{ inputs.number }}",
               "authors": "${{ inputs.authors }}"
             }
+      - run: sudo chown -R u+rw ./src/public/assets/emission
       - name: Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v4.2.3

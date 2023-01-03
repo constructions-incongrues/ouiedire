@@ -1,4 +1,4 @@
-name: Todo Comments
+name: TODO
 on: [pull_request]
 
 jobs:
@@ -14,3 +14,10 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           review-message: "Au boulot ! :eyes:"
+  todo-check:
+    needs: todo-comments:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: adriangodong/actions-todo-bot@1.0.3
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}

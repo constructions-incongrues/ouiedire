@@ -49,7 +49,6 @@ jobs:
           draft: true
           delete-branch: true
           labels: Émission,${{ inputs.collection }}
-          reviewers: johan-ci
           body: |
             - [ ] Description OK ?
             - [ ] Image OK ?

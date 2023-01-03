@@ -44,5 +44,5 @@ jobs:
         uses: EndBug/add-and-commit@v9.1.1
         with:
           add: './src/public/assets/emission'
-          message: '[${{ inputs.collection }} #${{ inputs.number }}] ${{ inputs.title }}'
+          message: '${{ inputs.collection }}-${{ inputs.number }}'
           new_branch: ${{ inputs.collection }}-${{ inputs.number }}

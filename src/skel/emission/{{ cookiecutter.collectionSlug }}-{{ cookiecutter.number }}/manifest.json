@@ -1,7 +1,7 @@
 {
-  "title": "TODO : {{ cookiecutter.title }}",
-  "authors": "TODO : {{ cookiecutter.authors }}",
-  "releasedAt": "TODO : {{ cookiecutter.releasedAt }}",
-  "type": "TODO : {{ cookiecutter.collection }}",
+  "title": "{{ cookiecutter.title }}",
+  "authors": "{{ cookiecutter.authors }}",
+  "releasedAt": "{{ cookiecutter.releasedAt }}",
+  "type": "{{ cookiecutter.collection }}",
   "isPublic": false
 }

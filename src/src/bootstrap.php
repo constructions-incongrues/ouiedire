@@ -204,12 +204,16 @@ function getShow($id, Silex\Application $app = null) {
     }
 
     // Guess show MP3 properties
-    $show['urlDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
     try {
         $fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $pathPublicEmission, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
         $show['sizeDownload'] = round($fileMp3->getSize()/(1024*1024),2).' Mo';
     } catch (\RuntimeException $e) {
         $show['sizeDownload'] = 1;
+    }
+    if ($show['isPublic'] === true || $fileMp3->isReadable()) {
+        $show['urlDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
+    } else {
+        $show['urlDownload'] = sprintf('https://plesk.pastis-hosting.net:8443/smb/file-manager/list/domainId/64?currentDir=%%2Fhttpdocs%%2Fcd%%2Fsrc%%2Fpublic%%2Fassets%%2Femission%%2F%s-%s', slugify($show['type']), $show['number']);
     }
 
     // Guess covers URL

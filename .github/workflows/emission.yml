@@ -1,4 +1,4 @@
-name: Émission
+name: Nouvelle émission
 
 on:
   workflow_dispatch:
@@ -73,8 +73,3 @@ jobs:
           assignees: ${{ github.actor }}
           title: "Nouvelle émission : ${{ inputs.collection }}-${{ inputs.number }}"
           token: ${{ secrets.PAT }}
-      - name: Check outputs
-        if: ${{ steps.cpr.outputs.pull-request-number }}
-        run: |
-          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
-          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"

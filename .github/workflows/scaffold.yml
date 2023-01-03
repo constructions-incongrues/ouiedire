@@ -44,8 +44,10 @@ jobs:
           BRANCH_NAME: ${{ inputs.collection }}-${{ inputs.number }}
           USER_NAME: ${{ github.actor }}
           USER_EMAIL: ${{ github.actor }}@users.noreply.github.com
-    pr:
-      if: github.repository_owner == 'constructions-incongrues'
+  pr:
+    if: github.repository_owner == 'constructions-incongrues'
+    runs-on: ubuntu-latest
+    steps:
       # - run: git config lfs.https://github.com/constructions-incongrues/ouiedire.git/info/lfs.locksverify false
       # - run: git add src/public/assets/emission/
       # - run: sudo chown -R $USER:$USER .

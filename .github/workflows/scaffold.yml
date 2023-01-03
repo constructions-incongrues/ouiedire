@@ -39,7 +39,7 @@ jobs:
       - run: git config lfs.https://github.com/constructions-incongrues/ouiedire.git/info/lfs.locksverify false
       - uses: peter-evans/create-pull-request@v4
         with:
-          add-paths: ./src/public/assets/emission
+          add-paths: "src/public/assets/emission/*"
           commit-message: "Création du dossier de l'émission à partir du squelette"
           title: "[${{ inputs.collection }} #${{ inputs.number }}] ${{ inputs.title }}"
           branch: "${{ inputs.collection }}-${{ inputs.number }}"

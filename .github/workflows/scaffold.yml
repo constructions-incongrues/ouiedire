@@ -50,7 +50,7 @@ jobs:
           delete-branch: true
           body: |
             - [ ] Image OK ?
-            - [ ] Description OK N
+            - [ ] Description OK ?
             - [ ] Playlist OK ?
             - [ ] MP3 OK ?
 

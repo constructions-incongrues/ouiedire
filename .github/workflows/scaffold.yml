@@ -25,7 +25,6 @@ on:
 
 jobs:
   publish:
-    needs: branch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

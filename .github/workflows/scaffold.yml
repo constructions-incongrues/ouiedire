@@ -1,18 +1,56 @@
-name: Nouvelle émission
+name: Préparer une émission
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      collection:
+        type: choice
+        default: Ailleurs
+        options:
+        - Ailleurs
+        - Bagage
+        - Bureau
+        - Ouïedire
+        required: true
+      number:
+        default: "999"
+        required: true
+        type: string
+      title:
+        type: string
+        default: TODO
+      authors:
+        type: string
+        default: TODO
 
 jobs:
-  serv_content:
+  prepare:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - uses: andrewthetechie/gha-cookiecutter@main
+        with:
+          template: ./src/skel/emission
+          outputDir: ./src/public/assets/emission
+          cookiecutterValues: '{
+            "collection": "${{ inputs.collection }}",
+            "title": "${{ inputs.title }}",
+            "number": "${{ inputs.number }}",
+            "authors": "${{ inputs.authors }}"
+          }'
+      - run: git config lfs.https://github.com/constructions-incongrues/ouiedire.git/info/lfs.locksverify false
+      - run: git add src/public/assets/emission/
+      - run: sudo chown -R $USER:$USER .
+      - uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: "Création du dossier de l'émission à partir du squelette"
+          title: "[${{ inputs.collection }} #${{ inputs.number }}] ${{ inputs.title }}"
+          branch: "${{ inputs.collection }}-${{ inputs.number }}"
+          draft: true
+          delete-branch: true
+          body: |
+            - [ ] Image OK ?
+            - [ ] Description OK N
+            - [ ] Playlist OK ?
+            - [ ] MP3 OK ?
 
-      - name: Push
-        uses: nicholasgriffintn/github-branch-deployment-action@1.0.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: emission-xxx
-          FOLDER: src/public/assets/emission/skel
-          MESSAGE: 'Build: ({sha}) {msg}'

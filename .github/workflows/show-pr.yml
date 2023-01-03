@@ -48,6 +48,9 @@ jobs:
         with:
           body: |
             - [ ] L'image de couverture par défaut a été mise à jour
+            - [ ] La description est à jour
+            - [ ] La liste de lecture est à jour et bien formée
+            - [ ] Les informations indiquées dans le manifeste sont exactes
           branch: emission-${{ inputs.collection }}-${{ inputs.number }}
           commit-message: "Initialisation des fichiers nécessaire à partir du squelette d'émission"
           delete-branch: true

@@ -220,6 +220,10 @@ function getShow($id, Silex\Application $app = null) {
         }
     }
 
+    if ($show['urlDownload'] === null) {
+        $show['isPublic'] = false;
+    }
+
     // Guess covers URL
     $show['covers'] = array();
     $finder = new Finder();

@@ -48,3 +48,9 @@ jobs:
           branch: "${{ inputs.collection }}-${{ inputs.number }}"
           draft: true
           delete-branch: true
+          body: |
+            - [ ] Image OK ?
+            - [ ] Description OK N
+            - [ ] Playlist OK ?
+            - [ ] MP3 OK ?
+

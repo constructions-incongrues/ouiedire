@@ -210,10 +210,14 @@ function getShow($id, Silex\Application $app = null) {
     } catch (\RuntimeException $e) {
         $show['sizeDownload'] = 1;
     }
+
+    $show['urlDownload'] = null;
     if ($show['isPublic'] === true || $fileMp3->isReadable()) {
         $show['urlDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
     } else {
-        $show['urlDownload'] = sprintf('https://plesk.pastis-hosting.net:8443/smb/file-manager/list/domainId/64?currentDir=%%2Fhttpdocs%%2Fcd%%2Fsrc%%2Fpublic%%2Fassets%%2Femission%%2F%s-%s', slugify($show['type']), $show['number']);
+        if ($app['request']->getHttpHost() == 'ouiedire.net' || $app['request']->getHttpHost() == 'www.ouiedire.net') {
+            $show['urlDownload'] = sprintf('https://plesk.pastis-hosting.net:8443/smb/file-manager/list/domainId/64?currentDir=%%2Fhttpdocs%%2Fcd%%2Fsrc%%2Fpublic%%2Fassets%%2Femission%%2F%s-%s', slugify($show['type']), $show['number']);
+        }
     }
 
     // Guess covers URL

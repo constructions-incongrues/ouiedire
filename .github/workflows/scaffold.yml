@@ -43,6 +43,5 @@ jobs:
           commit-message: "Création du dossier de l'émission à partir du squelette"
           title: "[${{ inputs.collection }} #${{ inputs.number }}] ${{ inputs.title }}"
           branch: "${{ inputs.collection }}-${{ inputs.number }}"
-          base: main
           draft: true
           delete-branch: true

@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: Préparer une émission
 
 on:
@@ -34,12 +35,13 @@ jobs:
         with:
           template: ./src/skel/emission
           outputDir: ./src/public/assets/emission
-          cookiecutterValues: '{
-            "collection": "${{ inputs.collection }}",
-            "title": "${{ inputs.title }}",
-            "number": "${{ inputs.number }}",
-            "authors": "${{ inputs.authors }}"
-          }'
+          cookiecutterValues: |
+            {
+              "collection": "${{ inputs.collection }}",
+              "title": "${{ inputs.title }}",
+              "number": "${{ inputs.number }}",
+              "authors": "${{ inputs.authors }}"
+            }
       - name: Publish
         uses: EndBug/add-and-commit@v9.1.1
         with:

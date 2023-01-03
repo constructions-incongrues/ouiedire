@@ -14,7 +14,9 @@
 	
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"NathanRidley.autotrim"
+		"NathanRidley.autotrim",
+		"cschleiden.vscode-github-actions",
+		"me-dutour-mathieu.vscode-github-actions"
 	],
 
 	"forwardPorts": [8000],

@@ -42,6 +42,7 @@ jobs:
       - run: git add src/public/assets/emission/
       - run: sudo chown -R $USER:$USER .
       - uses: peter-evans/create-pull-request@v4
+        if: github.repository_owner == 'constructions-incongrues'
         with:
           commit-message: "Création du dossier de l'émission à partir du squelette"
           title: "[${{ inputs.collection }} #${{ inputs.number }}] ${{ inputs.title }}"
@@ -49,6 +50,7 @@ jobs:
           draft: true
           delete-branch: true
           labels: Émission,${{ inputs.collection }}
+          reviewers: johan-ci
           body: |
             - [ ] Description OK ?
             - [ ] Image OK ?

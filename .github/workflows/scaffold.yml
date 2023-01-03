@@ -1,4 +1,4 @@
-name: Nouvelle Émission
+name: Préparer une émission
 
 on:
   workflow_dispatch:
@@ -18,11 +18,13 @@ on:
         type: string
       title:
         type: string
+        default: TODO
       authors:
         type: string
+        default: TODO
 
 jobs:
-  nouvelleEmission:
+  prepare:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

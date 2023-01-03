@@ -1,8 +1,11 @@
 {
     "collection": "Collection",
-    "collectionSlug": "{{ cookiecutter.collection.lower() }}",
+    "collectionSlug": "{{ cookiecutter.collection | slugify }}",
     "title": "Titre",
+    "titleSlug": "{{ cookiecutter.title | slugify }}",
     "number": "Numéro",
     "authors": "Auteurices",
-    "releasedAt": "{% now 'utc', '%Y-%m-%d' %}"
+    "authorsSlug": "{{ cookiecutter.authors | slugify }}",
+    "releasedAt": "{% now 'utc', '%Y-%m-%d' %}",
+    "_extensions": ["cookiecutter.extensions.SlugifyExtension"]
 }

@@ -26,5 +26,5 @@
 
 #### Instructions
 
-- Se rendre à l'adresse : <https://github.com/constructions-incongrues/ouiedire/actions/workflows/scaffold.yml>
+- Se rendre à l'adresse : <https://github.com/constructions-incongrues/ouiedire/actions/workflows/show-pr.yml>
 - Cliquer sur le bouton "Run Workflow" à droite, remplir le formulaire autant que faire se peut (les informations pourront être modifiées plus tard) puis le soumettre

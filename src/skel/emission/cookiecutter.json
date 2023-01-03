@@ -1,0 +1,8 @@
+{
+    "collection": "Collection",
+    "collectionSlug": "{{ cookiecutter.collection.lower() }}",
+    "title": "Titre",
+    "number": "Numéro",
+    "authors": "Auteurices",
+    "releasedAt": "{% now 'utc', '%Y-%m-%d' %}"
+}

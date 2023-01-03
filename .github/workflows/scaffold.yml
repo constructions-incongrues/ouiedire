@@ -5,12 +5,12 @@ on:
     inputs:
       collection:
         type: choice
-        default: ailleurs
+        default: Ailleurs
         options:
-        - ailleurs
-        - bagage
-        - bureau
-        - ouiedire
+        - Ailleurs
+        - Bagage
+        - Bureau
+        - Ouïedire
         required: true
       number:
         default: "0"
@@ -21,9 +21,6 @@ on:
         type: string
       authors:
         type: string
-      releasedAt:
-        type: string
-        default: "YYYY-MM-DD"
 
 jobs:
   generate:
@@ -39,14 +36,13 @@ jobs:
             "collection": "${{ inputs.collection }}",
             "title": "${{ inputs.title }}",
             "number": "${{ inputs.number }}",
-            "authors": "${{ inputs.authors }}",
-            "releasedAt": "${{ inputs.releasedAt }}"
+            "authors": "${{ inputs.authors }}"
           }'
       - run: git config lfs.https://github.com/constructions-incongrues/ouiedire.git/info/lfs.locksverify false
       - uses: peter-evans/create-pull-request@v4
         with:
           commit-message: "Création du dossier de l'émission à partir du squelette"
-          title: "[${{ inputs.collection }}-${{ inputs.number }}] ${{ inputs.title }}"
+          title: "[${{ inputs.collection }} #${{ inputs.number }}] ${{ inputs.title }}"
           branch: "${{ inputs.collection }}-${{ inputs.number }}"
           base: main
           draft: true

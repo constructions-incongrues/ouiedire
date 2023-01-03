@@ -13,15 +13,15 @@ on:
         - Ouïedire
         required: true
       number:
-        default: "999"
+        default: "666"
         required: true
         type: string
       title:
         type: string
-        default: TODO
+        default: Est un secret bien gardé
       authors:
         type: string
-        default: TODO
+        default: Préfèreraient rester anonymes
 
 jobs:
   prepare:

@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: Show PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      collection:
+        type: choice
+        default: Ailleurs
+        options:
+        - Ailleurs
+        - Bagage
+        - Bureau
+        - Ouïedire
+        required: true
+      number:
+        default: "999"
+        required: true
+        type: string
+      title:
+        type: string
+        default: TODO
+      authors:
+        type: string
+        default: TODO
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Scaffold
+        uses: andrewthetechie/gha-cookiecutter@v1.1.1
+        with:
+          template: ./src/skel/emission
+          outputDir: ./src/public/assets/emission
+          cookiecutterValues: |
+            {
+              "collection": "${{ inputs.collection }}",
+              "title": "${{ inputs.title }}",
+              "number": "${{ inputs.number }}",
+              "authors": "${{ inputs.authors }}"
+            }
+      - name: Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v4.2.3
+        with:
+          branch: ${{ inputs.collection }}-${{ inputs.number }}
+          draft: true
+          reviewers: johan-ci
+          label: emission
+          title: "Nouvelle émission : ${{ inputs.collection }}-${{ inputs.number }}"
+          delete-branch: true
+          commit-message: "Initialisation des fichiers nécessaire à partir du squelette d'émission"
+      - name: Check outputs
+        if: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+          echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"

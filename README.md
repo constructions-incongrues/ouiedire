@@ -14,3 +14,17 @@
     https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=9930817
 )
 
+## Comment faire pour...
+
+### Publier une nouvelle émission
+
+#### Description
+
+- workflow_dispatch
+- Cookiecutter
+- Création d'une branche et d'une PR draft
+
+#### Instructions
+
+- Se rendre à l'adresse : <https://github.com/constructions-incongrues/ouiedire/actions/workflows/scaffold.yml>
+- Cliquer sur le bouton "Run Workflow" à droite, remplir le formulaire autant que faire se peut (les informations pourront être modifiées plus tard) puis le soumettre

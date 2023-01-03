@@ -24,7 +24,8 @@ on:
         default: TODO
 
 jobs:
-  branch:
+  publish:
+    needs: branch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -38,19 +39,22 @@ jobs:
             "number": "${{ inputs.number }}",
             "authors": "${{ inputs.authors }}"
           }'
+      - uses: peterjgrainger/action-create-branch@v2.2.0
+        if: github.repository_owner != 'constructions-incongrues'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          branch: ${{ inputs.collection }}-${{ inputs.number }}
       - uses: eunchurn/action-publish@v1.1.1
+        if: github.repository_owner != 'constructions-incongrues'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH_NAME: ${{ inputs.collection }}-${{ inputs.number }}
           USER_NAME: ${{ github.actor }}
           USER_EMAIL: ${{ github.actor }}@users.noreply.github.com
-  pr:
-    if: github.repository_owner == 'constructions-incongrues'
-    runs-on: ubuntu-latest
-    steps:
-      # - run: git config lfs.https://github.com/constructions-incongrues/ouiedire.git/info/lfs.locksverify false
-      # - run: git add src/public/assets/emission/
-      # - run: sudo chown -R $USER:$USER .
+      - run: git config lfs.https://github.com/constructions-incongrues/ouiedire.git/info/lfs.locksverify false
+      - run: git add src/public/assets/emission/
+      - run: sudo chown -R $USER:$USER .
       - uses: peter-evans/create-pull-request@v4
         with:
           commit-message: "Création du dossier de l'émission à partir du squelette"

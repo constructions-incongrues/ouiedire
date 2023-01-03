@@ -2,7 +2,7 @@ name: TODO
 on: [pull_request]
 
 jobs:
-  todo-comments:
+  generate-checklist:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -14,8 +14,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           review-message: "Au boulot ! :eyes:"
-  todo-check:
-    needs: todo-comments
+  ensure-completion:
+    needs: comment
     runs-on: ubuntu-latest
     steps:
     - uses: adriangodong/actions-todo-bot@1.0.3

@@ -353,9 +353,6 @@ $app->register(new Silex\Provider\TwigServiceProvider(), [
 // Named routes (@see http://silex.sensiolabs.org/doc/providers/url_generator.html)
 $app->register(new Provider\UrlGeneratorServiceProvider());
 
-// Controller classes (required by Web Profiler - @see http://silex.sensiolabs.org/doc/providers/service_controller.html)
-$app->register(new Provider\ServiceControllerServiceProvider());
-
 $app['cache.max_age'] = 3600 * 24 * 90;
 $app['cache.expires'] = 3600 * 24 * 90;
 $app['cache.dir'] = __DIR__ . '/../cache';
@@ -380,12 +377,6 @@ $app['cache.defaults'] = array(
 if (isset($debug) && $debug == true) {
     // Global debug flag
     $app['debug'] = true;
-
-    // Web Profiler (@see https://github.com/sensiolabs/Silex-WebProfiler)
-    $app->register(new Provider\WebProfilerServiceProvider(), array(
-        'profiler.cache_dir' => __DIR__.'/../cache/profiler',
-        'profiler.mount_prefix' => '/_profiler', // this is the default
-    ));
 }
 
 // Assets invalidator

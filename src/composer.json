@@ -1,11 +1,12 @@
 {
     "require": {
         "constructions-incongrues/ananas-build-toolkit": "0.34.*",
-        "silex/silex": "^1.0",
-        "silex/web-profiler": "^1.0",
+        "silex/silex": "~1.0",
         "symfony/css-selector": "^3.4",
+        "symfony/http-foundation": "^2.3",
         "symfony/dom-crawler": "^3.4",
         "symfony/finder": "^2.2",
+        "twig/twig": "~1.4",
         "symfony/process": "^3.4",
         "symfony/twig-bridge": "^2.2",
         "zendframework/zend-escaper": "^2.2",

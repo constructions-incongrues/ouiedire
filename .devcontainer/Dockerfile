@@ -1,6 +1,6 @@
 # Any *-apache image listed on this page : https://store.docker.com/images/php
-FROM composer:2.2.12 as composer
-FROM php:5.6.36
+FROM composer:2.5.1 as composer
+FROM php:7.4.33
 
 # Composer
 COPY --from=composer /usr/bin/composer /usr/local/bin/composer

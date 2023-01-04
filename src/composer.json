@@ -2,20 +2,16 @@
     "require": {
         "constructions-incongrues/ananas-build-toolkit": "0.34.*",
         "silex/silex": "~1.0",
-        "silex/web-profiler": "~1.0",
         "symfony/css-selector": "^3.4",
+        "symfony/http-foundation": "^2.3",
         "symfony/dom-crawler": "^3.4",
-        "symfony/finder": "~2.2",
+        "symfony/finder": "^2.2",
+        "twig/twig": "~1.4",
         "symfony/process": "^3.4",
-        "symfony/twig-bridge": "~2.2",
-        "zendframework/zend-escaper": "~2.2",
-        "zendframework/zend-feed": "<2.8",
-        "zendframework/zend-servicemanager": "~2.2",
-        "zendframework/zend-stdlib": "~2.2"
-    },
-    "config": {
-        "platform": {
-            "php": "5.5.9"
-        }
+        "symfony/twig-bridge": "^2.2",
+        "zendframework/zend-escaper": "^2.2",
+        "zendframework/zend-feed": ">2.10.3",
+        "zendframework/zend-servicemanager": "^2.2",
+        "zendframework/zend-stdlib": "^3.2.1"
     }
 }

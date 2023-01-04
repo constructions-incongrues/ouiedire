@@ -18,8 +18,8 @@
 
 ### Publier une nouvelle émission
 
-- Se rendre sur la page du workflow [Nouvelle émission](https://github.com/constructions-incongrues/ouiedire/actions/workflows/emission.yml)
-- Cliquer sur le bouton "Run Workflow" à droite, remplir le formulaire autant que faire se peut (les informations pourront être modifiées plus tard) puis le soumettre
-- Suivre les instructions de la [Pull Request](https://github.com/constructions-incongrues/ouiedire/pulls) qui ne va pas tarder à apparaître
+- Cliquer sur le bouton "Run Workflow" à droite de la page la Github Action appelée ["Nouvelle Émission"](https://github.com/constructions-incongrues/ouiedire/actions/workflows/emission.yml)
+- Remplir le formulaire qui apparaît autant que faire se peut (les informations pourront être modifiées plus tard) puis le soumettre
+- Il ne reste plus qu'à suivre les instructions détaillées de la [Pull Request](https://github.com/constructions-incongrues/ouiedire/pulls) qui est créée à l'occasion
 
 C'est prêt !

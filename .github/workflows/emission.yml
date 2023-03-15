@@ -72,4 +72,4 @@ jobs:
           draft: true
           assignees: ${{ github.actor }}
           title: "Nouvelle émission : ${{ inputs.collection }}-${{ inputs.number }}"
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}

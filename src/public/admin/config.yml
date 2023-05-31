@@ -1,0 +1,41 @@
+# backend:
+#   name: github
+#   repo: constructions-incongrues/ouiedire
+#   branch: decapcms-test
+
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: decapcms
+
+editor:
+  preview: false
+
+media_folder: src/public/assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: show
+    label: Émission
+    format: json
+    folder: src/collections/shows/
+    create: true
+    fields:
+    - {label: "Is Public ?", name: "isPublic", widget: "boolean", default: false}
+    - label: "Collection"
+      name: "collection"
+      widget: "select"
+      options: ["Ailleurs", "Bagage", "Bureau", "Ouïedire"]
+      default: Ailleurs
+    - {label: "Number", name: "number", widget: "string"}
+    - {label: "Title", name: "title", widget: "string"}
+    - label: "Authors"
+      name: "authors"
+      widget: "list"
+    - label: 'Release date'
+      name: 'releasedAt'
+      widget: 'date'
+      date_format: true
+    - {label: "Description", name: "description", widget: "text"}
+    - {label: "Playlist", name: "playlist", widget: "text"}

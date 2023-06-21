@@ -127,7 +127,7 @@ function getYear($show)
 function getDuration()
 {
     $seconds = file_get_contents('../public/duration');
-    return round($seconds / 60 / 60);
+    return round(intval($seconds) / 60 / 60);
 }
 
 /**

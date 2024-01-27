@@ -1,0 +1,18 @@
+app: ouiedire
+env: communal-sun
+namespace: ouiedire
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.63.0
+values:
+  containerPort: 80
+  gitRepository: constructions-incongrues/ouiedire
+  gitSha: '{{ .SHA }}'
+  image:
+    dockerfile: Dockerfile
+    repository: 127.0.0.1:32447/{{ .APP }}
+    tag: '{{ .SHA }}'
+  replicas: 1
+  resources:
+    ignoreLimits: true

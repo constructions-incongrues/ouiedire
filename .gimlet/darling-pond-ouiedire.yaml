@@ -1,0 +1,44 @@
+app: ouiedire
+env: darling-pond
+namespace: default
+chart:
+  repository: https://chart.onechart.dev
+  name: onechart
+  version: 0.64.0
+values:
+  containerPort: 80
+  description: ""
+  documentation: ""
+  gitRepository: constructions-incongrues/ouiedire
+  gitSha: '{{ .SHA }}'
+  image:
+    repository: 127.0.0.1:32447/ouiedire
+    tag: '{{ .SHA }}'
+  imagePullSecrets: []
+  ingress:
+    annotations: {}
+    host: ouiedire.tambouille.pastis-hosting.net
+    path: /
+    tlsEnabled: true
+  issues: ""
+  logs: ""
+  metrics: ""
+  name: ""
+  ownerIm: ""
+  ownerName: ""
+  podAnnotations: {}
+  podDisruptionBudgetEnabled: true
+  podLabels: {}
+  replicas: 1
+  resources:
+    ignoreLimits: true
+  sealedSecrets: {}
+  secretEnabled: false
+  spreadAcrossNodes: true
+  traces: ""
+  volumes:
+    - name: data
+      path: /data
+      pvcAnnotations: {}
+      size: 5Gi
+      storageClass: longhorn

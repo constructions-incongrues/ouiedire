@@ -14,6 +14,7 @@ content:
         type: date
       - name: type
         type: text
+        time: true
       - name: isPublic
         type: boolean
         default: false

@@ -2,7 +2,7 @@ content:
   - name: show
     label: Émission
     path: src/public/assets/emission
-    filename: "{fields.collection.value}.json"
+    filename: "{fields.collection.value}-{fields.number.value}.json"
     format: json
     type: collection
     fields:

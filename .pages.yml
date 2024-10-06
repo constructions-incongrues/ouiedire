@@ -6,7 +6,14 @@ content:
     format: json
     type: collection
     fields:
-      - name: collection
+      - name: title
         type: text
-      - name: Number
-        type: number
+      - name: authors
+        type: text
+      - name: releasedAt
+        type: date
+      - name: type
+        type: text
+      - name: isPublic
+        type: boolean
+        default: false

@@ -2,7 +2,7 @@ content:
   - name: show
     label: Émission
     path: src/public/assets/emission
-    filename: manifest.json
+    filename: "{fields.collection.value}.json"
     format: json
     type: collection
     fields:

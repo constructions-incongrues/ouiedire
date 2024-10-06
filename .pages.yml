@@ -2,6 +2,7 @@ content:
   - name: show
     label: Émission
     path: src/_shows
+    format: json
     type: collection
     fields:
       - name: Number

@@ -4,5 +4,5 @@ content:
     path: src/_shows
     type: collection
     fields:
-      name: Number
-      type: number
+      - name: Number
+        type: number

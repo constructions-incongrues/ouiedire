@@ -1,0 +1,8 @@
+content:
+  - name: show
+    label: Émission
+    path: src/_shows
+    type: collection
+    fields:
+      name: Number
+      type: number

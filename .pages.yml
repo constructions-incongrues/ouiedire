@@ -1,9 +1,12 @@
 content:
   - name: show
     label: Émission
-    path: src/_shows
+    path: src/public/assets/emission
+    filename: {fields.collection}-{fields.number}
     format: json
     type: collection
     fields:
+      - name: collection
+        type: text
       - name: Number
         type: number

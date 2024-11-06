@@ -7,7 +7,7 @@
         "symfony/dom-crawler": "^3.4",
         "symfony/finder": "^2.2",
         "twig/twig": "~1.4",
-        "symfony/process": "^3.4",
+        "symfony/process": "^5.4",
         "symfony/twig-bridge": "^2.2",
         "zendframework/zend-escaper": "^2.2",
         "zendframework/zend-feed": ">2.10.3",

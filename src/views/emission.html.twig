@@ -51,29 +51,35 @@
 {% endblock %}
 
 {% block content %}
-	<div class="grid-100 tablet-grid-100 mobile-grid-100">
-		<div class="cartouche">     
-		    <h2 class="showNumber {{ show.typeSlug }}"><span class="hide-on-mobile">{{ show.typeSlug }}  </span>{{ show.number }}</h2>
-		    <h1 class="showTitle">{{ show.authors }} - {{ show.title }}</h1>
-	{% if show.urlDownload != null %}
-		    <h3 class="showDownload hide-on-mobile"><a href="{{ show.urlDownload }}" title="Télécharger l'émission au format MP3 ({{ show.sizeDownload }})"><i class="icon-download" style="color:#{% if app.request.cookies.get('night') %}555{% else %}fff{% endif %}"></i></a></h3>
-	{% endif %}
-		    <h3 class="showDate hide-on-mobile">{{ show.releasedAt|date('d/m/Y') }}</h3>
-		</div> 
-	</div> 
-	<div class="grid-50 mobile-grid-100">
-	    <audio controls="controls">
-	        <source src="{{ show.urlDownload }}" type="audio/mp3" />
-	        <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
-	        <object width="318" height="240" type="application/x-shockwave-flash" data="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf">
-	        <param name="movie" value="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf" />
-	        <param name="flashvars" value="controls=true&file={{ show.urlDownload }}" />
-	        </object>
-	    </audio>
-		{{ show.playlist|raw }}
-		<br>
-	</div><!-- grid-50 -->
-	
+    <div class="grid-100 tablet-grid-100 mobile-grid-100">
+        <div class="cartouche">
+            <h2 class="showNumber {{ show.typeSlug }}"><span class="hide-on-mobile">{{ show.typeSlug }}  </span>{{ show.number }}</h2>
+            <h1 class="showTitle">{{ show.authors }} - {{ show.title }}</h1>
+            {% if show.urlDownloadFlac %}
+                <h3 class="showDownload hide-on-mobile"><a href="{{ show.urlDownloadFlac }}" title="Télécharger l'émission au format FLAC ({{ show.sizeDownloadFlac }})"><i class="icon-download" style="color:#{% if app.request.cookies.get('night') %}555{% else %}fff{% endif %}"></i></a></h3>
+            {% elseif show.urlDownloadMp3 %}
+                <h3 class="showDownload hide-on-mobile"><a href="{{ show.urlDownloadMp3 }}" title="Télécharger l'émission au format MP3 ({{ show.sizeDownloadMp3 }})"><i class="icon-download" style="color:#{% if app.request.cookies.get('night') %}555{% else %}fff{% endif %}"></i></a></h3>
+            {% endif %}
+            <h3 class="showDate hide-on-mobile">{{ show.releasedAt|date('d/m/Y') }}</h3>
+        </div>
+    </div>
+    <div class="grid-50 mobile-grid-100">
+        <audio controls="controls">
+            {% if show.urlDownloadFlac %}
+                <source src="{{ show.urlDownloadFlac }}" type="audio/flac" />
+            {% elseif show.urlDownloadMp3 %}
+                <source src="{{ show.urlDownloadMp3 }}" type="audio/mp3" />
+            {% endif %}
+            <!-- Flash fallback for non-HTML5 browsers without JavaScript -->
+            <object width="318" height="240" type="application/x-shockwave-flash" data="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf">
+                <param name="movie" value="{{ app.request.getBasePath() }}/vendor/mediaelement/build/flashmediaelement.swf" />
+                <param name="flashvars" value="controls=true&file={{ show.urlDownloadFlac ?: show.urlDownloadMp3 }}" />
+            </object>
+        </audio>
+        {{ show.playlist|raw }}
+        <br>
+    </div><!-- grid-50 -->
+
 	<div class="grid-50 mobile-grid-100 description">
 		{% for urlCover in show.covers %}
 			<img src="{{ urlCover }}" alt="Artwork" class="responsive" /><br />
@@ -101,7 +107,7 @@
 		{% endif %} 
 	</div>	
 	
-	
+
 	
 	
 	<div id="playerStatus" class="{{ show.typeSlug }}"></div>

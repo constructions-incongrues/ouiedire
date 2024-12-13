@@ -203,24 +203,39 @@ function getShow($id, Silex\Application $app = null) {
         );
     }
 
-    // Guess show MP3 properties
+    // Guess show audio properties (MP3 and FLAC)
     try {
         $fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $pathPublicEmission, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
-        $show['sizeDownload'] = round($fileMp3->getSize()/(1024*1024),2).' Mo';
+        $show['sizeDownloadMp3'] = round($fileMp3->getSize()/(1024*1024),2).' Mo';
     } catch (\RuntimeException $e) {
-        $show['sizeDownload'] = 1;
+        $show['sizeDownloadMp3'] = null;
     }
 
-    $show['urlDownload'] = null;
-    if ($show['isPublic'] === true || $fileMp3->isReadable()) {
-        $show['urlDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
+    try {
+        $fileFlac = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s_%s.flac', $pathPublicEmission, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
+        $show['sizeDownloadFlac'] = round($fileFlac->getSize()/(1024*1024),2).' Mo';
+    } catch (\RuntimeException $e) {
+        $show['sizeDownloadFlac'] = null;
+    }
+
+    $show['urlDownloadMp3'] = null;
+    $show['urlDownloadFlac'] = null;
+
+    if ($show['isPublic'] === true) {
+        if ($fileMp3->isReadable()) {
+            $show['urlDownloadMp3'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
+        }
+        if ($fileFlac->isReadable()) {
+            $show['urlDownloadFlac'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.flac', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
+        }
     } else {
         if ($app['request']->getHttpHost() == 'ouiedire.net' || $app['request']->getHttpHost() == 'www.ouiedire.net') {
-            $show['urlDownload'] = sprintf('https://plesk.pastis-hosting.net/smb/file-manager/list/domainId/64?currentDir=%%2Fhttpdocs%%2Fcd%%2Fsrc%%2Fpublic%%2Fassets%%2Femission%%2F%s-%s', slugify($show['type']), $show['number']);
+            $show['urlDownloadMp3'] = sprintf('https://plesk.pastis-hosting.net/smb/file-manager/list/domainId/64?currentDir=%%2Fhttpdocs%%2Fcd%%2Fsrc%%2Fpublic%%2Fassets%%2Femission%%2F%s-%s', slugify($show['type']), $show['number']);
+            $show['urlDownloadFlac'] = sprintf('https://plesk.pastis-hosting.net/smb/file-manager/list/domainId/64?currentDir=%%2Fhttpdocs%%2Fcd%%2Fsrc%%2Fpublic%%2Fassets%%2Femission%%2F%s-%s', slugify($show['type']), $show['number']);
         }
     }
 
-    if ($show['urlDownload'] === null) {
+    if ($show['urlDownloadMp3'] === null && $show['urlDownloadFlac'] === null) {
         $show['isPublic'] = false;
     }
 
@@ -254,7 +269,7 @@ function getShow($id, Silex\Application $app = null) {
     } else {
         $show['number'] = $show['id'];
     }
-    
+
     return $show;
 }
 
@@ -453,7 +468,6 @@ $app->get('/random', function(Silex\Application $app) {
 })
 ->bind('random');
 
-// Shows RSS feed (@see http://framework.zend.com/manual/2.1/en/modules/zend.feed.writer.html)
 $app->get('/feed', function(Silex\Application $app) {
     // Get all shows
     $shows = getShows($app);
@@ -471,7 +485,6 @@ $app->get('/feed', function(Silex\Application $app) {
         $feed->setDateModified(DateTime::createFromFormat('Y-m-d', $shows[0]['releasedAt']));
     }
 
-    // TODO
     $feed->setImage(
         array(
             'uri'   => sprintf('%s://%s/%s/assets/img/logo_rss.png', $app['request']->getScheme(), $app['request']->getHttpHost(), $app['request']->getBasePath()),
@@ -489,6 +502,11 @@ $app->get('/feed', function(Silex\Application $app) {
             break;
         }
 
+        // Determine the preferred download link and type
+        $enclosureUrl = $show['urlDownloadFlac'] ?: $show['urlDownloadMp3'];
+        $enclosureType = $show['urlDownloadFlac'] ? 'audio/flac' : 'audio/mpeg';
+        $enclosureLength = $show['urlDownloadFlac'] ? (int)$show['sizeDownloadFlac'] : (int)$show['sizeDownloadMp3'];
+
         // Build item full HTML content
         $htmlContent = <<<EOT
 <img src="%s" />
@@ -496,13 +514,14 @@ $app->get('/feed', function(Silex\Application $app) {
 %s
 <a href="%s">Télécharger l'émission</a>
 EOT;
-        $htmlContent = sprintf($htmlContent, $show['covers'][0], $show['description'], $show['playlist'], $show['urlDownload']);
+        $htmlContent = sprintf($htmlContent, $show['covers'][0], $show['description'], $show['playlist'], $enclosureUrl);
+
         // Build entry using show data
         $entry = $feed->createEntry();
         $entry->setTitle(sprintf('%s #%s : %s par %s', $show['type'], $show['number'], $show['title'], $show['authors']));
         $entry->setLink($app['url_generator']->generate('emission', array('id' => $show['id'], 'type' => $show['typeSlug']), UrlGenerator::ABSOLUTE_URL));
         if ($show['description']) {
-          $entry->setDescription($show['description']);
+            $entry->setDescription($show['description']);
         }
         $entry->setContent($htmlContent);
         $entry->addAuthor(array('name' => $show['authors']));
@@ -516,17 +535,14 @@ EOT;
         } catch (InvalidArgumentException $e) {
             $entry->setDateCreated(DateTime::createFromFormat('Y-m-d', $show['releasedAt']));
         }
-        $entry->setEnclosure(array('type' => 'audio/mpeg', 'uri' => $show['urlDownload'], 'length' => (int)$show['sizeDownload']));
+        $entry->setEnclosure(array('type' => $enclosureType, 'uri' => $enclosureUrl, 'length' => $enclosureLength));
 
         // Add entry to feed
         $feed->addEntry($entry);
     }
 
     return new Response($feed->export('rss'), 200, array('content-type' => 'application/rss+xml; charset=utf8'));
-
-    return new Response($body, 200, $app['debug'] ? array() : $app['cache.defaults']);
-})
-->bind('feed');
+})->bind('feed');
 
 // oEmbed
 $app->get('/oembed', function(Silex\Application $app) {

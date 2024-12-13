@@ -67,7 +67,8 @@
         <audio controls="controls">
             {% if show.urlDownloadFlac %}
                 <source src="{{ show.urlDownloadFlac }}" type="audio/flac" />
-            {% elseif show.urlDownloadMp3 %}
+            {% endif %}
+            {% if show.urlDownloadMp3 %}
                 <source src="{{ show.urlDownloadMp3 }}" type="audio/mp3" />
             {% endif %}
             <!-- Flash fallback for non-HTML5 browsers without JavaScript -->

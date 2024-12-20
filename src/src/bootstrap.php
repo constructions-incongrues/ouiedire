@@ -221,18 +221,11 @@ function getShow($id, Silex\Application $app = null) {
     $show['urlDownloadMp3'] = null;
     $show['urlDownloadFlac'] = null;
 
-    if ($show['isPublic'] === true) {
-        if ($fileMp3->isReadable()) {
-            $show['urlDownloadMp3'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
-        }
-        if ($fileFlac->isReadable()) {
-            $show['urlDownloadFlac'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.flac', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
-        }
-    } else {
-        if ($app['request']->getHttpHost() == 'ouiedire.net' || $app['request']->getHttpHost() == 'www.ouiedire.net') {
-            $show['urlDownloadMp3'] = sprintf('https://plesk.pastis-hosting.net/smb/file-manager/list/domainId/64?currentDir=%%2Fhttpdocs%%2Fcd%%2Fsrc%%2Fpublic%%2Fassets%%2Femission%%2F%s-%s', slugify($show['type']), $show['number']);
-            $show['urlDownloadFlac'] = sprintf('https://plesk.pastis-hosting.net/smb/file-manager/list/domainId/64?currentDir=%%2Fhttpdocs%%2Fcd%%2Fsrc%%2Fpublic%%2Fassets%%2Femission%%2F%s-%s', slugify($show['type']), $show['number']);
-        }
+    if ($fileMp3->isReadable()) {
+        $show['urlDownloadMp3'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
+    }
+    if ($fileFlac->isReadable()) {
+        $show['urlDownloadFlac'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.flac', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
     }
 
     if ($show['urlDownloadMp3'] === null && $show['urlDownloadFlac'] === null) {

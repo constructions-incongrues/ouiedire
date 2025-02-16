@@ -18,11 +18,10 @@ on:
         type: string
       title:
         type: string
-        default: Est un secret bien gardé
+        default: COOL S.L.U.T.S.
       authors:
         type: string
-        default: Préfèreraient rester anonymes
-
+        default: Napel & Mégapute
 jobs:
   pull-request:
     runs-on: ubuntu-latest

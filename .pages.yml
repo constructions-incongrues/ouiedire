@@ -1,8 +1,8 @@
 content:
-  - name: COOL S.L.U.T.S.
+  - name: show
     label: Émission
     path: src/_shows
     type: collection
     fields:
-      - name: 325
+      - name: Number
         type: number

@@ -13,15 +13,15 @@ on:
         - Ouïedire
         required: true
       number:
-        default: "666"
+        default: "326"
         required: true
         type: string
       title:
         type: string
-        default: Est un secret bien gardé
+        default: Mégapute fait son printemps
       authors:
         type: string
-        default: Préfèreraient rester anonymes
+        default: Mégapute
 
 jobs:
   pull-request:

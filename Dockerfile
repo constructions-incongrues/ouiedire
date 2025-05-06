@@ -26,3 +26,11 @@ WORKDIR /workspaces/ouiedire/src
 
 # Build application
 RUN composer install && bower install
+
+# Expose the port the app runs on
+EXPOSE 80
+
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD curl -f http://localhost:80 || exit 1
+
+# Start the application
+CMD ["php", "-S", "0.0.0.0:80", "-t", "/workspaces/ouiedire/src/public"]

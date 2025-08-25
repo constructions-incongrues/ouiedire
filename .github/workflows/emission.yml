@@ -67,7 +67,8 @@ jobs:
             ## Finitions et publication
 
             En se rendant sur la page de l'émission on peut ensuite :
-              - uploader le fichier MP3 sur le serveur en cliquant sur le lien de téléchargement à droite du titre de l'émission
+              - obtenir le nom de fichier attendu pour le MP3 en cliquant sur le bouton de téléchargement du morceau
+              - uploader le fichier MP3 sur le serveur : https://vip.jeancloude.club/apps/files/files?dir=/ouiedire.net
               - rendre l'émission publique en cliquant sur le lien "EDIT" situé tout en bas de la page.
 
           branch: emission-${{ inputs.collection }}-${{ inputs.number }}

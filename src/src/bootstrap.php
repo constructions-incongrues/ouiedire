@@ -110,7 +110,7 @@ function getYears(array $shows)
         $releasedAt = new DateTime($show['releasedAt']);
         $year = $releasedAt->format('Y');
         $years[$year] = $year;
-    }    
+    }
     $years = array_unique($years);
     $yearMin = min($years);
     $yearMax = max($years);
@@ -220,12 +220,13 @@ function getShow($id, Silex\Application $app = null) {
 
     $show['urlDownloadMp3'] = null;
     $show['urlDownloadFlac'] = null;
+    $show['slugDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
 
     if ($fileMp3->isReadable()) {
-        $show['urlDownloadMp3'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
+        $show['urlDownloadMp3'] = $show['slugDownload'].'.mp3';
     }
     if ($fileFlac->isReadable()) {
-        $show['urlDownloadFlac'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s.flac', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
+        $show['urlDownloadFlac'] = $show['slugDownload'].'.flac';
     }
 
     if ($show['urlDownloadMp3'] === null && $show['urlDownloadFlac'] === null) {

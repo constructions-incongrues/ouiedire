@@ -32,3 +32,6 @@ __pycache__/
 
 # phpunit
 /src/.phpunit.result.cache
+
+# rapport de couverture genere par bin/coverage-check.php
+/clover.xml

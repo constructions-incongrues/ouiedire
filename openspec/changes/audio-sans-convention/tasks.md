@@ -11,7 +11,7 @@ dépôt n'a aucune suite : elle se pose avant d'écrire une ligne de production.
 **Écarts constatés à l'exécution, et consignés :** Composer épinglé à 2.8.12
 (à partir de 2.9 il refuse les paquets sous avis de sécurité, ce dépôt en compte
 23), `unzip` ajouté à l'image d'installation, `.gitignore` étendu au cache
-PHPUnit, `.dockerignore` créé. La couverture est mesurée par `bin/coverage-check`
+PHPUnit, `.dockerignore` créé. La couverture est mesurée par `bin/coverage-check.php`
 et non par `--coverage-text` — voir groupe 2 bis.
 
 ## 2. Découverte de l'audio et ordre, tests d'abord
@@ -33,8 +33,8 @@ fonctions libres ni le détail par fichier, et son total est capturé par les 50
 instructions non couvertes de `bootstrap.php`. Le seuil de 90 % y est
 inatteignable par construction. Défaut du plan, trouvé en relecture.
 
-- [ ] 2bis.1 Écrire les tests de `coverage-check` : seuil atteint, seuil manqué, **fichier absent du rapport**, rapport illisible
-- [ ] 2bis.2 Implémenter `bin/coverage-check` : lecture de Clover, ratio par fichier, un fichier absent est un échec
+- [ ] 2bis.1 Écrire les tests de `coverage-check.php` : seuil atteint, seuil manqué, **fichier absent du rapport**, rapport illisible
+- [ ] 2bis.2 Implémenter `bin/coverage-check.php` : lecture de Clover, ratio par fichier, un fichier absent est un échec
 - [ ] 2bis.3 Vérifier le contrôle de bout en bout sur le vrai rapport de couverture
 - [ ] 2bis.4 Déclarer la commande de seuil dans `CLAUDE.local.md`
 

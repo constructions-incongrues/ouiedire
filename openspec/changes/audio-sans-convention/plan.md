@@ -2252,7 +2252,7 @@ git commit -m "docs: le nom du fichier audio n'a plus d'importance"
 
 ## Task 8: Vérification d'ensemble et bascule
 
-- [ ] **Step 1: Aucune émission ne change de fichier servi**
+- [x] **Step 1: Aucune émission ne change de fichier servi**
 
 ```bash
 docker run --rm -v .:/app -w /app/src php:7.4-cli php -r '
@@ -2268,21 +2268,68 @@ echo "$n emissions, $ko sans audio\n";'
 
 Attendu : `367 emissions, 0 sans audio` avec les fixtures posées par `bin/dev-audio-fixtures`.
 
-- [ ] **Step 2: Suite complète et couverture**
+**Relevé, tel quel :** `367 emissions, 0 sans audio`.
+
+**Et ce chiffre ne dit pas ce qu'on aimerait qu'il dise.** Les 367 fichiers audio
+présents dans l'arbre font **tous zéro octet** — mesuré : `find … -size 0` en
+compte 367, `! -size 0` en compte 0. Ce sont les fixtures de
+`bin/dev-audio-fixtures`, gitignorées (`.gitignore:17 *.mp3`), et le script les
+nomme en appelant l'application elle-même : `ouiedire_<type>-<number>_<authors>_<title>.mp3`
+avec le `number` **déjà rempli** par `getShow()`. **Sans ces fixtures, le même
+relevé rendrait `367 emissions, 367 sans audio`** : le dépôt ne contient aucun
+vrai fichier audio, ils vivent sur Nextcloud.
+
+Conséquence à porter en revue : ce Step vérifie que le balayage **trouve** un
+fichier et que la règle de publication ne dégrade personne. Il ne vérifie pas
+que le fichier trouvé est le même qu'avant sur l'archive réelle, et il ne le
+peut pas depuis ce dépôt. La même réserve vaut, rétroactivement, pour les
+mesures « 231/367 » et « 367/367 » consignées plus bas : elles portent sur des
+fixtures nommées par la convention **par construction**, pas sur les noms
+réellement déposés sur Nextcloud. Ce qu'elles établissent reste vrai — que les
+deux formes du préfixe se comportent comme annoncé sur des noms canoniques —
+mais elles ne mesurent pas le désordre de l'archive réelle, qui est le motif du
+change.
+
+- [x] **Step 2: Suite complète et couverture**
+
+**Ce step prescrivait `--coverage-text`, et c'est un défaut du plan.** C'est le
+constat même qui a motivé la Task 3 : `--coverage-text` ne rend ni les fonctions
+libres ni le détail par fichier, et son total est capturé par `bootstrap.php`.
+Il ne peut pas exprimer le seuil que `sdr-004` demande. La commande retenue est
+celle documentée dans `CLAUDE.local.md` :
 
 ```bash
-docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit --coverage-text
+docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit
+docker run --rm -v .:/app -w /app/src ouiedire-test sh -c \
+  "vendor/bin/phpunit --coverage-clover /app/clover.xml 2>/dev/null && \
+   php /app/bin/coverage-check.php /app/clover.xml src/src/audio.php 90"
 ```
 
-Attendu : tous les tests au vert, `src/audio.php` au-dessus de 90 %.
+Relevé, tel quel :
 
-- [ ] **Step 3: Valider le change**
+```
+OK (78 tests, 871 assertions)
+/app/src/src/audio.php : 100.00 % (53/53), seuil 90.00 %
+```
+
+78 tests et non 75 : les trois du harnais `BootstrapShowTest`, versé plus bas.
+
+**Et la même commande sur `bootstrap.php` rend `0.00 % (0/492)`, code 1.** Ce
+n'est pas une régression, c'est le constat de la Task 5 chiffré : la suite
+n'amorce pas `bootstrap.php`, et le harnais qui le juge tourne dans un
+**processus fils**, invisible de pcov. Sa garantie est de mutation, pas de
+couverture de ligne — les deux mesures ne se remplacent pas, et prétendre le
+contraire serait exactement le silence que ce change traque.
+
+- [x] **Step 3: Valider le change**
 
 ```bash
 openspec validate audio-sans-convention --type change --strict
 ```
 
 Attendu : `Change 'audio-sans-convention' is valid`.
+
+Relevé, tel quel : `Change 'audio-sans-convention' is valid`, code de retour `0`.
 
 - [ ] **Step 4: Après déploiement, relever le gain réel**
 
@@ -2294,6 +2341,217 @@ done
 ```
 
 Chaque `RÉAPPARUE` est une émission dont l'audio existait sous un autre nom. Les absentes n'ont jamais eu de fichier — ce change n'y peut rien, et c'est la mesure qui le dit.
+
+**Ce step reste décoché : il se lance après déploiement, et rien ici ne le
+remplace.** Ce qui a été fait, c'est le préparer.
+
+**Les cinq dossiers existent, et portent chacun un `index.json`.** Relevé :
+
+```
+ailleurs-97    dossier=oui  index.json=oui  audios=1
+ailleurs-115   dossier=oui  index.json=oui  audios=1
+ailleurs-234   dossier=oui  index.json=oui  audios=1
+ailleurs-304   dossier=oui  index.json=oui  audios=1
+ailleurs-316   dossier=oui  index.json=oui  audios=1
+```
+
+**Les cinq sont déjà servies en local, et cela change le sens de la mesure
+d'après déploiement.** Relevé par `getShow()` :
+
+```
+ailleurs-97    isPublic=true  mp3=ouiedire_ailleurs-097_sammy-stein_un-nouveau-dpart.mp3
+ailleurs-115   isPublic=true  mp3=ouiedire_ailleurs-115_fabien-aka-terrificolor_paiens-paillette.mp3
+ailleurs-234   isPublic=true  mp3=ouiedire_ailleurs-234_silicate_original-motion-picture-soundtrack.mp3
+ailleurs-304   isPublic=true  mp3=ouiedire_ailleurs-304_damien-schultz_n-a.mp3
+ailleurs-316   isPublic=true  mp3=ouiedire_ailleurs-316_ff-jean-et-johan_la-zone-en-96--30-doigts.mp3
+```
+
+L'unique audio de chacun des cinq est une **fixture de zéro octet** posée par
+`bin/dev-audio-fixtures`, sous le nom canonique que l'application calcule
+elle-même. Le local ne peut donc **rien** dire de ces cinq émissions : il répond
+à la question « le balayage trouve-t-il un fichier canonique que j'ai moi-même
+posé ? », jamais « un fichier existe-t-il sur Nextcloud sous un autre nom ? ».
+
+Ce que le Step 4 mesurera après déploiement garde donc tout son sens, et lui
+seul : un `RÉAPPARUE` dira qu'un audio existait sous un nom que l'ancienne
+convention refusait ; un `toujours absente` dira qu'il n'y a pas de fichier du
+tout. Aucune des deux réponses n'est prédite ici.
+
+---
+
+## Ce que la relecture a ajouté au périmètre
+
+### `bootstrap.php` était hors de toute suite, et c'est là que le dernier défaut vivait
+
+Le correctif post-Task 6 le disait déjà pour M14 : `bootstrap.php` n'est pas
+amorcé par PHPUnit, et son seul juge était un script `var_export()` **non
+versionné**, recopié dans ce document. Une garantie qui tient à ce que
+quelqu'un pense à lancer un script à la main n'en est pas une.
+
+**Trois mutations ont été réellement appliquées à `bootstrap.php`, la suite
+relancée, puis le fichier restauré** — restauration vérifiée par `md5` après
+chacune (`93783f321473d3dddf85976b0f2e0196`), `diff` étant proxifié dans cet
+environnement.
+
+| # | Mutation dans `bootstrap.php` | Effet mesuré sur l'archive | Verdict |
+| --- | --- | --- | --- |
+| B1 | `getShow()` n'appelle plus `paddedShowNumber()` | **136 émissions divergent** sur la clé `number` | tuable, et tué |
+| B2 | `paddedShowNumber()` appliquée **deux fois** | **0 émission ne diverge** | **équivalent réel** |
+| B3 | le préfixe des couvertures passe au numéro **rempli** | **1 émission diverge** : `bagage-7` | tuable, et tué |
+
+**B2 est un mutant équivalent, et le brief de relecture le supposait tuable.**
+Il ne l'est plus depuis le commit `b8e1a9e1` : `paddedShowNumber()` découpe les
+chiffres de tête par expression régulière et est donc **idempotente**. Écrire un
+test contre B2 reviendrait à tenir une différence qui n'existe pas. Mesuré, pas
+argumenté : le relevé sur les 367 émissions est identique octet pour octet.
+
+**B3 n'est observable que sur `bagage-7`, et il fallait le chercher.** Sur les
+367 dossiers, 7 portent plusieurs couvertures ; 4 d'entre eux ont un numéro dont
+les formes brute et remplie diffèrent ; et un seul — `bagage-7` — porte **aussi
+la couverture d'une autre émission** (`ouiedire_bagage-6_cover-2.png`). Avec le
+préfixe brut, la sienne est reconnue et passe devant. Avec un préfixe rempli,
+plus rien ne la distingue, et l'étrangère gagne au tri alphabétique — donc en
+`og:image` et dans le flux RSS, qui lisent `covers[0]` sans garde. Sur les six
+autres dossiers, la mutation ne change rien.
+
+### La forme retenue : un test, pas un script sous `bin/`
+
+Les deux options étaient ouvertes. **Retenu : un test**,
+`src/tests/BootstrapShowTest.php`, appuyé sur
+`src/tests/support/probe-bootstrap.php`.
+
+- **Un script sous `bin/` aurait le défaut qu'on cherche à corriger** : son seul
+  juge resterait quelqu'un qui pense à le lancer. Le versionner rend le script
+  relisible, pas la vérification obligatoire.
+- **Le test tourne avec la commande déjà documentée**, `vendor/bin/phpunit`. Il
+  n'y a rien de nouveau à retenir.
+
+**Le risque d'écriture signalé en relecture a été mesuré, et il ne se réalise
+pas ici.** Il venait de l'idée d'un *dossier de fixtures* : `$pathPublic` est
+codé en dur dans `getShow()`, donc un tel dossier devrait être posé **dans
+l'arbre versionné des émissions**. Le test ne pose rien. Il lit l'archive
+réelle, et `getShow()` n'écrit pas : elle ouvre `index.json` en lecture et
+balaye le dossier avec `Finder`. Vérifié par ailleurs que `bootstrap.php`
+n'appelle aucun `->run()` à l'inclusion — c'est `src/public/index.php` qui le
+fait — donc l'inclure ne sert aucune requête.
+
+**Le relevé tourne dans un processus fils**, par le procédé de
+`CoverageCheckTest::runCli()`. Charger `bootstrap.php` dans le processus de la
+suite y poserait un `$app` Silex, une locale et une trentaine de fonctions
+globales, pour tous les autres tests. Le prix est que **pcov ne voit pas ce
+processus** : `bootstrap.php` reste à `0.00 % (0/492)` de couverture de ligne.
+C'est dit plutôt que masqué — la garantie de ce fichier est de mutation.
+
+Le test refuse aussi la moindre ligne sur `stderr` du relevé : un avertissement
+PHP sur le chemin de `getShow()` est un défaut, et il ne doit pas se perdre dans
+un relevé par ailleurs vert.
+
+**Commande** : celle de la suite. Elle est déclarée dans `CLAUDE.local.md`,
+section `## Testing (ce dépôt)`, avec un paragraphe sur ce que ce harnais est
+seul à tenir.
+
+### Conformité au spec, exigence par exigence
+
+Ce qui suit oppose `specs/emission-contenu/spec.md` à ce que le dépôt tient
+réellement. Un test nommé, une mesure, ou rien.
+
+#### Requirement: Découverte du fichier audio
+
+| Énoncé | Ce qui le tient |
+| --- | --- |
+| tout fichier au format attendu est l'audio, quel que soit son nom | `AudioTest::testTrouveUnFichierAuNomLibre`, `::testLExtensionEstReconnueQuelleQueSoitLaCasse` |
+| ne pas exiger un nom dérivé du titre / des auteurices / du type / du numéro | `AudioTest::testTrouveUnFichierAuNomLibre` (aucun préfixe dans le nom retenu) ; et le retrait de `slugDownload`, vérifié Task 6 |
+| chercher **séparément** chaque format | `AudioTest::testDistingueLesFormats`, `::testNeTrouveRienQuandLeDossierNaPasCeFormat` ; `AudioDownloadsTest::testLesDeuxFormatsNeSontPasPermutes` |
+| plusieurs fichiers d'un même format : la convention d'abord, puis l'alphabétique, dans chaque groupe | `::testLaConventionPasseDevant`, `::testAlphabetiqueDepartageDansChaqueGroupe`, `::testDeuxFichiersConformesSontDepartagesParLesOctets`, `::testLaConventionDuneAutreEmissionNeGagnePas`, `::testUnFichierQuiMentionneLaConventionSansCommencerParElleNePassePasDevant` |
+
+| Scénario | Ce qui le tient |
+| --- | --- |
+| Audio déposé sous un nom libre | `AudioTest::testTrouveUnFichierAuNomLibre` + `AudioDownloadsTest::testLUrlEncodeLeNomRetenu` (le nom libre produit bien une URL de téléchargement) |
+| Dossier comportant plusieurs fichiers d'un même format | `AudioTest::testLaConventionPasseDevant` |
+| Même émission servie depuis deux environnements | `AudioTest::testLOrdreRetenuEstCeluiDesOctetsPasCeluiDeLaCollation`, avec son garde-fou `exigeUneCollationQuiDiffereDesOctets()` — c'est le seul scénario du spec dont le témoin est une **collation** et non un jeu de fichiers |
+
+**Réserve, et elle est réelle :** l'énoncé « chercher séparément chaque format »
+est tenu **par le code de découverte**, pas par ce que la page offre. Voir
+l'observation sur le gabarit, ci-dessous.
+
+#### Requirement: Nom canonique au téléchargement
+
+| Énoncé | Ce qui le tient |
+| --- | --- |
+| nom canonique dérivé du type, du numéro, des auteurices et du titre | `AudioDownloadsTest::testLeNomCanoniquePorteLeNumeroRempli`, `::testLeNumeroArriveNonSlugifie`, `::testLesArgumentsDuNomCanoniqueNeSontPasPermutables` |
+| indépendant du nom du fichier stocké | `AudioTest::testLeNomCanoniqueNeDependPasDuFichierStocke` |
+| suit une correction du titre ou des auteurices | `ApplyAudioDownloadsTest::testLeNumeroSeLitDansLEmissionEtNEstPasSlugifie` et la fusion `applyAudioDownloads()`, qui lit les slugs **à chaque appel** — le nom n'est jamais mémorisé |
+
+| Scénario | Ce qui le tient |
+| --- | --- |
+| Téléchargement d'un fichier au nom libre | L'attribut `download` du gabarit, vérifié dans le HTML rendu (Task 6, Step 4) — **pas** l'enregistrement effectif sur le disque du visiteur |
+| Téléchargement après correction du titre | Même chose, plus la relecture du chemin d'appel |
+
+**Ce qui ne tient pas, et le dire est le point :** `tasks.md` 3.3 reste décochée.
+L'attribut `download` est vérifié dans le HTML ; qu'un navigateur enregistre
+réellement le fichier sous ce nom n'a été observé par personne dans ce dépôt.
+C'est une vérification manuelle, et elle n'a pas eu lieu.
+
+#### Requirement: Aucune publication sans audio (MODIFIED)
+
+| Énoncé | Ce qui le tient |
+| --- | --- |
+| ne pas rendre visible une émission sans audio, quel que soit `isPublic` | `ApplyAudioDownloadsTest::testUneEmissionPublieeSansAudioEstDepubliee` |
+| ne dégrade que, ne promeut jamais | `ApplyAudioDownloadsTest::testUneEmissionNonPublieeAvecAudioResteNonPubliee` face à `::testUneEmissionPublieeSansAudioEstDepubliee` — les deux sens, chacun son test |
+| un dossier contenant un fichier au format attendu n'est pas « dépourvu d'audio » | `AudioDownloadsTest::testUnMp3SeulSuffitAPublier`, `::testUnFlacSeulSuffitAPublier` ; et `::testUnLienCasseAbandonneLeNom` pour la limite |
+| corriger le titre ou les auteurices ne retire pas du public | **Aucun test direct.** Le raisonnement tient : `hasAudio` ne dépend plus d'aucun slug depuis que `findAudioFile()` balaye. Il est **structurel**, pas mesuré par un cas nommé. |
+
+| Scénario | Ce qui le tient |
+| --- | --- |
+| Émission complète mais sans audio | `AudioDownloadsTest::testSansAucunAudioRienNEstPublie` + `ApplyAudioDownloadsTest::testUneEmissionPublieeSansAudioEstDepubliee` |
+| Dépôt de l'audio | `ApplyAudioDownloadsTest::testUneEmissionPublieeAvecAudioRestePubliee` |
+| Correction du titre d'une émission publiée | **Rien de nommé.** Voir ci-dessus : la garantie est structurelle. Un test qui appellerait `applyAudioDownloads()` deux fois avec deux titres et vérifierait `isPublic` inchangé la rendrait opposable — il n'existe pas. |
+| Correction des auteurices d'une émission publiée | Idem. |
+
+**C'est le trou le plus net de ce bilan**, et c'est celui du scénario qui
+**motive** le change. Il n'est pas dangereux — la dépendance au slug a été
+retirée, pas contournée — mais il n'est tenu par aucun test nommé, et un
+relecteur a le droit de l'exiger.
+
+### Constat de relecture, antérieur à ce change : le gabarit n'offre qu'un format, et aucun sur mobile
+
+`src/views/emission.html.twig`, lignes 58-62 :
+
+```twig
+{% if show.urlDownloadFlac %}
+    <h3 class="showDownload hide-on-mobile"><a href="{{ show.urlDownloadFlac }}" download="…flac" …>
+{% elseif show.urlDownloadMp3 %}
+    <h3 class="showDownload hide-on-mobile"><a href="{{ show.urlDownloadMp3 }}" download="…mp3" …>
+{% endif %}
+```
+
+Deux faits mesurés :
+
+1. **`{% if %} / {% elseif %}` :** une émission qui porte les deux formats
+   n'offre **que le FLAC**. Le MP3 n'a pas de lien de téléchargement.
+2. **`hide-on-mobile` :** dans
+   `src/public/assets/css/unsemantic-grid-responsive.css` (celle que
+   `layout.default.html.twig` charge, variante `-tablet`), la règle est
+   `display: none !important;` sous la requête média mobile. **Aucun
+   téléchargement n'est offert sur mobile**, dans aucun format.
+
+Le spec dit pourtant : « un fichier compressé et un fichier sans perte sont
+**deux téléchargements distincts, pas deux candidats pour un même rôle** ». Le
+code de découverte l'honore — `findAudioFile()` est appelée une fois par format,
+et `audioDownloads()` rend les deux URL. Le gabarit ne l'honore pas.
+
+**C'est antérieur à ce change** : la structure `if/elseif` et `hide-on-mobile`
+existaient avant, la Task 6 n'a fait qu'ajouter l'attribut `download` dans les
+deux branches. **Consigné, pas corrigé** — le corriger serait un autre change,
+et il aurait à trancher ce que la page doit montrer sur mobile.
+
+**Second constat de la même famille, également antérieur :** `show.urlDownload`
+— sans suffixe de format — est initialisée à `null` dans `getShow()` et
+**jamais assignée**, avant comme après ce change (vérifié sur
+`git show <merge-base>:src/src/bootstrap.php`). Elle est pourtant lue par
+`emission.html.twig:129` (`window.MejsOuiedireDownloadUrl`), par
+`embed.html.twig:21` et `:25` (la source du lecteur embarqué), et par
+`bootstrap.php:668` (`urlencode()`). Consigné, pas corrigé.
 
 ---
 

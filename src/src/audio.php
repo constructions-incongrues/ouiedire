@@ -119,11 +119,14 @@ function canonicalDownloadName($typeSlug, $number, $authorsSlug, $titleSlug)
  */
 function paddedShowNumber($number)
 {
-    if ($number < 10) {
-        return '00'.$number;
-    }
-    if ($number < 100) {
-        return '0'.$number;
+    // Decoupage explicite plutot que « $number < 10 » : la comparaison lache
+    // compare des NOMBRES en PHP 7.4 et des CHAINES en PHP 8, si bien que
+    // « 17bis » cesserait d'etre rempli a la montee de version, sans un mot.
+    // Isoler les chiffres de tete ne depend d'aucune des deux, et rend la
+    // fonction idempotente — elle est appelee depuis getShow() ET depuis
+    // audioDownloads().
+    if (preg_match('/^(\d+)(.*)$/', $number, $parts)) {
+        return str_pad($parts[1], 3, '0', STR_PAD_LEFT).$parts[2];
     }
 
     return $number;
@@ -156,14 +159,24 @@ function paddedShowNumber($number)
  */
 function audioDownloads($directory, $urlAssets, $typeSlug, $number, $authorsSlug, $titleSlug)
 {
-    // Les deux formes du numero, a egalite. La brute est celle du dossier et
-    // des couvertures ; la remplie est celle des 367 audios de l'archive, sans
-    // exception. Le `if` evite un doublon quand elles coincident (numeros >= 100).
+    // Les deux formes du numero, a egalite.
+    //
+    // La remplie est celle des 367 audios de l'archive : mesure, AUCUN fichier
+    // audio n'emploie la forme brute la ou les deux different. La brute n'est
+    // donc pas justifiee par les audios — c'est la forme que portent le dossier
+    // et les couvertures, et une provision pour un depot futur sous cette
+    // forme, que l'outil d'edition rend possible. C'est un pari sur demain,
+    // enonce comme tel, et testLaConventionResteReconnueSurLeNumeroBrut le rend
+    // opposable.
+    //
+    // Aucune garde contre le doublon quand les deux coincident (numeros >= 100) :
+    // un prefixe repete n'est observable par rien, donc aucun test ne peut tuer
+    // la ligne qui l'evite — meme raison qui a fait retirer le `break` ci-dessus.
+    $conventionPrefixes = array(
+        sprintf('ouiedire_%s-%s_', $typeSlug, $number),
+        sprintf('ouiedire_%s-%s_', $typeSlug, paddedShowNumber($number)),
+    );
     $paddedNumber = paddedShowNumber($number);
-    $conventionPrefixes = array(sprintf('ouiedire_%s-%s_', $typeSlug, $number));
-    if ($paddedNumber !== $number) {
-        $conventionPrefixes[] = sprintf('ouiedire_%s-%s_', $typeSlug, $paddedNumber);
-    }
     $nameMp3 = findAudioFile($directory, 'mp3', $conventionPrefixes);
     $nameFlac = findAudioFile($directory, 'flac', $conventionPrefixes);
 

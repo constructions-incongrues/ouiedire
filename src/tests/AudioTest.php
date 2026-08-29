@@ -225,6 +225,31 @@ class AudioTest extends TestCase
         $this->assertSame('017bis', paddedShowNumber('17bis'));
     }
 
+    public function testLeRemplissageEstIdempotent()
+    {
+        // paddedShowNumber() est devenue une regle partagee : getShow() l'appelle
+        // et audioDownloads() aussi. Un second passage ne doit rien ajouter,
+        // sinon un appel en double produirait « 00001 » sans que rien ne le voie.
+        $this->assertSame('001', paddedShowNumber(paddedShowNumber('1')));
+        $this->assertSame('017bis', paddedShowNumber(paddedShowNumber('17bis')));
+        $this->assertSame('331', paddedShowNumber(paddedShowNumber('331')));
+    }
+
+    public function testLeRemplissageIsoleLesChiffresDeTete()
+    {
+        // Le suffixe non numerique est conserve tel quel, et le remplissage ne
+        // porte que sur les chiffres de tete — jamais sur la longueur totale.
+        //
+        // Ce que ce test NE peut pas montrer, et qu'il faut dire : la raison
+        // d'avoir quitte « $number < 10 » est une divergence PHP 8, ou cette
+        // comparaison devient une comparaison de CHAINES et cesse de remplir
+        // « 17bis ». L'image est epinglee a PHP 7.4 : le temoin de cette
+        // divergence n'est pas constructible ici. Le motif est au docblock.
+        $this->assertSame('007-special', paddedShowNumber('7-special'));
+        $this->assertSame('100e', paddedShowNumber('100e'));
+        $this->assertSame('sans-numero', paddedShowNumber('sans-numero'));
+    }
+
     public function testLesDeuxFormesDuNumeroSontReconnues()
     {
         // findAudioFile() recoit plusieurs prefixes, pas un : l'archive nomme

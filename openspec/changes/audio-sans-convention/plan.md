@@ -2156,6 +2156,14 @@ sans dépendance à `iconv` — et qui mesure ce que le renommage déplace pour 
   régression : `slugDownload` proposait déjà le numéro non rempli, et la Task 4 a
   épinglé ce contrat. C'est simplement, maintenant, un nom qui atterrit sur un
   disque.
+
+  > **Ce constat a été renversé, et le tableau de rendu ci-dessus avec lui.** Ce
+  > qu'il décrivait comme un écart acceptable était le symptôme visible d'un
+  > défaut : le préfixe de convention était bâti sur le numéro brut, et **136
+  > émissions sur 367 n'étaient pas reconnues comme conformes**. Voir
+  > « Correctif post-Task 6 », plus bas. Depuis, le nom proposé porte le numéro
+  > rempli et coïncide avec le fichier stocké sur les 367 : le `download=` de
+  > `ailleurs-54` vaut `ouiedire_ailleurs-054_…`.
 - **Une correction héritée, relevée en Task 5, devient visible ici.** L'ancien
   code abaissait toute l'URL ; le nouveau n'abaisse que l'étiquette
   d'enregistrement. Un fichier portant une majuscule sur le disque ne reçoit plus
@@ -2306,6 +2314,39 @@ convention passe devant », cœur de la Task 2 et défendue par onze mutations,
 était **inerte**. Rien n'était cassé pour autant : un seul audio par dossier,
 donc le repli alphabétique trouvait le fichier. C'est la garantie qui manquait,
 pas le résultat.
+
+### Trois retouches apportées en relecture
+
+1. **`paddedShowNumber()` ne compare plus « `$number < 10` ».** Cette comparaison
+   compare des **nombres** sous PHP 7.4 et des **chaînes** sous PHP 8 : à la
+   montée de version, `17bis` aurait cessé d'être rempli, sans un mot. Le
+   découpage par expression régulière n'en dépend pas — et il rend la fonction
+   **idempotente**, ce qui compte depuis qu'elle est appelée à deux endroits
+   (`getShow()` et `audioDownloads()`) : l'ancienne forme rendait `'007'` →
+   `'00007'`. Cinq mutations appliquées sur la nouvelle, cinq mortes. Le témoin
+   de la divergence PHP 8 n'est pas constructible ici, l'image étant épinglée à
+   7.4 : le motif est au docblock, et le test le **dit** plutôt que de prétendre
+   le montrer.
+2. **La garde `if ($paddedNumber !== $number)` est retirée.** Un préfixe répété
+   n'est observable par rien, donc aucun test ne peut tuer la ligne qui l'évite —
+   exactement le raisonnement qui a fait retirer le `break`. Appliquer le principe
+   à une ligne et pas à l'autre n'était pas tenable.
+3. **Le commentaire qui justifiait le préfixe brut disait faux.** Il invoquait
+   « le dossier et les couvertures » comme s'ils étaient une preuve sur le nommage
+   des **audios**. Mesure : **aucun** des 367 audios n'emploie la forme brute là
+   où les deux diffèrent. Le préfixe brut est une **provision** pour un dépôt
+   futur sous cette forme, pas un constat — et c'est ce que le commentaire dit
+   maintenant.
+
+Comportement inchangé sur les 367 émissions après ces retouches, vérifié par
+instantané (`md5` et `cmp` — voir l'avertissement sur `diff`, ci-dessous).
+
+**Avertissement d'outillage, valable au-delà de ce change.** `diff` et `git`
+sont proxifiés dans cet environnement et leur sortie est réécrite. Mesuré :
+`diff` a rendu `rc=0` et « Files are identical » sur deux fichiers de `md5`
+différents, et `git status --porcelain` a rapporté un fichier modifié sur un
+arbre propre. Ce n'est pas déterministe. Toute vérification passe par
+`/usr/bin/diff`, `cmp -s` ou `md5`.
 
 ### Ce qui a été écarté, et pourquoi
 

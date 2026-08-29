@@ -32,7 +32,9 @@ Le système MUST enregistrer toute modification dans l'historique de version du 
 
 L'outil d'édition MUST permettre de créer une émission, et cette création MUST produire une émission dont le contenu éditorial est complet.
 
-L'identifiant de l'émission créée MUST respecter la forme `<type>-<numéro>`. L'outil MUST NOT permettre d'enregistrer une émission dont l'identifiant dériverait du titre ou de toute autre valeur libre.
+L'identifiant de l'émission créée MUST respecter la forme `<type>-<numéro>`, et MUST être saisi explicitement : l'outil MUST NOT le dériver du titre ni d'aucune autre valeur libre.
+
+L'outil ne peut pas valider cette forme par configuration, faute de quoi il faudrait dupliquer l'identité de l'émission dans son contenu. Une émission dont l'identifiant ne respecte pas la forme MUST donc rester invisible du public plutôt que de s'afficher incorrectement.
 
 Le circuit de création existant, qui produit le squelette complet d'une émission, MUST rester disponible : la création depuis l'outil d'édition en est un second chemin, non un remplacement.
 
@@ -40,9 +42,13 @@ Le circuit de création existant, qui produit le squelette complet d'une émissi
 - **WHEN** un mainteneur crée une émission de type `Ailleurs` portant le numéro `332`
 - **THEN** l'émission est enregistrée sous l'identifiant `ailleurs-332` et devient résolvable
 
-#### Scenario: Identifiant non conforme refusé
-- **WHEN** un mainteneur tente d'enregistrer une émission dont l'identifiant ne respecte pas la forme `<type>-<numéro>`
-- **THEN** l'enregistrement est refusé et l'émission n'est pas créée
+#### Scenario: Identifiant saisi explicitement
+- **WHEN** un mainteneur crée une émission
+- **THEN** un champ d'identifiant obligatoire lui est présenté, et l'identifiant n'est à aucun moment déduit du titre
+
+#### Scenario: Identifiant non conforme
+- **WHEN** une émission est enregistrée avec un identifiant ne respectant pas la forme `<type>-<numéro>`
+- **THEN** elle n'est résolvable par aucune page et n'apparaît dans aucune liste publique, jusqu'à ce que son dossier soit renommé
 
 #### Scenario: Émission créée sans audio
 - **WHEN** une émission vient d'être créée depuis l'outil d'édition et qu'aucun audio n'a encore été déposé

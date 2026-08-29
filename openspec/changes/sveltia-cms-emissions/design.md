@@ -99,7 +99,13 @@ Une émission créée depuis le CMS obtient un `index.json` (décision 1) et une
 
 **Le garde-fou existe déjà dans le code :** sans MP3 ni FLAC, `isPublic` est forcé à faux ([:232-234](../../../src/src/bootstrap.php:232)). Entre la création de l'entrée et le dépôt de l'audio, l'émission existe mais reste invisible du public, quelle que soit la valeur d'`isPublic` saisie dans le CMS. **Le CMS ne peut donc pas publier une émission sans audio.** C'est ce qui rend `create: true` sûr, et cela ne demande aucun code nouveau.
 
-**Contrainte de nommage :** `getShow()` dérive le type et le numéro du nom de dossier par `explode('-', $id)` ([:145-154](../../../src/src/bootstrap.php:145)). Le slug produit par le CMS doit donc être exactement `<typeslug>-<numéro>`. Un slug libre — dérivé du titre, par exemple — casserait la résolution de l'émission.
+**Contrainte de nommage :** `getShow()` dérive le type et le numéro du nom de dossier par `explode('-', $id)` ([:145-154](../../../src/src/bootstrap.php:145)). Le slug produit par le CMS doit donc être exactement `<typeslug>-<numéro>`.
+
+Le slug est saisi via `{{fields._slug}}`, qui fait apparaître un champ obligatoire à la création. L'identifiant n'est donc jamais déduit du titre — ce qui est l'essentiel.
+
+**La forme, elle, n'est pas validée**, et ce choix est délibéré. L'imposer demanderait un gabarit `{{type}}-{{number}}`, donc de porter le type et le numéro *dans* `index.json` alors qu'ils sont déjà portés par le nom de dossier. Or `type` y figure sans qu'aucun code ne le lise, et un `number` ajouté le serait tout autant : deux copies d'une identité qui vit ailleurs, libres de diverger dès la première édition. Le remède serait pire que le mal.
+
+Le coût de ne pas valider a été mesuré : un dossier nommé `ailleurs999` donne un **404** et n'apparaît dans aucune liste. La faute est silencieuse pour le public et immédiatement visible pour qui vient de créer l'émission — il suffit de renommer le dossier. Aucune donnée n'est perdue.
 
 La GitHub Action `emission.yml` + cookiecutter reste disponible en parallèle : le CMS n'est pas le seul chemin de création, il en devient un second, plus léger, pour le contenu et la cover.
 

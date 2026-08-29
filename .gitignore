@@ -26,3 +26,6 @@ nohup.out
 
 # artefacts python des outils de migration
 __pycache__/
+
+# outillage javascript
+/node_modules

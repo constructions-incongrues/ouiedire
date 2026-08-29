@@ -167,4 +167,50 @@ class AudioTest extends TestCase
 
         $this->assertSame('MIX.MP3', findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_'));
     }
+
+    public function testLeNomCanoniqueNeDependPasDuFichierStocke()
+    {
+        $this->assertSame(
+            'ouiedire_ailleurs-331_rachitik-data_la-pompa-chalor-vol-3',
+            canonicalDownloadName('ailleurs', '331', 'rachitik-data', 'la-pompa-chalor-vol-3')
+        );
+    }
+
+    public function testLeNomCanoniqueEstEnMinuscules()
+    {
+        // Le contrat retenu : la fonction assemble et met en minuscules, elle ne
+        // slugifie pas. Le strtolower() n'est pas decoratif — getShow() slugifie
+        // les trois slugs mais pas $number, qui vient tel quel du segment d'URL.
+        $this->assertSame(
+            'ouiedire_ailleurs-331_dj_titre',
+            canonicalDownloadName('Ailleurs', '331', 'DJ', 'Titre')
+        );
+    }
+
+    public function testLeNomCanoniqueMetLeNumeroEnMinuscules()
+    {
+        // Le seul argument que getShow() ne slugifie pas, donc le seul dont la
+        // mise en minuscules soit observable en production. Sans ce test, ne
+        // baisser que les trois autres passe la suite : le strtolower() serait
+        // argumente au docblock et tenu par rien.
+        // « 17BIS » n'est pas invente : le dossier ailleurs-17bis existe, et la
+        // route /emission/{type}-{id} ne contraint pas {id}.
+        $this->assertSame(
+            'ouiedire_ailleurs-17bis_dj_titre',
+            canonicalDownloadName('ailleurs', '17BIS', 'dj', 'titre')
+        );
+    }
+
+    public function testLeNomCanoniqueLaisseLesAccentsIntacts()
+    {
+        // strtolower() compare des octets : il ne touche pas a l'UTF-8. Ce depot
+        // s'est deja fait mordre par la (84 artistes perdus au change precedent),
+        // donc le comportement est constate ici plutot que suppose. Ce n'est pas
+        // une lacune : la transliteration est le travail de slugify(), que
+        // l'appelant applique en amont et qui vit dans bootstrap.php.
+        $this->assertSame(
+            'ouiedire_ailleurs-331_dj_Été',
+            canonicalDownloadName('Ailleurs', '331', 'DJ', 'Été')
+        );
+    }
 }

@@ -1121,7 +1121,7 @@ git commit -m "test: controle de couverture par fichier via Clover"
 - Modify: `src/src/audio.php`
 - Modify: `src/tests/AudioTest.php`
 
-- [ ] **Step 1: Écrire le test qui échoue**
+- [x] **Step 1: Écrire les tests qui échouent**
 
 Ajouter dans `src/tests/AudioTest.php` :
 
@@ -1136,22 +1136,91 @@ Ajouter dans `src/tests/AudioTest.php` :
 
     public function testLeNomCanoniqueEstEnMinuscules()
     {
+        // Le contrat retenu : la fonction assemble et met en minuscules, elle ne
+        // slugifie pas. Le strtolower() n'est pas decoratif — getShow() slugifie
+        // les trois slugs mais pas $number, qui vient tel quel du segment d'URL.
         $this->assertSame(
             'ouiedire_ailleurs-331_dj_titre',
             canonicalDownloadName('Ailleurs', '331', 'DJ', 'Titre')
         );
     }
+
+    public function testLeNomCanoniqueMetLeNumeroEnMinuscules()
+    {
+        // Le seul argument que getShow() ne slugifie pas, donc le seul dont la
+        // mise en minuscules soit observable en production. Sans ce test, ne
+        // baisser que les trois autres passe la suite : le strtolower() serait
+        // argumente au docblock et tenu par rien.
+        // « 17BIS » n'est pas invente : le dossier ailleurs-17bis existe, et la
+        // route /emission/{type}-{id} ne contraint pas {id}.
+        $this->assertSame(
+            'ouiedire_ailleurs-17bis_dj_titre',
+            canonicalDownloadName('ailleurs', '17BIS', 'dj', 'titre')
+        );
+    }
+
+    public function testLeNomCanoniqueLaisseLesAccentsIntacts()
+    {
+        // strtolower() compare des octets : il ne touche pas a l'UTF-8. Ce depot
+        // s'est deja fait mordre par la (84 artistes perdus au change precedent),
+        // donc le comportement est constate ici plutot que suppose. Ce n'est pas
+        // une lacune : la transliteration est le travail de slugify(), que
+        // l'appelant applique en amont et qui vit dans bootstrap.php.
+        $this->assertSame(
+            'ouiedire_ailleurs-331_dj_Été',
+            canonicalDownloadName('Ailleurs', '331', 'DJ', 'Été')
+        );
+    }
 ```
 
-- [ ] **Step 2: Vérifier que ça échoue**
+**Le contrat, tranché.** Le squelette de cette tâche se contredisait : son
+docblock annonçait « les arguments arrivent déjà slugifiés », et son second test
+passait `'Ailleurs'`, `'DJ'`, `'Titre'` en attendant une mise en minuscules. Les
+deux ne peuvent pas être vrais — si tout arrive slugifié, `strtolower()` est mort
+et le test le certifie sans rien exiger.
+
+Ce qui est retenu : **la fonction assemble et met en minuscules ; elle ne
+slugifie pas.** Trois faits l'imposent, tous vérifiés dans le code :
+
+1. `slugify()` vit dans `bootstrap.php`, et `audio.php` n'en dépend pas — c'est
+   `bootstrap.php` qui requiert `audio.php` (Task 5), jamais l'inverse. La
+   fonction ne peut donc pas slugifier, et n'a pas à le faire.
+2. `getShow()` slugifie bien `type`, `authors` et `title`, mais **pas**
+   `$show['number']`, qui vaut `explode('-', $id)[1]` — le second segment de
+   l'URL, tel quel. Le `strtolower()` porte donc sur un argument réellement non
+   normalisé : il n'est pas décoratif.
+3. C'est exactement ce que faisait `slugDownload`, qui enveloppait le même
+   `sprintf()` complet dans `strtolower()`. Retirer l'appel serait un changement
+   de comportement que ce change n'a pas demandé.
+
+Le troisième test tient la tension 1 par sa mesure : `$number` est le seul
+argument que `getShow()` ne slugifie pas, donc le seul dont la mise en minuscules
+soit observable en production. Sans lui, ne baisser que les trois autres passe la
+suite (M11 dans la table plus bas), et le `strtolower()` reste argumenté au
+docblock sans être tenu par quoi que ce soit. `17BIS` n'est pas inventé : le
+dossier `ailleurs-17bis` existe, et la route `/emission/{type}-{id}` ne pose
+aucune contrainte sur `{id}`.
+
+Le quatrième test vient de la seconde tension : `strtolower()`
+compare des **octets**, pas de l'UTF-8. Ce dépôt s'est déjà fait mordre par là au
+change précédent (84 artistes perdus). Le comportement est donc **constaté**
+plutôt que supposé : une entrée accentuée ressort avec ses accents et leur casse
+intacts — `'Été'` reste `'Été'`, le `É` de tête compris. Ce n'est pas une lacune
+sous le contrat retenu : la translittération est le travail de `slugify()`, que
+l'appelant applique en amont. C'est une lacune **écrite**, donc opposable, et qui
+échouera bruyamment si quelqu'un décide un jour l'inverse.
+
+- [x] **Step 2: Vérifier que ça échoue**
 
 ```bash
 docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit --filter canonique
 ```
 
-Attendu : `Error: Call to undefined function canonicalDownloadName()`.
+Mesuré : `Error: Call to undefined function Ouiedire\Tests\canonicalDownloadName()`
+sur les trois tests. Le nom est résolu dans le namespace du test — d'où le
+préfixe `Ouiedire\Tests\`, que PHP ajoute avant de retomber sur l'espace global.
 
-- [ ] **Step 3: Implémenter**
+- [x] **Step 3: Implémenter**
 
 Ajouter à la fin de `src/src/audio.php` :
 
@@ -1159,8 +1228,26 @@ Ajouter à la fin de `src/src/audio.php` :
 /**
  * Nom sous lequel le public telecharge l'audio, quel que soit le nom stocke.
  *
- * Les arguments arrivent deja slugifies : cette fonction n'a pas de dependance
- * a slugify(), qui vit dans bootstrap.php.
+ * Cette fonction assemble et met en minuscules ; elle ne slugifie pas. La
+ * transliteration est le travail de slugify(), qui vit dans bootstrap.php et
+ * que l'appelant applique aux trois slugs — audio.php n'en depend pas.
+ *
+ * Le strtolower() n'est donc pas mort : getShow() ne slugifie pas $number, qui
+ * arrive tel quel du segment d'URL — et la route ne contraint pas ce segment.
+ * Voir AudioTest::testLeNomCanoniqueMetLeNumeroEnMinuscules.
+ *
+ * Il travaille sur des octets, pas sur des caracteres : sous les locales C et
+ * UTF-8, une entree accentuee ressort avec ses accents et leur casse intacts.
+ * L'absolu serait faux — jusqu'en PHP 8.1, strtolower() suit LC_CTYPE, et une
+ * locale mono-octet mutilerait l'UTF-8. Voir
+ * AudioTest::testLeNomCanoniqueLaisseLesAccentsIntacts. Par le chemin d'appel
+ * de getShow(), les trois slugs sont translitteres en amont : l'entree
+ * accentuee ne peut atteindre cette fonction que par $number.
+ *
+ * @param string $typeSlug    type de l'emission, deja slugifie
+ * @param string $number      numero de l'emission, tel quel
+ * @param string $authorsSlug auteurs, deja slugifies
+ * @param string $titleSlug   titre, deja slugifie
  *
  * @return string nom sans extension
  */
@@ -1170,18 +1257,57 @@ function canonicalDownloadName($typeSlug, $number, $authorsSlug, $titleSlug)
 }
 ```
 
-- [ ] **Step 4: Vérifier**
+- [x] **Step 4: Vérifier**
 
 ```bash
 docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit
 ```
 
-Attendu : `OK (41 tests, 60 assertions)` — 2 `SmokeTest` + 11 `AudioTest`
-(Task 2) + 26 `CoverageCheckTest` (Task 3) + les 2 ajoutés au Step 1 ci-dessus.
-Fin de Task 3, mesuré : `OK (39 tests, 58 assertions)`. Les 2 de plus sont
-calculés : les relever à l'exécution et corriger ici s'ils diffèrent.
+Mesuré : `OK (43 tests, 62 assertions)` — 2 `SmokeTest` + 11 `AudioTest`
+(Task 2) + 26 `CoverageCheckTest` (Task 3, décompte revérifié : inchangé) + les 4
+ajoutés au Step 1. Le plan annonçait `41 / 60`, calculé sur 2 tests ; les deux de
+plus viennent des deux tensions, une chacune.
 
-- [ ] **Step 5: Commit**
+Seuil de couverture sur le fichier touché :
+
+```bash
+docker run --rm -v .:/app -w /app/src ouiedire-test sh -c "vendor/bin/phpunit --coverage-clover /app/clover.xml 2>/dev/null && php /app/bin/coverage-check.php /app/clover.xml audio.php 90"
+```
+
+Mesuré : `/app/src/src/audio.php : 100.00 % (15/15), seuil 90.00 %`.
+
+**Table de mutation.** Chaque mutation a été **appliquée au fichier et la suite
+relancée** — la couverture de ligne ne voit pas ce genre de trou, et deux
+« mutants équivalents » raisonnés de tête se sont déjà révélés faux dans ce
+change. Onze mutations appliquées, onze tuées — l'espace n'est pas épuisé pour
+autant, et M11 ci-dessous a d'abord survécu à la première table de dix.
+
+| # | Mutation appliquée | Tuée par |
+| --- | --- | --- |
+| M1 | `strtolower()` retiré | `…EstEnMinuscules`, `…LaisseLesAccentsIntacts` |
+| M2 | `$typeSlug` ignoré (`''`) | les trois |
+| M3 | `$number` ignoré (`''`) | les trois |
+| M4 | `$authorsSlug` ignoré (`''`) | les trois |
+| M5 | `$titleSlug` ignoré (`''`) | les trois |
+| M6 | `$typeSlug` et `$number` permutés | les trois |
+| M7 | `$authorsSlug` et `$titleSlug` permutés | les trois |
+| M8 | séparateur type/numéro : `-` devient `_` | les trois |
+| M9 | préfixe `ouiedire_` devient `ouiedire-` | les trois |
+| M10 | préfixe `ouiedire_` devient `radio_` | les trois |
+| M11 | `strtolower()` sur les trois slugs, **pas** sur `$number` | `…MetLeNumeroEnMinuscules` |
+
+**M11 est la ligne qui compte, et la première table la manquait.** M1 ne
+sépare pas les deux contrats : il n'est tué que par des entrées dont le docblock
+dit qu'elles arrivent *déjà* slugifiées, donc déjà en minuscules — les seuls cas
+que la production ne produit pas. Le seul argument dont la mise en minuscules
+soit observable est `$number`, que `getShow()` ne slugifie pas ; M11 le montre en
+n'épargnant que lui. Sans le test qui le tue, le `strtolower()` était argumenté
+au docblock et tenu par rien.
+
+Ce n'est pas hypothétique : le dossier `ailleurs-17bis` existe, et la route
+`/emission/{type}-{id}` ne pose aucun `assert()` sur `{id}`.
+
+- [x] **Step 5: Commit**
 
 ```bash
 git add src/src/audio.php src/tests/AudioTest.php

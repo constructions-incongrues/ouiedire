@@ -44,3 +44,34 @@ function findAudioFile($directory, $extension, $conventionPrefix)
 
     return $found ? $found[0] : null;
 }
+
+/**
+ * Nom sous lequel le public telecharge l'audio, quel que soit le nom stocke.
+ *
+ * Cette fonction assemble et met en minuscules ; elle ne slugifie pas. La
+ * transliteration est le travail de slugify(), qui vit dans bootstrap.php et
+ * que l'appelant applique aux trois slugs — audio.php n'en depend pas.
+ *
+ * Le strtolower() n'est donc pas mort : getShow() ne slugifie pas $number, qui
+ * arrive tel quel du segment d'URL — et la route ne contraint pas ce segment.
+ * Voir AudioTest::testLeNomCanoniqueMetLeNumeroEnMinuscules.
+ *
+ * Il travaille sur des octets, pas sur des caracteres : sous les locales C et
+ * UTF-8, une entree accentuee ressort avec ses accents et leur casse intacts.
+ * L'absolu serait faux — jusqu'en PHP 8.1, strtolower() suit LC_CTYPE, et une
+ * locale mono-octet mutilerait l'UTF-8. Voir
+ * AudioTest::testLeNomCanoniqueLaisseLesAccentsIntacts. Par le chemin d'appel
+ * de getShow(), les trois slugs sont translitteres en amont : l'entree
+ * accentuee ne peut atteindre cette fonction que par $number.
+ *
+ * @param string $typeSlug    type de l'emission, deja slugifie
+ * @param string $number      numero de l'emission, tel quel
+ * @param string $authorsSlug auteurs, deja slugifies
+ * @param string $titleSlug   titre, deja slugifie
+ *
+ * @return string nom sans extension
+ */
+function canonicalDownloadName($typeSlug, $number, $authorsSlug, $titleSlug)
+{
+    return strtolower(sprintf('ouiedire_%s-%s_%s_%s', $typeSlug, $number, $authorsSlug, $titleSlug));
+}

@@ -79,3 +79,55 @@ function canonicalDownloadName($typeSlug, $number, $authorsSlug, $titleSlug)
 {
     return strtolower(sprintf('ouiedire_%s-%s_%s_%s', $typeSlug, $number, $authorsSlug, $titleSlug));
 }
+
+/**
+ * Proprietes de telechargement d'une emission, deduites du dossier.
+ *
+ * C'est la couture entre getShow() et le balayage : elle construit le prefixe
+ * de la convention historique, retient un fichier par format, en lit la taille,
+ * et assemble l'etiquette d'enregistrement. Elle vit ici et non dans
+ * bootstrap.php parce que la suite charge ce fichier et que la jauge le mesure
+ * — le meme code dans getShow() n'etait tenu par rien.
+ *
+ * Elle ne decide pas de la publication : elle rend `hasAudio`, et l'appelant en
+ * tire ce qu'il veut. `isPublic` vient aussi du manifeste, ce n'est pas a cette
+ * fonction de l'ecraser.
+ *
+ * $number arrive tel quel, non slugifie : c'est le contrat de
+ * canonicalDownloadName() ci-dessus, et le segment d'URL d'ou il vient n'est
+ * pas contraint par la route.
+ *
+ * @param string $directory   dossier de l'emission
+ * @param string $urlAssets   URL absolue de ce dossier, sans barre finale
+ * @param string $typeSlug    type de l'emission, deja slugifie
+ * @param string $number      numero de l'emission, tel quel
+ * @param string $authorsSlug auteurs, deja slugifies
+ * @param string $titleSlug   titre, deja slugifie
+ *
+ * @return array les cinq cles que getShow() fusionne, plus hasAudio
+ */
+function audioDownloads($directory, $urlAssets, $typeSlug, $number, $authorsSlug, $titleSlug)
+{
+    $conventionPrefix = sprintf('ouiedire_%s-%s_', $typeSlug, $number);
+    $nameMp3 = findAudioFile($directory, 'mp3', $conventionPrefix);
+    $nameFlac = findAudioFile($directory, 'flac', $conventionPrefix);
+
+    // Un stat qui echoue dit que le fichier n'est pas la : lien symbolique
+    // casse, fichier retire entre le balayage et ici. Le nom est alors
+    // abandonne, sinon l'emission se publierait avec « 0 Mo » et un lien mort.
+    // Ce n'est pas un retour au critere de lisibilite que ce change retire : un
+    // fichier present mais non lisible se stat tres bien, et reste publie.
+    $sizeMp3 = $nameMp3 ? @filesize($directory.'/'.$nameMp3) : false;
+    $sizeFlac = $nameFlac ? @filesize($directory.'/'.$nameFlac) : false;
+
+    return array(
+        'sizeDownloadMp3' => $sizeMp3 === false ? null : round($sizeMp3 / (1024 * 1024), 2).' Mo',
+        'sizeDownloadFlac' => $sizeFlac === false ? null : round($sizeFlac / (1024 * 1024), 2).' Mo',
+        'urlDownloadMp3' => $sizeMp3 === false ? null : sprintf('%s/%s', $urlAssets, rawurlencode($nameMp3)),
+        'urlDownloadFlac' => $sizeFlac === false ? null : sprintf('%s/%s', $urlAssets, rawurlencode($nameFlac)),
+        // Etiquette d'enregistrement, independante du nom du fichier stocke.
+        'canonicalDownloadName' => canonicalDownloadName($typeSlug, $number, $authorsSlug, $titleSlug),
+        // Aucune publication sans audio : un seul des deux formats suffit.
+        'hasAudio' => $sizeMp3 !== false || $sizeFlac !== false,
+    );
+}

@@ -226,32 +226,24 @@ function getShow($id, Silex\Application $app = null) {
     // Guess show audio properties (MP3 and FLAC).
     // Le nom du fichier n'est pas une donnee : on balaye le dossier, la
     // convention historique d'abord. Voir le change audio-sans-convention.
-    $conventionPrefix = sprintf('ouiedire_%s-%s_', slugify($show['type']), $show['number']);
-    $nameMp3 = findAudioFile($pathPublicEmission, 'mp3', $conventionPrefix);
-    $nameFlac = findAudioFile($pathPublicEmission, 'flac', $conventionPrefix);
-
-    // Un stat qui echoue dit que le fichier n'est pas la : lien symbolique casse,
-    // fichier retire entre le balayage et ici. Le nom est alors abandonne, sinon
-    // l'emission se publierait avec « 0 Mo » et un lien mort. Ce n'est pas un
-    // retour au critere de lisibilite que ce change retire : un fichier present
-    // mais non lisible se stat tres bien, et reste publie.
-    $sizeMp3 = $nameMp3 ? @filesize($pathPublicEmission.'/'.$nameMp3) : false;
-    $sizeFlac = $nameFlac ? @filesize($pathPublicEmission.'/'.$nameFlac) : false;
-
-    $show['sizeDownloadMp3'] = $sizeMp3 === false ? null : round($sizeMp3 / (1024 * 1024), 2).' Mo';
-    $show['sizeDownloadFlac'] = $sizeFlac === false ? null : round($sizeFlac / (1024 * 1024), 2).' Mo';
-
-    $show['urlDownloadMp3'] = $sizeMp3 === false ? null : sprintf('%s/%s', $urlAssets, rawurlencode($nameMp3));
-    $show['urlDownloadFlac'] = $sizeFlac === false ? null : sprintf('%s/%s', $urlAssets, rawurlencode($nameFlac));
-
-    // Etiquette d'enregistrement, independante du nom du fichier stocke.
-    $show['canonicalDownloadName'] = canonicalDownloadName(
-        slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])
+    // Tout le calcul vit dans audio.php, ou la suite le charge et la jauge le
+    // mesure : ici il n'etait tenu par rien. Voir AudioDownloadsTest.
+    $audio = audioDownloads(
+        $pathPublicEmission,
+        $urlAssets,
+        slugify($show['type']),
+        $show['number'],
+        slugify($show['authors']),
+        slugify($show['title'])
     );
+    $hasAudio = $audio['hasAudio'];
+    unset($audio['hasAudio']);
+    $show = array_merge($show, $audio);
 
     $show['slugDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
 
-    if ($show['urlDownloadMp3'] === null && $show['urlDownloadFlac'] === null) {
+    // Aucune publication sans audio.
+    if (!$hasAudio) {
         $show['isPublic'] = false;
     }
 

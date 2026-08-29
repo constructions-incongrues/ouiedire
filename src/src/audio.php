@@ -6,14 +6,22 @@
  * Le nom du fichier n'est pas une donnee : n'importe quel fichier de
  * l'extension demandee fait l'affaire. Voir le change audio-sans-convention.
  *
- * @param string $directory        dossier de l'emission
- * @param string $extension        'mp3' ou 'flac', sans point
- * @param string $conventionPrefix prefixe de la convention historique,
- *                                 p.ex. 'ouiedire_ailleurs-331_'
+ * L'archive n'ecrit pas le numero d'une seule facon : ses dossiers et ses
+ * couvertures portent la forme brute (ailleurs-1), ses audios la forme remplie
+ * a trois chiffres (ouiedire_ailleurs-001_). La fonction recoit donc PLUSIEURS
+ * prefixes et les traite a egalite — n'en honorer qu'un rendait la regle
+ * inerte sur 136 des 367 emissions. Voir
+ * AudioTest::testLesDeuxFormesDuNumeroSontReconnues.
+ *
+ * @param string $directory          dossier de l'emission
+ * @param string $extension          'mp3' ou 'flac', sans point
+ * @param array  $conventionPrefixes prefixes de la convention historique,
+ *                                   p.ex. ['ouiedire_ailleurs-1_',
+ *                                   'ouiedire_ailleurs-001_']
  *
  * @return string|null nom du fichier retenu, ou null si le dossier n'en porte aucun
  */
-function findAudioFile($directory, $extension, $conventionPrefix)
+function findAudioFile($directory, $extension, array $conventionPrefixes)
 {
     if (!is_dir($directory)) {
         return null;
@@ -30,7 +38,15 @@ function findAudioFile($directory, $extension, $conventionPrefix)
         if (strtolower(pathinfo($name, PATHINFO_EXTENSION)) !== $extension) {
             continue;
         }
-        if (strpos($name, $conventionPrefix) === 0) {
+        // Pas de `break` : sur un tableau de deux prefixes il ne gagne rien
+        // d'observable, et une ligne qu'aucun test ne peut tuer n'a pas sa place.
+        $suitLaConvention = false;
+        foreach ($conventionPrefixes as $prefix) {
+            if (strpos($name, $prefix) === 0) {
+                $suitLaConvention = true;
+            }
+        }
+        if ($suitLaConvention) {
             $conventional[] = $name;
         } else {
             $others[] = $name;
@@ -81,6 +97,39 @@ function canonicalDownloadName($typeSlug, $number, $authorsSlug, $titleSlug)
 }
 
 /**
+ * Numero d'emission tel que le site l'affiche : rempli a trois chiffres.
+ *
+ * Cette regle etait ecrite dans getShow(), APRES le bloc audio — le prefixe de
+ * la convention se batissait donc sur « 1 » quand le fichier portait « 001 ».
+ * Elle vit ici, et getShow() la lit au meme endroit : deux exemplaires
+ * divergeraient sans bruit, et c'est exactement ce qui s'etait produit.
+ *
+ * Elle ne peut pas etre appliquee plus tot dans getShow() : les dossiers de
+ * l'archive et les URL d'assets sont nommes au numero BRUT, et remplir en
+ * amont casserait les 136 URL concernees.
+ *
+ * Les comparaisons sont volontairement laches, comme dans getShow() d'ou elles
+ * viennent : sous PHP 7.4 « 17bis » vaut 17 face a un entier, donc le dossier
+ * ailleurs-17bis rend « 017bis » — la forme exacte de son mp3. Voir
+ * AudioTest::testLeRemplissageNeTronquePasUnNumeroNonNumerique.
+ *
+ * @param string $number numero brut, tel qu'il vient du segment d'URL
+ *
+ * @return string numero rempli
+ */
+function paddedShowNumber($number)
+{
+    if ($number < 10) {
+        return '00'.$number;
+    }
+    if ($number < 100) {
+        return '0'.$number;
+    }
+
+    return $number;
+}
+
+/**
  * Proprietes de telechargement d'une emission, deduites du dossier.
  *
  * C'est la couture entre getShow() et le balayage : elle construit le prefixe
@@ -107,9 +156,16 @@ function canonicalDownloadName($typeSlug, $number, $authorsSlug, $titleSlug)
  */
 function audioDownloads($directory, $urlAssets, $typeSlug, $number, $authorsSlug, $titleSlug)
 {
-    $conventionPrefix = sprintf('ouiedire_%s-%s_', $typeSlug, $number);
-    $nameMp3 = findAudioFile($directory, 'mp3', $conventionPrefix);
-    $nameFlac = findAudioFile($directory, 'flac', $conventionPrefix);
+    // Les deux formes du numero, a egalite. La brute est celle du dossier et
+    // des couvertures ; la remplie est celle des 367 audios de l'archive, sans
+    // exception. Le `if` evite un doublon quand elles coincident (numeros >= 100).
+    $paddedNumber = paddedShowNumber($number);
+    $conventionPrefixes = array(sprintf('ouiedire_%s-%s_', $typeSlug, $number));
+    if ($paddedNumber !== $number) {
+        $conventionPrefixes[] = sprintf('ouiedire_%s-%s_', $typeSlug, $paddedNumber);
+    }
+    $nameMp3 = findAudioFile($directory, 'mp3', $conventionPrefixes);
+    $nameFlac = findAudioFile($directory, 'flac', $conventionPrefixes);
 
     // Un stat qui echoue dit que le fichier n'est pas la : lien symbolique
     // casse, fichier retire entre le balayage et ici. Le nom est alors
@@ -125,7 +181,12 @@ function audioDownloads($directory, $urlAssets, $typeSlug, $number, $authorsSlug
         'urlDownloadMp3' => $sizeMp3 === false ? null : sprintf('%s/%s', $urlAssets, rawurlencode($nameMp3)),
         'urlDownloadFlac' => $sizeFlac === false ? null : sprintf('%s/%s', $urlAssets, rawurlencode($nameFlac)),
         // Etiquette d'enregistrement, independante du nom du fichier stocke.
-        'canonicalDownloadName' => canonicalDownloadName($typeSlug, $number, $authorsSlug, $titleSlug),
+        // Le numero y est REMPLI : depuis que ce nom atterrit sur le disque de
+        // qui telecharge, il doit dire ce que la page affiche (« 001 ») et non
+        // le brut du segment d'URL. Le remplissage se fait ici, pas dans
+        // canonicalDownloadName(), dont le contrat reste « assemble et met en
+        // minuscules, ne slugifie pas ».
+        'canonicalDownloadName' => canonicalDownloadName($typeSlug, $paddedNumber, $authorsSlug, $titleSlug),
         // Aucune publication sans audio : un seul des deux formats suffit.
         'hasAudio' => $sizeMp3 !== false || $sizeFlac !== false,
     );

@@ -83,7 +83,10 @@ class AudioDownloadsTest extends TestCase
         // slugify() ajoute a la couture doit faire echouer ce test.
         $audio = $this->decouvre('17 BIS');
 
-        $this->assertSame('ouiedire_ailleurs-17 bis_dj_titre', $audio['canonicalDownloadName']);
+        // Le numero est desormais rempli — « 017 bis » — mais l'espace et la
+        // casse traversent intacts : c'est ce que ce test tient. Un slugify()
+        // ajoute a la couture le fait toujours echouer.
+        $this->assertSame('ouiedire_ailleurs-017 bis_dj_titre', $audio['canonicalDownloadName']);
     }
 
     public function testLUrlEncodeLeNomRetenu()
@@ -135,6 +138,68 @@ class AudioDownloadsTest extends TestCase
             $this->urlAssets.'/ouiedire_ailleurs-331_dj_titre.mp3',
             $audio['urlDownloadMp3']
         );
+    }
+
+    public function testLaConventionEstReconnueSurLeNumeroRempli()
+    {
+        // Le defaut mesure : 136 des 367 emissions portent un audio nomme au
+        // numero rempli (ouiedire_ailleurs-001_…) alors que le prefixe etait
+        // bati sur le numero brut, tel que le segment d'URL le donne. La regle
+        // « la convention passe devant » etait inerte sur plus du tiers du fonds.
+        // « aaa.mp3 » et non « zzz.mp3 » : sous zzz, le repli alphabetique
+        // rendait deja le bon fichier et le test passait sans rien prouver.
+        $this->ecritFichier('aaa.mp3');
+        $this->ecritFichier('ouiedire_ailleurs-001_dj_titre.mp3');
+
+        $audio = $this->decouvre('1');
+
+        $this->assertSame(
+            $this->urlAssets.'/ouiedire_ailleurs-001_dj_titre.mp3',
+            $audio['urlDownloadMp3']
+        );
+    }
+
+    public function testLaConventionResteReconnueSurLeNumeroBrut()
+    {
+        // L'autre sens, et il n'est pas decoratif : normaliser le numero au lieu
+        // d'accepter les deux formes echangerait un angle mort contre l'autre.
+        // Les dossiers et les couvertures de l'archive portent la forme brute.
+        $this->ecritFichier('aaa.mp3');
+        $this->ecritFichier('ouiedire_ailleurs-1_dj_titre.mp3');
+
+        $audio = $this->decouvre('1');
+
+        $this->assertSame(
+            $this->urlAssets.'/ouiedire_ailleurs-1_dj_titre.mp3',
+            $audio['urlDownloadMp3']
+        );
+    }
+
+    public function testLeNomCanoniquePorteLeNumeroRempli()
+    {
+        // Depuis que ce nom atterrit sur le disque de qui telecharge, il doit
+        // dire ce que la page affiche — « 001 » — et non le brut du segment
+        // d'URL. Les 367 fichiers stockes portent deja cette forme.
+        $audio = $this->decouvre('1');
+
+        $this->assertSame('ouiedire_ailleurs-001_dj_titre', $audio['canonicalDownloadName']);
+    }
+
+    public function testLeNumeroNonNumeriqueEstRempliLuiAussi()
+    {
+        // ailleurs-17bis existe. Son mp3 s'appelle
+        // ouiedire_ailleurs-017bis_dj-gum_rebondir.mp3 : la forme remplie doit
+        // le reconnaitre, et le nom canonique doit la porter.
+        $this->ecritFichier('aaa.mp3');
+        $this->ecritFichier('ouiedire_ailleurs-017bis_dj_titre.mp3');
+
+        $audio = $this->decouvre('17bis');
+
+        $this->assertSame(
+            $this->urlAssets.'/ouiedire_ailleurs-017bis_dj_titre.mp3',
+            $audio['urlDownloadMp3']
+        );
+        $this->assertSame('ouiedire_ailleurs-017bis_dj_titre', $audio['canonicalDownloadName']);
     }
 
     public function testLaTailleEstEnMebioctetsArrondieAuCentieme()

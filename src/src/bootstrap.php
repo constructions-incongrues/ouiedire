@@ -288,15 +288,14 @@ function getShow($id, Silex\Application $app = null) {
     // Description
     $show['description'] = $manifest->description;
 
-    // Pretty show number
+    // Pretty show number. La regle vit dans audio.php, ou la suite l'atteint et
+    // ou le bloc audio ci-dessus la lit deja pour batir le prefixe de la
+    // convention. Deux exemplaires ont diverge une fois : le prefixe se
+    // construisait sur « 1 » quand le fichier portait « 001 ».
+    // Elle reste APRES le bloc audio : $urlAssets et les dossiers de l'archive
+    // sont nommes au numero brut.
     $show['id'] = $show['number'];
-    if ($show['id'] < 10) {
-        $show['number'] = '00'.$show['id'];
-    } elseif ($show['id'] < 100) {
-        $show['number'] = '0'.$show['id'];
-    } else {
-        $show['number'] = $show['id'];
-    }
+    $show['number'] = paddedShowNumber($show['id']);
 
     return $show;
 }

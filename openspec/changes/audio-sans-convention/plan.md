@@ -2242,3 +2242,386 @@ done
 ```
 
 Chaque `RÉAPPARUE` est une émission dont l'audio existait sous un autre nom. Les absentes n'ont jamais eu de fichier — ce change n'y peut rien, et c'est la mesure qui le dit.
+
+---
+
+## Correctif post-Task 6 : le préfixe de convention se bâtissait sur le numéro brut
+
+**Le défaut.** `getShow()` remplit le numéro à trois chiffres **après** le bloc
+audio. Le préfixe de la convention était donc bâti sur `1` quand le fichier sur
+le disque porte `001` :
+
+```
+préfixe construit  : ouiedire_ailleurs-1_
+fichier sur disque : ouiedire_ailleurs-001_dj-damie-boy_sans-thme.mp3
+```
+
+Mesuré avant correctif : **231 des 367 émissions** voyaient leur audio reconnu
+comme conforme. Sur les **136 autres — 37 % du fonds** — la règle « la
+convention passe devant », cœur de la Task 2 et défendue par onze mutations,
+était **inerte**. Rien n'était cassé pour autant : un seul audio par dossier,
+donc le repli alphabétique trouvait le fichier. C'est la garantie qui manquait,
+pas le résultat.
+
+### Ce qui a été écarté, et pourquoi
+
+**Déplacer le remplissage avant le bloc audio.** Vérifié : les dossiers de
+l'archive sont nommés **sans** remplissage (`assets/emission/ailleurs-1`), et
+`$urlAssets` est bâti sur ce numéro brut. Le déplacer casserait les URL
+d'assets des 136 émissions concernées — couvertures comprises.
+
+**Toucher au préfixe des couvertures.** Vérifié : les images suivent la forme
+**brute** (`ouiedire_ailleurs-1_cover-1.png`). L'archive est incohérente avec
+elle-même — dossier brut, couverture brute, audio rempli — et c'est un fait à
+constater, pas à normaliser ici.
+
+### La forme retenue : deux préfixes acceptés, pas une normalisation
+
+Les deux options rendent **exactement le même résultat sur l'archive
+d'aujourd'hui** (367/367, mesuré plus bas) : aucune émission ne porte un audio
+au numéro brut là où brut et rempli diffèrent. L'équivalence est donc réelle sur
+les données, et c'est précisément pourquoi elle ne tranche rien.
+
+Ce qui tranche est ce que chaque option **garantit demain**. Normaliser au seul
+numéro rempli échangerait un angle mort contre l'autre : un audio déposé au
+numéro brut — la forme que le dossier et la couverture de la même émission
+emploient — cesserait d'être reconnu, sans un mot. Accepter les deux formes n'en
+retire aucune. Le coût est un `strpos` de plus par fichier, et une ligne de
+construction.
+
+`AudioDownloadsTest::testLaConventionResteReconnueSurLeNumeroBrut` existe pour
+ça : il échoue sur la normalisation (mutant M12 ci-dessous), et c'est le seul
+endroit où ce choix est opposable.
+
+### La règle de remplissage devient une fonction, lue au même endroit par les deux
+
+Le défaut n'est pas un oubli, c'est une **duplication implicite** : la règle
+d'affichage vivait dans `getShow()`, et le bloc audio en avait besoin sans
+l'avoir. Elle est extraite dans `audio.php`, où la suite l'atteint et où la
+jauge la mesure — et `getShow()` l'y lit désormais aussi.
+
+```php
+/**
+ * Numero d'emission tel que le site l'affiche : rempli a trois chiffres.
+ *
+ * Cette regle etait ecrite dans getShow(), APRES le bloc audio — le prefixe de
+ * la convention se batissait donc sur « 1 » quand le fichier portait « 001 ».
+ * Elle vit ici, et getShow() la lit au meme endroit : deux exemplaires
+ * divergeraient sans bruit, et c'est exactement ce qui s'etait produit.
+ *
+ * Elle ne peut pas etre appliquee plus tot dans getShow() : les dossiers de
+ * l'archive et les URL d'assets sont nommes au numero BRUT, et remplir en
+ * amont casserait les 136 URL concernees.
+ *
+ * Les comparaisons sont volontairement laches, comme dans getShow() d'ou elles
+ * viennent : sous PHP 7.4 « 17bis » vaut 17 face a un entier, donc le dossier
+ * ailleurs-17bis rend « 017bis » — la forme exacte de son mp3. Voir
+ * AudioTest::testLeRemplissageNeTronquePasUnNumeroNonNumerique.
+ *
+ * @param string $number numero brut, tel qu'il vient du segment d'URL
+ *
+ * @return string numero rempli
+ */
+function paddedShowNumber($number)
+{
+    if ($number < 10) {
+        return '00'.$number;
+    }
+    if ($number < 100) {
+        return '0'.$number;
+    }
+
+    return $number;
+}
+```
+
+Les comparaisons restent **lâches**, comme dans le `getShow()` d'où elles
+viennent : sous PHP 7.4, `'17bis'` vaut 17 face à un entier, donc `ailleurs-17bis`
+rend `017bis` — la forme exacte de son mp3
+(`ouiedire_ailleurs-017bis_dj-gum_rebondir.mp3`). Vérifié plutôt que supposé, par
+`AudioTest::testLeRemplissageNeTronquePasUnNumeroNonNumerique`. Sur PHP 8 la
+comparaison changerait de sens ; ce dépôt est en 7.4, et reproduire la règle
+existante à l'identique était l'objectif.
+
+### Le code
+
+`audioDownloads()` construit les deux formes :
+
+```php
+    // Les deux formes du numero, a egalite. La brute est celle du dossier et
+    // des couvertures ; la remplie est celle des 367 audios de l'archive, sans
+    // exception. Le `if` evite un doublon quand elles coincident (numeros >= 100).
+    $paddedNumber = paddedShowNumber($number);
+    $conventionPrefixes = array(sprintf('ouiedire_%s-%s_', $typeSlug, $number));
+    if ($paddedNumber !== $number) {
+        $conventionPrefixes[] = sprintf('ouiedire_%s-%s_', $typeSlug, $paddedNumber);
+    }
+    $nameMp3 = findAudioFile($directory, 'mp3', $conventionPrefixes);
+    $nameFlac = findAudioFile($directory, 'flac', $conventionPrefixes);
+```
+
+`findAudioFile()` les traite à égalité :
+
+```php
+        // Pas de `break` : sur un tableau de deux prefixes il ne gagne rien
+        // d'observable, et une ligne qu'aucun test ne peut tuer n'a pas sa place.
+        $suitLaConvention = false;
+        foreach ($conventionPrefixes as $prefix) {
+            if (strpos($name, $prefix) === 0) {
+                $suitLaConvention = true;
+            }
+        }
+        if ($suitLaConvention) {
+            $conventional[] = $name;
+        } else {
+            $others[] = $name;
+        }
+```
+
+Pas de `break` dans cette boucle : sur un tableau de deux préfixes il ne gagne
+rien d'observable, et il a **survécu** comme mutant (M6). Une ligne qu'aucun test
+ne peut tuer ne reste pas.
+
+`getShow()` ne porte plus la règle, seulement son appel — et il reste **après**
+le bloc audio, pour la raison écartée plus haut :
+
+```php
+    // Pretty show number. La regle vit dans audio.php, ou la suite l'atteint et
+    // ou le bloc audio ci-dessus la lit deja pour batir le prefixe de la
+    // convention. Deux exemplaires ont diverge une fois : le prefixe se
+    // construisait sur « 1 » quand le fichier portait « 001 ».
+    // Elle reste APRES le bloc audio : $urlAssets et les dossiers de l'archive
+    // sont nommes au numero brut.
+    $show['id'] = $show['number'];
+    $show['number'] = paddedShowNumber($show['id']);
+```
+
+### La seconde moitié : le nom canonique de téléchargement
+
+**Mesuré :** 136 des 367 émissions ont un numéro dont la forme brute et la forme
+remplie diffèrent — les mêmes 136. Pour elles, le nom canonique disait
+`ouiedire_ailleurs-1_…` alors que la page affiche `001` et que le fichier stocké
+s'appelle `ouiedire_ailleurs-001_…`.
+
+| Option | Ce qu'elle coûte |
+| --- | --- |
+| **Garder le brut** | Gratuit, aucun test à changer. Mais depuis la Task 6 ce nom atterrit sur le disque de qui télécharge : 136 fichiers y arriveraient sous un numéro que ni la page, ni le fichier d'origine, ni le reste de l'archive n'emploient. |
+| **Remplir** *(retenu)* | Deux attentes de test à mettre à jour, et l'instantané bouge sur 136 émissions. En échange le nom téléchargé dit ce que la page affiche, et **coïncide avec le fichier stocké sur les 367**. |
+
+Tranché : **remplir**. Ce n'était pas une régression de la Task 6 —
+`slugDownload` faisait déjà pareil — mais ce n'est une raison de le garder que
+tant que le nom ne sort pas du serveur, et depuis la Task 6 il en sort.
+
+Le remplissage se fait **au point d'appel**, dans `audioDownloads()`, pas dans
+`canonicalDownloadName()`, dont le contrat reste « assemble et met en minuscules,
+ne slugifie pas ». Les deux attentes mises à jour
+(`AudioDownloadsTest::testLeNumeroArriveNonSlugifie`,
+`ApplyAudioDownloadsTest::testLeNumeroSeLitDansLEmissionEtNEstPasSlugifie`) ne
+perdent rien de ce qu'elles tenaient : l'espace et la casse de `'17 BIS'` les
+traversent toujours intacts, et un `slugify()` ajouté à la couture les fait
+toujours échouer.
+
+### La suite et la jauge
+
+```
+OK (73 tests, 118 assertions)
+/app/src/src/audio.php : 100.00 % (54/54), seuil 90.00 %
+```
+
+Contre `OK (65 tests, 103 assertions)` et `100.00 % (42/42)` avant le correctif :
+huit tests de plus, douze instructions de plus, toutes couvertes.
+
+### Table de mutation
+
+Chaque mutation a été **réellement appliquée** au fichier, la suite relancée,
+puis le fichier restauré. Rien n'est argumenté depuis le fauteuil.
+
+| # | Mutation | Résultat | Tué par |
+| --- | --- | --- | --- |
+| M1 | `paddedShowNumber` : `'00'.` devient `'0'.` | 3 échecs | `AudioTest::testLeNumeroEstRempliATroisChiffres` |
+| M2 | `paddedShowNumber` : `< 10` devient `<= 10` | **survivant**, puis 1 échec | `testLeNumeroEstRempliATroisChiffres`, **après ajout des bornes 9/10 et 99/100** |
+| M2b | `paddedShowNumber` : `< 100` devient `<= 100` | 1 échec | `testLeNumeroEstRempliATroisChiffres` |
+| M3 | `paddedShowNumber` : `< 100` devient `< 1000` | 5 échecs | `testLeNumeroEstRempliATroisChiffres` + 4 |
+| M4 | `paddedShowNumber` : les deux remplissages permutés | 7 échecs | `testLaConventionEstReconnueSurLeNumeroRempli` + 6 |
+| M5 | `paddedShowNumber` : ne remplit plus rien | 7 échecs | `testLeNomCanoniquePorteLeNumeroRempli` + 6 |
+| M6 | `findAudioFile` : le `break` disparaît | **survivant** | aucun — **équivalence réelle**, le `break` a donc été retiré du code |
+| M7 | `findAudioFile` : plus rien n'est conforme | 10 échecs | `testLaConventionPasseDevantLeNomLibre` + 9 |
+| M8 | `findAudioFile` : seul le premier préfixe compte | 3 échecs | `AudioTest::testLesDeuxFormesDuNumeroSontReconnues` + 2 |
+| M9 | `findAudioFile` : `=== 0` devient `!== false` | 1 échec | `testUnFichierQuiMentionneLaConventionSansCommencerParElleNePassePasDevant` |
+| M10 | `audioDownloads` : le préfixe rempli n'est plus ajouté *(= le défaut d'origine)* | 2 échecs | `testLaConventionEstReconnueSurLeNumeroRempli`, `testLeNumeroNonNumeriqueEstRempliLuiAussi` |
+| M11 | `audioDownloads` : `!==` devient `!=` | 1 échec | `testLaConventionEstReconnueSurLeNumeroRempli` |
+| M12 | `audioDownloads` : seule la forme remplie est acceptée *(= la normalisation écartée)* | 2 échecs | `testLaConventionResteReconnueSurLeNumeroBrut` + 1 |
+| M13 | `audioDownloads` : le nom canonique reprend le numéro brut | 4 échecs | `testLeNomCanoniquePorteLeNumeroRempli` + 3 |
+| M14 | `bootstrap` : `getShow()` n'appelle plus le remplissage | **survivant à la suite** | l'instantané `var_export()` : 136 lignes divergentes, sur la clé `number` |
+
+**M14 n'est pas tenu par la suite**, et le dire est le seul traitement honnête :
+`bootstrap.php` n'est pas amorcé par PHPUnit — c'est le constat de la Task 5, pas
+une nouveauté. Son juge est l'instantané, et il le tue.
+
+**Deux mutants ont d'abord survécu, et trois tests neufs passaient pour une
+raison qui n'était pas la leur** : écrits avec `zzz.mp3` comme témoin non
+conforme, le repli alphabétique rendait déjà le bon fichier (`o` < `z`).
+Corrigés en `aaa.mp3`, ils sont passés au rouge — c'est-à-dire qu'ils se sont mis
+à tenir ce que leur nom annonce. Le rouge relevé après correction des témoins :
+
+```
+Tests: 73, Assertions: 107, Errors: 4, Failures: 3.
+```
+
+### La mesure, rejouable
+
+Le script n'est pas versionné ; le voici en entier. Il appelle le code de
+production — `paddedShowNumber()` et `slugify()` — plutôt que de le
+réimplémenter, et refait le passage par le type « joli » que `getShow()`
+interpose : `slugify('Ouïedire')` rend `ouedire`, pas `ouiedire`. Une première
+version de ce script l'ignorait et rapportait six faux non-conformes.
+
+```php
+<?php
+/**
+ * Combien d'emissions voient leur fichier audio reconnu comme conforme a la
+ * convention ? La mesure appelle le code de production — paddedShowNumber() et
+ * slugify() — plutot que de le reimplementer, et refait le passage par le type
+ * « joli » que getShow() interpose entre le nom du dossier et le prefixe :
+ * slugify('Ouiedire') rend « ouedire », pas « ouiedire ».
+ *
+ * Usage : php mesure-convention.php [brut|rempli|les-deux]
+ *   brut     : le prefixe d'avant le correctif, sur le numero du dossier
+ *   rempli   : le prefixe sur le seul numero a trois chiffres
+ *   les-deux : ce que le correctif applique (defaut)
+ */
+$debug = false;
+require '/app/src/src/bootstrap.php';
+
+$mode = isset($argv[1]) ? $argv[1] : 'les-deux';
+$base = '/app/src/public/assets/emission';
+$total = 0; $avecAudio = 0; $conforme = 0; $nonConformes = array();
+foreach (scandir($base) as $dir) {
+    if ($dir[0] === '.' || !is_dir($base.'/'.$dir)) { continue; }
+    $total++;
+    $pos = strrpos($dir, '-');
+    $type = substr($dir, 0, $pos);
+    $number = substr($dir, $pos + 1);
+
+    // Le type « joli » de getShow(), puis slugify() : c'est ce qui entre dans
+    // le prefixe, et ce n'est pas le segment du dossier.
+    if ($type === 'ailleurs') { $type = 'Ailleurs'; }
+    elseif ($type === 'bagage') { $type = 'Bagage'; }
+    elseif ($type === 'bureau') { $type = 'Bureau'; }
+    else { $type = 'Ouïedire'; }
+    $typeSlug = slugify($type);
+
+    $padded = paddedShowNumber($number);
+    $prefixes = array();
+    if ($mode !== 'rempli') { $prefixes[] = sprintf('ouiedire_%s-%s_', $typeSlug, $number); }
+    if ($mode !== 'brut') { $prefixes[] = sprintf('ouiedire_%s-%s_', $typeSlug, $padded); }
+
+    $audios = array();
+    foreach (scandir($base.'/'.$dir) as $f) {
+        $ext = strtolower(pathinfo($f, PATHINFO_EXTENSION));
+        if ($ext === 'mp3' || $ext === 'flac') { $audios[] = $f; }
+    }
+    if (!$audios) { continue; }
+    $avecAudio++;
+
+    $ok = false;
+    foreach ($audios as $f) {
+        foreach ($prefixes as $prefix) {
+            if (strpos($f, $prefix) === 0) { $ok = true; }
+        }
+    }
+    if ($ok) { $conforme++; } else { $nonConformes[] = $dir.' => '.implode(', ', $audios); }
+}
+printf("mode                                : %s\n", $mode);
+printf("dossiers d'emission                 : %d\n", $total);
+printf("dossiers portant au moins un audio  : %d\n", $avecAudio);
+printf("audio reconnu comme conforme        : %d\n", $conforme);
+printf("audio NON reconnu                   : %d\n", count($nonConformes));
+foreach ($nonConformes as $l) { echo "  - $l\n"; }
+```
+
+```bash
+for m in brut rempli les-deux; do
+  docker run --rm -v .:/app -w /app/src ouiedire-test \
+    php /app/tmp-mesure/mesure-convention.php $m
+done
+```
+
+| Mode | Audio reconnu comme conforme |
+| --- | --- |
+| `brut` — le préfixe d'avant le correctif | **231 / 367** (63 %) |
+| `rempli` — la normalisation écartée | 367 / 367 |
+| `les-deux` — ce que le correctif applique | **367 / 367** (100 %) |
+
+**136 émissions réparées**, et la garantie couvre désormais le fonds entier.
+
+### L'instantané `var_export()` sur les 367 émissions
+
+Procédé de la Task 5, Step 7, à l'identique. Ici il **doit** bouger.
+
+```bash
+docker run --rm -v .:/app -w /app/src ouiedire-test \
+  php /app/tmp-mesure/snapshot.php > avant.txt    # avant le correctif
+# … correctif …
+docker run --rm -v .:/app -w /app/src ouiedire-test \
+  php /app/tmp-mesure/snapshot.php > apres.txt
+/usr/bin/diff avant.txt apres.txt
+```
+
+Mesuré : **544 lignes de diff, 136 lignes `<` et 136 lignes `>`, toutes sur la
+clé `canonicalDownloadName`** — vérifié par comptage, pas à l'œil :
+
+```
+$ grep -c "^<     'canonicalDownloadName'" d.txt   →  136
+$ grep -c '^< ' d.txt                              →  136
+```
+
+Une seule clé bouge, sur exactement les 136 émissions dont le numéro se remplit,
+`ailleurs-17bis` comprise :
+
+```
+<     'canonicalDownloadName' => 'ouiedire_ailleurs-1_dj-damie-boy_sans-thme',
+>     'canonicalDownloadName' => 'ouiedire_ailleurs-001_dj-damie-boy_sans-thme',
+<     'canonicalDownloadName' => 'ouiedire_ailleurs-17bis_dj-gum_rebondir',
+>     'canonicalDownloadName' => 'ouiedire_ailleurs-017bis_dj-gum_rebondir',
+```
+
+**`urlDownloadMp3` ne bouge pas, et c'est le point.** Le fichier retenu est le
+même qu'avant : il tombait dans le groupe non conforme et le tri alphabétique le
+rendait quand même, un seul audio par dossier. Ce que le correctif change n'est
+pas le résultat d'aujourd'hui, c'est la **raison** pour laquelle il est juste —
+la convention, et non le hasard d'un tri sur un dossier à un seul candidat.
+
+`stderr` vide dans les deux relevés.
+
+> **Piège rencontré, à noter :** dans cet environnement, `diff` est intercepté
+> par un proxy qui a rapporté `[ok] Files are identical` sur deux fichiers de
+> sommes MD5 différentes. `cmp` a démenti. Les relevés ci-dessus emploient
+> `/usr/bin/diff` explicitement.
+
+### Non-régression HTTP
+
+`src/cache` vidé **avant chaque relevé** — l'application monte un cache HTTP
+disque, et une seconde requête sur la même URL est servie du cache.
+
+```bash
+docker run -d --rm --name ouiedire-http -v .:/app -w /app/src/public \
+  -p 18080:8080 ouiedire-test php -S 0.0.0.0:8080 index.php
+for u in / /artists /feed /emission/ailleurs-331 /emission/ailleurs-1 /emission/ailleurs-17bis; do
+  rm -rf src/cache/*
+  curl -s -o /tmp/p.html -w "%{http_code}  $u   " "http://localhost:18080$u"
+  grep -oE 'download="[^"]*"' /tmp/p.html | head -1
+done
+```
+
+```
+200  /
+200  /artists
+200  /feed
+200  /emission/ailleurs-331   download="ouiedire_ailleurs-331_rachitik-data_la-pompa-chalor-vol-3.mp3"
+200  /emission/ailleurs-1     download="ouiedire_ailleurs-001_dj-damie-boy_sans-thme.mp3"
+200  /emission/ailleurs-17bis download="ouiedire_ailleurs-017bis_dj-gum_rebondir.mp3"
+```
+
+Les deux numéros remplis servent l'attribut `download` sous la forme que la page
+affiche, et **identique au fichier stocké** dans les deux cas.

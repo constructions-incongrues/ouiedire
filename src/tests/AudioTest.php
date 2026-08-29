@@ -78,27 +78,27 @@ class AudioTest extends TestCase
     {
         $this->touchFiles(['mix final.mp3']);
 
-        $this->assertSame('mix final.mp3', findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_'));
+        $this->assertSame('mix final.mp3', findAudioFile($this->dir, 'mp3', ['ouiedire_ailleurs-331_']));
     }
 
     public function testNeTrouveRienQuandLeDossierNaPasCeFormat()
     {
         $this->touchFiles(['mix.flac']);
 
-        $this->assertNull(findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_'));
+        $this->assertNull(findAudioFile($this->dir, 'mp3', ['ouiedire_ailleurs-331_']));
     }
 
     public function testDistingueLesFormats()
     {
         $this->touchFiles(['a.mp3', 'b.flac']);
 
-        $this->assertSame('a.mp3', findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_'));
-        $this->assertSame('b.flac', findAudioFile($this->dir, 'flac', 'ouiedire_ailleurs-331_'));
+        $this->assertSame('a.mp3', findAudioFile($this->dir, 'mp3', ['ouiedire_ailleurs-331_']));
+        $this->assertSame('b.flac', findAudioFile($this->dir, 'flac', ['ouiedire_ailleurs-331_']));
     }
 
     public function testDossierInexistant()
     {
-        $this->assertNull(findAudioFile($this->dir.'/absent', 'mp3', 'ouiedire_ailleurs-331_'));
+        $this->assertNull(findAudioFile($this->dir.'/absent', 'mp3', ['ouiedire_ailleurs-331_']));
     }
 
     public function testLaConventionPasseDevant()
@@ -107,7 +107,7 @@ class AudioTest extends TestCase
 
         $this->assertSame(
             'ouiedire_ailleurs-331_dj_titre.mp3',
-            findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_')
+            findAudioFile($this->dir, 'mp3', ['ouiedire_ailleurs-331_'])
         );
     }
 
@@ -115,14 +115,14 @@ class AudioTest extends TestCase
     {
         $this->touchFiles(['zzz.mp3', 'aaa.mp3']);
 
-        $this->assertSame('aaa.mp3', findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_'));
+        $this->assertSame('aaa.mp3', findAudioFile($this->dir, 'mp3', ['ouiedire_ailleurs-331_']));
     }
 
     public function testUnFichierQuiMentionneLaConventionSansCommencerParElleNePassePasDevant()
     {
         $this->touchFiles(['aaa.mp3', 'copie_ouiedire_ailleurs-331_dj_titre.mp3']);
 
-        $this->assertSame('aaa.mp3', findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_'));
+        $this->assertSame('aaa.mp3', findAudioFile($this->dir, 'mp3', ['ouiedire_ailleurs-331_']));
     }
 
     public function testLaConventionDuneAutreEmissionNeGagnePas()
@@ -131,7 +131,7 @@ class AudioTest extends TestCase
 
         $this->assertSame(
             'ouiedire_ailleurs-331_dj_titre.mp3',
-            findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_')
+            findAudioFile($this->dir, 'mp3', ['ouiedire_ailleurs-331_'])
         );
     }
 
@@ -141,7 +141,7 @@ class AudioTest extends TestCase
         // au premier niveau) la ou sort() rend B.mp3 (l'octet 'B' precede 'a').
         $this->exigeUneCollationQuiDiffereDesOctets(['a-b.mp3', 'ab.mp3', 'B.mp3', 'a.mp3']);
 
-        $this->assertSame('B.mp3', findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_'));
+        $this->assertSame('B.mp3', findAudioFile($this->dir, 'mp3', ['ouiedire_ailleurs-331_']));
     }
 
     public function testDeuxFichiersConformesSontDepartagesParLesOctets()
@@ -156,7 +156,7 @@ class AudioTest extends TestCase
 
         $this->assertSame(
             'ouiedire_ailleurs-331_B.mp3',
-            findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_')
+            findAudioFile($this->dir, 'mp3', ['ouiedire_ailleurs-331_'])
         );
     }
 
@@ -165,7 +165,7 @@ class AudioTest extends TestCase
         // Le nom du fichier n'est pas une donnee : la casse de l'extension non plus.
         $this->touchFiles(['MIX.MP3']);
 
-        $this->assertSame('MIX.MP3', findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_'));
+        $this->assertSame('MIX.MP3', findAudioFile($this->dir, 'mp3', ['ouiedire_ailleurs-331_']));
     }
 
     public function testLeNomCanoniqueNeDependPasDuFichierStocke()
@@ -198,6 +198,57 @@ class AudioTest extends TestCase
         $this->assertSame(
             'ouiedire_ailleurs-17bis_dj_titre',
             canonicalDownloadName('ailleurs', '17BIS', 'dj', 'titre')
+        );
+    }
+
+    public function testLeNumeroEstRempliATroisChiffres()
+    {
+        // Le remplissage est la regle d'affichage de getShow(), extraite ici
+        // pour que le prefixe de la convention et le nom canonique la lisent au
+        // meme endroit qu'elle. Deux exemplaires divergeraient sans bruit.
+        // Les quatre bornes, pas trois valeurs au hasard : sans 9/10 et 99/100,
+        // « < 10 » se change en « <= 10 » sans que la suite bronche (mutant M2).
+        $this->assertSame('001', paddedShowNumber('1'));
+        $this->assertSame('009', paddedShowNumber('9'));
+        $this->assertSame('010', paddedShowNumber('10'));
+        $this->assertSame('042', paddedShowNumber('42'));
+        $this->assertSame('099', paddedShowNumber('99'));
+        $this->assertSame('100', paddedShowNumber('100'));
+        $this->assertSame('331', paddedShowNumber('331'));
+    }
+
+    public function testLeRemplissageNeTronquePasUnNumeroNonNumerique()
+    {
+        // Le dossier ailleurs-17bis existe, et son mp3 s'appelle
+        // ouiedire_ailleurs-017bis_dj-gum_rebondir.mp3 : le remplissage doit
+        // rendre exactement cette forme, pas « 017 ».
+        $this->assertSame('017bis', paddedShowNumber('17bis'));
+    }
+
+    public function testLesDeuxFormesDuNumeroSontReconnues()
+    {
+        // findAudioFile() recoit plusieurs prefixes, pas un : l'archive nomme
+        // ses dossiers et ses couvertures au numero brut, et ses audios au
+        // numero rempli. N'en honorer qu'un rend la regle inerte sur l'autre.
+        // « aaa.mp3 » et non « zzz.mp3 » : sous zzz, le repli alphabetique
+        // rendait deja le bon fichier et le test passait sans rien prouver.
+        $this->touchFiles(['aaa.mp3', 'ouiedire_ailleurs-001_dj_titre.mp3']);
+
+        $this->assertSame(
+            'ouiedire_ailleurs-001_dj_titre.mp3',
+            findAudioFile($this->dir, 'mp3', ['ouiedire_ailleurs-1_', 'ouiedire_ailleurs-001_'])
+        );
+    }
+
+    public function testLeSecondPrefixeNeSuffitPasAToutRendreConforme()
+    {
+        // Le second prefixe ajoute une forme acceptee, il n'en retire aucune :
+        // un nom libre reste non conforme, et perd toujours.
+        $this->touchFiles(['aaa.mp3', 'ouiedire_ailleurs-1_dj_titre.mp3']);
+
+        $this->assertSame(
+            'ouiedire_ailleurs-1_dj_titre.mp3',
+            findAudioFile($this->dir, 'mp3', ['ouiedire_ailleurs-1_', 'ouiedire_ailleurs-001_'])
         );
     }
 

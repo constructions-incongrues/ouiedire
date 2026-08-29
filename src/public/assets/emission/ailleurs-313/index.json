@@ -5,6 +5,7 @@
   "type": "Ailleurs",
   "isPublic": true,
   "description": "<p class=\"justify\">\n<!-- TODO : Mettre la description de l'émission à jour, le cas échéant -->\n</p>\n",
+  "cover": "ouiedire_ailleurs-313_cover-1.jpg",
   "playlist": [
     {
       "kind": "track",

@@ -5,6 +5,7 @@
   "type": "Ouïedire",
   "isPublic": true,
   "description": "<!-- Pas de description pour cette émission -->",
+  "cover": "ouiedire_ouiedire-4_cover-1.png",
   "playlist": [
     {
       "kind": "html",

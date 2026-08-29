@@ -5,6 +5,7 @@
   "type": "Ailleurs",
   "isPublic": false,
   "description": "<p>A écouter en boule sous une table ou sous une couette.</p>",
+  "cover": "ouiedire_ailleurs-76_cover-1.png",
   "playlist": [
     {
       "kind": "track",

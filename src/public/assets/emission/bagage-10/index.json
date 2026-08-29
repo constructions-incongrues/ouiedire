@@ -5,6 +5,7 @@
   "type": "Bagage",
   "isPublic": true,
   "description": "<p><a href=\"https://musiquefougere.org/\">https://musiquefougere.org/</a></p>",
+  "cover": "ouiedire_bagage-10_cover-1.png",
   "playlist": [
     {
       "kind": "track",

@@ -5,6 +5,7 @@
   "type": "Ailleurs",
   "isPublic": true,
   "description": "<p>VITESSE = DANGER : PRUDENCE, RALENTISSEZ !</p>",
+  "cover": "ouiedire_ailleurs-128_cover-1.png",
   "playlist": [
     {
       "kind": "track",

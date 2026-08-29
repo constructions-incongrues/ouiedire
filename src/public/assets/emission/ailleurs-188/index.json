@@ -5,6 +5,7 @@
   "type": "Ailleurs",
   "isPublic": true,
   "description": "",
+  "cover": "cover-defaut.png",
   "playlist": [
     {
       "kind": "track",

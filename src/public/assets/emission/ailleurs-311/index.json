@@ -5,6 +5,7 @@
   "type": "Ailleurs",
   "isPublic": true,
   "description": "<p>\n    Exploration musicale & cordiale : La Grotte \n</p>",
+  "cover": "ouiedire_ailleurs-311_cover-1.png",
   "playlist": [
     {
       "kind": "track",

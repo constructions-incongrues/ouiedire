@@ -89,9 +89,8 @@ function canonicalDownloadName($typeSlug, $number, $authorsSlug, $titleSlug)
  * bootstrap.php parce que la suite charge ce fichier et que la jauge le mesure
  * — le meme code dans getShow() n'etait tenu par rien.
  *
- * Elle ne decide pas de la publication : elle rend `hasAudio`, et l'appelant en
- * tire ce qu'il veut. `isPublic` vient aussi du manifeste, ce n'est pas a cette
- * fonction de l'ecraser.
+ * Elle ne decide pas de la publication : elle rend `hasAudio`, et
+ * applyAudioDownloads() ci-dessous en tire la degradation.
  *
  * $number arrive tel quel, non slugifie : c'est le contrat de
  * canonicalDownloadName() ci-dessus, et le segment d'URL d'ou il vient n'est
@@ -130,4 +129,70 @@ function audioDownloads($directory, $urlAssets, $typeSlug, $number, $authorsSlug
         // Aucune publication sans audio : un seul des deux formats suffit.
         'hasAudio' => $sizeMp3 !== false || $sizeFlac !== false,
     );
+}
+
+/**
+ * Applique a une emission ce que son dossier porte, et la regle de publication.
+ *
+ * C'est le dernier morceau qui vivait au point d'appel, dans getShow(), ou la
+ * suite n'entre pas : la fusion des cinq cles, le retrait de `hasAudio`, et la
+ * garde « aucune publication sans audio ». Sept mutations y survivaient.
+ *
+ * `hasAudio` est une reponse interne, pas une cle d'emission : elle ne ressort
+ * pas de la forme rendue, et l'appelant n'a plus rien a defaire.
+ *
+ * **La fonction ne fait que degrader, jamais promouvoir.** L'objection est
+ * naturelle — `isPublic` vient aussi du manifeste, de quel droit l'ecraser ? —
+ * mais l'exigence « Aucune publication sans audio » du spec est litteralement
+ * « quelle que soit la valeur de son champ `isPublic` ». Une emission publiee
+ * sans audio devient non publiee ; une emission non publiee avec audio reste
+ * non publiee. Les deux sens ont leur test.
+ *
+ * Les trois slugs arrivent sous des cles NOMMEES, et ce n'est pas du confort :
+ * PHP 7.4 n'a pas d'arguments nommes, et quatre chaines de meme type a la file
+ * sont exactement ce qui a produit les mutants de permutation. Sous des cles,
+ * la permutation n'est plus representable a l'appel.
+ *
+ * Le numero, lui, n'est pas dans $slugs : il se lit dans `$show['number']`,
+ * tel quel du segment d'URL, non slugifie — le contrat de
+ * canonicalDownloadName().
+ *
+ * @param array  $show      l'emission, telle que getShow() la tient
+ * @param string $directory dossier de l'emission
+ * @param string $urlAssets URL absolue de ce dossier, sans barre finale
+ * @param array  $slugs     `type`, `authors`, `title`, deja translitteres
+ *
+ * @return array l'emission fusionnee, sans `hasAudio`
+ * $show['number'] et les trois cles de $slugs — type, authors, title — sont
+ * REQUISES : une cle absente vaut null en PHP 7.4, sur une simple notice, et
+ * produirait un nom canonique tronque du genre « ouiedire_-331_ ». Le contrat
+ * est ici parce que rien dans le code ne l'oppose.
+ *
+ * La fusion va dans ce sens et pas dans l'autre : ce qui a ete mesure sur le
+ * disque gagne sur ce qu'un manifeste declare. Voir
+ * ApplyAudioDownloadsTest::testLesValeursCalculeesGagnentSurCellesDuManifeste.
+ *
+ */
+function applyAudioDownloads(array $show, $directory, $urlAssets, array $slugs)
+{
+    $audio = audioDownloads(
+        $directory,
+        $urlAssets,
+        $slugs['type'],
+        $show['number'],
+        $slugs['authors'],
+        $slugs['title']
+    );
+
+    $hasAudio = $audio['hasAudio'];
+    unset($audio['hasAudio']);
+    $show = array_merge($show, $audio);
+
+    // Aucune publication sans audio. Degradation seule : le `if` ne pose jamais
+    // true, donc une emission hors ligne au manifeste le reste.
+    if (!$hasAudio) {
+        $show['isPublic'] = false;
+    }
+
+    return $show;
 }

@@ -226,26 +226,19 @@ function getShow($id, Silex\Application $app = null) {
     // Guess show audio properties (MP3 and FLAC).
     // Le nom du fichier n'est pas une donnee : on balaye le dossier, la
     // convention historique d'abord. Voir le change audio-sans-convention.
-    // Tout le calcul vit dans audio.php, ou la suite le charge et la jauge le
-    // mesure : ici il n'etait tenu par rien. Voir AudioDownloadsTest.
-    $audio = audioDownloads(
-        $pathPublicEmission,
-        $urlAssets,
-        slugify($show['type']),
-        $show['number'],
-        slugify($show['authors']),
-        slugify($show['title'])
-    );
-    $hasAudio = $audio['hasAudio'];
-    unset($audio['hasAudio']);
-    $show = array_merge($show, $audio);
+    // Tout le calcul vit dans audio.php, la fusion et la regle de publication
+    // comprises : ici, la suite n'entre pas et la jauge ne mesure rien. Les
+    // slugs partent sous des cles NOMMEES — PHP 7.4 n'a pas d'arguments nommes,
+    // et trois chaines de meme type a la file se permutent sans que rien ne le
+    // voie. Le numero se lit dans $show, non slugifie.
+    // Voir AudioDownloadsTest et ApplyAudioDownloadsTest.
+    $show = applyAudioDownloads($show, $pathPublicEmission, $urlAssets, array(
+        'type' => slugify($show['type']),
+        'authors' => slugify($show['authors']),
+        'title' => slugify($show['title']),
+    ));
 
     $show['slugDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
-
-    // Aucune publication sans audio.
-    if (!$hasAudio) {
-        $show['isPublic'] = false;
-    }
 
     // Guess covers URL. Toute image du dossier compte, pour qu'une couverture
     // deposee depuis l'outil d'edition soit vue quel que soit son nom. L'ordre

@@ -4,7 +4,7 @@
 
 **Goal:** `getShow()` cesse de calculer le nom du fichier audio d'une émission et le découvre en balayant son dossier, de sorte que corriger un titre ne dépublie plus l'émission.
 
-**Architecture:** La découverte est extraite dans `src/src/audio.php`, deux fonctions pures sans dépendance à Silex ni à `slugify()` — le préfixe de convention leur est passé en argument. `bootstrap.php` les appelle. Cette extraction n'introduit ni port ni adaptateur : elle rend la logique testable sans monter l'application, ce que `sdr-002` (`monolithic`) n'interdit pas.
+**Architecture:** La découverte, la couture et la règle de publication sont extraites dans `src/src/audio.php` — quatre fonctions libres sans dépendance à Silex ni à `slugify()` : les slugs leur arrivent déjà translittérés, sous des clés nommées. `bootstrap.php` n'en appelle plus qu'une. Cette extraction n'introduit ni port ni adaptateur : elle rend la logique testable sans monter l'application, ce que `sdr-002` (`monolithic`) n'interdit pas.
 
 **Tech Stack:** PHP 7.4, PHPUnit 9.6, pcov pour la couverture, Twig 1.x, Docker (`php:7.4-cli`).
 
@@ -1337,39 +1337,34 @@ require_once __DIR__.'/audio.php';
 
 Remplacer intégralement, dans `src/src/bootstrap.php`, depuis `// Guess show audio properties (MP3 and FLAC)` jusqu'à la ligne fermante du second `if ($fileFlac->isReadable()) { ... }`.
 
-**Le bloc ci-dessous est régénéré depuis le fichier final, après l'extraction du
-Step 6** — le calcul lui-même ne vit plus ici, il vit dans `audio.php` :
+**Le bloc ci-dessous est régénéré depuis le fichier final, après le Step 9** — ni
+le calcul ni la fusion ne vivent plus ici, ils vivent dans `audio.php` :
 
 ```php
     // Guess show audio properties (MP3 and FLAC).
     // Le nom du fichier n'est pas une donnee : on balaye le dossier, la
     // convention historique d'abord. Voir le change audio-sans-convention.
-    // Tout le calcul vit dans audio.php, ou la suite le charge et la jauge le
-    // mesure : ici il n'etait tenu par rien. Voir AudioDownloadsTest.
-    $audio = audioDownloads(
-        $pathPublicEmission,
-        $urlAssets,
-        slugify($show['type']),
-        $show['number'],
-        slugify($show['authors']),
-        slugify($show['title'])
-    );
-    $hasAudio = $audio['hasAudio'];
-    unset($audio['hasAudio']);
-    $show = array_merge($show, $audio);
+    // Tout le calcul vit dans audio.php, la fusion et la regle de publication
+    // comprises : ici, la suite n'entre pas et la jauge ne mesure rien. Les
+    // slugs partent sous des cles NOMMEES — PHP 7.4 n'a pas d'arguments nommes,
+    // et trois chaines de meme type a la file se permutent sans que rien ne le
+    // voie. Le numero se lit dans $show, non slugifie.
+    // Voir AudioDownloadsTest et ApplyAudioDownloadsTest.
+    $show = applyAudioDownloads($show, $pathPublicEmission, $urlAssets, array(
+        'type' => slugify($show['type']),
+        'authors' => slugify($show['authors']),
+        'title' => slugify($show['title']),
+    ));
 
     $show['slugDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
-
-    // Aucune publication sans audio.
-    if (!$hasAudio) {
-        $show['isPublic'] = false;
-    }
 ```
 
-Le `unset()` n'est pas une coquetterie : `hasAudio` est une **réponse à
-l'appelant**, pas une clé d'émission. Le fusionner dans `$show` ajouterait une
-clé que `getShow()` ne posait pas, et la contrainte de cette tâche est que le
-jeu de clés reste identique — vérifié, pas supposé (Step 7).
+Le retrait de `hasAudio` n'est pas une coquetterie : c'est une **réponse
+interne**, pas une clé d'émission. La laisser fuir ajouterait à `getShow()` une
+clé qu'elle ne posait pas, et la contrainte de cette tâche est que le jeu de clés
+reste identique — vérifié, pas supposé (Step 7). Depuis le Step 9 ce retrait est
+fait par `applyAudioDownloads()` et tenu par un test (`M14` meurt) ; l'appelant
+n'a plus rien à défaire.
 
 **La ligne `slugDownload` n'était pas dans le squelette de cette tâche, et elle y
 est maintenant.** `slugDownload` reste
@@ -1391,9 +1386,11 @@ affirmations qui se dissolvent à la mesure, la nuance n'est pas décorative.
 Le numéro passé à `audioDownloads()` est `$show['number']`, **non slugifié**, et
 c'est délibéré : c'est le contrat écrit au docblock de `canonicalDownloadName()`
 (Task 4), et `slugDownload` ne le slugifiait pas non plus. Le slugifier serait un
-changement de comportement que ce change n'a pas demandé. Depuis le Step 6, ce
-contrat est tenu par un test (`testLeNumeroArriveNonSlugifie`) — mais **du côté
-de la fonction seulement** : voir la ligne M1b du tableau des mutations.
+changement de comportement que ce change n'a pas demandé. Depuis le Step 6 ce
+contrat est tenu par un test (`testLeNumeroArriveNonSlugifie`) — et depuis le
+Step 9 il n'est plus contournable au point d'appel : le numéro **n'y est plus un
+argument**, `applyAudioDownloads()` le lit dans `$show['number']`. La mutation
+M1b, qui survivait à tout, n'est plus représentable.
 
 - [x] **Step 3: Vérifier que le site répond**
 
@@ -1540,6 +1537,15 @@ Trois choix de signature, et leur raison :
   `hasAudio` et rien d'autre : `isPublic` vient aussi du manifeste, et l'écraser
   depuis `audio.php` mettrait deux décisions au même endroit. C'est la
   composition `||` qui devait être testable, et elle l'est.
+
+  **Ce choix a été renversé au Step 9, et la raison mérite d'être lue.**
+  L'objection ne tient pas : `applyAudioDownloads()` ne fait que **dégrader**,
+  jamais promouvoir, ce qui est la formulation littérale du spec — « quelle que
+  soit la valeur de son champ `isPublic` ». Il n'y a donc pas deux décisions au
+  même endroit, il y en a une seule, et laisser la garde au point d'appel la
+  laissait hors de toute mesure : M8b, M13 et N4 y survivaient. `audioDownloads()`
+  rend toujours `hasAudio` et rien d'autre ; c'est la fonction du dessus qui en
+  tire la dégradation.
 - **`$number` n'est pas slugifié**, ici pas plus qu'avant : c'est le contrat du
   docblock de `canonicalDownloadName()`, et il a maintenant son test.
 
@@ -1604,62 +1610,197 @@ git commit -m "refactor: la couture audio de getShow passe dans audio.php"
 Commit séparé de celui du Step 5 : le branchement était juste, ce qui manquait
 était sa place. Un refactor tracé, pas une correction du précédent.
 
+- [x] **Step 9: Faire entrer la fusion et la règle de publication**
+
+Ajouté après la relecture du Step 6, sur décision de la personne qui tient le
+dépôt. Le Step 6 avait sorti le **calcul** ; il restait au point d'appel la
+**fusion**, le retrait de `hasAudio` et la **garde de publication** — six lignes
+que la suite n'atteint pas, et où **sept** mutations survivaient.
+
+**La forme, et pourquoi les slugs sont nommés.** Une seconde fonction mince, en
+queue de `src/src/audio.php` :
+
+```php
+function applyAudioDownloads(array $show, $directory, $urlAssets, array $slugs)
+```
+
+`$slugs` porte les trois parts déjà translittérées sous les clés `type`,
+`authors`, `title`. Ce n'est pas du confort : PHP 7.4 n'a pas d'arguments nommés,
+et **quatre chaînes de même type à la file** sont exactement ce qui a produit
+M4b. Sous des clés, la permutation d'`authors` et de `title` n'est plus
+*représentable* à l'appel — pas seulement non testée. Le numéro, lui, n'est pas
+dans `$slugs` : il se lit dans `$show['number']`, tel quel, ce qui supprime M1b
+par construction — l'argument où l'on ajoutait un `slugify()` n'existe plus.
+
+**En TDD, dans l'ordre.** `src/tests/ApplyAudioDownloadsTest.php` d'abord, neuf
+tests, un par comportement (deux autres viendront plus bas, pilotés par la
+mutation et déclarés comme tels). Rouge mesuré :
+
+```
+Tests: 63, Assertions: 83, Errors: 9.
+Error: Call to undefined function Ouiedire\Tests\applyAudioDownloads()
+```
+
+Puis la fonction, puis le point d'appel réduit à l'appel seul (bloc régénéré au
+Step 2 ci-dessus). Vert mesuré : `OK (63 tests, 100 assertions)`.
+
+**Un dixième test, ajouté après coup et assumé comme tel.** La campagne de
+mutations ci-dessous a fait apparaître `N1` — `array_merge($audio, $show)` au
+lieu de `array_merge($show, $audio)` — qui rend **les mêmes clés et les mêmes
+valeurs dans un autre ordre**, et passait la suite entière. L'instantané des 367
+aucune assertion de valeur ne pouvait le distinguer.
+`testLesClesAjouteesViennentApresCellesDeLEmission` épingle `array_keys()`.
+C'est un test piloté par la mutation, pas par un rouge préalable — même régime
+que les cinq de la Task 2, et il est écrit ici plutôt que déguisé.
+
+**Sa justification première était fausse, et la relecture l'a défaite.** Elle
+disait que l'ordre des clés « se voit dans les gabarits et le flux ». Vérifié
+consommateur par consommateur : rien ne l'observe (voir la section du trou
+résiduel, plus bas). Les 3 670 lignes de l'instantané sont un artefact de
+`var_export()`. Le test reste, requalifié en détecteur de changement.
+
+**Un onzième test, celui-là pour un invariant réel.** La même relecture a
+construit une mutation qui **conserve** l'ordre mais rend au manifeste la
+priorité sur le calcul — elle passait la suite entière, dans le fichier certifié
+à `100 % (42/42)`. Le sens de `array_merge` décide aussi de la **précédence**, et
+un manifeste est une donnée externe non validée : rien ne lui interdit de porter
+une de ces cinq clés.
+`testLesValeursCalculeesGagnentSurCellesDuManifeste` la tue.
+
+Vert final : `OK (65 tests, 103 assertions)` — 2 `SmokeTest` + 15 `AudioTest` +
+26 `CoverageCheckTest` + 11 `AudioDownloadsTest` + 11 `ApplyAudioDownloadsTest`.
+
+**L'objection levée, et ses deux tests.** « `isPublic` vient aussi du manifeste,
+ce n'est pas à cette fonction de l'écraser. » Elle ne tient pas : la fonction ne
+fait que **dégrader**, jamais promouvoir — c'est la formulation littérale du
+spec (`specs/emission-contenu/spec.md`, « Aucune publication sans audio » :
+« quelle que soit la valeur de son champ `isPublic` »). Les deux sens sont
+mesurés séparément : `testUneEmissionPublieeSansAudioEstDepubliee` et
+`testUneEmissionNonPublieeAvecAudioResteNonPubliee`. Un troisième —
+`testUneEmissionPublieeAvecAudioRestePubliee` — interdit la garde
+inconditionnelle qui aurait laissé les deux premiers au vert (`N4`).
+
+`slugify()` reste dans `bootstrap.php`, et `audio.php` n'en dépend toujours pas :
+c'est précisément pour cela que les slugs arrivent déjà translittérés.
+
+Jauge, à `90` de seuil :
+
+```
+/app/src/src/audio.php : 100.00 % (42/42), seuil 90.00 %
+/app/src/src/bootstrap.php : 0.00 % (0/497), seuil 90.00 %
+```
+
+`audio.php` passe de 28 à 42 instructions, toutes couvertes ; `bootstrap.php` de
+505 à 497, et surtout d'un branchement en six lignes à **un appel**.
+
+**`getShow()` ne bouge pas**, revérifié par le même instantané `var_export()` du
+Step 7, `a2c8a381` contre cette branche : **aucune différence** sur 53 184
+lignes, `stderr` vide dans les deux cas.
+
+**Bout en bout, remesuré** : `200` sur `/`, `/artists`, `/feed` et
+`/emission/ailleurs-331` ; et le scénario du change (titre d'`ailleurs-331`
+corrigé, restauration inconditionnelle par `register_shutdown_function()`,
+`git status --short` vérifié après) :
+
+```
+PUBLIEE
+fichier servi : …/ailleurs-331/ouiedire_ailleurs-331_rachitik-data_la-pompa-chalor-vol-3.mp3
+nom canonique : ouiedire_ailleurs-331_rachitik-data_la-pompa-calor-vol-3
+cle hasAudio  : absente
+```
+
+La dernière ligne est nouvelle et c'est celle du Step 9 : la clé ne fuit plus
+jusqu'à l'appelant, et ce n'est plus un `unset()` posé à la main qui l'en empêche.
+
+- [x] **Step 10: Commit**
+
+```bash
+git add src/src/audio.php src/src/bootstrap.php src/tests/ApplyAudioDownloadsTest.php
+git commit -m "refactor: la fusion audio et la regle de publication passent dans audio.php"
+```
+
+Commit séparé de `3e152d0c`, non amendé : le Step 6 était juste, il s'arrêtait un
+cran trop tôt.
+
 ### Ce qui tient ce branchement, et ce qui ne le tient pas
 
 `sdr-004` demande 90 % sur le code touché. Depuis le Step 6, le code touché est
-`audio.php`, à `100.00 % (28/28)`. Ce qui reste dans `bootstrap.php` — que la
-suite **ne charge toujours pas**, `0.00 % (0/505)` — tient en six lignes : un
-appel, la lecture de `hasAudio`, la fusion, la garde de publication. Le trou
-n'est pas comblé, il est **réduit à sa couture** ; le dire franchement vaut mieux
-que le maquiller.
+`audio.php`, à `100.00 % (42/42)`. Ce qui reste dans `bootstrap.php` — que la
+suite **ne charge toujours pas**, `0.00 % (0/497)` — tient en **un appel** et son
+tableau de slugs. Le trou n'est pas comblé, il est réduit au câblage ; le dire
+franchement vaut mieux que le maquiller.
 
-**Tenu par des tests unitaires.** Les trois fonctions du fichier —
-`findAudioFile()`, `canonicalDownloadName()`, `audioDownloads()` — sont à
-`100.00 % (28/28)`, vérifié par `bin/coverage-check.php` sur le rapport Clover.
-L'ordre de sélection, la casse, la tolérance aux formats, le dossier absent
-(Task 2 et Task 4) ; et maintenant l'ordre des arguments, l'encodage de l'URL,
-l'unité de la taille, la distinction des deux formats, la règle de publication
-et le lien symbolique cassé.
+**Tenu par des tests unitaires.** Les quatre fonctions du fichier —
+`findAudioFile()`, `canonicalDownloadName()`, `audioDownloads()`,
+`applyAudioDownloads()` — sont à `100.00 % (42/42)`, vérifié par
+`bin/coverage-check.php` sur le rapport Clover. L'ordre de sélection, la casse,
+la tolérance aux formats, le dossier absent (Task 2 et Task 4) ; l'ordre des
+arguments, l'encodage de l'URL, l'unité de la taille, la distinction des deux
+formats et le lien symbolique cassé (Task 5, Step 6) ; et depuis le Step 9 la
+fusion, l'ordre des clés rendues, le retrait de `hasAudio` et les **deux sens**
+de la règle de publication.
 
-**Tenu par une mesure, pas par un test.** Ce qui reste au point d'appel : les
-bons arguments dans le bon ordre depuis `$show`, le `require_once`, la garde.
-Vérifié par l'instantané des 367 émissions (Step 7) et par les mesures des
+**Tenu par une mesure, pas par un test.** Ce qui reste au point d'appel : le
+`require_once`, et le câblage des trois slugs et des deux chemins depuis `$show`.
+Vérifié par l'instantané des 367 émissions (Steps 7 et 9) et par les mesures des
 Steps 3 et 4 — reproductibles à la main, mais rien ne les rejoue.
 
-**Les onze mutations, rejouées sur le nouveau code.** Chacune réellement
-appliquée au fichier où le code vit désormais, la suite relancée, le verdict
-relevé. Cinq lignes supplémentaires (suffixées `b`, plus M12) closent ce que la
-rejouée a fait apparaître.
+**Les mutations, rejouées sur le nouveau code après le Step 9.** Chacune
+réellement appliquée au fichier où le code vit désormais, la suite relancée, et
+l'instantané des 367 émissions passé en second juge. Le pilote de la campagne
+refuse une ancre qui ne correspond pas à exactement une occurrence, pour qu'une
+mutation « appliquée » ne puisse pas être en réalité un fichier intact.
+
+Les seize d'origine d'abord ; puis les sept qui survivaient au point d'appel, à
+l'endroit où le Step 9 les fait atterrir ; puis six que la nouvelle forme rend
+possibles et qu'il aurait été malhonnête de ne pas chercher.
 
 | # | Mutation | Où elle atterrit | Verdict |
 | --- | --- | --- | --- |
-| M1 | `$number` slugifié dans `audioDownloads()` | `audio.php` | **meurt** — `testLeNumeroArriveNonSlugifie` |
-| M2 | `rawurlencode()` retiré | `audio.php` | **meurt** — `testLUrlEncodeLeNomRetenu` |
-| M3 | arguments `mp3` / `flac` permutés | `audio.php` | **meurt** — 4 échecs |
-| M4 | `$authorsSlug` / `$titleSlug` permutés | `audio.php` | **meurt** — 2 échecs |
-| M5 | `$conventionPrefix` mis à `''` | `audio.php` | **meurt** — 7 erreurs, mais voir M5b |
-| M6 | `/(1024*1024)` devient `/1024` | `audio.php` | **meurt** — 2 échecs |
-| M7 | `' Mo'` devient `' Go'` | `audio.php` | **meurt** — 2 échecs |
-| M8 | `hasAudio` : `\|\|` devient `&&` | `audio.php` | **meurt** — 2 échecs |
-| M9 | `canonicalDownloadName` rendu `''` | `audio.php` | **meurt** — 2 échecs |
-| M10 | `require_once __DIR__.'/audio.php';` supprimé | `bootstrap.php` | **survit** à la suite |
-| M11 | `urlDownloadFlac` forcé à `null` | `audio.php` | **meurt** — 1 échec |
-| M5b | `$conventionPrefix` mis à `'zzz_'` | `audio.php` | **meurt** — `testLaConventionPasseDevantLeNomLibre` |
-| M12 | stat raté rendu `0` au lieu de `false` | `audio.php` | **meurt** — `testUnLienCasseAbandonneLeNom` |
-| M1b | `slugify($show['number'])` au point d'appel | `bootstrap.php` | **survit** à tout |
-| M4b | auteurs / titre permutés au point d'appel | `bootstrap.php` | **survit** à la suite |
-| M8b | garde inversée : `if ($hasAudio)` | `bootstrap.php` | **survit** à la suite |
-| M13 | `$hasAudio` forcé à `true` | `bootstrap.php` | **survit** à la suite |
-| M14 | `unset($audio['hasAudio'])` supprimé | `bootstrap.php` | **survit** à la suite |
-| M15 | `$directory` / `$urlAssets` permutés à l'appel | `bootstrap.php` | **survit** à la suite |
-| M16 | `rawurlencode()` retiré sur le **flac** seul | `audio.php` | **meurt** — `testLUrlEncodeLeNomRetenu` |
-| M17 | `round(…, 2)` devient `round(…, 1)` | `audio.php` | **meurt** — `…ArrondieAuCentieme` |
-| M18 | `_` final du préfixe retiré | `audio.php` | **meurt** — `testLePrefixeSeTermineParSonSeparateur` |
+| M1 | `$number` slugifié dans `audioDownloads()` | `audio.php` | **meurt** — 2 échecs |
+| M2 | `rawurlencode()` retiré sur le **mp3** | `audio.php` | **meurt** — 2 échecs |
+| M3 | arguments `mp3` / `flac` permutés | `audio.php` | **meurt** — 9 échecs |
+| M4 | `$authorsSlug` / `$titleSlug` permutés | `audio.php` | **meurt** — 5 échecs |
+| M5 | `$conventionPrefix` mis à `''` | `audio.php` | **meurt** — 16 erreurs, mais voir M5b |
+| M5b | `$conventionPrefix` mis à `'zzz_'` | `audio.php` | **meurt** — 3 échecs |
+| M6 | `/(1024*1024)` devient `/1024` | `audio.php` | **meurt** — 3 échecs |
+| M7 | `' Mo'` devient `' Go'` | `audio.php` | **meurt** — 3 échecs |
+| M8 | `hasAudio` : `\|\|` devient `&&` | `audio.php` | **meurt** — 4 échecs |
+| M9 | `canonicalDownloadName` rendu `''` | `audio.php` | **meurt** — 5 échecs |
+| M10 | `require_once __DIR__.'/audio.php';` supprimé | `bootstrap.php` | **survit** à la suite — chaque page en erreur fatale |
+| M11 | `urlDownloadFlac` forcé à `null` | `audio.php` | **meurt** — 2 échecs |
+| M12 | stat raté rendu `0` au lieu de `false` | `audio.php` | **meurt** — 1 échec |
+| M16 | `rawurlencode()` retiré sur le **flac** seul | `audio.php` | **meurt** — 1 échec |
+| M17 | `round(…, 2)` devient `round(…, 1)` | `audio.php` | **meurt** — 1 échec |
+| M18 | `_` final du préfixe retiré | `audio.php` | **meurt** — 1 échec |
+| M1b | `slugify()` sur le numéro passé à l'appel | — | **non représentable** : le numéro n'est plus un argument |
+| M1b-fn | `$show['number']` slugifié **dans** `applyAudioDownloads()` | `audio.php` | **meurt** — 1 échec |
+| M4b | auteurs / titre permutés **par position** à l'appel | — | **non représentable** : les slugs sont sous clés nommées |
+| M4b-fn | `$slugs['authors']` / `$slugs['title']` permutés dans l'appel interne | `audio.php` | **meurt** — 3 échecs |
+| M4b-appel | `'authors' => slugify($show['title'])`, et l'inverse | `bootstrap.php` | **survit** à la suite — instantané : 732 lignes |
+| M8b | garde inversée : `if ($hasAudio)` | `audio.php` | **meurt** — 3 échecs |
+| M13 | `$hasAudio` forcé à `true` | `audio.php` | **meurt** — 1 échec |
+| M14 | le retrait de `hasAudio` supprimé | `audio.php` | **meurt** — 2 échecs |
+| M15-fn | `$directory` / `$urlAssets` permutés dans l'appel interne | `audio.php` | **meurt** — 5 échecs |
+| M15-appel | `$pathPublicEmission` / `$urlAssets` permutés à l'appel | `bootstrap.php` | **survit** à la suite — instantané : 2 320 lignes |
+| N1 | `array_merge($audio, $show)` : sens de la fusion inversé | `audio.php` | **meurt** — 1 échec (test ajouté pour elle) |
+| N2 | `return $audio;` au lieu de `return $show;` | `audio.php` | **meurt** — 6 échecs |
+| N3 | `$slugs['type']` lu comme `$slugs['authors']` | `audio.php` | **meurt** — 4 échecs |
+| N4 | garde rendue inconditionnelle : `$show['isPublic'] = false;` | `audio.php` | **meurt** — 2 échecs |
+| N5 | `$show['number']` lu comme `$slugs['type']` | `audio.php` | **meurt** — 4 échecs |
+| N6 | `'type' => slugify($show['title'])` au point d'appel | `bootstrap.php` | **survit** à la suite — instantané : 732 lignes |
 
-**Dix des onze meurent.** La onzième, M10, est le `require_once` : sa suppression
-ne change rien à la suite, qui charge `audio.php` par son propre `require_once`.
-Elle reste ce qu'elle était — chaque page en erreur fatale (`audio.php` n'est pas
-dans l'autoload `files` de Composer, vérifié).
+**Trente mutations appliquées, vingt-six meurent sur la suite.** Deux des sept qui survivaient
+au point d'appel n'existent même plus comme mutations : M1b et M4b ne sont pas
+« tuées », elles sont **non représentables**, et c'est un résultat plus fort. Les
+cinq autres — M4b-fn, M8b, M13, M14, M15-fn — ont suivi le code dans `audio.php`
+et y meurent.
+
+**M10 n'a pas bougé et ne le pouvait pas.** Sa suppression ne change rien à la
+suite, qui charge `audio.php` par son propre `require_once`. Elle reste ce
+qu'elle était : chaque page en erreur fatale — mesuré à nouveau sur l'instantané,
+qui part en `Fatal error` (`audio.php` n'est pas dans l'autoload `files` de
+Composer, vérifié).
 
 **M5 meurt, mais pas pour la bonne raison, et c'est M5b qui le montre.** Avec le
 préfixe vide, PHP 7.4 émet `strpos(): Empty needle`, que PHPUnit convertit en
@@ -1677,34 +1818,81 @@ test portait « arrondie au centième » dans son nom sans le tenir. M18 : le `_
 final du préfixe n'était épinglé par rien, alors que c'est lui qui sépare la 17
 de la 17bis, qui existe.
 
-**Ce que la couture laisse encore à découvert, et il faut le nommer.** **Sept**
-mutations survivent au point d'appel, où la suite n'entre pas — la première
-version de ce décompte en annonçait trois, et sous-estimait donc le trou :
+**Ce que la couture laisse encore à découvert, et il faut le nommer sans
+compter.** Ce qui reste n'est plus du calcul ni de la décision : c'est le
+**câblage** de l'appel, et il est **non testé, point**. Écrire « il reste quatre
+survivantes » donnerait à lire un résidu mesuré là où il n'y a qu'une liste :
+une seconde relecture en a trouvé **trois de plus** sans chercher longtemps —
+`'title' => $show['title']` et `'authors' => $show['authors']` (slugify sauté,
+668 et 562 lignes d'écart), et surtout l'appel **dont on jette la valeur de
+retour**, `applyAudioDownloads($show, …);` au lieu de `$show = …` : 1 835 lignes
+d'écart, et la suite verte.
 
-- **M4b** (auteurs et titre permutés dans l'appel) et **M8b** (garde de
-  publication inversée) survivent à `vendor/bin/phpunit`, mais l'instantané des
-  367 émissions les voit : 732 et 730 lignes de différence. Une mesure, pas une
-  porte.
-- **M1b** survit à *tout*, y compris à l'instantané, qui ne bouge pas d'une
-  ligne. Ce n'est pas un mutant équivalent pour autant : `slugify()` sur le
-  numéro serait faux dès qu'un segment d'URL porterait autre chose que ce que
-  les 367 dossiers portent aujourd'hui. Il est simplement **invisible sur les
-  données présentes**.
+**Cette dernière est une fragilité que ce Step a créée**, et elle mérite d'être
+posée à côté des gains : un seul jeton perdu abandonne désormais la fusion
+*et* toute la règle de publication, là où il fallait auparavant toucher
+plusieurs instructions pour faire autant de dégâts. C'est le prix de la
+concentration.
 
-  **Et son témoin doit être choisi avec soin** : `17BIS` ne le démontre pas,
-  puisque `slugify('17BIS')` et `strtolower('17BIS')` rendent tous deux `17bis`
-  — pour cette entrée, le mutant est équivalent. Les témoins qui séparent
-  réellement les deux sont `17 BIS`, `17_bis`, `17.5`, `17é`. Un numéro portant
-  un tiret ne peut pas arriver jusque-là : `explode('-')` l'aurait coupé avant.
-  `17BIS` reste le bon témoin pour la mutation *voisine* — `strtolower()` retiré
-  — et c'est à ce titre qu'il figure au test de la Task 4.
-- **M13, M14 et M15** survivent aussi : `$hasAudio` forcé à `true` ne dépublie
-  plus jamais, le `unset()` supprimé laisse fuir une clé de plus dans `$show`, et
-  les deux chemins permutés à l'appel ne sont vus par rien.
+Les quatre nommées ci-dessous ne sont donc pas *le* résidu — ce sont celles
+qu'on a écrites.
 
-Ces sept-là ne se tuent qu'en testant `getShow()` elle-même, c'est-à-dire en
-montant un harnais Silex — **ou** en poussant la couture d'un cran, ce que la
-relecture propose et que la section suivante pose.
+- **M4b-appel** et **N6** sont des valeurs mal branchées sur des clés
+  correctement nommées : `'authors' => slugify($show['title'])`,
+  `'type' => slugify($show['title'])`. Les clés nommées interdisent la
+  permutation *positionnelle* (M4b, M1b), pas le fait de lire le mauvais champ
+  de `$show`. **Aucune signature ne peut fermer ça** — seul un test qui appelle
+  `getShow()` le verrait.
+- **M15-appel** est, lui, une vraie permutation positionnelle :
+  `$pathPublicEmission` et `$urlAssets` restent deux chaînes de même type à la
+  file. Elle se fermerait en les nommant comme les slugs. **Ce n'est délibérément
+  pas fait** : le point d'appel resterait non testé de toute façon, à cause des
+  deux ci-dessus, et échanger une survivante contre un second tableau littéral
+  achèterait un chiffre, pas une garantie. Si la relecture préfère l'inverse,
+  c'est une ligne à changer et la mesure est déjà là pour l'arbitrer.
+- **M10**, le `require_once`, reste hors de portée d'une suite qui charge
+  `audio.php` elle-même.
+
+**Aucune de celles-ci n'est équivalente, et ce n'est pas une opinion.**
+L'instantané des 367 émissions le mesure : 732 lignes pour M4b-appel, 732 pour
+N6, ~2 300 pour M15-appel (deux comptages, même conclusion), et M10 met chaque
+page en `Fatal error`. Toutes
+changent la sortie **sur les données d'aujourd'hui** — il n'y a même pas de
+témoin à construire, les émissions existantes suffisent. C'est ce qui les sépare
+de l'ancienne M1b, qui elle survivait aussi à l'instantané.
+
+Aucune ne se tue sans tester `getShow()` elle-même, c'est-à-dire sans monter un
+harnais Silex. Le Step 9 a poussé la couture aussi loin qu'elle peut aller sans
+ce harnais ; ce qui reste est le prix de ne pas l'avoir monté, et ce prix se
+nomme mais ne se chiffre pas.
+
+**Une survivante trouvée *dans* le fichier certifié à 100 %, et corrigée.** La
+relecture a construit une mutation qui conserve l'ordre des clés mais rend au
+manifeste la priorité sur le calcul — elle passait la suite entière. Le sens de
+`array_merge` ne décide pas que de l'ordre : il décide de la **précédence**, et
+un manifeste est une donnée externe non validée que rien n'empêche de porter une
+de ces cinq clés. `testLesValeursCalculeesGagnentSurCellesDuManifeste` l'épingle
+désormais. C'est le rappel utile que 100 % de lignes couvertes n'est pas une
+preuve : c'est un plancher.
+
+**Et le test d'ordre des clés était justifié par une affirmation fausse.** Sa
+première rédaction disait que cet ordre « se voit dans les gabarits et le flux ».
+Vérifié consommateur par consommateur : les gabarits lisent `show.foo` par son
+nom, la route RSS construit chaque champ, oEmbed bâtit son propre tableau,
+`getShows()` ne lit que `isPublic`. **Rien n'observe l'ordre des clés de
+`$show`** ; les 3 670 lignes de l'instantané sont un artefact de `var_export()`.
+Le test est conservé comme ce qu'il est — un détecteur de changement sur le sens
+de la fusion, justifié par la mutation et non par un effet visible — et son
+commentaire le dit.
+
+**Note sur l'ancienne M1b, conservée pour le choix de ses témoins.** Elle n'est
+plus représentable, mais le raisonnement sur son témoin reste utile ailleurs :
+`17BIS` ne sépare pas `slugify()` de `strtolower()`, puisque les deux rendent
+`17bis`. Les témoins qui les séparent réellement sont `17 BIS`, `17_bis`, `17.5`,
+`17é` — c'est `17 bis` qu'emploie `testLeNumeroSeLitDansLEmissionEtNEstPasSlugifie`.
+Un numéro portant un tiret ne peut pas arriver jusque-là : `explode('-')`
+l'aurait coupé avant. `17BIS` reste le bon témoin pour la mutation *voisine* —
+`strtolower()` retiré — et c'est à ce titre qu'il figure au test de la Task 4.
 
 **Deux constats de relecture, pour la Task 6 :**
 

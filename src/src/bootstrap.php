@@ -1,6 +1,7 @@
 <?php
 // Setup autoloading
 require_once __DIR__.'/../vendor/autoload.php';
+require_once __DIR__.'/audio.php';
 
 // Uses
 use Silex\Provider;
@@ -222,31 +223,33 @@ function getShow($id, Silex\Application $app = null) {
         $urlAssetsRoot = 'https://www.ouiedire.net/assets';
     }
 
-    // Guess show audio properties (MP3 and FLAC)
-    try {
-        $fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $pathPublicEmission, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
-        $show['sizeDownloadMp3'] = round($fileMp3->getSize()/(1024*1024),2).' Mo';
-    } catch (\RuntimeException $e) {
-        $show['sizeDownloadMp3'] = null;
-    }
+    // Guess show audio properties (MP3 and FLAC).
+    // Le nom du fichier n'est pas une donnee : on balaye le dossier, la
+    // convention historique d'abord. Voir le change audio-sans-convention.
+    $conventionPrefix = sprintf('ouiedire_%s-%s_', slugify($show['type']), $show['number']);
+    $nameMp3 = findAudioFile($pathPublicEmission, 'mp3', $conventionPrefix);
+    $nameFlac = findAudioFile($pathPublicEmission, 'flac', $conventionPrefix);
 
-    try {
-        $fileFlac = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s_%s.flac', $pathPublicEmission, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
-        $show['sizeDownloadFlac'] = round($fileFlac->getSize()/(1024*1024),2).' Mo';
-    } catch (\RuntimeException $e) {
-        $show['sizeDownloadFlac'] = null;
-    }
+    // Un stat qui echoue dit que le fichier n'est pas la : lien symbolique casse,
+    // fichier retire entre le balayage et ici. Le nom est alors abandonne, sinon
+    // l'emission se publierait avec « 0 Mo » et un lien mort. Ce n'est pas un
+    // retour au critere de lisibilite que ce change retire : un fichier present
+    // mais non lisible se stat tres bien, et reste publie.
+    $sizeMp3 = $nameMp3 ? @filesize($pathPublicEmission.'/'.$nameMp3) : false;
+    $sizeFlac = $nameFlac ? @filesize($pathPublicEmission.'/'.$nameFlac) : false;
 
-    $show['urlDownloadMp3'] = null;
-    $show['urlDownloadFlac'] = null;
+    $show['sizeDownloadMp3'] = $sizeMp3 === false ? null : round($sizeMp3 / (1024 * 1024), 2).' Mo';
+    $show['sizeDownloadFlac'] = $sizeFlac === false ? null : round($sizeFlac / (1024 * 1024), 2).' Mo';
+
+    $show['urlDownloadMp3'] = $sizeMp3 === false ? null : sprintf('%s/%s', $urlAssets, rawurlencode($nameMp3));
+    $show['urlDownloadFlac'] = $sizeFlac === false ? null : sprintf('%s/%s', $urlAssets, rawurlencode($nameFlac));
+
+    // Etiquette d'enregistrement, independante du nom du fichier stocke.
+    $show['canonicalDownloadName'] = canonicalDownloadName(
+        slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])
+    );
+
     $show['slugDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
-
-    if ($fileMp3->isReadable()) {
-        $show['urlDownloadMp3'] = $show['slugDownload'].'.mp3';
-    }
-    if ($fileFlac->isReadable()) {
-        $show['urlDownloadFlac'] = $show['slugDownload'].'.flac';
-    }
 
     if ($show['urlDownloadMp3'] === null && $show['urlDownloadFlac'] === null) {
         $show['isPublic'] = false;

@@ -1319,17 +1319,21 @@ git commit -m "feat: nom canonique de telechargement independant du fichier stoc
 ## Task 5: Brancher dans getShow()
 
 **Files:**
-- Modify: `src/src/bootstrap.php:3` (require), `:225-250` (bloc audio)
+- Modify: `src/src/bootstrap.php` — le `require` de tête, et le bloc audio de
+  `getShow()`. Les numéros de ligne que ce plan portait (`:3`, `:225-250`) ont
+  dérivé au fil des tâches ; les ancres ci-dessous sont des **chaînes**, dont
+  l'unicité a été vérifiée avant chaque édition.
 
-- [ ] **Step 1: Charger le nouveau fichier**
+- [x] **Step 1: Charger le nouveau fichier**
 
-Après la ligne 3 de `src/src/bootstrap.php` (`require_once __DIR__.'/../vendor/autoload.php';`), ajouter :
+Juste après `require_once __DIR__.'/../vendor/autoload.php';` dans
+`src/src/bootstrap.php`, ajouter :
 
 ```php
 require_once __DIR__.'/audio.php';
 ```
 
-- [ ] **Step 2: Remplacer le bloc audio**
+- [x] **Step 2: Remplacer le bloc audio**
 
 Remplacer intégralement, dans `src/src/bootstrap.php`, depuis `// Guess show audio properties (MP3 and FLAC)` jusqu'à la ligne fermante du second `if ($fileFlac->isReadable()) { ... }` :
 
@@ -1341,52 +1345,221 @@ Remplacer intégralement, dans `src/src/bootstrap.php`, depuis `// Guess show au
     $nameMp3 = findAudioFile($pathPublicEmission, 'mp3', $conventionPrefix);
     $nameFlac = findAudioFile($pathPublicEmission, 'flac', $conventionPrefix);
 
-    $show['sizeDownloadMp3'] = $nameMp3
-        ? round(filesize($pathPublicEmission.'/'.$nameMp3) / (1024 * 1024), 2).' Mo'
-        : null;
-    $show['sizeDownloadFlac'] = $nameFlac
-        ? round(filesize($pathPublicEmission.'/'.$nameFlac) / (1024 * 1024), 2).' Mo'
-        : null;
+    // Un stat qui echoue dit que le fichier n'est pas la : lien symbolique casse,
+    // fichier retire entre le balayage et ici. Le nom est alors abandonne, sinon
+    // l'emission se publierait avec « 0 Mo » et un lien mort. Ce n'est pas un
+    // retour au critere de lisibilite que ce change retire : un fichier present
+    // mais non lisible se stat tres bien, et reste publie.
+    $sizeMp3 = $nameMp3 ? @filesize($pathPublicEmission.'/'.$nameMp3) : false;
+    $sizeFlac = $nameFlac ? @filesize($pathPublicEmission.'/'.$nameFlac) : false;
 
-    $show['urlDownloadMp3'] = $nameMp3 ? sprintf('%s/%s', $urlAssets, rawurlencode($nameMp3)) : null;
-    $show['urlDownloadFlac'] = $nameFlac ? sprintf('%s/%s', $urlAssets, rawurlencode($nameFlac)) : null;
+    $show['sizeDownloadMp3'] = $sizeMp3 === false ? null : round($sizeMp3 / (1024 * 1024), 2).' Mo';
+    $show['sizeDownloadFlac'] = $sizeFlac === false ? null : round($sizeFlac / (1024 * 1024), 2).' Mo';
+
+    $show['urlDownloadMp3'] = $sizeMp3 === false ? null : sprintf('%s/%s', $urlAssets, rawurlencode($nameMp3));
+    $show['urlDownloadFlac'] = $sizeFlac === false ? null : sprintf('%s/%s', $urlAssets, rawurlencode($nameFlac));
 
     // Etiquette d'enregistrement, independante du nom du fichier stocke.
     $show['canonicalDownloadName'] = canonicalDownloadName(
         slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])
     );
+
+    $show['slugDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
 ```
 
-- [ ] **Step 3: Vérifier que le site répond**
+**La dernière ligne n'était pas dans le squelette de cette tâche, et elle y est
+maintenant : le bloc est régénéré depuis le fichier final.** `slugDownload` reste
+lu par `src/views/emission.html.twig:63`, le bouton « Copier le nom de fichier
+attendu ». C'est la Task 6 qui retire les deux ensemble ; le squelette ci-dessus
+l'avait déjà supprimée, une tâche trop tôt.
+
+**Rectification, mesurée en relecture :** le retirer ici n'aurait *rien cassé*.
+La ligne 63 est dans la branche `{% else %}` de `{% if show.urlDownloadFlac %}
+… {% elseif show.urlDownloadMp3 %} … {% else %}` — elle ne rend que pour une
+émission **sans aucun audio**, qui depuis ce change est aussi dépubliée. Et
+`strict_variables` vaut `false` chez Silex (vérifié :
+`$app['twig']->isStrictVariables()`), donc une clé absente rendrait `href=""`,
+pas une exception. Garder la ligne reste le bon geste — le retrait et celui du
+bouton forment un seul diff cohérent — mais c'est un **choix de découpage**, pas
+une casse évitée. Dans un change dont toute l'histoire de relecture porte sur des
+affirmations qui se dissolvent à la mesure, la nuance n'est pas décorative.
+
+Le troisième argument de `canonicalDownloadName()` est `$show['number']`, **non
+slugifié**, et c'est délibéré : c'est le contrat écrit à son docblock (Task 4),
+et `slugDownload` ne le slugifiait pas non plus. Le slugifier serait un
+changement de comportement que ce change n'a pas demandé.
+
+- [x] **Step 3: Vérifier que le site répond**
 
 ```bash
 docker run --rm -v .:/app -w /app/src -p 8123:80 php:7.4-cli php -S 0.0.0.0:80 -t /app/src/public &
 bin/dev-audio-fixtures
-curl -s -o /dev/null -w '%{http_code}\n' 'http://127.0.0.1:8123/emission/ailleurs-331'
+for u in / /artists /feed /emission/ailleurs-331; do
+  curl -s -o /dev/null -w "$u -> %{http_code}\n" "http://127.0.0.1:8123$u"
+done
 ```
 
-Attendu : `200`.
+Mesuré : `200` sur les quatre. La page d'émission ne suffit pas — un oubli de ce
+genre a déjà mis `/` en 500 dans ce change, le `Finder` cherchant encore
+l'ancien nom de fichier.
 
-- [ ] **Step 4: Vérifier le scénario qui motive le change**
+**Et la même mesure avant le change, pour que « 200 » veuille dire quelque
+chose.** Avec le patch remisé (`git stash`), les quatre routes rendent `200` et
+la page d'accueil liste **365** pages d'émission distinctes ; avec le patch,
+`200` sur les quatre et la même liste, **identique au diff près** :
 
 ```bash
-docker run --rm -v .:/app -w /app/src php:7.4-cli php -r '
-$debug=false; require("/app/src/src/bootstrap.php");
-$p="/app/src/public/assets/emission/ailleurs-331/index.json";
-$d=json_decode(file_get_contents($p), true); $orig=$d["title"];
-$d["title"]="La Pompa Calor Vol 3"; file_put_contents($p, json_encode($d, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE));
-$s=getShow("ailleurs-331"); echo $s["isPublic"] ? "PUBLIEE\n" : "DEPUBLIEE\n";
-$d["title"]=$orig; file_put_contents($p, json_encode($d, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE));'
+diff <(grep -oE '"/emission/[a-zA-Z0-9-]+"' avant.html | sort -u) \
+     <(grep -oE '"/emission/[a-zA-Z0-9-]+"' apres.html | sort -u)
 ```
 
-Attendu : `PUBLIEE`. Avant ce change, la même commande affichait `DEPUBLIEE`.
+Mesuré : aucune différence. Et au niveau de `getShow()`, sur les 367 dossiers :
+`367 emissions, 0 sans audio`.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 4: Vérifier le scénario qui motive le change**
+
+`index.json` d'`ailleurs-331` est un **vrai fichier versionné**. Le script du
+squelette le restaurait par une ligne posée *après* l'appel à `getShow()` : un
+`Fatal error` entre les deux laissait la modification en place. Ici la
+restauration est **inconditionnelle** — l'octet-à-octet original est capturé
+avant toute écriture et reposé par `register_shutdown_function()`, qui court
+aussi sur une erreur fatale — et une copie hors dépôt double la garantie.
+
+```bash
+cp src/public/assets/emission/ailleurs-331/index.json /tmp/index-331.bak
+docker run --rm -v "$PWD":/app -w /app/src php:7.4-cli php -r '
+$debug=false; require("/app/src/src/bootstrap.php");
+$p="/app/src/public/assets/emission/ailleurs-331/index.json";
+$orig_raw=file_get_contents($p);
+register_shutdown_function(function() use ($p,$orig_raw) { file_put_contents($p, $orig_raw); });
+$d=json_decode($orig_raw, true); $d["title"]="La Pompa Calor Vol 3";
+file_put_contents($p, json_encode($d, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE));
+$s=getShow("ailleurs-331"); echo $s["isPublic"] ? "PUBLIEE\n" : "DEPUBLIEE\n";
+echo "fichier servi : ".$s["urlDownloadMp3"]."\n";
+echo "nom canonique : ".$s["canonicalDownloadName"]."\n";'
+cp /tmp/index-331.bak src/public/assets/emission/ailleurs-331/index.json
+git status --short
+```
+
+Mesuré :
+
+```
+PUBLIEE
+fichier servi : …/ailleurs-331/ouiedire_ailleurs-331_rachitik-data_la-pompa-chalor-vol-3.mp3
+nom canonique : ouiedire_ailleurs-331_rachitik-data_la-pompa-calor-vol-3
+```
+
+Les deux dernières lignes disent tout le change en une paire : le fichier
+**stocké** garde la coquille d'hier (`chalor`), l'étiquette **proposée** au
+public suit le titre corrigé (`calor`), et l'émission reste publiée.
+
+La même commande, le patch remisé, affiche `DEPUBLIEE` : le contraste est
+mesuré, pas supposé. `git status --short` ne rend que
+`M src/src/bootstrap.php` après coup.
+
+**Un fichier au nom libre, tant qu'à mesurer.** Les fixtures locales portent
+toutes le nom de la convention : le scénario ci-dessus ne prouve donc pas que
+l'URL survit à un nom quelconque. En posant `mix été & co vol 3.mp3` dans
+`ailleurs-330` (le fichier conforme écarté le temps de la mesure, reposé
+ensuite), `getShow()` rend :
+
+```
+url  : …/ailleurs-330/mix%20%C3%A9t%C3%A9%20%26%20co%20vol%203.mp3
+pub  : PUBLIEE
+```
+
+L'espace, l'accent et surtout l'esperluette sont encodés — c'est ce que le
+`rawurlencode()` du bloc paie : un `&` brut couperait la `flashvars` du lecteur
+Flash à `emission.html.twig:79`, et le nom canonique, lui, reste celui du titre.
+
+- [x] **Step 5: Commit**
 
 ```bash
 git add src/src/bootstrap.php
 git commit -m "feat: getShow decouvre l'audio au lieu de calculer son nom"
 ```
+
+### Ce qui tient ce branchement, et ce qui ne le tient pas
+
+`sdr-004` demande 90 % sur le code touché. Cette tâche touche `bootstrap.php`,
+que la suite **ne charge pas** et qui reste à ~507 instructions non couvertes.
+Le dire franchement vaut mieux que le maquiller :
+
+**Tenu par des tests unitaires.** Les deux fonctions appelées par le bloc —
+`findAudioFile()` et `canonicalDownloadName()` — sont à `100.00 % (15/15)`,
+vérifié par `bin/coverage-check.php` sur le rapport Clover, et onze mutations
+appliquées puis tuées (Task 2 et Task 4). L'ordre de sélection, la casse, la
+tolérance aux formats, le dossier absent : tout cela est tenu.
+
+**Tenu par une mesure, pas par un test.** Le *branchement* lui-même — les bons
+arguments dans le bon ordre, `$number` non slugifié, `rawurlencode()` sur le nom
+retenu, la non-régression du reste du site — n'est vérifié que par les quatre
+mesures des Steps 3 et 4 ci-dessus. Elles sont reproductibles à la main ; rien
+ne les rejoue.
+
+**Non tenu du tout, et l'énumération vaut mieux que trois exemples.** Aucune
+régression de ce bloc ne ferait échouer `vendor/bin/phpunit` : `bootstrap.php`
+est à `0.00 % (0/508)` et la suite ne l'amorce pas. Onze mutations appliquées en
+relecture, **onze survivantes** :
+
+| # | Mutation | |
+| --- | --- | --- |
+| M1 | `slugify()` ajouté sur `$number` | survit |
+| M2 | `rawurlencode()` retiré | survit |
+| M3 | arguments `mp3` / `flac` permutés | survit |
+| M4 | `$authors` / `$title` permutés dans `canonicalDownloadName()` | survit |
+| M5 | `$conventionPrefix` mis à `''` | survit |
+| M6 | `/(1024*1024)` devient `/1024` | survit |
+| M7 | `' Mo'` devient `' Go'` | survit |
+| M8 | garde `isPublic` : `&&` devient `\|\|` | survit |
+| M9 | `canonicalDownloadName()` rendu `''` | survit |
+| M10 | `require_once __DIR__.'/audio.php';` supprimé | survit |
+| M11 | `urlDownloadFlac` forcé à `null` | survit |
+
+M8 inverse la logique de publication et M10 met chaque page en erreur fatale
+(`audio.php` n'est pas dans l'autoload `files` de Composer, vérifié). Une liste
+de trois donnait à lire un trou borné là où il est total.
+
+**Le test qui manque, et son prix — chiffré correctement cette fois.** Une
+première rédaction invoquait `$pathPublic = __DIR__.'/../public'`, codé en dur,
+et concluait qu'un test devrait écrire dans l'arbre versionné des émissions ou
+dépendre des fixtures `*.mp3` gitignorées. **Ce verrou n'existe pas.** Au point
+d'appel, `$pathPublicEmission` et `$urlAssets` sont déjà des variables locales :
+extraire le bloc vers `audio.php` — que la suite charge et que la jauge mesure
+déjà — ne demande de toucher à `$pathPublic` en rien.
+
+```php
+// audio.php
+function audioDownloads($directory, $urlAssets, $typeSlug, $number, $authorsSlug, $titleSlug) { … }
+```
+
+Cette couture se teste contre un dossier temporaire : ni arbre versionné, ni
+fixture gitignorée, ni `$app`. Elle tuerait neuf des onze mutations du tableau
+ci-dessus.
+
+Elle n'est **pas prise dans cette tâche** : c'est une extraction que le plan ne
+prévoyait pas, et la décision revient à la personne qui tient le dépôt. Ce qui
+est corrigé ici, c'est l'énoncé — le refus était le bon, sa justification ne
+l'était pas. Refuser de fabriquer un harnais Silex pour la forme reste juste ;
+prétendre qu'un autre change était requis ne l'était pas.
+
+**Deux constats de relecture, pour la Task 6 :**
+
+- `$show['canonicalDownloadName']` n'est **consommé par rien** aujourd'hui — la
+  clé est prête, aucun gabarit ne la lit. C'est l'attribut `download=` de la
+  Task 6 qui la rendra vivante, et c'est là que l'exigence « nom canonique au
+  téléchargement » du spec se ferme. Elle est **préparée**, pas tenue.
+- `slugify('Ouïedire')` mange le `ï` : le nom canonique proposé pour ces
+  émissions est `ouiedire_ouedire-001_…`. Aujourd'hui cette faute ne fait que
+  coïncider avec ce qui est sur le disque. Dès que la Task 6 en fera un
+  `download=`, ce sera un nom que le site **assigne délibérément** à un fichier
+  enregistré. À trancher là-bas.
+
+**Un gain non prévu, relevé en relecture.** L'ancien code faisait
+`strtolower($urlAssets.'/'.….'.mp3')` : un fichier portant une majuscule sur le
+disque recevait une URL en minuscules, donc un 404. Le nouveau bloc n'abaisse
+plus l'URL, seulement l'étiquette d'enregistrement. C'est une correction, pas
+une régression.
 
 ---
 

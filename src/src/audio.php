@@ -22,7 +22,11 @@ function findAudioFile($directory, $extension, $conventionPrefix)
     $conventional = array();
     $others = array();
 
-    foreach (scandir($directory) as $name) {
+    // scandir() rend false sur un dossier illisible, et emet deux avertissements
+    // avant que le foreach en emette un troisieme. Le resultat etait deja bon —
+    // aucun fichier, donc null — mais il l'est maintenant sans bruit sur le
+    // chemin de requete. Un seul terme : pas de branche non couverte de plus.
+    foreach (@scandir($directory) ?: array() as $name) {
         if (strtolower(pathinfo($name, PATHINFO_EXTENSION)) !== $extension) {
             continue;
         }

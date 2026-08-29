@@ -252,10 +252,11 @@ class ApplyAudioDownloadsTest extends TestCase
 
         $show = $this->applique($this->emission(array('number' => '17 bis')));
 
-        // Le nom canonique porte le numero REMPLI — « 017 bis » — mais l'espace
-        // et la casse le traversent intacts : slugify() en ferait « 017-bis ».
+        // Le nom canonique porte le numero TEL QUEL — « 17 bis » — espace et
+        // casse compris : slugify() en ferait « 17-bis », le remplissage
+        // « 017 bis ». Ni l'un ni l'autre ne s'applique ici.
         $this->assertSame(
-            'ouiedire_ailleurs-017 bis_rachitik-data_la-pompa-calor-vol-3',
+            'ouiedire_ailleurs-17 bis_rachitik-data_la-pompa-calor-vol-3',
             $show['canonicalDownloadName']
         );
         // Et le prefixe construit sur ce meme numero fait bien passer le fichier

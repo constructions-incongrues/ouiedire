@@ -50,8 +50,8 @@ FLAC) dans le dossier de l'émission, quel que soit son nom. Une faute de frappe
 dans le titre ne dépublie plus l'émission.
 
 Le téléchargement, lui, propose toujours un nom canonique, construit à partir du
-type, du numéro rempli à trois chiffres, des auteurices et du titre :
-`ouiedire_ailleurs-331_rachitik-data_la-pompa-calor-vol-3.mp3`. Ce nom est
+type, du numéro de l'émission tel qu'il figure dans son adresse, des auteurices
+et du titre : `ouiedire_ailleurs-331_rachitik-data_la-pompa-calor-vol-3.mp3`. Ce nom est
 recalculé depuis le manifeste à chaque visite : corriger un titre depuis
 `/admin/` change le nom proposé sans toucher au fichier déposé. Limite connue,
 et défaut à réparer : les caractères accentués y sont supprimés au lieu d'être

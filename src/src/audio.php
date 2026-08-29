@@ -176,7 +176,6 @@ function audioDownloads($directory, $urlAssets, $typeSlug, $number, $authorsSlug
         sprintf('ouiedire_%s-%s_', $typeSlug, $number),
         sprintf('ouiedire_%s-%s_', $typeSlug, paddedShowNumber($number)),
     );
-    $paddedNumber = paddedShowNumber($number);
     $nameMp3 = findAudioFile($directory, 'mp3', $conventionPrefixes);
     $nameFlac = findAudioFile($directory, 'flac', $conventionPrefixes);
 
@@ -194,12 +193,18 @@ function audioDownloads($directory, $urlAssets, $typeSlug, $number, $authorsSlug
         'urlDownloadMp3' => $sizeMp3 === false ? null : sprintf('%s/%s', $urlAssets, rawurlencode($nameMp3)),
         'urlDownloadFlac' => $sizeFlac === false ? null : sprintf('%s/%s', $urlAssets, rawurlencode($nameFlac)),
         // Etiquette d'enregistrement, independante du nom du fichier stocke.
-        // Le numero y est REMPLI : depuis que ce nom atterrit sur le disque de
-        // qui telecharge, il doit dire ce que la page affiche (« 001 ») et non
-        // le brut du segment d'URL. Le remplissage se fait ici, pas dans
-        // canonicalDownloadName(), dont le contrat reste « assemble et met en
-        // minuscules, ne slugifie pas ».
-        'canonicalDownloadName' => canonicalDownloadName($typeSlug, $paddedNumber, $authorsSlug, $titleSlug),
+        //
+        // Le numero y est BRUT, comme partout ailleurs dans le systeme : le
+        // dossier (assets/emission/ailleurs-1), les couvertures
+        // (ouiedire_ailleurs-1_cover-1.png), le segment d'URL, et les fichiers
+        // audio de production — que l'ancien code exigeait sous cette forme et
+        // qui etaient servis. Le numero rempli n'apparait que sur la page.
+        //
+        // Une redaction precedente employait la forme remplie, au motif qu'elle
+        // coincidait avec le fichier stocke sur les 367. C'etait mesure sur les
+        // fixtures de bin/dev-audio-fixtures, qui les nomme APRES le
+        // remplissage — pas sur l'archive. Voir le plan, « Correctif post-Task 6 ».
+        'canonicalDownloadName' => canonicalDownloadName($typeSlug, $number, $authorsSlug, $titleSlug),
         // Aucune publication sans audio : un seul des deux formats suffit.
         'hasAudio' => $sizeMp3 !== false || $sizeFlac !== false,
     );

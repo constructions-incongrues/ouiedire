@@ -2573,6 +2573,37 @@ convention passe devant », cœur de la Task 2 et défendue par onze mutations,
 donc le repli alphabétique trouvait le fichier. C'est la garantie qui manquait,
 pas le résultat.
 
+### Le nom canonique revient à la forme brute — et pourquoi la remplie était fondée sur du vide
+
+**Ce que la Task 8 a révélé.** Les 367 fichiers audio de ce dépôt font **zéro
+octet** : ce sont les fixtures de `bin/dev-audio-fixtures`, gitignorées. Or ce
+script les nomme avec `$s["number"]` **lu après `getShow()`**, donc **après le
+remplissage** — d'où des fixtures en `ouiedire_ailleurs-001_…`.
+
+**L'archive de production, elle, est nommée en forme brute.** À la base de
+fusion, `bootstrap.php:208` construisait le nom attendu avec `$show['number']`
+*avant* le remplissage de la ligne 257, et ne publiait que si ce fichier exact
+était lisible. Le brainstorm enregistre que **cinq émissions seulement**
+n'étaient pas servies en production. Si l'archive portait la forme remplie, les
+136 émissions numérotées sous 100 auraient été invisibles depuis toujours.
+
+**Conséquence : le « défaut des 136 » mesurait le désaccord entre deux outils de
+ce dépôt, pas le désordre de l'archive.** Ce qui en survit et ce qui tombe :
+
+- **L'acceptation des deux préfixes reste.** Elle ne coûte rien, elle rend les
+  fixtures cohérentes avec le code, et elle couvre un dépôt futur sous l'une ou
+  l'autre forme. Provision, pas réparation.
+- **Le nom canonique repasse au numéro brut.** Sa justification — « il coïncide
+  avec le fichier stocké sur les 367 » — était vraie des fixtures et fausse de la
+  production, où il divergerait pour 136 émissions. Le numéro brut est celui du
+  dossier, des couvertures, du segment d'URL et des fichiers réels ; le rempli
+  n'existe qu'à l'affichage. Le seul avantage de la forme remplie était le tri
+  dans un gestionnaire de fichiers, et il ne pèse pas contre la cohérence de tout
+  le reste.
+
+Les deux sens sont épinglés : repasser le nom canonique au rempli fait échouer
+quatre tests, retirer le préfixe rempli en fait échouer deux.
+
 ### Trois retouches apportées en relecture
 
 1. **`paddedShowNumber()` ne compare plus « `$number < 10` ».** Cette comparaison

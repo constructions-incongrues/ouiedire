@@ -83,10 +83,9 @@ class AudioDownloadsTest extends TestCase
         // slugify() ajoute a la couture doit faire echouer ce test.
         $audio = $this->decouvre('17 BIS');
 
-        // Le numero est desormais rempli — « 017 bis » — mais l'espace et la
-        // casse traversent intacts : c'est ce que ce test tient. Un slugify()
-        // ajoute a la couture le fait toujours echouer.
-        $this->assertSame('ouiedire_ailleurs-017 bis_dj_titre', $audio['canonicalDownloadName']);
+        // Le numero traverse TEL QUEL — « 17 BIS » — espace et casse compris :
+        // ni slugifie, ni rempli. Seul strtolower() le touche.
+        $this->assertSame('ouiedire_ailleurs-17 bis_dj_titre', $audio['canonicalDownloadName']);
     }
 
     public function testLUrlEncodeLeNomRetenu()
@@ -175,21 +174,27 @@ class AudioDownloadsTest extends TestCase
         );
     }
 
-    public function testLeNomCanoniquePorteLeNumeroRempli()
+    public function testLeNomCanoniquePorteLeNumeroBrut()
     {
-        // Depuis que ce nom atterrit sur le disque de qui telecharge, il doit
-        // dire ce que la page affiche — « 001 » — et non le brut du segment
-        // d'URL. Les 367 fichiers stockes portent deja cette forme.
+        // Le numero reste BRUT, comme le dossier, les couvertures, le segment
+        // d'URL et les fichiers audio de production. Le numero rempli n'existe
+        // qu'a l'affichage de la page.
+        //
+        // Une redaction precedente attendait « 001 » ici, au motif que les 367
+        // fichiers stockes portaient cette forme. C'etait mesure sur les
+        // fixtures de bin/dev-audio-fixtures, qui les nomme APRES le
+        // remplissage — pas sur l'archive, dont l'ancien code exigeait la forme
+        // brute et qui etait servie.
         $audio = $this->decouvre('1');
 
-        $this->assertSame('ouiedire_ailleurs-001_dj_titre', $audio['canonicalDownloadName']);
+        $this->assertSame('ouiedire_ailleurs-1_dj_titre', $audio['canonicalDownloadName']);
     }
 
-    public function testLeNumeroNonNumeriqueEstRempliLuiAussi()
+    public function testLaFormeRemplieReconnaitAussiUnNumeroNonNumerique()
     {
-        // ailleurs-17bis existe. Son mp3 s'appelle
-        // ouiedire_ailleurs-017bis_dj-gum_rebondir.mp3 : la forme remplie doit
-        // le reconnaitre, et le nom canonique doit la porter.
+        // Le prefixe rempli doit reconnaitre « 017bis » ; le nom canonique, lui,
+        // reste sur la forme brute du numero. Decouverte et etiquette ne suivent
+        // pas la meme regle, et ce test tient les deux a la fois.
         $this->ecritFichier('aaa.mp3');
         $this->ecritFichier('ouiedire_ailleurs-017bis_dj_titre.mp3');
 
@@ -199,7 +204,7 @@ class AudioDownloadsTest extends TestCase
             $this->urlAssets.'/ouiedire_ailleurs-017bis_dj_titre.mp3',
             $audio['urlDownloadMp3']
         );
-        $this->assertSame('ouiedire_ailleurs-017bis_dj_titre', $audio['canonicalDownloadName']);
+        $this->assertSame('ouiedire_ailleurs-17bis_dj_titre', $audio['canonicalDownloadName']);
     }
 
     public function testLaTailleEstEnMebioctetsArrondieAuCentieme()

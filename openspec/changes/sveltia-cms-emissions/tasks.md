@@ -62,9 +62,9 @@ Ces deux captures sont le seul filet de sécurité du change : le stack n'a pas 
 - [x] 7.3 Déclarer `playlist` en liste, chaque entrée exposant séparément repère temporel, artiste et titre, et préservant les entrées non interprétées
 - [x] 7.4 Activer la création avec un slug contraint à `<type>-<numéro>`, et vérifier qu'un slug dérivé du titre est impossible — `{{fields._slug}}` : saisie explicite obligatoire, donc jamais dérivé du titre. La **forme** n'est pas validée (voir design, décision 5) ; un identifiant non conforme donne un 404 mesuré, sans perte de données
 - [x] 7.5 Déclarer le champ image de couverture
-- [ ] 7.6 Test bout en bout — création : créer une émission, vérifier le dossier produit, son `index.json`, et son invisibilité publique tant que l'audio manque
-- [ ] 7.7 Test bout en bout — édition : ajouter, supprimer et réordonner des entrées de playlist, puis vérifier le rendu publié
-- [ ] 7.8 Test bout en bout — couverture : déposer une image sur une émission déjà pourvue et vérifier que la vignette de partage ne change pas
+- [x] 7.6 Test bout en bout — création : créer une émission, vérifier le dossier produit, son `index.json`, et son invisibilité publique tant que l'audio manque — validé par le mainteneur en mode dépôt local
+- [x] 7.7 Test bout en bout — édition : ajouter, supprimer et réordonner des entrées de playlist, puis vérifier le rendu publié — validé par le mainteneur en mode dépôt local
+- [x] 7.8 Test bout en bout — couverture : déposer une image sur une émission déjà pourvue et vérifier que la vignette de partage ne change pas — validé par le mainteneur en mode dépôt local
 
 ## 8. Finitions
 

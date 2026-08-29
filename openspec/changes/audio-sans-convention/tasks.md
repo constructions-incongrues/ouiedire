@@ -14,13 +14,17 @@ dépôt n'a aucune suite : elle se pose avant d'écrire une ligne de production.
 PHPUnit, `.dockerignore` créé. La couverture est mesurée par `bin/coverage-check`
 et non par `--coverage-text` — voir groupe 2 bis.
 
-## 2. Découverte de l'audio, tests d'abord
+## 2. Découverte de l'audio et ordre, tests d'abord
+
+Découverte et ordre sont un seul comportement et se testent ensemble : séparés,
+l'implémentation de la découverte contiendrait la branche de tri qu'aucun test
+rouge n'aurait exigée. `sdr-004` l'interdit sans exception.
 
 - [ ] 2.1 Écrire les tests de la découverte : un fichier au nom libre est trouvé ; un dossier sans audio n'en produit aucun ; MP3 et FLAC sont cherchés séparément
-- [ ] 2.2 Écrire les tests de l'ordre : la convention historique passe devant, l'alphabétique départage, et le résultat ne dépend pas de l'ordre de parcours du système de fichiers
+- [ ] 2.2 Écrire les tests de l'ordre dans la même tâche : la convention historique passe devant, l'alphabétique départage, la convention d'une autre émission ne gagne pas
 - [ ] 2.3 Vérifier que ces tests échouent pour la bonne raison avant d'écrire le code
-- [ ] 2.4 Remplacer le calcul du nom par le balayage dans `getShow()`, jusqu'à ce que les tests passent
-- [ ] 2.5 Vérifier que la couverture du code touché atteint le seuil de `sdr-004`
+- [ ] 2.4 Écrire `findAudioFile()` dans `src/src/audio.php`, sans dépendance à `slugify()`, jusqu'à ce que les tests passent
+- [ ] 2.5 Vérifier par la couverture que la branche « convention d'abord » est réellement exécutée
 
 ## 2 bis. Contrôle de couverture par fichier
 

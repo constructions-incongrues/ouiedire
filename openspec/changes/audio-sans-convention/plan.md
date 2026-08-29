@@ -138,7 +138,7 @@ git commit -m "test: pose PHPUnit et le pilote de couverture"
 
 ---
 
-## Task 2: Découverte d'un fichier audio
+## Task 2: Découverte du fichier audio et ordre de sélection
 
 **Files:**
 - Create: `src/src/audio.php`
@@ -208,8 +208,39 @@ class AudioTest extends TestCase
     {
         $this->assertNull(findAudioFile($this->dir.'/absent', 'mp3', 'ouiedire_ailleurs-331_'));
     }
+
+    public function testLaConventionPasseDevant()
+    {
+        $this->touchFiles(['aaa.mp3', 'ouiedire_ailleurs-331_dj_titre.mp3']);
+
+        $this->assertSame(
+            'ouiedire_ailleurs-331_dj_titre.mp3',
+            findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_')
+        );
+    }
+
+    public function testAlphabetiqueDepartageDansChaqueGroupe()
+    {
+        $this->touchFiles(['zzz.mp3', 'aaa.mp3']);
+
+        $this->assertSame('aaa.mp3', findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_'));
+    }
+
+    public function testLaConventionDuneAutreEmissionNeGagnePas()
+    {
+        $this->touchFiles(['ouiedire_ailleurs-182_dj_titre.mp3', 'ouiedire_ailleurs-331_dj_titre.mp3']);
+
+        $this->assertSame(
+            'ouiedire_ailleurs-331_dj_titre.mp3',
+            findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_')
+        );
+    }
 }
 ```
+
+Ces trois derniers tests pilotent la branche « convention d'abord » et le tri.
+Sans eux dans cette tâche, l'implémentation de l'étape 3 contiendrait du code
+qu'aucun test rouge n'aurait exigé — ce que `sdr-004` interdit sans exception.
 
 - [ ] **Step 2: Vérifier que ça échoue pour la bonne raison**
 
@@ -273,7 +304,7 @@ function findAudioFile($directory, $extension, $conventionPrefix)
 docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit --filter AudioTest
 ```
 
-Attendu : `OK (4 tests, 4 assertions)`.
+Attendu : `OK (7 tests, 8 assertions)`.
 
 - [ ] **Step 5: Commit**
 
@@ -284,7 +315,7 @@ git commit -m "feat: decouvre le fichier audio par balayage du dossier"
 
 ---
 
-## Task 2.5: Contrôle de couverture par fichier
+## Task 3: Contrôle de couverture par fichier
 
 `--coverage-text` ne sait pas rendre ce que `sdr-004` demande. Mesuré : il
 n'affiche que `Classes`, `Methods` et un total de lignes. `audio.php` ne portera
@@ -476,74 +507,6 @@ détail par fichier, et son total est dominé par `bootstrap.php`. C'est
 ```bash
 git add bin/coverage-check src/tests/CoverageCheckTest.php CLAUDE.local.md
 git commit -m "test: controle de couverture par fichier via Clover"
-```
-
----
-
-## Task 3: Ordre déterministe
-
-**Files:**
-- Modify: `src/tests/AudioTest.php`
-
-- [ ] **Step 1: Écrire les tests d'ordre**
-
-Ajouter dans `src/tests/AudioTest.php`, avant l'accolade fermante de la classe :
-
-```php
-    public function testLaConventionPasseDevant()
-    {
-        $this->touchFiles(['aaa.mp3', 'ouiedire_ailleurs-331_dj_titre.mp3']);
-
-        $this->assertSame(
-            'ouiedire_ailleurs-331_dj_titre.mp3',
-            findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_')
-        );
-    }
-
-    public function testAlphabetiqueDepartageDansChaqueGroupe()
-    {
-        $this->touchFiles(['zzz.mp3', 'aaa.mp3']);
-
-        $this->assertSame('aaa.mp3', findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_'));
-    }
-
-    public function testLaConventionDuneAutreEmissionNeGagnePas()
-    {
-        $this->touchFiles(['ouiedire_ailleurs-182_dj_titre.mp3', 'ouiedire_ailleurs-331_dj_titre.mp3']);
-
-        $this->assertSame(
-            'ouiedire_ailleurs-331_dj_titre.mp3',
-            findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_')
-        );
-    }
-```
-
-- [ ] **Step 2: Lancer**
-
-```bash
-docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit --filter AudioTest
-```
-
-Attendu : `OK (7 tests, 7 assertions)`. Le tri de la Task 2 les satisfait déjà — c'est voulu, ces tests figent le comportement plutôt que de le découvrir.
-
-- [ ] **Step 3: Vérifier la couverture du fichier touché**
-
-```bash
-docker run --rm -v .:/app -w /app/src ouiedire-test \
-  sh -c "vendor/bin/phpunit --coverage-clover /app/clover.xml >/dev/null && \
-         php /app/bin/coverage-check /app/clover.xml audio.php 90"
-```
-
-Attendu : `audio.php : 100.00 % (N/N), seuil 90.00 %`, code de sortie `0`.
-
-`--coverage-text` ne convient pas ici : il ne rend pas les fonctions libres et
-son total est dominé par `bootstrap.php`. Voir Task 2.5.
-
-- [ ] **Step 4: Commit**
-
-```bash
-git add src/tests/AudioTest.php
-git commit -m "test: fige l'ordre de selection du fichier audio"
 ```
 
 ---

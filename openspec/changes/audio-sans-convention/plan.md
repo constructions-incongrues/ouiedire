@@ -36,10 +36,18 @@ Dans `src/composer.json`, ajouter après le bloc `require` :
 
 ```bash
 docker run --rm -v .:/app -w /app/src php:7.4-cli \
-  sh -c "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && composer update --no-interaction"
+  sh -c "apt-get update -qq && apt-get install -y -qq unzip && \
+         curl -sS https://getcomposer.org/installer | php -- \
+           --install-dir=/usr/local/bin --filename=composer --version=2.8.12 && \
+         composer install --no-interaction"
 ```
 
 Attendu : `phpunit/phpunit (9.6.x)` dans la sortie, `src/vendor/bin/phpunit` présent.
+
+Deux détails sans lesquels la commande échoue, découverts à l'exécution :
+`php:7.4-cli` ne fournit ni `unzip` ni `git`, et Composer à partir de 2.9 refuse
+par défaut les paquets visés par un avis de sécurité — ce dépôt en compte 23,
+suivis dans le change `dependances-vulnerables`.
 
 - [ ] **Step 3: Créer l'image de test avec pilote de couverture**
 
@@ -276,6 +284,202 @@ git commit -m "feat: decouvre le fichier audio par balayage du dossier"
 
 ---
 
+## Task 2.5: Contrôle de couverture par fichier
+
+`--coverage-text` ne sait pas rendre ce que `sdr-004` demande. Mesuré : il
+n'affiche que `Classes`, `Methods` et un total de lignes. `audio.php` ne portera
+que des fonctions libres — jamais des méthodes — donc il n'apparaîtra à aucun
+niveau de couverture. Et le total est capturé par les 507 instructions non
+couvertes de `bootstrap.php` : un `audio.php` parfaitement testé porterait le
+global à ~9 %, jamais à 90 %.
+
+Clover, lui, donne le détail par fichier. Ce contrôle existe donc pour que la
+Task 3 ait quelque chose à appeler — et il ferme au passage le trou du filtre
+silencieux : si le filtre casse, l'entrée du fichier est absente et le contrôle
+échoue, au lieu de passer sur un chiffre manquant.
+
+**Files:**
+- Create: `bin/coverage-check`
+- Create: `src/tests/CoverageCheckTest.php`
+
+- [ ] **Step 1: Écrire le test qui échoue**
+
+`src/tests/CoverageCheckTest.php` :
+
+```php
+<?php
+
+namespace Ouiedire\Tests;
+
+use PHPUnit\Framework\TestCase;
+
+require_once __DIR__.'/../../bin/coverage-check';
+
+class CoverageCheckTest extends TestCase
+{
+    private function clover(array $files)
+    {
+        $xml = '<?xml version="1.0" encoding="UTF-8"?><coverage><project>';
+        foreach ($files as $name => $m) {
+            $xml .= sprintf(
+                '<file name="%s"><metrics statements="%d" coveredstatements="%d"/></file>',
+                $name, $m[0], $m[1]
+            );
+        }
+
+        return $xml.'</project></coverage>';
+    }
+
+    private function write($xml)
+    {
+        $path = tempnam(sys_get_temp_dir(), 'clover').'.xml';
+        file_put_contents($path, $xml);
+
+        return $path;
+    }
+
+    public function testSeuilAtteint()
+    {
+        $path = $this->write($this->clover(['/app/src/src/audio.php' => [10, 10]]));
+
+        $this->assertSame(0, coverageCheck($path, 'audio.php', 90.0));
+    }
+
+    public function testSeuilNonAtteint()
+    {
+        $path = $this->write($this->clover(['/app/src/src/audio.php' => [10, 5]]));
+
+        $this->assertSame(1, coverageCheck($path, 'audio.php', 90.0));
+    }
+
+    public function testFichierAbsentDuRapport()
+    {
+        // Le cas qui compte : filtre casse, aucune entree, le controle doit echouer.
+        $path = $this->write($this->clover(['/app/src/src/bootstrap.php' => [507, 0]]));
+
+        $this->assertSame(1, coverageCheck($path, 'audio.php', 90.0));
+    }
+
+    public function testRapportIllisible()
+    {
+        $this->assertSame(1, coverageCheck('/nexiste/pas.xml', 'audio.php', 90.0));
+    }
+}
+```
+
+- [ ] **Step 2: Vérifier que ça échoue**
+
+```bash
+docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit --filter CoverageCheck
+```
+
+Attendu : `Failed to open stream` sur `bin/coverage-check`.
+
+- [ ] **Step 3: Implémenter**
+
+`bin/coverage-check` :
+
+```php
+#!/usr/bin/env php
+<?php
+
+/**
+ * Verifie la couverture d'UN fichier dans un rapport Clover.
+ *
+ * --coverage-text ne rend qu'un total, domine par bootstrap.php, et n'affiche
+ * pas les fonctions libres. sdr-004 demande un seuil sur le code touche : il
+ * faut donc lire Clover, qui donne le detail par fichier.
+ *
+ * Un fichier absent du rapport est un ECHEC, pas un succes : c'est ce qui
+ * attrape un filtre de couverture casse.
+ *
+ * @return int 0 si le seuil est atteint, 1 sinon
+ */
+function coverageCheck($cloverPath, $needle, $threshold)
+{
+    if (!is_readable($cloverPath)) {
+        fwrite(STDERR, sprintf("Rapport illisible : %s\n", $cloverPath));
+
+        return 1;
+    }
+
+    $xml = @simplexml_load_file($cloverPath);
+    if ($xml === false) {
+        fwrite(STDERR, sprintf("Rapport illisible : %s\n", $cloverPath));
+
+        return 1;
+    }
+
+    foreach ($xml->xpath('//file') as $file) {
+        if (strpos((string) $file['name'], $needle) === false) {
+            continue;
+        }
+        $statements = (int) $file->metrics['statements'];
+        $covered = (int) $file->metrics['coveredstatements'];
+        $ratio = $statements > 0 ? 100.0 * $covered / $statements : 100.0;
+        printf("%s : %.2f %% (%d/%d), seuil %.2f %%\n",
+            $needle, $ratio, $covered, $statements, $threshold);
+
+        return $ratio + 1e-9 >= $threshold ? 0 : 1;
+    }
+
+    fwrite(STDERR, sprintf(
+        "%s absent du rapport de couverture — filtre casse ou fichier jamais charge.\n",
+        $needle
+    ));
+
+    return 1;
+}
+
+if (PHP_SAPI === 'cli' && isset($argv[0]) && realpath($argv[0]) === realpath(__FILE__)) {
+    exit(coverageCheck(
+        $argv[1] ?? 'clover.xml',
+        $argv[2] ?? 'audio.php',
+        isset($argv[3]) ? (float) $argv[3] : 90.0
+    ));
+}
+```
+
+- [ ] **Step 4: Vérifier que ça passe**
+
+```bash
+docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit
+```
+
+Attendu : tous les tests au vert, dont les quatre de `CoverageCheckTest`.
+
+- [ ] **Step 5: Vérifier le contrôle de bout en bout sur le vrai rapport**
+
+```bash
+docker run --rm -v .:/app -w /app/src ouiedire-test \
+  sh -c "vendor/bin/phpunit --coverage-clover /app/clover.xml >/dev/null && \
+         php /app/bin/coverage-check /app/clover.xml audio.php 90"
+echo "code de sortie : $?"
+```
+
+Attendu : `audio.php : 100.00 % (N/N), seuil 90.00 %` et code de sortie `0`.
+
+- [ ] **Step 6: Déclarer le contrôle dans `CLAUDE.local.md`**
+
+Ajouter à la section `## Testing (ce dépôt)` :
+
+```markdown
+Seuil par fichier : `docker run --rm -v .:/app -w /app/src ouiedire-test sh -c "vendor/bin/phpunit --coverage-clover /app/clover.xml >/dev/null && php /app/bin/coverage-check /app/clover.xml <fichier> 90"`
+
+`--coverage-text` ne sert qu'à l'œil : il ne rend ni les fonctions libres ni le
+détail par fichier, et son total est dominé par `bootstrap.php`. C'est
+`coverage-check` qui fait foi pour le seuil de `sdr-004`.
+```
+
+- [ ] **Step 7: Commit**
+
+```bash
+git add bin/coverage-check src/tests/CoverageCheckTest.php CLAUDE.local.md
+git commit -m "test: controle de couverture par fichier via Clover"
+```
+
+---
+
 ## Task 3: Ordre déterministe
 
 **Files:**
@@ -322,13 +526,18 @@ docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit --filter 
 
 Attendu : `OK (7 tests, 7 assertions)`. Le tri de la Task 2 les satisfait déjà — c'est voulu, ces tests figent le comportement plutôt que de le découvrir.
 
-- [ ] **Step 3: Vérifier la couverture**
+- [ ] **Step 3: Vérifier la couverture du fichier touché**
 
 ```bash
-docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit --coverage-text
+docker run --rm -v .:/app -w /app/src ouiedire-test \
+  sh -c "vendor/bin/phpunit --coverage-clover /app/clover.xml >/dev/null && \
+         php /app/bin/coverage-check /app/clover.xml audio.php 90"
 ```
 
-Attendu : `src/audio.php` à 100 %, au-dessus du seuil de 90 % de `sdr-004`.
+Attendu : `audio.php : 100.00 % (N/N), seuil 90.00 %`, code de sortie `0`.
+
+`--coverage-text` ne convient pas ici : il ne rend pas les fonctions libres et
+son total est dominé par `bootstrap.php`. Voir Task 2.5.
 
 - [ ] **Step 4: Commit**
 

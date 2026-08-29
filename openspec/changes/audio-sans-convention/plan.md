@@ -2174,25 +2174,69 @@ git commit -m "refactor: le nom canonique devient l'attribut download"
 
 **Files:**
 - Modify: `README.md`
+- Modify: `.github/workflows/emission.yml` (prose du corps de Pull Request, pas de logique)
 
-- [ ] **Step 1: Dire que le nom du fichier est libre**
+**La phrase proposée par le squelette de ce plan était fausse, et n'a pas été
+reprise.** Elle disait « le site retient le premier fichier audio qu'il trouve »
+et « un nom construit à partir du titre et des auteurices ». Deux erreurs, l'une
+et l'autre écrites avant l'implémentation : l'ordre n'est pas celui du système de
+fichiers mais un tri — les fichiers suivant la convention historique d'abord,
+l'alphabétique par octets départageant chaque groupe (`findAudioFile()`) ; et le
+nom canonique se construit sur quatre parts, le type, le numéro rempli à trois
+chiffres, les auteurices et le titre (`canonicalDownloadName()`, appelée par
+`audioDownloads()` avec `paddedShowNumber($number)`).
 
-Dans `README.md`, à la suite de la phrase sur le dépôt du MP3, ajouter :
+- [x] **Step 1: Dire que le nom du fichier est libre**
+
+Ajouté à `README.md`, section « Publier une nouvelle émission », à la suite du
+paragraphe sur le dépôt du MP3 :
 
 ```markdown
-Le nom du fichier n'a pas d'importance : le site retient le premier fichier audio
-qu'il trouve dans le dossier de l'émission, et le propose au téléchargement sous
-un nom construit à partir du titre et des auteurices.
+Le nom du fichier audio est libre : le site retient un fichier par format (MP3,
+FLAC) dans le dossier de l'émission, quel que soit son nom. Une faute de frappe
+dans le titre ne dépublie plus l'émission.
+
+Le téléchargement, lui, propose toujours un nom canonique, construit à partir du
+type, du numéro rempli à trois chiffres, des auteurices et du titre :
+`ouiedire_ailleurs-331_rachitik-data_la-pompa-calor-vol-3.mp3`. Ce nom est
+recalculé depuis le manifeste à chaque visite : corriger un titre depuis
+`/admin/` change le nom proposé sans toucher au fichier déposé. Limite connue,
+et défaut à réparer : les caractères accentués y sont supprimés au lieu d'être
+translittérés, si bien que « Sans thème » donne `sans-thme`.
+
+Déposer plusieurs fichiers d'un même format dans un dossier reste possible, mais
+exceptionnel. Le site retient alors en premier ceux qui suivent la convention
+historique `ouiedire_<collection>-<numéro>_`, où le numéro est reconnu sous sa
+forme brute (`ailleurs-1`) comme sous sa forme remplie (`ailleurs-001`) ;
+l'ordre alphabétique départage à l'intérieur de chaque groupe.
 ```
 
-- [ ] **Step 2: Relire**
+La limite `slugify()` est nommée comme limite, pas comme comportement voulu : sa
+réparation est hors du périmètre de ce change, et touche 154 des 367 émissions.
 
-Vérifier accents, typographie française et style — la prose du dépôt est en français (`sdr-003`, `traits.localization.language.default`).
+L'attribut `download` n'est honoré que sur la même origine ; les audios sont
+servis depuis `urlAssets`, sous le domaine du site. La condition est donc
+toujours remplie ici, et le README n'en parle pas.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 2: Relire, et chercher ce qui prescrivait encore un nom**
+
+La recherche prescrite au groupe 5.2 a trouvé une seconde page : le corps de la
+Pull Request produit par `.github/workflows/emission.yml` demandait « obtenir le
+nom de fichier attendu pour le MP3 en cliquant sur le bouton de téléchargement du
+morceau ». Ce bouton a été supprimé en Task 6, et la phrase était donc devenue un
+mensonge — et le seul endroit du dépôt qui prescrivait encore un nom de fichier
+au déposant. La ligne est retirée ; le dépôt du MP3 précise « sous le nom de son
+choix ».
+
+Aucune autre occurrence : `README.md` n'en portait pas d'autre, il n'y a pas de
+`docs/`, et les seules mentions restantes de `ouiedire_…` hors tests concernent
+les **couvertures** (`bin/migration-prepare`, spec `emission-contenu`), dont la
+convention n'est pas touchée par ce change.
+
+- [x] **Step 3: Commit**
 
 ```bash
-git add README.md
+git add README.md .github/workflows/emission.yml openspec/changes/audio-sans-convention
 git commit -m "docs: le nom du fichier audio n'a plus d'importance"
 ```
 

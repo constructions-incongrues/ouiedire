@@ -45,6 +45,24 @@ liste de lecture, couverture.
 <https://vip.jeancloude.club/s/gsiYSS78WxFegnt>. Tant qu'aucun audio n'est disponible,
 l'émission demeure invisible du public, quelle que soit sa visibilité déclarée.
 
+Le nom du fichier audio est libre : le site retient un fichier par format (MP3,
+FLAC) dans le dossier de l'émission, quel que soit son nom. Une faute de frappe
+dans le titre ne dépublie plus l'émission.
+
+Le téléchargement, lui, propose toujours un nom canonique, construit à partir du
+type, du numéro rempli à trois chiffres, des auteurices et du titre :
+`ouiedire_ailleurs-331_rachitik-data_la-pompa-calor-vol-3.mp3`. Ce nom est
+recalculé depuis le manifeste à chaque visite : corriger un titre depuis
+`/admin/` change le nom proposé sans toucher au fichier déposé. Limite connue,
+et défaut à réparer : les caractères accentués y sont supprimés au lieu d'être
+translittérés, si bien que « Sans thème » donne `sans-thme`.
+
+Déposer plusieurs fichiers d'un même format dans un dossier reste possible, mais
+exceptionnel. Le site retient alors en premier ceux qui suivent la convention
+historique `ouiedire_<collection>-<numéro>_`, où le numéro est reconnu sous sa
+forme brute (`ailleurs-1`) comme sous sa forme remplie (`ailleurs-001`) ;
+l'ordre alphabétique départage à l'intérieur de chaque groupe.
+
 C'est prêt !
 
 ## Où vivent les données

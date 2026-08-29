@@ -55,8 +55,15 @@ inatteignable par construction. Défaut du plan, trouvé en relecture.
 
 ## 5. Documentation
 
-- [ ] 5.1 `README.md` : affirmer que le nom du fichier audio n'a plus d'importance, là où le circuit décrit son dépôt
-- [ ] 5.2 Relire la prose produite au regard du français et du Google developer documentation style
+- [x] 5.1 `README.md` : affirmer que le nom du fichier audio n'a plus d'importance, là où le circuit décrit son dépôt
+- [x] 5.2 Relire la prose produite au regard du français et du Google developer documentation style
+
+**Écart constaté à l'exécution :** la relecture prescrite au point 5.2 a trouvé
+une seconde page qui décrivait encore l'ancienne convention — le corps de la Pull
+Request produit par `.github/workflows/emission.yml` demandait « obtenir le nom
+de fichier attendu pour le MP3 en cliquant sur le bouton de téléchargement du
+morceau ». Ce bouton a été supprimé au groupe 4. La ligne est retirée, et le
+dépôt du MP3 précise que le nom est libre.
 
 ## 6. Vérification et bascule
 

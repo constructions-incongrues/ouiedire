@@ -23,6 +23,16 @@ collections:
     summary: '{{slug}} — {{fields.title}}'
     media_folder: ''
     public_folder: ''
+    # Regroupe la liste par collection, et le fait par defaut : sans cela les
+    # 367 emissions arrivent en un seul bloc. `name` est obligatoire, `field`
+    # doit designer un champ declare ci-dessous — Sveltia refuse la
+    # configuration sinon.
+    view_groups:
+      default: collection
+      groups:
+        - name: collection
+          label: Collection
+          field: type
     fields:
       - { name: title, label: Titre, widget: string }
       - { name: authors, label: Auteurices, widget: string }

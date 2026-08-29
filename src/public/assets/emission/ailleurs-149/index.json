@@ -1,0 +1,130 @@
+{
+  "title": "Épisodique 4",
+  "authors": "Johan",
+  "releasedAt": "2018-03-15 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p><b>À suivre ...</b><br /> Photo : Fennec Jackal</p>\n",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Brigitte Jardin",
+      "title": "Allo!"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:58",
+      "artist": "Claude Marbehant",
+      "title": "Nord-Sud!"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:03",
+      "artist": "Francisco Semprun & Michel Christodoulides",
+      "title": "Corridors"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:28",
+      "artist": "Sugai Ken",
+      "title": "Okera = 桶楽"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:24",
+      "artist": "Global Goon",
+      "title": "Twanga"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:21",
+      "artist": "Legowelt",
+      "title": "Svolvaer"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:38",
+      "artist": "Dmx Krew",
+      "title": "Funeral Procession"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:55",
+      "artist": "La Seduction Des Innocents",
+      "title": "Le Chevalier, La Mort Et Le Diable"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:44",
+      "artist": "Claude Anthonioz & Jean Humenry ‎",
+      "title": "Torture À L'Électricité"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:30",
+      "artist": "Cevdet Erek",
+      "title": "Strob"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:46",
+      "artist": "I-LP-O In Dub",
+      "title": "Divided Investments Complexity"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:03",
+      "artist": "Raymonde",
+      "title": "Rester Près Du Bord"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:43",
+      "artist": "Le Matin",
+      "title": "Experience Regeneratrice"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:21",
+      "artist": "Felix Kubin",
+      "title": "Musik Für Neue Büromaschinen"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:17",
+      "artist": "Jiflure",
+      "title": "Extrait 4"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:43",
+      "artist": "Opéra Mort",
+      "title": "Couleuvre"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:40",
+      "artist": "Cristobal Tapia De Veer",
+      "title": "The Moaning Pyramid"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:48",
+      "artist": "Èlg",
+      "title": "Untitled"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:56",
+      "artist": "Black Zone Myth Chant",
+      "title": "Feng Jing"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:05",
+      "artist": "Balinese Beast",
+      "title": "La Dépêche De Tahiti"
+    }
+  ]
+}

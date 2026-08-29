@@ -1,0 +1,74 @@
+backend:
+  name: github
+  repo: constructions-incongrues/ouiedire
+  branch: main
+
+# Défaut global, requis dès lors que le stockage interne est utilisé.
+# La collection le surcharge pour ranger les médias dans le dossier de l'entrée.
+media_folder: src/public/assets/emission
+public_folder: /assets/emission
+
+collections:
+  - name: emissions
+    label: Émissions
+    label_singular: Émission
+    folder: src/public/assets/emission
+    path: '{{slug}}/index'
+    # Le dossier porte l'identité de l'émission : getShow() en dérive le type et
+    # le numéro. Le slug est donc saisi tel quel, jamais dérivé du titre.
+    slug: '{{fields._slug}}'
+    format: json
+    extension: json
+    create: true
+    summary: '{{slug}} — {{fields.title}}'
+    media_folder: ''
+    public_folder: ''
+    fields:
+      - { name: title, label: Titre, widget: string }
+      - { name: authors, label: Auteurices, widget: string }
+      - { name: releasedAt, label: Diffusion, widget: datetime, type: date }
+      - name: type
+        label: Collection
+        widget: select
+        options: [Ailleurs, Bagage, Bureau, Ouïedire]
+      - { name: isPublic, label: Publique, widget: boolean, default: false }
+      - name: description
+        label: Description
+        widget: text
+        required: false
+        hint: Fragment HTML, restitué tel quel.
+      - name: cover
+        label: Couverture
+        widget: image
+        required: false
+        hint: >-
+          Déposer une image la range dans le dossier de l'émission, où la page
+          la trouve. Les couvertures suivant la convention historique passent
+          en premier.
+      - name: playlist
+        label: Liste de lecture
+        widget: list
+        typeKey: kind
+        types:
+          - name: track
+            label: Morceau
+            fields:
+              - { name: time, label: Repère, widget: string }
+              - { name: artist, label: Artiste, widget: string }
+              - { name: title, label: Titre, widget: string, required: false }
+          - name: raw
+            label: Ligne conservée telle quelle
+            fields:
+              - name: raw
+                label: Balisage d'origine
+                widget: text
+                hint: Ligne que la migration n'a pas su interpréter. Restituée verbatim.
+          - name: html
+            label: Playlist entière conservée
+            fields:
+              - name: html
+                label: Balisage d'origine
+                widget: text
+                hint: >-
+                  Cette playlist n'est pas une liste de morceaux (message,
+                  mise en forme délibérée, ou absence de liste). Restituée verbatim.

@@ -1,0 +1,124 @@
+{
+  "title": "﻿Voyage aux confins #3",
+  "authors": "Varius Radar",
+  "releasedAt": "2020-05-29 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p> Visuel : Ségolène Régale </p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Langham Research Centre",
+      "title": "Perpetual Motion"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:33",
+      "artist": "L'alcudina",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:02:40",
+      "artist": "Fuji-Yuki",
+      "title": "Blood Moon"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:07",
+      "artist": "Ambulatorio Segreto",
+      "title": "Operax"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:05",
+      "artist": "Ben Haffar",
+      "title": "Exo"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:21",
+      "artist": "Jacques Yves de Quarante Cinq",
+      "title": "Rinsystem1"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:25",
+      "artist": "Coil",
+      "title": "Triple Sun"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:00",
+      "artist": "Jaap Vink",
+      "title": "En dehors"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:20",
+      "artist": "Brindisi",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:22:50",
+      "artist": "Jaap Vink",
+      "title": "En dehors"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:42",
+      "artist": "Albanie : polyphonies vocales et instrumentales",
+      "title": "Chant d'émigration"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:23",
+      "artist": "Jacques Yves de Quarante Cinq",
+      "title": "Rinsystem1"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:53",
+      "artist": "Master musicians of Bukkake",
+      "title": "Where Apollo Meets Delphi"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:50",
+      "artist": "Fujiiita",
+      "title": "Sukima"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:00",
+      "artist": "Strafe Für Rebellion",
+      "title": "For Mao, Folk And Religion"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:54",
+      "artist": "Grotto Terrazza",
+      "title": "Waiting For Henry"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:24",
+      "artist": "Nurse With Wound",
+      "title": "R+B Through Colis Browne"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:10",
+      "artist": "Understudy",
+      "title": "Fortitude"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:09",
+      "artist": "Chueraiheli. Cloches De Vaches, Solo D'Homme (Alpage)",
+      "title": null
+    }
+  ]
+}

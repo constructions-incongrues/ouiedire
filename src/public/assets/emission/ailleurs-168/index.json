@@ -1,0 +1,76 @@
+{
+  "title": "Pump Up The Valium",
+  "authors": "Rottweiler Slip",
+  "releasedAt": "2018-10-23 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>\nJe tiens à remercier Paul (<a href=\"http://pauldorlando.com\">http://pauldorlando.com</a>) pour le travail d'art, Philippe et Pamela de m'avoir bien dépanné, Johan pour tout ce qu'il fait, et un gros big up à mon pharmacien.    \n</p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Colin Potter",
+      "title": "Never Underestimate The Power Of Nothing"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:30",
+      "artist": "Annanan & Maroje T",
+      "title": "Confrontation In Terms Of Sexuality"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:53",
+      "artist": "Electromeca",
+      "title": "Weightlessness"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:30",
+      "artist": "Vytear",
+      "title": "Only Pylons"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:38",
+      "artist": "Sematic4",
+      "title": "Oxidate"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:46",
+      "artist": "Synapscape & Imminent",
+      "title": "Virtual Retaliation"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:52",
+      "artist": "Macon",
+      "title": "Sufflet"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:30",
+      "artist": "Synapscape",
+      "title": "Rythm"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:23",
+      "artist": "Markus Gibb",
+      "title": "A.C"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:38",
+      "artist": "Coil",
+      "title": "The Hills Are Alive"
+    },
+    {
+      "kind": "track",
+      "time": "00:54:17",
+      "artist": "Ra-X",
+      "title": "The Opium Den (Part V)"
+    }
+  ]
+}

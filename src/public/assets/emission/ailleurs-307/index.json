@@ -1,0 +1,106 @@
+{
+  "title": "Méca Sucré",
+  "authors": "Singeon & Dj Holowestcoast",
+  "releasedAt": "2022-05-09",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Marie Klock",
+      "title": "J'ai un problème avec les détails"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:17",
+      "artist": "Tom Tom Club",
+      "title": "Booming & Zooming"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:43",
+      "artist": "Nicolas Godin",
+      "title": "Widerstehe doch der sünde"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:31",
+      "artist": "Thundercat",
+      "title": "Them Changes"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:24",
+      "artist": "Day One",
+      "title": "Waiting For A Break"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:35",
+      "artist": "Hotaru",
+      "title": "Stay Outta My World (Hotaru Edit)"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:12",
+      "artist": "Broke For Free",
+      "title": "Night Owl"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:09",
+      "artist": "Zongamin",
+      "title": "New Song To An Old Story"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:21",
+      "artist": "Public Image Ltd.",
+      "title": "The Order Of Death"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:03",
+      "artist": "Saâda Bonaire",
+      "title": "Second Face"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:07",
+      "artist": "Johan Papaconstantino",
+      "title": "J'sais pas"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:46",
+      "artist": "Talking Heads",
+      "title": "Seen and Not Seen"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:31",
+      "artist": "Ricky Hollywood",
+      "title": "Where ever (feat.Themis)"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:22",
+      "artist": "Mykki Blanco",
+      "title": "Wavvy"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:14",
+      "artist": "Juantrip'",
+      "title": "Blé"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:07",
+      "artist": "The Brian Jonestown Massacre",
+      "title": "Anemone"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Zukume",
+  "authors": "Sugai Ken",
+  "releasedAt": "2015-11-02 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:03",
+      "artist": "Darius Milhaud",
+      "title": "La Rivière Endormie"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:18",
+      "artist": "Carre",
+      "title": "Open"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:28",
+      "artist": "Simon Fisher Turner",
+      "title": "The End Credits"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:26",
+      "artist": "Yann Geslin",
+      "title": "Variations Didactiques"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:20",
+      "artist": "Zen Hoyo",
+      "title": "Introduction Instrumentale"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:38",
+      "artist": "PGR",
+      "title": "Floods And Chairs"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:15",
+      "artist": "Robert Cohen-Solal",
+      "title": "Les Shadoks"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:01",
+      "artist": "Jon Appleton",
+      "title": "Boghosian's Piece"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:45",
+      "artist": "Gigi Masin",
+      "title": "The Word Love"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:42",
+      "artist": "Magnús Bergsson",
+      "title": "Holtstangi"
+    }
+  ]
+}

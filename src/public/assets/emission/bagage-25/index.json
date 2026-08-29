@@ -1,0 +1,106 @@
+{
+  "title": "10 ans du label",
+  "authors": "Spielzeug Muzak",
+  "releasedAt": "2021-02-12 00:00:00",
+  "type": "Bagage",
+  "isPublic": true,
+  "description": "<p>\n    10 Ans de SM à Paris! Le jouet sado-maso-musical du collectif-label Spielzeug Muzak, qui brasse depuis Paris (et pas que) les différentes tendances de la WAVE all around the world (ou presque).\n    L’esprit du label est purement DO IT YOURSELF: beaucoup de compilations, cassettes, mais aussi de vinyles et des soirées concerts !\n    <br />\n    L’exploration commence avec la première compilation en double CD du 2010 « It’s in the air » où l’on peut retrouver un clin d’œil (tout à fait actuel) sur le virus du post-industriel (ben&bene, velvet condom, tzii, pierre normal and more) et l’on poursuit avec les expérimentations classieuses de l’électro pop avec Merci la nuit et le Serbe ‘Alone’. On a aussi des compilations plus radicales, comme la queer-feministe \"Venus Venom\" ou de la rigolade trash-wave comme Toilettes publiques, que sur plusieurs volumes devient presque le manifeste du label pour une totale démocratisation de la musique de chiottes!\n    Il y a plusieurs amis derrier les pochettes, artistes qui n'aiment pas cette définition, mais qui animent le label de plusieurs façons: Dolina, Ame de boue, Froe Char, Cellule 34, Sophie Sucette, mais aussi pleins d’autres réalités comme les Djs des soirées Bunker bal, qui ont fait vivre la petite histoire de murs à travers les salons de Paris.  \n    <br />\n    De ce circuit d’ames, qui reste ouvert à des nouvelles aventures, aujourd’hui, ils poursuivent d’autres declinations : le sub-label DRAMES, où l’on retrouve par ailleurs aussi la BO du film Crache Coeur rédige par Dasz Kowalski et Najah Yseult (âme de boue, Dolina) et Berkana Records, qui se spécialise dans le côté plus dark et expérimentale, soutenu par Christina Lauro (Froe Char).\n    <br />\n    ( La suite à suivre.... descente du rideau - bruitage de fouet! )\n    </p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Alone",
+      "title": "Tvoj san"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:28",
+      "artist": "Merci la Nuit",
+      "title": "Personne nulle part"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:00",
+      "artist": "Luxvid",
+      "title": "Slow burn"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:48",
+      "artist": "Dolina",
+      "title": "Eyes of Amethyst"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:23",
+      "artist": ":Codes",
+      "title": "Convex machine"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:17",
+      "artist": "Cellule34",
+      "title": "something to say"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:17",
+      "artist": "Ben & bene",
+      "title": "Pop the line"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:39",
+      "artist": "Ame de boue",
+      "title": "Las vidas parallelas"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:13",
+      "artist": "Chambre froide",
+      "title": "Flowers"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:32",
+      "artist": "Froe Char",
+      "title": "Extraction of moments"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:43",
+      "artist": "Misanthrope women strass",
+      "title": "Dunkelheit"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:24",
+      "artist": "KBB",
+      "title": "Paradigma"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:38",
+      "artist": "Tzii",
+      "title": "Ich bin nicht mehr der ihren"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:38",
+      "artist": "Jeunesse Fantôme",
+      "title": "Paris dans son jus"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:50",
+      "artist": "Wielka radosc",
+      "title": "Der unfall"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:40",
+      "artist": "Heliopolis",
+      "title": "Soldier of life"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "title": "Je fais pas que les apéros",
+  "authors": "Lolo Tuerie",
+  "releasedAt": "2020-11-19 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "OD Bongo",
+      "title": "Mami Wata"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:02",
+      "artist": "Macon",
+      "title": "Sufflet"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:36",
+      "artist": "Asymmetrical & Like Someone",
+      "title": "Run"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:10",
+      "artist": "Goolyk",
+      "title": "Hi Clip"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:41",
+      "artist": "DJ Marcelle",
+      "title": "To Evacuate Is Difficult And Infrequent"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:24",
+      "artist": "Garonneman",
+      "title": "Turism och Charmtortyr"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:30",
+      "artist": "Hypnobeat",
+      "title": "Donna’s Gift 2"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:48",
+      "artist": "Helena Hauff",
+      "title": "Lifestyle Guru"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:15",
+      "artist": "Nisennenmondai",
+      "title": "Appointment"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:48",
+      "artist": "Puce Mary",
+      "title": "Masks are Aids II"
+    },
+    {
+      "kind": "track",
+      "time": "00:54:36",
+      "artist": "Maria Violenza",
+      "title": "Falso Samurai"
+    }
+  ]
+}

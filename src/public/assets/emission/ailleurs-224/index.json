@@ -1,0 +1,106 @@
+{
+  "title": "Ouïedire",
+  "authors": "Projet de vie",
+  "releasedAt": "2020-03-02 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Ridding a poney",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:00:48",
+      "artist": "Alan Vega",
+      "title": "Speedway"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:14",
+      "artist": "Jacques Cochise",
+      "title": "Positron"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:00",
+      "artist": "Broken English Club",
+      "title": "The modern Desire"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:35",
+      "artist": "Camera Synchron",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:17:11",
+      "artist": "Chatanjit singh",
+      "title": "Raga Bhairav"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:05",
+      "artist": "Demande",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:22:33",
+      "artist": "Magam",
+      "title": "InHabitsAnts"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:51",
+      "artist": "James Holden",
+      "title": "Rannoch Dawn"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:11",
+      "artist": "Chorale à Saint Taurin",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:31:13",
+      "artist": "Paul Giovanni Willow’s Song",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:35:10",
+      "artist": "Tomato Alphabet of night",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:38:59",
+      "artist": "Umberto",
+      "title": "Forsaken Dawn"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:18",
+      "artist": "Yan Hart Lemonnier",
+      "title": "L’age d’or"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:12",
+      "artist": "Martin Rev",
+      "title": "River of Tears"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:53",
+      "artist": "Floot",
+      "title": null
+    }
+  ]
+}

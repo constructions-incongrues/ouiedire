@@ -1,0 +1,124 @@
+{
+  "title": "Déo et débats, sent dessous dessus",
+  "authors": "Glafouk",
+  "releasedAt": "2014-04-29 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Jean-Pierre Bourtayre et Jean-Claude Petit",
+      "title": "Champs Elysées"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:59",
+      "artist": "Diabologum",
+      "title": "Il faut"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:21",
+      "artist": "Zsa Zsa Laboum",
+      "title": "Something Scary"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:07",
+      "artist": "De La Montagne",
+      "title": "Buy Burger REMIX"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:41",
+      "artist": "Chloé",
+      "title": "Amour"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:42",
+      "artist": "Frédéric Botton",
+      "title": "Attention à la grosse boule"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:23",
+      "artist": "The Knife",
+      "title": "Girls night out"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:54",
+      "artist": "Add N to (X)",
+      "title": "Wicked cool"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:45",
+      "artist": "Les Snuls",
+      "title": "Santa Belgica, épisode 2"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:57",
+      "artist": "Crisis",
+      "title": "Holocaust"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:56",
+      "artist": "Jan Hammer",
+      "title": "Don't You Know"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:26",
+      "artist": "Chad Vangaalen",
+      "title": "TMNT Mask"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:46",
+      "artist": "Melodium",
+      "title": "flacana 7"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:11",
+      "artist": "Jester (Sanity)",
+      "title": "Elysium"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:37",
+      "artist": "Splash",
+      "title": "Money"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:42",
+      "artist": "Limonius",
+      "title": "Fruit juice"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:16",
+      "artist": "David Holmes",
+      "title": "69 Police"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:29",
+      "artist": "Hypnoskull",
+      "title": "Silence"
+    },
+    {
+      "kind": "track",
+      "time": "01:01:48",
+      "artist": "Les Snuls",
+      "title": "La maxime du week-end (ou le belge est philosophe)"
+    }
+  ]
+}

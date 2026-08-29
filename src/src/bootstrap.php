@@ -67,14 +67,28 @@ function getArtists(array $show)
 {
     $artists = array();
 
-    // Parse show playlist
-    $crawler = new Crawler();
-    $crawler->addContent('<html><meta charset="utf-8" />'.$show['playlist']);
-    $domArtists = $crawler->filter('.mejs-smartplaylist-time + span');
-    foreach ($domArtists as $domArtist) {
-        $artist = strtolower(trim($domArtist->textContent));
-        if (!empty($artist) && $artist!='intro' && $artist!='outro') {
-            $artists[] = strtolower(trim($domArtist->textContent));
+    if (is_array($show['playlist'])) {
+        // Playlist structuree : l'artiste est porte par l'entree de type track.
+        foreach ($show['playlist'] as $entry) {
+            if (!isset($entry->kind) || $entry->kind !== 'track' || !isset($entry->artist)) {
+                continue;
+            }
+            $artist = strtolower(trim($entry->artist));
+            if (!empty($artist) && $artist!='intro' && $artist!='outro') {
+                $artists[] = $artist;
+            }
+        }
+    }
+    if (isset($show['playlist'][0]->kind) && $show['playlist'][0]->kind === 'html') {
+        // Playlist conservee verbatim : on parse le balisage, comme avant.
+        $crawler = new Crawler();
+        $crawler->addContent('<html><meta charset="utf-8" />'.$show['playlist'][0]->html);
+        $domArtists = $crawler->filter('.mejs-smartplaylist-time + span');
+        foreach ($domArtists as $domArtist) {
+            $artist = strtolower(trim($domArtist->textContent));
+            if (!empty($artist) && $artist!='intro' && $artist!='outro') {
+                $artists[] = $artist;
+            }
         }
     }
 
@@ -161,13 +175,11 @@ function getShow($id, Silex\Application $app = null) {
         'isPublic'    => false
     );
 
-    // Load show data. 404 if some data file cannot be loaded.
-    $fileManifest = new SplFileObject(sprintf('%s/manifest.json', $pathPublicEmission));
-    $filePlaylist = new SplFileObject(sprintf('%s/playlist.html', $pathPublicEmission));
-    $fileDescription = new SplFileObject(sprintf('%s/description.html', $pathPublicEmission));
+    // Load show data. 404 if the data file cannot be loaded.
+    $fileIndex = new SplFileObject(sprintf('%s/index.json', $pathPublicEmission));
 
-    // Parse manifest data and infer show attributes
-    $manifest = json_decode(file_get_contents($fileManifest->getRealPath()));
+    // Parse show data and infer show attributes
+    $manifest = json_decode(file_get_contents($fileIndex->getRealPath()));
     $show['authors'] = $manifest->authors;
     $show['releasedAt'] = $manifest->releasedAt;
     $show['title'] = $manifest->title;
@@ -195,12 +207,19 @@ function getShow($id, Silex\Application $app = null) {
             $show['typeSlug'],
             $show['number']
         );
+        $urlAssetsRoot = sprintf(
+            '%s://%s%s/assets',
+            $app['request']->getScheme(),
+            $app['request']->getHttpHost(),
+            $app['request']->getBasePath()
+        );
     } else {
         $urlAssets = sprintf(
             'https://www.ouiedire.net/assets/emission/%s-%s',
             $show['typeSlug'],
             $show['number']
         );
+        $urlAssetsRoot = 'https://www.ouiedire.net/assets';
     }
 
     // Guess show audio properties (MP3 and FLAC)
@@ -233,26 +252,55 @@ function getShow($id, Silex\Application $app = null) {
         $show['isPublic'] = false;
     }
 
-    // Guess covers URL
+    // Guess covers URL. Toute image du dossier compte, pour qu'une couverture
+    // deposee depuis l'outil d'edition soit vue quel que soit son nom. L'ordre
+    // est deterministe et independant du systeme de fichiers : les fichiers
+    // suivant la convention historique d'abord, alphabetiques dans chaque groupe.
     $show['covers'] = array();
     $finder = new Finder();
     try {
         $covers = $finder
             ->files()
-            ->name('*_cover-*.*')
+            ->name('/\.(png|jpe?g|gif|webp)$/i')
             ->in($pathPublicEmission);
+        // Trois groupes : la couverture au nom de cette emission, puis les
+        // autres suivant la convention, puis le reste. Sans le premier groupe,
+        // un fichier mal numerote gagnerait au tri (ailleurs-186 contient une
+        // couverture nommee ailleurs-182).
+        $own = sprintf('%s-%s_cover-', slugify($show['type']), $show['number']);
+        $mine = array();
+        $conventional = array();
+        $others = array();
         foreach ($covers as $cover) {
-            $show['covers'][] = sprintf('%s/%s', $urlAssets, basename($cover->getRealPath()));
+            $name = basename($cover->getRealPath());
+            if (strpos($name, $own) !== false) {
+                $mine[] = $name;
+            } elseif (strpos($name, '_cover-') !== false) {
+                $conventional[] = $name;
+            } else {
+                $others[] = $name;
+            }
+        }
+        sort($mine);
+        sort($conventional);
+        sort($others);
+        foreach (array_merge($mine, $conventional, $others) as $name) {
+            $show['covers'][] = sprintf('%s/%s', $urlAssets, $name);
         }
     } catch (\InvalidArgumentException $e) {
         // whatever
     }
 
-    // Playlist
-    $show['playlist'] = file_get_contents($filePlaylist->getRealPath());
+    // og:image et le flux RSS accedent a covers[0] sans garde : il doit exister.
+    if (empty($show['covers'])) {
+        $show['covers'][] = sprintf('%s/img/cover-defaut.png', $urlAssetsRoot);
+    }
+
+    // Playlist : liste d'entrees structurees, ou fragment HTML conserve verbatim
+    $show['playlist'] = $manifest->playlist;
 
     // Description
-    $show['description'] = file_get_contents($fileDescription->getRealPath());
+    $show['description'] = $manifest->description;
 
     // Pretty show number
     $show['id'] = $show['number'];
@@ -281,7 +329,7 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
     $finder = new Finder();
     $finder = $finder
     ->files()
-    ->name('manifest.json')
+    ->name('index.json')
     ->filter(function(\SplFileInfo $file) {
         return
         strpos(basename(dirname($file->getRealPath())), 'ailleurs') !== false
@@ -508,7 +556,8 @@ $app->get('/feed', function(Silex\Application $app) {
 %s
 <a href="%s">Télécharger l'émission</a>
 EOT;
-        $htmlContent = sprintf($htmlContent, $show['covers'][0], $show['description'], $show['playlist'], $enclosureUrl);
+        $playlistHtml = $app['twig']->render('playlist.html.twig', array('show' => $show));
+        $htmlContent = sprintf($htmlContent, $show['covers'][0], $show['description'], $playlistHtml, $enclosureUrl);
 
         // Build entry using show data
         $entry = $feed->createEntry();

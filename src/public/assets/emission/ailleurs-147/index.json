@@ -1,0 +1,142 @@
+{
+  "title": "Peperkoek Zo",
+  "authors": "Jimmy Genarkt (Hyperkut)",
+  "releasedAt": "2018-02-22 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Intro",
+      "title": "Film Olé Olé</span>"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:40",
+      "artist": "Maria Carre",
+      "title": "Piste 6"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:02",
+      "artist": "Haruomi Hosono",
+      "title": "Funiculi Funicula"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:30",
+      "artist": "Like a Time",
+      "title": "Rroocckk"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:58",
+      "artist": "Felix Kubin",
+      "title": "I lost my heart in reykjavik"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:43",
+      "artist": "Das Kombinat",
+      "title": "Staatsjugend"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:59",
+      "artist": "Michael Knight",
+      "title": "Knight Ryder (12inch version)"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:15",
+      "artist": "Cha Cha Guitri",
+      "title": "Les yeux ouverts sur les beautés d'aujourd'hui"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:23",
+      "artist": "Printed Circuit",
+      "title": "Lunar Olympics"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:13",
+      "artist": "Frederik Schikowski",
+      "title": "Russisch leder"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:42",
+      "artist": "Atom TM",
+      "title": "Empty"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:25",
+      "artist": "Aphex Twin",
+      "title": "Donkey Rhubarb"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:12",
+      "artist": "Turboninja",
+      "title": "Corps objet"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:59",
+      "artist": "Sympa",
+      "title": "Dedicace"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:42",
+      "artist": "Arolde",
+      "title": "Muze2"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:41",
+      "artist": "Hyperkut",
+      "title": "Concerto Prima IV"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:06",
+      "artist": "DJ Elephant Power",
+      "title": "nervolution"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:13",
+      "artist": "Film 5 Semaines En Vallon",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:47:23",
+      "artist": "Bene Gesserit",
+      "title": "She is walking"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:46",
+      "artist": "Candie Hank",
+      "title": "Midnight Appointment"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:17",
+      "artist": "Paddy Steer",
+      "title": "Bifurcation Arrows"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:05",
+      "artist": "Baleine 3000",
+      "title": "Pompier"
+    }
+  ]
+}

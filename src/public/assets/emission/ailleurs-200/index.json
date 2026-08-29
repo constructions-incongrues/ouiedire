@@ -1,0 +1,154 @@
+{
+  "title": "Episodique 6",
+  "authors": "Johan",
+  "releasedAt": "2019-09-15 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>\nAva<br /> \nSouvenir capturé par Gakona lors d'un merveilleux moment à L'authion.<br />\nÀ suivre </p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Henri Muller",
+      "title": "Ma Souris Brigitte"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:15",
+      "artist": "Brigitte Champeaux",
+      "title": "Mon Grand Père"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:09",
+      "artist": "Anne et gilles",
+      "title": "Les Hiboux"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:55",
+      "artist": "Francisco Semprun / Michel Christodoulides",
+      "title": "Voûtes"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:59",
+      "artist": "Michel Delaporte / Marc Chantereau ‎",
+      "title": "Mon Petit Chat"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:38",
+      "artist": "Patrice Sciortino ‎",
+      "title": "Exercices Avec Massues N°9 - Improvisation B"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:30",
+      "artist": "Claude Marbehant",
+      "title": "Vers La Planète Bleue"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:43",
+      "artist": "Carl Orff / Gunild Keetman ‎",
+      "title": "Riguingo"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:47",
+      "artist": "Intérprétation Pour La Chorale Des Enfants De Saint-Satur Sous La Direction De Guy Bernadet ‎",
+      "title": "Salut, Salut A Tous"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:52",
+      "artist": "Marie-Claude Clerval",
+      "title": "Bour bouger"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:30",
+      "artist": "Camille Sauvage",
+      "title": "Bebe Reve"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:51",
+      "artist": "Eric Thibor",
+      "title": "Cheval Et Cocher"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:15",
+      "artist": "François Rauber ‎",
+      "title": "Travail Des Abominaux"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:47",
+      "artist": "Brigitte Jardin",
+      "title": "Evaporation Et Tout Recommence"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:32",
+      "artist": "M-F Bourdot",
+      "title": "Comparons Et Analysons"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:36",
+      "artist": "Henri Gruel",
+      "title": "Pris De L'Extérieur : Plusieurs Bruits De Verrou Electrique - Pas Sur Le Trottoir - Vélomoteur - Poussette - Circulation Générale"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:52",
+      "artist": "G.Combes",
+      "title": "Trajet D'Autobus"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:24",
+      "artist": "G.Combes",
+      "title": "Bruits De L'école"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:44",
+      "artist": "Chorale De L'Amicale Des Algériens En Europe",
+      "title": "Zèdeneibi"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:26",
+      "artist": "Georges Albouze",
+      "title": "Le Rossignol En Amour"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:38",
+      "artist": "Docteur Henri Ulrich ‎",
+      "title": "Oiseaux Des Prés, Champs Et Bois"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:15",
+      "artist": "Le Chant De La Baleine",
+      "title": "Mégaptère Ou Baleine A Bosse"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:02",
+      "artist": "À Vous De Jouer",
+      "title": "Disque Préparatoire"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:00",
+      "artist": "Dis-Moi L'heure",
+      "title": null
+    }
+  ]
+}

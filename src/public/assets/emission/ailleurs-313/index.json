@@ -1,0 +1,106 @@
+{
+  "title": "Lundi de Pentecôte",
+  "authors": "Jean et Johan",
+  "releasedAt": "2023-05-29",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p class=\"justify\">\n<!-- TODO : Mettre la description de l'émission à jour, le cas échéant -->\n</p>\n",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Nurse With Wound",
+      "title": "Stick That Chick &amp; feel my steel through your last meal"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:20",
+      "artist": "Sugai Ken",
+      "title": "Suzunarikibushi = 鈴生り木節"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:52",
+      "artist": "Natali Kruger",
+      "title": "Le col de l'ange"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:42",
+      "artist": "Aymeric De Tapol",
+      "title": "Rayon Vert"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:10",
+      "artist": "W.S. Burrough",
+      "title": "Twilight's last dreaming"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:35",
+      "artist": "Factrix",
+      "title": "Polarity Tremens"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:35",
+      "artist": "Dwarf Lift Dwarf",
+      "title": "The Pirat's Who's Who (Jolly Roger)"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:07",
+      "artist": "Neoangin",
+      "title": "Guess My Name"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:57",
+      "artist": "Trauma",
+      "title": "The Village Has a Warlock"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:08",
+      "artist": "Autechre",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:34:32",
+      "artist": "Dead Fader",
+      "title": "Dusk"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:16",
+      "artist": "Ripit",
+      "title": "tsatsa tushen"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:22",
+      "artist": "Mamelon",
+      "title": "Kumba Fri Fri"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:57",
+      "artist": "Hunting Lodge",
+      "title": "Hand of Glory"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:55",
+      "artist": "Etat Brut",
+      "title": "Malaise"
+    },
+    {
+      "kind": "track",
+      "time": "00:54:32",
+      "artist": "Karen Konstance & Dylan Nyoukis",
+      "title": "I Prayed To An Egg"
+    }
+  ]
+}

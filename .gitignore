@@ -20,3 +20,9 @@
 # duration
 /src/public/duration
 nohup.out
+
+# migration sveltia-cms-emissions (jetable)
+/.migration
+
+# artefacts python des outils de migration
+__pycache__/

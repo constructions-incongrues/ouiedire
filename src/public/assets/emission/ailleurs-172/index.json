@@ -1,0 +1,100 @@
+{
+  "title": "Cause Déménagement",
+  "authors": "Chouferbad",
+  "releasedAt": "2018-11-26 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Long Orme",
+      "title": "Arboc"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:42",
+      "artist": "Barthel/ Böhm/ Bauer",
+      "title": "Another rainy day"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:55",
+      "artist": "Arvo Part",
+      "title": "Fratres + Delia Derbyshire - Falling"
+    },
+    {
+      "kind": "track",
+      "time": "00:16;13",
+      "artist": "Pablo’s Eye",
+      "title": "Today + Delia Derbyshire - Land"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:22",
+      "artist": "Jane and Barton",
+      "title": "it’s a fine day"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:10",
+      "artist": "Jan Nouvé",
+      "title": "De que nous resto"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:16",
+      "artist": "Promeneurs Solitaires",
+      "title": "Complainte autour d’un mur"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:24",
+      "artist": "L’infonie",
+      "title": "Agnus Dei"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:24",
+      "artist": "Mike Silver",
+      "title": "The Applicant"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:29",
+      "artist": "Antoine Tomé",
+      "title": "A la gloire de l’automne"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:15",
+      "artist": "Areski et Brigitte Fontaine",
+      "title": "il pleut sur la gare"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:00",
+      "artist": "Peloquin Sauvageau",
+      "title": "Les grands silencieux"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:00",
+      "artist": "Serge Korjanevski",
+      "title": "Avant Sommeil"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:59",
+      "artist": "Afrikan Tähdei",
+      "title": "Hyrre Hylje"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:57",
+      "artist": "Park Jiha",
+      "title": "The longing of the Yawning divide"
+    }
+  ]
+}

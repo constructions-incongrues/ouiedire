@@ -1,0 +1,106 @@
+{
+  "title": "La Vie Est mi Belge",
+  "authors": "Glafouk",
+  "releasedAt": "2015-10-09 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>Divisons la joie !</p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "RTBF",
+      "title": "Indicatif des émissions du service mondial"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:12",
+      "artist": "Marc Moulin & Dan Lacksman",
+      "title": "Radio Cité"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:12",
+      "artist": "à;GRUMH...",
+      "title": "Danger Zone"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:34",
+      "artist": "Général Cochonou",
+      "title": "La fin"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:37",
+      "artist": "Psilodump",
+      "title": "Toads and Crickets"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:08",
+      "artist": "Karllihagen",
+      "title": "Skein"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:34",
+      "artist": "Juliette Chenais & Flore Abrahams",
+      "title": "Nana, quand tu niques..."
+    },
+    {
+      "kind": "track",
+      "time": "00:24:05",
+      "artist": "James Teej",
+      "title": "Night Wears Thin (Salax Peep Show Remix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:53",
+      "artist": "Pierre Bachelet & Jean Schultheis",
+      "title": "Coup de tête"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:30",
+      "artist": "Trisomie 21",
+      "title": "The last song"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:00",
+      "artist": "Karmelloz",
+      "title": "B. M. W. (A. G. Cook Refix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:20",
+      "artist": "Goto80",
+      "title": "Babybaby Dubub"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:32",
+      "artist": "Schwellkörper",
+      "title": "Liebe, Triebe, Diebe, Hiebe"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:52",
+      "artist": "The Bridge",
+      "title": "Love Dance (Industrial Mix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:54",
+      "artist": "Spirro",
+      "title": "Ma Hero (Dub Mix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:41",
+      "artist": "Stéphane Picq",
+      "title": "The Magnificents"
+    }
+  ]
+}

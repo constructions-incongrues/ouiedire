@@ -1,0 +1,64 @@
+{
+  "title": "Des événements risquent d'être annulés",
+  "authors": "Arnaud Rivière",
+  "releasedAt": "2021-01-11",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Sun Stabbed",
+      "title": "Le soleil couchant de cette cité laissait quelques lueurs"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:27",
+      "artist": "Jean-Philippe Gross",
+      "title": "Optical Cadillac"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:55",
+      "artist": "Bizarre Uproar",
+      "title": "Valkoinenroskahuora"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:59",
+      "artist": "Humbros",
+      "title": "Ziamko_01"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:37",
+      "artist": "Thierry Madiot",
+      "title": "Sirène (11.04.2013 - Halle Saint-Pierre - Paris)"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:54",
+      "artist": "Áine O'Dwyer",
+      "title": "A World Ending"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:17",
+      "artist": "Hess",
+      "title": "the dream itself was the cure"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:15",
+      "artist": "La Tene",
+      "title": "La Tardive"
+    },
+    {
+      "kind": "track",
+      "time": "01:05:49",
+      "artist": "Nageotte-Rivière-Sinivia",
+      "title": "G7T8"
+    }
+  ]
+}

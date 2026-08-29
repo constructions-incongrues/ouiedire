@@ -1,0 +1,130 @@
+{
+  "title": "﻿Ciné'Mioum",
+  "authors": "Mégapute",
+  "releasedAt": "2020-04-15 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "lISTE",
+      "title": "fantaisies op. 1 2 & 3"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:08",
+      "artist": "Yung Drugg",
+      "title": "Nicolas Cage pour piou-piou"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:58",
+      "artist": "Seeget",
+      "title": "méthodologie de la chair"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:28",
+      "artist": "",
+      "title": "Dupieux-Cul-Nul"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:50",
+      "artist": "Satori & Salo",
+      "title": "mutinerie en stock"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:12",
+      "artist": "",
+      "title": "mangerlavegermangerlavrmangemalravel"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:40",
+      "artist": "C _ C",
+      "title": "ronron l’édredon"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:47",
+      "artist": "Nico",
+      "title": "poète piétonne rayonnée"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:48",
+      "artist": "",
+      "title": "les mains dans les poches de son long manteau noir"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:46",
+      "artist": "Ritual Chair",
+      "title": "l’air grave d’une liberté chérissant la destruction"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:28",
+      "artist": "",
+      "title": "a way = GRUNT"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:03",
+      "artist": "",
+      "title": "proto-coco-second-rôle"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:16",
+      "artist": "",
+      "title": "moult amours, soie & porcelaine"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:56",
+      "artist": "Pauline Oliveros",
+      "title": "bye bye butterfly"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:06",
+      "artist": "Marguerite Duras",
+      "title": "les mains Négatives"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:51",
+      "artist": "Diamanda Galas",
+      "title": "steak knife"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:01",
+      "artist": "",
+      "title": "copier/copier  coller/coller"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:12",
+      "artist": "Ingrid Thulin",
+      "title": "Nattvardsgästerna"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:58",
+      "artist": "Jeanne Moreau",
+      "title": "india song"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:31",
+      "artist": "Clara Ionnatta",
+      "title": "moult"
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "title": "Bouffilm",
+  "authors": "Rouge Gorge",
+  "releasedAt": "2020-02-25 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Blanche Neige et les 7 nains",
+      "title": "Music in your soup"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:20",
+      "artist": "Vincent Malone",
+      "title": "L'ours qui pête et qui rotte"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:16",
+      "artist": "Hypotheticals Profets",
+      "title": "Fast food"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:05",
+      "artist": "Peter Ivers",
+      "title": "Happy on a grill"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:22",
+      "artist": "Philippe Katerine",
+      "title": "Poulet n°728120"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:32",
+      "artist": "Chevalier de Rinchy",
+      "title": "J'aime le pain et le fromage"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:20",
+      "artist": "La fille du 14 juillet",
+      "title": "Extrait"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:47",
+      "artist": "Bobby Lapointe",
+      "title": "Saucisson de cheval"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:26",
+      "artist": "Hubert-Félix Thiéfaine",
+      "title": "La Cancoillotte"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:18",
+      "artist": "Versailles Chantier",
+      "title": "Extrait"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:55",
+      "artist": "Dalida",
+      "title": "Viva la pappa"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:00",
+      "artist": "Versailles Chantier",
+      "title": "Extrait"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:00",
+      "artist": "Dick Annegarn",
+      "title": "Le grand diner"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:35",
+      "artist": "Versailles Chantier",
+      "title": "Extrait"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:14",
+      "artist": "Fardoche/émission Passe-partout",
+      "title": "Les beaux légumes"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:32",
+      "artist": "Rien sur Robert",
+      "title": "Extrait"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:36",
+      "artist": "Têtes Raides",
+      "title": "Café"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:04",
+      "artist": "Nino ferrer",
+      "title": "Les cornichons"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:00",
+      "artist": "Les Visiteurs",
+      "title": "Extrait"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:19",
+      "artist": "Armorica Terre de Pêcheurs",
+      "title": "Du poisson"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:23",
+      "artist": "Versailles Chantier",
+      "title": "Extrait"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:50",
+      "artist": "The Gaylords",
+      "title": "Chow mein"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:58",
+      "artist": "Le nougatBrigitte Fontaine",
+      "title": "Le nougat"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:46",
+      "artist": "Indiana Jones et le temple maudit",
+      "title": "Extrait"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:01",
+      "artist": "Jean-François Gaël",
+      "title": "Etude aux oeufs et profiteroles"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:45",
+      "artist": "Reprise d'Henry Dès par RG & AmelB",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:47:52",
+      "artist": "Assault on precinct 13",
+      "title": "Extrait"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:44",
+      "artist": "Rraaaou",
+      "title": "La glace à l'italienne"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:59",
+      "artist": "Assault on precinct 13",
+      "title": "Extrait"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:13",
+      "artist": "Vincent, François, Paul et les autres",
+      "title": "Extrait"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:36",
+      "artist": "Glafouk",
+      "title": "Confiture"
+    },
+    {
+      "kind": "track",
+      "time": "01:01:40",
+      "artist": "L'Entourloupe",
+      "title": "Extrait"
+    },
+    {
+      "kind": "track",
+      "time": "01:02:29",
+      "artist": "Alain Souchon",
+      "title": "Papa mambo"
+    }
+  ]
+}

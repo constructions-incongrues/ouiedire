@@ -1,0 +1,100 @@
+{
+  "title": "L'Amour ne recherche pas son propre avantage",
+  "authors": "Napel",
+  "releasedAt": "2023-05-29",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p class=\"justify\">\n<!-- TODO : Mettre la description de l'émission à jour, le cas échéant -->\n</p>\n",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Djinn Gueule",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:00:59",
+      "artist": "Troupe d'Andohatany",
+      "title": "Hiragasy"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:11",
+      "artist": "Cabaret Voltaire",
+      "title": "Seconds Too Late"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:26",
+      "artist": "Severed Heads",
+      "title": "Ice Cream Donut"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:37",
+      "artist": "La Race",
+      "title": "Les Chiens"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:01",
+      "artist": "No Unauthorized",
+      "title": "Quand Le Sexe Passe"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:33",
+      "artist": "Meridian Brothers",
+      "title": "Cumbia De La Igualdad"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:35",
+      "artist": "Casio Judiciaire",
+      "title": "Travaux Pubiques"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:31",
+      "artist": "Les Bougies Du Paradis",
+      "title": "Ungureanca"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:55",
+      "artist": "Nonstop",
+      "title": "Zyklon Bio,Pt.1 (extrait)"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:30",
+      "artist": "Malaria!",
+      "title": "Tod/Death"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:19",
+      "artist": "El Sexteto Tabalá",
+      "title": "La Vida Es Muy Bonita Pero Al Fin Siempre Se Acaba"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:33",
+      "artist": "Medio Mutante",
+      "title": "Boom Boom Romance"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:44",
+      "artist": "Isnaj Dui",
+      "title": "Signals Differ"
+    },
+    {
+      "kind": "track",
+      "time": "00:59:37",
+      "artist": "Julien Pas Claire",
+      "title": "Ma Décadence"
+    }
+  ]
+}

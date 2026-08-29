@@ -1,0 +1,106 @@
+{
+  "title": "And A One And A Two",
+  "authors": "Dj Holowestcaust & Ulfablabla",
+  "releasedAt": "2022-03-21",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Zend Avesta",
+      "title": "Queen Of Siam Part 1"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:23",
+      "artist": "Venetian Snares",
+      "title": "Mouth"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:23",
+      "artist": "Louisahhh",
+      "title": "Like A Shot"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:55",
+      "artist": "Sophie",
+      "title": "Msmsmsm"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:45",
+      "artist": "Golden Teacher",
+      "title": "On The Street"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:41",
+      "artist": "Otto Von Schirach",
+      "title": "Salpica (Miami)"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:07",
+      "artist": "Schwefelgelb",
+      "title": "Reflex (An-i Remix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:16",
+      "artist": "Hdmirror",
+      "title": "Zero"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:55",
+      "artist": "Cobrah",
+      "title": "Bang"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:57",
+      "artist": "Lithe",
+      "title": "Not A Pessimist"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:26",
+      "artist": "Plastic Robots",
+      "title": "Evil Machine (Devochka Remix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:50",
+      "artist": "I:Cube",
+      "title": "Transpiration"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:07",
+      "artist": "Mutsumi",
+      "title": "Collage Panty Smelling (Maurice Fulton instrumental)"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:34",
+      "artist": "Kuniyuki Takahashi",
+      "title": "Cycle"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:47",
+      "artist": "Todd Terje",
+      "title": "Ragysh"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:56",
+      "artist": "Blondie",
+      "title": "Heart Of Glass (Extended Rework Oliver & Thee Mike B Remix Edit)"
+    }
+  ]
+}

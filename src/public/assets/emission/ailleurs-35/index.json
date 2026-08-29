@@ -1,0 +1,94 @@
+{
+  "title": "Watermarks",
+  "authors": "Le Matin",
+  "releasedAt": "2013-11-27 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>\nEtes vous heureux ?\n</p>\n",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Cachette a branlette",
+      "title": "Miroir"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:25",
+      "artist": "Polyphonic size",
+      "title": "Je t'ai toujours aimé"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:45",
+      "artist": "Oneohtrix point never",
+      "title": "Problem areas"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:47",
+      "artist": "Philipp glass",
+      "title": "Vessels"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:48",
+      "artist": "Oneohtrix point never",
+      "title": "Zebra"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:20",
+      "artist": "DJ Earl",
+      "title": "More than special"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:15",
+      "artist": "Rp boo",
+      "title": "Eraser"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:10",
+      "artist": "Dir+ypride",
+      "title": "8hmy8"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:00",
+      "artist": "Actress",
+      "title": "lost"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:40",
+      "artist": "Gedankenexperiment",
+      "title": "Experiment"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:00",
+      "artist": "Aratkilo",
+      "title": "Doggystyle check up"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:15",
+      "artist": "Coil",
+      "title": "The hills are alive"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:30",
+      "artist": "Lab Rat XL",
+      "title": "Lab Rat 3"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:00",
+      "artist": "Aphex Twin",
+      "title": "Alberto balsalm"
+    }
+  ]
+}

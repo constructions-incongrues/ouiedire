@@ -1,0 +1,136 @@
+{
+  "title": "Ouïedire, c'est pas humain",
+  "authors": "Assi Pychaf",
+  "releasedAt": "2014-09-30 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Intro",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:00:28",
+      "artist": "Jerry Goldsmith",
+      "title": "The Gremlin Rag"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:16",
+      "artist": "Klaten",
+      "title": "La Marche des Glumok"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:24",
+      "artist": "Elecmutec",
+      "title": "MÃªme Classe Lombard"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:50",
+      "artist": "Les Robots Musique",
+      "title": "Monster Chase"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:11",
+      "artist": "Vega/Hurtado",
+      "title": "Juke Bone Done"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:26",
+      "artist": "KK Null",
+      "title": "A Page of Madness"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:36",
+      "artist": "Witches of Malibu",
+      "title": "South of Zuma"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:11",
+      "artist": "King Horror",
+      "title": "Loch Ness Monster"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:38",
+      "artist": "Carpenter/Howarth",
+      "title": "Snake shake"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:46",
+      "artist": "Mother Mallard's Portable Masterpiece Company",
+      "title": "Harpsichord Truck"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:11",
+      "artist": "Deep Freeze Mice",
+      "title": "Godzilla loves me, I'm an ashtray"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:38",
+      "artist": "Diasiva",
+      "title": "Cutting is Easy"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:33",
+      "artist": "AÃ¯boforcen",
+      "title": "Enjoil"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:35",
+      "artist": "David Lynch",
+      "title": "The Night Bell with Lightning"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:22",
+      "artist": "The Decapitated Hed",
+      "title": "Isolation Pulse"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:30",
+      "artist": "Yoko Higashi",
+      "title": "Akai Pool Extract"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:00",
+      "artist": "Conrad Schnitzler",
+      "title": "Red Dream"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:45",
+      "artist": "Vega/Hurtado",
+      "title": "Saturn Drive Duplex"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:51",
+      "artist": "Bollock Brothers",
+      "title": "Horror Movies"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:51",
+      "artist": "COUCOU",
+      "title": "LumiÃ¨re obscure"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "title": "Mille Platines",
+  "authors": "David Guettari",
+  "releasedAt": "2019-02-18 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Carrageenan",
+      "title": "The Flesh"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:30",
+      "artist": "Foetus Over Frisco",
+      "title": "Custom Built for Capitalism"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:42",
+      "artist": "Au CERFI",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:10:54",
+      "artist": "Guattari Teenage Riot",
+      "title": "Sorry Val, the tape that proved the cops beat you up mysteriously disappeared"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:55",
+      "artist": "Helena Hauff",
+      "title": "Micro Manifesto"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:11",
+      "artist": "Mort Garson",
+      "title": "Philosopher’s Stone"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:27",
+      "artist": "Felix Guattaritournelle",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:19:01",
+      "artist": "Infecticide",
+      "title": "Pizza Spinoza"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:50",
+      "artist": "Portion Control",
+      "title": "Plateau Stage"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:49",
+      "artist": "Vulvinia & Jambonstar",
+      "title": "Comment devenir vierge"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:02",
+      "artist": "Portion Control",
+      "title": "Out of Order"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:39",
+      "artist": "Philippe Feret",
+      "title": "Ritournelle"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:27",
+      "artist": "Arthur Lyman",
+      "title": "South Sea Island Magic"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:55",
+      "artist": "Steve Gray",
+      "title": "The Sausage Machine"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:00",
+      "artist": "Mandroid",
+      "title": "Rehab Clinic"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:23",
+      "artist": "Police des moeurs",
+      "title": "Territoire"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:19",
+      "artist": "Hypnoskull",
+      "title": "Electronic Music Means War to Us"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:48",
+      "artist": "Merzbow & R. Pinhas",
+      "title": "Rhizome Encore"
+    }
+  ]
+}

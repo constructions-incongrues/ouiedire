@@ -1,0 +1,178 @@
+{
+  "title": "Wanky Party Misque",
+  "authors": "Glafouk",
+  "releasedAt": "2020-06-08 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>Une petite heure de SID misquée allègrement pour la release party confinée de \"Solo Romance\" de Wankers United.</p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Martin Galway",
+      "title": "Wizzball Title Music"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:26",
+      "artist": "Marcin Majdzik (pyscho8580)",
+      "title": "Accelerated"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:47",
+      "artist": "Tero Mäyränen (Deetsay)",
+      "title": "Song of the day"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:53",
+      "artist": "Kamil Wolnikowski (Jammer)",
+      "title": "Acme Industries"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:26",
+      "artist": "lexander Rotzsch (Fanta)",
+      "title": "Random"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:07",
+      "artist": "Juha-Matti Hilpinen (AMJ)",
+      "title": "Fading in and out"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:29",
+      "artist": "Tero Mäyränen (Deetsay)",
+      "title": "MOS6581"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:14",
+      "artist": "Tero Mäyränen (Deetsay)",
+      "title": "Orava"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:40",
+      "artist": "Tero Hilpinen (TBB)",
+      "title": "Panimo"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:42",
+      "artist": "Leonhard Schueller (Ganja)",
+      "title": "Meet us at..."
+    },
+    {
+      "kind": "track",
+      "time": "00:24:01",
+      "artist": "Tomasz Szymczak (Randy)",
+      "title": "Acidgroove"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:56",
+      "artist": "Tero Mäyränen (Deetsay)",
+      "title": "Cappucino"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:09",
+      "artist": "Markus Klein (LMan)",
+      "title": "Confusion 2015 Remix"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:58",
+      "artist": "Thomas Loga (Shapie)",
+      "title": "Endeavour"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:01",
+      "artist": "Barik (Barik)",
+      "title": "Schweineschwanz"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:19",
+      "artist": "Otto Järvinen (SounDemoN)",
+      "title": "Dumdum"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:39",
+      "artist": "Enno Coners (Cosowi)",
+      "title": "Wild Child"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:35",
+      "artist": "Anders Carlsson (Goto80)",
+      "title": "Datagoaskit 2002"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:25",
+      "artist": "Mark Dolman (Finn)",
+      "title": "Braadworst en Espresso"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:06",
+      "artist": "Roman Chlebec (CreaMD)",
+      "title": "Anachronological"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:57",
+      "artist": "Warren Pilkington",
+      "title": "De-luxe"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:46",
+      "artist": "Marcin Majdzik (pyscho8580)",
+      "title": "Bad Ass"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:17",
+      "artist": "Marcin Majdzik (pyscho8580)",
+      "title": "Hang Drum"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:16",
+      "artist": "Jake Manley (Jellica)",
+      "title": "1heavy4"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:40",
+      "artist": "lalan00b (lalan00b)",
+      "title": "Ka-Ling"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:41",
+      "artist": "Kamil Wolnikowski (Jammer)",
+      "title": "For Vandalism News #40"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:13",
+      "artist": "Volker Meitz (PRI)",
+      "title": "For Jamaica"
+    },
+    {
+      "kind": "track",
+      "time": "00:59:48",
+      "artist": "Publicité du Quebec",
+      "title": "Rien ne peut battre mon 64"
+    }
+  ]
+}

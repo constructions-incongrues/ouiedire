@@ -1,0 +1,100 @@
+{
+  "title": "Cheers from la creuse",
+  "authors": "Fougère",
+  "releasedAt": "2018-01-16 00:00:00",
+  "type": "Bagage",
+  "isPublic": true,
+  "description": "<p><a href=\"https://musiquefougere.org/\">https://musiquefougere.org/</a></p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:57",
+      "artist": "Yximalloo",
+      "title": "ABC"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:57",
+      "artist": "Lonely Kid Quentin",
+      "title": "Je n'ai plus vingt ans"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:02",
+      "artist": "France Sauvage",
+      "title": "V comme Vipère"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:43",
+      "artist": "Music For Rabbits",
+      "title": "Hercule"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:04",
+      "artist": "Portron Portron Lopez",
+      "title": "Velvet Targui (live)"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:00",
+      "artist": "Le Cercle des Mallissimalistes",
+      "title": "Città Apperta (live)"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:25",
+      "artist": "Sajjra",
+      "title": "Inocente Tortura"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:47",
+      "artist": "Rühland",
+      "title": "Sauropsides"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:53",
+      "artist": "Fusiller",
+      "title": "Les Réalités Cannibales pt. 2"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:12",
+      "artist": "Johann Mazé",
+      "title": "Tube 3"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:10",
+      "artist": "Schismatique Destruction",
+      "title": "L'Apocalypse, enfin"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:01",
+      "artist": "Pédiluve Banquise",
+      "title": "UV"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:20",
+      "artist": "TG Gondard",
+      "title": "Cureghem"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:33",
+      "artist": "Marceau",
+      "title": "Doumdidum"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:43",
+      "artist": "Èlg",
+      "title": "Sick Awesome Rad Dude"
+    }
+  ]
+}

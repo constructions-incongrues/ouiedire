@@ -1,0 +1,76 @@
+{
+  "title": "Joyeux Tropiques",
+  "authors": "Khâgneux West",
+  "releasedAt": "2015-03-09 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Jean Michel Cabrimol et la Mafia",
+      "title": "Coucou Lanmou (Martinique)"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:06",
+      "artist": "Les Léopards de Martinique et Paulo Albin",
+      "title": "Hypocrisie (Martinique)"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:36",
+      "artist": "Belles Combo (Dominique)",
+      "title": "Simplify Yourself"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:52",
+      "artist": "Les Gypsies de Pétion Ville et Claude Marcelin (Haiti)",
+      "title": "Reflexion"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:06",
+      "artist": "Tuco et les Frères Dejean featuring Lionel Benjami (Haiti)",
+      "title": "Mister Magic"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:14",
+      "artist": "Scorpio Universel (Haiti)",
+      "title": "Voodoo Funk"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:00",
+      "artist": "Scorpio Universel (Haiti)",
+      "title": "Ensem'... Ensem'..."
+    },
+    {
+      "kind": "track",
+      "time": "00:29:44",
+      "artist": "Ti Celeste (Guadeloupe)",
+      "title": "Population Basse-Terrienne aux Abois"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:16",
+      "artist": "Rodrigue Millen (Haiti)",
+      "title": "Mwen Ta Renmen Konnen"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:02",
+      "artist": "Les Loups Noirs (Haiti)",
+      "title": "Pourquoi Betty"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:15",
+      "artist": "D'Angelo (USA)",
+      "title": "Really Love"
+    }
+  ]
+}

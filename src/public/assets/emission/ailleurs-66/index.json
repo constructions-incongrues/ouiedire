@@ -1,0 +1,136 @@
+{
+  "title": "Mayo",
+  "authors": "Yvan&Lendl",
+  "releasedAt": "2014-09-16 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>\"Le premier homme de la préhistoire qui composa un bouquet de fleurs fut le premier à quitter l'état animal ; il comprit l'utilité de l'inutile.\"\n<br /> <strong>Okakura Kakuzo</strong>\n</p>\n\n<p>\"Un air qui n'évoque rien, aucune image, n'apporte aucune vision, ne me sert à rien. En quelques minutes, une mélodie peut vous offrir un film, un tableau, un roman, oblitérer le quotidien, suggérer une autre vie.\"\nLe grand n'importe quoi (2010)\n<br /><strong>Jean-Pierre Marielle</strong>\n</p>\n\n<p>Je ne connais pas la clé du succès mais celle de l'échec est d'essayer de plaire à tout le monde.\"\n<br /><strong>Bill Cosby</strong>\n</p>\n\n",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "John 5 & Griffin Boice",
+      "title": "The Lords Theme"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:11",
+      "artist": "Misel Quitno",
+      "title": "Sie Sehn Es Ab Und Zu"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:34",
+      "artist": "Rhian Sheehan",
+      "title": "Part. 4"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:11",
+      "artist": "Takagi Masakatsu",
+      "title": "Guinacridone"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:41",
+      "artist": "Oneohtrix Point Never",
+      "title": "Still Life"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:57",
+      "artist": "Hisato Higuchi",
+      "title": "Katamari Kara Nagareru Mono"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:23",
+      "artist": "Lucky Dragon",
+      "title": "News Homes"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:01",
+      "artist": "Kreidler",
+      "title": "Clockwerk"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:33",
+      "artist": "Buckethead",
+      "title": "Pumpkin Pikes 18"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:14",
+      "artist": "Grischa Lichtenberger",
+      "title": "1011_22_lv_1b"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:39",
+      "artist": "Paul McCartney",
+      "title": "Love In The Open Air - 7M3"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:37",
+      "artist": "Charles Bobuck",
+      "title": "Maxine"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:06",
+      "artist": "Barn Owl",
+      "title": "Mouths Of Light"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:59",
+      "artist": "Keith Fullertone Whitman",
+      "title": "Generator 6"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:51",
+      "artist": "Cornelius",
+      "title": "Long Clutch b"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:47",
+      "artist": "Hrvatski",
+      "title": "Echoes"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:06",
+      "artist": "Jonsi & Alex",
+      "title": "Boys 1904"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:08",
+      "artist": "The Flaming Lips",
+      "title": "In Excelsior Vaginalistic"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:02",
+      "artist": "G A Z",
+      "title": "Zombies SOS"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:05",
+      "artist": "Susumu Yokota",
+      "title": "Sprouting Symphony"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:45",
+      "artist": "The Residents",
+      "title": "Hey Jude/Sympathy for The Devil"
+    }
+  ]
+}

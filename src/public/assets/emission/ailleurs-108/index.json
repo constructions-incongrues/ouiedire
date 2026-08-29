@@ -1,0 +1,106 @@
+{
+  "title": "Urbaine Et Sauvage",
+  "authors": "Rature (s)",
+  "releasedAt": "2015-11-30 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "The Last Poets",
+      "title": "when the revolution comes"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:29",
+      "artist": "Kelly Churko",
+      "title": "Transient compared to stone #3"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:45",
+      "artist": "Foods for animals",
+      "title": "Elephants"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:20",
+      "artist": "Bernard heidsieck",
+      "title": "Canal street n°6"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:10",
+      "artist": "Warum Joe",
+      "title": "Ballroom au ritz"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:40",
+      "artist": "Mykki blanco",
+      "title": "Fucking the dj"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:50",
+      "artist": "Magnesio",
+      "title": "Tchiriri"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:32",
+      "artist": "Joseph Louise",
+      "title": "Ti Kreol Leo"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:10",
+      "artist": "Artiste Inconnu",
+      "title": "Steel band trinidad"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:00",
+      "artist": "Luis Valdes Y Los Papinas",
+      "title": "Bilongo mato a Merced"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:25",
+      "artist": "Artiste Inconnu",
+      "title": "Place jemaa et fna Marrakech"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:08",
+      "artist": "Artiste Inconnu",
+      "title": "Solo de Endingidi Ouganda"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:50",
+      "artist": "Sun Ra",
+      "title": "Pyramids"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:16",
+      "artist": "Olivier Messiaen",
+      "title": "Le banquet Celeste"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:36",
+      "artist": "Jaliba Kuyateh",
+      "title": "Salifu K.Jaiteh"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:10",
+      "artist": "Black Pus",
+      "title": "The mad scatter"
+    }
+  ]
+}

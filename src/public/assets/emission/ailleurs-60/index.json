@@ -1,0 +1,142 @@
+{
+  "title": "Chanson française dégénérée",
+  "authors": "Jacques Canon",
+  "releasedAt": "2014-07-29 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Machin",
+      "title": "Y a rien qui va"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:52",
+      "artist": "Emilie Jolie",
+      "title": "Chanson de l'extra-terrestre"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:34",
+      "artist": "Cha Cha Guitri",
+      "title": "Art nègre"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:37",
+      "artist": "Yellow Magic Orchestra",
+      "title": "La femme chinoise"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:27",
+      "artist": "Telex",
+      "title": "Twist à Saint-Tropez"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:38",
+      "artist": "Tendance Catalogue",
+      "title": "La fête"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:13",
+      "artist": "Costes",
+      "title": "Rester tout seul avec un vieux piano"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:21",
+      "artist": "La géographie du Togo",
+      "title": "Georges Akouété Et Germain Jondoh"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:26",
+      "artist": "René Binamé Et Les Roues De Secours",
+      "title": "La famille"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:27",
+      "artist": "Cobra",
+      "title": "Fils du cobra"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:47",
+      "artist": "Contingent",
+      "title": "Violence"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:29",
+      "artist": "Ex bx",
+      "title": "Strychnine"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:04",
+      "artist": "Venin",
+      "title": "Passe-temps"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:00",
+      "artist": "Discolokosst",
+      "title": "La grosse Lulu"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:51",
+      "artist": "Les Charlots",
+      "title": "Merci patron"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:38",
+      "artist": "Stephan Eicher",
+      "title": "Les filles du Limmatquai"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:29",
+      "artist": "Guigou Chenevier/Sophie Jausserand",
+      "title": "La maladie des fourmis"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:08",
+      "artist": "Guy Marchand",
+      "title": "La passionata"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:59",
+      "artist": "Violence Conjugale",
+      "title": "KGB"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:26",
+      "artist": "Syndrome WPW",
+      "title": "Outrage rébellion (version disco laser 2000 pro)"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:58",
+      "artist": "Taulard",
+      "title": "Dans mes tempes"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:26",
+      "artist": "Plume Latraverse",
+      "title": "Ne pleure pas petite petite fille"
+    }
+  ]
+}

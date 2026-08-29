@@ -1,0 +1,146 @@
+{
+  "title": "La Haut Dans Le Sanctuaire",
+  "authors": "Cachette A Branlette",
+  "releasedAt": "2015-12-28 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "NWN",
+      "title": "THE TUMULTUOUS UPSURGE"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:33",
+      "artist": "COIL",
+      "title": "COLD CELL"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:09",
+      "artist": "SINOIA CAVES",
+      "title": "DWARF REACHING THE ARCH WONDER"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:41",
+      "artist": "HAN BENNIK",
+      "title": "SOFT TRUMPET"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:37",
+      "artist": "DIAMANDA GALAS",
+      "title": "SWING LOW SWEET CHARIOT"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:03",
+      "artist": "ALEC EMPIRE",
+      "title": "37.2 PT. 2"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:24",
+      "artist": "MARCUS FJELLSTRÖM",
+      "title": "UNTITLED 090616"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:09",
+      "artist": "SLEEP RESEARCH FACILITY",
+      "title": "A-DECK"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:39",
+      "artist": "UNAS FIELD REC.",
+      "title": "PLUIE DES CEVENNES"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:24",
+      "artist": "ARCHIMEDES BADKAR",
+      "title": "FORTRYCKETS SISTA TIMME"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:17",
+      "artist": "CHENE NOIRE",
+      "title": "LES OISEAUX"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:37",
+      "artist": "ARCHAIA",
+      "title": "SOLEIL NOIR"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:06",
+      "artist": "RIZ ORTOLANI",
+      "title": "OSSESSIONE DI UN DELITTO"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:30",
+      "artist": "ALESSANDRO BLONKSTEINER",
+      "title": "BLONK FASCIA"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:24",
+      "artist": "DI HAUT",
+      "title": "DER KARIBISCHE WESTERN"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:51",
+      "artist": "SPELL",
+      "title": "THE LITTLE BIRD"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:40",
+      "artist": "UNAS FIELD REC.",
+      "title": "SBB CFF FFS"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:42:59</a> <span>UNAS TSF REC"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:59",
+      "artist": "KINO",
+      "title": "PACHKA SIGARET"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:19",
+      "artist": "SA-SA",
+      "title": "AS BIJAU"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:08",
+      "artist": "KALAHARI SURFERS",
+      "title": "UPON LOOKING UP AT THE STATUE OF CECIL JOHN RHODES"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:58",
+      "artist": "UNAS TSF REC",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "01:00:35",
+      "artist": "KEIJI HAINO",
+      "title": "BLACK PETAL"
+    }
+  ]
+}

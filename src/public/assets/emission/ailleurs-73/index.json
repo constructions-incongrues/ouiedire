@@ -1,0 +1,82 @@
+{
+  "title": "Psychotic soup perls mix 2014",
+  "authors": "Guido Möbius",
+  "releasedAt": "2014-11-11 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p><a href=\"https://soundcloud.com/guidomoebius\">https://soundcloud.com/guidomoebius</a></p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "The knife",
+      "title": "Full of fire"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:21",
+      "artist": "Cut Hands",
+      "title": "who no know go knows"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:24",
+      "artist": "Arnold Dreyblatt",
+      "title": "group velocity"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:21",
+      "artist": "Group Doueh",
+      "title": "untitled"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:41",
+      "artist": "Denseland",
+      "title": "more they say"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:13",
+      "artist": "Air cushion finish",
+      "title": "single black hole"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:55",
+      "artist": "Markku Peltola",
+      "title": "uh oh ah"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:27",
+      "artist": "Khomus",
+      "title": "Yakut summer"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:41",
+      "artist": "Oneohtrix Point Never",
+      "title": "Zebra"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:35",
+      "artist": "Zammuto",
+      "title": "groan man, don´t cry"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:30",
+      "artist": "Hans Reichel",
+      "title": "Le Bal"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:33",
+      "artist": "Max Müller",
+      "title": "Gürtelschnalle"
+    }
+  ]
+}

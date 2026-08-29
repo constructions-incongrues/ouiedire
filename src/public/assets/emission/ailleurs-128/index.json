@@ -1,0 +1,70 @@
+{
+  "title": "Quelques ralentissements à prévoir d'après Zombie Futé...",
+  "authors": "Glafouk",
+  "releasedAt": "2016-05-02 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>VITESSE = DANGER : PRUDENCE, RALENTISSEZ !</p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Jones & Stephenson",
+      "title": "The First Rebirth"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:29",
+      "artist": "Fred Giannelli",
+      "title": "Distant Gratification"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:33",
+      "artist": "Fatima Yamaha",
+      "title": "What's A Girl To Do (Dancefloor Edit)"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:38",
+      "artist": "Ilsa Gold",
+      "title": "Silke"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:50",
+      "artist": "Toktok vs. Nena",
+      "title": "Bang Bang (Maxi Mix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:10",
+      "artist": "Superpitcher",
+      "title": "People"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:48",
+      "artist": "In Aeternam Vale feat. Monique Ranoux",
+      "title": "Litanie"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:17",
+      "artist": "Paula",
+      "title": "Als Es Passierte (Andreas Dorau Mix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:57",
+      "artist": "Paul Kalkbrenner",
+      "title": "Altes Kamuffel"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:07",
+      "artist": "La Femme",
+      "title": "Sur La Planche 2013"
+    }
+  ]
+}

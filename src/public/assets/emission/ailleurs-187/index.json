@@ -1,0 +1,100 @@
+{
+  "title": "A la recherche du son....",
+  "authors": "Bernard Filipetti",
+  "releasedAt": "2019-04-08 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Pink Floyd",
+      "title": "Atom Heart Mother"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:06",
+      "artist": "Chicago",
+      "title": "Free From Guitar"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:39",
+      "artist": "Scorn",
+      "title": "Silver Rain"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:55",
+      "artist": "The Cult",
+      "title": "She Sells Sanctuary"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:12",
+      "artist": "Killing Joke",
+      "title": "Wardance"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:09",
+      "artist": "Joy Division",
+      "title": "She Lost Control"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:09",
+      "artist": "Hawkwind",
+      "title": "You Shouldn’t Do That"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:56",
+      "artist": "Skinny Puppy",
+      "title": "Process"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:28",
+      "artist": "Throbbing Gristle",
+      "title": "Hamburger Lady"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:27",
+      "artist": "Jan Hammer Group",
+      "title": "Darkness"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:30",
+      "artist": "Cabaret Voltaire",
+      "title": "No Escape"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:42",
+      "artist": "The Cure",
+      "title": "Faith"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:54",
+      "artist": "King Crimson",
+      "title": "The Court Of The Crimson King « 1 »"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:19",
+      "artist": "The Cure",
+      "title": "Holy Hour"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:31",
+      "artist": "King Crimson",
+      "title": "The Court Of The Crimson King « 2 »"
+    }
+  ]
+}

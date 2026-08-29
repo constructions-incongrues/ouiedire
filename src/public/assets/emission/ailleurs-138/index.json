@@ -1,0 +1,100 @@
+{
+  "title": "Parallèle",
+  "authors": "Raymond D. Barre",
+  "releasedAt": "2016-10-03 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Dopplereffekt",
+      "title": "Compactification"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:49",
+      "artist": "DMX Krew",
+      "title": "Winter Months"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:46",
+      "artist": "Calimex Mental Implant Corp.",
+      "title": "Paracruise Waffles"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:37",
+      "artist": "Cachette a branlette",
+      "title": "Theres acid in the etc"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:20",
+      "artist": "Raymond D. Barre",
+      "title": "Insect"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:50",
+      "artist": "Le Matin",
+      "title": "La Fuite en Avant"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:20",
+      "artist": "Fah",
+      "title": "Glowism"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:25",
+      "artist": "Srazine",
+      "title": "K-B Overlord"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:52",
+      "artist": "Legowelt",
+      "title": "Lake Express"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:28",
+      "artist": "The Egyptian Lover",
+      "title": "P.E.L.F."
+    },
+    {
+      "kind": "track",
+      "time": "00:41:00",
+      "artist": "Umwelt",
+      "title": "Gravitational Lens"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:38",
+      "artist": "Arpanet",
+      "title": "Wireframe Images"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:00",
+      "artist": "De Ambassade",
+      "title": "Geen Genade"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:12",
+      "artist": "Alexander Robotnick",
+      "title": "Les Grands Voyages de l’Amour"
+    },
+    {
+      "kind": "track",
+      "time": "00:59:41",
+      "artist": "Kraftwerk",
+      "title": "Ohm Sweet Ohm"
+    }
+  ]
+}

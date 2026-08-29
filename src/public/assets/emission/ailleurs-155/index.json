@@ -1,0 +1,76 @@
+{
+  "title": "La Hadra",
+  "authors": "Antoine Capet",
+  "releasedAt": "2018-05-08 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "La Hadra",
+      "title": "Extrait documentaire"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:35",
+      "artist": "Pierre Bastien",
+      "title": "May Yam"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:16",
+      "artist": "Black Dice",
+      "title": "Motorcycle"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:36",
+      "artist": "Cameroun",
+      "title": "Flûtes des Monts Mandara </span> - Gar Sla"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:13",
+      "artist": "BrutPop",
+      "title": "Michel Michel et Bernard"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:14",
+      "artist": "Music of Papua New Guinea",
+      "title": "Tawapilagua"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:07",
+      "artist": "Low Jack",
+      "title": "Sticks Joint (part 2)"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:20",
+      "artist": "Wolf Eyes",
+      "title": "Lower Drolls (extrait)"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:17",
+      "artist": "Birds Of Delay",
+      "title": "Charnel House"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:40",
+      "artist": "Sunn O)))",
+      "title": "Sin Nanna"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:57",
+      "artist": "Jupiter",
+      "title": "NASA Voyager Recording"
+    }
+  ]
+}

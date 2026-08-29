@@ -1,0 +1,130 @@
+{
+  "title": "Sponge Sandwich Artist Mix",
+  "authors": "DJ Invisible Pink",
+  "releasedAt": "2019-06-25 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Julia Drouhin",
+      "title": "Tuktuk"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:23",
+      "artist": "Squidwin Triumph",
+      "title": "Football is Great"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:52",
+      "artist": "Tzii",
+      "title": "The Summit"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:20",
+      "artist": "Antoni Maiovvi",
+      "title": "Darkroom"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:53",
+      "artist": "C_C",
+      "title": "L'Indomptable"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:42",
+      "artist": "Andrea Noce",
+      "title": "Mdma"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:56",
+      "artist": "Eva Geist",
+      "title": "Äquator System"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:41",
+      "artist": "der Warst",
+      "title": "Was Eigentlich"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:06",
+      "artist": "Squidwin Triumph",
+      "title": "New Soul Shitmix"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:00",
+      "artist": "Jankenpopp",
+      "title": "Google Brain Dead"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:16",
+      "artist": "Julia Drouhin",
+      "title": "Décalage-Oreille"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:53",
+      "artist": "Antoni Maiovvi",
+      "title": "Olympic Torch"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:53",
+      "artist": "C_C",
+      "title": "Le Téméraire"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:30",
+      "artist": "der Warst",
+      "title": "Export"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:45",
+      "artist": "Vexkiddy",
+      "title": "Disposable Hardcore"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:24",
+      "artist": "Company Fuck",
+      "title": "Alarma Poing"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:31",
+      "artist": "Sinead O'Connick Jr.",
+      "title": "Doopcore"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:35",
+      "artist": "Jankenpopp",
+      "title": "Casse-Téte Chinois"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:07",
+      "artist": "Tzii",
+      "title": "Party Of Oblivion"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:21",
+      "artist": "Aleks Slota",
+      "title": "False Hope"
+    }
+  ]
+}

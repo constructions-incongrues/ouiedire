@@ -1,0 +1,261 @@
+#!/usr/bin/env python3
+"""Outil de migration des emissions : 3 fichiers -> index.json.
+
+Jetable : a supprimer une fois le change sveltia-cms-emissions archive.
+
+  migration-emission report                     classement des lignes, sans ecriture
+  migration-emission migrate                    ecrit index.json par emission
+
+La capture de reference est faite par bin/migration-capture.php, dans le
+conteneur : elle observe la sortie de l'application, jamais une reimplementation.
+"""
+import html
+import json
+import os
+import re
+import sys
+
+ASSETS = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                      '..', 'src', 'public', 'assets', 'emission')
+
+LI = re.compile(r'<li\b[^>]*>(.*?)</li>', re.S | re.I)
+TIME = re.compile(r'<a\b[^>]*mejs-smartplaylist-time[^>]*>(.*?)</a>', re.S | re.I)
+NEXT_TAG = re.compile(r'<\s*([a-zA-Z][\w-]*)')
+SPAN = re.compile(r'<span\b[^>]*>(.*?)</span>', re.S | re.I)
+OL = re.compile(r'<ol class="mejs-smartplaylist-playlist">.*?</ol>', re.S)
+ARTIST_LI = re.compile(r'<li class="artist"[^>]*>(.*?)</li>', re.S)
+
+
+def plain(markup):
+    """Texte seul, entites decodees : equivalent de textContent."""
+    return html.unescape(re.sub(r'<[^>]+>', '', markup)).strip()
+
+
+def normalize(markup):
+    return re.sub(r'\s+', ' ', markup).strip()
+
+
+def shows():
+    for slug in sorted(os.listdir(ASSETS)):
+        path = os.path.join(ASSETS, slug)
+        if os.path.isdir(path):
+            yield slug, path
+
+
+def read(path):
+    with open(path, encoding='utf-8', errors='replace') as handle:
+        return handle.read()
+
+
+def classify(inner):
+    """Classe le contenu d'un <li> selon les formes de la spec.
+
+    A   repere + artiste + ' - ' + titre
+    A2  repere + artiste + reste, sans separateur (conserve, mais signale)
+    B   repere + artiste, rien apres
+    C   non interpretable : la ligne d'origine est preservee telle quelle
+    """
+    time_match = TIME.search(inner)
+    if not time_match:
+        return {'form': 'C', 'raw': inner.strip()}
+    after = inner[time_match.end():]
+    nxt = NEXT_TAG.search(after)
+    if not nxt or nxt.group(1).lower() != 'span':
+        return {'form': 'C', 'raw': inner.strip()}
+    span = SPAN.match(after[nxt.start():])
+    if not span:
+        return {'form': 'C', 'raw': inner.strip()}
+    rest = after[nxt.start() + span.end():].strip()
+    entry = {'time': plain(time_match.group(1)), 'artist': plain(span.group(1))}
+    if rest.startswith('-'):
+        rest = rest[1:].strip()
+        entry['form'] = 'A'
+    elif rest:
+        entry['form'] = 'A2'
+    else:
+        entry['form'] = 'B'
+    entry['title'] = rest or None
+    if entry['title'] is None:
+        entry['form'] = 'B'
+    return entry
+
+
+LABELS = [
+    ('A', "repere + artiste + ' - ' + titre"),
+    ('A2', 'repere + artiste + reste SANS separateur'),
+    ('B', 'repere + artiste, rien apres'),
+    ('C', 'non interpretable, ligne preservee'),
+]
+
+
+def report():
+    totals = {key: 0 for key, _ in LABELS}
+    per_show, samples = {}, {'A2': [], 'C': []}
+    for slug, path in shows():
+        playlist = os.path.join(path, 'playlist.html')
+        if not os.path.exists(playlist):
+            continue
+        counts = {key: 0 for key, _ in LABELS}
+        for inner in LI.findall(read(playlist)):
+            entry = classify(inner)
+            counts[entry['form']] += 1
+            totals[entry['form']] += 1
+            if entry['form'] in samples and len(samples[entry['form']]) < 8:
+                samples[entry['form']].append((slug, normalize(inner)[:95]))
+        per_show[slug] = counts
+    total = sum(totals.values())
+    print('%d lignes <li> dans %d playlists\n' % (total, len(per_show)))
+    for key, label in LABELS:
+        print('  %-3s %5d  %5.1f %%  %s'
+              % (key, totals[key], 100.0 * totals[key] / total, label))
+    for key in ('A2', 'C'):
+        print('\n-- echantillon %s --' % key)
+        for slug, text in samples[key]:
+            print('   %-14s %s' % (slug, text))
+
+
+STD_CONTAINER = '<ol class="mejs-smartplaylist-playlist">'
+LI_WITH_ATTRS = re.compile(r'<li\s[^>]+>')
+
+
+DOM_ARTISTS = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                           '..', '.migration', 'artistes-dom.json')
+
+
+def php_strtolower(text):
+    """strtolower() de PHP : octet a octet, donc ASCII seulement.
+
+    Le site expose « dAlek » et « marcus fjellstrOm » (avec trema et rond en
+    capitale) parce que PHP ne minusculise pas l'UTF-8. Un repli Unicode
+    renommerait ces artistes.
+    """
+    return ''.join(chr(ord(c) + 32) if 'A' <= c <= 'Z' else c for c in text)
+
+
+def artists_of(entries):
+    """Artistes que produira getArtists() sur des entrees structurees."""
+    found = set()
+    for entry in entries:
+        if entry.get('kind') != 'track':
+            continue
+        artist = php_strtolower((entry.get('artist') or '').strip())
+        if artist and artist != '0' and artist not in ('intro', 'outro'):
+            found.add(artist)
+    return found
+
+
+def render(entries):
+    """Ce que le partiel Twig produira a partir des entrees."""
+    out = [STD_CONTAINER]
+    for entry in entries:
+        if entry['kind'] == 'raw':
+            body = entry['raw']
+        else:
+            body = '<a class="mejs-smartplaylist-time">%s</a><span>%s</span>' % (
+                entry['time'], entry['artist'])
+            if entry['title']:
+                body += ' - ' + entry['title']
+        out.append('<li>%s</li>' % body)
+    out.append('</ol>')
+    return ''.join(out)
+
+
+def comparable(markup):
+    """Normalisation du contrat : espaces et entites."""
+    markup = html.unescape(markup)
+    markup = re.sub(r'\s+', ' ', markup)
+    markup = re.sub(r'>\s+', '>', markup)
+    markup = re.sub(r'\s+<', '<', markup)
+    return markup.strip()
+
+
+def is_structured(markup, items, entries, dom_artists):
+    """On ne structure que si on prouve qu'on reproduit la source.
+
+    Deux preuves, et les deux sont necessaires :
+      - le balisage rendu depuis les entrees egale la source ;
+      - les artistes qu'on en tire egalent ceux que le DOM tire de la source.
+
+    La premiere attrape le contenu hors du <ol>, les conteneurs exotiques, les
+    <li> a attributs, les balises en double. La seconde attrape les balisages
+    casses ou libxml2 et notre parseur divergent.
+    """
+    if not items:
+        return False
+    if comparable(render(entries)) != comparable(markup):
+        return False
+    return artists_of(entries) == set(dom_artists)
+
+
+def entry_of(inner):
+    e = classify(inner)
+    if e['form'] == 'C':
+        return {'kind': 'raw', 'raw': inner.strip()}
+    return {'kind': 'track', 'time': e['time'], 'artist': e['artist'],
+            'title': e['title']}
+
+
+def migrate():
+    structured = verbatim = entries = preserved = 0
+    problems = []
+    with open(DOM_ARTISTS, encoding='utf-8') as handle:
+        dom = json.load(handle)
+    for slug, path in shows():
+        manifest_path = os.path.join(path, 'manifest.json')
+        if not os.path.exists(manifest_path):
+            problems.append('%s : pas de manifest' % slug)
+            continue
+        manifest = json.loads(read(manifest_path))
+        markup = read(os.path.join(path, 'playlist.html'))
+        items = LI.findall(markup)
+        candidate = [entry_of(i) for i in items]
+        if is_structured(markup, items, candidate, dom.get(slug, [])):
+            playlist = candidate
+            structured += 1
+            entries += len(playlist)
+            preserved += sum(1 for e in playlist if e['kind'] == 'raw')
+        else:
+            # La playlist n'est pas une liste de morceaux : un element unique
+            # porte le balisage d'origine, pour que le champ reste une liste.
+            playlist = [{'kind': 'html', 'html': markup}]
+            verbatim += 1
+        document = {
+            'title': manifest.get('title'),
+            'authors': manifest.get('authors'),
+            'releasedAt': manifest.get('releasedAt'),
+            'type': manifest.get('type'),
+            'isPublic': manifest.get('isPublic'),
+            'description': read(os.path.join(path, 'description.html')),
+            'playlist': playlist,
+        }
+        for key in ('title', 'authors', 'releasedAt', 'type', 'isPublic'):
+            if document[key] is None:
+                problems.append('%s : champ %s absent' % (slug, key))
+        with open(os.path.join(path, 'index.json'), 'w', encoding='utf-8') as handle:
+            json.dump(document, handle, ensure_ascii=False, indent=2)
+            handle.write('\n')
+    # Le format est bascule : les trois anciens fichiers ne doivent pas subsister.
+    removed = 0
+    for slug, path in shows():
+        for name in ('manifest.json', 'description.html', 'playlist.html'):
+            stale = os.path.join(path, name)
+            if os.path.exists(stale):
+                os.remove(stale)
+                removed += 1
+    print('%d emissions structurees : %d entrees, dont %d preservees'
+          % (structured, entries, preserved))
+    print('%d ancien(s) fichier(s) supprime(s)' % removed)
+    print('%d emissions en HTML verbatim' % verbatim)
+    print('%d anomalie(s)' % len(problems))
+    for item in problems[:20]:
+        print('   ', item)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) >= 2 and sys.argv[1] == 'report':
+        report()
+    elif len(sys.argv) >= 2 and sys.argv[1] == 'migrate':
+        migrate()
+    else:
+        print(__doc__)
+        sys.exit(1)

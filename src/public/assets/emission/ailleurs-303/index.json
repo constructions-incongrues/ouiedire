@@ -1,0 +1,106 @@
+{
+  "title": "Imposed repulsive dances",
+  "authors": "Rottweiler Slip",
+  "releasedAt": "2022-04-01",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Beatriz Ferreyra",
+      "title": "Au revoir l'Ami"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:50",
+      "artist": "Nadia Boulanger",
+      "title": "J'ai frappé"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:30",
+      "artist": "Fatima Al Qadiri",
+      "title": "Shanzhai ft. Helen Feng"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:40",
+      "artist": "Clara Le Meur",
+      "title": "Arrêter ce carnage"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:15",
+      "artist": "Elephant",
+      "title": "Je Vais Tomber"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:00",
+      "artist": "Beta Evers",
+      "title": "Kalt"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:20",
+      "artist": "Froe Char",
+      "title": "Tarantism"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:10",
+      "artist": "Bonaventure",
+      "title": "Mentor"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:00",
+      "artist": "Elvin Brandhi",
+      "title": "It is screamy"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:50",
+      "artist": "Axine M",
+      "title": "Does It Tear"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:25",
+      "artist": "Clara Lissens",
+      "title": "Ace of Pentacles"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:40",
+      "artist": "Carya Amara",
+      "title": "Jamming"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:00",
+      "artist": "Blevin Blechdom",
+      "title": "Incinerating Zeros"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:00",
+      "artist": "Vinyl -terror & -horror",
+      "title": "The magic off... (instrumental)"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:55",
+      "artist": "Micheline Coulombe Saint-Marcoux",
+      "title": "contrastances (1971)"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:20",
+      "artist": "Caroline K",
+      "title": "Tracking with Close-Ups"
+    }
+  ]
+}

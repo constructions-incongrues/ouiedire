@@ -1,0 +1,100 @@
+{
+  "title": "Welcome to the Chibros Club",
+  "authors": "Philip Jacob Nache",
+  "releasedAt": "2016-05-09 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Femminielli Noir",
+      "title": "Rectum Palace"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:10",
+      "artist": "Rutes",
+      "title": "Tick Tack"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:57",
+      "artist": "FRAK",
+      "title": "Southern East Light"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:04",
+      "artist": "KORD feat Anni Gylling",
+      "title": "Black"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:00",
+      "artist": "Elec Pt 1",
+      "title": "A groove"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:46",
+      "artist": "KORD",
+      "title": "In absence"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:48",
+      "artist": "Gesloten Cirkel",
+      "title": "Yamagic"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:05",
+      "artist": "D'Marc Cantu",
+      "title": "No control"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:16",
+      "artist": "Los Hermanos Rodriguez",
+      "title": "The Hague is the Plague"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:22",
+      "artist": "Smackulator",
+      "title": "Doo-Rag"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:27",
+      "artist": "Raheem Hershel",
+      "title": "Electroclash"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:06",
+      "artist": "Esplendor Geometrico",
+      "title": "Moscu esta helado"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:46",
+      "artist": "Clarence",
+      "title": "Turbine"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:58",
+      "artist": "Das Ding",
+      "title": "Reassurance Ritual"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:33",
+      "artist": "Liaisons Dangereuses",
+      "title": "Peut-Etre...Pas"
+    }
+  ]
+}

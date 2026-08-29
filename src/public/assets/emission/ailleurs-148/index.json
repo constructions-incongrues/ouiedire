@@ -1,0 +1,106 @@
+{
+  "title": "King Tubbies Guili-Guili",
+  "authors": "Adrien Kanter",
+  "releasedAt": "2018-03-05 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>À boire et à manger, parfois même en même temps.</p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Jimi Hendrix",
+      "title": "Live at berkeley 2nd show"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:30",
+      "artist": "Emptyset",
+      "title": "Completely gone"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:58",
+      "artist": "Morgan Craft",
+      "title": "Tilting against the clock"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:00",
+      "artist": "Eddie135",
+      "title": "roots rock reggae"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:15",
+      "artist": "adz&robz",
+      "title": "Dormir 2"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:10",
+      "artist": "Nirvana",
+      "title": "Moist Vagina"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:30",
+      "artist": "Fleetwood mac",
+      "title": "The Chain"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:45",
+      "artist": "Robert Aiki Aubrey Lowe & Ariel Kalma",
+      "title": "Magic Creek"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:21",
+      "artist": "John Fahey",
+      "title": "the red pony"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:37",
+      "artist": "John Coltrane",
+      "title": "Summertime"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:34",
+      "artist": "Culoe de song",
+      "title": "Rejoice"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:00",
+      "artist": "Lanark Artefax",
+      "title": "Touch Absence"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:10",
+      "artist": "Pearson sound",
+      "title": "Blanked"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:19",
+      "artist": "Kelela",
+      "title": "Rewind"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:37",
+      "artist": "Tommy Genesis",
+      "title": "Execute"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:07",
+      "artist": "Ellen Arkbro",
+      "title": "For Organ and Brass"
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "title": "Carton Du Tendron",
+  "authors": "Jo Bur",
+  "releasedAt": "2021-04-09",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Rosa Canina",
+      "title": "renversée"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:54",
+      "artist": "Hourra Gros",
+      "title": "la jungle célèbre"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:56",
+      "artist": "Minimal Bougé",
+      "title": "pop corn"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:30",
+      "artist": "Bison",
+      "title": "titre inconnu"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:59",
+      "artist": "Johann Mazé & Jihem Rita",
+      "title": "au coeur de la molle vie"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:25",
+      "artist": "L'Enquête Piétine",
+      "title": "y'a d'la houle"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:29",
+      "artist": "Los Carpentos",
+      "title": "cotylédon"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:11",
+      "artist": "Los Carpentos",
+      "title": "curiosité isolée"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:15",
+      "artist": "Equipage",
+      "title": "xala"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:37",
+      "artist": "Fragile",
+      "title": "sombre début"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:37",
+      "artist": "Jean-François Magre",
+      "title": "je danse dans le noir"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:52",
+      "artist": "le Quercy K7 Club",
+      "title": "empilement (extrait)"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:15",
+      "artist": "El-G",
+      "title": "untitled # 7 (der prediger)"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:12",
+      "artist": "Avenir",
+      "title": "sels minéraux"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:41",
+      "artist": "Piak",
+      "title": "live Toulouse"
+    },
+    {
+      "kind": "track",
+      "time": "01:00:10",
+      "artist": "Dsk 2000",
+      "title": "nos numquam erit solus III"
+    },
+    {
+      "kind": "track",
+      "time": "01:02:53",
+      "artist": "Krinator",
+      "title": "the summer song"
+    },
+    {
+      "kind": "track",
+      "time": "01:04:41",
+      "artist": "Aymeric de Tapol",
+      "title": "ah poom poom ah poom poom"
+    },
+    {
+      "kind": "track",
+      "time": "01:08:05",
+      "artist": "Radikal Satan",
+      "title": "Natasha"
+    },
+    {
+      "kind": "track",
+      "time": "01:15:04",
+      "artist": "Prune Bécheau",
+      "title": "fire (oil)"
+    },
+    {
+      "kind": "track",
+      "time": "01:18:21",
+      "artist": "Chocolat Billy",
+      "title": "improvisation sur un rêve d'Elsa Morante"
+    },
+    {
+      "kind": "track",
+      "time": "01:24:13",
+      "artist": "Prune Bécheau",
+      "title": "deux grimpereaux"
+    },
+    {
+      "kind": "track",
+      "time": "01:24:44",
+      "artist": "Sononamé",
+      "title": "concert (extrait)"
+    },
+    {
+      "kind": "track",
+      "time": "01:30:26",
+      "artist": "Epais",
+      "title": "la mer"
+    },
+    {
+      "kind": "track",
+      "time": "01:35:24",
+      "artist": "Top Langouste",
+      "title": "ministère des profondeurs"
+    },
+    {
+      "kind": "track",
+      "time": "01:37:37",
+      "artist": "Rosa Canina",
+      "title": "renversée II"
+    },
+    {
+      "kind": "track",
+      "time": "01:38:26",
+      "artist": "Cabine Volcan",
+      "title": "concert à Torino"
+    }
+  ]
+}

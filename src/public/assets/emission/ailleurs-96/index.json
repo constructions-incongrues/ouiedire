@@ -1,0 +1,70 @@
+{
+  "title": "Grésillement subjectif",
+  "authors": "Johan",
+  "releasedAt": "2015-06-29 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Pr. F. Lhermitte",
+      "title": "Hémorragie ou ischémie ?"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:20",
+      "artist": "Tomoko Sauvage",
+      "title": "The Naked Island"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:20",
+      "artist": "Pierre Henry",
+      "title": "Souffle 1"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:30",
+      "artist": "Art & Technique ‎",
+      "title": "Another Day An Other Life"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:46",
+      "artist": "Ennio Morricone",
+      "title": "Symphonie pour l'attentat"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:17",
+      "artist": "Patrice Mestral & Nouvel Orchestre Philharmonique De Radio-France ‎",
+      "title": "Rassemblements"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:11",
+      "artist": "Vincent Epplay",
+      "title": "Laboratoire de recherche sonore"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:25",
+      "artist": "Sinoia Caves",
+      "title": "Forever Dilating Eye"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:56",
+      "artist": "Pr. F. Lhermitte",
+      "title": "Conclusion"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:45",
+      "artist": "Intérprétation pour la chorale des enfants de Saint-Satur sous la direction de Guy Bernadet",
+      "title": "Salut, salut à tous"
+    }
+  ]
+}

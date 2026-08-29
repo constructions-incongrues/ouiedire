@@ -1,0 +1,196 @@
+{
+  "title": "Grand Écart Quillé",
+  "authors": "Luck The Reaper",
+  "releasedAt": "2022-05-07",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>Retrospective de 25 ans de musique passée à la faucheuse pour vos oreilles.c'est dommage mais peut être que je réediterais \nune selection pour votre bien. <br />\nbonne écoute\n</p>\n\n",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Beatriz Ferreyra",
+      "title": "Au revoir l'Ami"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Dj Medhi",
+      "title": "intro"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:12",
+      "artist": "Kery James",
+      "title": "j'aurais pu dire"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:45",
+      "artist": "Oxmo Puccino",
+      "title": "Black Poppeyo"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:02",
+      "artist": "Kery James",
+      "title": "La Vie C'est"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:50",
+      "artist": "Oxmo Puccino",
+      "title": "Perdre Et Gagner"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:50",
+      "artist": "Stupeflip",
+      "title": "Apocalypse"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:58",
+      "artist": "TTC",
+      "title": "Batards Sensibles"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:04",
+      "artist": "Aphex Twin",
+      "title": "Vordhosbn"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:30",
+      "artist": "Squarepusher",
+      "title": "Terminal Slam"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:30",
+      "artist": "Aphex Twin",
+      "title": "Come To Daddy"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:08",
+      "artist": "The Dillinger Escape Plan",
+      "title": "Come To Daddy Cover"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:42",
+      "artist": "Botch-",
+      "title": "Fghamistam"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:54",
+      "artist": "Converge",
+      "title": "In Her Shadow"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:11",
+      "artist": "Comity",
+      "title": "Part II"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:51",
+      "artist": "Birds In Raw",
+      "title": "Phoenix"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:42",
+      "artist": "Burst",
+      "title": "Where The Wave Broke"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:42",
+      "artist": "Envy",
+      "title": "Color Of Fetters"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:04",
+      "artist": "Impure Wilhelmina",
+      "title": "Submersible Words"
+    },
+    {
+      "kind": "track",
+      "time": "01:01:12",
+      "artist": "Intronaut",
+      "title": "Fault Lines"
+    },
+    {
+      "kind": "track",
+      "time": "01:05:04",
+      "artist": "Kyrest",
+      "title": "Glittering Nothingness"
+    },
+    {
+      "kind": "track",
+      "time": "01:06:50",
+      "artist": "Le Dead Projet",
+      "title": "No Random"
+    },
+    {
+      "kind": "track",
+      "time": "01:09:32",
+      "artist": "Keep On Living",
+      "title": "Ashes"
+    },
+    {
+      "kind": "track",
+      "time": "01:13:22",
+      "artist": "The Rodeo Idiot Engine",
+      "title": "Zigeuner"
+    },
+    {
+      "kind": "track",
+      "time": "01:15:05",
+      "artist": "Mastodon",
+      "title": "Curl Of The Burl"
+    },
+    {
+      "kind": "track",
+      "time": "01:18:24",
+      "artist": "Fantomas",
+      "title": "Cape Fear"
+    },
+    {
+      "kind": "track",
+      "time": "01:20:08",
+      "artist": "Queen Of The Stone Age",
+      "title": "Go With The Flow"
+    },
+    {
+      "kind": "track",
+      "time": "01:23:11",
+      "artist": "Eddie Vedder",
+      "title": "Long Nights"
+    },
+    {
+      "kind": "track",
+      "time": "01:25:34",
+      "artist": "Orbel",
+      "title": "Etxe Herdoilduak"
+    },
+    {
+      "kind": "track",
+      "time": "01:28:58",
+      "artist": "Orm",
+      "title": "N'a Oas d'echo"
+    },
+    {
+      "kind": "track",
+      "time": "01:33:08",
+      "artist": "Sangre De Muerdago",
+      "title": "Medianoite"
+    }
+  ]
+}

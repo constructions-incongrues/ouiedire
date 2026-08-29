@@ -1,0 +1,82 @@
+{
+  "title": "εἰκών",
+  "authors": "Ovian Tales",
+  "releasedAt": "2022-02-08",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Takashi Kokubo",
+      "title": "Sea Sound"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:00",
+      "artist": "Avey Tare's Slasher Flicks",
+      "title": "That It Won’t Grow"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:27",
+      "artist": "Emerson Lake and Palmer",
+      "title": "Tarkus"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:23",
+      "artist": "PVT",
+      "title": "Shiver"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:58",
+      "artist": "Bill Vortex",
+      "title": "Velvet Funk"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:39",
+      "artist": "Trent Reznor And Atticus Ross",
+      "title": "The Way He Looks At Me"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:05",
+      "artist": "Neu!",
+      "title": "Im Gluck"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:32",
+      "artist": "Yes",
+      "title": "Awaken"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:30",
+      "artist": "Animal Collective",
+      "title": "Prester John"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:05",
+      "artist": "Autechre",
+      "title": "Altbzz-gwnn"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:50",
+      "artist": "MGMT",
+      "title": "A Good Sadness"
+    },
+    {
+      "kind": "track",
+      "time": "00:54:58",
+      "artist": "The Brian Jonestown Massacre",
+      "title": "If I Love You (New European Gold Standard Secret Babylonian Brotherhood Cinema Mix)"
+    }
+  ]
+}

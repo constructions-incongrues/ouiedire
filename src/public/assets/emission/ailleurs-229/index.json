@@ -1,0 +1,82 @@
+{
+  "title": "A Touch Of Zen",
+  "authors": "UVB76",
+  "releasedAt": "2020-03-31 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p> Illustration :  Stanisław Szukalski</p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Eliane Radigue",
+      "title": "17′47'"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:30",
+      "artist": "Pauline Oliveros, Stuart Demptser, Panaiotis",
+      "title": "Lear"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:30",
+      "artist": "Kevin Drumm",
+      "title": "Taurean"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:00",
+      "artist": "Graham Lambkin",
+      "title": "Dumb Answer to Miracles"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:30",
+      "artist": "Rainforest Spiritual Enslavement",
+      "title": "Refuges From Black Magic"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:00",
+      "artist": "Kink Gong",
+      "title": "Tibetan Buddhism Trip, Part I"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:30",
+      "artist": "Senyawa",
+      "title": "Sujud (Prosternation)"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:00",
+      "artist": "Anthony Child",
+      "title": "Colonisation"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:30",
+      "artist": "Psychic TV",
+      "title": "Various Temple Bells, Gongs, Cymbals And Vibes"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:00",
+      "artist": "The Gamelan of The Walking Warrior",
+      "title": "Dedari Ngindang"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:00",
+      "artist": "Thomas Koner",
+      "title": "Serac"
+    },
+    {
+      "kind": "track",
+      "time": "01:00:00",
+      "artist": "Geinoh Yamashirogumi",
+      "title": "Primordial Germination"
+    }
+  ]
+}

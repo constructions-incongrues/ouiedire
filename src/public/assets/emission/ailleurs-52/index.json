@@ -1,0 +1,136 @@
+{
+  "title": "Demain Jarret",
+  "authors": "Nota",
+  "releasedAt": "2014-05-21 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Virginie Thévenet",
+      "title": "La nuit porte-jarretelles"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:20",
+      "artist": "Automelodi",
+      "title": "Digresse"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:45",
+      "artist": "Doddodo",
+      "title": "11"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:21",
+      "artist": "Gel",
+      "title": "Fane"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:38",
+      "artist": "Felix Kubin vs Otto Vont Schirach",
+      "title": "Renate"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:05",
+      "artist": "Le Crabe",
+      "title": "Amour unilatéral"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:35",
+      "artist": "Monster Zoku Onsomb",
+      "title": "Thai Angle"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:14",
+      "artist": "Marrukmusic",
+      "title": "Orinocco Flow"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:30",
+      "artist": "Georg Danzer",
+      "title": "Sado Maso"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:45",
+      "artist": "Syndicat Electronique",
+      "title": "Arbeiten"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:50",
+      "artist": "Die Form",
+      "title": "Poupée Mécanique"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:50",
+      "artist": "Précieux",
+      "title": "\"Maman j'aime ça...\""
+    },
+    {
+      "kind": "track",
+      "time": "00:23:52",
+      "artist": "Antioche Kirm",
+      "title": "Peek da hut"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:44",
+      "artist": "Anne Léonard",
+      "title": "La grenouille"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:37",
+      "artist": "Fad Gadget",
+      "title": "Lady Shave"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:22",
+      "artist": "Sapphire Slows",
+      "title": "Dry Fruits"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:00",
+      "artist": "DJ Overdose",
+      "title": "Don't Stop"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:10",
+      "artist": "De Giafferi",
+      "title": "Sado Maso"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:15",
+      "artist": "Steril",
+      "title": "Amour Electronique"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:55",
+      "artist": "Frio Mundo Frio",
+      "title": "Amour de Robot"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:54",
+      "artist": "Dorothy's Magic Bag",
+      "title": "Ghost Ride"
+    }
+  ]
+}

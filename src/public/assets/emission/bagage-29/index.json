@@ -1,0 +1,70 @@
+{
+  "title": "L'hypothèse grise",
+  "authors": "Le Syndicat des scorpions",
+  "releasedAt": "2022-01-19",
+  "type": "Bagage",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:00:00</a> Nina Harker - </span> Idaho Sief"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:03:30</a> Regis Turner - </span> Dans la Fiat Panda"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:10:12</a> Maraudeur - </span> Hidden Track #1"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:13:09</a> Violent Quand On Aime - </span> Blanche et Blonde"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:16:09</a> TG Gondard flat. Regis Turner - </span> Je sais pas le dire"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:21:25</a> Christophe Clébard - </span> Les Enfants"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:24:51</a> Capelo - </span> Golgotha"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:28:28</a> Chambre - </span> Sur les Rochers"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:32;28</a> Regis Turner - </span> Si je ferme les yeux"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:37:30</a> TG Gondard - </span> À Travers la Forêt"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:42:37</a> Accou - </span> Seulaison"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:46:51</a> ASS - </span> Elle lit en moi comme dans un tombeau ouvert"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:51:00</a> Scarlatine - </span> Sedumperireaki"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:53:09</a> Nina Harker - </span> du schaffst es nicht"
+    },
+    {
+      "kind": "raw",
+      "raw": "<a class=\"mejs-smartplaylist-time\">00:57:26</a> Clara Le Meur - </span> Postillons"
+    }
+  ]
+}

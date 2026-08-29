@@ -1,0 +1,220 @@
+{
+  "title": "Bagage",
+  "authors": "Dataglitch",
+  "releasedAt": "2021-12-24",
+  "type": "Bagage",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "UnDude",
+      "title": "Okjokull"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:10",
+      "artist": "Morusque",
+      "title": "Terreau"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:35",
+      "artist": "Bolt",
+      "title": "Funky Man"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:11",
+      "artist": "Morusque",
+      "title": "La danse des gens anormaux"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:32",
+      "artist": "Morusque",
+      "title": "Botine"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:14",
+      "artist": "Ulrick",
+      "title": "Oser"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:07",
+      "artist": "Ulrick",
+      "title": "Slow End"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:59",
+      "artist": "Morusque",
+      "title": "La belette des bossus"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:01",
+      "artist": "Dr Von Pnok",
+      "title": "Stunt Man"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:07",
+      "artist": "Morusque",
+      "title": "Quelques biscuits"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:04",
+      "artist": "Baccalao",
+      "title": "Oh Yeah"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:13",
+      "artist": "Bitcrusher",
+      "title": "Brokencode"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:39",
+      "artist": "Morusque",
+      "title": "Manoar"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:25",
+      "artist": "Chrono Triggers",
+      "title": "Blip My Chip Jingle"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:45",
+      "artist": "Morusque",
+      "title": "Boklier"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:41",
+      "artist": "The Cheat Code",
+      "title": "Ville secrète"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:24",
+      "artist": "C_C",
+      "title": "Façades"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:45",
+      "artist": "Trente Oiseaux Familiers",
+      "title": "Dix Heures"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:05",
+      "artist": "Bitcrusher",
+      "title": "64.865457,-19.556783"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:50",
+      "artist": "J+1",
+      "title": "Hectocotyle Man"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:02",
+      "artist": "R-Mit",
+      "title": "Computronik"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:11",
+      "artist": "Confipop",
+      "title": "Box Y"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:19",
+      "artist": "Bitcusher",
+      "title": "Droid Dreamz"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:52",
+      "artist": "Eat Rabbit",
+      "title": "Shemale Cat"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:42",
+      "artist": "C_C",
+      "title": "Naïade"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:08",
+      "artist": "Gakona / Morusque / Bitcrusher",
+      "title": "EMM0*"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:57",
+      "artist": "Gakona",
+      "title": "EMM05"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:29",
+      "artist": "Gakona",
+      "title": "EMM02"
+    },
+    {
+      "kind": "track",
+      "time": "01:05:14",
+      "artist": "Ulrick",
+      "title": "Metallicwave"
+    },
+    {
+      "kind": "track",
+      "time": "01:06:28",
+      "artist": "Trente Oiseaux Familiers",
+      "title": "Gluten"
+    },
+    {
+      "kind": "track",
+      "time": "01:09:12",
+      "artist": "Ulrick -",
+      "title": "R_ready"
+    },
+    {
+      "kind": "track",
+      "time": "01:10:10",
+      "artist": "Computer Truck -",
+      "title": "Turbo Outrun Rmx"
+    },
+    {
+      "kind": "track",
+      "time": "01:11:43",
+      "artist": "Divag",
+      "title": "Crash to live"
+    },
+    {
+      "kind": "track",
+      "time": "01:13:38",
+      "artist": "Divag",
+      "title": "Medievol"
+    },
+    {
+      "kind": "track",
+      "time": "01:14:58",
+      "artist": "R-Mit",
+      "title": "Speaker Man"
+    }
+  ]
+}

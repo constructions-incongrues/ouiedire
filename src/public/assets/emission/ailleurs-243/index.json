@@ -1,0 +1,112 @@
+{
+  "title": "﻿Cars Go Boom Boom",
+  "authors": "Gina Mit",
+  "releasedAt": "2020-05-04 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Sebastian",
+      "title": "Motor"
+    },
+    {
+      "kind": "track",
+      "time": "04:01:06",
+      "artist": "Viktor Alles",
+      "title": "Pimp my beach"
+    },
+    {
+      "kind": "track",
+      "time": "06:46:02",
+      "artist": "Selway",
+      "title": "Turbo"
+    },
+    {
+      "kind": "track",
+      "time": "12:11:16",
+      "artist": "The Prodigy",
+      "title": "Speedway"
+    },
+    {
+      "kind": "track",
+      "time": "18:20:01",
+      "artist": "Scooter",
+      "title": "Friends turbo"
+    },
+    {
+      "kind": "track",
+      "time": "21:58:09",
+      "artist": "The Original Gabber",
+      "title": "Pump that pussy"
+    },
+    {
+      "kind": "track",
+      "time": "24:02:11",
+      "artist": "Frontliner",
+      "title": "Keep it up"
+    },
+    {
+      "kind": "track",
+      "time": "24:43:10",
+      "artist": "Radical Redemption & Angerfist",
+      "title": "When you're gone"
+    },
+    {
+      "kind": "track",
+      "time": "25:22:11",
+      "artist": "New Kids feat. Paul Elstak",
+      "title": "Turbo"
+    },
+    {
+      "kind": "track",
+      "time": "29:02:21",
+      "artist": "Thelma and Louise",
+      "title": "Trucker scene"
+    },
+    {
+      "kind": "track",
+      "time": "30:35:02",
+      "artist": "L’Trimm",
+      "title": "The cars that go boom"
+    },
+    {
+      "kind": "track",
+      "time": "34:27:06",
+      "artist": "Sir Mix A Lot",
+      "title": "My hooptie"
+    },
+    {
+      "kind": "track",
+      "time": "39:06:07",
+      "artist": "Christine",
+      "title": "Arnie talking scene"
+    },
+    {
+      "kind": "track",
+      "time": "42:28:16",
+      "artist": "Akahandsdown",
+      "title": "Twin turbo"
+    },
+    {
+      "kind": "track",
+      "time": "44:20:00",
+      "artist": "Kraftwerk",
+      "title": "Autobahn"
+    },
+    {
+      "kind": "track",
+      "time": "53:35:09",
+      "artist": "Vanishing Point",
+      "title": "Super soul radio scene"
+    },
+    {
+      "kind": "track",
+      "time": "54:16:00",
+      "artist": "Honeymoon Killers",
+      "title": "Route nationale 7"
+    }
+  ]
+}

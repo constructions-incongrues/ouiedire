@@ -1,0 +1,94 @@
+{
+  "title": "Uro Guro Garrot",
+  "authors": "Goupil Acneique",
+  "releasedAt": "2014-05-06 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "intro",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:00:02",
+      "artist": "The Cure",
+      "title": "A Short Term Effect"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:11",
+      "artist": "Amateur",
+      "title": "The eyes in the heat"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:40",
+      "artist": "Lydia Lunch",
+      "title": "Spooky"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:13",
+      "artist": "Saâda Bonaire",
+      "title": "You Could Be More As You Are"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:04",
+      "artist": "Pete Shelley",
+      "title": "Witness the change"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:44",
+      "artist": "Miro Miroe",
+      "title": "Nights Of Arabia"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:07",
+      "artist": "Arbeid Adelt!",
+      "title": "Death Disco"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:41",
+      "artist": "Severed Heads",
+      "title": "Dead Eyes Open"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:54",
+      "artist": "Crackboy",
+      "title": "Kiddo"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:10",
+      "artist": "Sisterhood",
+      "title": "Finland Red"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:15",
+      "artist": "Malaria!",
+      "title": "Trash Me"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:21",
+      "artist": "Die Gesunden",
+      "title": "Sometimes/Manchmal"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:57",
+      "artist": "The Sisters Of Mercy",
+      "title": "Emma"
+    }
+  ]
+}

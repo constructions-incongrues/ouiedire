@@ -1,0 +1,88 @@
+{
+  "title": "La diagonale du speed, ou ce qu’il en reste",
+  "authors": "L’Enfant Fourmi",
+  "releasedAt": "2019-11-18 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Tristesse Contemporaine",
+      "title": "I do what I want – Arnaud Rebotini remix"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:29",
+      "artist": "Fourmi",
+      "title": "Fishgods"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:29",
+      "artist": "Georges Perec lu par Jean-Charles Clichet",
+      "title": "L’art et la manière d’aborder son chef de service pour lui demander une augmentation 1/2"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:59",
+      "artist": "Mykki Blanco",
+      "title": "Wavvy"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:14",
+      "artist": "Radiante Pourpre",
+      "title": "Untitled"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:15",
+      "artist": "Takahiro Mukai",
+      "title": "#166"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:58",
+      "artist": "Vase",
+      "title": "Voors"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:08",
+      "artist": "South Heights",
+      "title": "Droid Manifesto"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:59",
+      "artist": "Distant",
+      "title": "Hidden - Delectro remix"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:48",
+      "artist": "Ueno Masaaki",
+      "title": "Excited State"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:38",
+      "artist": "Lakker",
+      "title": "LF9"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:16",
+      "artist": "Georges Perec lu par Jean-Charles Clichet",
+      "title": "L’art et la manière d’aborder son chef de service pour lui demander une augmentation 2/2"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:21",
+      "artist": "SDEM",
+      "title": "Kaelie"
+    }
+  ]
+}

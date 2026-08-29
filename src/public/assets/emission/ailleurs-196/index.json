@@ -1,0 +1,88 @@
+{
+  "title": " Techno Gym",
+  "authors": "Gina Mit",
+  "releasedAt": "2019-06-11 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>Photo par Juliette Angotti </p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "I hate models",
+      "title": "Ritual of tears"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:42",
+      "artist": "Inhalt Der Nacht & Echoes Of October",
+      "title": "Keine Ruhe"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:29",
+      "artist": "Umwelt",
+      "title": "Slave to the rave"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:18",
+      "artist": "Schwefelgelb",
+      "title": "Durch die haare die stirn"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:38",
+      "artist": "Helena Hauff",
+      "title": "Sea shore acid"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:44",
+      "artist": "The Hacker & Jensen Interceptor",
+      "title": "Industrial Drive"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:53",
+      "artist": "Jeff Mills",
+      "title": "Cocaine"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:40",
+      "artist": "Sven Vath",
+      "title": "Dein schweiss"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:12",
+      "artist": "The KGBs",
+      "title": "Techno gym"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:11",
+      "artist": "999999999",
+      "title": "LOVE 4 RAVE"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:47",
+      "artist": "Radical G & The Horrorist",
+      "title": "Here comes the storm"
+    },
+    {
+      "kind": "track",
+      "time": "01:04:57",
+      "artist": "Two sided agency",
+      "title": "Nostalgia for lost futures"
+    },
+    {
+      "kind": "track",
+      "time": "01:11:36",
+      "artist": "Minimum Syndicat",
+      "title": "Antiworlds"
+    }
+  ]
+}

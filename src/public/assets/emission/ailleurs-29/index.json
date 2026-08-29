@@ -1,0 +1,130 @@
+{
+  "title": "Meteor V8",
+  "authors": "Jacques Cochise",
+  "releasedAt": "2013-09-17 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>Qu'est ce que \"J'adore ce morceau!\", on entend souvent cette phrase.<br />\nMoi j'y répond à ma manière, je dis pourquoi!<br />\nJe dis pourquoi mes choix .<br />\nJe donne quelques anecdotes assez superficielles dans l'ensemble mais qui ont le mérite de s'inscrire dans une dynamique de cordialité et de partage.<br />\nOui! On se croirait sur radio maine et loire , je l'accorde...<br />\n</p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Intro",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:01:00",
+      "artist": "Alain Chamfort",
+      "title": "Manureva"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:58",
+      "artist": "Anthony Rother",
+      "title": "Father"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:43",
+      "artist": "Misfits",
+      "title": "All hell breaks loose"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:57",
+      "artist": "Porno For Pyros",
+      "title": "Tahitian moon"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:58",
+      "artist": "La sera",
+      "title": "Break my heart"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:37",
+      "artist": "Nine inch nails",
+      "title": "March of the pigs"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:51",
+      "artist": "Yazoo",
+      "title": "Goodbye 70's"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:35",
+      "artist": "M.O.D",
+      "title": "True colors"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:21",
+      "artist": "The electric hellfire club",
+      "title": "Very grooby boots"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:52",
+      "artist": "Colleen green",
+      "title": "Taxi driver"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:12",
+      "artist": "Splendora",
+      "title": "You standing on my neck"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:37",
+      "artist": "Serge gainsbourg",
+      "title": "Quand mon 6'35 me fait les yeux doux"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:39",
+      "artist": "Les amis de bulle",
+      "title": "Le bal masqué(cover)"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:58",
+      "artist": "Citizen",
+      "title": "I love my xerox(Alek stark remix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:27",
+      "artist": "Cosmetics",
+      "title": "Soft skin"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:26",
+      "artist": "Daniel auteuil",
+      "title": "Et que la vie me pardonne"
+    },
+    {
+      "kind": "track",
+      "time": "00:59:46",
+      "artist": "Jacques cochise",
+      "title": "Me i me i"
+    },
+    {
+      "kind": "track",
+      "time": "01:00:00",
+      "artist": "Ural 13 dictators",
+      "title": "Act of terror"
+    },
+    {
+      "kind": "track",
+      "time": "01:00:09",
+      "artist": "Le joueur de flûte de Hamelin",
+      "title": null
+    }
+  ]
+}

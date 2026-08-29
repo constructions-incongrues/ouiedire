@@ -1,0 +1,220 @@
+{
+  "title": "J'aime pas quand ça chante",
+  "authors": "Dj ****",
+  "releasedAt": "2014-09-03 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Musique de Bord",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:00:18",
+      "artist": "Miss Téléphone",
+      "title": "Central Pique-Nique"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:20",
+      "artist": "The Laurie Johnson Orchestra",
+      "title": "L´Homme au Chapeau Melon"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:21",
+      "artist": "Ray Davies",
+      "title": "Monomania"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:36",
+      "artist": "Le Comte de Saint Germain",
+      "title": "Les Révélations"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:36",
+      "artist": "Gérard Manset",
+      "title": "La Mort d´Orion"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:25",
+      "artist": "Pierre Henry",
+      "title": "Saint-Exupéry"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:07",
+      "artist": "Les Poémiens",
+      "title": "A l´envers de ma porte"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:43",
+      "artist": "Kenyon Hopkins",
+      "title": "The Loft"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:08",
+      "artist": "Danièle Delorme",
+      "title": "Histoire d´un poisson rouge"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:29",
+      "artist": "Dominique Laurent",
+      "title": "Uccelli Peccatum"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:58",
+      "artist": "Maurice Lemaître",
+      "title": "A qui la tournée ?"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:29",
+      "artist": "Babar au Cirque",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:19:49",
+      "artist": "Laurie Anderson",
+      "title": "Born, Never Asked"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:49",
+      "artist": "MacGowran",
+      "title": "Speaking Beckett"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:37",
+      "artist": "Hugh MacDiarmid",
+      "title": "A Drunkman Looks at the Thistle"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:19",
+      "artist": "Claude Peloquin",
+      "title": "Sterilization"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:38",
+      "artist": "Bruno de la Salle & Crystal Baschet",
+      "title": "Chaperon Rouge"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:26",
+      "artist": "Lori & The Chameleons",
+      "title": "Love on the Ganges"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:17",
+      "artist": "Bernard Lavilliers",
+      "title": "Night Bird"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:26",
+      "artist": "Esquivel",
+      "title": "Harlem Nocturne"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:53",
+      "artist": "Les Poémiens",
+      "title": "Baignade"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:12",
+      "artist": "Brigitte Fontaine & Areski",
+      "title": "La Renarde et le Bélier Touffu"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:18",
+      "artist": "Michel Zbar & Swingle Singers",
+      "title": "Swingle Novae"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:52",
+      "artist": "Guy Reibel",
+      "title": "Suite pour Edgar Poe"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:52",
+      "artist": "Sylvie Courvoisier & Pierre Charial",
+      "title": "Mutant"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:29",
+      "artist": "Philippe Arthuys",
+      "title": "Le Crabe qui Jouait avec la Mer"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:46",
+      "artist": "Michel Magne & André Maurice",
+      "title": "La Passion"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:49",
+      "artist": "Bérénice",
+      "title": "Alors Dieu Châtia l´Homme"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:20",
+      "artist": "Ron Jacobs",
+      "title": "A Child´s Garden of Grass"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:30",
+      "artist": "Steve Waring et le Workshop de Lyon",
+      "title": "Image"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:55",
+      "artist": "Dominique Laurent",
+      "title": "Le Cirque Fantôme"
+    },
+    {
+      "kind": "track",
+      "time": "01:00:22",
+      "artist": "Colette Magny & Almuro",
+      "title": "Avec"
+    },
+    {
+      "kind": "track",
+      "time": "01:00:08",
+      "artist": "Germaine Montero & Marcel van Thienen",
+      "title": "La Ralentie"
+    },
+    {
+      "kind": "track",
+      "time": "01:01:25",
+      "artist": "Le Noël du Père Noël",
+      "title": null
+    }
+  ]
+}

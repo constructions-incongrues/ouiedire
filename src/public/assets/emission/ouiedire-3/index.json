@@ -1,0 +1,14 @@
+{
+  "title": "8bit / Chiptune",
+  "authors": "Bozoo & Valkiri",
+  "releasedAt": "2006-12-01 00:00:00",
+  "type": "Ouïedire",
+  "isPublic": true,
+  "description": "<!-- Pas de description pour cette émission -->",
+  "playlist": [
+    {
+      "kind": "html",
+      "html": "<ol class=\"number\">\n<li><a href=\"http://dmxkrew.com/\">Computor rockers</a> - Extra Life </li>\n<li><a href=\"http://www.64chaos.com%20\">64 chaos</a> - Zeburaman </li>\n<li> <a href=\"http://www.monotrona.tv/\">Monotrona</a> - Ah, Enemy</li>\n<li> <a href=\"http://www.mrpacman.com/\">Mr Pacman</a> - Girls that go boom </li>\n<li> <a href=\"http://eat-rabbit.com/\">Eat Rabbit</a> - Rush </li>\n<li> <a href=\"http://puyopuyo.lautre.net/\">Puyopuyo</a> - Penguins </li>\n<li> <a href=\"http://members.jcom.home.ne.jp/mmfan316/\">Mmfan 316</a> - School boy </li>\n<li> <span>Fu kraft </span> - Durch hexadecimal </li>\n<li> <span>4096 </span> - Biofe &amp; chin </li>\n<li> <a href=\"http://www.terobot.com/\">Tero</a> - Viides simffonia</li>\n<li> <a href=\"http://www.goto80.com/\">Goto 80 </a>- The meaning of love </li>\n<li> <a href=\"http://gorehole.org/m3d002.zip\">The hardliner</a> - Last night i dreamt </li>\n<li> <a href=\"http://www.xerak.com/\">Xerak</a> - L&egrave;che ta gamelle X </li>\n<li> <a href=\"http://technopolitan.se/%7Ecrazyq/\">Crazy Q</a>  - Phat &amp; Phunky Part 1 1</li>\n<li> <span>Dos stilletos - Audio Track 03 </span> </li>\n<li> <a href=\"http://www.galerie-transition.de/pc/\">Patric Catani </a>-You're a hero </li>\n<li> <a href=\"http://www.pastis.homelinux.net/pub/dataz/computer_truck/\">Computer Truck </a>-Track ???</li>\n</ol>"
+    }
+  ]
+}

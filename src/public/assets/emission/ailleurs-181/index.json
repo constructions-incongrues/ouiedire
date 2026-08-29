@@ -1,0 +1,118 @@
+{
+  "title": "Double Peine",
+  "authors": "Samantha Mox",
+  "releasedAt": "2019-02-11 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Intro",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:00:31",
+      "artist": "James Murray",
+      "title": "The sea in the sky"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:56",
+      "artist": "Jonathan Bree",
+      "title": "You're so cool"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:30",
+      "artist": "Nils Tavernier",
+      "title": "Drogue, dis-leur (extrait)"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:52",
+      "artist": "Mica Levi",
+      "title": "Love"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:50",
+      "artist": "Sprung Aus Den Wolken",
+      "title": "Pas attendre"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:27",
+      "artist": "Vince Staples",
+      "title": "3230"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:20",
+      "artist": "Martial Canterel",
+      "title": "Hiding places"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:18",
+      "artist": "Eye",
+      "title": "Fou de toi  +  Les coups"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:31",
+      "artist": "Modlizki",
+      "title": "Track 2"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:30",
+      "artist": "Micropoint",
+      "title": "Data cops"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:17",
+      "artist": "Jurgen Knieper",
+      "title": "Song of childhood"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:09",
+      "artist": "Black Devil Disco Club",
+      "title": "Stress on pluton"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:31",
+      "artist": "Clara Cappagli",
+      "title": "Freaks!!!!"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:42",
+      "artist": "Mykki Blanco",
+      "title": "Riot"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:51",
+      "artist": "Judas Donneger",
+      "title": "J'aime ces filles froides"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:33",
+      "artist": "Mike Banks",
+      "title": "Illuminator"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:03",
+      "artist": "Zenith",
+      "title": "Flowers of  intelligence"
+    }
+  ]
+}

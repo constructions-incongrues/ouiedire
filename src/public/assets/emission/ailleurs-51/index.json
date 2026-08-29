@@ -1,0 +1,130 @@
+{
+  "title": "Live your life happy",
+  "authors": "Rettriger",
+  "releasedAt": "2014-05-15 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>\nIn this mix I wanted to show some cool tunes I like and/or are important to me somehow. I wanted to show some good reasons \nto be happy and live your life! Some tracks are very old, some are 10 year old, some were released this year. I hope you \n</p>\n",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "intro",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:00:10",
+      "artist": "Daedelus",
+      "title": "Vida a vida"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:18",
+      "artist": "Novos Baianos",
+      "title": "Besta é tu"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:37",
+      "artist": "Lee jackson",
+      "title": "What d say"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:05",
+      "artist": "Monster Zoku Onsomb",
+      "title": "Tequila"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:22",
+      "artist": "Cramps",
+      "title": "Human fly"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:32",
+      "artist": "Spiders",
+      "title": "Seishun a Go-go"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:49",
+      "artist": "Kid Joala",
+      "title": "2 bit Blues"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:11",
+      "artist": "Faca",
+      "title": "Tijuana's Adiccion"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:21",
+      "artist": "Balkan beat box",
+      "title": "Gross"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:30",
+      "artist": "Hassan K",
+      "title": "Armenian Club"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:07",
+      "artist": "Logosamphia",
+      "title": "Cosmetique Canard"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:58",
+      "artist": "Mr Kindhoover",
+      "title": "Requiem pour un mouette"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:42",
+      "artist": "Made in korea",
+      "title": "Black kat, white kat"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:43",
+      "artist": "Jankenpopp",
+      "title": "Epic Cat Lover Frum da Interweb"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:19",
+      "artist": "Disasteradio",
+      "title": "Gravy Rainbow"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:28",
+      "artist": "DAT Politics",
+      "title": "Motor Day"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:57",
+      "artist": "Felix Kubin",
+      "title": "Hit me, Provider"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:50",
+      "artist": "Gangpol Und Mit",
+      "title": "Vas Y Robot"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:34",
+      "artist": "Modeselector",
+      "title": "2000007"
+    }
+  ]
+}

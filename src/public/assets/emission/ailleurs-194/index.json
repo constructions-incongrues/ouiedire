@@ -1,0 +1,100 @@
+{
+  "title": "Suite Of Dreams",
+  "authors": "Deeat Palace",
+  "releasedAt": "2019-05-27 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>Image par Tresses</p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Osheyack",
+      "title": "Fraud"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:10",
+      "artist": "Saverio Evangelista and Federico Spine",
+      "title": "Eye"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:04",
+      "artist": "Orphx",
+      "title": "Excruciate"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:34",
+      "artist": "Clipping",
+      "title": "Wriggle (Live on KEXP)"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:37",
+      "artist": "Alberich",
+      "title": "Unity House"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:44",
+      "artist": "Klein",
+      "title": "Run Reprise"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:16",
+      "artist": "Cuntroaches",
+      "title": "Fraud"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:03",
+      "artist": "Nidia Minaj",
+      "title": "Limite"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:00",
+      "artist": "Hypnoskull Push",
+      "title": "Eject - Return!"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:11",
+      "artist": "Bill Nace",
+      "title": "Solo Guitar 2"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:43",
+      "artist": "Cuntroaches",
+      "title": "Road Trip Song"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:27",
+      "artist": "Mariachi",
+      "title": "Live at Luff"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:22",
+      "artist": "Fou Lucifer Fou",
+      "title": "S/T B Untitled"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:10",
+      "artist": "Brian Eno",
+      "title": "An Ending (Music For Films Volume 2)"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:42",
+      "artist": "John Duncan",
+      "title": "Comin’ Back To Me"
+    }
+  ]
+}

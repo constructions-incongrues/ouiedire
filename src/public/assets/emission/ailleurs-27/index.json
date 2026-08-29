@@ -1,0 +1,82 @@
+{
+  "title": "Street fighters of Philadelphia",
+  "authors": "Goupil Acneique",
+  "releasedAt": "2013-08-29 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>Pour écouter ce mix dans des conditions optimales, nous vous conseillons : <br />\n- les jours impairs<br />\n- en caressant un animal<br />\n- un jerrican de cointreau à disposition<br />\n- lors de bivouacs en forêt<br />\n- a proximité d'une antenne-relais de téléphonie mobile (moins de 10 mètres)<br />\n- suite à un échec cuisant au cynodrome<br />\n- tout ce qui concerne les mouvements de panique<br />\nListe élaborée à l'aide de techniques américaines.<br />\n</p>\n<p> <a href=\"http://cobrafoutrediscotheque.tumblr.com/\">http://cobrafoutrediscotheque.tumblr.com/</a></p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Intro",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:00:15",
+      "artist": "Boytronic",
+      "title": "You"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:40",
+      "artist": "Trentemøller",
+      "title": "Silver Surfer, Ghost RIder Go!!!"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:56",
+      "artist": "The units",
+      "title": "High Pressure Days"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:10",
+      "artist": "Gina X",
+      "title": "Drive my car"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:19",
+      "artist": "Decadance",
+      "title": "On and on"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:10",
+      "artist": "Depeche Mode",
+      "title": "Photographic"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:50",
+      "artist": "extrait du film Hardware",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:30:31",
+      "artist": "Public Image Ltd (PiL)",
+      "title": "The Order of Death"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:10",
+      "artist": "XTC",
+      "title": "Complicated game"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:56",
+      "artist": "Delta 5",
+      "title": "Mind your own business"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:03",
+      "artist": "Menace Ruine",
+      "title": "Dark mother"
+    }
+  ]
+}

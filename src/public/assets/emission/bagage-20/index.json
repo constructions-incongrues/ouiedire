@@ -1,0 +1,14 @@
+{
+  "title": "Elle est où l'after ?",
+  "authors": "Tripalium Corp",
+  "releasedAt": "2020-04-27 00:00:00",
+  "type": "Bagage",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "html",
+      "html": "<ol class=\"mejs-smartplaylist-playlist\">\n<li> <a class=\"mejs-smartplaylist-time\">00:00:00</a> <span> Rise Black</span> - Russian Soul </li>\n<li> <a class=\"mejs-smartplaylist-time\">00:06:15</a> <span> Yung Acid</span> - Crips </li>\n<li> <a class=\"mejs-smartplaylist-time\">00:10:50</a> <span> AAAA</span> - Lady Bird \n<li> <a class=\"mejs-smartplaylist-time\">00:14:21</a> <span> Limited Toss</span> - paam paau aM</li>\n<li> <a class=\"mejs-smartplaylist-time\">00:17:42</a> <span> Laxenanchaos</span> - Brilliant toys </li>\n<li> <a class=\"mejs-smartplaylist-time\">00:23:51</a> <span> Duran Duran Duran</span> - Terror City</li>\n<li> <a class=\"mejs-smartplaylist-time\">00:30:05</a> <span> Raymond D. Barre</span> - Avoir les boules </li>\n<li> <a class=\"mejs-smartplaylist-time\">00:35:12</a> <span> La Bile</span> - Veuillez quitter la zone </li>\n<li> <a class=\"mejs-smartplaylist-time\">00:39:41</a> <span> Society Of Silence</span> - L'ortophoniste</li> \n<li> <a class=\"mejs-smartplaylist-time\">00:45:06</a> <span> Ekman</span> - Over huis, over tuin, over staak</li>\n<li> <a class=\"mejs-smartplaylist-time\">00:54:13</a> <span> Minimum Syndicat</span> - Seasaw</li>\n</ol>"
+    }
+  ]
+}

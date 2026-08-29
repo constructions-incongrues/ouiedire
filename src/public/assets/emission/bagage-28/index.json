@@ -1,0 +1,100 @@
+{
+  "title": "Mix 2021",
+  "authors": "Cudighi Records",
+  "releasedAt": "2022-01-01",
+  "type": "Bagage",
+  "isPublic": true,
+  "description": "<p><a href=\"https://cudighirecords.bandcamp.com/music\">https://cudighirecords.bandcamp.com/music</a></p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:03",
+      "artist": "World Standard -",
+      "title": "Shin Rin Yoku (Forest Bath)"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:17",
+      "artist": "Sonya Waters -",
+      "title": "Spring Tide (Ludus Remix) (The Sheltering Ranges)"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:54",
+      "artist": "Dan Melchior -",
+      "title": "Loam - ('Other Odes and Further Excursions')"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:10",
+      "artist": "Bill Horist -",
+      "title": "Dislocation Services (Tastemaker Epics)"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:39",
+      "artist": "Le Matin -",
+      "title": "Calibre 9 (Inactive Worlds)"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:25",
+      "artist": "99LETTERS -",
+      "title": "Yobai Nigeru Onna (IBUKI)"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:17",
+      "artist": "Mazzo -",
+      "title": "Clean Water (Soft Breeze of Silence)"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:22",
+      "artist": "Riow Arai -",
+      "title": "Interface (NEW NORMAL)"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:25",
+      "artist": "Anne Laplantine -",
+      "title": "hémi (chérie chance inouïe)"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:59",
+      "artist": "Sumuposauttaja -",
+      "title": "Out From U (SP2ALBUM)"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:45",
+      "artist": "Train Fantôme -",
+      "title": "Terre Promise (Nous sommes dans un rêve)"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:10",
+      "artist": "Psuedo Desnudo -",
+      "title": "Do As Kings (First Man from the Second Millennium)"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:40",
+      "artist": "Mustat Kalsarit -",
+      "title": "Puu (Yö)"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:36",
+      "artist": "Pont à Mousson -",
+      "title": "Shelter Shelter 3 (Shelter!)"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:19",
+      "artist": "Seth Thomas -",
+      "title": "Taxi in Cairo (The Songs of Seth Thomas)"
+    }
+  ]
+}

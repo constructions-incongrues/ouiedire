@@ -1,0 +1,112 @@
+{
+  "title": "A-K Carambar",
+  "authors": "L’Enfant Fourmi",
+  "releasedAt": "2018-02-05 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": false,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Von Magnet",
+      "title": "Into the breach"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:45",
+      "artist": "Yuppster",
+      "title": "My favorite James Taylor Song"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:56",
+      "artist": "Venetian Snares",
+      "title": "Vida"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:11",
+      "artist": "The Finkielkrauts",
+      "title": "Technocrat"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:56",
+      "artist": "Alain Resnais",
+      "title": "Je t’aime, je t’aime"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:01",
+      "artist": "Mick Gordon & Martin Stig Andersen",
+      "title": "Zerstörer (Wolfenstein II OST)"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:48",
+      "artist": "Disasterpeace",
+      "title": "Title (It Follows OST)"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:43",
+      "artist": "Bästard",
+      "title": "Death Party"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:34",
+      "artist": "Sonic Area",
+      "title": "Eureka"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:37",
+      "artist": "Chris Marker",
+      "title": "La Jetée"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:08",
+      "artist": "Rien Virgule",
+      "title": "Stella Cannibale"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:19",
+      "artist": "Coh",
+      "title": "Disco Discrete"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:20",
+      "artist": "Rien",
+      "title": "L.S.D.<span>Loisirs Sport Détente"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:23",
+      "artist": "Mika Vainio",
+      "title": "Teutons"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:16",
+      "artist": "Georges Perec, Bernard Queysanne",
+      "title": "Un homme qui dort"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:26",
+      "artist": "2nd Gen",
+      "title": "And/Or"
+    },
+    {
+      "kind": "track",
+      "time": "01:01:07",
+      "artist": "L’Oeuf Raide",
+      "title": "Cello’s Stripping"
+    }
+  ]
+}

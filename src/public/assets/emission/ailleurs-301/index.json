@@ -1,0 +1,82 @@
+{
+  "title": "Episodique 7",
+  "authors": "Johan",
+  "releasedAt": "2022-03-12",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>À suivre</p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "CS + Kreme",
+      "title": "Mount Warning"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:08",
+      "artist": "Orgue Agnes",
+      "title": "L'inalpe"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:27",
+      "artist": "Klein",
+      "title": "Marks Of Worship"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:01",
+      "artist": "Undude",
+      "title": "(Titre Provisoire)"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:50",
+      "artist": "Tirzah",
+      "title": "Beating"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:11",
+      "artist": "Oneohtrix Point Never",
+      "title": "No Good"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:32",
+      "artist": "Klein",
+      "title": "B2K"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:20",
+      "artist": "Cex",
+      "title": "What's My Name (Live, NYC 7/00)"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:50",
+      "artist": "The House of Fix feat.circa",
+      "title": "T1/2K"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:37",
+      "artist": "Michael Intergalaxon",
+      "title": "Cock In Orbit"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:14",
+      "artist": "Somaticae",
+      "title": "Advanced Middle East Systems"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:50",
+      "artist": "Carrageenan",
+      "title": "Everybody Loves When It Hurts"
+    }
+  ]
+}

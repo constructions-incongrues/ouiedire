@@ -1,0 +1,130 @@
+{
+  "title": "Rock'n'Roll DANGER",
+  "authors": "Marc De Blanchard",
+  "releasedAt": "2013-11-08 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>\n- Qu'est ce que c'est la façon de vivre alors ? Racontez-moi un peu.<br/>\n- Je crois que c'est la vitesse.<br/>\n- La vitesse ?<br/>\n- Toujours oui.<br/>\n- Mais heum..., est-ce que ça influe sur le... la façon de vivre ?<br/>\nLe rock..., je veux dire est-ce que vous avez l'impression de vivre autrement que les gens qui sont pas des rockers ?<br/>\n- Oh, heu... certainement oui.<br/>\n- Ouai, mais alors expliquez moi parce que je...<br/>\n- Je crois que parcequ'on est obligé de se... [VRAAAAOOOOUM... bruit de moto]\"\n</p>\n<p><a href=\"http://marc.arette.free.fr\">http://marc.arette.free.fr</a></p>\n",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:19",
+      "artist": "Alice donna",
+      "title": "C'est pas prudent"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:46",
+      "artist": "Electronicat",
+      "title": "The Smell of Danger"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:09",
+      "artist": "Jacqueline Taib",
+      "title": "7 heures du matin"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:40",
+      "artist": "Sandy Nelson",
+      "title": "And Then There Were Drums"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:05",
+      "artist": "End",
+      "title": "fit to die"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:30",
+      "artist": "Neonbabies",
+      "title": "Spass Muss Sein"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:08",
+      "artist": "Jason Forest",
+      "title": "Raunchy"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:02",
+      "artist": "Trentemoller",
+      "title": "Silver surfer ghost rider go"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:20",
+      "artist": "MONOFOCUS",
+      "title": "De plus en plus nouveau"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:20",
+      "artist": "Ich Bin",
+      "title": "Danger"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:26",
+      "artist": "Reverend Beat-Man",
+      "title": "Letter to myself"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:12",
+      "artist": "Micachu And The Shapes",
+      "title": "Nowhere"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:53",
+      "artist": "Otto von Schirach",
+      "title": "Ultimate Universe"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:10",
+      "artist": "Pepe Deluxe",
+      "title": "Captain Carter's Fathomas"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:55",
+      "artist": "Retrigger",
+      "title": "Victim #22"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:45",
+      "artist": "Perfect Hair Forever",
+      "title": "In The Sticks"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:30",
+      "artist": "MAGAS",
+      "title": "Burst City"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:55",
+      "artist": "Jemek Jemowit",
+      "title": "Jive Johnny"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:20",
+      "artist": "Leila",
+      "title": "Welcome to your life (featuring Mt. Sims)"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:10",
+      "artist": "Clark",
+      "title": "Rainbow Voodoo"
+    }
+  ]
+}

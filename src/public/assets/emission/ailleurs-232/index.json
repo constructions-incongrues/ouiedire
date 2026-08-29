@@ -1,0 +1,94 @@
+{
+  "title": "Isolement",
+  "authors": "Opaque",
+  "releasedAt": "2020-04-06 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Angelo Badalamenti",
+      "title": "Mulholland Drive Theme"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:25",
+      "artist": "Psychic TV",
+      "title": "Neurology"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:40",
+      "artist": "Tara in Tibet",
+      "title": "The Angel Walk Next to Me"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:57",
+      "artist": "Maska Genetik",
+      "title": "Quarantine"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:35",
+      "artist": "Free Range",
+      "title": "Trip to nairobi"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:35",
+      "artist": "Seeping",
+      "title": "pus"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:22",
+      "artist": "Eruk Dahl",
+      "title": "Promenons-nous dans les draps"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:10",
+      "artist": "Cindy Lee",
+      "title": "The Limit"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:22",
+      "artist": "Fiesta en el vacio",
+      "title": "Palma"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:02",
+      "artist": "Jimmy Smack",
+      "title": "Souls"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:15",
+      "artist": "Aaron Dilloway",
+      "title": "Untitled"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:34",
+      "artist": "Exek",
+      "title": "Unetiquetted"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:11",
+      "artist": "Ashtray Navigations",
+      "title": "Wren became a Wimpy Bar"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:48",
+      "artist": "Ike Yard",
+      "title": "Ghost Skin"
+    }
+  ]
+}

@@ -30,7 +30,7 @@
 {% endblock %}
 
 {% block footer %}
-	<br><br><span> <a target="_blank" href="https://github.com/constructions-incongrues/ouiedire/blob/main/src/public/assets/emission/{{ show.typeSlug }}-{{ show.number }}/manifest.json">EDIT</a></span>
+	<br><br><span> <a target="_blank" href="{{ app.request.getBasePath() }}/admin/#/collections/emissions/entries/{{ show.typeSlug }}-{{ show.number }}">EDIT</a></span>
 	{% if app.debug %}
 	<p>
 	  <strong>Debug :</strong>
@@ -79,7 +79,7 @@
                 <param name="flashvars" value="controls=true&file={{ show.urlDownloadFlac ?: show.urlDownloadMp3 }}" />
             </object>
         </audio>
-        {{ show.playlist|raw }}
+        {{ include('playlist.html.twig') }}
         <br>
     </div><!-- grid-50 -->
 

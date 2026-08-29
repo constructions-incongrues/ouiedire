@@ -1,0 +1,8 @@
+{%- set first = show.playlist|first -%}
+{%- if first.kind is defined and first.kind == 'html' -%}
+{{- first.html|raw -}}
+{%- else -%}
+<ol class="mejs-smartplaylist-playlist">
+{% for entry in show.playlist %}<li>{% if entry.kind == 'raw' %}{{ entry.raw|raw }}{% else %}<a class="mejs-smartplaylist-time">{{ entry.time }}</a><span>{{ entry.artist }}</span>{% if entry.title %} - {{ entry.title|raw }}{% endif %}{% endif %}</li>
+{% endfor %}</ol>
+{%- endif -%}

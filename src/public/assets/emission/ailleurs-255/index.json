@@ -1,0 +1,88 @@
+{
+  "title": "Triste Calmitude",
+  "authors": "Storky",
+  "releasedAt": "2020-06-05 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>Photo de Hong Kong par <a href=\"https://concreteslabz.tumblr.com\">Damien Gosset</a> - <a href=\"https://velvetyne.fr/fonts/pilowlava/\">Pilowlava</a> : police de caractères OFL par A. Moglia & J. Landes (<a href=\"https://velvetyne.fr/\">Velvetyne</a>)</p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Made In M & Smuv",
+      "title": "Phone"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:34",
+      "artist": "Émilie Simon",
+      "title": "The Egg"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:03",
+      "artist": "UVB 76",
+      "title": "Onna"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:54",
+      "artist": "Gangpol Und Mit",
+      "title": "Le Pollen"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:28",
+      "artist": "Anders Rhedin",
+      "title": "Adonai"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:29",
+      "artist": "Mogwai",
+      "title": "This Messiah Needs Watching"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:54",
+      "artist": "Chris Zabriskie",
+      "title": "Air Hockey Saloon"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:27",
+      "artist": "Gregaldur",
+      "title": "Quand Je T'Ai Quittée Ce Matin"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:54",
+      "artist": "Tana Barbier",
+      "title": "Unstable Drumloop And Consequences"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:48",
+      "artist": "Jerry Paper",
+      "title": "Fuzzy Logic"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:34",
+      "artist": "Amulets",
+      "title": "Tape Loop Orchestra"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:47",
+      "artist": "UVB 76",
+      "title": "Horo"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:21",
+      "artist": "Anders Rhedin",
+      "title": "Sleep Music"
+    }
+  ]
+}

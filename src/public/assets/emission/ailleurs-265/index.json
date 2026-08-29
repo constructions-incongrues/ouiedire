@@ -1,0 +1,112 @@
+{
+  "title": "Royal Caniche",
+  "authors": "Stéven Marcato",
+  "releasedAt": "2020-11-15 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>\"La Reine et moi nous nous réjouissons pour ceux qui vivent ce temps de vrai bonheur et de partage avec leurs proches\" </p>",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Ennio Morricone",
+      "title": "Chi Mai / Le Professionnel - Royal Canin"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:11",
+      "artist": "Jimmy Ross",
+      "title": "First True Love Affair / Version Générique"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:36",
+      "artist": "John Barry",
+      "title": "Game of Death / Main Theme"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:10",
+      "artist": "Delta 5",
+      "title": "Mind your own business"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:48",
+      "artist": "Ennio Morricone",
+      "title": "Alla Luce Del Giorno"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:44",
+      "artist": "Ramsey Lewis",
+      "title": "Les Fleur"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:14",
+      "artist": "Emilia",
+      "title": "Satan In Love"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:22",
+      "artist": "CCCP Fedeli Alla Linea",
+      "title": "Emilia Paranoica"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:37",
+      "artist": "S.M. Nurse",
+      "title": "Hot Day In Istanbul"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:29",
+      "artist": "Odopt",
+      "title": "Navy Fit Republic"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:38",
+      "artist": "Permanent Wave",
+      "title": "Noir Obscure (Emile Strunz Eurobeat Remix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:28",
+      "artist": "Informatics",
+      "title": "Proximity switch (Accident In Paradise)"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:23",
+      "artist": "Triple Six Mafia",
+      "title": "Playa Hataz (Stéven Marcato Illness Remix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:30",
+      "artist": "Deltron 3030",
+      "title": "Virus"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:37",
+      "artist": "Morgue! x 5G",
+      "title": "So Disturbed"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:00",
+      "artist": "Pandemonium",
+      "title": "Welcome Too Hell"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:24",
+      "artist": "Brujeria",
+      "title": "COVID-666"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "title": "Pekno Tekno",
+  "authors": "C_C",
+  "releasedAt": "2016-06-20 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-135_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "les grenouilles des chateliers",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:01:11",
+      "artist": "Millie & Andrea",
+      "title": "Gif Rif"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:09",
+      "artist": "Mutamassik",
+      "title": "Rhythms Rattle on Deaf Pawns"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:36",
+      "artist": "Haruomi Hosono",
+      "title": "Yuta's Pray"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:38",
+      "artist": "Havana, Cuba, Ca. 1957",
+      "title": "Eleguá"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:12",
+      "artist": "Don't Dj",
+      "title": "Savanna Sundown"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:45",
+      "artist": "Coil",
+      "title": "Who'll Tell"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:24",
+      "artist": "The Invisible College",
+      "title": "The Raining Rooms"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:25",
+      "artist": "Spiegelmotiv",
+      "title": "untitled B2"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:29",
+      "artist": "The Sidewinder",
+      "title": "Scarification Dub"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:52",
+      "artist": "L.A.N.D.",
+      "title": "Anoxia"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:41",
+      "artist": "Luis Agudo",
+      "title": "Afrorera"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:12",
+      "artist": "Muslimgauze",
+      "title": "Dogon Tabla"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:10",
+      "artist": "Melted Men",
+      "title": "Bull in China Shop"
+    }
+  ]
+}

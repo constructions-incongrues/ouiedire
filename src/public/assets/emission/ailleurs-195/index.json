@@ -1,0 +1,125 @@
+{
+  "title": " ...voyage au pays de Kino ",
+  "authors": "Mégapute",
+  "releasedAt": "2019-06-03 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-195_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Intro",
+      "title": "Un film d’amour ?"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:30",
+      "artist": "Ennio Morricone",
+      "title": "The kiss (Sergio Leone)"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:15",
+      "artist": "Survival Paradox",
+      "title": "Night"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:00",
+      "artist": "Rubber",
+      "title": "He’s biting (Quentin Dupieux)"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:49",
+      "artist": "Richard H. Kirk",
+      "title": "False Erotic Love"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:15",
+      "artist": "Barbara",
+      "title": "Moi je m’balance (Nelly Kaplan)"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:15",
+      "artist": "Cat. Barb.",
+      "title": "Piratagecentquatrestudio"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:58",
+      "artist": "Mercenary",
+      "title": "Dreams or reality"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:44",
+      "artist": "Eartha Kitt",
+      "title": "I want to be evil"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:42",
+      "artist": "Remo Voor",
+      "title": "Toilet love"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:42",
+      "artist": "Tiān biān yi duǒyún",
+      "title": "Coeur pur (Tsai Ming-liang)"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:15",
+      "artist": "Little Horror Shop",
+      "title": "Criminalité (Frank Oz)"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:38",
+      "artist": "Satori & Salo salon",
+      "title": "Until death comes"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:44",
+      "artist": "Carrageenan",
+      "title": "Microstimulation"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:35",
+      "artist": "Edward Ka-Spel",
+      "title": "A crack in melancholy time"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:00",
+      "artist": "A. B.",
+      "title": "Madame rêve"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:15",
+      "artist": "Lucile Delyle",
+      "title": "Luna rossa"
+    },
+    {
+      "kind": "track",
+      "time": "00:54:15",
+      "artist": "Rose Mitchell",
+      "title": "Baby don’t go"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:30",
+      "artist": "Principal Uno",
+      "title": "So kind"
+    }
+  ]
+}

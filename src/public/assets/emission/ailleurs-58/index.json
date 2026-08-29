@@ -1,0 +1,101 @@
+{
+  "title": "Mutant Area",
+  "authors": "Tripalium Selekttorrrr ",
+  "releasedAt": "2014-07-15 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>\"La scène IDM est bien vivante en 2014\" en quinze titres.</p>\n<p><a href=\"http://www.tripalium.eu\">http://www.tripalium.eu</a></p>",
+  "cover": "ouiedire_ailleurs-58_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Pat Hime",
+      "title": "Cymbia"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:02",
+      "artist": "Glanko",
+      "title": "Lex"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:24",
+      "artist": "Alterphase",
+      "title": "Nianther Fluxer"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:53",
+      "artist": "Ben Jacov",
+      "title": "Tessera Lepta"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:16",
+      "artist": "Jerome Chassagnard",
+      "title": "Green Island"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:42",
+      "artist": "Ganju",
+      "title": "V A C U U M"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:20",
+      "artist": "Telluric",
+      "title": "Axolotl"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:15",
+      "artist": "Sk'p",
+      "title": "Orpiclem"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:55",
+      "artist": "Dnte",
+      "title": "Translucent"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:05",
+      "artist": "Krasius",
+      "title": "Eliokan"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:26",
+      "artist": "Daed",
+      "title": "Ghost Vibrations"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:27",
+      "artist": "L.iet & Kurt Bogenholtz",
+      "title": "Klangmuseum"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:01",
+      "artist": "Xeroderman",
+      "title": "Geode X"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:44",
+      "artist": "Wahn",
+      "title": "Slow Controller"
+    },
+    {
+      "kind": "track",
+      "time": "00:54:18",
+      "artist": "Sir Vixx",
+      "title": "Broke"
+    }
+  ]
+}

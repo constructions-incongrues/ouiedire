@@ -1,0 +1,15 @@
+{
+  "title": "No Theme",
+  "authors": "Bozoo & Valkiri",
+  "releasedAt": "2005-01-01 00:00:00",
+  "type": "Ouïedire",
+  "isPublic": true,
+  "description": "<!-- Pas de description pour cette émission -->",
+  "cover": "ouiedire_ouiedire-1_cover-1.png",
+  "playlist": [
+    {
+      "kind": "html",
+      "html": "<ol>\n\t<li><a href=\"http://www.asphodel.com/bio/user_th.html\">The user</a> - |||||||||||||||||||||||||||</li>\n\t<li><a href=\"http://www.dmxkrew.com/\">Dmx Krew</a> - Dmx Funk (Rock Mix)</li>\n\t<li><a href=\"http://www.robotandproud.com/\">Iam robot and proud</a> - Grace days</li>\n\t<li><a href=\"http://www.felixkubin.de\">Felix Kubin </a>- Trigblotch</li>\n\t<li><a href=\"http://www.peoplelikeus.org\">People like us</a> - Dolly pardon</li>\n\t<li><span>Kuusumun Profeetta</span> - Vvuosisadan vaihteessa</li>\n\t<li><a href=\"http://www.beck.com\">Beck</a> - Mixed Bizness (Nu Wave Dreamix by Les Rythmes Digitales)</li>\n\t<li><span>Ðîáîòû (Roboty)</span> - Apartment on the Moon</li>\n\t<li><span>The Plastics</span> - Complex</li>\n\t<li><a href=\"http://www.cybernetic-broadcasting.net/\">I-f</a> - Space Inv. (Original)</li>\n\t<li><a href=\"http://www.midwestproduct.com\">Midwest product</a> - Clicks and Crackers</li>\n\t<li><a href=\"http://gangpol.free.fr/\">Gangpol und mit</a> - Le fessier , Kap Bambino &amp; Khima France T.o.c.remix 2004</li>\n\t<li><a href=\"http://www.discogs.com/artist/MU\">Mu</a> - Paris Hilton</li>\n\t<li><span>Caillou</span> - Le gateau rigolo</li>\n</ol>\n"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "title": "Fièvre",
+  "authors": "Samantha Mox",
+  "releasedAt": "2018-05-31 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>\nfête et introspection<br/>\nréceptions et déceptions <br/>\nexcitation tempérée<br/>\nlenteur en nonchalance<br/>\ndanse danse danse\n</p>\n",
+  "cover": "ouiedire_ailleurs-158_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Captain Comatose",
+      "title": "(live at panorama bar)"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:00",
+      "artist": "Black Devil Disco Club",
+      "title": "An Other Skin"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:32",
+      "artist": "Il Est Vilaine",
+      "title": "Surf Rider"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:14",
+      "artist": "Ellen Allien",
+      "title": "Mind Journey"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:25",
+      "artist": "Andrea Doria",
+      "title": "never mind"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:50",
+      "artist": "In Aeternam Vale",
+      "title": "La Piscine"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:00",
+      "artist": "Minimum Syndicat",
+      "title": "acid trojan"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:07",
+      "artist": "VII Circle",
+      "title": "Alpha"
+    },
+    {
+      "kind": "track",
+      "time": "01:04:04",
+      "artist": "Umwelt",
+      "title": "Slave To The Rave"
+    },
+    {
+      "kind": "track",
+      "time": "01:09:01",
+      "artist": "Schwefelgelb",
+      "title": "Aus Dem Hals Der Flasche"
+    },
+    {
+      "kind": "track",
+      "time": "01:14:34",
+      "artist": "bodylotion",
+      "title": "Make you dance"
+    }
+  ]
+}

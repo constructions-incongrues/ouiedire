@@ -1,0 +1,131 @@
+{
+  "title": "Rebond",
+  "authors": "Sidonie Absolon",
+  "releasedAt": "2019-11-11 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-208_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Bernard Queysanne",
+      "title": "Un homme qui dort (extrait)"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:02",
+      "artist": "a c c o u",
+      "title": "wǔshù pack"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:08",
+      "artist": "Piscine Et Charles",
+      "title": "Personne Ne Doit Venir"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:46",
+      "artist": "UNBE",
+      "title": "vector sausage"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:53",
+      "artist": "Cc",
+      "title": "~X"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:36",
+      "artist": "Loto Retina",
+      "title": "Omnipod"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:15",
+      "artist": "Black Zone Myth Chant",
+      "title": "Two Stars, No Cross"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:43",
+      "artist": "Pauline Marx",
+      "title": "Des Animaux ramènent des djembés mais tout le monde est saoûlé"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:12",
+      "artist": "Raymonde",
+      "title": "H.B."
+    },
+    {
+      "kind": "track",
+      "time": "00:36:00",
+      "artist": "NSRD",
+      "title": "Ziemeļbriežu pajūgā pa Rīgas jūras līci / Ņujorkas taksometrā pa Manhetenu"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:46",
+      "artist": "Anne et Gilles",
+      "title": "Le Gnou"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:01",
+      "artist": "Claus Comedi",
+      "title": "Les Jardins De Genève"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:22",
+      "artist": "Joel Graham",
+      "title": "Geomancy"
+    },
+    {
+      "kind": "track",
+      "time": "00:59:38",
+      "artist": "ET",
+      "title": "Flying Lemur"
+    },
+    {
+      "kind": "track",
+      "time": "01:04:22",
+      "artist": "Novo Line",
+      "title": "Monad 33rpm"
+    },
+    {
+      "kind": "track",
+      "time": "01:09:28",
+      "artist": "c_c",
+      "title": "TANboU ASYE"
+    },
+    {
+      "kind": "track",
+      "time": "01:13:11",
+      "artist": "Charles Cohen",
+      "title": "Sacred Mountain"
+    },
+    {
+      "kind": "track",
+      "time": "01:18:11",
+      "artist": "Oneohtrix Point Never",
+      "title": "Up"
+    },
+    {
+      "kind": "track",
+      "time": "01:22:11",
+      "artist": "Alain Jessua",
+      "title": "La vie a l'envers (extrait)"
+    },
+    {
+      "kind": "track",
+      "time": "01:23:39",
+      "artist": "Bacon Grease",
+      "title": "November 16, 2018"
+    }
+  ]
+}

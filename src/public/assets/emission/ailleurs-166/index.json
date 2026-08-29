@@ -1,0 +1,89 @@
+{
+  "title": "Épisodique-5",
+  "authors": "Johan",
+  "releasedAt": "2018-10-08 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>À suivre ...</p>",
+  "cover": "ouiedire_ailleurs-166_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Hi-Fi Tests",
+      "title": "Mise En Phase Des Hauts-Parleurs"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:24",
+      "artist": "Vainio & Vigroux",
+      "title": "Brume"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:10",
+      "artist": "Brinstaar ‎",
+      "title": "Lakshmi"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:14",
+      "artist": "Charles Cohen",
+      "title": "Club Revival Performance"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:10",
+      "artist": "Sugai Ken",
+      "title": "Sawariyanagi = 障り柳"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:52",
+      "artist": "Klein",
+      "title": "Farewell Sorry"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:37",
+      "artist": "Èlg",
+      "title": "La Véritable Genèse"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:40",
+      "artist": "Felix Kubin",
+      "title": "Fluchtweg"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:04",
+      "artist": "Balinese Beast",
+      "title": "Colcannon Night"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:26",
+      "artist": "France Sauvage",
+      "title": "En sortant de mon corps avec une amie"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:12",
+      "artist": "Opéra Mort",
+      "title": "Minéral"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:48",
+      "artist": "Black Zone Myth Chant",
+      "title": "Bonus Beat 1"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:57",
+      "artist": "Low Jack",
+      "title": "One Pop"
+    }
+  ]
+}

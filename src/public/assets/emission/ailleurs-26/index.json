@@ -1,0 +1,179 @@
+{
+  "title": "Salt Shaker",
+  "authors": "Nils",
+  "releasedAt": "2013-08-21 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>\n\"Le hipeu-hop c'est pour faire la fête! \nÉcoute moi, j'vais te prendre la tête...\nJe rapadabastap du matin au soir,\nEt je compte sur toi pour ne pas t'asseoir,\nDu coup je me déhanche comme une balançoire!\"\n</p>",
+  "cover": "ouiedire_ailleurs-26_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "The Rakes",
+      "title": "T Bone"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:33",
+      "artist": "DJ Donna Summer",
+      "title": "Rock rock rock"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:47",
+      "artist": "Eat Rabbit + Death Grips",
+      "title": "My boss is a secretary fucker + Culture shock (nils gasp mashup)"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:53",
+      "artist": "Big Dope P",
+      "title": "Southside anthem"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:29",
+      "artist": "Renard",
+      "title": "Tagalog like it was beyond worth"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:37",
+      "artist": "Le Leprechaune",
+      "title": "Ghetto plastic"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:17",
+      "artist": "Darren Keen",
+      "title": "30 Graams"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:10",
+      "artist": "Tommy Wright III",
+      "title": "Big pussy"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:55",
+      "artist": "Lady Bee",
+      "title": "Why you run yo mouth"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:04",
+      "artist": "Princess Loko",
+      "title": "Loko 4 real"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:48",
+      "artist": "MC T. Tucker & DJ Irv",
+      "title": "Where dey at"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:27",
+      "artist": "Substance B",
+      "title": "Dora au collège fou fou fou"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:40",
+      "artist": "Big Freedia",
+      "title": "Y'all get back now"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:20",
+      "artist": "RuPaul feat Big Freedia",
+      "title": "Peanut butter"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:18",
+      "artist": "DJ Maze",
+      "title": "Put your hands up"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:16",
+      "artist": "Big Choo",
+      "title": "Like it raw"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:24",
+      "artist": "Paty",
+      "title": "Robotic break"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:43",
+      "artist": "Ying Yang Twins",
+      "title": "Pussy pump"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:35",
+      "artist": "Weekend Money feat Heem",
+      "title": "Yellow"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:32",
+      "artist": "Arca",
+      "title": "2 Blunted"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:25",
+      "artist": "DJ 2Phast",
+      "title": "Cluedo"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:29",
+      "artist": "Ljudit Andersson",
+      "title": "Rock'n'kongo"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:48",
+      "artist": "Dj Laz",
+      "title": "Latin Rythm"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:13",
+      "artist": "Fantome Fesse",
+      "title": "Gimme ghost"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:18",
+      "artist": "Dj Sega",
+      "title": "Internet friends"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:29",
+      "artist": "Dubnetikz",
+      "title": "Satisfaction"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:47",
+      "artist": "Boaz van de Beatz",
+      "title": "Flontie Stacks Pt.2"
+    },
+    {
+      "kind": "track",
+      "time": "00:54:33",
+      "artist": "dimmiT!!!",
+      "title": "Drrtyfeet"
+    }
+  ]
+}

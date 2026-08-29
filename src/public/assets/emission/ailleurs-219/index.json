@@ -1,0 +1,113 @@
+{
+  "title": "Mi-Figue, Mi-Raisin",
+  "authors": "Dj Ray",
+  "releasedAt": "2020-02-03 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-219_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Accou",
+      "title": "Les Battement de Coeur"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:04",
+      "artist": "Kay Toeuk",
+      "title": "Orgue à Bouche"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:44",
+      "artist": "Phantom Band",
+      "title": "Brain Police"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:05",
+      "artist": "Heroin in Tahiti",
+      "title": "Death Surf"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:00",
+      "artist": "Reines d'Angleterre",
+      "title": "A3"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:28",
+      "artist": "Hamza El Din",
+      "title": "Remind Me"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:54",
+      "artist": "Peter M. Hamel",
+      "title": "For a Unique Exctasy"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:00",
+      "artist": "Rio Azul",
+      "title": "Grand Saxo"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:51",
+      "artist": "Takeo Moryama",
+      "title": "Ka Ge Lo U"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:37",
+      "artist": "Gary Blanchard",
+      "title": "Pink Flamingos"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:38",
+      "artist": "Andre Penazzi",
+      "title": "Leventa Manguiera"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:24",
+      "artist": "Felix Kubin & Aavikko",
+      "title": "Superlake"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:06",
+      "artist": "Royalton's Farm",
+      "title": "Whirpoorwill"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:23",
+      "artist": "Les 101 Nations Du Vaudou",
+      "title": "Rythme Mahi"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:14",
+      "artist": "Mkwaju Ensemble",
+      "title": "Wood Dance"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:08",
+      "artist": "Galaxy Express 555",
+      "title": "Allelulias & Offertories"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:57",
+      "artist": "Fumio Hayasaka",
+      "title": "Tryst - Manzo & Shino"
+    }
+  ]
+}

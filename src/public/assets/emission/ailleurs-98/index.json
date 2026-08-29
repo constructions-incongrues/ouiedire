@@ -1,0 +1,233 @@
+{
+  "title": "The Naked ABD",
+  "authors": "Jim Avignon",
+  "releasedAt": "2015-07-22 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p><a href=\"http://www.neoangin.info/\">http://www.neoangin.info/</a></p>",
+  "cover": "ouiedire_ailleurs-98_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Die Hornissen",
+      "title": "Pale Blue Eyes"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:00",
+      "artist": "Nosaj Thing",
+      "title": "Fog"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:34",
+      "artist": "Doktor Kosmos",
+      "title": "Pornoman"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:45",
+      "artist": "Jaakko Eino Kalevi",
+      "title": "Flexible Heart"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:28",
+      "artist": "Sukia",
+      "title": "The Dream Machine"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:15",
+      "artist": "How To Dress Well",
+      "title": "Words I Don't Remember"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:12",
+      "artist": "Kanye West",
+      "title": "Bound 2"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:45",
+      "artist": "Conceptual Drudgery",
+      "title": "You Oughta Be In Pictures (Rudy Vallée Mashup="
+    },
+    {
+      "kind": "track",
+      "time": "00:18:09",
+      "artist": "10cc",
+      "title": "Good Morning Judge"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:33",
+      "artist": "Geter And Pordon",
+      "title": "Please Lock Me Away"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:26",
+      "artist": "Da$h",
+      "title": "95's"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:32",
+      "artist": "Louis Logic",
+      "title": "Por Que"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:03",
+      "artist": "The Gift of Gab (of Blackalicio)",
+      "title": "The Writz"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:39",
+      "artist": "Socalled",
+      "title": "Slaughter On 10th Avenue"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:36",
+      "artist": "Flume",
+      "title": "Holdin On (Official Video)"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:35",
+      "artist": "Ken Nordine",
+      "title": "Gold"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:19",
+      "artist": "Tirzah",
+      "title": "I'm Not Dancing"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:55",
+      "artist": "Philip Bimstein",
+      "title": "Casino - Eatdrinkgamblesex"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:38",
+      "artist": "Bondage Fairies",
+      "title": "Miss Volkova"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:07",
+      "artist": "Cat Mother",
+      "title": "Marie"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:02",
+      "artist": "Gil Scott - Herong And Jamie XX",
+      "title": "NY Is Killing Me"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:32",
+      "artist": "Burnt Friedman",
+      "title": "Hard Drive Club"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:32",
+      "artist": "The Upsetters",
+      "title": "Popcorn"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:48",
+      "artist": "William Turner Jr",
+      "title": "The Lights Going On"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:44",
+      "artist": "Hogs",
+      "title": "Loose Lip Sync Ship"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:43",
+      "artist": "Bradford Cox",
+      "title": "Snow On Cape"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:15",
+      "artist": "Cof Cof",
+      "title": "Dirty Tricks"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:35",
+      "artist": "Dmx Krew",
+      "title": "Make me"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:02",
+      "artist": "Cliff Edwards as the voice of ...",
+      "title": "I'm No Fool"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:50",
+      "artist": "Chuck Berry",
+      "title": "The Man And The Donkey"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:29",
+      "artist": "Polyphonic Sie",
+      "title": "Little Helper"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:51",
+      "artist": "Xberg Dhirty6 Cru",
+      "title": "Deswegen"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:56",
+      "artist": "Tuxedomoon",
+      "title": "59 to 1"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:57",
+      "artist": "Go Kart Mozart",
+      "title": "White Stilettos In The Sand"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:00",
+      "artist": "Slaagsmalsklubben",
+      "title": "Komigen Kommissarien"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:56",
+      "artist": "Socalled",
+      "title": "You Are Never Alone"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:13",
+      "artist": "Scott Down And Dj Cutler",
+      "title": "Track 02"
+    }
+  ]
+}

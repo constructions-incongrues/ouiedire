@@ -1,0 +1,101 @@
+{
+  "title": "Volcano Classics",
+  "authors": "Pneu-Lexidisques",
+  "releasedAt": "2015-02-23 00:00:00",
+  "type": "Bagage",
+  "isPublic": true,
+  "description": "<p> Brussels 16-7 JAN 2015\n</p>\n\n<p><a href=\"http://www.pneu.org\">http://www.pneu.org</a> <br /> <a href=\"http://www.lexidisques.net/\">http://www.lexidisques.net/</a> </p>",
+  "cover": "ouiedire_bagage-1_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Emmanuel Holterbach",
+      "title": "3615 Le Matin"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:05",
+      "artist": "Hazama",
+      "title": "Aï no disho"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:16",
+      "artist": "Anna Clementi, Athome Dub",
+      "title": "Hot Voodoo"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:25",
+      "artist": "Pierre Normal",
+      "title": "On the rocks"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:12",
+      "artist": "M&D",
+      "title": "Permanent Paradis,"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:17",
+      "artist": "s/t",
+      "title": "Historiaens"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:11",
+      "artist": "Volapük",
+      "title": "Carole's cake"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:50",
+      "artist": "Front de Cadeaux",
+      "title": "Le PéDé BPM"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:07",
+      "artist": "Taksan",
+      "title": "Nigeru"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:40",
+      "artist": "Villa Piégée",
+      "title": "Bleed"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:38",
+      "artist": "Emch",
+      "title": "Affenfall"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:09",
+      "artist": "Part III",
+      "title": "Seljuk"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:28",
+      "artist": "Nora et Yanara",
+      "title": "Kleines Mädchen"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:00",
+      "artist": "Bienvenue",
+      "title": "Mobile"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:10",
+      "artist": "Lost in  Toulouse",
+      "title": "Extrait de european contemporary demon"
+    }
+  ]
+}

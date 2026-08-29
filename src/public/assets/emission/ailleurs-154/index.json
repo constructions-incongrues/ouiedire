@@ -1,0 +1,161 @@
+{
+  "title": "Ultimatomme 2",
+  "authors": "Germain GNG",
+  "releasedAt": "2018-04-29 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>Artwork : <a href=\"http://www.anthonyivol.com\">Anthony Ivol</a> <br />\nGNG : <a hreg=\"https://soundcloud.com/gngmusic\">https://soundcloud.com/gngmusic</a> / <a href\"https://gngmusic.bandcamp.com/\">https://gngmusic.bandcamp.com/</a></p>",
+  "cover": "ouiedire_ailleurs-154_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Fx Randomiz & Jan St Werner",
+      "title": "Experts"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:58",
+      "artist": "Père Ubu",
+      "title": "Blow Daddy Ho"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:24",
+      "artist": "Dry Erase",
+      "title": "Headache"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:09",
+      "artist": "Roger Davy",
+      "title": "Marionnette Astrale"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:02",
+      "artist": "Max Tundra",
+      "title": "Lights"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:40",
+      "artist": "Phil Famous",
+      "title": "Bendenear"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:27",
+      "artist": "Cloud Becomes Your Hand",
+      "title": "Garden Of The Ape"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:35",
+      "artist": "Penguin Café Orchestra",
+      "title": "Penguin Café Single"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:50",
+      "artist": "Daniel Lanois & Rocco Deluca",
+      "title": "Satie"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:10",
+      "artist": "Minus Pilots",
+      "title": "Day Dream Electric"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:31",
+      "artist": "Hassle Hound",
+      "title": "Iced Madeira"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:37",
+      "artist": "Faust",
+      "title": "Lauft... heisst das es lauft oder es kommt bald... lauft..."
+    },
+    {
+      "kind": "track",
+      "time": "00:32:52",
+      "artist": "Pierre Bastien & Klimperei",
+      "title": "Meccachis"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:54",
+      "artist": "Zach Philips",
+      "title": "Pepper People"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:11",
+      "artist": "Glochids",
+      "title": "AM Crucial Reward"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:23",
+      "artist": "Jon Sheffield",
+      "title": "Poptart"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:11",
+      "artist": "Glochids",
+      "title": "AM Crucial Reward"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:51",
+      "artist": "Hypo",
+      "title": "Do Dodar"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:39",
+      "artist": "Agaskodo Teliverek",
+      "title": "Kopa Kobanappa"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:14",
+      "artist": "Batfinks",
+      "title": "Dirty Little Dozen"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:24",
+      "artist": "Sack & Blumm",
+      "title": "Nana McMadden"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:56",
+      "artist": "Chris Hamalton & His Hammond Organs",
+      "title": "Dizzy Fingers (reprise de Zez Confrey)"
+    },
+    {
+      "kind": "track",
+      "time": "00:54:11",
+      "artist": "Fred Weinberg",
+      "title": "1958 Revisited"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:18",
+      "artist": "Wevie Stonder",
+      "title": "Cheese Rider"
+    },
+    {
+      "kind": "track",
+      "time": "00:59:47",
+      "artist": "Fin des programmes",
+      "title": null
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "title": "Les Mystères de Babini ",
+  "authors": "Le Dogue",
+  "releasedAt": "2020-02-11 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>\"Art is just the last three letters of fart.\"<br />\n                Gibby Haynes</p>",
+  "cover": "ouiedire_ailleurs-220_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Nico",
+      "title": "Janitor Of Lunacy"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:00",
+      "artist": "Jon Hassell",
+      "title": "Gift Of Fire"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:50",
+      "artist": "Yasuaki Shimizu",
+      "title": "Utsukushiki Tennen"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:20",
+      "artist": "Deben Bhattacharya",
+      "title": "Jhai Chand Bhagat And Babu - Bhajan (Devotional Song)"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:25",
+      "artist": "Ween",
+      "title": "Hippy Smell"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:30",
+      "artist": "Le Dogue",
+      "title": "The Ouïedire Jingle Experiment"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:35",
+      "artist": "Mike & Rich",
+      "title": "Mr. Frosty"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:18",
+      "artist": "Jankomas",
+      "title": "En Teuf"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:15",
+      "artist": "Mayhem",
+      "title": "Silvester Anfang"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:10",
+      "artist": "DST",
+      "title": "Big Bend Ranch State Park"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:25",
+      "artist": "Gneiss Rock",
+      "title": "Helal Sex"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:45",
+      "artist": "Aix Em Klemm",
+      "title": "3X2 (Exit)"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:37",
+      "artist": "The Babinis",
+      "title": "Real Loosers Never Die"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:20",
+      "artist": "Cherubs",
+      "title": "Playdough"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:50",
+      "artist": "Anders Brørby",
+      "title": "Defeat"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:25",
+      "artist": "Pan Sonic",
+      "title": "Vaihtovirta"
+    },
+    {
+      "kind": "track",
+      "time": "01:04:59",
+      "artist": "Spacemen 3",
+      "title": "Call The Doctor"
+    },
+    {
+      "kind": "track",
+      "time": "01:08:31",
+      "artist": "Aphex Twin",
+      "title": "Curtains"
+    },
+    {
+      "kind": "track",
+      "time": "01:17:05",
+      "artist": "Robbie Basho",
+      "title": "Blue Crystal Fire"
+    },
+    {
+      "kind": "track",
+      "time": "01:21:49",
+      "artist": "Grégory",
+      "title": "LSD et Système D"
+    }
+  ]
+}

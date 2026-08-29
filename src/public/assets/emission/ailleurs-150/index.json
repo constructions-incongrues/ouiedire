@@ -1,0 +1,107 @@
+{
+  "title": "Tourelle",
+  "authors": "Lolo Tuerie",
+  "releasedAt": "2018-03-26 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-150_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Derinëgolem",
+      "title": "Derinëbugg"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:58",
+      "artist": "Deux Boules Vanille",
+      "title": "Cousine d’été"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:02",
+      "artist": "Whahaha",
+      "title": "Zoo"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:19",
+      "artist": "Jean-Pierre Massiera",
+      "title": "Il Tubo dell’anno"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:10",
+      "artist": "Death Sentence Panda",
+      "title": "Exit Villager"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:16",
+      "artist": "Godspeed You! Black Emperor",
+      "title": "Undoing a Luciferian Towers"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:50",
+      "artist": "Edouard Scotto",
+      "title": "Metal Kit"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:39",
+      "artist": "Nina Harker",
+      "title": "Idaho Sief"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:06",
+      "artist": "Andy Giorbino",
+      "title": "Lied an die Freude"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:21",
+      "artist": "Mange Ferraille",
+      "title": "Monument"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:15",
+      "artist": "Don Vito",
+      "title": "Special Guest"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:43",
+      "artist": "Snakefinger",
+      "title": "Smelly Tongues"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:01",
+      "artist": "Bernard Szajner",
+      "title": "Brute Reason"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:14",
+      "artist": "Edouard Scotto",
+      "title": "Crystal Mind"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:45",
+      "artist": "TV Petrol",
+      "title": "Freestyle Part 1"
+    },
+    {
+      "kind": "track",
+      "time": "01:00:19",
+      "artist": "The Flying Luttenbachers",
+      "title": "Assault on Apathy"
+    }
+  ]
+}

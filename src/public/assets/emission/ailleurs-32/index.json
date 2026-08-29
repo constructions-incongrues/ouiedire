@@ -1,0 +1,143 @@
+{
+  "title": "Sunthesis Continuum",
+  "authors": "Nils",
+  "releasedAt": "2013-10-21 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>\nDéfragmenteur à pistons\nacétate azoté à 20°UTA \nl'itérateur à incrémenter \na commencé à fondre j'ai \nappuyé sur tous les boutons \nmagnétiseurs modulateur principal \ntaux alarmant de micro-ondulations \nmusique de frigo, électronique et frisquette \n</p>",
+  "cover": "ouiedire_ailleurs-32_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Nils Gasp",
+      "title": "Intro"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:35",
+      "artist": "Anvil Fx",
+      "title": "Anvil Machine"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:06",
+      "artist": "Scorpion Violente",
+      "title": "Rome Violente"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:02",
+      "artist": "Rene Bandali",
+      "title": "Tanki Tanki"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:08",
+      "artist": "Polygamy Boys",
+      "title": "Minus Man"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:14",
+      "artist": "808 state",
+      "title": "Flow Coma (AFX remix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:26",
+      "artist": "The Fat",
+      "title": "Fiesta Muerta"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:47",
+      "artist": "Gast",
+      "title": "Engraving"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:03",
+      "artist": "Le Matin",
+      "title": "Carole Bouquet"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:28",
+      "artist": "Troubled Minds Cabin Crew",
+      "title": "Whales"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:07",
+      "artist": "File Not Found",
+      "title": "Number"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:49",
+      "artist": "Violence FM",
+      "title": "2 Live and die"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:40",
+      "artist": "Aux 88",
+      "title": "Break it Down"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:29",
+      "artist": "Allemand Berger Allemand",
+      "title": "Vibro Tone 2"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:33",
+      "artist": "Psilodump",
+      "title": "Kanon"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:44",
+      "artist": "Steril",
+      "title": "Grey"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:40",
+      "artist": "Code Rising",
+      "title": "By your Command"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:14",
+      "artist": "Cyberian Knights",
+      "title": "This is the Sound of Underground"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:11",
+      "artist": "LFO",
+      "title": "Freak"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:13",
+      "artist": "8rolek",
+      "title": "Steppe"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:14",
+      "artist": "The Soft Moon",
+      "title": "Want"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:54",
+      "artist": "Roger Davy",
+      "title": "Marche sur Jupiter"
+    }
+  ]
+}

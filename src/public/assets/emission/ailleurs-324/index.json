@@ -1,0 +1,95 @@
+{
+  "title": "Never Heard of It",
+  "authors": "Rottweiler Slip",
+  "releasedAt": "2024-12-20",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p class=\"justify\">\n<!-- TODO : Mettre la description de l'émission à jour, le cas échéant -->\n</p>\n",
+  "cover": "ouiedire_ailleurs-324_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Sweeping Promises",
+      "title": "Throw of the Dice"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:00",
+      "artist": "Yatta",
+      "title": "MTV"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:11",
+      "artist": "Rojin Sharafi",
+      "title": "Bye Binaries"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:30",
+      "artist": "Tara King Th.",
+      "title": "Ex"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:20",
+      "artist": "Black Dresses",
+      "title": "GOOD THINGS HAPPEN"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:20",
+      "artist": "Rising Damp",
+      "title": "Innovation"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:30",
+      "artist": "Geneviéve Pasquier",
+      "title": "Cannibal Night"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:30",
+      "artist": "Datura Inoxia Feat. VALANAÏS",
+      "title": "Je M’y Perds"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:15",
+      "artist": "Leeloo HK",
+      "title": "God Particle"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:40",
+      "artist": "Dame Area",
+      "title": "Devoción"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:15",
+      "artist": "FKA ICE",
+      "title": "COMPLEX"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:20",
+      "artist": "CLARA LISSENS",
+      "title": "I Am You"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:30",
+      "artist": "Helena Hauff",
+      "title": "Hiemal Quietus"
+    },
+    {
+      "kind": "track",
+      "time": "00:54:45",
+      "artist": "Bound by Endogamy",
+      "title": "Junktion Rivers"
+    }
+  ]
+}

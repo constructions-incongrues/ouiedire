@@ -1,0 +1,137 @@
+{
+  "title": "Fête Gratuite",
+  "authors": "Rottweiler Slip",
+  "releasedAt": "2016-02-08 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-118_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Jonny Hawksworth",
+      "title": "Animated Antics Version 1"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:33",
+      "artist": "Jonny Hawksworth",
+      "title": "Animated Antics Version 2"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:14",
+      "artist": "Crypto Tropic",
+      "title": "Tropes"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:20",
+      "artist": "Toys'R'Noise",
+      "title": "B3 Untitled"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:45",
+      "artist": "Kord feat. Annie",
+      "title": "Lovestruck"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:50",
+      "artist": "HEX",
+      "title": "Perpetual Glitch"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:20",
+      "artist": "Otto Von Schirach",
+      "title": "Dance Like a Hoe"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:20",
+      "artist": "Les Footballeuses du Charmes",
+      "title": "Que Pensez Vous de mon Short?"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:30",
+      "artist": "Art Kill Art",
+      "title": "#3 (the beginning of the side that isn't fucked up by a cutter),"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:20",
+      "artist": "Rude 66",
+      "title": "What Matters"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:15",
+      "artist": "Gakona",
+      "title": "emm_01"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:00",
+      "artist": "Karl Biscuit",
+      "title": "Les Mêmes Histoires"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:40",
+      "artist": "Container",
+      "title": "Interior"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:20",
+      "artist": "Andy Scott",
+      "title": "Sleepless (45rpm - 10%)"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Gratuit feat Julia Lanoë",
+      "title": "Territoire (45rpm - 10%)"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:20",
+      "artist": "¡ Duflan Duflan !",
+      "title": "La Paritita"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:25",
+      "artist": "Falseparklocation",
+      "title": "Every Time We Dance He Holds My So tight and I Don't Know What to Do So I Tell Him I Love You"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:15",
+      "artist": "Moderne",
+      "title": "Indicatif"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:43",
+      "artist": "The Neon Judgement",
+      "title": "Voodoo Nipplefield"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:21",
+      "artist": "Asmus Tiechens",
+      "title": "Sauberland"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:46",
+      "artist": "Asmus Tiechens",
+      "title": "Traümmerkopfe"
+    }
+  ]
+}

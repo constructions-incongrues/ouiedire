@@ -1,0 +1,77 @@
+{
+  "title": "Entre chiens et louves",
+  "authors": "Nicolas Montgermont",
+  "releasedAt": "2019-09-10 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>À écouter au crépuscule</p>",
+  "cover": "ouiedire_ailleurs-199_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Wolf Eyes",
+      "title": "Untitled"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:34",
+      "artist": "The Future",
+      "title": "Looking for the black haired girl"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:54",
+      "artist": "Chris Watson",
+      "title": "El Divisadero"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:16",
+      "artist": "Meryll Ampe",
+      "title": "Absalon. E M"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:54",
+      "artist": "British Electronic Foundation",
+      "title": "Decline of the West"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:44",
+      "artist": "Tim Hecker",
+      "title": "This life"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:40",
+      "artist": "Nicolas Montgermont",
+      "title": "Treillis 1D"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:24",
+      "artist": "Anna Zaradny",
+      "title": "Theurgy One"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:35",
+      "artist": "Lanark Artefax",
+      "title": "Voices near the Hypocentre"
+    },
+    {
+      "kind": "track",
+      "time": "01:03:18",
+      "artist": "SHXCXCHCXSH",
+      "title": "SsSs"
+    },
+    {
+      "kind": "track",
+      "time": "01:07:51",
+      "artist": "Catherina Barbieri",
+      "title": "Scratches on the Readable Surface"
+    }
+  ]
+}

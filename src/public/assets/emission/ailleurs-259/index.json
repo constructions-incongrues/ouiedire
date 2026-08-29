@@ -1,0 +1,89 @@
+{
+  "title": "Bruit est amour",
+  "authors": "Jean Bender",
+  "releasedAt": "2020-06-17 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-259_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Ramleh",
+      "title": "Bastard in anybody's language"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:01",
+      "artist": "Rudolf Eb.er",
+      "title": "Ritual 1"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:52",
+      "artist": "Atrax Morgue",
+      "title": "Sinfonia per un sadico"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:13",
+      "artist": "Venta Protesix",
+      "title": "Video Box Masturbation"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:03",
+      "artist": "Brian Lewis Saunders",
+      "title": "Near Death Experience"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:09",
+      "artist": "Solo Sounds",
+      "title": "We're chilly"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:36",
+      "artist": "Time Machine",
+      "title": "Telepathine"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:30",
+      "artist": "Mr Labrador",
+      "title": "L'agrippa + La procession du 8e chien"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:41",
+      "artist": "Vivenza",
+      "title": "Veriti Plastici partie 2"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:04",
+      "artist": "Andrew Liles",
+      "title": "All Dead (diversion)"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:16",
+      "artist": "Opera Mort",
+      "title": "Fermeture: Des Yeux Dans Les Machines"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:33",
+      "artist": "Spectra Ex Machina",
+      "title": "Investigations de Deny Renaudin"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:51",
+      "artist": "Le son du mois",
+      "title": "Ta gueule"
+    }
+  ]
+}

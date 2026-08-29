@@ -1,0 +1,131 @@
+{
+  "title": "Démantèlement",
+  "authors": "Gakona",
+  "releasedAt": "2014-09-10 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>Des disques vinyle sales, énervés, dans un état d'ébriété avancés...</p>\n<p><a href=\"http://www.dataglitch.org/\">www.dataglitch.org/</a></p>\t\t\n",
+  "cover": "ouiedire_ailleurs-65_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Suburban Knight",
+      "title": "Magnetic Timetable"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:00",
+      "artist": "Mick Wills",
+      "title": "Space Probe VII"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:20",
+      "artist": "Dj Deeon",
+      "title": "Let It Be House"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:45",
+      "artist": "Sumerian Fleet",
+      "title": "Nebelwerfer"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:15",
+      "artist": "Polysick",
+      "title": "Rubberbeard (J.T.C. Remix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:45",
+      "artist": "Charles Manier",
+      "title": "Bopside"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:30",
+      "artist": "Liaisons Dangereuses",
+      "title": "Peut Être... Pas"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:00",
+      "artist": "Basic Soul Unit",
+      "title": "Jak'd Freq"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:30",
+      "artist": "Basic soul Unit",
+      "title": "Yellow River"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:30",
+      "artist": "D'Marc Cantu",
+      "title": "Black Tears"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:05",
+      "artist": "AFX",
+      "title": "0.000890569"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:10",
+      "artist": "The Acid Mercenaries",
+      "title": "Untitled"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:50",
+      "artist": "Gesloten Cirkel",
+      "title": "Stakan"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:15",
+      "artist": "John Carpenter",
+      "title": "The President At The Trai"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:30",
+      "artist": "John Carpenter",
+      "title": "The Duke Arrives"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:45",
+      "artist": "Der Plan",
+      "title": "Generäle Essen Gerne Erdbeereis"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:15",
+      "artist": "DAF",
+      "title": "Liebe Auf Den Ersten Blick"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:50",
+      "artist": "Front242",
+      "title": "Body To Body"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:20",
+      "artist": "Gavin Guthrie",
+      "title": "666 Bass"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:28",
+      "artist": "Legowelt",
+      "title": "F. Mavelli - Special Brigade"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "title": "Dj Ero",
+  "authors": "Z_Taueber",
+  "releasedAt": "2019-12-02 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-211_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Perimeter",
+      "title": "Perimeter <i>(KATACOMBE Vol. 2)</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:15",
+      "artist": "Colin Potter",
+      "title": "Skim  <i>(Recent History Vol. 2)</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:43",
+      "artist": "GERARD",
+      "title": "This is Gerard  <i>(No-Tech 001)</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:11",
+      "artist": "Asda",
+      "title": "Spud-U-Liae  <i>(FuckPunk – FUCKPUNK 002)</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:15",
+      "artist": "Huren",
+      "title": "Kotimikro  <i>(Amok Tapes - AMOk005)</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:40",
+      "artist": "Umwelt",
+      "title": "Density#4  <i>(Modal Analysis – MA11)</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:17",
+      "artist": "Hodge",
+      "title": "I Don't Recognise You Lately  <i>(Hemloka Recordings – HEK 025)</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:38",
+      "artist": "Ultradyne",
+      "title": "Return From The Edge  <i>(Pi Gao Movement – PGM-011)</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:52",
+      "artist": "Das Muster",
+      "title": "Signalstärke  <i>(Stilleben Records – Stilleben 047)</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:10",
+      "artist": "Macon",
+      "title": "Sufflet  <i>(Stochastic Releases)</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:25",
+      "artist": "Monte Cazazza",
+      "title": "First, Last  <i>(The Grey Area – MONTE 1CD)</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:00",
+      "artist": "Levare",
+      "title": "Resonator  <i>(Sonic-X-Perience – SON 001)</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:10",
+      "artist": "Susumu Yokota",
+      "title": "Alphaville  <i>(Sublime Records – Srcd. 101)</i>"
+    }
+  ]
+}

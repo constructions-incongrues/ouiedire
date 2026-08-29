@@ -1,0 +1,113 @@
+{
+  "title": "Big Poppers Mix",
+  "authors": "Holzkopf",
+  "releasedAt": "2016-11-03 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-140_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Fried Abtan",
+      "title": "Solstice"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:24",
+      "artist": "Gintas K",
+      "title": "Nezinau Kas Tai"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:34",
+      "artist": "Billy Woods",
+      "title": "Damage"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:20",
+      "artist": "Curse Ov Dialect",
+      "title": "All Cultures"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:26",
+      "artist": "Cannibal Ox",
+      "title": "Battle for Asgard"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:44",
+      "artist": "Nurse With Wound",
+      "title": "(I Don't Want To Have) Easy Listening Nightmares"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:52",
+      "artist": "Arma Agharta",
+      "title": "Old River"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:00",
+      "artist": "The Anti-Pop Consortium",
+      "title": "Dead In Motion"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:43",
+      "artist": "Lil Kim",
+      "title": "Black Friday"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:32",
+      "artist": "Muslimgauze",
+      "title": "Base Metal Trinkets, One Rupee"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:20",
+      "artist": "Material Feat. Killah Priest",
+      "title": "Temple Of The Mental"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:25",
+      "artist": "The Peronists",
+      "title": "Big Poppa Flow Us From Sky"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:40",
+      "artist": "Lee 'Scratch' Perry",
+      "title": "Shine"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:02",
+      "artist": "Coil",
+      "title": "A Warning From The Sun (For Fritz)"
+    },
+    {
+      "kind": "track",
+      "time": "00:54:49",
+      "artist": "Kalma",
+      "title": "Hanging Out With Patty"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:52",
+      "artist": "Cobra Killer Feat. Carl Crack",
+      "title": "Starsign Fuck"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:44",
+      "artist": "Jingle",
+      "title": null
+    }
+  ]
+}

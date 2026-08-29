@@ -1,0 +1,131 @@
+{
+  "title": "Panorama",
+  "authors": "Sidonie Absolon",
+  "releasedAt": "2019-12-17 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-213_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Jean Rouch",
+      "title": "Entretien"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:35",
+      "artist": "Raymonde",
+      "title": "Mer aux étoiles"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:05",
+      "artist": "Rouge Gorge",
+      "title": "Au lendemain de l'orage"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:18",
+      "artist": "Luc Moullet",
+      "title": "La cabale des oursins"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:00",
+      "artist": "Portsmouth Sinfonia",
+      "title": "Also sprach Zarathustra"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:17",
+      "artist": "Christophe",
+      "title": "Un Tour d'Harley Avec Lucy"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:55",
+      "artist": "Brigitte Jardin & Claude Marbehant",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:14:21",
+      "artist": "Eyeliner",
+      "title": "America"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:37",
+      "artist": "Edgar Froese",
+      "title": "Blue Panther"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:37",
+      "artist": "Pierre Vassiliu",
+      "title": "J'aime pas l'hiver"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:33",
+      "artist": "Piotr Kurek",
+      "title": "Tonal Colors"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:42",
+      "artist": "Luc Moullet",
+      "title": "Terres Noires"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:26",
+      "artist": "Lino Capra Vaccina",
+      "title": "Antico Adagio"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:02",
+      "artist": "Unovidual",
+      "title": "Third Mood To The Left"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:04",
+      "artist": "Katapulto (Feat. Ellen Wilkinson)",
+      "title": "Polar Bear"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:35",
+      "artist": "Ce soir",
+      "title": "Il neige à la chaux-de-fonds"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:41",
+      "artist": "Robert Schumann",
+      "title": "L'oiseau prophète"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:32",
+      "artist": "Thick pigeon",
+      "title": "Subway"
+    },
+    {
+      "kind": "track",
+      "time": "01:03:29",
+      "artist": "Luc Moullet",
+      "title": "Foix"
+    },
+    {
+      "kind": "track",
+      "time": "01:07:30",
+      "artist": "Colombey",
+      "title": "Vers Melun"
+    }
+  ]
+}

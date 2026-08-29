@@ -1,0 +1,89 @@
+{
+  "title": "Là-bas, non loin de la baie de Turlututu",
+  "authors": "Maréchal Putain",
+  "releasedAt": "2022-05-08",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-306_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Bertrand Gadenne",
+      "title": "Au Revoir"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:53",
+      "artist": "Äpplicätör 120",
+      "title": "Neue Österreichische Post-Avantgarde"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:27",
+      "artist": "Michel Chion",
+      "title": "Coup de soleil sur un vitrail"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:30",
+      "artist": "Dikyl Brobojo",
+      "title": "Music For Meditation"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:04",
+      "artist": "Haruomi Hosono",
+      "title": "The animal’s opinion"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:00",
+      "artist": "Romain de Ferron",
+      "title": "Maracas"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:16",
+      "artist": "Karl Biscuit",
+      "title": "Hierophone"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:30",
+      "artist": "Magical Power Mako",
+      "title": "Studio MIDI"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:40",
+      "artist": "Machine Maid Man",
+      "title": "Frog Mares"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:11",
+      "artist": "Piotr Kurek",
+      "title": "Impossible Space"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:40",
+      "artist": "The dead Goldfish Ensemble",
+      "title": "Dazzle"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:45",
+      "artist": "Nguyen + Transitory",
+      "title": "No Such Thing As Terra Nullius"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:00",
+      "artist": "Picky picnic",
+      "title": "Aishu no melody"
+    }
+  ]
+}

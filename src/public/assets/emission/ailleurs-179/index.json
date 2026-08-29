@@ -1,0 +1,161 @@
+{
+  "title": "Ne parle pas français",
+  "authors": "Mr Marcaille",
+  "releasedAt": "2019-01-28 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-179_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Thierry Delles",
+      "title": "Vas-y Alain !"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:40",
+      "artist": "Superstar Disco Club",
+      "title": "Ticket in your House"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:21",
+      "artist": "Plasto Beton",
+      "title": "La Prison"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:03",
+      "artist": "Schade",
+      "title": "Des bisous et des Carresses"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:36",
+      "artist": "Cornice",
+      "title": "Stringed Instrument Maker"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:34",
+      "artist": "Geile Tiere",
+      "title": "Ausbildung"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:38",
+      "artist": "Doctor Scientist",
+      "title": "Watch The Clock"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:19",
+      "artist": "Régie n°1",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:22:05",
+      "artist": "Karnage",
+      "title": "Mr Durand (mort pour la france)"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:02",
+      "artist": "Le dialogue c'est important dans la vie du pharmacien pour créer des liens",
+      "title": "(extrait)"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:47",
+      "artist": "The Magic Splatters",
+      "title": "Blamage"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:43",
+      "artist": "Wendy & Lemmy",
+      "title": "Stand by your Man"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:46",
+      "artist": "Alf Newman",
+      "title": "It's a Gas"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:54",
+      "artist": "Professeur Frichmouth",
+      "title": "Brinette"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:32",
+      "artist": "Régie n°1",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:37:03",
+      "artist": "Dominique Walter",
+      "title": "Les Années 70"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:37",
+      "artist": "Lieutenant Pigeon",
+      "title": "Opus 300"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:45",
+      "artist": "L’empereur (extrait)",
+      "title": "Ils finiront par m’enfermer"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:06",
+      "artist": "Régie n°1",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:43:31",
+      "artist": "Dymaxion",
+      "title": "Ant'lrd Ally"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:02",
+      "artist": "Doctor Scientist",
+      "title": "Top Secret"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:27",
+      "artist": "Régie n°1",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:46:59",
+      "artist": "Mercedes Hell",
+      "title": "Let's Eat Fire"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:26",
+      "artist": "Origami Romantika",
+      "title": "Venus in Furs"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:40",
+      "artist": "Pierre Arvay",
+      "title": "Gens de Saturne"
+    }
+  ]
+}

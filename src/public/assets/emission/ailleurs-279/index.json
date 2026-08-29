@@ -1,0 +1,185 @@
+{
+  "title": "Le cinéma ? J’en ai déjà entendu parler quelque part ...",
+  "authors": "Mégapute",
+  "releasedAt": "2021-04-19",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-279_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00.00",
+      "artist": "tarte au pardon",
+      "title": "intro pour les enfants"
+    },
+    {
+      "kind": "track",
+      "time": "00:04.30",
+      "artist": "Anne Sylvestre",
+      "title": "les hormones, simone"
+    },
+    {
+      "kind": "track",
+      "time": "00:08.17",
+      "artist": "N.Baye",
+      "title": "tu n’es plus personne"
+    },
+    {
+      "kind": "track",
+      "time": "00:08.40",
+      "artist": "Doris Marnier",
+      "title": "miousic miousic"
+    },
+    {
+      "kind": "track",
+      "time": "00:11.21",
+      "artist": "Tryphon Tournesol",
+      "title": "écrire le goût des enfants"
+    },
+    {
+      "kind": "track",
+      "time": "00:13.00",
+      "artist": "RW Baal Fassbinder",
+      "title": "vivre en poète"
+    },
+    {
+      "kind": "track",
+      "time": "00:18.00",
+      "artist": "Under the Skin",
+      "title": "émotions brèves"
+    },
+    {
+      "kind": "track",
+      "time": "00:19.48",
+      "artist": "Les enfants gâtés",
+      "title": "les gants ménagers -"
+    },
+    {
+      "kind": "track",
+      "time": "00:20.07",
+      "artist": "Le goût des autres",
+      "title": "Banana"
+    },
+    {
+      "kind": "track",
+      "time": "00:20.22",
+      "artist": "Melle Döner",
+      "title": "like in that movie"
+    },
+    {
+      "kind": "track",
+      "time": "00:22.00",
+      "artist": "Les enfants gâtés",
+      "title": "la couleur des coeurs"
+    },
+    {
+      "kind": "track",
+      "time": "00:23.33",
+      "artist": "Botho Strauss / Patrice Chéreau",
+      "title": "Le temps & la chambre"
+    },
+    {
+      "kind": "track",
+      "time": "00:25.22",
+      "artist": "Les enfants gâtés",
+      "title": "Paname"
+    },
+    {
+      "kind": "track",
+      "time": "00:27.57",
+      "artist": "Les enfants du Paradis",
+      "title": "Commes vos lèvres"
+    },
+    {
+      "kind": "track",
+      "time": "00:28.38",
+      "artist": "Death in June",
+      "title": "C’est un rêve"
+    },
+    {
+      "kind": "track",
+      "time": "00:32.17",
+      "artist": "Les idoles",
+      "title": "La famille (bulle ogier)"
+    },
+    {
+      "kind": "track",
+      "time": "00:34.43",
+      "artist": "Voyage à Lyon",
+      "title": "Bring back my body to me"
+    },
+    {
+      "kind": "track",
+      "time": "00:35.48",
+      "artist": "Group A",
+      "title": "Inhuman ecstasy"
+    },
+    {
+      "kind": "track",
+      "time": "00:41.50",
+      "artist": "The Player",
+      "title": "Traffic was a bitch"
+    },
+    {
+      "kind": "track",
+      "time": "00:42.55",
+      "artist": "Voyage à Lyon",
+      "title": "Avant Marx"
+    },
+    {
+      "kind": "track",
+      "time": "00:44.04",
+      "artist": "Svetlana Maras",
+      "title": "Society"
+    },
+    {
+      "kind": "track",
+      "time": "00:46.20",
+      "artist": "Happy End",
+      "title": "Karaoké scène"
+    },
+    {
+      "kind": "track",
+      "time": "00:48.12",
+      "artist": "La reine Margot",
+      "title": "Je la connais"
+    },
+    {
+      "kind": "track",
+      "time": "00:49.30",
+      "artist": "La fête à Loulou",
+      "title": "Théâtre scène"
+    },
+    {
+      "kind": "track",
+      "time": "00:50.25",
+      "artist": "Les enfants gâtés",
+      "title": "Tarif syndical"
+    },
+    {
+      "kind": "track",
+      "time": "00:51.30",
+      "artist": "P.Chéreau",
+      "title": "Le temps & la chambre"
+    },
+    {
+      "kind": "track",
+      "time": "00:54.00",
+      "artist": "Voyage à Lyon",
+      "title": "Violon"
+    },
+    {
+      "kind": "track",
+      "time": "00:58.27",
+      "artist": "Taxi girl",
+      "title": "m.e.r.d.e"
+    },
+    {
+      "kind": "track",
+      "time": "01.01.24",
+      "artist": "La cérémonie",
+      "title": "C’est la stéréo"
+    }
+  ]
+}

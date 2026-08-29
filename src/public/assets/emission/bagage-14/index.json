@@ -1,0 +1,113 @@
+{
+  "title": "You Are Not So Wrong",
+  "authors": "Mik Musik",
+  "releasedAt": "2018-11-05 00:00:00",
+  "type": "Bagage",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_bagage-14_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Wojciech Kucharczyk",
+      "title": "Fire Discoveryvery"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:58",
+      "artist": "Piotr Połoz",
+      "title": "Catchy Yolas"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:48",
+      "artist": "RSS B0YS",
+      "title": "VYRY VYRY L0ST"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:28",
+      "artist": "8rolek",
+      "title": "3)14_1-3-2"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:26",
+      "artist": "RSS B0YS",
+      "title": "L0ST TRCK F00NF00R"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:37",
+      "artist": "Julek Płoski",
+      "title": "AFTA"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:57",
+      "artist": "Rużaw",
+      "title": "do otwierania drugiego oka / to open second eye"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:15",
+      "artist": "OONDOOD",
+      "title": "WHAT IF TO TAKE OUT THE TECHNO FROM TECHNO?"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:30",
+      "artist": "Wojciech Kucharczyk / Piotr Steczek String Quartet",
+      "title": "Na poczatku bylo czesc / And Hi Was Even Earlier"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:27",
+      "artist": "Bartek Kujawski",
+      "title": "Dark Night"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:01",
+      "artist": "Lautbild",
+      "title": "Poseur"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:55",
+      "artist": "Iron Noir",
+      "title": "You Are Fired (In Japan)"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:03",
+      "artist": "OONDOOD",
+      "title": "Shameless Symphony of Horror"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:14",
+      "artist": "Molr Drammaz",
+      "title": "Fulgurites"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:44",
+      "artist": "Kucharczyk",
+      "title": "Afroboter Volta Volta Volta"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:07",
+      "artist": "Asi Mina",
+      "title": "I Don’t Wanna Be a Mad Girl"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:02",
+      "artist": "Wojciech Kucharczyk",
+      "title": "Big Waves of Trust (Jillion of Them)"
+    }
+  ]
+}

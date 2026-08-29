@@ -1,0 +1,107 @@
+{
+  "title": "﻿Discothèque François Mitterand",
+  "authors": "Rottweiler Slip",
+  "releasedAt": "2020-05-16 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>Quatre bâtiments,trente millions d'ambiances de merde \n</p>",
+  "cover": "ouiedire_ailleurs-248_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:05",
+      "artist": "DJ Doktor Megatrip & Mista Luv",
+      "title": "Liquid Eyeliner"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:45",
+      "artist": "Kevin Blechdom",
+      "title": "I Am Nastay"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:40",
+      "artist": "Phoxii",
+      "title": "Freeque (Modo Fácil)"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:50",
+      "artist": "Axine M",
+      "title": "Phosphene"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:00",
+      "artist": "Vytear",
+      "title": "Tecno Tuesday"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:15",
+      "artist": "Mr Incongnito",
+      "title": "Automatik Strufe"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:20",
+      "artist": "Synapscape",
+      "title": "Helix"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:14",
+      "artist": "Perc, Aja Ireland",
+      "title": "Spit"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:54",
+      "artist": "Electromeca",
+      "title": "Sweet Music"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:06",
+      "artist": "Knifehandchop",
+      "title": "No Seriously Fuck"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:40",
+      "artist": "Stunk Rock",
+      "title": "Someday You Are Going To Have A Party, And I Will Make A Point To Come Poop All Over It So You Can Know How It Feels."
+    },
+    {
+      "kind": "track",
+      "time": "00:41:11",
+      "artist": "Toecutter",
+      "title": "Geordie Salvation"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:23",
+      "artist": "aimaiishitsu",
+      "title": "ON A DIME"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:23",
+      "artist": "Bourbonese Qualk",
+      "title": "qual"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:22",
+      "artist": "Liza 'N' Eliaz",
+      "title": "Let The Bassdrum Go"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:30",
+      "artist": "garth vader",
+      "title": "pig pop"
+    }
+  ]
+}

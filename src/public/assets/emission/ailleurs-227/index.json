@@ -1,0 +1,119 @@
+{
+  "title": "Bienvenue à la maison",
+  "authors": "Sante Barbera",
+  "releasedAt": "2020-03-22 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-227_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "MC Wildski",
+      "title": "Warrior (Disko-tek mix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:35",
+      "artist": "Luke Vibert",
+      "title": "Starchild"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:15",
+      "artist": "House People",
+      "title": "Godfather of house"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:28",
+      "artist": "Simon Harris",
+      "title": "BASS how low can you go (bomb the house mix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:57",
+      "artist": "Icy D and Doc Daze",
+      "title": "Get on up and dance (extended mix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:19",
+      "artist": "Tyree",
+      "title": "Turn up the bass (Supe Duper mix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:18",
+      "artist": "UK1 feat. Tia and Chantel",
+      "title": "Yeah turn on the light (warlock remix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:28",
+      "artist": "C&C Music",
+      "title": "Gonna make you sweat (everybody dance now) presenting Freedom Williams 1991 Hiphouse mix"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:00",
+      "artist": "The 2 Live Crew",
+      "title": "We want some pussy (dick's delight mix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:12",
+      "artist": "2Static feat. Nasty Cat",
+      "title": "Feel the beat (club mix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:10",
+      "artist": "Jungle Brothers",
+      "title": "I'll house you"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:47",
+      "artist": "The DJ Fast Eddie",
+      "title": "Yo yo get funky (radio version)"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:30",
+      "artist": "Mark the 909 King",
+      "title": "Can you dig it (da original mix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:10",
+      "artist": "Bizarre inc",
+      "title": "Playing with knives (quadrant mix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:01",
+      "artist": "Big Daddi Turbo feat. Eric B and Rakim",
+      "title": "I know you got soul"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:40",
+      "artist": "Josh Wink",
+      "title": "Fill me with acid"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:50",
+      "artist": "Phuture",
+      "title": "We are phuture"
+    },
+    {
+      "kind": "track",
+      "time": "01:01:40",
+      "artist": "666",
+      "title": "Alarma ! (X-tended alert mix)"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "title": "Life's too short ! Let's listen to some lengthy versions",
+  "authors": "Big Pink Pig",
+  "releasedAt": "2016-02-15 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>Space-time continuum extended rewind, more or less</p>",
+  "cover": "ouiedire_ailleurs-119_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Hawaiian Pups",
+      "title": "Baby Judy (Extended Version 1983)"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:57",
+      "artist": "Teisutis Makačinas",
+      "title": "Į Dieną Einam"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:27",
+      "artist": "Co)))trane",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:23:49",
+      "artist": "Eberhard Schoener",
+      "title": "Nadi"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:04",
+      "artist": "Toto Coelo",
+      "title": "I eat cannibals"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:36",
+      "artist": "Amanda Lear",
+      "title": "Follow Me (extended mix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:31",
+      "artist": "Mohammad",
+      "title": "Lapli"
+    },
+    {
+      "kind": "track",
+      "time": "01:05:39",
+      "artist": "Dalida",
+      "title": "1"
+    },
+    {
+      "kind": "track",
+      "time": "01:25:49",
+      "artist": "Aavikko",
+      "title": "Novo atlantis II"
+    },
+    {
+      "kind": "track",
+      "time": "01:40:46",
+      "artist": "Bronski Beat With Marc Almond",
+      "title": "I feel love (medley)"
+    },
+    {
+      "kind": "track",
+      "time": "01:49:06",
+      "artist": "Shit and Shine",
+      "title": "Electric Ponny 2"
+    },
+    {
+      "kind": "track",
+      "time": "01:58:57",
+      "artist": "Matana Robert",
+      "title": "I am"
+    },
+    {
+      "kind": "track",
+      "time": "02:09:00",
+      "artist": "Niños del Brasil ​",
+      "title": "Sombra Da Lua"
+    },
+    {
+      "kind": "track",
+      "time": "02:15:15",
+      "artist": "Michael Jackson & Paul McCartney",
+      "title": "Say Say Say (Ultrasound)"
+    }
+  ]
+}

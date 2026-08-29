@@ -1,0 +1,95 @@
+{
+  "title": "Épisodique 2",
+  "authors": "Johan",
+  "releasedAt": "2016-10-19 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>À suivre ...</p>",
+  "cover": "ouiedire_ailleurs-139_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Gil J Wolman",
+      "title": "La mémoire"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:05",
+      "artist": "Vaino & Vigroux",
+      "title": "Deux"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:08",
+      "artist": "Opera Mort",
+      "title": "Les spirales messmer"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:18",
+      "artist": "Anenzephalia",
+      "title": "Weltgleichschaltung"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:25",
+      "artist": "Haus Arafna",
+      "title": "You Know How To Destroy Me"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:48",
+      "artist": "Haus Arafna",
+      "title": "Give The Strenght"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:52",
+      "artist": "Rien Virgule",
+      "title": "Trafic de Masques"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:19",
+      "artist": "Cent Ans De Solitude",
+      "title": "Eclat De Verre...Eclat De Vie"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:59",
+      "artist": "Etat Brut",
+      "title": "Crash"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:26",
+      "artist": "Colin Potter",
+      "title": "Yoursmine"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:50",
+      "artist": "Andy Bolus",
+      "title": "Ouïedire Slurry"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:19",
+      "artist": "Le Matin",
+      "title": "Narrow"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:40",
+      "artist": "Ohama",
+      "title": "My Time"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:21",
+      "artist": "Cachette A Branlette",
+      "title": "Loaded Gun"
+    }
+  ]
+}

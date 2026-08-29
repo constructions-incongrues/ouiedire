@@ -1,0 +1,101 @@
+{
+  "title": "Best Of John Bender",
+  "authors": "Jean Bender",
+  "releasedAt": "2021-09-22",
+  "type": "Bagage",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_bagage-26_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Jean Bender -",
+      "title": "Cows"
+    },
+    {
+      "kind": "track",
+      "time": "02:10:49",
+      "artist": "Jean Bender -",
+      "title": "Data how are you, tone (edit)"
+    },
+    {
+      "kind": "track",
+      "time": "08:56:45",
+      "artist": "Jean Bender -",
+      "title": "I found the truth"
+    },
+    {
+      "kind": "track",
+      "time": "10:57:15",
+      "artist": "Jean Bender -",
+      "title": "Last time I saw you"
+    },
+    {
+      "kind": "track",
+      "time": "16:05:18",
+      "artist": "Jean Bender -",
+      "title": "Phone sex"
+    },
+    {
+      "kind": "track",
+      "time": "19:45:30",
+      "artist": "Jean Bender -",
+      "title": "Run to rapture"
+    },
+    {
+      "kind": "track",
+      "time": "24.26:06",
+      "artist": "Jean Bender -",
+      "title": "Day (long version)"
+    },
+    {
+      "kind": "track",
+      "time": "28:26:61",
+      "artist": "Jean Bender -",
+      "title": "Interlude"
+    },
+    {
+      "kind": "track",
+      "time": "29:10:32",
+      "artist": "Jean Bender -",
+      "title": "Let’s be friends"
+    },
+    {
+      "kind": "track",
+      "time": "36:48:50",
+      "artist": "Jean Bender -",
+      "title": "So sad"
+    },
+    {
+      "kind": "track",
+      "time": "40:11:07",
+      "artist": "Jean Bender -",
+      "title": "Amalgamelon"
+    },
+    {
+      "kind": "track",
+      "time": "43:34:42",
+      "artist": "Jean Bender -",
+      "title": "Never could"
+    },
+    {
+      "kind": "track",
+      "time": "49:55:28",
+      "artist": "Jean Bender -",
+      "title": "Three minutes"
+    },
+    {
+      "kind": "track",
+      "time": "53:55:10",
+      "artist": "Jean Bender -",
+      "title": "Tought (long version)"
+    },
+    {
+      "kind": "track",
+      "time": "57:20:56",
+      "artist": "Jean Bender -",
+      "title": "Nervous"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "title": "Prochaine Escale",
+  "authors": "Dj Kuala Lumpen (aka Gangpol) ",
+  "releasedAt": "2014-07-01 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>Selected para-colonial french exoticorientalism</p>",
+  "cover": "ouiedire_ailleurs-56_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Gilles Sala",
+      "title": "Sérénade à Abidjan"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:46",
+      "artist": "Jacques Fabre",
+      "title": "Nouméa"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:25",
+      "artist": "Escale-party avec Air France (extrait #1)",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:04:50",
+      "artist": "Karl-Heinz Schäfer",
+      "title": "Drôles de zèbres OST (Les thermes)"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:39",
+      "artist": "Kemal Rachid et ses Ottomans",
+      "title": "Bagdad"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:53",
+      "artist": "Lucette Raillat",
+      "title": "Aïcha"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:32",
+      "artist": "Gérard Calvi",
+      "title": "La grosse valse (Les nanas)"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:38",
+      "artist": "Jacques Hélian",
+      "title": "Java"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:41",
+      "artist": "Jack Ary",
+      "title": "Mah jong cha cha"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:10",
+      "artist": "Francis Linel",
+      "title": "Nuits de Chine"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:07",
+      "artist": "Anne Darden",
+      "title": "Les estampes japonaises"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:04",
+      "artist": "Léo Missir et son orchestre",
+      "title": "L'île de Tamago"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:49",
+      "artist": "Escale-party avec Air France (extrait #2)",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:26:38",
+      "artist": "Kemal Rachid et ses Ottomans",
+      "title": "Narguile"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:09",
+      "artist": "Les Riffs",
+      "title": "Dans les rues de Bahia"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:08",
+      "artist": "Alfonso et son orchestre typique",
+      "title": "Chantons lalala"
+    }
+  ]
+}

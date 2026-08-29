@@ -1,6 +1,7 @@
 <?php
 // Setup autoloading
 require_once __DIR__.'/../vendor/autoload.php';
+require_once __DIR__.'/audio.php';
 
 // Uses
 use Silex\Provider;
@@ -67,14 +68,28 @@ function getArtists(array $show)
 {
     $artists = array();
 
-    // Parse show playlist
-    $crawler = new Crawler();
-    $crawler->addContent('<html><meta charset="utf-8" />'.$show['playlist']);
-    $domArtists = $crawler->filter('.mejs-smartplaylist-time + span');
-    foreach ($domArtists as $domArtist) {
-        $artist = strtolower(trim($domArtist->textContent));
-        if (!empty($artist) && $artist!='intro' && $artist!='outro') {
-            $artists[] = strtolower(trim($domArtist->textContent));
+    if (is_array($show['playlist'])) {
+        // Playlist structuree : l'artiste est porte par l'entree de type track.
+        foreach ($show['playlist'] as $entry) {
+            if (!isset($entry->kind) || $entry->kind !== 'track' || !isset($entry->artist)) {
+                continue;
+            }
+            $artist = strtolower(trim($entry->artist));
+            if (!empty($artist) && $artist!='intro' && $artist!='outro') {
+                $artists[] = $artist;
+            }
+        }
+    }
+    if (isset($show['playlist'][0]->kind) && $show['playlist'][0]->kind === 'html') {
+        // Playlist conservee verbatim : on parse le balisage, comme avant.
+        $crawler = new Crawler();
+        $crawler->addContent('<html><meta charset="utf-8" />'.$show['playlist'][0]->html);
+        $domArtists = $crawler->filter('.mejs-smartplaylist-time + span');
+        foreach ($domArtists as $domArtist) {
+            $artist = strtolower(trim($domArtist->textContent));
+            if (!empty($artist) && $artist!='intro' && $artist!='outro') {
+                $artists[] = $artist;
+            }
         }
     }
 
@@ -161,13 +176,11 @@ function getShow($id, Silex\Application $app = null) {
         'isPublic'    => false
     );
 
-    // Load show data. 404 if some data file cannot be loaded.
-    $fileManifest = new SplFileObject(sprintf('%s/manifest.json', $pathPublicEmission));
-    $filePlaylist = new SplFileObject(sprintf('%s/playlist.html', $pathPublicEmission));
-    $fileDescription = new SplFileObject(sprintf('%s/description.html', $pathPublicEmission));
+    // Load show data. 404 if the data file cannot be loaded.
+    $fileIndex = new SplFileObject(sprintf('%s/index.json', $pathPublicEmission));
 
-    // Parse manifest data and infer show attributes
-    $manifest = json_decode(file_get_contents($fileManifest->getRealPath()));
+    // Parse show data and infer show attributes
+    $manifest = json_decode(file_get_contents($fileIndex->getRealPath()));
     $show['authors'] = $manifest->authors;
     $show['releasedAt'] = $manifest->releasedAt;
     $show['title'] = $manifest->title;
@@ -195,74 +208,94 @@ function getShow($id, Silex\Application $app = null) {
             $show['typeSlug'],
             $show['number']
         );
+        $urlAssetsRoot = sprintf(
+            '%s://%s%s/assets',
+            $app['request']->getScheme(),
+            $app['request']->getHttpHost(),
+            $app['request']->getBasePath()
+        );
     } else {
         $urlAssets = sprintf(
             'https://www.ouiedire.net/assets/emission/%s-%s',
             $show['typeSlug'],
             $show['number']
         );
+        $urlAssetsRoot = 'https://www.ouiedire.net/assets';
     }
 
-    // Guess show audio properties (MP3 and FLAC)
-    try {
-        $fileMp3 = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s_%s.mp3', $pathPublicEmission, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
-        $show['sizeDownloadMp3'] = round($fileMp3->getSize()/(1024*1024),2).' Mo';
-    } catch (\RuntimeException $e) {
-        $show['sizeDownloadMp3'] = null;
-    }
+    // Guess show audio properties (MP3 and FLAC).
+    // Le nom du fichier n'est pas une donnee : on balaye le dossier, la
+    // convention historique d'abord. Voir le change audio-sans-convention.
+    // Tout le calcul vit dans audio.php, la fusion et la regle de publication
+    // comprises : ici, la suite n'entre pas et la jauge ne mesure rien. Les
+    // slugs partent sous des cles NOMMEES — PHP 7.4 n'a pas d'arguments nommes,
+    // et trois chaines de meme type a la file se permutent sans que rien ne le
+    // voie. Le numero se lit dans $show, non slugifie.
+    // Voir AudioDownloadsTest et ApplyAudioDownloadsTest.
+    $show = applyAudioDownloads($show, $pathPublicEmission, $urlAssets, array(
+        'type' => slugify($show['type']),
+        'authors' => slugify($show['authors']),
+        'title' => slugify($show['title']),
+    ));
 
-    try {
-        $fileFlac = new SplFileInfo(sprintf('%s/ouiedire_%s-%s_%s_%s.flac', $pathPublicEmission, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
-        $show['sizeDownloadFlac'] = round($fileFlac->getSize()/(1024*1024),2).' Mo';
-    } catch (\RuntimeException $e) {
-        $show['sizeDownloadFlac'] = null;
-    }
-
-    $show['urlDownloadMp3'] = null;
-    $show['urlDownloadFlac'] = null;
-    $show['slugDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
-
-    if ($fileMp3->isReadable()) {
-        $show['urlDownloadMp3'] = $show['slugDownload'].'.mp3';
-    }
-    if ($fileFlac->isReadable()) {
-        $show['urlDownloadFlac'] = $show['slugDownload'].'.flac';
-    }
-
-    if ($show['urlDownloadMp3'] === null && $show['urlDownloadFlac'] === null) {
-        $show['isPublic'] = false;
-    }
-
-    // Guess covers URL
+    // Guess covers URL. Toute image du dossier compte, pour qu'une couverture
+    // deposee depuis l'outil d'edition soit vue quel que soit son nom. L'ordre
+    // est deterministe et independant du systeme de fichiers : les fichiers
+    // suivant la convention historique d'abord, alphabetiques dans chaque groupe.
     $show['covers'] = array();
     $finder = new Finder();
     try {
         $covers = $finder
             ->files()
-            ->name('*_cover-*.*')
+            ->name('/\.(png|jpe?g|gif|webp)$/i')
             ->in($pathPublicEmission);
+        // Trois groupes : la couverture au nom de cette emission, puis les
+        // autres suivant la convention, puis le reste. Sans le premier groupe,
+        // un fichier mal numerote gagnerait au tri (ailleurs-186 contient une
+        // couverture nommee ailleurs-182).
+        $own = sprintf('%s-%s_cover-', slugify($show['type']), $show['number']);
+        $mine = array();
+        $conventional = array();
+        $others = array();
         foreach ($covers as $cover) {
-            $show['covers'][] = sprintf('%s/%s', $urlAssets, basename($cover->getRealPath()));
+            $name = basename($cover->getRealPath());
+            if (strpos($name, $own) !== false) {
+                $mine[] = $name;
+            } elseif (strpos($name, '_cover-') !== false) {
+                $conventional[] = $name;
+            } else {
+                $others[] = $name;
+            }
+        }
+        sort($mine);
+        sort($conventional);
+        sort($others);
+        foreach (array_merge($mine, $conventional, $others) as $name) {
+            $show['covers'][] = sprintf('%s/%s', $urlAssets, $name);
         }
     } catch (\InvalidArgumentException $e) {
         // whatever
     }
 
-    // Playlist
-    $show['playlist'] = file_get_contents($filePlaylist->getRealPath());
+    // og:image et le flux RSS accedent a covers[0] sans garde : il doit exister.
+    if (empty($show['covers'])) {
+        $show['covers'][] = sprintf('%s/img/cover-defaut.png', $urlAssetsRoot);
+    }
+
+    // Playlist : liste d'entrees structurees, ou fragment HTML conserve verbatim
+    $show['playlist'] = $manifest->playlist;
 
     // Description
-    $show['description'] = file_get_contents($fileDescription->getRealPath());
+    $show['description'] = $manifest->description;
 
-    // Pretty show number
+    // Pretty show number. La regle vit dans audio.php, ou la suite l'atteint et
+    // ou le bloc audio ci-dessus la lit deja pour batir le prefixe de la
+    // convention. Deux exemplaires ont diverge une fois : le prefixe se
+    // construisait sur « 1 » quand le fichier portait « 001 ».
+    // Elle reste APRES le bloc audio : $urlAssets et les dossiers de l'archive
+    // sont nommes au numero brut.
     $show['id'] = $show['number'];
-    if ($show['id'] < 10) {
-        $show['number'] = '00'.$show['id'];
-    } elseif ($show['id'] < 100) {
-        $show['number'] = '0'.$show['id'];
-    } else {
-        $show['number'] = $show['id'];
-    }
+    $show['number'] = paddedShowNumber($show['id']);
 
     return $show;
 }
@@ -281,7 +314,7 @@ function getShows(Silex\Application $app, $preview = false, $artist = null) {
     $finder = new Finder();
     $finder = $finder
     ->files()
-    ->name('manifest.json')
+    ->name('index.json')
     ->filter(function(\SplFileInfo $file) {
         return
         strpos(basename(dirname($file->getRealPath())), 'ailleurs') !== false
@@ -508,7 +541,8 @@ $app->get('/feed', function(Silex\Application $app) {
 %s
 <a href="%s">Télécharger l'émission</a>
 EOT;
-        $htmlContent = sprintf($htmlContent, $show['covers'][0], $show['description'], $show['playlist'], $enclosureUrl);
+        $playlistHtml = $app['twig']->render('playlist.html.twig', array('show' => $show));
+        $htmlContent = sprintf($htmlContent, $show['covers'][0], $show['description'], $playlistHtml, $enclosureUrl);
 
         // Build entry using show data
         $entry = $feed->createEntry();

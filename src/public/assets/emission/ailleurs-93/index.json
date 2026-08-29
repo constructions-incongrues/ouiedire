@@ -1,0 +1,101 @@
+{
+  "title": "Roma A Mano Ligata",
+  "authors": "DJ Fulci SeleKtone",
+  "releasedAt": "2015-05-25 00:00:01",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-93_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Nora Orlandi",
+      "title": "A Doppia Faccia"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:21",
+      "artist": "Bruno Nicolai",
+      "title": "Eugenie de Sade"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:10",
+      "artist": "Bruno Nicolai",
+      "title": "Drug Party"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:38",
+      "artist": "Giuseppe De Luca",
+      "title": "Rito a los Angeles"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:00",
+      "artist": "Nora Orlandi",
+      "title": "Soho"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:10",
+      "artist": "Nico Fendi",
+      "title": "My Boundless"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:50",
+      "artist": "Ennio Moricone",
+      "title": "Le Foto Prohibite de Una signora Per Bene"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:20",
+      "artist": "Guido & Maurizio De Angelis",
+      "title": "Blue Song"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:16",
+      "artist": "Alessandro Alessandroni",
+      "title": "Suor Omicidi"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:58",
+      "artist": "Guido & Maurizio de Angelis",
+      "title": "Goodbye My Friend"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:47",
+      "artist": "Billy Wyman &  Terry Taylor",
+      "title": "The Valley"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:52",
+      "artist": "Nora Orlandi",
+      "title": "Bondage Suite 4"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:53",
+      "artist": "Ennio Morricone",
+      "title": "Chi La Vista Morire"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:16",
+      "artist": "Guido & Maurizio De Angelis",
+      "title": "Keoma Theme"
+    },
+    {
+      "kind": "track",
+      "time": "00:54:06",
+      "artist": "Caterina Caselli",
+      "title": "Arrivederci Amore, Ciao"
+    }
+  ]
+}

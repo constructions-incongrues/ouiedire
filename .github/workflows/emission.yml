@@ -67,8 +67,7 @@ jobs:
             ## Finitions et publication
 
             En se rendant sur la page de l'émission on peut ensuite :
-              - obtenir le nom de fichier attendu pour le MP3 en cliquant sur le bouton de téléchargement du morceau
-              - uploader le fichier MP3 dans le dossier de la nouvelle émission : https://vip.jeancloude.club/s/gsiYSS78WxFegnt
+              - uploader le fichier MP3, sous le nom de son choix, dans le dossier de la nouvelle émission : https://vip.jeancloude.club/s/gsiYSS78WxFegnt
               - rendre l'émission publique en cliquant sur le lien "EDIT" situé tout en bas de la page.
 
           branch: emission-${{ inputs.collection }}-${{ inputs.number }}

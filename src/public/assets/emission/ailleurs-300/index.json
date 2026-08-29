@@ -1,0 +1,173 @@
+{
+  "title": "SP22",
+  "authors": "Sonic Protest",
+  "releasedAt": "2022-03-11",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-300_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Muqata'a",
+      "title": "Simya"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:59",
+      "artist": "Bonne Humeur Provisoire",
+      "title": "Questions"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:15",
+      "artist": "Nathan Roche",
+      "title": "Brocante À Belleville"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:00",
+      "artist": "Infecticide",
+      "title": "La voiture de la police"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:31",
+      "artist": "Hackedepicciotto",
+      "title": "The Silver Threshold"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:45",
+      "artist": "Merryl Ampe",
+      "title": "Lucha Libre"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:40",
+      "artist": "Shit & Shine",
+      "title": "North Atlantic"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:52",
+      "artist": "Alexis Degrenier",
+      "title": "Fatiguer"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:53",
+      "artist": "Puce Mary",
+      "title": "Red Desert"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:09",
+      "artist": "Cantenac Dagar",
+      "title": "Saique"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:11",
+      "artist": "Pest Modern",
+      "title": "Les Insectes"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:40",
+      "artist": "Theoreme",
+      "title": "De la côte de l'Azur"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:58",
+      "artist": "Yeah You",
+      "title": "Myopia"
+    },
+    {
+      "kind": "track",
+      "time": "01:02:46",
+      "artist": "Wanino",
+      "title": "Les Garçons Electriques"
+    },
+    {
+      "kind": "track",
+      "time": "01:05:06",
+      "artist": "Pascal Comelade",
+      "title": "The Sad Skinhead"
+    },
+    {
+      "kind": "track",
+      "time": "01:07:05",
+      "artist": "Borja Flames",
+      "title": "Titan"
+    },
+    {
+      "kind": "track",
+      "time": "01:07:59",
+      "artist": "Asher.Zax",
+      "title": "The Last Shall Be First"
+    },
+    {
+      "kind": "track",
+      "time": "01:11:58",
+      "artist": "Louis Laurain",
+      "title": "Le Bichet"
+    },
+    {
+      "kind": "track",
+      "time": "01:15:29",
+      "artist": "Tanz Mein Herz",
+      "title": "Spiegel haus"
+    },
+    {
+      "kind": "track",
+      "time": "01:26:00",
+      "artist": "Ladr Ache - Kleptophonies",
+      "title": "10000 ans que je marche"
+    },
+    {
+      "kind": "track",
+      "time": "01:26:00",
+      "artist": "Chevalier Surprise",
+      "title": "Elle m’a quitté"
+    },
+    {
+      "kind": "track",
+      "time": "01:32:21",
+      "artist": "MC Yallah & Debmaster",
+      "title": "Kubali"
+    },
+    {
+      "kind": "track",
+      "time": "01:34:42",
+      "artist": "Orgue De Bois",
+      "title": "Orgue De Terre (extrait)"
+    },
+    {
+      "kind": "track",
+      "time": "01:36:08",
+      "artist": "Duma",
+      "title": "Lions Blood"
+    },
+    {
+      "kind": "track",
+      "time": "01:41:33",
+      "artist": "Reverend Beat-Man and the Un-Believers",
+      "title": "get on your knees"
+    },
+    {
+      "kind": "track",
+      "time": "01:43:41",
+      "artist": "Dr Truna",
+      "title": "Anotación Ocho (Kuzeke-kok-kok)"
+    },
+    {
+      "kind": "track",
+      "time": "01:49:23",
+      "artist": "Al Karpenter",
+      "title": "No face"
+    }
+  ]
+}

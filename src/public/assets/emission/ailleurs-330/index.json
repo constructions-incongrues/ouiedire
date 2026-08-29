@@ -1,0 +1,15 @@
+{
+  "title": "kick clap tick tap bing bong shamalama ding dong",
+  "authors": "Rottweiler Slip",
+  "releasedAt": "2025-11-10",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p class=\"justify\">\n<!-- TODO : Mettre la description de l'émission à jour, le cas échéant -->\n</p>\n",
+  "cover": "ouiedire_ailleurs-330_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "html",
+      "html": "<ol class=\"mejs-smartplaylist-playlist\">\n  <!-- TODO : Mettre la liste de lecture de l'émission à jour -->\n  <li><a class=\"mejs-smartplaylist-time\">00:00:00</a><span>Agit-Prop</span> - Punavangin laulu</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:02:15</a><span>CS + Kreme</span> - A Single Grain of Sand</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:03:50</a><span>Sable</span> - Bonne Humeur Provisoire</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:07:00</a><span>Milkweed</span> - Exile of the Sons of Uisliu</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:09:30</a><span>Apraxie</span> - Désinfoverdose</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:13:00</a><span>Hallo Hitler</span> - Hanayo in Panacea</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:16:30</a><span>Naive Ted</span> - Runnin' Cos Runnin</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:19:40</a><span>Whatever Your Heart Desires</span> - Curve, Crest, Curl, Crash (hanali Remix)</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:22:40</a><span>Thug Ambiant</span> - New Chest</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:26:55</a><span>Ulf Kramer</span> - Seele_verkauft</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:30:00</a><span>Agathe Max</span> - Echoes of the First Light</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:34:45</a><span>Xylocaine</span> - Random cubes</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:41:30</a><span>Phirnis</span> - Low Visibility Concerns (ft.6 Chorchill)</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:44:10</a><span>No. Inc.9</span> - Beat by Dre</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:50:10</a><span>Sextile feat. Sienna</span> - Current Affair</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:53:00</a><span>Chicks On Speed</span> - We Are Data (Cora Novoa Radio Edit Remix)</li>\n  <li><a class=\"mejs-smartplaylist-time\">00:56:25</a><span>Алёша Вишня</span> - Расческа</li>\n</ol>\n"
+    }
+  ]
+}

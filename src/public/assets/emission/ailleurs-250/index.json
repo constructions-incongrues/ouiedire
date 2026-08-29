@@ -1,0 +1,113 @@
+{
+  "title": "﻿La vieille boite à musique",
+  "authors": "Isidore Bisou",
+  "releasedAt": "2020-05-21 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-250_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Deodat de Séverac – Anne Queffélec",
+      "title": "En vacances Où l'on entend une vieille boite à musique"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:08",
+      "artist": "Bruce Brubaker",
+      "title": "Knee Play 4 (from Einstein on the Beach)"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:02",
+      "artist": "Palo Alto² featuring Emiko Ota",
+      "title": "Like a mouse (Ptôse-like version)"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:45",
+      "artist": "DEF",
+      "title": "Re-Cover (Sybaritic & Militant Songs)"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:57",
+      "artist": "Coil",
+      "title": "The First Five Minutes After Death"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:38",
+      "artist": "Lefdup & Lefdup",
+      "title": "Ze tri"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:50",
+      "artist": "Camille Sauvage",
+      "title": "Vivisection"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:18",
+      "artist": "Gareth Williams & Mary Currie",
+      "title": "Raindrops From Heaven"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:19",
+      "artist": "Robin Rimbaud",
+      "title": "Drop"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:59",
+      "artist": "John Bender",
+      "title": "36A3"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:47",
+      "artist": "Robin Rimbaud",
+      "title": "Rosa Rugosa"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:30",
+      "artist": "Princesse Pantin Couscous Printemps",
+      "title": "Jingle"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:45",
+      "artist": "Steve Reich",
+      "title": "Nagoya Marimbas"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:10",
+      "artist": "Claire Doyon",
+      "title": "Rypmav"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:26",
+      "artist": "Fuckbuttons",
+      "title": "Sweet love for planet earth"
+    },
+    {
+      "kind": "track",
+      "time": "00:59:57",
+      "artist": "Le Chevalier de Rinchy",
+      "title": "La cucullie du bouillon-blanc"
+    },
+    {
+      "kind": "track",
+      "time": "01:00:07",
+      "artist": "Maher Shalal Hash Baz",
+      "title": null
+    }
+  ]
+}

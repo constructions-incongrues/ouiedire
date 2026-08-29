@@ -1,0 +1,399 @@
+{
+  "title": "France Boogie #2",
+  "authors": "Frédéric & le Grand Orchestre de Saint Tropez",
+  "releasedAt": "2014-11-27 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>A Paris la Zulu sont fonky !</p>",
+  "cover": "ouiedire_ailleurs-74_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "P Briffa & R Bresson",
+      "title": "Glanum City"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:36",
+      "artist": "Gordon disquaire",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:03:09",
+      "artist": "Yannick chevalier",
+      "title": "écoute le son du soleil"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:51",
+      "artist": "Armand Duchien",
+      "title": "(10.9.8.7...) Compte à Rebours (Version Dub)"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:57",
+      "artist": "Fan Club",
+      "title": "Fan danse"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:14",
+      "artist": "Vladimir cosma",
+      "title": "Filature (BO \"les compères\")"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:00",
+      "artist": "Caramel",
+      "title": "L'amour toujours l'amour (Bo \"bête mais discipliné\")"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:18",
+      "artist": "Josephine bory",
+      "title": "Aerobic méthode bodynamic"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:47",
+      "artist": "Influence",
+      "title": "Africa chance (edit)"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:10",
+      "artist": "Feldman",
+      "title": "Obsession (version scratch)"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:50",
+      "artist": "Ark",
+      "title": "Amnésie (instrumental)"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:44",
+      "artist": "Jean schulteis",
+      "title": "Playmate"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:17",
+      "artist": "France lise",
+      "title": "Pour moi ça va"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:35",
+      "artist": "Turbulent blue",
+      "title": "Tea for two"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:19",
+      "artist": "Polo",
+      "title": "Le commissaire"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:04",
+      "artist": "Interview",
+      "title": "Salut..."
+    },
+    {
+      "kind": "track",
+      "time": "00:42:57",
+      "artist": "Raoul petite",
+      "title": "Hey dis donc mon mec"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:56",
+      "artist": "Le grand cinéma",
+      "title": "Fais nous tarzan"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:03",
+      "artist": "Didier malherbe",
+      "title": "Danskorla"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:27",
+      "artist": "Jack long",
+      "title": "Jackspot (part 1&2)"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:18",
+      "artist": "Leslie",
+      "title": "Studio b"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:06",
+      "artist": "Tiffany & phil funk",
+      "title": "St tropez, st tropez"
+    },
+    {
+      "kind": "track",
+      "time": "01:00:57",
+      "artist": "Jean adamo",
+      "title": "Vas y molo"
+    },
+    {
+      "kind": "track",
+      "time": "01:02:18",
+      "artist": "Brigitte & michot",
+      "title": "Ta face préface"
+    },
+    {
+      "kind": "track",
+      "time": "01:03:59",
+      "artist": "Djemila",
+      "title": "L'homme a la moto"
+    },
+    {
+      "kind": "track",
+      "time": "01:08:10",
+      "artist": "Kid tajine",
+      "title": "Facile (j'suis pas d'Dallas, moi j'suis d'Alger)"
+    },
+    {
+      "kind": "track",
+      "time": "01:11:16",
+      "artist": "Gerard vincent",
+      "title": "Monsieur salop"
+    },
+    {
+      "kind": "track",
+      "time": "01:13:27",
+      "artist": "Genevieve letarte",
+      "title": "Petit nuage et Betelgeuse"
+    },
+    {
+      "kind": "track",
+      "time": "01:16:13",
+      "artist": "La marque jeune",
+      "title": "Vampire est tu là?"
+    },
+    {
+      "kind": "track",
+      "time": "01:18:21",
+      "artist": "Krootchey",
+      "title": "Qu'est-ce qu'il a (d'plus que moi ce négro là?)"
+    },
+    {
+      "kind": "track",
+      "time": "01:21:44",
+      "artist": "Katia",
+      "title": "Boite a musique"
+    },
+    {
+      "kind": "track",
+      "time": "01:25:25",
+      "artist": "Michel colombier",
+      "title": "Do it"
+    },
+    {
+      "kind": "track",
+      "time": "01:28:20",
+      "artist": "Cherèze",
+      "title": "Danse le rock n'roll"
+    },
+    {
+      "kind": "track",
+      "time": "01:29:21",
+      "artist": "Mondino",
+      "title": "La danse des mots"
+    },
+    {
+      "kind": "track",
+      "time": "01:32:29",
+      "artist": "Eric Eliott",
+      "title": "Chérie Noire (Edit)"
+    },
+    {
+      "kind": "track",
+      "time": "01:35:27",
+      "artist": "BRUT",
+      "title": "Chinafreak"
+    },
+    {
+      "kind": "track",
+      "time": "01:37:34",
+      "artist": "Abrial's",
+      "title": "Funky"
+    },
+    {
+      "kind": "track",
+      "time": "01:41:44",
+      "artist": "Tyniram",
+      "title": "Touche"
+    },
+    {
+      "kind": "raw",
+      "raw": "PART2________________________________________"
+    },
+    {
+      "kind": "track",
+      "time": "01:43:40",
+      "artist": "Dj west & Jim Joyce",
+      "title": "Trip trac"
+    },
+    {
+      "kind": "track",
+      "time": "01:46:12",
+      "artist": "Evidence",
+      "title": "Make up d'un soir"
+    },
+    {
+      "kind": "track",
+      "time": "01:49:39",
+      "artist": "JM Black",
+      "title": "Lipstick (Shout)"
+    },
+    {
+      "kind": "track",
+      "time": "01:54:30",
+      "artist": "Trois Quatorze",
+      "title": "Folle de musique"
+    },
+    {
+      "kind": "track",
+      "time": "01:56:26",
+      "artist": "Artefact",
+      "title": "M.A.E"
+    },
+    {
+      "kind": "track",
+      "time": "01:58:17",
+      "artist": "Feldman",
+      "title": "Wally boule noire (Re-mix Dub)"
+    },
+    {
+      "kind": "track",
+      "time": "02:02:22",
+      "artist": "Idris Chebba",
+      "title": "Le misunderstanding"
+    },
+    {
+      "kind": "track",
+      "time": "02:05:18",
+      "artist": "Jeremy clark",
+      "title": "Jam on james"
+    },
+    {
+      "kind": "track",
+      "time": "02:07:38",
+      "artist": "Jean michel gascuel",
+      "title": "Dominus"
+    },
+    {
+      "kind": "track",
+      "time": "02:10:52",
+      "artist": "PNY",
+      "title": "PNY"
+    },
+    {
+      "kind": "track",
+      "time": "02:12:43",
+      "artist": "Nano",
+      "title": "My mojo"
+    },
+    {
+      "kind": "track",
+      "time": "02:16:54",
+      "artist": "Master K",
+      "title": "Quand le dj parle"
+    },
+    {
+      "kind": "track",
+      "time": "02:19:00",
+      "artist": "Pilou",
+      "title": "Ça va"
+    },
+    {
+      "kind": "track",
+      "time": "02:22:12",
+      "artist": "Bibi Flash",
+      "title": "Histoire d'1 soir(bye bye les galères)"
+    },
+    {
+      "kind": "track",
+      "time": "02:24:57",
+      "artist": "Précieux",
+      "title": "Maman, j'aime ça"
+    },
+    {
+      "kind": "track",
+      "time": "02:30:10",
+      "artist": "Shen et les Shendys",
+      "title": "Je ne suis que musique"
+    },
+    {
+      "kind": "track",
+      "time": "02:33:40",
+      "artist": "Attaché case",
+      "title": "Les crabes"
+    },
+    {
+      "kind": "track",
+      "time": "02:37:30",
+      "artist": "Micky Milan",
+      "title": "Quand tu danses (remix dub)"
+    },
+    {
+      "kind": "track",
+      "time": "02:40:00",
+      "artist": "Les Filles",
+      "title": "A la vanille"
+    },
+    {
+      "kind": "track",
+      "time": "02:42:45",
+      "artist": "HOmmage au fromage",
+      "title": "Pour danser"
+    },
+    {
+      "kind": "track",
+      "time": "02:44:40",
+      "artist": "Sumo",
+      "title": "Sa bo bo"
+    },
+    {
+      "kind": "track",
+      "time": "02:46:18",
+      "artist": "Alain Wisniak",
+      "title": "Au studio(BO \"la Femme Publique\")"
+    },
+    {
+      "kind": "track",
+      "time": "02:48:45",
+      "artist": "Georges Lartigau",
+      "title": "Dj emotion"
+    },
+    {
+      "kind": "track",
+      "time": "02:52:36",
+      "artist": "Box Office",
+      "title": "Jouez avec moi (instrumental)"
+    },
+    {
+      "kind": "track",
+      "time": "02:55:19",
+      "artist": "Marcel Fobert",
+      "title": "Rap Folie"
+    },
+    {
+      "kind": "track",
+      "time": "02:58:56",
+      "artist": "Patrick Oliver",
+      "title": "Rap Taps"
+    }
+  ]
+}

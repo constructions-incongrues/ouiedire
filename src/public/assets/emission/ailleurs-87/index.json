@@ -1,0 +1,119 @@
+{
+  "title": "Restless Ambition",
+  "authors": "Dj Donna Summer",
+  "releasedAt": "2015-03-16 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-87_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Violet Systems",
+      "title": "Invasion"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:12",
+      "artist": "Venetian Snares",
+      "title": "One Eye"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:46",
+      "artist": "Machine Girl",
+      "title": "Post Rave Maximalist"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:48",
+      "artist": "Mille & Andrea",
+      "title": "Corrosive"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:27",
+      "artist": "V.L.A.D.",
+      "title": "Ai Bug"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:06",
+      "artist": "Oneohtrix Point Never",
+      "title": "Zebra"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:48",
+      "artist": "Ove Naxx",
+      "title": "Miburounin"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:22",
+      "artist": "GFOTY",
+      "title": "My Song"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:18",
+      "artist": "DTL",
+      "title": "Get Ill"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:47",
+      "artist": "DJ Clap",
+      "title": "Come On"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:20",
+      "artist": "Hedener & Raveman",
+      "title": "Night Drive"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:44",
+      "artist": "Geotheory",
+      "title": "On My Mind"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:40",
+      "artist": "Ambivalence",
+      "title": "Egdow"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:30",
+      "artist": "Frenemis",
+      "title": "Bring It"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:20",
+      "artist": "B.I.N.T.",
+      "title": "Seven"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:05",
+      "artist": "Spinee",
+      "title": "Hell Hound"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:10",
+      "artist": "Whitetail",
+      "title": "Flora"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:38",
+      "artist": "Violet Systems",
+      "title": "Haunter"
+    }
+  ]
+}

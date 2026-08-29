@@ -1,0 +1,125 @@
+{
+  "title": "Pronto Pyrolyse",
+  "authors": "Dj Holowestcaust",
+  "releasedAt": "2018-12-31 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-176_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "To Live and Die in L.A.",
+      "title": "Theatrical Trailer"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:54",
+      "artist": "Skinny Puppy",
+      "title": "K-9"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:47",
+      "artist": "Daniel Maloso",
+      "title": "Boney"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:28",
+      "artist": "Volition Immanent",
+      "title": "Wake Up"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:48",
+      "artist": "Alexis Le-Fan",
+      "title": "Love to hate"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:17",
+      "artist": "DJ Hell",
+      "title": "I Want You (The Hacker Remix)"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:17",
+      "artist": "Girls Chat Room",
+      "title": "Encantado"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:20",
+      "artist": "The B-52's",
+      "title": "Mesopotamia"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:49",
+      "artist": "Six Sed Red",
+      "title": "Beat 'Em Right"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:26",
+      "artist": "Mu",
+      "title": "Chair girl"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:40",
+      "artist": "Instra:mental",
+      "title": "Voyeur"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:17",
+      "artist": "Anne Clark",
+      "title": "Our Darkness"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:37",
+      "artist": "Boytronic",
+      "title": "Bryllyant"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:34",
+      "artist": "Kiko and S.Deschezeaux",
+      "title": "Song for fools (dub)"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:35",
+      "artist": "Starflight",
+      "title": "Dance To The Beat"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:55",
+      "artist": "Tom Hagen",
+      "title": "Atomic (Zyron Retouch)"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:03",
+      "artist": "Tulioxi",
+      "title": "Pioneers of What"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:48",
+      "artist": "Furfriend",
+      "title": "Touch Myself"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:55",
+      "artist": "Kazino",
+      "title": "Binary"
+    }
+  ]
+}

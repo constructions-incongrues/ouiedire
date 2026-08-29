@@ -1,0 +1,95 @@
+{
+  "title": "Une Ouïe Dire en forme de slavsquat",
+  "authors": "Grand Gravier",
+  "releasedAt": "2014-12-11 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": false,
+  "description": "<p>A écouter en boule sous une table ou sous une couette.</p>",
+  "cover": "ouiedire_ailleurs-76_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "David Behrman",
+      "title": "On the other ocean"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:44",
+      "artist": "Concertmate",
+      "title": "Requiem pour un Casio"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:37",
+      "artist": "Easter",
+      "title": "Psychobitch"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:46",
+      "artist": "Fabio Frizzi",
+      "title": "Zombie's theme"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:44",
+      "artist": "Mathémathique",
+      "title": "Yawun"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:39",
+      "artist": "Der Favourit",
+      "title": "Die Androiden"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:01",
+      "artist": "David Garland",
+      "title": "I am with you"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:19",
+      "artist": "TG Gondard",
+      "title": "Tes bras"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:02",
+      "artist": "Molly Nilsson",
+      "title": "Hello Loneliness"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:00",
+      "artist": "Ouïe dire",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:35:15",
+      "artist": "Decapited heD",
+      "title": "Repulsion Orbit"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:34",
+      "artist": "Opera Mort",
+      "title": "Fameck"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:40",
+      "artist": "Plastobéton",
+      "title": "Hard to kill"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:33",
+      "artist": "Skatt Brothers",
+      "title": "Walk the night"
+    }
+  ]
+}

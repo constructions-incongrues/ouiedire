@@ -1,0 +1,89 @@
+{
+  "title": "Œstroghaine",
+  "authors": "Rottweiler Slip",
+  "releasedAt": "2020-03-09 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-223_cover-1.gif",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Llill",
+      "title": "déchets"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:54",
+      "artist": "Terrine",
+      "title": "Club 80"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:37",
+      "artist": "Ewa Justka",
+      "title": "Hammer this Down"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:26",
+      "artist": "Ritual Chair",
+      "title": "I Do Not Forgive You"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:44",
+      "artist": "Meryll Ampe",
+      "title": "Tamales"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:25",
+      "artist": "Stine Janvin",
+      "title": "Like Last Night"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:49",
+      "artist": "Marina Poleukhina",
+      "title": "Boxxx"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:52",
+      "artist": "Mouse",
+      "title": "Digne"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:29",
+      "artist": "AJA",
+      "title": "Tuck It, Tape It"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:45",
+      "artist": "Julia Hanadi AL ABED",
+      "title": "Derrière la Bobine"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:50",
+      "artist": "FOQL",
+      "title": "Starving Star Fish"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:11",
+      "artist": "Ekin Fil",
+      "title": "Long Still"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:33",
+      "artist": "Pillipiigad",
+      "title": "Kui Mina Hakkan Laulemaie"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "title": "copinage",
+  "authors": "Somaticae",
+  "releasedAt": "2016-04-04 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-125_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Sacré Numéro",
+      "title": "23/02/2016 pt.2"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:30",
+      "artist": "Kaumwald",
+      "title": "Ortolan"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:47",
+      "artist": "Low Jack",
+      "title": "Coquelin Cloarec (Emotions)"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:47",
+      "artist": "C_C",
+      "title": "Mez_1"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:15",
+      "artist": "Harshlove",
+      "title": "Metalman"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:00",
+      "artist": "Omar Di Bongo",
+      "title": "03/20/2015 extrait"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:34",
+      "artist": "Raymonde",
+      "title": "Live TCL PARTY 23/01/2016"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:10",
+      "artist": "Couleur TV",
+      "title": "Live Gaité Lyrique 06/12/2015"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:26",
+      "artist": "Duo Jean Bender & Amédée De Murcia",
+      "title": "11/12/2015"
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "title": "(soupir)",
+  "authors": "Sidonie Absolon",
+  "releasedAt": "2020-06-19 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-260_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Alain Resnais",
+      "title": "Mon Oncle d'Amérique"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:18",
+      "artist": "Ssaliva",
+      "title": "Unshielded"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:34",
+      "artist": "Jean Sébastien Bach",
+      "title": "Glenn Gould</span> - L'art de la fugue</span> - Contrapunctus IV"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:22",
+      "artist": "Claude Debussy",
+      "title": "Syrinx"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:59",
+      "artist": "Popol Vuh",
+      "title": "La grande extase du sculpteur sur bois Steiner"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:52",
+      "artist": "Caterina Barbieri",
+      "title": "Information Needed to Create an Entire Body"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:23",
+      "artist": "Emerald Web",
+      "title": "Dragon wings and wizard tales"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:46",
+      "artist": "Curt Oren",
+      "title": "What is"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:17",
+      "artist": "Bertrand Blier",
+      "title": "Préparez vos mouchoirs"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:23",
+      "artist": "Ce soir",
+      "title": "Je sens ton souffle sur mon aura"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:50",
+      "artist": "TUUN",
+      "title": "Luv U BB"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:02",
+      "artist": "Charlotte Simon",
+      "title": "Chloé"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:51",
+      "artist": "Jean-Pierre Cuny et Christine Parchet-Morizet",
+      "title": "Les inventions de la vie"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:23",
+      "artist": "Eyeliner",
+      "title": "Antivirus"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:03",
+      "artist": "Bertrand Blier",
+      "title": "Préparez vos mouchoirs"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:46",
+      "artist": "William Eggleston",
+      "title": "Untitled Improvisation FD 1.10"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:24",
+      "artist": "Giant Claw",
+      "title": "Deep Thoughts"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:47",
+      "artist": "Loto Retina",
+      "title": "Forme 1"
+    },
+    {
+      "kind": "track",
+      "time": "00:59:02",
+      "artist": "Cc",
+      "title": "Toggle"
+    },
+    {
+      "kind": "track",
+      "time": "01:01:31",
+      "artist": "Jean-Pierre Cuny et Christine Parchet-Morizet",
+      "title": "Les inventions de la vie"
+    },
+    {
+      "kind": "track",
+      "time": "01:02:24",
+      "artist": "Pauline Marx",
+      "title": "Des animaux essayent des styles"
+    }
+  ]
+}

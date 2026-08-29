@@ -1,0 +1,15 @@
+{
+  "title": "Chaque oiseau a la couleur de son cri",
+  "authors": "Rottweiler Slip & Caillou",
+  "releasedAt": "2021-03-16",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-276_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "html",
+      "html": "<ol class=\"mejs-smartplaylist-playlist\">\n<li><a class=\"mejs-smartplaylist-time\">00:00:00</a> <span> Jean C. Roché</span> - Gran Saba (Oiseaux du Vénézuela)</li>\n<li><a class=\"mejs-smartplaylist-time\">00:02:30</a> <span> Hrvastki – Ghatham</li>\n<li><a class=\"mejs-smartplaylist-time\">00:09:30</a> <span> Jean C. Roché – Canard Siffleur (Tous les Oiseaux d’Europe)</li>\n<li><a class=\"mejs-smartplaylist-time\">00:10:30</a> <span> Michael Nyman</span> - Bird Anthem</li>\n<li><a class=\"mejs-smartplaylist-time\">00:13:00</a> <span> Lene Lovich</span> - Bird Song</li></li>\n<li><a class=\"mejs-smartplaylist-time\">00:17:00</a> <span> Jean C. Roché – Grand Corbeau (Corvidés)</li>\n<li><a class=\"mejs-smartplaylist-time\">00:17:45</a> <span> Terminal 11</span> - The Bird's Midair Heatsroke</li>\n<li><a class=\"mejs-smartplaylist-time\">00:20:50</a> <span> Morusque – Mésange</li>\n<li><a class=\"mejs-smartplaylist-time\">00:22:50</a> <span> Seamus Heaney – The Blackbird of Glanmore</li>\n<li><a class=\"mejs-smartplaylist-time\">00:24:30</a> <span> Jean C. Roché -- Autour des Palombes (L'Univers des Rapaces) </li>\n<li><a class=\"mejs-smartplaylist-time\">00:25:30</a> <span> Héron Cendré  </span> - Terry Riley (démo)</li>\n<li><a class=\"mejs-smartplaylist-time\">00:34:30</a> <span>  Igor Stravinsky</span> - Le Chant du Rossignol</li>\n<li><a class=\"mejs-smartplaylist-time\">00:38:25</a> <span> Clément Janequin</span> - Le Chant des Oyseaulx</li>\n<li><a class=\"mejs-smartplaylist-time\">00:44:00</a> <span> Isao Tomita</span> - Ballet Of The Chicks In Their Shells</li>\n<li><a class=\"mejs-smartplaylist-time\">00:45:05</a> <span> Atom™</span> - My bird Can Sing</li>\n<li><a class=\"mejs-smartplaylist-time\">00:47:00</a> <span> Coil</span> - Strange Birds</li>\n<li><a class=\"mejs-smartplaylist-time\">00:53:00</a> <span> Jean C. Roché</span> - Palmar (Oiseaux du Vénézuela) </li>\n<li><a class=\"mejs-smartplaylist-time\">00:55:45</a> <span> Anne Sylvestre</span> - Les Hirondelles Volent Bas</li>\n<li><a class=\"mejs-smartplaylist-time\">00:59:00</a><span> Jean C. Roché </span> -  Gypaète Barbu et Pic Tridactyle</li>\n</ol>"
+    }
+  ]
+}

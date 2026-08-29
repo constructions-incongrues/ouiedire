@@ -1,0 +1,95 @@
+{
+  "title": "12 pâtés d'aigle au beurre de caillou (Second service)",
+  "authors": "Sidonie Absolon",
+  "releasedAt": "2020-11-30 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-268_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Second service",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:01:54",
+      "artist": "Ennio Morricone",
+      "title": "Uccidete Il Vitello Grasso E Arrostitelo"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:08",
+      "artist": "Mort Garson",
+      "title": "Rhapsody in green"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:52",
+      "artist": "Aki Tsuyuko",
+      "title": "Dreamy fish"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:38",
+      "artist": "Terrine",
+      "title": "Pas de boudin blanc"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:37",
+      "artist": "Roberto Rossellini",
+      "title": "La prise de pouvoir par Louis XIV"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:37",
+      "artist": "Unbe",
+      "title": "Vector egg"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:53",
+      "artist": "Jakub Lemiszewski",
+      "title": "Gentle transit"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:42",
+      "artist": "Jorge Furtado",
+      "title": "L'ïle aux fleurs"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:37",
+      "artist": "Eyeliner",
+      "title": "Pinot noir"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:53",
+      "artist": "Anadol",
+      "title": "Uzun Havalar"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:45",
+      "artist": "Unbe",
+      "title": "Vector Milk"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:31",
+      "artist": "Jean-François Gaël",
+      "title": "Profiteroles"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:16",
+      "artist": "Paolo Tecon",
+      "title": "coulis de framboise"
+    }
+  ]
+}

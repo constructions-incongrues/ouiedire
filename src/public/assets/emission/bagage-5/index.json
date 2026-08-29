@@ -1,0 +1,167 @@
+{
+  "title": "Digital Megamix 2015",
+  "authors": "Flogsta Danshall",
+  "releasedAt": "2015-05-04 00:00:00",
+  "type": "Bagage",
+  "isPublic": true,
+  "description": "<p><a href=\"http://www.flogstadanshall.com/\">http://www.flogstadanshall.com/</a></p>",
+  "cover": "ouiedire_bagage-5_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Levon Zolltar",
+      "title": "Döner Djinnn"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:04",
+      "artist": "Boss Kite",
+      "title": "The Manifesto"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:56",
+      "artist": "DKSTER",
+      "title": "Schnappslock"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:20",
+      "artist": "Fengir",
+      "title": "Royal Assassin"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:30",
+      "artist": "Beem",
+      "title": "Race To DIgital"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:37",
+      "artist": "Drums",
+      "title": "Giants"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:51",
+      "artist": "Baba Stiltz",
+      "title": "Eating Out"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:38",
+      "artist": "Randy Barracuda",
+      "title": "This Is The Barracuda Speaking"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:24",
+      "artist": "Wankers United",
+      "title": "Gomme Arabique"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:38",
+      "artist": "Coco Bryce",
+      "title": "Me & You"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:13",
+      "artist": "Boss Kite",
+      "title": "Casio Kidnap"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:41",
+      "artist": "Randy Barracuda",
+      "title": "Akephalos (unreleased)"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:43",
+      "artist": "Yöt",
+      "title": "Feels Like Heaven"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:30",
+      "artist": "Wankers United",
+      "title": "Caca Fønk"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:47",
+      "artist": "Beem",
+      "title": "Ducker"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:53",
+      "artist": "Slow Hand Motëm",
+      "title": "Yawn"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:08",
+      "artist": "Baba Stiltz",
+      "title": "Post Pubertal"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:30",
+      "artist": "Daniel Savio",
+      "title": "Diamond Sutra"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:40",
+      "artist": "Rigas Den Andre",
+      "title": "Lines, Lines, Lines"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:49",
+      "artist": "Mesak",
+      "title": "Alkorytmi"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:28",
+      "artist": "Poborsk",
+      "title": "Haas Sausage"
+    },
+    {
+      "kind": "track",
+      "time": "00:59:58",
+      "artist": "Easy & COU",
+      "title": "Bosphorus Raver"
+    },
+    {
+      "kind": "track",
+      "time": "01:02:28",
+      "artist": "Joxaren",
+      "title": "Sunu Dambala"
+    },
+    {
+      "kind": "track",
+      "time": "01:05:45",
+      "artist": "Stiletti-Ana - Alkuperäiset",
+      "title": "Originals"
+    },
+    {
+      "kind": "track",
+      "time": "01:09:28",
+      "artist": "Limonious",
+      "title": "I Am Coming"
+    },
+    {
+      "kind": "track",
+      "time": "01:13:15",
+      "artist": "Drums",
+      "title": "Night At The Museum"
+    }
+  ]
+}

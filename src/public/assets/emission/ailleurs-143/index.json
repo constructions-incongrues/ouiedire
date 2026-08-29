@@ -1,0 +1,77 @@
+{
+  "title": "Au villages des kamer",
+  "authors": "Teke7 ",
+  "releasedAt": "2017-04-11 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p> <a href=\"https://soundcloud.com/takeaset\">https://soundcloud.com/takeaset</a></p>",
+  "cover": "ouiedire_ailleurs-143_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "ESSO ESSOMBA",
+      "title": "EVOUVOUE"
+    },
+    {
+      "kind": "track",
+      "time": "05:30:00",
+      "artist": "PETIT PRINCE",
+      "title": "BETI BANANGA « LA FAMILLE »"
+    },
+    {
+      "kind": "track",
+      "time": "11:51:00",
+      "artist": "ANGE EBOGO EMERENT",
+      "title": "MAN NNA"
+    },
+    {
+      "kind": "track",
+      "time": "15:19:00",
+      "artist": "MANGA MBARGA",
+      "title": "CHANTAL"
+    },
+    {
+      "kind": "track",
+      "time": "21:03:00",
+      "artist": "ALISSON\tEMMA",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "24:09:00",
+      "artist": "ROGER BEKONO",
+      "title": "JOLIE POUPEE"
+    },
+    {
+      "kind": "track",
+      "time": "31:09:00",
+      "artist": "LES VETERANS",
+      "title": "AU VILLAGE"
+    },
+    {
+      "kind": "track",
+      "time": "39:14:00",
+      "artist": "ETRANGER",
+      "title": "NGON MINDJON"
+    },
+    {
+      "kind": "track",
+      "time": "45:37:00",
+      "artist": "ROGER'S",
+      "title": "NDE'ONE NA?"
+    },
+    {
+      "kind": "track",
+      "time": "50:51:00",
+      "artist": "LES VETERANS",
+      "title": "OSUN"
+    },
+    {
+      "kind": "track",
+      "time": "58:03:00",
+      "artist": "OVEHI",
+      "title": "TOERE"
+    }
+  ]
+}

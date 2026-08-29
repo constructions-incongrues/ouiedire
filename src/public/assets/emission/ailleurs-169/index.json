@@ -1,0 +1,113 @@
+{
+  "title": "An Iceberg Drifting",
+  "authors": "Yvan&Lendl",
+  "releasedAt": "2018-10-29 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-169_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Off World",
+      "title": "Scrubdown"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:06",
+      "artist": "Mike Cooper",
+      "title": "La'ap Blues"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:42",
+      "artist": "Boys Age",
+      "title": "Prism"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:51",
+      "artist": "Sun Araw",
+      "title": "In Ostia"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:16",
+      "artist": "Bill Wells & Maher Shalal Hash Baz",
+      "title": "Liquorice Tics"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:19",
+      "artist": "Jerusalem In My Heart",
+      "title": "Thahab, Mish Roujou', Thahab"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:52",
+      "artist": "Khánh Ly",
+      "title": "Sealed With A Kiss"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:15",
+      "artist": "Kandodo / McBain",
+      "title": "Blowed Out"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:01",
+      "artist": "Bee Mask",
+      "title": "Fried Niteshade"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:45",
+      "artist": "Jean-Jacques Perrey",
+      "title": "Prélude au Sommeil"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:56",
+      "artist": "23 Skidoo",
+      "title": "Invocation"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:11",
+      "artist": "Isnaj Dui",
+      "title": "Morning Chores"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:55",
+      "artist": "Beak>",
+      "title": "Eggdog"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:05",
+      "artist": "NHKyx",
+      "title": "475"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:09",
+      "artist": "Tangerine Dream",
+      "title": "Asteroid Agenda"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:21",
+      "artist": "Meredith Monk",
+      "title": "Spider Web Anthem"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:46",
+      "artist": "Agitation Free",
+      "title": "Pulse"
+    }
+  ]
+}

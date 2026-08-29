@@ -1,0 +1,137 @@
+{
+  "title": "TTTeee",
+  "authors": "Third Type Tapes",
+  "releasedAt": "2018-09-17 00:00:00",
+  "type": "Bagage",
+  "isPublic": true,
+  "description": "<p><a href=\"http://www.thirdtypetapes.com/\">http://www.thirdtypetapes.com/</a></p>",
+  "cover": "ouiedire_bagage-12_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Rough Americana",
+      "title": "RA DUE <em> (TTT12)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:28",
+      "artist": "Massive Head",
+      "title": "Dawn of the head / Another Vermin (feat Bloodmouth) <em> (TTT24)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:09",
+      "artist": "Nah",
+      "title": "EU mixtape <em> (TTT11)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:56",
+      "artist": "Grind Master Flesh",
+      "title": "Schadelfrost / Grgrggg <em> (TTT17)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:13",
+      "artist": "Exoterrism",
+      "title": "Exuviae / Cyclochila <em> (TTT21)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:10",
+      "artist": "Yogidata",
+      "title": "Beach Block <em> (TTT07)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:31",
+      "artist": "G4Z",
+      "title": "Schizophrenia <em> (TTT10)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:10",
+      "artist": "Nalov",
+      "title": "Rate <em> (TTT07)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:00",
+      "artist": "Dj Die Soon",
+      "title": "The Curse Of Yonoyon ( live at Budokan ) <em> (TTT04)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:34",
+      "artist": "Raymonde",
+      "title": "Un quart Portugal / B <em> (TTT23)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:44",
+      "artist": "Terrificolor (feat C_C)",
+      "title": "N°50 / Schmckr d <em> (TTT05)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:40",
+      "artist": "6RME",
+      "title": "Inverser / _2-6 <em> (TTT27)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:35",
+      "artist": "Sturqen",
+      "title": "Zona Nervo / Sacanas <em> (TTT14)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:53",
+      "artist": "Mlacoler Culkin",
+      "title": "Everywhere Alone / Haroun the world <em> (TTT25)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:30",
+      "artist": "Muqata'a",
+      "title": "Dubt Al Ghubar / Suqoot Hor <em> (TTT22)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:55",
+      "artist": "Subaltern",
+      "title": "Naida / Deheaazan <em> (TTT24)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:55",
+      "artist": "Submechanical",
+      "title": "Class A Circuitry / CJBS <em> (TTT19)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "01:00:55",
+      "artist": "Ripit",
+      "title": "Lvnar Xtortion / Despot Dub <em> (TTT16)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "01:07:10",
+      "artist": "Le Syndicat",
+      "title": "Lost Empire <em> (TTT15)</em>"
+    },
+    {
+      "kind": "track",
+      "time": "01:10:30",
+      "artist": "Vera Spektor",
+      "title": "Liminal Clash Console / Post Human Processor <em> (TTT26) </em>"
+    },
+    {
+      "kind": "track",
+      "time": "01:13:30",
+      "artist": "KKnull",
+      "title": "Star Breaker <em> (TTT18)</em>"
+    }
+  ]
+}

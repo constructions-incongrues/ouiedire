@@ -1,0 +1,125 @@
+{
+  "title": "Château Doki",
+  "authors": "Dokidoki",
+  "releasedAt": "2019-06-17 00:00:00",
+  "type": "Bagage",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_bagage-19_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Blenno Die Wurstbrücke",
+      "title": "ZEMPF 665€ 99c"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:13",
+      "artist": "Renaud Bertin",
+      "title": "Ouïedire"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:25",
+      "artist": "Blenno Die Wurstbrücke",
+      "title": "Pain 2 (Mickey in audorama)"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:25",
+      "artist": "Ghosttrap",
+      "title": "A Billion Of Ants"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:20",
+      "artist": "Haco & Mami Chan",
+      "title": "Mori no kuma san torokéru sugar"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:21",
+      "artist": "Ricky Hollywood",
+      "title": "Parti dans le passé"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:48",
+      "artist": "Kumisolo",
+      "title": "Chapardeuse"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:35",
+      "artist": "Rouge Gorge",
+      "title": "Les Primevères des Fossés"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:48",
+      "artist": "Falseparklocation",
+      "title": "Langue étrangère"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:31",
+      "artist": "Chris Club",
+      "title": "La Piste étoilée"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:56",
+      "artist": "Arne Vinzon",
+      "title": "Lente Dépression"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:53",
+      "artist": "A*Class",
+      "title": "Nightmare (At The Discotheque)"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:40",
+      "artist": "Kumisolo",
+      "title": "Cheap Pop Song"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:09",
+      "artist": "Lem",
+      "title": "À Propos de fleurs"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:29",
+      "artist": "Felix Kubin",
+      "title": "Restez en ligne"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:53",
+      "artist": "Dorine Muraille & Chloé Delaume",
+      "title": "Le Trip"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:49",
+      "artist": "Couloir Gang",
+      "title": "Everything You Say Is True"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:38",
+      "artist": "Guido Mobius",
+      "title": "Last train to Erfstadt"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:26",
+      "artist": "Candie Hank",
+      "title": "Da Da Tuica (live)"
+    }
+  ]
+}

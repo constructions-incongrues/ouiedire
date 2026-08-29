@@ -1,0 +1,107 @@
+{
+  "title": "Day In Day Out",
+  "authors": "Méryll Ampe",
+  "releasedAt": "2020-06-01 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-253_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Rumble Fish",
+      "title": "film de F Copola"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:52",
+      "artist": "Slint",
+      "title": "Good morning captain"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:29",
+      "artist": "Balladur",
+      "title": "Michela`"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:11",
+      "artist": "Joy Divison",
+      "title": "Digital"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:53",
+      "artist": "EYE",
+      "title": "Suzanne"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:30",
+      "artist": "Olkraut",
+      "title": "Valium"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:14",
+      "artist": "ZARAZ WAM ZAGRAM",
+      "title": "No Nie Szczyp Mnie Tak Tutaj No"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:40",
+      "artist": "robert ashley",
+      "title": "Automatic Writing"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:40",
+      "artist": "Xiu Xiu",
+      "title": "Love Theme Farewell"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:00",
+      "artist": "Lou Andréa",
+      "title": "Billy"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:00",
+      "artist": "Rainer Werner",
+      "title": "Aurevoir Miller"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:30",
+      "artist": "OD Bongo",
+      "title": "Mami Wata"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:00",
+      "artist": "Cienfuegos",
+      "title": "Light A Candle"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:20",
+      "artist": "Isabella",
+      "title": "Penchant Disenchant"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:23",
+      "artist": "Méryll Ampe",
+      "title": "H"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:00",
+      "artist": "Jason Lescalleet",
+      "title": "Bombardowanie"
+    }
+  ]
+}

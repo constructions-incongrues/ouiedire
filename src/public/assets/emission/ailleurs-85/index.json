@@ -1,0 +1,101 @@
+{
+  "title": "Épée brouillard givrant",
+  "authors": "Stéven Marcato",
+  "releasedAt": "2015-03-02 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>\nUn trait = danger <br />\nDeux traits = sécurité \n</p>",
+  "cover": "ouiedire_ailleurs-85_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "John Carpenter",
+      "title": "The Fog OST - Main Theme Reprise"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:36",
+      "artist": "Rude 66",
+      "title": "I Am God"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:50",
+      "artist": "Negativland",
+      "title": "Christianity Is Stupid"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:31",
+      "artist": "Creep Lo & Fatality",
+      "title": "Seasons"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:55",
+      "artist": "Radio (Skit)",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:15:06",
+      "artist": "Nigga Creep",
+      "title": "Killaz Outta Frayser"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:09",
+      "artist": "Warning",
+      "title": "Dark Crystal"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:32",
+      "artist": "Adolf Filter",
+      "title": "Kung I Drift"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:06",
+      "artist": "Alien Sex Fiend",
+      "title": "Dead And Buried"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:48",
+      "artist": "Plexiglas",
+      "title": "Tanz!"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:36",
+      "artist": "The Revillos",
+      "title": "The Fiend"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:35",
+      "artist": "The Weathermen",
+      "title": "Poison"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:08",
+      "artist": "Riccardo Cioni",
+      "title": "Fog"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:41",
+      "artist": "Ural 13 Diktators",
+      "title": "Techno is Dead"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:00",
+      "artist": "Maximise Bestiality",
+      "title": "Disintegrated Through Ectoplasmatic Injection"
+    }
+  ]
+}

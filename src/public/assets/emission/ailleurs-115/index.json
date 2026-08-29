@@ -1,0 +1,77 @@
+{
+  "title": "Paiens Paillette",
+  "authors": "Fabien aka Terrificolor",
+  "releasedAt": "2016-01-18 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-115_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Biosphere",
+      "title": "Feber"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:48",
+      "artist": "ORPHX",
+      "title": "Pathogenesis"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:22",
+      "artist": "Lory D",
+      "title": "SNS 008 Face b"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:12",
+      "artist": "Ueno Masaaki",
+      "title": "Excited State"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:02",
+      "artist": "Imminent & Synapscape",
+      "title": "Aigre"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:12",
+      "artist": "Biosphere",
+      "title": "Space is Fizzy"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:47",
+      "artist": "Chaos a.d",
+      "title": "Mind war electro"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:24",
+      "artist": "NHK",
+      "title": "Unununium _1"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:00",
+      "artist": "Lumisokea",
+      "title": "Wiccan"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:39",
+      "artist": "Emptyset",
+      "title": "Core"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:35",
+      "artist": "Container",
+      "title": "Absorb"
+    }
+  ]
+}

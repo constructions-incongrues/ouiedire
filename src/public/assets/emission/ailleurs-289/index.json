@@ -1,0 +1,203 @@
+{
+  "title": "Choz Gosier",
+  "authors": "Marc Chutney",
+  "releasedAt": "2021-12-24",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-289_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Meredith Monk",
+      "title": "mesa"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:37",
+      "artist": "Hans Reichel",
+      "title": "le bal"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:05",
+      "artist": "Renaldo and the Loaf",
+      "title": "hambu hodo"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:33",
+      "artist": "The Books",
+      "title": "all bad ends all"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:38",
+      "artist": "23 Skido",
+      "title": "language"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:30",
+      "artist": "Teddy and Marge",
+      "title": "sing song swing"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:49",
+      "artist": "opéra de Pékin",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:12:12",
+      "artist": "Holger Czukay",
+      "title": "michy"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:32",
+      "artist": "Osilasi",
+      "title": "peripateo face A"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:07",
+      "artist": "Jean-Marie Massou",
+      "title": "o sole mio"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:40",
+      "artist": "Air Cushion Finish",
+      "title": "rest"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:53",
+      "artist": "Phallus Dei",
+      "title": "come unto me"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:08",
+      "artist": "Techtheist",
+      "title": "toualetto duetto"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:30",
+      "artist": "PantyChrist",
+      "title": "i lova animals"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:12",
+      "artist": "Kania Tieffer",
+      "title": "hot"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:16",
+      "artist": "Manuel J Grotesque",
+      "title": "le gourou et le petit chose"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:20",
+      "artist": "voix avec flûte (Nvlle Guinée)",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:35:41",
+      "artist": "The Body",
+      "title": "empty hearth"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:42",
+      "artist": "Nurse With Wound",
+      "title": "scrambled egg rebellion"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:56",
+      "artist": "voix aborigène",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:39:17",
+      "artist": "Pesteg Dred",
+      "title": "salt"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:36",
+      "artist": "Burial Hex",
+      "title": "the saintly death"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:48",
+      "artist": "Master Musicians of Bukake",
+      "title": "lightness of sonoran"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:40",
+      "artist": "Zongamin",
+      "title": "trespasser"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:12",
+      "artist": "Liberez",
+      "title": "way through vulnerability"
+    },
+    {
+      "kind": "track",
+      "time": "00:45:29",
+      "artist": "Morphine",
+      "title": "the jury"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:24",
+      "artist": "Eberhard Schoener",
+      "title": "Gong Gede"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:30",
+      "artist": "vocalisation de tambour, Bénin",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:50:59",
+      "artist": "Origami Arktika",
+      "title": "m rejoice"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:52",
+      "artist": "Dykehouse",
+      "title": "gursym"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:51",
+      "artist": "Black Pus",
+      "title": "i come when i came"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:14",
+      "artist": "Taikuri Tali",
+      "title": "?"
+    }
+  ]
+}

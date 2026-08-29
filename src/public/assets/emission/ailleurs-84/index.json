@@ -1,0 +1,167 @@
+{
+  "title": "Ouïedire",
+  "authors": "Katapulto",
+  "releasedAt": "2015-02-16 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-83_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "From an estonian animation",
+      "title": "suur toll  (the giant)"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:52",
+      "artist": "Bodyguard",
+      "title": "Raiden - blue lights"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:28",
+      "artist": "Dean Blunt",
+      "title": "Grade"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:40",
+      "artist": "Standish/carlyon",
+      "title": "subliminally"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:28",
+      "artist": "Katapulto",
+      "title": "Death"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:09",
+      "artist": "Current 93",
+      "title": "The heart full of eyes"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:30",
+      "artist": "Ashrae fax",
+      "title": "Ultravaca"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:12",
+      "artist": "D'eon",
+      "title": "Now you do"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:44",
+      "artist": "Niwea",
+      "title": "Miasto srednie"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:41",
+      "artist": "Planning To Rock",
+      "title": "Doorway"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:00",
+      "artist": "Schackleton",
+      "title": "Test tubes"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:41",
+      "artist": "Kuedo",
+      "title": "Ant city"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:45",
+      "artist": "Morphosis",
+      "title": "Musafir"
+    },
+    {
+      "kind": "track",
+      "time": "01:03:33",
+      "artist": "Metro Area",
+      "title": "Nerves"
+    },
+    {
+      "kind": "track",
+      "time": "01:09:45",
+      "artist": "Jam city",
+      "title": "How we relate to the body"
+    },
+    {
+      "kind": "track",
+      "time": "01:14:24",
+      "artist": "Joachim witt",
+      "title": "Herbergsvater"
+    },
+    {
+      "kind": "track",
+      "time": "01:19:03",
+      "artist": "L.pierre",
+      "title": "the kingdom"
+    },
+    {
+      "kind": "track",
+      "time": "01:24:55",
+      "artist": "Mike cooper",
+      "title": "Night flower tapu"
+    },
+    {
+      "kind": "track",
+      "time": "01:29:35",
+      "artist": "Bryan ferry zamba",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "01:32:21",
+      "artist": "Ignatz",
+      "title": "He deals with love and her gaze"
+    },
+    {
+      "kind": "track",
+      "time": "01:41:08",
+      "artist": "Games",
+      "title": "Strawberry skies"
+    },
+    {
+      "kind": "track",
+      "time": "01:44:00",
+      "artist": "Neon lit atoms leyland kirby",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "01:47:04",
+      "artist": "Painkiller",
+      "title": "Blackhole dub"
+    },
+    {
+      "kind": "track",
+      "time": "01:50:28",
+      "artist": "Scott walker",
+      "title": "Rawhide"
+    },
+    {
+      "kind": "track",
+      "time": "01:53:30",
+      "artist": "These new puritans",
+      "title": "field of reeds"
+    },
+    {
+      "kind": "track",
+      "time": "01:59:13",
+      "artist": "Artiste Inconnu",
+      "title": "(Morocco) Guelmim"
+    }
+  ]
+}

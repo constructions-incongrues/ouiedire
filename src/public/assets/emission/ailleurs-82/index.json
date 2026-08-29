@@ -1,0 +1,119 @@
+{
+  "title": "J'aime pas quand ça chante vol2",
+  "authors": "Dj ****",
+  "releasedAt": "2015-02-02 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-82_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "IRCAM",
+      "title": "Synthèse vocale 1983"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:52",
+      "artist": "Children of Archbishop Holgate´s Grammar School",
+      "title": "Jabberwocky"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:37",
+      "artist": "Semprun & Christodoulidès",
+      "title": "Choréo-Rythmes"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:59",
+      "artist": "Catharsis",
+      "title": "Le Canard Blanc"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:24",
+      "artist": "Académie du disque de poésie",
+      "title": "Les meilleurs poèmes à dire"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:41",
+      "artist": "Rose Leskniak",
+      "title": "She´s So"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:17",
+      "artist": "Vincent Gemignani",
+      "title": "Insidieusement les Elfes"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:48",
+      "artist": "Mary Longford",
+      "title": "Miniature"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:48",
+      "artist": "Twilight Zone",
+      "title": "Interlude"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:07",
+      "artist": "Christine Combe",
+      "title": "Nazim Hikmet"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:28",
+      "artist": "Faust",
+      "title": "Sur le Ventre"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:58",
+      "artist": "George Russell",
+      "title": "Manhattan-Rico"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:09",
+      "artist": "Amiri Baraka and The New York Art Quartet",
+      "title": "Black Dada Nihilismus"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:05",
+      "artist": "Lasry-Baschet",
+      "title": "Poésie à mi-voix"
+    },
+    {
+      "kind": "track",
+      "time": "00:42:28",
+      "artist": "Günter Sommer",
+      "title": "Nelly et Sylvain"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:38",
+      "artist": "Michel Roques",
+      "title": "Le Dernier Contrat"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:04",
+      "artist": "Anthony Joseph and the Spasm Band",
+      "title": "Jungle"
+    },
+    {
+      "kind": "track",
+      "time": "01:04:03",
+      "artist": "Tcherka",
+      "title": "Un homme à la rencontre d´Antonin Artaud"
+    }
+  ]
+}

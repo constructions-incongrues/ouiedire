@@ -1,0 +1,95 @@
+{
+  "title": "Tropique (Sainte Aise) FM",
+  "authors": "Jean Michel Marionnette",
+  "releasedAt": "2016-06-13 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-134_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Francis Lai & Roland Romanelli",
+      "title": "Robomanie (BO de la série TV Astrolab 22)"
+    },
+    {
+      "kind": "track",
+      "time": "00:04:15",
+      "artist": "Eddy Louiss",
+      "title": "Les Elephants"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:18",
+      "artist": "Fal Frett",
+      "title": "Cha Pistache"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:07",
+      "artist": "Giovanni Cristiani",
+      "title": "Dancin Diletta"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:33",
+      "artist": "Serge Fabriano Présente Digital Caresse",
+      "title": "Deshaies"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:16",
+      "artist": "Armand Frydman",
+      "title": "Cartoon in Karthoum"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:05",
+      "artist": "Jean Louis Bucchi",
+      "title": "Technocity"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:41",
+      "artist": "Tyniram",
+      "title": "Touche (Instrumental)"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:50",
+      "artist": "St Quentin",
+      "title": "Real Robotics"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:40",
+      "artist": "Joel VDB",
+      "title": "Video Funk"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:48",
+      "artist": "Tom Ware",
+      "title": "Closet funk"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:44",
+      "artist": "Oby Onyioha",
+      "title": "Break it (Instrumental)"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:19",
+      "artist": "Professor Rhythm",
+      "title": "Professor 3"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:05",
+      "artist": "Mashisa",
+      "title": "VO (Dub)"
+    }
+  ]
+}

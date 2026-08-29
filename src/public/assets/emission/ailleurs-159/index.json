@@ -1,0 +1,119 @@
+{
+  "title": "Love Not Love (quelques chansons d'amour de notre époque)",
+  "authors": "Dasz",
+  "releasedAt": "2018-06-04 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-159_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Intro",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:00:44",
+      "artist": "Teatro Satanico",
+      "title": "You make me sick"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:03",
+      "artist": "Cult of Zir",
+      "title": "Turnblack"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:59",
+      "artist": "Naïve",
+      "title": "Frosted (inédit)"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:23",
+      "artist": "Nora Düster",
+      "title": "So sad"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:33",
+      "artist": "Simi Nah",
+      "title": "La terre est noire"
+    },
+    {
+      "kind": "track",
+      "time": "00:18:22",
+      "artist": "Celluloide",
+      "title": "Aussi vital que l'eau"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:34",
+      "artist": "Super Girl and the Romantic Boys",
+      "title": "Cienie"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:46",
+      "artist": "Manmachine",
+      "title": "Tears"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:19",
+      "artist": "Molly Nilson",
+      "title": "You always hurt the one you love"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:16",
+      "artist": "Sunday Strain",
+      "title": "Waiting for you"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:39",
+      "artist": "Merci la Nuit",
+      "title": "Tell me the truth"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:12",
+      "artist": "Popsimonova and Zarkoff",
+      "title": "Wall to wall"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:17",
+      "artist": "E-sence Girl",
+      "title": "Meeting"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:01",
+      "artist": "Yva and the Toy George",
+      "title": "Heretical habibi"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:59",
+      "artist": "Maria Violenza",
+      "title": "Moisissure"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:22",
+      "artist": "Douche Froide",
+      "title": "Qui donc"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:23",
+      "artist": "Alone",
+      "title": "Without you"
+    }
+  ]
+}

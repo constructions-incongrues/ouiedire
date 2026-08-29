@@ -1,0 +1,113 @@
+{
+  "title": "12 melons cueillis au fond de la mer (Premier service)",
+  "authors": "Sidonie Absolon",
+  "releasedAt": "2020-11-26 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-267_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Premier service",
+      "title": null
+    },
+    {
+      "kind": "track",
+      "time": "00:02:34",
+      "artist": "Eye",
+      "title": "Cocktail Mexico"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:48",
+      "artist": "Ray Lynch",
+      "title": "Celestial Soda Pop"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:11",
+      "artist": "Las Trillizas De Oro",
+      "title": "Pochoclo"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:24",
+      "artist": "Unbe",
+      "title": "Vector Bread"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:14",
+      "artist": "Roberto Rossellini",
+      "title": "La prise de pouvoir par Louis XIV"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:42",
+      "artist": "Terrine",
+      "title": "Tartine"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:22",
+      "artist": "Yellow Magic Orchestra",
+      "title": "Pure Jam"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:51",
+      "artist": "Inef Coupe",
+      "title": "Oil + Water"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:18",
+      "artist": "Alain Resnais",
+      "title": "Mon Oncle d'Amérique"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:37",
+      "artist": "Ennio Morricone",
+      "title": "La Fredda Lama Del Coltello"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:45",
+      "artist": "Anne-Marie Miéville & Jean-Luc Godard",
+      "title": "Six fois deux / Sur et sous la communication"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:31",
+      "artist": "Joël Fajerman",
+      "title": "Racines synthetiques"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:36",
+      "artist": "Loto Retina",
+      "title": "Zoom Gustatif"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:28",
+      "artist": "Luc Moullet",
+      "title": "Genèse d'un repas"
+    },
+    {
+      "kind": "track",
+      "time": "00:54:04",
+      "artist": "Eyeliner",
+      "title": "Sauvignon blanc"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:04",
+      "artist": "Accou",
+      "title": "Pause Pipi"
+    }
+  ]
+}

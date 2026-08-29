@@ -1,0 +1,107 @@
+{
+  "title": "Which language is it ?",
+  "authors": "David Fenech",
+  "releasedAt": "2021-11-16",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-288_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "David Fenech",
+      "title": "Introduction Vocale"
+    },
+    {
+      "kind": "track",
+      "time": "00:00:45",
+      "artist": "Phew",
+      "title": "Closed"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:54",
+      "artist": "Jaap Blonk + Hugo Ball",
+      "title": "Six Sound Poems - GaDJi Beri Bimba"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:19",
+      "artist": "Umeko Ando",
+      "title": "Battaki"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:25",
+      "artist": "Charlie Chaplin",
+      "title": "Nonsense Song (Titine)"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:55",
+      "artist": "Simone Forti",
+      "title": "Largo Argentina"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:10",
+      "artist": "Ghédalia Tazartes",
+      "title": "Yama Yama"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:19",
+      "artist": "Pygmees AKA",
+      "title": "Kulu Kulu"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:50",
+      "artist": "Tarawangsawelas",
+      "title": "Selalu"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:25",
+      "artist": "Shooby Taylor",
+      "title": "Stout Hearted Me"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:03",
+      "artist": "Tibor Szemzo",
+      "title": "Danger"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:20",
+      "artist": "Alka Yagnik + Ila Arun",
+      "title": "Choli Ke Peeche"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:42",
+      "artist": "Magma",
+      "title": "Troller Tanz"
+    },
+    {
+      "kind": "track",
+      "time": "00:56:20",
+      "artist": "Tom Waits",
+      "title": "Kommienezuspadt"
+    },
+    {
+      "kind": "track",
+      "time": "00:59:18",
+      "artist": "Mohammed Rafi",
+      "title": "Jaan Pehechaan Ho"
+    },
+    {
+      "kind": "track",
+      "time": "01:04:45",
+      "artist": "Fulu Miziki",
+      "title": "Live"
+    }
+  ]
+}

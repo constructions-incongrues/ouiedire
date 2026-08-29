@@ -1,0 +1,101 @@
+{
+  "title": "The Legacy",
+  "authors": "Flow Disciple",
+  "releasedAt": "2021-01-24",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>Sélection au ptits oignons, stricly vinyl ! - <a href=\"https://www.youtube.com/watch?v=x58ybF536k8\">Flow Disciple</a></p>",
+  "cover": "ouiedire_ailleurs-274_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:05",
+      "artist": "Ray Parker Jr",
+      "title": "Always Thinking Of You"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:03",
+      "artist": "Billy Ocean / Dave Mackay",
+      "title": "City Limit"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:56",
+      "artist": "B.T.Express",
+      "title": "Discotizer"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:11",
+      "artist": "Double Exposure",
+      "title": "(Where Have You Been) All My Life"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:56",
+      "artist": "Brass Construction",
+      "title": "We Are Brass"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:58",
+      "artist": "Johnny Bristol",
+      "title": "I Got Your Number"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:11",
+      "artist": "Delegation",
+      "title": "Blue Girl"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:04",
+      "artist": "Ronnie Dyson",
+      "title": "The Captain Of Your Soul"
+    },
+    {
+      "kind": "track",
+      "time": "00:26:45",
+      "artist": "Instant Funk",
+      "title": "Gotta Like That"
+    },
+    {
+      "kind": "track",
+      "time": "00:31:20",
+      "artist": "Charles Mann",
+      "title": "Do It Again"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:25",
+      "artist": "Silver Convention",
+      "title": "You've Turned Me On"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:46",
+      "artist": "Lou Rawls",
+      "title": "Natural Man"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:18",
+      "artist": "Rufus / Chaka",
+      "title": "What Am I Missing?"
+    },
+    {
+      "kind": "track",
+      "time": "00:47:13",
+      "artist": "Thelma Houston",
+      "title": "Triflin'"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:56",
+      "artist": "Barry White",
+      "title": "Somebody's Gonna Off The Man Instrumentals"
+    }
+  ]
+}

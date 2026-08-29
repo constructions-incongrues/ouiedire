@@ -1,0 +1,77 @@
+{
+  "title": "La Boucle Vol.1",
+  "authors": "Aymeric De Tapol",
+  "releasedAt": "2020-03-19 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p>\nLa boucle!<br/>\nBoucle la!<br/>\ntu la boucle !<br/>\nLa boucle est bouclée.<br/>\nJ’ ai bouclé le dossier.<br/>\nLa grande boucle<br/>\nJe suis prit dans une boucle<br/>\nC’est comme une boucle<br/>\nje me suis fait boucler!<br/>\nC’est bouclé.<br/>\nSort de cette Boucle!<br/>\n</p>",
+  "cover": "ouiedire_ailleurs-226_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Joseph Hammer",
+      "title": "Part 1 <em>2012</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:20",
+      "artist": "Holger Csukay",
+      "title": "Boat woman song <em>1969</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:57",
+      "artist": "Aksak Maboul",
+      "title": "Scratch Holiday <em>1986</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:02",
+      "artist": "Renaldo and the Loaf",
+      "title": "Melvyns Response <em>1981</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:22",
+      "artist": "Christian Marclay",
+      "title": "Jukebox Capriccio <em>1981-1989</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:58",
+      "artist": "The X-Ecutionners",
+      "title": "turntable Exhibition <em>1997</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:46",
+      "artist": "Ouïedire",
+      "title": "lazy jingle"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:51",
+      "artist": "Yann Gourdon et Marko Martini",
+      "title": "Canon <em>2019</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:49",
+      "artist": "Steeve Reich",
+      "title": "Melodica <em>1986</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:58",
+      "artist": "Anthony Gnazzo",
+      "title": "Asparagus <em>1986</em>"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:36",
+      "artist": "Roger Waters and Ron Geesin",
+      "title": "Dance of the red Corpuscles <em>1970</em>"
+    }
+  ]
+}

@@ -20,3 +20,18 @@
 # duration
 /src/public/duration
 nohup.out
+
+# migration sveltia-cms-emissions (jetable)
+/.migration
+
+# artefacts python des outils de migration
+__pycache__/
+
+# outillage javascript
+/node_modules
+
+# phpunit
+/src/.phpunit.result.cache
+
+# rapport de couverture genere par bin/coverage-check.php
+/clover.xml

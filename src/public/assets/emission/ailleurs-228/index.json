@@ -1,0 +1,107 @@
+{
+  "title": "Copier-Collapse",
+  "authors": "Gakona",
+  "releasedAt": "2020-03-25 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-228_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Pansonic",
+      "title": "Rajatila"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:50",
+      "artist": "S-English",
+      "title": "Empathy Program"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:34",
+      "artist": "Front242",
+      "title": "DSM04"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:40",
+      "artist": "Squarepusher",
+      "title": "The Barn"
+    },
+    {
+      "kind": "track",
+      "time": "00:10:56",
+      "artist": "The Kamikaze Club",
+      "title": "Homas"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:30",
+      "artist": "Sendex",
+      "title": "Just Dance"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:17",
+      "artist": "Virtus",
+      "title": "???"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:08",
+      "artist": "Autechre",
+      "title": "Pro Radii"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:29",
+      "artist": "CDatakill",
+      "title": "Falling From The Sky"
+    },
+    {
+      "kind": "track",
+      "time": "00:34:49",
+      "artist": "AFX",
+      "title": "Men2 A1"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:43",
+      "artist": "Huren",
+      "title": "Novotny"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:50",
+      "artist": "Venetian Snares + Speedranch",
+      "title": "We Hate Russel"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:58",
+      "artist": "Venetian Snares",
+      "title": "Salt"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:18",
+      "artist": "Gianni Rossi",
+      "title": "Killed"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:22",
+      "artist": "Tangerine Dream",
+      "title": "Rubycon"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:30",
+      "artist": "Vangelis",
+      "title": "Blade Runner"
+    }
+  ]
+}

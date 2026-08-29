@@ -1,0 +1,137 @@
+{
+  "title": "Bière chaude",
+  "authors": "Storky",
+  "releasedAt": "2021-01-07 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-270_cover-1.gif",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:04",
+      "artist": "The Revisions",
+      "title": "Walk Alone"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:00",
+      "artist": "Dilly Dally",
+      "title": "Sober Motel"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:45",
+      "artist": "Ausmuteants",
+      "title": "1982"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:26",
+      "artist": "Lispector",
+      "title": "Seabird"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:28",
+      "artist": "Diiv",
+      "title": "Under The Sun"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:12",
+      "artist": "The B-52's",
+      "title": "Give Me Back My Man"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:10",
+      "artist": "Toxic Lipstick",
+      "title": "Put It In"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:14",
+      "artist": "Nerve Quakes",
+      "title": "Shirley"
+    },
+    {
+      "kind": "track",
+      "time": "00:24:41",
+      "artist": "Wavves",
+      "title": "Bug"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:34",
+      "artist": "Elvis Costello",
+      "title": "Chelsea"
+    },
+    {
+      "kind": "track",
+      "time": "00:30:42",
+      "artist": "Prison Affair",
+      "title": "I Want Ya (In My Cell)"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:03",
+      "artist": "Rendez-Vous",
+      "title": "Distance"
+    },
+    {
+      "kind": "track",
+      "time": "00:35:30",
+      "artist": "Dean Dirg",
+      "title": "Squad Car"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:02",
+      "artist": "Le Prince Harry",
+      "title": "No Brain"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:44",
+      "artist": "Royal Headache",
+      "title": "My Own Fantasy"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:49",
+      "artist": "Reptaliens",
+      "title": "Venetian Blinds"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:23",
+      "artist": "Pale Angels",
+      "title": "Wildvile Flesh"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:41",
+      "artist": "Litovsk",
+      "title": "Nergenst"
+    },
+    {
+      "kind": "track",
+      "time": "00:49:53",
+      "artist": "Kitchen People",
+      "title": "Communication Skills"
+    },
+    {
+      "kind": "track",
+      "time": "00:52:47",
+      "artist": "Black Marble",
+      "title": "Iron Lung"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:05",
+      "artist": "Le Death To Mankind",
+      "title": "Atlassoïd Excrementia"
+    }
+  ]
+}

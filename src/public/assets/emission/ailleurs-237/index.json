@@ -1,0 +1,119 @@
+{
+  "title": "﻿Voyage aux confins #1",
+  "authors": "Varius Radar",
+  "releasedAt": "2020-04-17 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "<p> Visuel : Ségolène Régale </p>",
+  "cover": "ouiedire_ailleurs-237_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:00",
+      "artist": "Jean-Luc Herelle",
+      "title": "Jurassic Soudscapes"
+    },
+    {
+      "kind": "track",
+      "time": "00:01:21",
+      "artist": "Throbbing Gristle",
+      "title": "Exotic Function"
+    },
+    {
+      "kind": "track",
+      "time": "00:05:34",
+      "artist": "Thanasis Zlatanos",
+      "title": "Master Chameleon"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:00",
+      "artist": "Bodies Without Organs",
+      "title": "Dada Kabalah"
+    },
+    {
+      "kind": "track",
+      "time": "00:12:38",
+      "artist": "Echium",
+      "title": "Yellow-Flowered"
+    },
+    {
+      "kind": "track",
+      "time": "00:16:43",
+      "artist": "Celia Hollander",
+      "title": "big talk"
+    },
+    {
+      "kind": "track",
+      "time": "00:20:00",
+      "artist": "Siberia",
+      "title": "songs of nature and animals"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:21",
+      "artist": "Raymonde",
+      "title": "la ritournelle des particules"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:53",
+      "artist": "Ruth Anderson",
+      "title": "the pregnant dream"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:18",
+      "artist": "Nodding God",
+      "title": "Xanthosis Sabbat Clock"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:13",
+      "artist": "Acolytes",
+      "title": "கொந்தளிப்பை"
+    },
+    {
+      "kind": "track",
+      "time": "00:39:29",
+      "artist": "Shit and Shine",
+      "title": "Yeah I'm on Acid"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:17",
+      "artist": "Nina",
+      "title": "De Val"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:48",
+      "artist": "Electric Indigo",
+      "title": "ferrum 3"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:42",
+      "artist": "Current 93",
+      "title": "Untitled"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:00",
+      "artist": "Beatriz Ferreyra",
+      "title": "L'autre Rive"
+    },
+    {
+      "kind": "track",
+      "time": "00:55:46",
+      "artist": "Gabber Modus Operandi",
+      "title": "sangkakala II"
+    },
+    {
+      "kind": "track",
+      "time": "00:58:48",
+      "artist": "Beatriz Ferreyra",
+      "title": "L'autre Rive"
+    }
+  ]
+}

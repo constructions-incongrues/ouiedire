@@ -1,0 +1,107 @@
+{
+  "title": "Le printemps pour tous",
+  "authors": "TG Gondard",
+  "releasedAt": "2015-05-25 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-92_cover-1.png",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:30",
+      "artist": "TG Gondard",
+      "title": "fantômes"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:50",
+      "artist": "Colombey",
+      "title": "encore une fois"
+    },
+    {
+      "kind": "track",
+      "time": "00:06:20",
+      "artist": "Pizza Noise Mafia",
+      "title": "noise mafia"
+    },
+    {
+      "kind": "track",
+      "time": "00:14:50",
+      "artist": "Liz Phair",
+      "title": "fuck and run"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:15",
+      "artist": "Gareth Williams",
+      "title": "nothing on"
+    },
+    {
+      "kind": "track",
+      "time": "00:23:00",
+      "artist": "Eno & Fripp",
+      "title": "melancholy waltz"
+    },
+    {
+      "kind": "track",
+      "time": "00:25:00",
+      "artist": "Rome Fortune",
+      "title": "money memories"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:50",
+      "artist": "Best Coast",
+      "title": "crazy for you"
+    },
+    {
+      "kind": "track",
+      "time": "00:29:40",
+      "artist": "Wendy René",
+      "title": "what will tomorrow bring"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:15",
+      "artist": "Taulard",
+      "title": "fuir"
+    },
+    {
+      "kind": "track",
+      "time": "00:33:30",
+      "artist": "Jeremih",
+      "title": "fuck you all the time"
+    },
+    {
+      "kind": "track",
+      "time": "00:36:30",
+      "artist": "Supreme Dicks",
+      "title": "in a sweet song"
+    },
+    {
+      "kind": "track",
+      "time": "00:41:00",
+      "artist": "Santo & Johnny",
+      "title": "sleepwalk"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:15",
+      "artist": "Kuedo",
+      "title": "ascension phase"
+    },
+    {
+      "kind": "track",
+      "time": "00:46:15",
+      "artist": "Psionic Terror",
+      "title": "bad autopsy"
+    },
+    {
+      "kind": "track",
+      "time": "00:51:25",
+      "artist": "Windy & Carl",
+      "title": "lighthouse"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "title": "Déconstruction",
+  "authors": "Consternation Label",
+  "releasedAt": "2019-04-01 00:00:00",
+  "type": "Bagage",
+  "isPublic": true,
+  "description": "<p>Consternation est un label de musiques électroniques et une maison de micro-édition, crée a Rennes en 2014.\nLe label explore les musiques électroniques sans se fermer à un genre précis, de la techno à la musique improvisée en passant par la synth-pop. \nLe travail éditorial suit les mêmes envies, proposant autant des éditions collaboratives thématiques que des éditions autour du travail d'un seul artiste. \nUn soin est également porté a la recherche graphique autour des sorties (pochette des objets musicaux et recherche sur la forme des éditions papier). \nTout au long de l’année, Consternation organise des évènements (concerts, projections, karaoké… avec une soirée, LA NUIT, qui à lieu chaque année) qui se déroulent dans des bars et dans des lieux privés.\n</p>",
+  "cover": "ouiedire_bagage-18_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:14",
+      "artist": "Rouge Gorge",
+      "title": "You're so high (C°10 - Le marathon de la semaine - Rouge Gorge)"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:46",
+      "artist": "Cachette a Branlette",
+      "title": "Friandises (C°6 - My 303 clone massage tape - Cachette a Branlette)"
+    },
+    {
+      "kind": "track",
+      "time": "00:07:54",
+      "artist": "Le Matin",
+      "title": "I can't help  (C°3 - Pwned by nature - Le Matin)"
+    },
+    {
+      "kind": "track",
+      "time": "00:09:47",
+      "artist": "Le Matin",
+      "title": "24 hours rain (C°3 - Pwned by nature - Le Matin)"
+    },
+    {
+      "kind": "track",
+      "time": "00:13:11",
+      "artist": "Bosquet Club",
+      "title": "Famous hole (C°2 - Les plaisirs simples - Bosquet Club)"
+    },
+    {
+      "kind": "track",
+      "time": "00:15:27",
+      "artist": "Rouge Gorge",
+      "title": "Plus jamais froid (C°8 - Dresden Tape - Rouge Gorge)"
+    },
+    {
+      "kind": "track",
+      "time": "00:19:31",
+      "artist": "Somaticae",
+      "title": "extrait (C°9 - Terminus - Somaticae)"
+    },
+    {
+      "kind": "track",
+      "time": "00:22:22",
+      "artist": "Wetland sailor",
+      "title": "Leviathan -  (C°1 - DarkSeaWorld - Wetland sailor)"
+    },
+    {
+      "kind": "track",
+      "time": "00:28:42",
+      "artist": "Our Fortress",
+      "title": "&Hapiness (C°7 - Screen - Our Fortress)"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:40",
+      "artist": "Cachette a Branlette",
+      "title": "L'oiseau stoïque (C°6 - My 303 clone massage tape - Cachette a Branlette)"
+    },
+    {
+      "kind": "track",
+      "time": "00:38:03",
+      "artist": "High Wolf",
+      "title": "extrait (C°5 - Khôra : standards of abstraction - High Wolf)"
+    },
+    {
+      "kind": "track",
+      "time": "00:43:58",
+      "artist": "Pousse Mousse",
+      "title": "Roulé Boulé (C°4 - Pousse Mousse - Pousse Mousse)"
+    }
+  ]
+}

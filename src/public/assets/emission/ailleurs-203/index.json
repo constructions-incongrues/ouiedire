@@ -1,0 +1,107 @@
+{
+  "title": "Sélection Piège À Cons",
+  "authors": "Macon",
+  "releasedAt": "2019-10-09 00:00:00",
+  "type": "Ailleurs",
+  "isPublic": true,
+  "description": "",
+  "cover": "ouiedire_ailleurs-203_cover-1.jpg",
+  "playlist": [
+    {
+      "kind": "track",
+      "time": "00:00:08",
+      "artist": "Bounar",
+      "title": "Tonight’s It’s Christmas Night <i>Le Vilain Chien</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:02:23",
+      "artist": "Imperio",
+      "title": "Bach’s Return <i>EAMS</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:03:21",
+      "artist": "Anticappella",
+      "title": "Baby 2 Day <i> Underground Records</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:08:20",
+      "artist": "Faithless",
+      "title": "Insomnia (Radio Mix)<i> Cheeky Records</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:11:29",
+      "artist": "Douglas Greed",
+      "title": "When A Man Sings On A Track <i> Self-Released</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:17:50",
+      "artist": "Huren",
+      "title": "Rarebell/Changing Face <i> Amok Tapes</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:21:34",
+      "artist": "Immortals",
+      "title": "The Ultimate Warlord <i> Rams Horn Records</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:27:47",
+      "artist": "Jack Nicklaus Tribute Band",
+      "title": "El Capitàn <i> Stochastic Releases</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:32:17",
+      "artist": "Macon",
+      "title": "School’s Out <i>Stochastic Releases</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:37:32",
+      "artist": "Binary Digit",
+      "title": "C3 <i> Unreleased</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:40:31",
+      "artist": "Ned Flanger",
+      "title": "L’Esprit Du…  <i> Stochastic Releases</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:44:07",
+      "artist": "Denis Morin",
+      "title": "Work It Out  <i> Stochastic Releases</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:48:21",
+      "artist": "Régis Victor",
+      "title": "SXDE2"
+    },
+    {
+      "kind": "track",
+      "time": "00:50:20",
+      "artist": "Patronen",
+      "title": "Gallimathias <i> Biosoft Records</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:53:03",
+      "artist": "Ordell",
+      "title": "Bounty <i>Shoganai Records</i>"
+    },
+    {
+      "kind": "track",
+      "time": "00:57:00",
+      "artist": "Mulan Serrico",
+      "title": "Les Joies de l’Autodénigrement et de l’Autorédemption <i> SDZ Records</i>"
+    }
+  ]
+}

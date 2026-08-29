@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# Prepare le contenu avant migration : nettoyage puis normalisation du balisage.
+# Jetable : a supprimer avec le change sveltia-cms-emissions.
+# Idempotent, et reproductible depuis un checkout propre.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+E=src/public/assets/emission
+
+rm_if () { for f in "$@"; do [ -e "$f" ] && git rm -q -f -r -- "$f" || true; done; }
+
+# 1. Dossiers qui ne sont pas des emissions publiables
+#    ailleurs-16 : une couverture orpheline, aucun contenu, 404 depuis toujours
+#    kidcore     : nom sans -<numero>, donc jamais resolu ni servi depuis 2021
+rm_if "$E/ailleurs-16" "$E/kidcore"
+
+# 2. Bruit non-image
+rm_if "$E"/*/.DS_Store "$E/ailleurs-42/A_EFFACER" "$E"/*/*_TITLESLUG.mp3.txt
+
+# 3. Images hors convention : extras invisibles aujourd'hui, que le glob
+#    assoupli ferait apparaitre. Orphelins d'une fonctionnalite HD abandonnee
+#    (urlCoverHd n'est ni affecte ni lu) et images jamais referencees.
+rm_if \
+  "$E/ailleurs-161/Ouidire-Vortex.png" \
+  "$E/ailleurs-170/ouiedire.jpeg" \
+  "$E/ailleurs-186/ouiedire_ailleurs-186_cover_hd-1.png" \
+  "$E/ailleurs-186/ouiedire_ailleurs-186_cover_hd-2.png" \
+  "$E/ailleurs-219/83177914_1244218475778189_1023695155670024192_n.png" \
+  "$E/ailleurs-222/ouiedire_ailleurs-221_cover_hd-1.jpg" \
+  "$E/ailleurs-222/ouiedire_ailleurs-221_cover_hd-2.jpg" \
+  "$E/ailleurs-248/buveete.jpeg" \
+  "$E/ailleurs-277/carton tendron.jpg" \
+  "$E/ailleurs-43/unnamed.jpg" \
+  "$E/ailleurs-80/ouiedire_ailleurs-80_cover_hd_1.png" \
+  "$E/ouiedire-3/eat_cheering.gif" \
+  "$E/ouiedire-3/ouiedire_ouiedire-3_cover_hd-1.png" \
+  "$E/ouiedire-3/ouiedire_ouiedire-3_cover_hd-2.png" \
+  "$E/ouiedire-3/ouiedire_ouiedire-3_cover_hd-3.png"
+
+# 4. Normalisation du balisage des playlists, pour que l'aller-retour
+#    depuis les entrees structurees reproduise exactement la source.
+python3 bin/migration-normalize.py

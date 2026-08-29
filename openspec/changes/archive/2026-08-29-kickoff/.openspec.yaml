@@ -1,0 +1,35 @@
+# Posé par le canal surdesrails, cérémonie de kick-off.
+# Elle se tient une seule fois : poser l'outillage, découvrir le besoin, puis
+# décider sur chaque ADR que personne n'a signé.
+#
+# Votre premier geste est `outillage`, et rien ne le précède : il fait poser les
+# plugins que le canal déclare sans pouvoir les installer. La cérémonie emploie
+# leurs skills, donc elle ne peut pas commencer avant. `discovery` vient après —
+# il en dépend, et l'outil refusera de l'ouvrir tant que le premier n'est pas
+# écrit.
+#
+# Les ADR hérités se tranchent ensuite. Ils portent le préfixe `sdr-` et vivent
+# dans docs/architecture/adr/ ; comptez-les là plutôt qu'ici, leur nombre change.
+# Chacun porte sa marche à suivre dans son corps, et TOUS exposent des `traits:`
+# — les clés que la méthode transporte et dont la valeur vous appartient.
+#
+# Trancher un ADR hérité demande CINQ gestes, et tous se font dans son propre
+# fichier : écrire la valeur de chaque trait dans le `traits:` de son
+# frontmatter, passer `status:` de `proposed` à `accepted` ou `rejected`,
+# renseigner `date:` et `authors:`, écrire les conséquences, puis supprimer le
+# mode d'emploi. AUCUNE COMMANDE NE PROPAGE : la valeur vit là où vous l'écrivez,
+# et nulle part ailleurs.
+#
+# Le premier est celui qu'on oublie — une décision écrite en prose ne produit
+# aucun effet tant que sa valeur n'est pas dans le frontmatter.
+#
+# Rien ne vous signale ce qui manque, sauf si vous le demandez. Depuis la racine :
+#   ( cd docs/architecture/adr && pnpm dlx @jackchuka/mdschema@0.15.1 check '*.md' )
+# Elle nomme, fichier par fichier, chaque clé restée vide et chaque statut resté
+# `proposed`. Aucune porte ne la lance. Les clés de chaque ADR sont décrites dans
+# son corps, section `## More Information`.
+#
+# Il est à vous : menez-le, ou archivez-le vide.
+# Le supprimer ne suffit pas — il sera reposé à la prochaine mise à jour.
+schema: surdesrails-kickoff
+created: 2026-08-29

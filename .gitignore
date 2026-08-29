@@ -29,3 +29,6 @@ __pycache__/
 
 # outillage javascript
 /node_modules
+
+# phpunit
+/src/.phpunit.result.cache

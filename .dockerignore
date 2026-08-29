@@ -1,0 +1,6 @@
+.git
+node_modules
+src/vendor
+src/public/vendor
+src/public/assets
+src/cache

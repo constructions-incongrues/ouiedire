@@ -21,7 +21,15 @@ if [ "${1:-}" = "--clean" ]; then
     exit 0
 fi
 
-# Le nom attendu est calcule par l'application elle-meme (slugify de PHP).
+# Le nom est calcule par l'application elle-meme (slugify de PHP), sur le numero
+# BRUT — $s["id"], pas $s["number"].
+#
+# La difference n'est pas cosmetique : getShow() remplit le numero a trois
+# chiffres APRES le bloc audio, si bien que $s["number"] rend « 001 » la ou
+# l'archive de production porte « 1 ». Nommer les fixtures sur la forme remplie
+# faisait mentir le local sur la production, et une mesure de conformite au
+# prefixe y a effectivement lu un defaut de 136 emissions qui n'existait pas.
+# Voir le plan du change audio-sans-convention, « Correctif post-Task 6 ».
 docker run --rm -v "$PWD":/app -w /app php:7.4-cli php -r '
 $debug = false;
 require("/app/src/src/bootstrap.php");
@@ -31,7 +39,7 @@ foreach (scandir($base) as $entry) {
     if ($entry[0] === "." || !is_dir($base."/".$entry)) { continue; }
     try { $s = getShow($entry); } catch (\Exception $e) { continue; }
     $f = sprintf("%s/%s/ouiedire_%s-%s_%s_%s.mp3", $base, $entry,
-         slugify($s["type"]), $s["number"], slugify($s["authors"]), slugify($s["title"]));
+         slugify($s["type"]), $s["id"], slugify($s["authors"]), slugify($s["title"]));
     if (!file_exists($f)) { touch($f); $made++; }
 }
 echo $made." fixture(s) audio creee(s)\n";

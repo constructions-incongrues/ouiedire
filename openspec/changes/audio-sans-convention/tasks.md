@@ -77,7 +77,7 @@ dépôt du MP3 précise que le nom est libre.
   `367 emissions, 367 sans audio`. La comparaison porte donc sur le
   comportement du balayage, pas sur les noms réellement déposés sur Nextcloud.
 
-- [ ] 6.2 Vérifier qu'une émission dont on corrige le titre reste publiée et son audio téléchargeable : c'est le scénario qui motive ce change
+- [x] 6.2 Vérifier qu'une émission dont on corrige le titre reste publiée et son audio téléchargeable : c'est le scénario qui motive ce change
 
   Laissée décochée. La garantie est **structurelle** — `hasAudio` ne dépend plus
   d'aucun slug depuis que `findAudioFile()` balaye — mais **aucun test nommé ne

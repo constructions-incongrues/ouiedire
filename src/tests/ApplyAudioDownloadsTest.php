@@ -106,6 +106,60 @@ class ApplyAudioDownloadsTest extends TestCase
         $this->assertSame('331', $show['number']);
     }
 
+    public function testCorrigerLeTitreNeDepubliePasEtNeChangePasLeFichierServi()
+    {
+        // LE scenario qui motive tout ce change, et que rien ne tenait
+        // nommement jusqu'ici : la garantie etait structurelle — hasAudio ne
+        // depend plus d'aucun slug — mais structurelle n'est pas mesuree.
+        //
+        // Avant ce change, corriger une coquille dans le titre changeait le nom
+        // calcule, isReadable() echouait, et l'emission disparaissait du site
+        // sans un mot.
+        $this->ecritFichier('un-nom-tout-a-fait-libre.mp3');
+
+        $avant = $this->applique(
+            $this->emission(),
+            $this->slugs(array('title' => 'la-pompa-chalor-vol-3'))
+        );
+        $apres = $this->applique(
+            $this->emission(),
+            $this->slugs(array('title' => 'la-pompa-calor-vol-3'))
+        );
+
+        $this->assertTrue($avant['isPublic']);
+        $this->assertTrue($apres['isPublic'], 'corriger le titre ne doit pas depublier');
+        $this->assertSame($avant['urlDownloadMp3'], $apres['urlDownloadMp3']);
+        // Et l'etiquette, elle, suit la correction.
+        $this->assertSame(
+            'ouiedire_ailleurs-331_rachitik-data_la-pompa-calor-vol-3',
+            $apres['canonicalDownloadName']
+        );
+        $this->assertNotSame($avant['canonicalDownloadName'], $apres['canonicalDownloadName']);
+    }
+
+    public function testCorrigerLesAuteuricesNeDepubliePasNonPlus()
+    {
+        // Meme exigence du spec, sur l'autre champ. Les deux scenarios sont
+        // distincts parce que les deux slugs occupent deux places du nom.
+        $this->ecritFichier('un-nom-tout-a-fait-libre.mp3');
+
+        $avant = $this->applique(
+            $this->emission(),
+            $this->slugs(array('authors' => 'rachitik-dat'))
+        );
+        $apres = $this->applique(
+            $this->emission(),
+            $this->slugs(array('authors' => 'rachitik-data'))
+        );
+
+        $this->assertTrue($apres['isPublic'], 'corriger les auteurices ne doit pas depublier');
+        $this->assertSame($avant['urlDownloadMp3'], $apres['urlDownloadMp3']);
+        $this->assertSame(
+            'ouiedire_ailleurs-331_rachitik-data_la-pompa-calor-vol-3',
+            $apres['canonicalDownloadName']
+        );
+    }
+
     public function testLesValeursCalculeesGagnentSurCellesDuManifeste()
     {
         // Le sens de la fusion decide aussi de la PRECEDENCE, et c'est la le

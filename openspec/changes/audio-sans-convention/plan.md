@@ -2604,6 +2604,29 @@ ce dépôt, pas le désordre de l'archive.** Ce qui en survit et ce qui tombe :
 Les deux sens sont épinglés : repasser le nom canonique au rempli fait échouer
 quatre tests, retirer le préfixe rempli en fait échouer deux.
 
+### Deux suites de la Task 8
+
+**`bin/dev-audio-fixtures` nommait sur le numéro rempli.** Il lisait
+`$s["number"]` — donc *après* le remplissage — là où l'archive porte la forme
+brute. Corrigé en `$s["id"]`, et les 367 fixtures régénérées. Le local cesse de
+mentir sur la production : la mesure de conformité au préfixe brut seul passe de
+136 non conformes à **0**, et le fichier conventionnel bat un leurre
+alphabétique sur `ailleurs-1`, `ailleurs-17bis` et `ailleurs-331`. Le motif est
+écrit en tête du script, pour que personne ne « corrige » l'inverse.
+
+**Les deux scénarios qui motivent le change n'étaient tenus par aucun test.**
+`testCorrigerLeTitreNeDepubliePasEtNeChangePasLeFichierServi` et
+`testCorrigerLesAuteuricesNeDepubliePasNonPlus` les rendent opposables : ils
+vérifient qu'`isPublic` reste vrai, que le fichier servi ne bouge pas, et que
+l'étiquette de téléchargement, elle, suit la correction.
+
+**Ils sont nés verts, et c'est attendu** — la garantie est structurelle, `hasAudio`
+ne dépend plus d'aucun slug. Un test vert d'emblée ne prouve rien tant qu'on ne
+l'a pas vu échouer : une mutation rétablissant le comportement d'avant le change
+(le fichier doit porter le nom calculé, sinon il n'est pas vu) les fait tomber
+tous les deux, avec six autres. C'est le rouge que le TDD aurait produit si ces
+tests avaient été écrits en Task 5.
+
 ### Trois retouches apportées en relecture
 
 1. **`paddedShowNumber()` ne compare plus « `$number < 10` ».** Cette comparaison

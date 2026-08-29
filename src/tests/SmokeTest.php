@@ -16,16 +16,12 @@ class SmokeTest extends TestCase
 
     public function testLAutoloaderDeDevResoutLeNamespaceDeTest()
     {
-        $prefixes = require __DIR__ . '/../vendor/composer/autoload_psr4.php';
+        /** @var \Composer\Autoload\ClassLoader $loader */
+        $loader = require __DIR__.'/../vendor/autoload.php';
 
-        $this->assertArrayHasKey(
-            'Ouiedire\\Tests\\',
-            $prefixes,
-            "Le mapping PSR-4 autoload-dev n'est pas généré."
-        );
-        $this->assertTrue(
-            class_exists(self::class),
-            'Le namespace de test ne se résout pas via le mapping PSR-4.'
+        $this->assertNotFalse(
+            $loader->findFile('Ouiedire\\Tests\\SmokeTest'),
+            "Le mapping PSR-4 autoload-dev ne résout pas le namespace de test."
         );
     }
 }

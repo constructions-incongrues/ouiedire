@@ -20,3 +20,5 @@ Image : `docker build -t ouiedire-test -f docker/php-test.Dockerfile .`
 Commande : `docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit`
 Couverture : `docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit --coverage-text`
 Sortie attendue : `OK (N tests, M assertions)`
+
+La suite exige l'extension **pcov** : `SmokeTest` échoue volontairement sur une image `php:7.4-cli` nue. Le runner documenté est l'image `ouiedire-test`, et un pilote de couverture absent doit se voir plutôt que se taire.

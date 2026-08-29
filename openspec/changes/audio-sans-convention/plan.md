@@ -56,8 +56,18 @@ suivis dans le change `dependances-vulnerables`.
 ```dockerfile
 FROM php:7.4-cli
 RUN pecl install pcov && docker-php-ext-enable pcov
+# fr_FR.UTF-8 sert a un seul test : scandir() trie avec strcoll() (sensible a la
+# collation) la ou sort() compare des octets. Sans une locale non-C dans l'image,
+# ce test ne pourrait rien prouver. Voir AudioTest et src/src/audio.php.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends locales \
+    && localedef -i fr_FR -f UTF-8 fr_FR.UTF-8 \
+    && rm -rf /var/lib/apt/lists/*
 WORKDIR /app/src
 ```
+
+La locale est ajoutee ici plutot que dans la Task 2 parce que l'image est posee
+ici. Elle n'a d'utilite qu'a partir de la Task 2.
 
 ```bash
 docker build -t ouiedire-test -f docker/php-test.Dockerfile .
@@ -72,8 +82,10 @@ Attendu : `Successfully tagged ouiedire-test:latest`.
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="vendor/autoload.php"
-         colors="true">
+         colors="true"
+         failOnWarning="true">
     <testsuites>
         <testsuite name="ouiedire">
             <directory>tests</directory>
@@ -81,13 +93,13 @@ Attendu : `Successfully tagged ouiedire-test:latest`.
     </testsuites>
     <coverage>
         <include>
-            <file>src/audio.php</file>
+            <directory suffix=".php">src</directory>
         </include>
     </coverage>
 </phpunit>
 ```
 
-- [ ] **Step 5: Écrire un test trivial pour valider la chaîne**
+- [ ] **Step 5: Écrire un test qui valide vraiment la chaîne**
 
 `src/tests/SmokeTest.php` :
 
@@ -100,12 +112,32 @@ use PHPUnit\Framework\TestCase;
 
 class SmokeTest extends TestCase
 {
-    public function testLaChaineDeTestFonctionne()
+    public function testLePiloteDeCouvertureEstCharge()
     {
-        $this->assertTrue(true);
+        $this->assertTrue(
+            extension_loaded('pcov'),
+            "L'extension pcov est absente : la couverture ne serait pas mesurée."
+        );
+    }
+
+    public function testLAutoloaderDeDevResoutLeNamespaceDeTest()
+    {
+        /** @var \Composer\Autoload\ClassLoader $loader */
+        $loader = require __DIR__.'/../vendor/autoload.php';
+
+        $this->assertNotFalse(
+            $loader->findFile('Ouiedire\\Tests\\SmokeTest'),
+            "Le mapping PSR-4 autoload-dev ne résout pas le namespace de test."
+        );
     }
 }
 ```
+
+Un `assertTrue(true)` ne prouverait rien. Ces deux tests vérifient les deux
+choses dont le reste de la suite dépend : le pilote de couverture est chargé,
+et l'autoloader `autoload-dev` résout bien le namespace de test. Le second
+passe par `ClassLoader::findFile()`, l'API publique de Composer — un
+`class_exists(self::class)` serait une tautologie, la classe étant déjà chargée.
 
 - [ ] **Step 6: Lancer**
 
@@ -113,7 +145,10 @@ class SmokeTest extends TestCase
 docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit
 ```
 
-Attendu : `OK (1 test, 1 assertion)`.
+Attendu : `OK (2 tests, 2 assertions)`.
+
+La suite exige **pcov** : sur une image `php:7.4-cli` nue, `SmokeTest` échoue
+volontairement. Le runner documenté est l'image `ouiedire-test`.
 
 - [ ] **Step 7: Déclarer le runner dans `CLAUDE.local.md`**
 
@@ -160,15 +195,18 @@ require_once __DIR__.'/../src/audio.php';
 class AudioTest extends TestCase
 {
     private $dir;
+    private $collation;
 
     protected function setUp(): void
     {
+        $this->collation = setlocale(LC_COLLATE, 0);
         $this->dir = sys_get_temp_dir().'/ouiedire-'.uniqid();
         mkdir($this->dir);
     }
 
     protected function tearDown(): void
     {
+        setlocale(LC_COLLATE, $this->collation);
         foreach (glob($this->dir.'/*') as $f) {
             unlink($f);
         }
@@ -180,6 +218,46 @@ class AudioTest extends TestCase
         foreach ($names as $name) {
             touch($this->dir.'/'.$name);
         }
+    }
+
+    /**
+     * Pose les fichiers sous une collation non-C, et refuse de continuer si
+     * cette collation ne diverge pas reellement de l'ordre des octets.
+     *
+     * Deux garde-fous, pas un : setlocale() peut accepter le nom de la locale
+     * et collationner quand meme par octets — c'est le cas d'une base musl,
+     * p.ex. php:7.4-alpine. Le test passerait alors sans rien prouver. On
+     * verifie donc la premisse observable : scandir() ne rend pas deja l'ordre
+     * des octets. Un echec ici, jamais un skip : c'est le silence qu'on traque.
+     */
+    private function exigeUneCollationQuiDiffereDesOctets(array $names)
+    {
+        $obtenue = setlocale(LC_COLLATE, 'fr_FR.UTF-8');
+
+        $this->assertNotFalse(
+            $obtenue,
+            "La locale fr_FR.UTF-8 est absente de cette image : ce test ne peut pas "
+            ."prouver ce qu'il affirme. Voir docker/php-test.Dockerfile."
+        );
+
+        $this->touchFiles($names);
+
+        $brut = array_values(array_filter(scandir($this->dir), function ($n) {
+            return '.' !== $n[0];
+        }));
+        $octets = $brut;
+        sort($octets);
+
+        // La tete, pas le tableau entier : findAudioFile() ne rend que $found[0].
+        // Deux ordres peuvent diverger en queue en s'accordant en tete, et un
+        // fixture pareil passerait le garde en ne prouvant rien.
+        $this->assertNotSame(
+            $octets[0],
+            $brut[0],
+            "Sous \"$obtenue\", scandir() rend deja le meme premier fichier que l'ordre "
+            ."des octets : la collation ne les departage pas et le test ne prouverait "
+            ."rien. Base musl, ou fixture mal choisi ?"
+        );
     }
 
     public function testTrouveUnFichierAuNomLibre()
@@ -226,6 +304,13 @@ class AudioTest extends TestCase
         $this->assertSame('aaa.mp3', findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_'));
     }
 
+    public function testUnFichierQuiMentionneLaConventionSansCommencerParElleNePassePasDevant()
+    {
+        $this->touchFiles(['aaa.mp3', 'copie_ouiedire_ailleurs-331_dj_titre.mp3']);
+
+        $this->assertSame('aaa.mp3', findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_'));
+    }
+
     public function testLaConventionDuneAutreEmissionNeGagnePas()
     {
         $this->touchFiles(['ouiedire_ailleurs-182_dj_titre.mp3', 'ouiedire_ailleurs-331_dj_titre.mp3']);
@@ -235,12 +320,75 @@ class AudioTest extends TestCase
             findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_')
         );
     }
+
+    public function testLOrdreRetenuEstCeluiDesOctetsPasCeluiDeLaCollation()
+    {
+        // En fr_FR.UTF-8, scandir() rend a-b.mp3 en tete (strcoll ignore le tiret
+        // au premier niveau) la ou sort() rend B.mp3 (l'octet 'B' precede 'a').
+        $this->exigeUneCollationQuiDiffereDesOctets(['a-b.mp3', 'ab.mp3', 'B.mp3', 'a.mp3']);
+
+        $this->assertSame('B.mp3', findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_'));
+    }
+
+    public function testDeuxFichiersConformesSontDepartagesParLesOctets()
+    {
+        // Le scenario meme du change : un titre est corrige, le fichier au nom
+        // canonique d'hier reste a cote du nouveau. Les deux portent le prefixe,
+        // et c'est le tri du groupe conforme qui decide — pas celui des autres.
+        $this->exigeUneCollationQuiDiffereDesOctets([
+            'ouiedire_ailleurs-331_a-b.mp3',
+            'ouiedire_ailleurs-331_B.mp3',
+        ]);
+
+        $this->assertSame(
+            'ouiedire_ailleurs-331_B.mp3',
+            findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_')
+        );
+    }
+
+    public function testLExtensionEstReconnueQuelleQueSoitLaCasse()
+    {
+        // Le nom du fichier n'est pas une donnee : la casse de l'extension non plus.
+        $this->touchFiles(['MIX.MP3']);
+
+        $this->assertSame('MIX.MP3', findAudioFile($this->dir, 'mp3', 'ouiedire_ailleurs-331_'));
+    }
 }
 ```
 
-Ces trois derniers tests pilotent la branche « convention d'abord » et le tri.
-Sans eux dans cette tâche, l'implémentation de l'étape 3 contiendrait du code
-qu'aucun test rouge n'aurait exigé — ce que `sdr-004` interdit sans exception.
+`setUp()` relève `setlocale(LC_COLLATE, 0)` et `tearDown()` le repose, pour que les
+tests de collation ne fuitent pas leur état dans les autres.
+
+Les quatre premiers tests pilotent la découverte ; les suivants pilotent la
+branche « convention d'abord » et les deux tris. Sans eux dans cette tâche,
+l'implémentation de l'étape 3 contiendrait du code qu'aucun test rouge n'aurait
+exigé — ce que `sdr-004` interdit sans exception.
+
+Cinq d'entre eux viennent de tests de mutation passés après coup, la couverture
+de ligne ne les ayant pas réclamés : `audio.php` affichait 14/14 alors que cinq
+mutations laissaient la suite verte — supprimer `sort($others)`, supprimer
+`sort($conventional)`, le passer en `SORT_LOCALE_STRING`, affaiblir `=== 0` en
+`!== false`, et retirer le `strtolower()` de l'extension. La couverture de ligne
+compte les lignes exécutées, pas les lignes dont la suppression change un
+résultat ; elle ne pouvait pas voir ça.
+
+Deux points de méthode que ces tests portent, et qu'il ne faut pas défaire :
+
+- Le test « deux fichiers conformes » est le scénario même du change — un titre
+  corrigé laisse l'ancien fichier canonique à côté du nouveau. Tant qu'aucun test
+  ne mettait **deux** fichiers préfixés dans un dossier, `sort($conventional)`
+  n'était tenu par rien.
+- Les tests de collation passent par `exigeUneCollationQuiDiffereDesOctets()`, qui
+  vérifie deux choses avant d'affirmer quoi que ce soit : que `setlocale()` a
+  réussi, et que `scandir()` ne rend pas **déjà** le même premier fichier que
+  l'ordre des octets. La comparaison porte sur les têtes, pas sur les tableaux
+  entiers : `findAudioFile()` ne rend que `$found[0]`, et deux ordres peuvent
+  diverger en queue en s'accordant en tête — un fixture pareil passerait le
+  garde-fou sans rien prouver. Le premier contrôle seul ne suffit pas : sur une base musl (`php:7.4-alpine`), `setlocale()`
+  accepte le nom de la locale et collationne par octets — le test passerait sans
+  rien prouver. Un échec bruyant, jamais un `markTestSkipped` : un skip est un
+  vert silencieux, et repérer le silence est précisément la raison d'être de ces
+  tests.
 
 - [ ] **Step 2: Vérifier que ça échoue pour la bonne raison**
 
@@ -283,13 +431,18 @@ function findAudioFile($directory, $extension, $conventionPrefix)
         if (strtolower(pathinfo($name, PATHINFO_EXTENSION)) !== $extension) {
             continue;
         }
-        if ($conventionPrefix !== '' && strpos($name, $conventionPrefix) === 0) {
+        if (strpos($name, $conventionPrefix) === 0) {
             $conventional[] = $name;
         } else {
             $others[] = $name;
         }
     }
 
+    // Tri par octets, indispensable : scandir() trie avec strcoll(), sensible a
+    // LC_COLLATE, alors que sort() compare des octets. Sous une collation non-C
+    // les deux ordres divergent et le fichier retenu change. bootstrap.php ne
+    // pose aujourd'hui que LC_CTYPE : la divergence est a un LC_ALL pres, pas
+    // impossible. Voir AudioTest::testLOrdreRetenuEstCeluiDesOctetsPasCeluiDeLaCollation.
     sort($conventional);
     sort($others);
     $found = array_merge($conventional, $others);
@@ -304,12 +457,12 @@ function findAudioFile($directory, $extension, $conventionPrefix)
 docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit --filter AudioTest
 ```
 
-Attendu : `OK (7 tests, 8 assertions)`.
+Attendu : `OK (11 tests, 16 assertions)`.
 
 - [ ] **Step 5: Commit**
 
 ```bash
-git add src/src/audio.php src/tests/AudioTest.php
+git add src/src/audio.php src/tests/AudioTest.php docker/php-test.Dockerfile
 git commit -m "feat: decouvre le fichier audio par balayage du dossier"
 ```
 
@@ -572,7 +725,9 @@ function canonicalDownloadName($typeSlug, $number, $authorsSlug, $titleSlug)
 docker run --rm -v .:/app -w /app/src ouiedire-test vendor/bin/phpunit
 ```
 
-Attendu : `OK (9 tests, 9 assertions)`.
+Attendu : `OK (19 tests, 24 assertions)` — 2 `SmokeTest` + 11 `AudioTest`
+(Task 2) + 4 `CoverageCheckTest` (Task 3) + les 2 ci-dessus. Chiffre calculé,
+pas mesuré : le relever à l'exécution et corriger ici s'il diffère.
 
 - [ ] **Step 5: Commit**
 

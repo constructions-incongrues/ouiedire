@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Cree (ou supprime) des MP3 vides pour que le site soit consultable en local.
+#
+# Sans audio lisible, bootstrap.php force isPublic a faux : aucune emission
+# n'est publique, la page d'accueil est vide et les pages d'emission tombent
+# en 500 faute de « derniere emission ». Les vrais MP3 vivent sur Nextcloud
+# et ne sont pas dans le depot.
+#
+#   bin/dev-audio-fixtures          cree les fichiers
+#   bin/dev-audio-fixtures --clean  les supprime
+#
+# Les fichiers sont vides et gitignores (*.mp3).
+set -euo pipefail
+cd "$(dirname "$0")/.."
+E=src/public/assets/emission
+
+if [ "${1:-}" = "--clean" ]; then
+    n=$(find "$E" -name '*.mp3' -empty | wc -l | tr -d ' ')
+    find "$E" -name '*.mp3' -empty -delete
+    echo "$n fixture(s) audio supprimee(s)"
+    exit 0
+fi
+
+# Le nom attendu est calcule par l'application elle-meme (slugify de PHP).
+docker run --rm -v "$PWD":/app -w /app php:7.4-cli php -r '
+$debug = false;
+require("/app/src/src/bootstrap.php");
+$base = "/app/src/public/assets/emission";
+$made = 0;
+foreach (scandir($base) as $entry) {
+    if ($entry[0] === "." || !is_dir($base."/".$entry)) { continue; }
+    try { $s = getShow($entry); } catch (\Exception $e) { continue; }
+    $f = sprintf("%s/%s/ouiedire_%s-%s_%s_%s.mp3", $base, $entry,
+         slugify($s["type"]), $s["number"], slugify($s["authors"]), slugify($s["title"]));
+    if (!file_exists($f)) { touch($f); $made++; }
+}
+echo $made." fixture(s) audio creee(s)\n";
+' 2>/dev/null | tail -1

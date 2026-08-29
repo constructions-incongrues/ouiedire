@@ -1,0 +1,27 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ouiedire",
+      "runtimeExecutable": "docker",
+      "runtimeArgs": [
+        "run",
+        "--rm",
+        "--name",
+        "ouiedire-dev",
+        "-v",
+        ".:/app",
+        "-p",
+        "8123:80",
+        "php:7.4-cli",
+        "php",
+        "-S",
+        "0.0.0.0:80",
+        "-t",
+        "/app/src/public"
+      ],
+      "port": 8123,
+      "url": "http://127.0.0.1:8123"
+    }
+  ]
+}

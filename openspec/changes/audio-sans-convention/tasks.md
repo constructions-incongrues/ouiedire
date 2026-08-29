@@ -41,13 +41,17 @@ inatteignable par construction. Défaut du plan, trouvé en relecture.
 ## 3. Nom canonique au téléchargement
 
 - [x] 3.1 Écrire le test : le nom proposé au téléchargement reste canonique quel que soit le nom du fichier stocké, et suit une correction du titre
-- [ ] 3.2 Poser l'attribut `download` sur les liens MP3 et FLAC de `emission.html.twig`, avec le nom canonique
+- [x] 3.2 Poser l'attribut `download` sur les liens MP3 et FLAC de `emission.html.twig`, avec le nom canonique
 - [ ] 3.3 Vérifier dans un navigateur qu'un fichier au nom libre s'enregistre bien sous le nom canonique
+
+  Laissée décochée : l'attribut est vérifié dans le HTML rendu (Task 6, Step 4 du
+  plan, MP3 et FLAC), mais l'enregistrement effectif sous ce nom demande un vrai
+  téléchargement dans un navigateur, que cette session n'a pas pu observer.
 
 ## 4. Retirer ce qui n'a plus d'objet
 
-- [ ] 4.1 Supprimer `slugDownload` de `bootstrap.php` et le troisième bouton « Copier le nom de fichier attendu » de `emission.html.twig`
-- [ ] 4.2 Vérifier qu'aucun gabarit ni script ne référence encore `slugDownload`
+- [x] 4.1 Supprimer `slugDownload` de `bootstrap.php` et le troisième bouton « Copier le nom de fichier attendu » de `emission.html.twig`
+- [x] 4.2 Vérifier qu'aucun gabarit ni script ne référence encore `slugDownload`
 
 ## 5. Documentation
 

@@ -238,8 +238,6 @@ function getShow($id, Silex\Application $app = null) {
         'title' => slugify($show['title']),
     ));
 
-    $show['slugDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
-
     // Guess covers URL. Toute image du dossier compte, pour qu'une couverture
     // deposee depuis l'outil d'edition soit vue quel que soit son nom. L'ordre
     // est deterministe et independant du systeme de fichiers : les fichiers

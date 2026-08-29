@@ -1918,19 +1918,48 @@ une régression.
 
 **Files:**
 - Modify: `src/src/bootstrap.php` (`slugDownload`)
-- Modify: `src/views/emission.html.twig:57-64`
+- Modify: `src/views/emission.html.twig`
 
-- [ ] **Step 1: Supprimer `slugDownload`**
+C'est la tâche qui **ferme** l'exigence « Nom canonique au téléchargement » du
+spec. Depuis la Task 4, `canonicalDownloadName` est calculé et fusionné dans
+`$show` — et consommé par rien. L'exigence était *préparée*, pas tenue ; c'est
+l'attribut `download` posé ici qui la tient.
 
-Supprimer de `src/src/bootstrap.php` la ligne :
+- [x] **Step 1: Supprimer `slugDownload`**
+
+Supprimée de `src/src/bootstrap.php`, avec la ligne vide qui la précédait :
 
 ```php
     $show['slugDownload'] = strtolower(sprintf('%s/ouiedire_%s-%s_%s_%s', $urlAssets, slugify($show['type']), $show['number'], slugify($show['authors']), slugify($show['title'])));
 ```
 
-- [ ] **Step 2: Réécrire les boutons de téléchargement**
+Bloc final, régénéré depuis le fichier :
 
-Remplacer dans `src/views/emission.html.twig` le bloc `{% if show.urlDownloadFlac %} … {% endif %}` par :
+```php
+    $show = applyAudioDownloads($show, $pathPublicEmission, $urlAssets, array(
+        'type' => slugify($show['type']),
+        'authors' => slugify($show['authors']),
+        'title' => slugify($show['title']),
+    ));
+
+    // Guess covers URL. Toute image du dossier compte, pour qu'une couverture
+```
+
+**Une redondance disparaît, et elle est mesurée.** Sur les 367 émissions,
+`$show['slugDownload'] === strtolower($urlAssets).'/'.$show['canonicalDownloadName']` —
+**zéro divergence**. La même règle vivait à deux endroits : une copie testée,
+dans `audio.php`, et une copie non testée au point d'appel. C'est la seconde qui
+part.
+
+La mesure ne tient qu'à une condition, et il faut l'écrire : le témoin doit
+reconstruire `$urlAssets` avec `$show['id']`, **pas** avec `$show['number']`.
+`getShow()` remet le numéro à trois chiffres (`'00'.$show['id']`) **après** le
+bloc audio ; comparer avec le numéro rendu fait apparaître 136 fausses
+divergences. Première mesure faite ainsi, et corrigée.
+
+- [x] **Step 2: Réécrire les boutons de téléchargement**
+
+Bloc final, régénéré depuis `src/views/emission.html.twig` :
 
 ```twig
             {% if show.urlDownloadFlac %}
@@ -1940,29 +1969,203 @@ Remplacer dans `src/views/emission.html.twig` le bloc `{% if show.urlDownloadFla
             {% endif %}
 ```
 
-Le troisième bouton, `title="Copier le nom de fichier attendu"`, disparaît : sans audio, aucun bouton de téléchargement n'est proposé.
+Le troisième bouton, `title="Copier le nom de fichier attendu"`, disparaît :
+depuis la Task 5, une émission sans audio est dépubliée, et sa branche ne rendait
+plus que pour une page atteinte en URL directe.
 
-- [ ] **Step 3: Vérifier qu'aucune référence ne survit**
+**L'extension est concaténée ici, pas rendue par la fonction.**
+`canonicalDownloadName()` rend un nom **sans extension**, c'est son contrat
+(Task 4) ; le `.mp3` / `.flac` appartient au format que le lien sert, et seul le
+gabarit sait lequel des deux il vient de choisir.
+
+- [x] **Step 3: Vérifier qu'aucune référence ne survit**
 
 ```bash
 grep -rn "slugDownload" src/ --exclude-dir=vendor
 ```
 
-Attendu : aucune sortie.
+Mesuré : **aucune sortie**, code de retour `1`. Élargi au dépôt entier
+(`--exclude-dir=.git --exclude-dir=vendor`), il ne reste que les artefacts
+`openspec/` de ce change, qui parlent du retrait. Aucun gabarit, aucun script,
+aucun JS.
 
-- [ ] **Step 4: Vérifier l'attribut dans la page rendue**
+**À ne pas confondre avec `urlDownload`** — sans `slug`, au singulier. Cette
+clé-là existe toujours, vaut `null` depuis toujours (posée à `null` en tête de
+`getShow()`, jamais réassignée), et trois consommateurs la lisent :
+`embed.html.twig`, `window.MejsOuiedireDownloadUrl` dans `emission.html.twig`, et
+le `urlencode()` d'oEmbed. C'est un câblage mort **antérieur** à ce change, hors
+de son périmètre, et qui mérite son propre change.
+
+- [x] **Step 4: Vérifier l'attribut dans la page rendue**
 
 ```bash
+docker run -d --name ouiedire-dev -v "$PWD":/app -w /app/src -p 8123:80 \
+  php:7.4-cli php -S 0.0.0.0:80 -t /app/src/public
+rm -rf src/cache/*
 curl -s 'http://127.0.0.1:8123/emission/ailleurs-331' | grep -o 'download="[^"]*"'
 ```
 
-Attendu : `download="ouiedire_ailleurs-331_rachitik-data_la-pompa-chalor-vol-3.mp3"`.
+**Le `rm -rf src/cache/*` n'est pas décoratif** : l'application monte un cache
+HTTP dans `src/cache`, et une seconde requête sur la même URL est servie depuis
+le disque. Une mesure faite sans ce nettoyage a d'abord montré la branche MP3
+là où un fichier FLAC venait d'être posé.
 
-- [ ] **Step 5: Commit**
+Mesuré, `ailleurs-331` :
+
+```html
+<a href="http://127.0.0.1:8123/assets/emission/ailleurs-331/ouiedire_ailleurs-331_rachitik-data_la-pompa-chalor-vol-3.mp3"
+   download="ouiedire_ailleurs-331_rachitik-data_la-pompa-chalor-vol-3.mp3"
+```
+
+`chalor` est la coquille du titre au manifeste : le nom canonique suit le titre,
+c'est exactement ce que le spec demande.
+
+**Cinq autres émissions, rendues et relevées** — une par branche de type :
+
+| Émission | `href` (fichier stocké) | `download=` |
+| --- | --- | --- |
+| `ouiedire-1` | `ouiedire_ouedire-001_bozoo-valkiri_no-theme.mp3` | `ouiedire_ouedire-1_bozoo-valkiri_no-theme.mp3` |
+| `ouiedire-6` | `ouiedire_ouedire-006_…_altration-auditive.mp3` | `ouiedire_ouedire-6_…_altration-auditive.mp3` |
+| `ailleurs-1` | `ouiedire_ailleurs-001_dj-damie-boy_sans-thme.mp3` | `ouiedire_ailleurs-1_dj-damie-boy_sans-thme.mp3` |
+| `bagage-1` | `ouiedire_bagage-001_mutant-swing_….mp3` | `ouiedire_bagage-1_mutant-swing_….mp3` |
+| `bureau-1` | `ouiedire_bureau-001_de-traviole_….mp3` | `ouiedire_bureau-1_de-traviole_….mp3` |
+
+**La branche FLAC n'a aucun témoin dans le dépôt** — `find . -name '*.flac'` rend
+zéro, contre 367 `.mp3`. Elle a donc été mesurée en posant un `.flac` temporaire
+au nom libre dans `ailleurs-331`, puis en le retirant :
+
+```html
+<a href="…/ailleurs-331/mon-mix-libre.flac"
+   download="ouiedire_ailleurs-331_rachitik-data_la-pompa-chalor-vol-3.flac"
+```
+
+C'est le change entier en une ligne : le fichier stocké s'appelle
+`mon-mix-libre.flac`, il s'enregistre sous le nom canonique.
+
+- [x] **Step 4bis : `download` n'est honoré que sur la même origine**
+
+L'attribut est ignoré par les navigateurs dès que la cible est d'une autre
+origine — l'exigence serait alors fausse sans que rien n'échoue. Vérifié plutôt
+que supposé : `$urlAssets` est bâti **depuis la requête courante** (schéma, hôte,
+chemin de base) chaque fois qu'il y a une requête, donc par construction sur
+l'origine servante. Mesuré en dev : la page est servie sur
+`http://127.0.0.1:8123`, le `href` pointe sur `http://127.0.0.1:8123/assets/…`.
+La branche sans requête (CLI) code en dur `https://www.ouiedire.net/assets`,
+l'origine de production.
+
+- [x] **Step 4ter : l'échappement Twig n'altère aucun nom**
+
+L'autoéchappement HTML est actif — mesuré sur `ailleurs-126`, dont le titre porte
+une esperluette et une apostrophe : `&amp;` et `&#039;` dans le rendu. Le nom
+canonique, lui, ne peut pas en souffrir : sur les 367 émissions,
+`htmlspecialchars($nom, ENT_QUOTES)` rend **le nom inchangé, 367 fois sur 367**,
+et l'alphabet complet des noms produits est `[a-z0-9_-]`.
+
+- [x] **Step 4quater : le scénario complet du spec, mesuré**
+
+« Téléchargement après correction du titre ». Le titre d'`ailleurs-331` est
+corrigé au manifeste (`Chalor` → `Chaleur`), la page rerendue, puis `index.json`
+restauré **inconditionnellement** (`trap … EXIT`, copie de sûreté *et*
+`git checkout --`), empreinte `git hash-object` vérifiée identique après coup et
+`git status` relu.
+
+| | avant | après correction |
+| --- | --- | --- |
+| `href` | `…_la-pompa-chalor-vol-3.mp3` | `…_la-pompa-chalor-vol-3.mp3` — **inchangé** |
+| `download=` | `…_la-pompa-chalor-vol-3.mp3` | `…_la-pompa-chaleur-vol-3.mp3` — **suit le titre** |
+| page | `200` | `200` |
+| listée en accueil | oui | oui |
+
+Les trois clauses tiennent ensemble : le nom d'enregistrement suit la correction,
+l'émission n'est pas dépubliée, et le fichier servi ne bouge pas.
+
+- [x] **Step 4quinquies : non-régression sur les 367 émissions**
+
+Même instantané `var_export()` qu'au Step 7 de la Task 5, `bfbe9c21` contre cet
+état. Mesuré : **367 suppressions, 0 ajout, 0 modification**, toutes de la forme
+`'slugDownload' => …` — une par émission, et rien d'autre. `stderr` vide dans les
+deux passes. Les quatre routes (`/`, `/artists`, `/feed`,
+`/emission/ailleurs-331`) rendent `200`.
+
+Suite complète : `OK (65 tests, 103 assertions)`, décompte inchangé — aucun test
+ne portait sur `slugDownload`, et c'est précisément ce qui rendait cette copie
+non tenue. Jauge par fichier : `/app/src/src/audio.php : 100.00 % (42/42),
+seuil 90.00 %`. `bootstrap.php` passe de **497 à 496 instructions** — mesuré des
+deux côtés, l'écart vaut exactement l'instruction retirée.
+
+### La question du `ï` mangé, tranchée
+
+`slugify('Ouïedire')` rend `ouedire` : le nom canonique de ces émissions est
+`ouiedire_ouedire-1_…`. Tant que la clé n'était lue par personne, la faute ne
+faisait que coïncider avec ce qui est sur le disque ; l'attribut `download` en
+fait un nom que le site **assigne** à un fichier enregistré chez la personne qui
+le télécharge. La question ne pouvait donc pas passer en silence.
+
+**La mesure d'abord, et elle est plus large que la question posée.** Ce n'est pas
+le `ï` d'`Ouïedire` qui est en cause, c'est **tout caractère non-ASCII** :
+
+- `iconv('utf-8', 'us-ascii//TRANSLIT', 'ï')` rend l'octet `0x3f`, c'est-à-dire
+  `?`, que le `preg_replace('#[^-\w]+#', '')` suivant efface. Aucune
+  translittération n'a lieu.
+- La cause est nommée dans le code lui-même : `slugify()` pose
+  `setlocale(LC_CTYPE, "en_US.utf8")`, et cette locale **n'existe pas** dans
+  l'image (`locale -a` rend `C`, `C.UTF-8`, `POSIX`). Sans elle, le `//TRANSLIT`
+  de la glibc retombe sur `?`. C'est exactement le lien StackOverflow que le
+  commentaire de la fonction porte depuis toujours.
+- Portée : **154 émissions sur 367** (42 %) portent un caractère non-ASCII dans
+  leur type, leurs auteurices ou leur titre, et voient donc leur nom canonique
+  amputé. `Sans thème` → `sans-thme`, `Épisodique` → `pisodique`, `Gerçure` →
+  `gerure`. Les 12 émissions en `ouedire` en sont un cas particulier, pas le
+  sujet.
+
+**Ce qui tranche : les fichiers déjà sur le disque portent ces mêmes noms.**
+`ouiedire_ailleurs-001_dj-damie-boy_sans-thme.mp3`,
+`ouiedire_ailleurs-110_johan_pisodique.mp3`,
+`ouiedire_ouedire-006_bozoo-valkiri_altration-auditive.mp3` — vérifié fichier par
+fichier. La production ampute donc depuis toujours, et l'attribut `download`
+n'invente rien : il propose le nom que l'archive donne déjà à ses propres
+fichiers, et que le bouton « Copier le nom de fichier attendu » affichait en
+toutes lettres par `slugDownload`.
+
+**Décision : poser l'attribut avec le nom tel quel, et sortir la réparation de ce
+change.** Trois raisons, dans cet ordre :
+
+1. **Le périmètre.** Réparer, c'est toucher `slugify()`, que le dépôt emploie
+   aussi pour la convention des couvertures et pour les pages d'artistes. Le
+   rayon de souffle dépasse de loin ce change, et `sdr-004` demanderait des tests
+   sur tout ce qui bouge.
+2. **La direction.** Un correctif étroit existe — lire `$show['typeSlug']`, déjà
+   ASCII, au lieu de `slugify($show['type'])` au point d'appel — mais il ne
+   réparerait que 6 des 154 émissions et laisserait les 148 autres amputées. Un
+   demi-correctif qui masque la mesure est pire que la mesure.
+3. **Le coût du statu quo est connu et nul.** Un nom amputé est une verrue
+   d'orthographe sur un fichier qui se télécharge, s'ouvre et se lit. Rien ne
+   casse, et ce change n'aggrave rien.
+
+**Ce qu'il reste à faire, et qui n'est pas fait ici** : un change dédié, qui
+répare `slugify()` — locale installée dans l'image, ou vraie translittération
+sans dépendance à `iconv` — et qui mesure ce que le renommage déplace pour les
+154 émissions, la convention des couvertures comprise.
+
+### Deux constats de rendu, relevés au passage
+
+- **Le numéro perd son remplissage à zéro dans le nom proposé.** Le fichier
+  stocké s'appelle `ouiedire_ailleurs-054_…`, le `download=` propose
+  `ouiedire_ailleurs-54_…`. Sur les 367, **136 noms canoniques diffèrent du nom
+  du fichier stocké**, et c'est très majoritairement cela. Ce n'est pas une
+  régression : `slugDownload` proposait déjà le numéro non rempli, et la Task 4 a
+  épinglé ce contrat. C'est simplement, maintenant, un nom qui atterrit sur un
+  disque.
+- **Une correction héritée, relevée en Task 5, devient visible ici.** L'ancien
+  code abaissait toute l'URL ; le nouveau n'abaisse que l'étiquette
+  d'enregistrement. Un fichier portant une majuscule sur le disque ne reçoit plus
+  une URL en minuscules, donc plus un 404.
+
+- [x] **Step 5: Commit**
 
 ```bash
 git add src/src/bootstrap.php src/views/emission.html.twig
-git commit -m "refactor: retire slugDownload et le bouton du nom attendu"
+git commit -m "refactor: le nom canonique devient l'attribut download"
 ```
 
 ---

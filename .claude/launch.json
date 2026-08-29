@@ -21,7 +21,8 @@
         "/app/src/public"
       ],
       "port": 8123,
-      "url": "http://127.0.0.1:8123"
+      "url": "http://127.0.0.1:8123",
+      "autoPort": false
     }
   ]
 }

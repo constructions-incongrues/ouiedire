@@ -33,14 +33,14 @@ fonctions libres ni le détail par fichier, et son total est capturé par les 50
 instructions non couvertes de `bootstrap.php`. Le seuil de 90 % y est
 inatteignable par construction. Défaut du plan, trouvé en relecture.
 
-- [ ] 2bis.1 Écrire les tests de `coverage-check.php` : seuil atteint, seuil manqué, **fichier absent du rapport**, rapport illisible
-- [ ] 2bis.2 Implémenter `bin/coverage-check.php` : lecture de Clover, ratio par fichier, un fichier absent est un échec
-- [ ] 2bis.3 Vérifier le contrôle de bout en bout sur le vrai rapport de couverture
-- [ ] 2bis.4 Déclarer la commande de seuil dans `CLAUDE.local.md`
+- [x] 2bis.1 Écrire les tests de `coverage-check.php` : seuil atteint, seuil manqué, **fichier absent du rapport**, rapport illisible
+- [x] 2bis.2 Implémenter `bin/coverage-check.php` : lecture de Clover, ratio par fichier, un fichier absent est un échec
+- [x] 2bis.3 Vérifier le contrôle de bout en bout sur le vrai rapport de couverture
+- [x] 2bis.4 Déclarer la commande de seuil dans `CLAUDE.local.md`
 
 ## 3. Nom canonique au téléchargement
 
-- [ ] 3.1 Écrire le test : le nom proposé au téléchargement reste canonique quel que soit le nom du fichier stocké, et suit une correction du titre
+- [x] 3.1 Écrire le test : le nom proposé au téléchargement reste canonique quel que soit le nom du fichier stocké, et suit une correction du titre
 - [ ] 3.2 Poser l'attribut `download` sur les liens MP3 et FLAC de `emission.html.twig`, avec le nom canonique
 - [ ] 3.3 Vérifier dans un navigateur qu'un fichier au nom libre s'enregistre bien sous le nom canonique
 
